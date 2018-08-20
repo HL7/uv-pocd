@@ -1,0 +1,54 @@
+---
+# jekyll prompt
+title: Profiles
+---
+
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    {% include header.html %}
+  </head>
+  <body>
+    {% include navbar.html %}
+    <div id="segment-breadcrumb" class="segment">
+      <div class="container">
+        <ul class="breadcrumb">
+          <li title="{{site.data.fhir.igName}}"><a href="index.html"><b>{{site.data.fhir.igName}}</b></a></li>
+          {% if page.title %}
+          <li><b>{{page.title}}</b></li>
+          {% endif %}
+        </ul>
+      </div>
+    </div>
+    <div id="segment-content" class="segment">
+      <div class="container">
+        <div class="row">
+          <div class="inner-wrapper">
+            <div class="col-9">
+              <a name="{{ site.data.fhir.igId }}"></a>
+              <h2>{{page.title}}</h2>
+              <p>
+                This Implementation Guide specifies profiles on the FHIR <a href="http://hl7.org/fhir/device.html">Device</a>, <a href="http://hl7.org/fhir/devicemetric.html">DeviceMetric</a>, and <a href="http://hl7.org/fhir/observation.html">Observation</a> resources. 
+                Each profile defines constraints, extensions, and terminology requirements for an implementation that claims conformance to this guide.
+              </p>
+              <div class="clearfix">
+                <img src="assets/images/PoCD_Profiles.png" style="float:right"/>
+                <p>
+                  A point-of-care device model is made of multiple resource instances and the relationships between them. 
+                  The following diagram shows the FHIR resource profiles (blue) and references to other profiles or FHIR core resources (white).
+                </p>
+              </div>
+              <h3>Profiles and Extensions</h3>
+              <table class="table-striped" style="width:100%">
+                <col style="width:40%">
+                <col style="width:60%">
+                {% include table-structuredefinitions.xhtml %}
+              </table>
+           </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% include footer.html %}
+  </body>
+</html>

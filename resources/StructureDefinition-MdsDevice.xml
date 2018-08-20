@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="MdsDevice"/>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-summary">
+    <valueMarkdown value="The profile defines the following rules:&#10;
+* `Device.identifier` may include an EUI-64 with either base-16 or hex encoding (octets separated by hyphens). See IEEE [Guidelines for Use of EUI, OUI, and CID](https://standards.ieee.org/develop/regauth/tut/eui.pdf) for details.&#10;
+* `Device.type` shall be present and have a coding from the ISO/IEEE 11073 MDC Device nomenclature if there is an appropriate code available.&#10;
+* `Device.parent` is optional and may refer to another MDS Device resource as a composite MDS."/>
+  </extension>
+  <url value="http://hl7.org/fhir/uv/pocd/StructureDefinition/MdsDevice"/>
+  <version value="0.2.0"/>
+  <name value="MdsDevice"/>
+  <title value="MDS Device Profile"/>
+  <status value="draft"/>
+  <date value="2018-08-15"/>
+  <publisher value="Health Level Seven International (Health Care Devices Work Group)"/>
+  <description value="StructureDefinition for Device resources that represent a Medical Device System (MDS). This is the top-level resource in the hierarchical model of a Point-of-Care device."/>
+  <fhirVersion value="3.5.0"/>
+  <kind value="resource"/>
+  <abstract value="false"/>
+  <type value="Device"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Device"/>
+  <derivation value="constraint"/>
+  <differential>
+    <element id="Device">
+      <path value="Device"/>
+    </element>
+    <element id="Device.identifier">
+      <path value="Device.identifier"/>
+      <slicing>
+        <discriminator>
+          <type value="value"/>
+          <path value="system"/>
+        </discriminator>
+        <rules value="open"/>
+      </slicing>
+    </element>
+    <element id="Device.identifier:EUI-64">
+      <path value="Device.identifier"/>
+      <sliceName value="EUI-64"/>
+      <short value="IEEE 64-bit Extended Unique Identifier (EUI-64)"/>
+      <max value="1"/>
+    </element>
+    <element id="Device.identifier:EUI-64.system">
+      <path value="Device.identifier.system"/>
+      <min value="1"/>
+      <fixedUri value="urn:oid:1.2.840.10004.1.1.1.0.0.1.0.0.1.2680"/>
+    </element>
+    <element id="Device.identifier:EUI-64.value">
+      <path value="Device.identifier.value"/>
+      <min value="1"/>
+    </element>
+    <element id="Device.type">
+      <path value="Device.type"/>
+      <min value="1"/>
+      <binding>
+        <strength value="extensible"/>
+        <valueSet value="http://hl7.org/fhir/uv/pocd/ValueSet/11073MDC-object"/>
+      </binding>
+    </element>
+    <element id="Device.parent">
+      <path value="Device.parent"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/uv/pocd/StructureDefinition/MdsDevice"/>
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>

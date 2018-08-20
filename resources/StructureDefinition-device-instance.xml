@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="device-instance"/>
+  <url value="http://hl7.org/fhir/uv/pocd/StructureDefinition/device-instance"/>
+  <version value="0.2.0"/>
+  <name value="DeviceInstance"/>
+  <title value="Device Instance Extension"/>
+  <status value="draft"/>
+  <date value="2018-08-10"/>
+  <publisher value="Health Level Seven International (Health Care Devices Work Group)"/>
+  <description value="StructureDefinition that adds an instance number to Device."/>
+  <fhirVersion value="3.5.0"/>
+  <kind value="complex-type"/>
+  <abstract value="false"/>
+  <context>
+    <type value="element"/>
+    <expression value="Device"/>
+  </context>
+  <type value="Extension"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension"/>
+  <derivation value="constraint"/>
+  <differential>
+    <element id="Extension">
+      <path value="Extension"/>
+    </element>
+    <element id="Extension.url">
+      <path value="Extension.url"/>
+      <fixedUri value="http://hl7.org/fhir/StructureDefinition/device-instance"/>
+    </element>
+    <element id="Extension.value[x]:valueUnsignedInt">
+      <path value="Extension.valueUnsignedInt"/>
+      <sliceName value="valueUnsignedInt"/>
+      <short value="Instance number"/>
+      <definition value="Instance number for multiple components of the same type"/>
+      <type>
+        <code value="unsignedInt"/>
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>

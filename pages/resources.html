@@ -1,0 +1,61 @@
+---
+# jekyll prompt
+title: Resources
+---
+
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+{% include header.html %}
+  </head>
+  <body>
+{% include navbar.html %}
+    <div id="segment-breadcrumb" class="segment">
+      <!-- segment-breadcrumb -->
+      <div class="container">
+        <!-- container -->
+        <ul class="breadcrumb">
+          <li title="{{ site.data.fhir.igName }}"><a href="index.html"><b>{{site.data.fhir.igName}}</b></a></li>
+          {% if page.title %}
+          <li><b>{{page.title}}</b></li>
+          {% endif %}
+        </ul>
+      </div>
+      <!-- /container -->
+    </div>
+    <!-- /segment-breadcrumb -->
+    <div id="segment-content" class="segment">
+      <!-- segment-content -->
+      <div class="container">
+        <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+            <div class="col-9">
+              <a name="{{ site.data.fhir.igId }}"></a>
+              <h2>{{page.title}}</h2>
+              <p>This page provides a list of the FHIR artifacts defined as part of this Implementation Guide.</p>
+              <h3>Conformance</h3>
+              <h4>ImplementationGuide</h4>
+              <ul>{% include list-simple-implementationguides.xhtml %}</ul>
+              <h4>StructureDefinition</h4>
+              <ul>{% include list-simple-structuredefinitions.xhtml %}</ul>
+              <h4>CapabilityStatement</h4>
+              <ul>{% include list-simple-capabilitystatements.xhtml %}</ul>
+              <h3>Terminology</h3>
+              <h4>CodeSystem</h4>
+              <ul>{% include list-simple-codesystems.xhtml %}</ul>
+              <h4>ValueSet</h4>
+              <ul>{% include list-simple-valuesets.xhtml %}</ul>
+              <h3>Examples</h3>
+              <ul>{% include list-simple-devices.xhtml %}</ul>
+              <ul>{% include list-simple-devicemetrics.xhtml %}</ul>
+              <ul>{% include list-simple-observations.xhtml %}</ul>
+              <!-- To be completed -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% include footer.html %}
+  </body>
+</html>

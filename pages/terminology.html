@@ -1,0 +1,81 @@
+---
+# jekyll prompt
+title: Terminology
+---
+
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    {% include header.html %}
+  </head>
+  <body>
+    {% include navbar.html %}
+    <div id="segment-breadcrumb" class="segment">
+      <div class="container">
+        <ul class="breadcrumb">
+          <li title="{{ site.data.fhir.igName }}"><a href="index.html"><b>{{site.data.fhir.igName}}</b></a></li>
+          {% if page.title %}
+          <li><b>{{page.title}}</b></li>
+          {% endif %}
+        </ul>
+      </div>
+    </div>
+    <div id="segment-content" class="segment">
+      <div class="container">
+        <div class="row">
+          <div class="inner-wrapper">
+            <div class="col-9">
+              <a name="{{ site.data.fhir.igId }}"></a>
+              <h2>{{page.title}}</h2>
+              <p>
+                The ISO/IEEE 11073-10101 Nomenclature standard (11073 MDC) provides a comprehensive terminology for device models according to the ISO/IEEE 11073-10201 Domain information model (DIM). 
+                It's the preferred code system for profiles in this implementation guide. 
+                Reference identifiers, terminology codes, and descriptions are available at the <a href="https://rtmms.nist.gov/rtmms/index.htm">Rosetta Terminology Mapping Management System</a> (RTMMS).
+              </p>
+              <p>The PoCD profiles define rules for terminology usage:</p>
+              <ul>
+                <li>
+                  <code>Device.type</code> shall have a coding from the 11073 MDC Device nomenclature if there is an appropriate code available. 
+                  This ensures consistent coding using the ISO/IEEE 11073-10101 Nomenclature standard, which provides MDS, VMD, and Channel codes for device models according to the DIM. 
+                  If there is no code available, proposed or private 11073 MDC codes or coding from an alternative code system may be used. 
+                  As this element is of type CodeableConcept there can be additional coding from other code systems.
+                </li>
+                <li>Same for the <code>DeviceMetric.type</code>, which shall have a coding from the 11073 MDC Metric nomenclature if there is an appropriate code available.</li>
+                <li>
+                  <code>DeviceMetric.unit</code> is an optional element of type CodeableConcept. 
+                  If present, it shall have a coding from the 11073 MDC Units of measurement if there is an appropriate code available. Additional other coding is allowed as well. 
+                  This element is the place for the 11073 MDC unit code, because the Observation resource has other constraints - see below.
+                </li>
+              </ul>
+              <p>The <a href="http://hl7.org/fhir/observation-vitalsigns.html">Vital Signs Profile</a>, which is part of FHIR core specification, applies for some commonly used measurement observations (e. g., heart rate, blood pressure, respiratory rate, oxygen saturation, body temperature):</p>
+              <ul>
+                <li>
+                  The PoCD profiles require an 11073 MDC coding in <code>Observation.code</code> and, for compound metrics, in <code>Observation.component.code</code>. 
+                  Depending on the type of measurement, the Vital Signs profiles may require <a href="http://hl7.org/fhir/loinc.html">LOINC</a> codes. 
+                  Note that the MDC code can be more specific than the Vital Signs LOINC code.
+                </li>
+                <li>
+                  The Quantity data type in <code>Observation.value[x]</code> and <code>Observation.component.value[x]</code> contains the units of measure. 
+                  There is only a single coding that needs to be <a href="http://hl7.org/fhir/ucum.html">UCUM</a> for all vital signs. Therefore the PoCD profiles require UCUM coding for all numerics.
+                </li>
+              </ul>
+              <h3>Code Systems</h3>
+              <table class="table-striped" style="width:100%">
+                <col style="width:40%">
+                <col style="width:60%">
+                {% include table-codesystems.xhtml %}
+              </table>
+              <h3>Value Sets</h3>
+              <table class="table-striped" style="width:100%">
+                <col style="width:40%">
+                <col style="width:60%">
+                {% include table-valuesets.xhtml %}
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% include footer.html %}
+  </body>
+</html>

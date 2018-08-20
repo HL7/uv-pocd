@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Device xmlns="http://hl7.org/fhir">
+  <id value="40b86960-b54f-402e-87d7-b6067313d449"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/uv/pocd/StructureDefinition/VmdDevice"/>
+  </meta>
+  <status value="active"/>
+  <type>
+    <coding>
+      <system value="urn:iso:std:iso:11073:10101"/>
+      <code value="69798"/>
+      <display value="MDC_DEV_ECG_VMD"/>
+    </coding>
+  </type>
+  <!-- <version>
+    <type>
+      <coding>
+        <system value="http://hl7.org/fhir/specification-type"/>
+        <code value="firmware-revision"/>
+      </coding>
+    </type>
+    <value value="E.01.16"/>
+  </version> -->
+  <parent>
+    <reference value="Device/5205082c-1f88-434e-9252-6c6b09c81a0d"/>
+  </parent>
+</Device>

@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="NumericObservation"/>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-summary">
+    <valueMarkdown value="The profile defines the following rules:&#10;
+* `Observation.code` shall have a coding from the ISO/IEEE 11073 MDC Metric nomenclature if there is an appropriate code available. Depending on the type of measurement, the [Vital Signs profiles](http://hl7.org/fhir/observation-vitalsigns.html) may require an additional LOINC code.&#10;
+* `Observation.subject` shall be present and refer to a Patient resource or MDS Device resource.&#10;
+* Either `Observation.valueQuantity` or `Observation.valueRatio` or, if there is no value, `Observation.dataAbsentReason` shall be present. Values shall have a UCUM unit code.&#10;
+* `Observation.interpretation` coding includes measurement status.&#10;
+* `Observation.device` shall be present and refer to the Numeric DeviceMetric resource where this observation belongs to."/>
+  </extension>
+  <url value="http://hl7.org/fhir/uv/pocd/StructureDefinition/NumericObservation"/>
+  <version value="0.2.0"/>
+  <name value="NumericObservation"/>
+  <title value="Numeric Observation Profile"/>
+  <status value="draft"/>
+  <date value="2018-08-07"/>
+  <publisher value="Health Level Seven International (Health Care Devices Work Group)"/>
+  <description value="StructureDefinition for Observation resources that represent numerical measurements, calculations, or settings."/>
+  <fhirVersion value="3.5.0"/>
+  <kind value="resource"/>
+  <abstract value="false"/>
+  <type value="Observation"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Observation"/>
+  <derivation value="constraint"/>
+  <differential>
+    <element id="Observation">
+      <path value="Observation"/>
+      <constraint>
+        <key value="pocd-obs-1"/>
+        <severity value="error"/>
+        <human value="If there is no value a dataAbsentReason shall be present"/>
+        <expression value="value.exists() or dataAbsentReason.exists()"/>
+      </constraint>
+    </element>
+    <element id="Observation.code">
+      <path value="Observation.code"/>
+      <binding> 
+        <strength value="extensible"/> 
+        <valueSet value="http://hl7.org/fhir/uv/pocd/ValueSet/11073MDC-metric"/> 
+      </binding>     
+    </element>
+    <element id="Observation.subject">
+      <path value="Observation.subject"/>
+      <min value="1"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient"/>
+        <targetProfile value="http://hl7.org/fhir/uv/pocd/StructureDefinition/MdsDevice"/>
+      </type>
+    </element>
+    <element id="Observation.value[x]">
+      <path value="Observation.value[x]"/>
+      <slicing>
+        <discriminator>
+          <type value="type"/>
+          <path value="$this"/>
+        </discriminator>
+        <rules value="open"/>
+      </slicing>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Quantity"/>
+      </type>
+      <type>
+        <code value="Ratio"/>
+      </type>
+      <condition value="pocd-obs-1"/>
+    </element>
+    <element id="Observation.value[x]:valueQuantity">
+      <path value="Observation.valueQuantity"/>
+      <sliceName value="valueQuantity"/>
+      <type>
+        <code value="Quantity"/>
+      </type>
+    </element>
+    <element id="Observation.value[x]:valueQuantity.value">
+      <path value="Observation.valueQuantity.value"/>
+      <min value="1"/>
+    </element>
+    <element id="Observation.value[x]:valueQuantity.system">
+      <path value="Observation.valueQuantity.system"/>
+      <fixedUri value="http://unitsofmeasure.org"/>
+    </element>
+    <element id="Observation.value[x]:valueRatio">
+      <path value="Observation.valueRatio"/>
+      <sliceName value="valueRatio"/>
+      <type>
+        <code value="Ratio"/>
+      </type>
+    </element>
+    <element id="Observation.value[x]:valueRatio.numerator">
+      <path value="Observation.valueRatio.numerator"/>
+    </element>
+    <element id="Observation.value[x]:valueRatio.numerator.value">
+      <path value="Observation.valueRatio.numerator.value"/>
+      <min value="1"/>
+    </element>
+    <element id="Observation.value[x]:valueRatio.numerator.system">
+      <path value="Observation.valueRatio.numerator.system"/>
+      <fixedUri value="http://unitsofmeasure.org"/>
+    </element>
+    <element id="Observation.value[x]:valueRatio.denominator">
+      <path value="Observation.valueRatio.denominator"/>
+    </element>
+    <element id="Observation.value[x]:valueRatio.denominator.value">
+      <path value="Observation.valueRatio.denominator.value"/>
+      <min value="1"/>
+    </element>
+    <element id="Observation.value[x]:valueRatio.denominator.system">
+      <path value="Observation.valueRatio.denominator.system"/>
+      <fixedUri value="http://unitsofmeasure.org"/>
+    </element>
+    <element id="Observation.dataAbsentReason">
+      <path value="Observation.dataAbsentReason"/>
+      <condition value="pocd-obs-1"/>
+    </element>
+    <element id="Observation.interpretation">
+      <path value="Observation.interpretation"/>
+      <binding> 
+        <strength value="extensible"/> 
+        <valueSet value="http://hl7.org/fhir/uv/pocd/ValueSet/observation-interpretation"/> 
+      </binding>     
+    </element>
+    <element id="Observation.device">
+      <path value="Observation.device"/>
+      <min value="1"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/uv/pocd/StructureDefinition/NumericDeviceMetric"/>
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>

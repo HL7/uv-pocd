@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="84b2ce38-98e2-4da6-a593-afdb3fd017f5"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/uv/pocd/StructureDefinition/EnumerationObservation"/>
+  </meta>
+  <status value="final"/>
+  <code>
+    <coding>
+      <system value="urn:iso:std:iso:11073:10101"/>
+      <code value="184327"/>
+      <display value="MDC_ECG_STAT_RHY"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/6a41c235-5421-4698-af96-20f279b21ffc"/>
+  </subject>
+  <effectiveDateTime value="2018-07-21T11:23:40+02:00"/>
+  <valueCodeableConcept>
+    <coding>
+      <system value="urn:iso:std:iso:11073:10101"/>
+      <code value="147474"/>
+      <display value="MDC_ECG_SINUS_RHY"/>
+    </coding>
+    <text value="Sinus rhythm"/>
+  </valueCodeableConcept>
+  <device>
+    <reference value="DeviceMetric/da145796-6cda-4dec-b9cf-8385b24afddf"/>
+  </device>
+</Observation>
