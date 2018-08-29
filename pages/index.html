@@ -33,8 +33,8 @@ title: Home
             <div class="col-9">
               <a name="{{ site.data.fhir.igId }}"></a>
               <p style="background-color: #ffefef; border:1px solid maroon; padding: 5px;">
-                This is the STU ballot version (v0.2.0) of the Point-of-Care Device Implementation Guide, based on <a href="http://hl7.org/fhir/2018Sep/index.html">FHIR Version 3.5.0</a>. 
-                See the <a href="http://hl7.org/fhir/uv/pocd/history.html">Directory of published versions</a>.
+                This is the Continuous Integration Build of the Point-of-Care Device Implementation Guide, based on <a href="{{site.data.fhir.path}}">FHIR Version {{site.data.fhir.version}}</a>. 
+                See the <a href="{{site.data.fhir.canonical}}/history.html">Directory of published versions</a>.
               </p>
               <h2>{{page.title}}</h2>
               {% capture home %}{% include home.md %}{% endcapture %}{{ home | markdownify }}
