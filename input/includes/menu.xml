@@ -1,0 +1,60 @@
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li>
+    <a href="toc.html">Table of Contents</a>
+  </li>
+  <li>
+    <a href="overview.html">Overview</a>
+  </li>
+  <!-- <li>
+    <a href="usecases.html">Use Cases</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Technical Implementation Guidance<b class="caret"/></a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="modeling.html">Creating a Device Model</a>
+      </li>
+      <li>
+        <a href="#">Mapping from HL7 v2 to FHIR</a>
+      </li>
+      <li>
+        <a href="#">Mapping from IEEE 11073-10201 DIM to FHIR</a>
+      </li>
+      <li>
+        <a href="#">Mapping from IEEE 11073-10207 SDC to FHIR</a>
+      </li>
+      <li>
+        <a href="#">RESTful Transfer</a>
+      </li>
+      <li>
+        <a href="#">Safety Considerations</a>
+      </li>
+      <li>
+        <a href="#">Security and Privacy Considerations</a>
+      </li>
+    </ul>
+  </li> -->
+  <li>
+    <a href="profiles.html">Profiles</a>
+  </li>
+  <li>
+    <a href="terminology.html">Terminology</a>
+  </li>
+  <li>
+    <a href="artifacts.html">Artifact List</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Support<b class="caret"/></a>
+    <ul class="dropdown-menu">
+      <li>
+        <a target="_blank" href="{{site.data.fhir.path}}index.html">FHIR Spec <img src="external.png" style="text-align: baseline"/></a>
+      </li>
+      <li>
+        <a href="downloads.html">Downloads</a>
+      </li>
+    </ul>
+  </li>
+</ul>

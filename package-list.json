@@ -1,0 +1,27 @@
+{
+ "package-id" : "hl7.fhir.uv.pocd",
+ "title" : "Point-of-Care Device Implementation Guide",
+ "canonical" : "http://hl7.org/fhir/uv/pocd",
+ "introduction" : "Defines the use of FHIR resources to convey measurements and supporting data from acute care point-of-care medical devices (PoCD) to receiving systems for electronic medical records, clinical decision support, and medical data archiving for aggregate quality measurement and research purposes",
+ "list" : [{
+  "version" : "current",
+  "desc" : "Continuous Integration Build (latest in version control)",
+  "path" : "https://build.fhir.org/ig/HL7/uv-pocd/",
+  "status" : "ci-build",
+  "current" : true
+ },{
+  "version" : "0.2.0",
+  "date" : "2018-09-01",
+  "desc" : "Initial STU ballot (Sep 2018 Ballot)",
+  "path" : "http://hl7.org/fhir/uv/pocd/2018Sep",
+  "status" : "ballot",
+  "sequence" : "STU 1"
+ },{
+  "version" : "0.1.0",
+  "date" : "2018-01-01",
+  "desc" : "Draft for Comment (Jan 2018 Ballot)",
+  "path" : "http://hl7.org/fhir/uv/pocd/2018Jan",
+  "status" : "ballot",
+  "sequence" : "STU 1"
+ }]
+}

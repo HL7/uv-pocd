@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="EnumerationObservation"/>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-summary">
+    <valueMarkdown value="The profile defines the following rules:&#10;
+* `Observation.code` shall have a coding from the ISO/IEEE 11073 MDC Metric nomenclature if there is an appropriate code available.&#10;
+* `Observation.subject` shall be present and refer to a Patient resource or MDS Device resource.&#10;
+* Either `Observation.valueCodeableConcept` or `Observation.valueString` or, if there is no value, `Observation.dataAbsentReason` shall be present.&#10;
+* `Observation.device` shall be present and refer to the Enumeration DeviceMetric resource where this observation belongs to."/>
+  </extension>
+  <url value="http://hl7.org/fhir/uv/pocd/StructureDefinition/EnumerationObservation"/>
+  <name value="EnumerationObservation"/>
+  <title value="Enumeration Observation profile"/>
+  <status value="draft"/>
+  <date value="2019-09-28"/>
+  <publisher value="HL7 International - Health Care Devices Work Group"/>
+  <description value="StructureDefinition for Observation resources that represent coded or text status, annotations, or settings."/>
+  <fhirVersion value="4.0.0"/>
+  <kind value="resource"/>
+  <abstract value="false"/>
+  <type value="Observation"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Observation"/>
+  <derivation value="constraint"/>
+  <differential>
+    <element id="Observation">
+      <path value="Observation"/>
+      <constraint>
+        <key value="pocd-obs-1"/>
+        <severity value="error"/>
+        <human value="If there is no value a dataAbsentReason shall be present"/>
+        <expression value="value.exists() or dataAbsentReason.exists()"/>
+      </constraint>
+    </element>
+    <element id="Observation.code">
+      <path value="Observation.code"/>
+      <binding>
+        <strength value="extensible"/>
+        <valueSet value="http://hl7.org/fhir/uv/pocd/ValueSet/11073MDC-metric"/>
+      </binding>
+    </element>
+    <element id="Observation.subject">
+      <path value="Observation.subject"/>
+      <min value="1"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient"/>
+        <targetProfile value="http://hl7.org/fhir/uv/pocd/StructureDefinition/MdsDevice"/>
+      </type>
+    </element>
+    <element id="Observation.value[x]">
+      <path value="Observation.value[x]"/>
+      <slicing>
+        <discriminator>
+          <type value="type"/>
+          <path value="$this"/>
+        </discriminator>
+        <rules value="closed"/>
+      </slicing>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <type>
+        <code value="string"/>
+      </type>
+      <condition value="pocd-obs-1"/>
+    </element>
+    <element id="Observation.dataAbsentReason">
+      <path value="Observation.dataAbsentReason"/>
+      <condition value="pocd-obs-1"/>
+    </element>
+    <element id="Observation.device">
+      <path value="Observation.device"/>
+      <min value="1"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/uv/pocd/StructureDefinition/EnumerationDeviceMetric"/>
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>

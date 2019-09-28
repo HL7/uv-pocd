@@ -1,0 +1,32 @@
+<div xmlns="http://www.w3.org/1999/xhtml">
+  <h3>Version 0.2.0</h3>
+  <ul>
+    <li>
+      Move content from Simplifier to GitHub for use by the IG Publisher, including restructuring and formatting changes.
+    </li>
+    <li>
+      Replace PoC Device and DeviceComponent profiles with MDS, VMD, and Channel Device profiles reflecting the Device-DeviceComponent resource merge.
+    </li>
+    <li>
+      Change Device.type, DeviceMetric.type, DeviceMetric.unit, Observation.code, and Observation.component.code to an extensible binding to the 11073 MDC terminology.
+    </li>
+    <li>
+      Replace measurement status extension by an extended value set for Observation.interpretation and Observation.component.interpretation.
+    </li>
+    <li>
+      Create ValueSets for the 11073 MDC nomenclature filtered by partition.
+    </li>
+    <li>
+      Create CodeSystem and extend ValueSet for Observation interpretation codes including measurement status.
+    </li>
+    <li>
+      Update examples for new profile definitions.
+    </li>
+  </ul>
+  <h3>Version 0.1.0</h3>
+  <ul>
+    <li>
+      First draft for comment.
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="EnumerationDeviceMetric"/>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-summary">
+    <valueMarkdown value="The profile defines the following rules:&#10;
+* `DeviceMetric.type` shall have a coding from the ISO/IEEE 11073 MDC Metric nomenclature if there is an appropriate code available.&#10;
+* `DeviceMetric.source` shall be present and refer to the MDS Device resource.&#10;
+* `DeviceMetric.parent` shall be present and refer to the Channel Device resource where this metric belongs to."/>
+  </extension>
+  <url value="http://hl7.org/fhir/uv/pocd/StructureDefinition/EnumerationDeviceMetric"/>
+  <name value="EnumerationDeviceMetric"/>
+  <title value="Enumeration DeviceMetric profile"/>
+  <status value="draft"/>
+  <date value="2019-09-28"/>
+  <publisher value="HL7 International - Health Care Devices Work Group"/>
+  <description value="StructureDefinition for DeviceMetric resources that represent coded or text status, annotations, or settings characteristics and capabilities."/>
+  <fhirVersion value="4.0.0"/>
+  <kind value="resource"/>
+  <abstract value="false"/>
+  <type value="DeviceMetric"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/DeviceMetric"/>
+  <derivation value="constraint"/>
+  <differential>
+    <element id="DeviceMetric">
+      <path value="DeviceMetric"/>
+    </element>
+    <element id="DeviceMetric.type">
+      <path value="DeviceMetric.type"/>
+      <binding>
+        <strength value="extensible"/>
+        <valueSet value="http://hl7.org/fhir/uv/pocd/ValueSet/11073MDC-metric"/>
+      </binding>
+    </element>
+    <element id="DeviceMetric.unit">
+      <path value="DeviceMetric.unit"/>
+      <max value="0"/>
+    </element>
+    <element id="DeviceMetric.source">
+      <path value="DeviceMetric.source"/>
+      <min value="1"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/uv/pocd/StructureDefinition/MdsDevice"/>
+      </type>
+    </element>
+    <element id="DeviceMetric.parent">
+      <path value="DeviceMetric.parent"/>
+      <min value="1"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/uv/pocd/StructureDefinition/ChannelDevice"/>
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>

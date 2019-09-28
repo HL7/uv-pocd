@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ImplementationGuide xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../input-cache/schemas-r5/fhir-single.xsd">
+  <id value="hl7.fhir.uv.pocd"/>
+  <url value="http://hl7.org/fhir/uv/pocd/ImplementationGuide/hl7.fhir.uv.pocd"/>
+  <name value="PoCDImplementationGuide"/>
+  <title value="Point-of-Care Device Implementation Guide"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <date value="2019-09-28"/>
+  <publisher value="HL7 International - Health Care Devices Work Group"/>
+  <!-- <contact>
+    <telecom>
+      <system value="other"/>
+      <value value="http://hl7.org/Special/committees/healthcaredevices"/>
+    </telecom>
+  </contact> -->
+  <description value="ImplementationGuide for Point-of-Care Devices (PoCD), such as those typically found in a hospital care setting (e.g., physiological monitors, infusion pumps, ventilators, pulse-oximeters, etc.)."/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="001"/>
+    </coding>
+  </jurisdiction>
+  <packageId value="hl7.fhir.uv.pocd"/>
+  <fhirVersion value="4.0.0"/>
+  <definition>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/MdsDevice"/>
+      </reference>
+      <name value="MDS Device profile"/>
+      <description value="StructureDefinition for Device resources that represent a Medical Device System (MDS). This is the top-level resource in the hierarchical model of a Point-of-Care device."/>
+    <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/VmdDevice"/>
+      </reference>
+      <name value="VMD Device profile"/>
+      <description value="StructureDefinition for Device resources that represent Virtual Medical Devices (VMD). These are medical-related subsystems in the hierarchical model of a Point-of-Care device."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/ChannelDevice"/>
+      </reference>
+      <name value="Channel Device profile"/>
+      <description value="StructureDefinition for Device resources that represent Channels, which are used for grouping metrics together."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/NumericDeviceMetric"/>
+      </reference>
+      <name value="Numeric DeviceMetric profile"/>
+      <description value="StructureDefinition for DeviceMetric resources that represent numerical measurements, calculations, or settings characteristics and capabilities."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/EnumerationDeviceMetric"/>
+      </reference>
+      <name value="Enumeration DeviceMetric profile"/>
+      <description value="StructureDefinition for DeviceMetric resources that represent coded or text status, annotations, or settings characteristics and capabilities."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/NumericObservation"/>
+      </reference>
+      <name value="Numeric Observation profile"/>
+      <description value="StructureDefinition for Observation resources that represent numerical measurements, calculations, or settings."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/CompoundNumericObservation"/>
+      </reference>
+      <name value="Compound Numeric Observation profile"/>
+      <description value="StructureDefinition for Observation resources that represent numerical measurements, calculations, or settings with multiple components."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/EnumerationObservation"/>
+      </reference>
+      <name value="Enumeration Observation profile"/>
+      <description value="StructureDefinition for Observation resources that represent coded or text status, annotations, or settings."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/device-instance"/>
+      </reference>
+      <name value="Device Instance extension"/>
+      <description value="StructureDefinition that adds an instance number to Device."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="CodeSystem/measurement-status"/>
+      </reference>
+      <name value="Measurement status codes"/>
+      <description value="Measurement status definitions from the ISO/IEEE 11073-10201 DIM."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="ValueSet/11073MDC-object"/>
+      </reference>
+      <name value="MDC Object infrastructure and Device nomenclature"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="ValueSet/11073MDC-metric"/>
+      </reference>
+      <name value="MDC Metric nomenclature"/>
+      <description value="ValueSet for the ISO/IEEE 11073-10101 Nomenclature filtered by Metric partition."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="ValueSet/11073MDC-dimension"/>
+      </reference>
+      <name value="MDC Unit of Measurement"/>
+      <description value="ValueSet for the ISO/IEEE 11073-10101 Nomenclature filtered by Dimension partition."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="ValueSet/observation-interpretation"/>
+      </reference>
+      <name value="Observation interpretation codes"/>
+      <description value="Observation interpretation codes including measurement status."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Device/PhysioMonitorMdsDevice"/>
+      </reference>
+      <name value="Patient Monitor MDS example"/>
+      <description value="Example of a Device resource that represents a patient monitor."/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/pocd/StructureDefinition/MdsDevice"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Device/ECGVmdDevice"/>
+      </reference> 
+      <name value="ECG VMD example"/>
+      <description value="Example of a Device resource that represents an ECG subsystem."/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/pocd/StructureDefinition/VmdDevice"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Device/NBPVmdDevice"/>
+      </reference> 
+      <name value="NBP VMD example"/>
+      <description value="Example of a Device resource that represents a non-invasive blood pressure subsystem."/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/pocd/StructureDefinition/VmdDevice"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Device/ECGChannelDevice"/>
+      </reference> 
+      <name value="ECG Channel example"/>
+      <description value="Example of a Device resource that represents an ECG channel."/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/pocd/StructureDefinition/ChannelDevice"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Device/HeartRateChannelDevice"/>
+      </reference> 
+      <name value="Heart Rate Channel example"/>
+      <description value="Example of a Device resource that represents a heart rate channel."/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/pocd/StructureDefinition/ChannelDevice"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Device/NBPChannelDevice"/>
+      </reference> 
+      <name value="NBP Channel example"/>
+      <description value="Example of a Device resource that represents a non-invasive blood pressure channel."/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/pocd/StructureDefinition/ChannelDevice"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="DeviceMetric/RhythmStatusEnumerationDeviceMetric"/>
+      </reference> 
+      <name value="Rhythm Status Enumeration metric example"/>
+      <description value="Example of a DeviceMetric resource that represents a rhythm status metric."/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/pocd/StructureDefinition/EnumerationDeviceMetric"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="DeviceMetric/HeartRateNumericDeviceMetric"/>
+      </reference> 
+      <name value="Heart Rate Numeric metric example"/>
+      <description value="Example of a DeviceMetric resource that represents a heart rate metric."/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/pocd/StructureDefinition/NumericDeviceMetric"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="DeviceMetric/NBPNumericDeviceMetric"/>
+      </reference> 
+      <name value="NBP Numeric metric example"/>
+      <description value="Example of a DeviceMetric resource that represents a non-invasive blood pressure metric."/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/pocd/StructureDefinition/NumericDeviceMetric"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Observation/RhythmStatusEnumerationObservation"/>
+      </reference> 
+      <name value="Rhythm Status Enumeration observation example"/>
+      <description value="Example of an Observation resource that represents coded status."/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/pocd/StructureDefinition/EnumerationObservation"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Observation/HeartRateNumericObservation"/>
+      </reference> 
+      <name value="Heart Rate Numeric observation example"/>
+      <description value="Example of an Observation resource that represents numerical measurement."/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/pocd/StructureDefinition/NumericObservation"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Observation/NBPCompoundNumericObservation"/>
+      </reference> 
+      <name value="NBP Numeric observation example"/>
+      <description value="Example of an Observation resource that represents numerical measurement with multiple components."/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/pocd/StructureDefinition/CompoundNumericObservation"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Patient/SomePatient"/>
+      </reference>
+      <name value="Some Patient example"/>
+      <description value="Example of a Patient resource."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Location/SomeLocation"/>
+      </reference>
+      <name value="Some Location example"/>
+      <description value="Example of a Location resource."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <page>
+      <nameUrl value="toc.html"/>
+      <title value="Table of Contents"/>
+      <generation value="html"/>
+      <page>
+        <nameUrl value="index.html"/>
+        <title value="Home"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <nameUrl value="overview.html"/>
+        <title value="Overview"/>
+        <generation value="markdown"/>
+      </page>
+      <!-- <page>
+        <nameUrl value="usecases.html"/>
+        <title value="Use Cases"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <nameUrl value="guidance.html"/>
+        <title value="Technical Implementation Guidance"/>
+        <generation value="markdown"/>
+        <page>
+          <nameUrl value="modeling.html"/>
+          <title value="Creating a Device Model"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <nameUrl value="transfer.html"/>
+          <title value="RESTful Transfer"/>
+          <generation value="markdown"/>
+        </page>
+      </page> -->
+      <page>
+        <nameUrl value="profiles.html"/>
+        <title value="Profiles"/>
+        <generation value="html"/>
+      </page>
+       <page>
+        <nameUrl value="terminology.html"/>
+        <title value="Terminology"/>
+        <generation value="html"/>
+      </page>
+      <page>
+        <nameUrl value="artifacts.html"/>
+        <title value="Artifact List"/>
+        <generation value="html"/>
+      </page>
+      <page>
+        <nameUrl value="downloads.html"/>
+        <title value="Downloads"/>
+        <generation value="html"/>
+      </page>
+      <page>
+        <nameUrl value="changes.html"/>
+        <title value="Change Log"/>
+        <generation value="html"/>
+      </page>
+    </page>
+  </definition>
+</ImplementationGuide>

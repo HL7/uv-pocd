@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DeviceMetric xmlns="http://hl7.org/fhir">
+  <id value="NBPNumericDeviceMetric"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/uv/pocd/StructureDefinition/NumericDeviceMetric"/>
+  </meta>
+  <type>
+    <coding>
+      <system value="urn:iso:std:iso:11073:10101"/>
+      <code value="150020"/>
+      <display value="MDC_PRESS_BLD_NONINV"/>
+    </coding>
+    <text value="NBP"/>
+  </type>
+  <unit>
+    <coding>
+      <system value="urn:iso:std:iso:11073:10101"/>
+      <code value="266016"/>
+      <display value="MDC_DIM_MMHG"/>
+    </coding>
+    <text value="mmHg"/>
+  </unit>
+  <source>
+    <reference value="Device/PhysioMonitorMdsDevice"/>
+  </source>
+  <parent>
+    <reference value="Device/NBPChannelDevice"/>
+  </parent>
+  <operationalStatus value="on"/>
+  <color value="red"/>
+  <category value="measurement"/>
+  <measurementPeriod>
+    <repeat>
+      <frequency value="1"/>
+      <period value="15"/>
+      <periodUnit value="min"/>
+    </repeat>
+  </measurementPeriod>
+</DeviceMetric>

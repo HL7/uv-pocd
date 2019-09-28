@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Device xmlns="http://hl7.org/fhir">
+  <id value="NBPVmdDevice"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/uv/pocd/StructureDefinition/VmdDevice"/>
+  </meta>
+  <udiCarrier>
+    <deviceIdentifier value="00012345678912"/>
+    <issuer value="http://hl7.org/fhir/NamingSystem/gs1-di"/>
+    <jurisdiction value="http://hl7.org/fhir/NamingSystem/fda-udi"/>
+    <carrierHRF value="(01)00012345678912(21)567890"/>
+  </udiCarrier>
+  <status value="active"/>
+  <manufacturer value="MyCompany"/>
+  <serialNumber value="567890"/>
+  <partNumber value="1122-3344"/>
+  <type>
+    <coding>
+      <system value="urn:iso:std:iso:11073:10101"/>
+      <code value="70686"/>
+      <display value="MDC_DEV_PRESS_BLD_NONINV_VMD"/>
+    </coding>
+  </type>
+  <parent>
+    <reference value="Device/PhysioMonitorMdsDevice"/>
+  </parent>
+</Device>

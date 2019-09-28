@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Device xmlns="http://hl7.org/fhir">
+  <id value="PhysioMonitorMdsDevice"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/uv/pocd/StructureDefinition/MdsDevice"/>
+  </meta>
+  <identifier>
+    <system value="urn:oid:1.2.840.10004.1.1.1.0.0.1.0.0.1.2680"/>
+    <value value="01-23-45-67-89-AB-CD-EF"/>
+  </identifier>
+  <udiCarrier>
+    <deviceIdentifier value="00012345678905"/>
+    <issuer value="http://hl7.org/fhir/NamingSystem/gs1-di"/>
+    <jurisdiction value="http://hl7.org/fhir/NamingSystem/fda-udi"/>
+    <carrierHRF value="(01)00012345678905(21)123456"/>
+  </udiCarrier>
+  <status value="active"/>
+  <manufacturer value="MyCompany"/>
+  <serialNumber value="123456"/>
+  <deviceName>
+    <name value="MyPhysioMonitor"/>
+    <type value="model-name"/>
+  </deviceName>
+  <modelNumber value="PM42"/>
+  <type>
+    <coding>
+      <system value="urn:iso:std:iso:11073:10101"/>
+      <code value="69965"/>
+      <display value="MDC_DEV_MON_PHYSIO_MULTI_PARAM_MDS"/>
+    </coding>
+    <text value="Patient Monitor"/>
+  </type>
+  <patient>
+    <reference value="Patient/SomePatient"/>
+  </patient>
+  <location>
+    <reference value="Location/SomeLocation"/>
+  </location>
+</Device>

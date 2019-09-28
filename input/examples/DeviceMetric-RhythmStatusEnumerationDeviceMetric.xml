@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DeviceMetric xmlns="http://hl7.org/fhir">
+  <id value="RhythmStatusEnumerationDeviceMetric"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/uv/pocd/StructureDefinition/EnumerationDeviceMetric"/>
+  </meta>
+  <type>
+    <coding>
+      <system value="urn:iso:std:iso:11073:10101"/>
+      <code value="184327"/>
+      <display value="MDC_ECG_STAT_RHY"/>
+    </coding>
+    <text value="Rhythm"/>
+  </type>
+  <source>
+    <reference value="Device/PhysioMonitorMdsDevice"/>
+  </source>
+  <parent>
+    <reference value="Device/ECGChannelDevice"/>
+  </parent>
+  <operationalStatus value="on"/>
+  <category value="measurement"/>
+</DeviceMetric>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DeviceMetric xmlns="http://hl7.org/fhir">
+  <id value="HeartRateNumericDeviceMetric"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/uv/pocd/StructureDefinition/NumericDeviceMetric"/>
+  </meta>
+  <type>
+    <coding>
+      <system value="urn:iso:std:iso:11073:10101"/>
+      <code value="147842"/>
+      <display value="MDC_ECG_HEART_RATE"/>
+    </coding>
+    <text value="HR"/>
+  </type>
+  <unit>
+    <coding>
+      <system value="urn:iso:std:iso:11073:10101"/>
+      <code value="264864"/>
+      <display value="MDC_DIM_BEAT_PER_MIN"/>
+    </coding>
+    <text value="bpm"/>
+  </unit>
+  <source>
+    <reference value="Device/PhysioMonitorMdsDevice"/>
+  </source>
+  <parent>
+    <reference value="Device/HeartRateChannelDevice"/>
+  </parent>
+  <operationalStatus value="on"/>
+  <color value="green"/>
+  <category value="measurement"/>
+</DeviceMetric>

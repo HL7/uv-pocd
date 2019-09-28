@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Device xmlns="http://hl7.org/fhir">
+  <id value="HeartRateChannelDevice"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/uv/pocd/StructureDefinition/ChannelDevice"/>
+  </meta>
+  <status value="active"/>
+  <type>
+    <coding>
+      <system value="urn:iso:std:iso:11073:10101"/>
+      <code value="70739"/>
+      <display value="MDC_DEV_CARD_RATE_CHAN"/>
+    </coding>
+  </type>
+  <parent>
+    <reference value="Device/ECGVmdDevice"/>
+  </parent>
+</Device>

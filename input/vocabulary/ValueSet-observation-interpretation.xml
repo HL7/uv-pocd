@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="observation-interpretation"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+  </meta>
+  <url value="http://hl7.org/fhir/uv/pocd/ValueSet/observation-interpretation"/>
+  <name value="ObservationInterpretation"/>
+  <title value="Observation interpretation codes"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <date value="2019-09-28"/>
+  <publisher value="HL7 International - Health Care Devices Work Group"/>
+  <description value="Observation interpretation codes including measurement status."/>
+  <compose>
+    <include>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+    </include>
+    <include>
+      <system value="http://hl7.org/fhir/uv/pocd/CodeSystem/measurement-status"/>
+    </include>
+  </compose>
+</ValueSet>

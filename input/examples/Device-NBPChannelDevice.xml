@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Device xmlns="http://hl7.org/fhir">
+  <id value="NBPChannelDevice"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/uv/pocd/StructureDefinition/ChannelDevice"/>
+  </meta>
+  <status value="active"/>
+  <type>
+    <coding>
+      <system value="urn:iso:std:iso:11073:10101"/>
+      <code value="70687"/>
+      <display value="MDC_DEV_PRESS_BLD_NONINV_CHAN"/>
+    </coding>
+  </type>
+  <parent>
+    <reference value="Device/NBPVmdDevice"/>
+  </parent>
+</Device>

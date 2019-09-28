@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Location xmlns="http://hl7.org/fhir">
+  <id value="SomeLocation"/>
+  <name value="Bed 42"/>
+  <mode value="instance"/>
+  <type>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-RoleCode"/>
+      <code value="ICU"/>
+      <display value="Intensive care unit"/>
+    </coding>
+  </type>
+  <physicalType>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/location-physical-type"/>
+      <code value="bd"/>
+      <display value="Bed"/>
+    </coding>
+  </physicalType>
+</Location>
