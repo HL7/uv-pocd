@@ -9,12 +9,12 @@
   <experimental value="false"/>
   <date value="2019-10-02"/>
   <publisher value="HL7 International - Health Care Devices Work Group"/>
-  <contact>
+  <!-- <contact>
     <telecom>
       <system value="other"/>
       <value value="http://hl7.org/Special/committees/healthcaredevices"/>
     </telecom>
-  </contact>
+  </contact> -->
   <description value="ImplementationGuide for Point-of-Care Devices (PoCD), such as those typically found in a hospital care setting (e.g., physiological monitors, infusion pumps, ventilators, pulse-oximeters, etc.)."/>
   <jurisdiction>
     <coding>
