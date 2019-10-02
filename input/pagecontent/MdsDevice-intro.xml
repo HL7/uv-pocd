@@ -1,0 +1,8 @@
+<div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas-r5/fhir-single.xsd">
+  <a name="scope"/>
+  <h3>Scope and Usage</h3>
+  <p>
+    This profile sets minimum expectations for the <a href="{{site.data.fhir.path}}device.html">Device</a> resource that represents a Medical Device System (MDS).
+    It's the top-level resource in the hierarchical model of a point-of-care device.
+  </p>
+</div>

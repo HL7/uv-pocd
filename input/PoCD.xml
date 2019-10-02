@@ -2,18 +2,19 @@
 <ImplementationGuide xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../input-cache/schemas-r5/fhir-single.xsd">
   <id value="hl7.fhir.uv.pocd"/>
   <url value="http://hl7.org/fhir/uv/pocd/ImplementationGuide/hl7.fhir.uv.pocd"/>
+  <version value="0.2.1"/>
   <name value="PoCDImplementationGuide"/>
   <title value="Point-of-Care Device Implementation Guide"/>
   <status value="draft"/>
   <experimental value="false"/>
-  <date value="2019-09-28"/>
+  <date value="2019-10-02"/>
   <publisher value="HL7 International - Health Care Devices Work Group"/>
-  <!-- <contact>
+  <contact>
     <telecom>
       <system value="other"/>
       <value value="http://hl7.org/Special/committees/healthcaredevices"/>
     </telecom>
-  </contact> -->
+  </contact>
   <description value="ImplementationGuide for Point-of-Care Devices (PoCD), such as those typically found in a hospital care setting (e.g., physiological monitors, infusion pumps, ventilators, pulse-oximeters, etc.)."/>
   <jurisdiction>
     <coding>
@@ -30,7 +31,7 @@
       </reference>
       <name value="MDS Device profile"/>
       <description value="StructureDefinition for Device resources that represent a Medical Device System (MDS). This is the top-level resource in the hierarchical model of a Point-of-Care device."/>
-    <exampleBoolean value="false"/>
+      <exampleBoolean value="false"/>
     </resource>
     <resource>
       <reference>

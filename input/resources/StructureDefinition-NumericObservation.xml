@@ -10,10 +10,11 @@
 * `Observation.device` shall be present and refer to the Numeric DeviceMetric resource where this observation belongs to."/>
   </extension>
   <url value="http://hl7.org/fhir/uv/pocd/StructureDefinition/NumericObservation"/>
+  <version value="0.2.1"/>
   <name value="NumericObservation"/>
   <title value="Numeric Observation profile"/>
   <status value="draft"/>
-  <date value="2019-09-28"/>
+  <date value="2019-10-02"/>
   <publisher value="HL7 International - Health Care Devices Work Group"/>
   <description value="StructureDefinition for Observation resources that represent numerical measurements, calculations, or settings."/>
   <fhirVersion value="4.0.0"/>
@@ -83,6 +84,40 @@
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient"/>
         <targetProfile value="http://hl7.org/fhir/uv/pocd/StructureDefinition/MdsDevice"/>
       </type>
+    </element>
+    <element id="Observation.effective[x]">
+      <path value="Observation.effective[x]"/>
+    </element>
+    <element id="Observation.effective[x]:effectiveDateTime">
+      <path value="Observation.effectiveDateTime"/>
+      <mapping>
+        <identity value="dim"/>
+        <map value="Numeric::Absolute-Time-Stamp"/>
+      </mapping>
+    </element>
+    <element id="Observation.effective[x]:effectivePeriod">
+      <path value="Observation.effectivePeriod"/>
+    </element>
+    <element id="Observation.effective[x]:effectivePeriod.start">
+      <path value="Observation.effectivePeriod.start"/>
+      <mapping>
+        <identity value="dim"/>
+        <map value="Metric::Start-Time"/>
+      </mapping>
+    </element>
+    <element id="Observation.effective[x]:effectivePeriod.end">
+      <path value="Observation.effectivePeriod.end"/>
+      <mapping>
+        <identity value="dim"/>
+        <map value="Metric::Stop-Time"/>
+      </mapping>
+    </element>
+    <element id="Observation.effective[x]:effectiveInstant">
+      <path value="Observation.effectiveInstant"/>
+      <mapping>
+        <identity value="sdc"/>
+        <map value="AbstractMetricValue/DeterminationTime"/>
+      </mapping>
     </element>
     <element id="Observation.value[x]">
       <path value="Observation.value[x]"/>
@@ -166,6 +201,10 @@
     <element id="Observation.dataAbsentReason">
       <path value="Observation.dataAbsentReason"/>
       <condition value="pocd-obs-1"/>
+      <mapping>
+        <identity value="dim"/>
+        <map value="Numeric::Nu-Observed-Value::state (refer to MeasurementStatus mapping rules)"/>
+      </mapping>
     </element>
     <element id="Observation.interpretation">
       <path value="Observation.interpretation"/>
@@ -173,6 +212,10 @@
         <strength value="extensible"/> 
         <valueSet value="http://hl7.org/fhir/uv/pocd/ValueSet/observation-interpretation"/> 
       </binding>     
+      <mapping>
+        <identity value="dim"/>
+        <map value="Numeric::Nu-Observed-Value::state (refer to MeasurementStatus mapping rules)"/>
+      </mapping>
     </element>
     <element id="Observation.device">
       <path value="Observation.device"/>
@@ -191,20 +234,12 @@
         <identity value="dim"/>
         <map value="Numeric::Nu-Physiological-Range::lower-value"/>
       </mapping>
-      <mapping>
-        <identity value="sdc"/>
-        <map value="DistributionSampleArrayMetricState/PhysiologicalRange/Lower"/>
-      </mapping>
     </element>
     <element id="Observation.referenceRange.high">
       <path value="Observation.referenceRange.high"/>
       <mapping>
         <identity value="dim"/>
         <map value="Numeric::Nu-Physiological-Range::upper-value"/>
-      </mapping>
-      <mapping>
-        <identity value="sdc"/>
-        <map value="DistributionSampleArrayMetricState/PhysiologicalRange/Upper"/>
       </mapping>
     </element>
   </differential>
