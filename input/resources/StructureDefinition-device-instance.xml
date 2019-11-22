@@ -1,14 +1,14 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<StructureDefinition xmlns="http://hl7.org/fhir">
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../input-cache/schemas-r5/fhir-single.xsd">
   <id value="device-instance"/>
   <url value="http://hl7.org/fhir/uv/pocd/StructureDefinition/device-instance"/>
   <name value="DeviceInstance"/>
   <title value="Device Instance extension"/>
   <status value="draft"/>
-  <date value="2019-09-28"/>
+  <date value="2019-11-22"/>
   <publisher value="HL7 International - Health Care Devices Work Group"/>
   <description value="StructureDefinition that adds an instance number to Device."/>
-  <fhirVersion value="4.0.0"/>
+  <fhirVersion value="4.0.1"/>
   <kind value="complex-type"/>
   <abstract value="false"/>
   <context>
