@@ -10,18 +10,18 @@
   </li>
   <!-- <li>
     <a href="usecases.html">Use Cases</a>
-  </li>
+  </li> -->
   <li class="dropdown">
     <a data-toggle="dropdown" href="#" class="dropdown-toggle">Technical Implementation Guidance<b class="caret"/></a>
     <ul class="dropdown-menu">
-      <li>
+      <!-- <li>
         <a href="modeling.html">Creating a Device Model</a>
-      </li>
+      </li> -->
       <li>
         <a href="#">Mapping from HL7 v2 to FHIR</a>
       </li>
       <li>
-        <a href="#">Mapping from IEEE 11073-10201 DIM to FHIR</a>
+        <a href="mappingdim.html">Mapping from IEEE 11073-10201 DIM to FHIR</a>
       </li>
       <li>
         <a href="#">Mapping from IEEE 11073-10207 SDC to FHIR</a>
@@ -29,14 +29,14 @@
       <li>
         <a href="#">RESTful Transfer</a>
       </li>
-      <li>
+      <!-- <li>
         <a href="#">Safety Considerations</a>
       </li>
       <li>
         <a href="#">Security and Privacy Considerations</a>
-      </li>
+      </li> -->
     </ul>
-  </li> -->
+  </li>
   <li>
     <a href="profiles.html">Profiles</a>
   </li>

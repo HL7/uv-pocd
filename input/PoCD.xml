@@ -7,7 +7,7 @@
   <title value="Point-of-Care Device Implementation Guide"/>
   <status value="draft"/>
   <experimental value="false"/>
-  <date value="2019-11-22"/>
+  <date value="2020-01-03"/>
   <publisher value="HL7 International - Health Care Devices Work Group"/>
   <!-- <contact>
     <telecom>
@@ -266,22 +266,27 @@
         <nameUrl value="usecases.html"/>
         <title value="Use Cases"/>
         <generation value="markdown"/>
-      </page>
+      </page> -->
       <page>
         <nameUrl value="guidance.html"/>
         <title value="Technical Implementation Guidance"/>
         <generation value="markdown"/>
-        <page>
+        <!-- <page>
           <nameUrl value="modeling.html"/>
           <title value="Creating a Device Model"/>
           <generation value="markdown"/>
-        </page>
+        </page> -->
         <page>
+          <nameUrl value="mappingdim.html"/>
+          <title value="Mapping from IEEE 11073-10201 DIM to FHIR"/>
+          <generation value="markdown"/>
+        </page>
+        <!-- <page>
           <nameUrl value="transfer.html"/>
           <title value="RESTful Transfer"/>
           <generation value="markdown"/>
-        </page>
-      </page> -->
+        </page> -->
+      </page>
       <page>
         <nameUrl value="profiles.html"/>
         <title value="Profiles"/>

@@ -19,16 +19,16 @@
       This element is the place for the 11073 MDC unit code, because the Observation resource has other constraints - see below.
     </li>
   </ul>
-  <p>The <a href="http://hl7.org/fhir/observation-vitalsigns.html">Vital Signs Profile</a>, which is part of FHIR core specification, applies for some commonly used measurement observations (e. g., heart rate, blood pressure, respiratory rate, oxygen saturation, body temperature):</p>
+  <p>The <a href="{{site.data.fhir.path}}observation-vitalsigns.html">Vital Signs Profile</a>, which is part of FHIR core specification, applies for some commonly used measurement observations (e. g., heart rate, blood pressure, respiratory rate, oxygen saturation, body temperature):</p>
   <ul>
     <li>
       The PoCD profiles require an 11073 MDC coding in <code>Observation.code</code> and, for compound metrics, in <code>Observation.component.code</code>. 
-      Depending on the type of measurement, the Vital Signs profiles may require <a href="http://hl7.org/fhir/loinc.html">LOINC</a> codes. 
+      Depending on the type of measurement, the Vital Signs profiles may require <a href="{{site.data.fhir.path}}loinc.html">LOINC</a> codes. 
       Note that the MDC code can be more specific than the Vital Signs LOINC code.
     </li>
     <li>
       The Quantity data type in <code>Observation.value[x]</code> and <code>Observation.component.value[x]</code> contains the units of measure. 
-      There is only a single coding that needs to be <a href="http://hl7.org/fhir/ucum.html">UCUM</a> for all vital signs. Therefore the PoCD profiles require UCUM coding for all numerics.
+      There is only a single coding that needs to be <a href="{{site.data.fhir.path}}ucum.html">UCUM</a> for all vital signs. Therefore the PoCD profiles require UCUM coding for all numerics.
     </li>
   </ul>
   <h3>Code Systems</h3>

@@ -1,6 +1,6 @@
 <div xmlns="http://www.w3.org/1999/xhtml">
   <p>
-    This Implementation Guide specifies profiles on the FHIR <a href="http://hl7.org/fhir/device.html">Device</a>, <a href="http://hl7.org/fhir/devicemetric.html">DeviceMetric</a>, and <a href="http://hl7.org/fhir/observation.html">Observation</a> resources.
+    This Implementation Guide specifies profiles on the FHIR <a href="{{site.data.fhir.path}}device.html">Device</a>, <a href="{{site.data.fhir.path}}devicemetric.html">DeviceMetric</a>, and <a href="{{site.data.fhir.path}}observation.html">Observation</a> resources.
     Each profile defines constraints, extensions, and terminology requirements for an implementation that claims conformance to this guide.
   </p>
   <div class="clearfix">
