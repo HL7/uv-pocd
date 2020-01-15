@@ -5,11 +5,11 @@ Most object classes in ISO/IEEE 11073 DIM can be mapped to FHIR resources as out
 
 | DIM Object Class | FHIR Resource |
 | ---
-| SimpleMDS <br/>HydraMDS <br/>CompositeSingleBedMDS <br/>CompositeMultipleBedMDS | [Device]({{site.data.fhir.path}}device.html) (according to the [MDS Device profile](MdsDevice.html)) and <br/>[Location]({{site.data.fhir.path}}location.html) (if needed) |
-| VMD | [Device]({{site.data.fhir.path}}device.html) (according to the [VMD Device profile](VmdDevice.html)) |
-| Channel | [Device]({{site.data.fhir.path}}device.html) (according to the [Channel Device profile](ChannelDevice.html)) |
-| Numeric | [DeviceMetric]({{site.data.fhir.path}}devicemetric.html) (according to the [Numeric DeviceMetric profile](NumericDeviceMetric.html)) and <br/>[Observation]({{site.data.fhir.path}}observation.html) (according to the [Numeric Observation profile](NumericObservation.html) or [Compound Numeric Observation profile](CompoundNumericObservation.html)) |
-| Enumeration | [DeviceMetric]({{site.data.fhir.path}}devicemetric.html) (according to the [Enumeration DeviceMetric profile](EnumerationDeviceMetric.html)) and <br/>[Observation]({{site.data.fhir.path}}observation.html) (according to the [Enumeration Observation profile](EnumerationObservation.html)) |
+| SimpleMDS <br/>HydraMDS <br/>CompositeSingleBedMDS <br/>CompositeMultipleBedMDS | [Device]({{site.data.fhir.path}}device.html) (according to the [MDS Device profile](StructureDefinition-MdsDevice.html)) and <br/>[Location]({{site.data.fhir.path}}location.html) (if needed) |
+| VMD | [Device]({{site.data.fhir.path}}device.html) (according to the [VMD Device profile](StructureDefinition-VmdDevice.html)) |
+| Channel | [Device]({{site.data.fhir.path}}device.html) (according to the [Channel Device profile](StructureDefinition-ChannelDevice.html)) |
+| Numeric | [DeviceMetric]({{site.data.fhir.path}}devicemetric.html) (according to the [Numeric DeviceMetric profile](StructureDefinition-NumericDeviceMetric.html)) and <br/>[Observation]({{site.data.fhir.path}}observation.html) (according to the [Numeric Observation profile](StructureDefinition-NumericObservation.html) or [Compound Numeric Observation profile](StructureDefinition-CompoundNumericObservation.html)) |
+| Enumeration | [DeviceMetric]({{site.data.fhir.path}}devicemetric.html) (according to the [Enumeration DeviceMetric profile](StructureDefinition-EnumerationDeviceMetric.html)) and <br/>[Observation]({{site.data.fhir.path}}observation.html) (according to the [Enumeration Observation profile](StructureDefinition-EnumerationObservation.html)) |
 | TimeSampleArray <br/> RealTimeSampleArray<br/> DistributionSampleArray | *to be completed* |
 | Alert <br/> AlertStatus <br/> AlertMonitor | *to be completed* |
 | PatientDemographics | [Patient]({{site.data.fhir.path}}patient.html) |
@@ -20,7 +20,7 @@ Please refer to the Mappings tab of each profile page for mapping ISO/IEEE 11073
 
 ### Measurement Status
 Observed values in ISO/IEEE 11073 DIM include a bit field that indicates measurement status. FHIR Observations do not have a single element for this purpose. Instead there is security metadata, dataAbsentReason for missing values, and interpretation to report significance of a result.  
-Measurement status information is mapped to `Resource.meta.security`, `Observation.dataAbsentReason` or `Observation.component.dataAbsentReason`, and `Observation.interpretation` or `Observation.component.interpretation` elements. The interpretation value set binding is extended to add relevant codes from the [Measurement status codes](measurement-status.html) defined in this implementation guide.
+Measurement status information is mapped to `Resource.meta.security`, `Observation.dataAbsentReason` or `Observation.component.dataAbsentReason`, and `Observation.interpretation` or `Observation.component.interpretation` elements. The interpretation value set binding is extended to add relevant codes from the [Measurement status codes](CodeSystem-measurement-status.html) defined in this implementation guide.
 
 | MeasurementStatus Bit | meta.security | dataAbsentReason | interpretation |
 | ---
