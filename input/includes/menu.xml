@@ -12,7 +12,7 @@
     <a href="usecases.html">Use Cases</a>
   </li> -->
   <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Technical Implementation Guidance<b class="caret"/></a>
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Technical Implementation Guidance<b class="caret"></b></a>
     <ul class="dropdown-menu">
       <!-- <li>
         <a href="modeling.html">Creating a Device Model</a>
@@ -47,7 +47,7 @@
     <a href="artifacts.html">Artifact List</a>
   </li>
   <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Support<b class="caret"/></a>
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Support<b class="caret"></b></a>
     <ul class="dropdown-menu">
       <li>
         <a target="_blank" href="{{site.data.fhir.path}}index.html">FHIR Spec <img src="external.png" style="text-align: baseline"/></a>

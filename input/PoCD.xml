@@ -2,19 +2,19 @@
 <ImplementationGuide xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../input-cache/schemas-r5/fhir-single.xsd">
   <id value="hl7.fhir.uv.pocd"/>
   <url value="http://hl7.org/fhir/uv/pocd/ImplementationGuide/hl7.fhir.uv.pocd"/>
-  <version value="0.2.1"/>
+  <version value="current"/>
   <name value="PoCDImplementationGuide"/>
   <title value="Point-of-Care Device Implementation Guide"/>
   <status value="draft"/>
   <experimental value="false"/>
-  <date value="2020-01-03"/>
+  <date value="2020-03-02"/>
   <publisher value="HL7 International - Health Care Devices Work Group"/>
-  <!-- <contact>
+  <contact>
     <telecom>
-      <system value="other"/>
+      <system value="url"/>
       <value value="http://hl7.org/Special/committees/healthcaredevices"/>
     </telecom>
-  </contact> -->
+  </contact>
   <description value="ImplementationGuide for Point-of-Care Devices (PoCD), such as those typically found in a hospital care setting (e.g., physiological monitors, infusion pumps, ventilators, pulse-oximeters, etc.)."/>
   <jurisdiction>
     <coding>
@@ -23,6 +23,7 @@
     </coding>
   </jurisdiction>
   <packageId value="hl7.fhir.uv.pocd"/>
+  <license value="CC0-1.0"/>
   <fhirVersion value="4.0.1"/>
   <definition>
     <resource>
@@ -313,5 +314,17 @@
         <generation value="html"/>
       </page>
     </page>
+    <parameter>
+      <code value="copyrightyear"/>
+      <value value="2017+"/>
+    </parameter>
+    <parameter>
+      <code value="releaselabel"/>
+      <value value="CI Build"/>
+    </parameter>
+    <parameter>
+      <code value="find-other-resources"/>
+      <value value="true"/>
+    </parameter>
   </definition>
 </ImplementationGuide>
