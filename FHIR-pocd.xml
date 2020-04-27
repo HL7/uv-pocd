@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               url="http://hl7.org/fhir/uv/pocd"
+               ciUrl="http://build.fhir.org/ig/HL7/uv-pocd"
+               defaultWorkgroup="dev"
+               defaultVersion="current"
+               xsi:noNamespaceSchemaLocation="../schemas/specification.xsd"
+               ballotUrl="http://hl7.org/fhir/uv/pocd/2018Sep">
+   <version code="current" url="http://build.fhir.org/ig/HL7/uv-pocd"/>
+   <version code="0.2.0" url="http://hl7.org/fhir/uv/pocd/2018Sep"/>
+   <version code="0.1.0"
+            url="http://hl7.org/fhir/uv/pocd/2018Jan"
+            deprecated="true"/>
+   <artifactPageExtension value="-definitions"/>
+   <artifactPageExtension value="-examples"/>
+   <artifactPageExtension value="-mappings"/>
+   <artifact name="MDS Device profile"
+             key="StructureDefinition-MdsDevice"
+             id="StructureDefinition/MdsDevice"/>
+   <artifact name="VMD Device profile"
+             key="StructureDefinition-VmdDevice"
+             id="StructureDefinition/VmdDevice"/>
+   <artifact name="Channel Device profile"
+             key="StructureDefinition-ChannelDevice"
+             id="StructureDefinition/ChannelDevice"/>
+   <artifact name="Numeric DeviceMetric profile"
+             key="StructureDefinition-NumericDeviceMetric"
+             id="StructureDefinition/NumericDeviceMetric"/>
+   <artifact name="Enumeration DeviceMetric profile"
+             key="StructureDefinition-EnumerationDeviceMetric"
+             id="StructureDefinition/EnumerationDeviceMetric"/>
+   <artifact name="Numeric Observation profile"
+             key="StructureDefinition-NumericObservation"
+             id="StructureDefinition/NumericObservation"/>
+   <artifact name="Compound Numeric Observation profile"
+             key="StructureDefinition-CompoundNumericObservation"
+             id="StructureDefinition/CompoundNumericObservation"/>
+   <artifact name="Enumeration Observation profile"
+             key="StructureDefinition-EnumerationObservation"
+             id="StructureDefinition/EnumerationObservation"/>
+   <artifact name="Device Instance extension"
+             key="StructureDefinition-device-instance"
+             id="StructureDefinition/device-instance"/>
+   <artifact name="Measurement status codes"
+             key="CodeSystem-measurement-status"
+             id="CodeSystem/measurement-status"/>
+   <artifact name="MDC Object infrastructure and Device nomenclature"
+             key="ValueSet-11073MDC-object"
+             id="ValueSet/11073MDC-object"/>
+   <artifact name="MDC Metric nomenclature"
+             key="ValueSet-11073MDC-metric"
+             id="ValueSet/11073MDC-metric"/>
+   <artifact name="MDC Unit of Measurement"
+             key="ValueSet-11073MDC-dimension"
+             id="ValueSet/11073MDC-dimension"/>
+   <artifact name="Observation interpretation codes"
+             key="ValueSet-observation-interpretation"
+             id="ValueSet/observation-interpretation"/>
+   <artifact name="Patient Monitor MDS example"
+             key="Device-PhysioMonitorMdsDevice"
+             id="Device/PhysioMonitorMdsDevice"/>
+   <artifact name="ECG VMD example"
+             key="Device-ECGVmdDevice"
+             id="Device/ECGVmdDevice"/>
+   <artifact name="NBP VMD example"
+             key="Device-NBPVmdDevice"
+             id="Device/NBPVmdDevice"/>
+   <artifact name="ECG Channel example"
+             key="Device-ECGChannelDevice"
+             id="Device/ECGChannelDevice"/>
+   <artifact name="Heart Rate Channel example"
+             key="Device-HeartRateChannelDevice"
+             id="Device/HeartRateChannelDevice"/>
+   <artifact name="NBP Channel example"
+             key="Device-NBPChannelDevice"
+             id="Device/NBPChannelDevice"/>
+   <artifact name="Rhythm Status Enumeration metric example"
+             key="DeviceMetric-RhythmStatusEnumerationDeviceMetric"
+             id="DeviceMetric/RhythmStatusEnumerationDeviceMetric"/>
+   <artifact name="Heart Rate Numeric metric example"
+             key="DeviceMetric-HeartRateNumericDeviceMetric"
+             id="DeviceMetric/HeartRateNumericDeviceMetric"/>
+   <artifact name="NBP Numeric metric example"
+             key="DeviceMetric-NBPNumericDeviceMetric"
+             id="DeviceMetric/NBPNumericDeviceMetric"/>
+   <artifact name="Rhythm Status Enumeration observation example"
+             key="Observation-RhythmStatusEnumerationObservation"
+             id="Observation/RhythmStatusEnumerationObservation"/>
+   <artifact name="Heart Rate Numeric observation example"
+             key="Observation-HeartRateNumericObservation"
+             id="Observation/HeartRateNumericObservation"/>
+   <artifact name="NBP Numeric observation example"
+             key="Observation-NBPCompoundNumericObservation"
+             id="Observation/NBPCompoundNumericObservation"/>
+   <artifact name="Some Patient example"
+             key="Patient-SomePatient"
+             id="Patient/SomePatient"/>
+   <artifact name="Some Location example"
+             key="Location-SomeLocation"
+             id="Location/SomeLocation"/>
+   <artifact name="Device" key="Device" deprecated="true"/>
+   <artifact name="DeviceComponent" key="DeviceComponent" deprecated="true"/>
+   <artifact name="DeviceMetric" key="DeviceMetric" deprecated="true"/>
+   <artifact name="Observation" key="Observation" deprecated="true"/>
+   <page name="(NA)" key="NA"/>
+   <page name="(many)" key="many"/>
+   <page name="Table of Contents" key="toc"/>
+   <page name="Home" key="index"/>
+   <page name="Overview" key="overview"/>
+   <page name="Technical Implementation Guidance" key="guidance"/>
+   <page name="Mapping from IEEE 11073-10201 DIM to FHIR" key="mappingdim"/>
+   <page name="Mapping from IEEE 11073-10207 SDC to FHIR" key="mappingsdc"/>
+   <page name="Profiles" key="profiles"/>
+   <page name="Terminology" key="terminology"/>
+   <page name="Artifact List" key="artifacts"/>
+   <page name="Downloads" key="downloads"/>
+   <page name="Change Log" key="changes"/>
+</specification>

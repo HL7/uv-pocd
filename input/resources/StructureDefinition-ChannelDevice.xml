@@ -21,6 +21,10 @@
   <type value="Device"/>
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Device"/>
   <derivation value="constraint"/>
+   <mapping>
+    <identity value="sdc"/>
+    <name value="IEEE 11073-10207 SDC"/>
+  </mapping>
   <differential>
     <element id="Device">
       <path value="Device"/>
@@ -45,6 +49,23 @@
         <profile value="http://hl7.org/fhir/uv/pocd/StructureDefinition/device-instance"/>
       </type>
     </element>
+	<element id="Device.identifier">
+      <path value="Device.identifier"/>
+	</element>
+	<element id="Device.identifier.system">
+	  <path value="Device.identifier.system"/>
+	  <mapping>
+        <identity value="sdc"/>
+        <map value="MdsDescriptor/Vmd/Channel/ProductionSpecification/ComponentId/Root"/> 
+		</mapping>
+    </element>
+    <element id="Device.identifier.value">
+      <path value="Device.identifier.value"/>
+	  <mapping>
+        <identity value="sdc"/>
+        <map value="MdsDescriptor/Vmd/Channel/ProductionSpecification/ComponentId/Extension"/> 
+	  </mapping>
+    </element>	
     <element id="Device.type">
       <path value="Device.type"/>
       <min value="1"/>
@@ -53,6 +74,83 @@
         <valueSet value="http://hl7.org/fhir/uv/pocd/ValueSet/11073MDC-object"/>
       </binding>
     </element>
+	<element id="Device.type.coding">
+		<path value="Device.type.coding"/>
+	</element>
+	<element id="Device.type.coding.system">
+		<path value="Device.type.coding.system"/>
+		<mapping>
+        <identity value="sdc"/>
+        <map value="MdsDescriptor/Vmd/Channel/Type/CodingSystem"/> 
+		</mapping>
+	</element>
+	<element id="Device.type.coding.version">
+		<path value="Device.type.coding.version"/>
+		<mapping>
+        <identity value="sdc"/>
+        <map value="MdsDescriptor/Vmd/Channel/Type/CodingSystemVersion"/> 
+		</mapping>
+	</element>
+	<element id="Device.type.coding.code">
+		<path value="Device.type.coding.code"/>
+		<mapping>
+        <identity value="sdc"/>
+        <map value="MdsDescriptor/Vmd/Channel/Type/Code"/> 
+		</mapping>
+	</element>
+	<element id="Device.version">
+      <path value="Device.version"/>
+    </element>
+	<element id="Device.version.type">
+      <path value="Device.version.type"/>
+    </element>
+	<element id="Device.version.type.coding">
+		<path value="Device.version.type.coding"/>
+	</element>
+	<element id="Device.version.type.coding.system">
+		<path value="Device.version.type.coding.system"/>
+		<mapping>
+        <identity value="sdc"/>
+        <map value="MdsDescriptor/Vmd/Channel/ProductionSpecification/SpecType/CodingSystem"/> 
+		</mapping>
+	</element>
+	<element id="Device.version.type.coding.version">
+		<path value="Device.version.type.coding.version"/>
+		<mapping>
+        <identity value="sdc"/>
+        <map value="MdsDescriptor/Vmd/Channel/ProductionSpecification/SpecType/CodingSystemVersion"/> 
+		</mapping>
+	</element>
+	<element id="Device.version.type.coding.code">
+		<path value="Device.version.type.coding.code"/>
+		<mapping>
+        <identity value="sdc"/>
+        <map value="MdsDescriptor/Vmd/Channel/ProductionSpecification/SpecType/Code"/> 
+		</mapping>
+	</element>
+	<element id="Device.version.value">
+		<path value="Device.version.value"/>
+		<mapping>
+        <identity value="sdc"/>
+        <map value="MdsDescriptor/Vmd/Channel/ProductionSpecification/ProductionSpec"/> 
+		</mapping>
+	</element>
+	
+	<element id="Device.safety">
+		<path value="Device.safety"/>
+	</element>
+	<element id="Device.safety.coding">
+		<path value="Device.safety.coding"/>
+	</element>
+	<element id="Device.safety.coding.code">
+		<path value="Device.safety.coding.code"/>
+		<mapping>
+			<identity value="sdc"/>
+			<map value="MdsDescriptor/Vmd/Channel/SafetyClassification"/>
+			<!--TODO Valueset einbauen-->
+	  </mapping>
+	</element>
+	
     <element id="Device.patient">
       <path value="Device.patient"/>
       <max value="0"/>
