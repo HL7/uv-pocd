@@ -62,27 +62,15 @@
     </element>
     <element id="Observation.code.coding.system">
       <path value="Observation.code.coding.system"/>
-      <mapping>
-        <identity value="sdc"/>
-        <map value="AbstractMetricDescriptor/Type/CodingSystem"/>
-      </mapping>
     </element>
     <element id="Observation.code.coding.version">
       <path value="Observation.code.coding.version"/>
-      <mapping>
-        <identity value="sdc"/>
-        <map value="AbstractMetricDescriptor/Type/CodingSystemVersion"/>
-      </mapping>
     </element>
     <element id="Observation.code.coding.code">
       <path value="Observation.code.coding.code"/>
       <mapping>
         <identity value="dim"/>
         <map value="Metric::Metric-Id or Numeric::Nu-Observed-Value::metric-id"/>
-      </mapping>
-      <mapping>
-        <identity value="sdc"/>
-        <map value="AbstractMetricDescriptor/Type/Code"/>
       </mapping>
     </element>
     <element id="Observation.subject">
@@ -242,12 +230,47 @@
         <identity value="dim"/>
         <map value="Numeric::Nu-Physiological-Range::lower-value"/>
       </mapping>
+	  <mapping>
+        <identity value="sdc"/>
+        <map value="NumericMetricState/PhysiologicalRange/Lower"/>
+      </mapping>
     </element>
     <element id="Observation.referenceRange.high">
       <path value="Observation.referenceRange.high"/>
       <mapping>
         <identity value="dim"/>
         <map value="Numeric::Nu-Physiological-Range::upper-value"/>
+      </mapping>
+	  <mapping>
+        <identity value="sdc"/>
+        <map value="NumericMetricState/PhysiologicalRange/Upper"/>
+      </mapping>
+    </element>
+	<element id="Observation.bodySite">
+      <path value="Observation.bodySite"/>    
+    </element>
+    <element id="Observation.bodySite.coding">
+      <path value="Observation.bodySite.coding"/>
+    </element>
+    <element id="Observation.bodySite.coding.system">
+      <path value="Observation.bodySite.coding.system"/>
+      <mapping>
+        <identity value="sdc"/>
+        <map value="NumericMetricState/BodySite/CodingSystem"/>
+      </mapping>
+    </element>
+    <element id="Observation.bodySite.coding.version">
+      <path value="Observation.bodySite.coding.version"/>
+      <mapping>
+        <identity value="sdc"/>
+        <map value="NumericMetricState/BodySite/CodingSystemVersion"/>
+      </mapping>
+    </element>
+    <element id="Observation.bodySite.coding.code">
+      <path value="Observation.bodySite.coding.code"/>
+      <mapping>
+        <identity value="sdc"/>
+        <map value="NumericMetricState/BodySite/Code"/> 
       </mapping>
     </element>
   </differential>

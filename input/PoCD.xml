@@ -282,6 +282,11 @@
           <title value="Mapping from IEEE 11073-10201 DIM to FHIR"/>
           <generation value="markdown"/>
         </page>
+		<page>
+          <nameUrl value="mappingsdc.html"/>
+          <title value="Mapping from IEEE 11073-10207 SDC to FHIR"/>
+          <generation value="markdown"/>
+        </page>
         <!-- <page>
           <nameUrl value="transfer.html"/>
           <title value="RESTful Transfer"/>
