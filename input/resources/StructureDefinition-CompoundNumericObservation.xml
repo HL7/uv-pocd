@@ -14,7 +14,7 @@
   <name value="CompoundNumericObservation"/>
   <title value="Compound Numeric Observation profile"/>
   <status value="draft"/>
-  <date value="2019-11-22"/>
+  <date value="2020-05-02"/>
   <publisher value="HL7 International - Health Care Devices Work Group"/>
   <description value="StructureDefinition for Observation resources that represent numerical measurements, calculations, or settings with multiple components."/>
   <fhirVersion value="4.0.1"/>
@@ -23,9 +23,23 @@
   <type value="Observation"/>
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Observation"/>
   <derivation value="constraint"/>
+  <mapping>
+    <identity value="dim"/>
+    <name value="IEEE 11073-10201 DIM"/>
+  </mapping>
   <differential>
     <element id="Observation">
       <path value="Observation"/>
+    </element>
+    <element id="Observation.meta">
+      <path value="Observation.meta"/>
+    </element>
+    <element id="Observation.meta.security">
+      <path value="Observation.meta.security"/>
+      <mapping>
+        <identity value="dim"/>
+        <map value="Numeric::Compound-Nu-Observed-Value::state (refer to MeasurementStatus mapping details)"/>
+      </mapping>
     </element>
     <element id="Observation.code">
       <path value="Observation.code"/>
@@ -33,6 +47,16 @@
         <strength value="extensible"/>
         <valueSet value="http://hl7.org/fhir/uv/pocd/ValueSet/11073MDC-metric"/>
       </binding>
+    </element>
+    <element id="Observation.code.coding">
+      <path value="Observation.code.coding"/>
+    </element>
+    <element id="Observation.code.coding.code">
+      <path value="Observation.code.coding.code"/>
+      <mapping>
+        <identity value="dim"/>
+        <map value="Metric::Metric-Id"/>
+      </mapping>
     </element>
     <element id="Observation.subject">
       <path value="Observation.subject"/>
@@ -42,6 +66,33 @@
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient"/>
         <targetProfile value="http://hl7.org/fhir/uv/pocd/StructureDefinition/MdsDevice"/>
       </type>
+    </element>
+    <element id="Observation.effective[x]">
+      <path value="Observation.effective[x]"/>
+    </element>
+    <element id="Observation.effective[x]:effectiveDateTime">
+      <path value="Observation.effectiveDateTime"/>
+      <mapping>
+        <identity value="dim"/>
+        <map value="Numeric::Absolute-Time-Stamp"/>
+      </mapping>
+    </element>
+    <element id="Observation.effective[x]:effectivePeriod">
+      <path value="Observation.effectivePeriod"/>
+    </element>
+    <element id="Observation.effective[x]:effectivePeriod.start">
+      <path value="Observation.effectivePeriod.start"/>
+      <mapping>
+        <identity value="dim"/>
+        <map value="Metric::Start-Time"/>
+      </mapping>
+    </element>
+    <element id="Observation.effective[x]:effectivePeriod.end">
+      <path value="Observation.effectivePeriod.end"/>
+      <mapping>
+        <identity value="dim"/>
+        <map value="Metric::Stop-Time"/>
+      </mapping>
     </element>
     <element id="Observation.value[x]">
       <path value="Observation.value[x]"/>
@@ -72,6 +123,16 @@
         <valueSet value="http://hl7.org/fhir/uv/pocd/ValueSet/11073MDC-metric"/>
       </binding>
     </element>
+    <element id="Observation.component.code.coding">
+      <path value="Observation.component.code.coding"/>
+    </element>
+    <element id="Observation.component.code.coding.code">
+      <path value="Observation.component.code.coding.code"/>
+      <mapping>
+        <identity value="dim"/>
+        <map value="Numeric::Compound-Nu-Observed-Value::metric-id"/>
+      </mapping>
+    </element>
     <element id="Observation.component.value[x]">
       <path value="Observation.component.value[x]"/>
       <slicing>
@@ -98,14 +159,29 @@
     <element id="Observation.component.value[x]:valueQuantity.value">
       <path value="Observation.component.valueQuantity.value"/>
       <min value="1"/>
+      <mapping>
+        <identity value="dim"/>
+        <map value="Numeric::Compound-Nu-Observed-Value::value"/>
+      </mapping>
     </element>
     <element id="Observation.component.value[x]:valueQuantity.system">
       <path value="Observation.component.valueQuantity.system"/>
       <fixedUri value="http://unitsofmeasure.org"/>
     </element>
+    <element id="Observation.component.value[x]:valueQuantity.code">
+      <path value="Observation.component.valueQuantity.code"/>
+      <mapping>
+        <identity value="dim"/>
+        <map value="Numeric::Compound-Nu-Observed-Value::unit-code (convert to UCUM)"/>
+      </mapping>
+    </element>
     <element id="Observation.component.dataAbsentReason">
       <path value="Observation.component.dataAbsentReason"/>
       <condition value="pocd-obs-1"/>
+      <mapping>
+        <identity value="dim"/>
+        <map value="Numeric::Compound-Nu-Observed-Value::state (refer to MeasurementStatus mapping details)"/>
+      </mapping>
     </element>
     <element id="Observation.component.interpretation">
       <path value="Observation.component.interpretation"/>
@@ -113,6 +189,27 @@
         <strength value="extensible"/> 
         <valueSet value="http://hl7.org/fhir/uv/pocd/ValueSet/observation-interpretation"/> 
       </binding>     
+      <mapping>
+        <identity value="dim"/>
+        <map value="Numeric::Compound-Nu-Observed-Value::state (refer to MeasurementStatus mapping details)"/>
+      </mapping>
+    </element>
+    <element id="Observation.component.referenceRange">
+      <path value="Observation.component.referenceRange"/>
+    </element>
+    <element id="Observation.component.referenceRange.low">
+      <path value="Observation.component.referenceRange.low"/>
+      <mapping>
+        <identity value="dim"/>
+        <map value="Numeric::Nu-Physiological-Range::lower-value"/>
+      </mapping>
+    </element>
+    <element id="Observation.component.referenceRange.high">
+      <path value="Observation.component.referenceRange.high"/>
+      <mapping>
+        <identity value="dim"/>
+        <map value="Numeric::Nu-Physiological-Range::upper-value"/>
+      </mapping>
     </element>
   </differential>
 </StructureDefinition>
