@@ -13,7 +13,7 @@
   <name value="NumericObservation"/>
   <title value="Numeric Observation profile"/>
   <status value="draft"/>
-  <date value="2020-05-02"/>
+  <date value="2020-05-14"/>
   <publisher value="HL7 International - Health Care Devices Work Group"/>
   <description value="StructureDefinition for Observation resources that represent numerical measurements, calculations, or settings."/>
   <fhirVersion value="4.0.1"/>
@@ -213,6 +213,33 @@
         <map value="Numeric::Nu-Observed-Value::state (refer to MeasurementStatus mapping details)"/>
       </mapping>
     </element>
+    <element id="Observation.bodySite">
+      <path value="Observation.bodySite"/>    
+    </element>
+    <element id="Observation.bodySite.coding">
+      <path value="Observation.bodySite.coding"/>
+    </element>
+    <element id="Observation.bodySite.coding.system">
+      <path value="Observation.bodySite.coding.system"/>
+      <mapping>
+        <identity value="sdc"/>
+        <map value="NumericMetricState/BodySite/CodingSystem"/>
+      </mapping>
+    </element>
+    <element id="Observation.bodySite.coding.version">
+      <path value="Observation.bodySite.coding.version"/>
+      <mapping>
+        <identity value="sdc"/>
+        <map value="NumericMetricState/BodySite/CodingSystemVersion"/>
+      </mapping>
+    </element>
+    <element id="Observation.bodySite.coding.code">
+      <path value="Observation.bodySite.coding.code"/>
+      <mapping>
+        <identity value="sdc"/>
+        <map value="NumericMetricState/BodySite/Code"/> 
+      </mapping>
+    </element>
     <element id="Observation.device">
       <path value="Observation.device"/>
       <min value="1"/>
@@ -244,33 +271,6 @@
 	  <mapping>
         <identity value="sdc"/>
         <map value="NumericMetricState/PhysiologicalRange/Upper"/>
-      </mapping>
-    </element>
-	<element id="Observation.bodySite">
-      <path value="Observation.bodySite"/>    
-    </element>
-    <element id="Observation.bodySite.coding">
-      <path value="Observation.bodySite.coding"/>
-    </element>
-    <element id="Observation.bodySite.coding.system">
-      <path value="Observation.bodySite.coding.system"/>
-      <mapping>
-        <identity value="sdc"/>
-        <map value="NumericMetricState/BodySite/CodingSystem"/>
-      </mapping>
-    </element>
-    <element id="Observation.bodySite.coding.version">
-      <path value="Observation.bodySite.coding.version"/>
-      <mapping>
-        <identity value="sdc"/>
-        <map value="NumericMetricState/BodySite/CodingSystemVersion"/>
-      </mapping>
-    </element>
-    <element id="Observation.bodySite.coding.code">
-      <path value="Observation.bodySite.coding.code"/>
-      <mapping>
-        <identity value="sdc"/>
-        <map value="NumericMetricState/BodySite/Code"/> 
       </mapping>
     </element>
   </differential>

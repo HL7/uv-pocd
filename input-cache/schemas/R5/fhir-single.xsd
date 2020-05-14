@@ -47,7 +47,7 @@
   POSSIBILITY OF SUCH DAMAGE.
   
 
-  Generated on Sat, May 2, 2020 08:04+0000 for FHIR v4.4.0 
+  Generated on Thu, May 14, 2020 16:49+0000 for FHIR v4.4.0 
 -->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://hl7.org/fhir" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" targetNamespace="http://hl7.org/fhir" elementFormDefault="qualified" version="4.4.0">
   <!-- Note: When using this schema with some tools, it may also be necessary to declare xmlns:xml="http://www.w3.org/XML/1998/namespace", however this causes performance issues with other tools and thus is not in the base schemas. -->
@@ -1619,7 +1619,7 @@ The value of mustSupport SHALL be a FHIRPath resolveable on the type of the Data
     <xs:complexContent>
       <xs:extension base="BackboneType">
         <xs:sequence>
-          <xs:element name="country" type="CodeableConcept" minOccurs="1" maxOccurs="1">
+          <xs:element name="country" type="CodeableConcept" minOccurs="0" maxOccurs="1">
             <xs:annotation>
               <xs:documentation xml:lang="en">The country in which the marketing authorisation has been granted shall be specified It should be specified using the ISO 3166 ‑ 1 alpha-2 code elements.</xs:documentation>
             </xs:annotation>
@@ -1634,7 +1634,7 @@ The value of mustSupport SHALL be a FHIRPath resolveable on the type of the Data
               <xs:documentation xml:lang="en">This attribute provides information on the status of the marketing of the medicinal product See ISO/TS 20443 for more information and examples.</xs:documentation>
             </xs:annotation>
           </xs:element>
-          <xs:element name="dateRange" type="Period" minOccurs="1" maxOccurs="1">
+          <xs:element name="dateRange" type="Period" minOccurs="0" maxOccurs="1">
             <xs:annotation>
               <xs:documentation xml:lang="en">The date when the Medicinal Product is placed on the market by the Marketing Authorisation Holder (or where applicable, the manufacturer/distributor) in a country and/or jurisdiction shall be provided A complete date consisting of day, month and year shall be specified using the ISO 8601 date format NOTE “Placed on the market” refers to the release of the Medicinal Product into the distribution chain.</xs:documentation>
             </xs:annotation>
@@ -6007,7 +6007,7 @@ A coverage may only be responsible for specific types of charges, and the sequen
               <xs:documentation xml:lang="en">The product that this is a pharmaceutical product of.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="administrableDoseForm" minOccurs="1" maxOccurs="1" type="CodeableConcept">
+          <xs:element name="administrableDoseForm" minOccurs="0" maxOccurs="1" type="CodeableConcept">
             <xs:annotation>
               <xs:documentation xml:lang="en">The administrable dose form, after necessary reconstitution.</xs:documentation>
            </xs:annotation>
@@ -10996,12 +10996,12 @@ into another (possibly the same) biological entity.</xs:documentation>
           </xs:element>
           <xs:element name="identifier" minOccurs="0" maxOccurs="unbounded" type="Identifier">
             <xs:annotation>
-              <xs:documentation xml:lang="en">A formal identifier that is used to identify this summary when it is represented in other formats, or referenced in a specification, model, design or an instance. May include DOI, PMID, PMCID, etc.</xs:documentation>
+              <xs:documentation xml:lang="en">A formal identifier that is used to identify this citation when it is represented in other formats, or referenced in a specification, model, design or an instance.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="relatedIdentifier" minOccurs="0" maxOccurs="unbounded" type="Identifier">
             <xs:annotation>
-              <xs:documentation xml:lang="en">May include trial registry identifiers.</xs:documentation>
+              <xs:documentation xml:lang="en">A formal identifier that is used to identify things closely related to this citation.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="dateCited" minOccurs="0" maxOccurs="1" type="dateTime">
@@ -11328,19 +11328,9 @@ into another (possibly the same) biological entity.</xs:documentation>
     <xs:complexContent>
       <xs:extension base="BackboneElement">
         <xs:sequence>
-          <xs:element name="lastName" minOccurs="0" maxOccurs="1" type="string">
+          <xs:element name="humanName" minOccurs="0" maxOccurs="1" type="HumanName">
             <xs:annotation>
-              <xs:documentation xml:lang="en">Surname or single name.</xs:documentation>
-           </xs:annotation>
-          </xs:element>
-          <xs:element name="foreName" minOccurs="0" maxOccurs="1" type="string">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">Remainder of name except for suffix.</xs:documentation>
-           </xs:annotation>
-          </xs:element>
-          <xs:element name="suffix" minOccurs="0" maxOccurs="1" type="string">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">Eg 2nd, 3rd, Jr, Sr.</xs:documentation>
+              <xs:documentation xml:lang="en">A name associated with the individual.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="initials" minOccurs="0" maxOccurs="1" type="string">
@@ -11363,7 +11353,7 @@ into another (possibly the same) biological entity.</xs:documentation>
               <xs:documentation xml:lang="en">Organizational affiliation.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="address" minOccurs="0" maxOccurs="unbounded" type="string">
+          <xs:element name="address" minOccurs="0" maxOccurs="unbounded" type="Address">
             <xs:annotation>
               <xs:documentation xml:lang="en">Physical mailing address for the author.</xs:documentation>
            </xs:annotation>
@@ -11462,19 +11452,9 @@ into another (possibly the same) biological entity.</xs:documentation>
     <xs:complexContent>
       <xs:extension base="BackboneElement">
         <xs:sequence>
-          <xs:element name="lastName" minOccurs="0" maxOccurs="1" type="string">
+          <xs:element name="humanName" minOccurs="0" maxOccurs="1" type="HumanName">
             <xs:annotation>
-              <xs:documentation xml:lang="en">Surname or single name.</xs:documentation>
-           </xs:annotation>
-          </xs:element>
-          <xs:element name="foreName" minOccurs="0" maxOccurs="1" type="string">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">Remainder of name except for suffix.</xs:documentation>
-           </xs:annotation>
-          </xs:element>
-          <xs:element name="suffix" minOccurs="0" maxOccurs="1" type="string">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">Eg 2nd, 3rd, Jr, Sr.</xs:documentation>
+              <xs:documentation xml:lang="en">A name associated with the individual.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="initials" minOccurs="0" maxOccurs="1" type="string">
@@ -11484,7 +11464,7 @@ into another (possibly the same) biological entity.</xs:documentation>
           </xs:element>
           <xs:element name="collectiveName" minOccurs="0" maxOccurs="1" type="string">
             <xs:annotation>
-              <xs:documentation xml:lang="en">Used for collective or corporate name as a contributor.</xs:documentation>
+              <xs:documentation xml:lang="en">Used for collective or corporate name as an author.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="identifier" minOccurs="0" maxOccurs="unbounded" type="Identifier">
@@ -32728,7 +32708,7 @@ The primary difference between a medicationusage and a medicationadministration 
               <xs:documentation xml:lang="en">If authorised for use in children.</xs:documentation>
            </xs:annotation>
           </xs:element>
-          <xs:element name="productClassification" minOccurs="0" maxOccurs="unbounded" type="CodeableConcept">
+          <xs:element name="classification" minOccurs="0" maxOccurs="unbounded" type="CodeableConcept">
             <xs:annotation>
               <xs:documentation xml:lang="en">Allows the product to be classified by various systems.</xs:documentation>
            </xs:annotation>
@@ -32903,13 +32883,11 @@ The primary difference between a medicationusage and a medicationadministration 
     <xs:complexContent>
       <xs:extension base="BackboneElement">
         <xs:sequence>
-          <xs:choice minOccurs="1" maxOccurs="1" >
+          <xs:element name="product[x]" minOccurs="1" maxOccurs="1" type="CodeableReference">
             <xs:annotation>
               <xs:documentation xml:lang="en">Reference to another product, e.g. for linking authorised to investigational product.</xs:documentation>
-            </xs:annotation>
-            <xs:element name="productIdentifier" type="Identifier"/>
-            <xs:element name="productReference" type="Reference"/>
-          </xs:choice>
+           </xs:annotation>
+          </xs:element>
           <xs:element name="type" minOccurs="0" maxOccurs="1" type="CodeableConcept">
             <xs:annotation>
               <xs:documentation xml:lang="en">The type of relationship, for instance branded to generic, product to development product (investigational), parallel import version.</xs:documentation>

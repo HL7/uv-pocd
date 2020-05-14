@@ -11,7 +11,7 @@
   <name value="MdsDevice"/>
   <title value="MDS Device profile"/>
   <status value="draft"/>
-  <date value="2019-11-22"/>
+  <date value="2020-05-14"/>
   <publisher value="HL7 International - Health Care Devices Work Group"/>
   <description value="StructureDefinition for Device resources that represent a Medical Device System (MDS). This is the top-level resource in the hierarchical model of a Point-of-Care device."/>
   <fhirVersion value="4.0.1"/>
@@ -78,8 +78,8 @@
 			<map value="MdsDescriptor/MetaData/UDI/Issuer"/> 
 	  </mapping>
 	</element>
-	<element id="Device.udiCarrier.jurisdictions">
-		<path value="Device.udiCarrier.jurisdictions"/>
+	<element id="Device.udiCarrier.jurisdiction">
+		<path value="Device.udiCarrier.jurisdiction"/>
 		<mapping>
 			<identity value="sdc"/>
 			<map value="MdsDescriptor/MetaData/UDI/Jurisdictions"/> 

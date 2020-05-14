@@ -12,7 +12,7 @@
   <name value="ChannelDevice"/>
   <title value="Channel Device profile"/>
   <status value="draft"/>
-  <date value="2019-11-22"/>
+  <date value="2020-05-14"/>
   <publisher value="HL7 International - Health Care Devices Work Group"/>
   <description value="StructureDefinition for Device resources that represent Channels, which are used for grouping metrics together."/>
   <fhirVersion value="4.0.1"/>
@@ -135,22 +135,6 @@
         <map value="MdsDescriptor/Vmd/Channel/ProductionSpecification/ProductionSpec"/> 
 		</mapping>
 	</element>
-	
-	<element id="Device.safety">
-		<path value="Device.safety"/>
-	</element>
-	<element id="Device.safety.coding">
-		<path value="Device.safety.coding"/>
-	</element>
-	<element id="Device.safety.coding.code">
-		<path value="Device.safety.coding.code"/>
-		<mapping>
-			<identity value="sdc"/>
-			<map value="MdsDescriptor/Vmd/Channel/SafetyClassification"/>
-			<!--TODO Valueset einbauen-->
-	  </mapping>
-	</element>
-	
     <element id="Device.patient">
       <path value="Device.patient"/>
       <max value="0"/>
@@ -158,6 +142,20 @@
     <element id="Device.location">
       <path value="Device.location"/>
       <max value="0"/>
+    </element>
+    <element id="Device.safety">
+      <path value="Device.safety"/>
+    </element>
+    <element id="Device.safety.coding">
+      <path value="Device.safety.coding"/>
+    </element>
+    <element id="Device.safety.coding.code">
+      <path value="Device.safety.coding.code"/>
+      <mapping>
+        <identity value="sdc"/>
+        <map value="MdsDescriptor/Vmd/Channel/SafetyClassification"/>
+        <!--TODO Valueset einbauen-->
+      </mapping>
     </element>
     <element id="Device.parent">
       <path value="Device.parent"/>

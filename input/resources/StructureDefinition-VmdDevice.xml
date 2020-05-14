@@ -12,7 +12,7 @@
   <name value="VmdDevice"/>
   <title value="VMD Device profile"/>
   <status value="draft"/>
-  <date value="2019-11-22"/>
+  <date value="2020-05-14"/>
   <publisher value="HL7 International - Health Care Devices Work Group"/>
   <description value="StructureDefinition for Device resources that represent Virtual Medical Devices (VMD). These are medical-related subsystems in the hierarchical model of a Point-of-Care device."/>
   <fhirVersion value="4.0.1"/>
@@ -137,22 +137,6 @@
         <map value="MdsDescriptor/Vmd/ProductionSpecification/ProductionSpec"/> 
 		</mapping>
 	</element>
-	
-	<element id="Device.safety">
-		<path value="Device.safety"/>
-	</element>
-	<element id="Device.safety.coding">
-		<path value="Device.safety.coding"/>
-	</element>
-	<element id="Device.safety.coding.code">
-		<path value="Device.safety.coding.code"/>
-		<mapping>
-			<identity value="sdc"/>
-			<map value="MdsDescriptor/Vmd/SafetyClassification"/>
-			<!--TODO Valueset einbauen-->
-	  </mapping>
-	</element>
-	
     <element id="Device.patient">
       <path value="Device.patient"/>
       <max value="0"/>
@@ -160,6 +144,20 @@
     <element id="Device.location">
       <path value="Device.location"/>
       <max value="0"/>
+    </element>
+    <element id="Device.safety">
+      <path value="Device.safety"/>
+    </element>
+    <element id="Device.safety.coding">
+      <path value="Device.safety.coding"/>
+    </element>
+    <element id="Device.safety.coding.code">
+      <path value="Device.safety.coding.code"/>
+      <mapping>
+        <identity value="sdc"/>
+        <map value="MdsDescriptor/Vmd/SafetyClassification"/>
+        <!--TODO Valueset einbauen-->
+      </mapping>
     </element>
     <element id="Device.parent">
       <path value="Device.parent"/>
