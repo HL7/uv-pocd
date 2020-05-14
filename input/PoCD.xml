@@ -331,5 +331,9 @@
       <code value="find-other-resources"/>
       <value value="true"/>
     </parameter>
+    <parameter>
+      <code value="show-inherited-invariants"/>
+      <value value="false"/>
+    </parameter>
   </definition>
 </ImplementationGuide>
