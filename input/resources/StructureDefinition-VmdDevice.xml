@@ -23,6 +23,7 @@
   <derivation value="constraint"/>
   <mapping>
     <identity value="sdc"/>
+    <uri value="urn:iso:std:iso:11073:10207"/>
     <name value="IEEE 11073-10207 SDC"/>
   </mapping>
   <differential>

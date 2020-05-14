@@ -14,7 +14,7 @@
   <name value="CompoundNumericObservation"/>
   <title value="Compound Numeric Observation profile"/>
   <status value="draft"/>
-  <date value="2020-05-02"/>
+  <date value="2020-05-14"/>
   <publisher value="HL7 International - Health Care Devices Work Group"/>
   <description value="StructureDefinition for Observation resources that represent numerical measurements, calculations, or settings with multiple components."/>
   <fhirVersion value="4.0.1"/>
@@ -25,6 +25,7 @@
   <derivation value="constraint"/>
   <mapping>
     <identity value="dim"/>
+    <uri value="urn:iso:std:iso:11073:10201"/>
     <name value="IEEE 11073-10201 DIM"/>
   </mapping>
   <differential>
