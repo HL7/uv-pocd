@@ -12,7 +12,7 @@
   <name value="NumericDeviceMetric"/>
   <title value="Numeric DeviceMetric profile"/>
   <status value="draft"/>
-  <date value="2019-11-22"/>
+  <date value="2020-05-16"/>
   <publisher value="HL7 International - Health Care Devices Work Group"/>
   <description value="StructureDefinition for DeviceMetric resources that represent numerical measurements, calculations, or settings characteristics and capabilities."/>
   <fhirVersion value="4.0.1"/>
@@ -21,6 +21,11 @@
   <type value="DeviceMetric"/>
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/DeviceMetric"/>
   <derivation value="constraint"/>
+  <mapping>
+    <identity value="dim"/>
+    <uri value="urn:iso:std:iso:11073:10201"/>
+    <name value="IEEE 11073-10201 DIM"/>
+  </mapping>
   <differential>
     <element id="DeviceMetric">
       <path value="DeviceMetric"/>
@@ -32,12 +37,46 @@
         <valueSet value="http://hl7.org/fhir/uv/pocd/ValueSet/11073MDC-metric"/> 
       </binding>     
     </element>
+    <element id="DeviceMetric.type.coding">
+      <path value="DeviceMetric.type.coding"/>
+    </element>
+    <element id="DeviceMetric.type.coding.code">
+      <path value="DeviceMetric.type.coding.code"/>
+      <mapping>
+        <identity value="dim"/>
+        <map value="VMO::Type"/>
+      </mapping>
+    </element>
+    <element id="DeviceMetric.type.text">
+      <path value="DeviceMetric.type.text"/>
+      <mapping>
+        <identity value="dim"/>
+        <map value="VMO::Label-String"/>
+      </mapping>
+    </element>
     <element id="DeviceMetric.unit">
       <path value="DeviceMetric.unit"/>
       <binding> 
         <strength value="extensible"/> 
         <valueSet value="http://hl7.org/fhir/uv/pocd/ValueSet/11073MDC-dimension"/> 
       </binding>     
+    </element>
+    <element id="DeviceMetric.unit.coding">
+      <path value="DeviceMetric.unit.coding"/>
+    </element>
+    <element id="DeviceMetric.unit.coding.code">
+      <path value="DeviceMetric.unit.coding.code"/>
+      <mapping>
+        <identity value="dim"/>
+        <map value="Metric::Unit-Code"/>
+      </mapping>
+    </element>
+    <element id="DeviceMetric.unit.text">
+      <path value="DeviceMetric.unit.text"/>
+      <mapping>
+        <identity value="dim"/>
+        <map value="Metric::Unit-LabelString"/>
+      </mapping>
     </element>
     <element id="DeviceMetric.source">
       <path value="DeviceMetric.source"/>
@@ -54,6 +93,71 @@
         <code value="Reference"/>
         <targetProfile value="http://hl7.org/fhir/uv/pocd/StructureDefinition/ChannelDevice"/>
       </type>
+    </element>
+    <element id="DeviceMetric.operationalStatus">
+      <path value="DeviceMetric.operationalStatus"/>
+      <mapping>
+        <identity value="dim"/>
+        <map value="Metric::Metric-Status"/>
+      </mapping>
+    </element>
+    <element id="DeviceMetric.color">
+      <path value="DeviceMetric.color"/>
+      <mapping>
+        <identity value="dim"/>
+        <map value="Metric::Color"/>
+      </mapping>
+    </element>
+    <element id="DeviceMetric.category">
+      <path value="DeviceMetric.category"/>
+      <mapping>
+        <identity value="dim"/>
+        <map value="Metric::Metric-Specification::category"/>
+      </mapping>
+    </element>
+    <element id="DeviceMetric.measurementPeriod">
+      <path value="DeviceMetric.measurementPeriod"/>
+    </element>
+    <element id="DeviceMetric.measurementPeriod.repeat">
+      <path value="DeviceMetric.measurementPeriod.repeat"/>
+    </element>
+    <element id="DeviceMetric.measurementPeriod.repeat.period">
+      <path value="DeviceMetric.measurementPeriod.repeat.period"/>
+      <mapping>
+        <identity value="dim"/>
+        <map value="Metric::Measure-Period::value"/>
+      </mapping>
+    </element>
+    <element id="DeviceMetric.measurementPeriod.repeat.periodUnit">
+      <path value="DeviceMetric.measurementPeriod.repeat.periodUnit"/>
+      <mapping>
+        <identity value="dim"/>
+        <map value="Metric::Measure-Period::unit-code"/>
+      </mapping>
+    </element>
+    <element id="DeviceMetric.calibration">
+      <path value="DeviceMetric.calibration"/>
+    </element>
+    <element id="DeviceMetric.calibration.type">
+      <path value="DeviceMetric.calibration.type"/>
+      <mapping>
+        <identity value="dim"/>
+        <map value="Metric::Metric-Calibration::cal-type"/>
+      </mapping>
+    </element>
+    <element id="DeviceMetric.calibration.state">
+      <path value="DeviceMetric.calibration.state"/>
+      <mapping>
+        <identity value="dim"/>
+        <map value="Metric::Metric-Calibration::cal-state"/>
+      </mapping>
+    </element>
+    <element id="DeviceMetric.calibration.time">
+      <path value="DeviceMetric.calibration.time"/>
+      <mapping>
+        <identity value="dim"/>
+        <map value="Metric::Metric-Calibration::cal-time"/>
+      </mapping>
     </element>
   </differential>
 </StructureDefinition>
