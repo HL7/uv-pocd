@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+    <id value="relation"/>
+  <url value="http://hl7.org/fhir/uv/pocd/StructureDefinition/relation" />
+  <name value="Relation" />
+  <title value="relation extension"/>
+  <status value="draft" />
+  <date value="2020-05-11"/>
+  <description value="Relation allows the modelling of relationships between a metric and other containment tree entries.&#xD;&#xA;Related containment tree entries are defined in Entries, whereby the flavor of a relationship can be&#xD;&#xA;set up in Kind." />
+  <fhirVersion value="4.0.1" />
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <context>
+    <type value="element" />
+    <expression value="DeviceMetric" />
+  </context>
+  <type value="Extension" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Extension.extension">
+      <path value="Extension.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Extension.extension:kind">
+      <path value="Extension.extension" />
+      <sliceName value="kind" />
+      <short value="kind of relation" />
+      <definition value="Kind specifies the relationship between the METRIC and referenced containment tree entries.&#xD;&#xA;Referenced containment tree entries are defined in ./pm:Relation/@Entries." />
+    </element>
+    <element id="Extension.extension.value[x]:valueCode">
+      <path value="Extension.extension.valueCode" />
+      <type>
+        <code value="code" />
+      </type>
+      <binding>
+        <strength value="required" />
+        <description value="Kind of relationship" />
+        <valueSet value="http://hl7.org/fhir/uv/pocd/ValueSet/kind-of-relation" />
+      </binding>
+    </element>
+    <element id="Extension.extension:entries">
+      <path value="Extension.extension" />
+      <sliceName value="entries" />
+      <short value="Entries" />
+      <definition value="List of references that relate to the METRIC" />
+    </element>
+    <element id="Extension.extension.value[x]:valueReference">
+      <path value="Extension.extension.valueReference" />
+      <type>
+        <code value="Reference" />
+      </type>
+    </element>
+    <element id="Extension.extension:code">
+      <path value="Extension.extension" />
+      <sliceName value="code" />
+      <short value="description of relation" />
+      <definition value="Code allows the semantic description of the relationship between the METRIC and the list of related containment tree entries defined in Entries." />
+    </element>
+    <element id="Extension.extension.value[x]:valueCoding">
+      <path value="Extension.extension.valueCoding" />
+      <type>
+        <code value="Coding" />
+      </type>
+    </element>
+    <element id="Extension.value[x]">
+      <path value="Extension.value[x]" />
+      <max value="0" />
+    </element>
+  </differential>
+</StructureDefinition>

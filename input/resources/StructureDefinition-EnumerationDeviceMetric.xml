@@ -24,6 +24,29 @@
     <element id="DeviceMetric">
       <path value="DeviceMetric"/>
     </element>
+    <element id="DeviceMetric.extension">
+      <path value="DeviceMetric.extension"/>
+      <slicing>
+        <discriminator>
+          <type value="value"/>
+          <path value="url"/>
+        </discriminator>
+        <rules value="open"/>
+      </slicing>
+    </element>
+    <element id="DeviceMetric.extension:relation">
+            <path value="DeviceMetric.extension" />
+            <sliceName value="relation" />
+            <short value="Modelling relationships" />
+            <definition value="Relation allows the modelling of relationships between a metric and other containment tree entries.
+Related containment tree entries are defined in Entries, whereby the flavor of a relationship can be set up in Kind." />
+            <min value="0" />
+            <max value="*" />
+            <type>
+                <code value="Extension" />
+                <profile value="http://hl7.org/fhir/uv/pocd/StructureDefinition/relation" />
+            </type>
+      </element>
     <element id="DeviceMetric.type">
       <path value="DeviceMetric.type"/>
       <binding>
@@ -31,9 +54,57 @@
         <valueSet value="http://hl7.org/fhir/uv/pocd/ValueSet/11073MDC-metric"/>
       </binding>
     </element>
+        <element id="DeviceMetric.type.coding">
+        <path value="DeviceMetric.type.coding"/>
+    </element>
+    <element id="DeviceMetric.type.coding.system">
+        <path value="DeviceMetric.type.coding.system"/>
+        <mapping>
+            <identity value="sdc"/>
+            <map value="EnumStringMetricDescriptor/Type/CodingSystem"/> 
+        </mapping>
+    </element>
+    <element id="DeviceMetric.type.coding.version">
+        <path value="DeviceMetric.type.coding.version"/>
+        <mapping>
+            <identity value="sdc"/>
+            <map value="EnumStringMetricDescriptor/Type/CodingSystemVersion"/> 
+        </mapping>
+    </element>
+    <element id="DeviceMetric.type.coding.code">
+        <path value="DeviceMetric.type.coding.code"/>
+        <mapping>
+            <identity value="sdc"/>
+            <map value="EnumStringMetricDescriptor/Type/Code"/> 
+        </mapping>
+    </element>
     <element id="DeviceMetric.unit">
       <path value="DeviceMetric.unit"/>
       <max value="0"/>
+    </element>
+        <element id="DeviceMetric.unit.coding">
+      <path value="DeviceMetric.unit.coding"/>  
+    </element>
+    <element id="DeviceMetric.unit.coding.system">
+        <path value="DeviceMetric.unit.coding.system"/>
+        <mapping>
+            <identity value="sdc"/>
+            <map value="EnumStringMetricDescriptor/Unit/CodingSystem"/> 
+        </mapping>
+    </element>
+    <element id="DeviceMetric.unit.coding.version">
+        <path value="DeviceMetric.unit.coding.version"/>
+        <mapping>
+            <identity value="sdc"/>
+            <map value="EnumStringMetricDescriptor/Type/CodingSystemVersion"/> 
+        </mapping>
+    </element>
+    <element id="DeviceMetric.unit.coding.code">
+        <path value="DeviceMetric.unit.coding.code"/>
+        <mapping>
+            <identity value="sdc"/>
+            <map value="EnumStringMetricDescriptor/Unit/Code"/> 
+        </mapping>
     </element>
     <element id="DeviceMetric.source">
       <path value="DeviceMetric.source"/>
@@ -50,6 +121,27 @@
         <code value="Reference"/>
         <targetProfile value="http://hl7.org/fhir/uv/pocd/StructureDefinition/ChannelDevice"/>
       </type>
+    </element>
+        <element id="DeviceMetric.operationalstatus">
+        <path value="DeviceMetric.operationalstatus"/>
+        <mapping>
+            <identity value="sdc"/>
+            <map value="EnumStringMetricState/ActivationState"/> 
+        </mapping>
+    </element>
+    <element id="DeviceMetric.category">
+        <path value="DeviceMetric.category"/>
+        <mapping>
+            <identity value="sdc"/>
+            <map value="EnumStringMetricDescriptor/MetricCategory"/> 
+        </mapping>
+    </element>
+    <element id="DeviceMetric.measurementPeriod">
+        <path value="DeviceMetric.measurementPeriod"/>
+        <mapping>
+            <identity value="sdc"/>
+            <map value="EnumStringMetricDescriptor/DeterminationPeriod"/> 
+        </mapping>
     </element>
   </differential>
 </StructureDefinition>

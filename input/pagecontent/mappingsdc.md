@@ -19,7 +19,66 @@ Most object classes in ISO/IEEE 11073 SDC can be mapped to FHIR resources as out
 Please refer to the Mappings tab of each profile page for mapping ISO/IEEE 11073 SDC object attributes to FHIR resource elements.
 
 ### Mapping Details
-#### Measurement Validity
+#### Valuesets
+
+##### Valuesets for MdsState/ActivationState:
+
+| IEEE 11073 SDC Status | HL7 FHIR Device.statusReason | Comment |
+| ---
+| On | online ||
+| NotRdy | not-ready ||
+| StndBy | standby ||
+| Off | off ||
+| Shtdn | not-ready ||
+| Fail | not-ready ||
+{: .grid}
+
+##### Valuesets for AbstractMetricState/ActivationState:
+
+| IEEE 11073 SDC Status | HL7 FHIR DeviceMetric.operationalStatus | Comment |
+| ---
+| On | on ||
+| NotRdy | off ||
+| StndBy | standby ||
+| Off | off ||
+| Shtdn | off ||
+| Fail | off ||
+{: .grid}
+
+##### Valuesets for MetricCategory:
+
+| IEEE 11073 SDC MetricCategory | HL7 FHIR DeviceMetric.category | Comment |
+| ---
+| Unspec | unspecified ||
+| Mrsmt | measurement ||
+| Clc | calculation ||
+| Set | setting ||
+| Preset | unspecified ||
+| Rcmm | unspecified ||
+{: .grid}
+
+##### Valuesets for calibration state:
+
+| IEEE 11073 SDC ComponentCalibrationState | HL7 FHIR DeviceMetric.calibration.state | Comment |
+| --- 
+| No | not-calibrated ||
+| Req | calibration-required ||
+| Run | not-calibrated ||
+| Cal | calibrated ||
+| Oth | unspecified ||
+{: .grid}
+
+##### Valuesets for calibration type:
+
+| IEEE 11073 SDC ComponentCalibrationType | HL7 FHIR DeviceMetric.calibration.type | Comment |
+| ---
+| Offset | offset ||
+| Gain | gain ||
+| TP | two-point ||
+| Unspec | unspecified ||
+{: .grid}
+
+##### Measurement Validity
 Observed values in ISO/IEEE 11073 SDC include a field that indicates measurement validity. FHIR Observations do not have a single element for this purpose. Instead there is security metadata, dataAbsentReason for missing values, and interpretation to report significance of a result.  
 Measurement validity information is mapped to `Resource.meta.security`, `Observation.dataAbsentReason` or `Observation.component.dataAbsentReason`, and `Observation.interpretation` or `Observation.component.interpretation` elements. The interpretation value set binding is extended to add relevant codes from the [Measurement status codes](CodeSystem-measurement-status.html) defined in this implementation guide.
 

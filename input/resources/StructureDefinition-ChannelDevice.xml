@@ -49,6 +49,38 @@
         <profile value="http://hl7.org/fhir/uv/pocd/StructureDefinition/device-instance"/>
       </type>
     </element>
+    <element id="Device.extension:operatingHours">
+            <path value="Device.extension" />
+            <sliceName value="operatingHours" />
+            <short value="operating hours" />
+            <definition value="optional amount of operating hours (e.g., an OR light)" />
+            <min value="0" />
+            <max value="1" />
+            <type>
+                <code value="Extension" />
+                <profile value="http://hl7.org/fhir/uv/pocd/StructureDefinition/operating-hours" />
+            </type>
+            <mapping>
+                <identity value="sdc"/>
+                <map value="ChannelState/OperatingHours"/> 
+            </mapping>
+        </element>
+        <element id="Device.extension:operatingCycles">
+            <path value="Device.extension" />
+            <sliceName value="operatingCycles" />
+            <short value="operating cycles" />
+            <definition value="optional amount of operarting cycles, e.g., the number of measurements taken within the component." />
+            <min value="0" />
+            <max value="1" />
+            <type>
+                <code value="Extension" />
+                <profile value="http://hl7.org/fhir/uv/pocd/StructureDefinition/operating-cycles" />
+            </type>
+            <mapping>
+                <identity value="sdc"/>
+                <map value="ChannelState/OperatingCycles"/> 
+            </mapping>
+        </element>
 	<element id="Device.identifier">
       <path value="Device.identifier"/>
 	</element>
@@ -142,14 +174,22 @@
 	<element id="Device.safety.coding">
 		<path value="Device.safety.coding"/>
 	</element>
-	<element id="Device.safety.coding.code">
-		<path value="Device.safety.coding.code"/>
-		<mapping>
-			<identity value="sdc"/>
-			<map value="MdsDescriptor/Vmd/Channel/SafetyClassification"/>
-			<!--TODO Valueset einbauen-->
-	  </mapping>
-	</element>
+	   <element id="Device.safety.coding.system">
+            <path value="Device.safety.coding.system" />
+            <definition value="http://hl7.org/fhir/uv/pocd/ValueSet/safety" />
+    </element>
+    <element id="Device.safety.coding.code">
+        <path value="Device.safety.coding.code"/>
+        <binding>
+                <strength value="required" />
+                <description value="Safety classification" />
+                <valueSet value="http://hl7.org/fhir/uv/pocd/ValueSet/safety" />
+            </binding>
+        <mapping>
+            <identity value="sdc"/>
+            <map value="MdsDescriptor/Vmd/Channel/SafetyClassification"/>
+      </mapping>
+    </element>
 	
     <element id="Device.patient">
       <path value="Device.patient"/>
