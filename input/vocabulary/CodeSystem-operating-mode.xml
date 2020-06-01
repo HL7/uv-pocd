@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSystem xmlns="http://hl7.org/fhir">
+    <id value="operating-mode"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/StructureDefinition/shareablecodesystem" />
+  </meta>
+  <url value="http://hl7.org/fhir/uv/pocd/CodeSystem/operating-mode" />
+  <name value="OperatingMode" />
+  <title value="Operating mode" />
+  <status value="draft" />
+  <experimental value="false" />
+  <date value="2020-05-12" />
+  <description value="CodeSystem for IEEE 11073-10207 MdsState/OperatingMode" />
+  <caseSensitive value="false" />
+  <content value="complete" />
+  <concept>
+    <code value="Nml" />
+    <display value="Normal" />
+	<definition value="The POC MEDICAL DEVICE operates in a mode that supports the fulfillment of its clinical functions."/>
+  </concept>
+  <concept>
+    <code value="Dmo" />
+    <display value="Demo" />
+    <definition value="The POC MEDICAL DEVICE operates in a mode that is intended for demonstration purposes only. Arbitrary values are generated." />
+  </concept>
+  <concept>
+    <code value="Srv" />
+    <display value="Service" />
+    <definition value="The POC MEDICAL DEVICE operates in a mode that is intended for services purposes only." />
+  </concept>
+  <concept>
+    <code value="Mtn" />
+    <display value="Maintenance" />
+    <definition value="Maintenance. The POC MEDICAL DEVICE operates in a mode that is intended for maintenance purposes only." />
+  </concept>
+</CodeSystem>

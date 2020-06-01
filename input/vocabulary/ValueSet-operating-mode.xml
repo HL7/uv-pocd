@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValueSet xmlns="http://hl7.org/fhir">
+    <id value="operating-mode"/>
+    <meta>
+        <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset" />
+    </meta>
+    <url value="http://hl7.org/fhir/uv/pocd/ValueSet/operating-mode" />
+    <name value="OperatingMode" />
+    <title value="Operating Mode" />
+    <status value="draft" />
+    <experimental value="false" />
+    <date value="2020-05-12" />
+    <description value="CodeSystem for IEEE 11073-10207 MdsState/OperatingMode" />
+    <compose>
+        <include>
+            <system value="http://hl7.org/fhir/uv/pocd/CodeSystem/operating-mode" />
+        </include>
+    </compose>
+</ValueSet>

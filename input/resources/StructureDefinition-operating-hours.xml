@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+    <id value="operating-hours"/>
+  <url value="http://hl7.org/fhir/uv/pocd/StructureDefinition/operating-hours" />
+  <name value="OperatingHours" />
+  <title value="Operating hours extension"/>
+  <status value="draft" />
+  <date value="2020-05-11"/>
+  <description value="OPTIONAL amount of operating hours (e.g., an OR light). There are no further semantics defined." />
+  <fhirVersion value="4.0.1" />
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <context>
+    <type value="element" />
+    <expression value="Device" />
+  </context>
+  <type value="Extension" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
+  <derivation value="constraint" />
+  <differential>
+     <element id="Extension">
+          <path value="Extension"/>
+     </element>
+    <element id="Extension.value[x]">
+      <path value="Extension.value[x]" />
+      <short value="Operating hours" />
+      <type>
+        <code value="positiveInt" />
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>

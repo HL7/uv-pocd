@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSystem xmlns="http://hl7.org/fhir">
+    <id value="kind-of-relation"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/StructureDefinition/shareablecodesystem" />
+  </meta>
+  <url value="http://hl7.org/fhir/uv/pocd/CodeSystem/kind-of-relation" />
+  <name value="Kind" />
+  <title value="Kind" />
+  <status value="draft" />
+  <experimental value="false" />
+  <date value="2020-05-12" />
+  <description value="CodeSystem for IEEE 11073-10207 Relation/Kind" />
+  <caseSensitive value="false" />
+  <content value="complete" />
+  <concept>
+    <code value="Rcm" />
+    <display value="Recommendation" />
+	<definition value="The METRIC is a recommendation for the containment tree entries defined in ./pm:Relation/@Entries"/>
+  </concept>
+  <concept>
+    <code value="PS" />
+    <display value="Presetting" />
+    <definition value="Presetting. This METRIC is a presetting for the containment tree entries defined in ./pm:Relation/@Entries." />
+  </concept>
+  <concept>
+    <code value="SST" />
+    <display value="Set of summary statistics" />
+    <definition value="The METRIC is part of a set of summary statistics for a sample where other METRICs that belong to the summary statistics are defined in ./pm:Relation/@Entries." />
+  </concept>
+  <concept>
+    <code value="ECE" />
+    <display value="Effect on containment tree entries" />
+    <definition value="When changed, the METRIC has an effect on the containment tree entries defined in ./pm:Relation/@Entries. If Kind is ECE, ./pm:Relation/pm:Code SHOULD be set to classify the effect." />
+  </concept>
+  <concept>
+    <code value="DCE" />
+    <display value="Derived from containment tree entries" />
+	<definition value="The METRIC is derived from the containment tree entries defined in ./pm:Relation/@Entries. If Kind is DCE, ./pm:Relation/pm:Code MAY be set to classify the form of derivation."/>
+  </concept>
+  <concept>
+    <code value="Oth" />
+    <display value="Other" />
+	<definition value="Relation is specified by other means, e.g., ./pm:Relation/pm:Code or extension element."/>
+  </concept>
+</CodeSystem>

@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../input-cache/schemas-r5/fhir-single.xsd">
+<StructureDefinition xmlns="http://hl7.org/fhir" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../input-cache/schemas-r5/fhir-single.xsd">
   <id value="VmdDevice"/>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-summary">
     <valueMarkdown value="The profile defines the following rules:&#10;
@@ -12,7 +13,7 @@
   <name value="VmdDevice"/>
   <title value="VMD Device profile"/>
   <status value="draft"/>
-  <date value="2020-05-14"/>
+  <date value="2020-05-30"/>
   <publisher value="HL7 International - Health Care Devices Work Group"/>
   <description value="StructureDefinition for Device resources that represent Virtual Medical Devices (VMD). These are medical-related subsystems in the hierarchical model of a Point-of-Care device."/>
   <fhirVersion value="4.0.1"/>
@@ -50,26 +51,86 @@
         <profile value="http://hl7.org/fhir/uv/pocd/StructureDefinition/device-instance"/>
       </type>
     </element>
-	
-	<element id="Device.identifier">
-      <path value="Device.identifier"/>
-	</element>
-	<element id="Device.identifier.system">
-	  <path value="Device.identifier.system"/>
-	  <mapping>
+    <element id="Device.extension:approvedJurisdictions">
+      <path value="Device.extension" />
+      <sliceName value="approvedJurisdictions" />
+      <short value="Approved jurisdictions" />
+      <definition value="List of regions in which a DEVICE COMPONENT is approved to be operated. If the list does not contain
+any entries, then the DEVICE COMPONENT is not approved for any region." />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org/fhir/uv/pocd/StructureDefinition/approved-jurisdictions" />
+      </type>
+    </element>
+    <element id="Device.extension:approvedJurisdictions.valueIdentifier">
+      <path value="Device.extension.valueIdentifier"/>
+    </element>
+    <element id="Device.extension:approvedJurisdictions.valueIdentifier.system">
+      <path value="Device.extension.valueIdentifier.system"/>
+      <mapping>
         <identity value="sdc"/>
-        <map value="MdsDescriptor/Vmd/ProductionSpecification/ComponentId/Root"/> 
-		</mapping>
+        <map value="ApprovedJurisdictions/ApprovedJurisdiction/Root"/>
+      </mapping>
+    </element>
+    <element id="Device.extension:approvedJurisdictions.valueIdentifier.value">
+      <path value="Device.extension.valueIdentifier.value"/>
+      <mapping>
+        <identity value="sdc"/>
+        <map value="ApprovedJurisdictions/ApprovedJurisdiction/Extension"/>
+      </mapping>
+    </element>
+    <element id="Device.extension:operatingHours">
+      <path value="Device.extension" />
+      <sliceName value="operatingHours" />
+      <short value="operating hours" />
+      <definition value="optional amount of operating hours (e.g., an OR light)" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org/fhir/uv/pocd/StructureDefinition/operating-hours" />
+      </type>
+      <mapping>
+        <identity value="sdc"/>
+        <map value="VmdState/OperatingHours"/>
+      </mapping>
+    </element>
+    <element id="Device.extension:operatingCycles">
+      <path value="Device.extension" />
+      <sliceName value="operatingCycles" />
+      <short value="operating cycles" />
+      <definition value="optional amount of operarting cycles, e.g., the number of measurements taken within the component." />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org/fhir/uv/pocd/StructureDefinition/operating-cycles" />
+      </type>
+      <mapping>
+        <identity value="sdc"/>
+        <map value="VmdState/OperatingCycles"/>
+      </mapping>
+    </element>
+    <element id="Device.identifier">
+      <path value="Device.identifier"/>
+    </element>
+    <element id="Device.identifier.system">
+      <path value="Device.identifier.system"/>
+      <mapping>
+        <identity value="sdc"/>
+        <map value="MdsDescriptor/Vmd/ProductionSpecification/ComponentId/Root"/>
+      </mapping>
     </element>
     <element id="Device.identifier.value">
       <path value="Device.identifier.value"/>
-	  <mapping>
+      <mapping>
         <identity value="sdc"/>
-        <map value="MdsDescriptor/Vmd/ProductionSpecification/ComponentId/Extension"/> 
-	  </mapping>
+        <map value="MdsDescriptor/Vmd/ProductionSpecification/ComponentId/Extension"/>
+      </mapping>
     </element>
-	
-	<element id="Device.type">
+    <element id="Device.type">
       <path value="Device.type"/>
       <min value="1"/>
       <binding>
@@ -77,67 +138,67 @@
         <valueSet value="http://hl7.org/fhir/uv/pocd/ValueSet/11073MDC-object"/>
       </binding>
     </element>
-	<element id="Device.type.coding">
-		<path value="Device.type.coding"/>
-	</element>
-	<element id="Device.type.coding.system">
-		<path value="Device.type.coding.system"/>
-		<mapping>
+    <element id="Device.type.coding">
+      <path value="Device.type.coding"/>
+    </element>
+    <element id="Device.type.coding.system">
+      <path value="Device.type.coding.system"/>
+      <mapping>
         <identity value="sdc"/>
-        <map value="MdsDescriptor/Vmd/Type/CodingSystem"/> 
-		</mapping>
-	</element>
-	<element id="Device.type.coding.version">
-		<path value="Device.type.coding.version"/>
-		<mapping>
+        <map value="MdsDescriptor/Vmd/Type/CodingSystem"/>
+      </mapping>
+    </element>
+    <element id="Device.type.coding.version">
+      <path value="Device.type.coding.version"/>
+      <mapping>
         <identity value="sdc"/>
-        <map value="MdsDescriptor/Vmd/Type/CodingSystemVersion"/> 
-		</mapping>
-	</element>
-	<element id="Device.type.coding.code">
-		<path value="Device.type.coding.code"/>
-		<mapping>
+        <map value="MdsDescriptor/Vmd/Type/CodingSystemVersion"/>
+      </mapping>
+    </element>
+    <element id="Device.type.coding.code">
+      <path value="Device.type.coding.code"/>
+      <mapping>
         <identity value="sdc"/>
-        <map value="MdsDescriptor/Vmd/Type/Code"/> 
-		</mapping>
-	</element>
-	<element id="Device.version">
+        <map value="MdsDescriptor/Vmd/Type/Code"/>
+      </mapping>
+    </element>
+    <element id="Device.version">
       <path value="Device.version"/>
     </element>
-	<element id="Device.version.type">
+    <element id="Device.version.type">
       <path value="Device.version.type"/>
     </element>
-	<element id="Device.version.type.coding">
-		<path value="Device.version.type.coding"/>
-	</element>
-	<element id="Device.version.type.coding.system">
-		<path value="Device.version.type.coding.system"/>
-		<mapping>
+    <element id="Device.version.type.coding">
+      <path value="Device.version.type.coding"/>
+    </element>
+    <element id="Device.version.type.coding.system">
+      <path value="Device.version.type.coding.system"/>
+      <mapping>
         <identity value="sdc"/>
-        <map value="MdsDescriptor/Vmd/ProductionSpecification/SpecType/CodingSystem"/> 
-		</mapping>
-	</element>
-	<element id="Device.version.type.coding.version">
-		<path value="Device.version.type.coding.version"/>
-		<mapping>
+        <map value="MdsDescriptor/Vmd/ProductionSpecification/SpecType/CodingSystem"/>
+      </mapping>
+    </element>
+    <element id="Device.version.type.coding.version">
+      <path value="Device.version.type.coding.version"/>
+      <mapping>
         <identity value="sdc"/>
-        <map value="MdsDescriptor/Vmd/ProductionSpecification/SpecType/CodingSystemVersion"/> 
-		</mapping>
-	</element>
-	<element id="Device.version.type.coding.code">
-		<path value="Device.version.type.coding.code"/>
-		<mapping>
+        <map value="MdsDescriptor/Vmd/ProductionSpecification/SpecType/CodingSystemVersion"/>
+      </mapping>
+    </element>
+    <element id="Device.version.type.coding.code">
+      <path value="Device.version.type.coding.code"/>
+      <mapping>
         <identity value="sdc"/>
-        <map value="MdsDescriptor/Vmd/ProductionSpecification/SpecType/Code"/> 
-		</mapping>
-	</element>
-	<element id="Device.version.value">
-		<path value="Device.version.value"/>
-		<mapping>
+        <map value="MdsDescriptor/Vmd/ProductionSpecification/SpecType/Code"/>
+      </mapping>
+    </element>
+    <element id="Device.version.value">
+      <path value="Device.version.value"/>
+      <mapping>
         <identity value="sdc"/>
-        <map value="MdsDescriptor/Vmd/ProductionSpecification/ProductionSpec"/> 
-		</mapping>
-	</element>
+        <map value="MdsDescriptor/Vmd/ProductionSpecification/ProductionSpec"/>
+      </mapping>
+    </element>
     <element id="Device.patient">
       <path value="Device.patient"/>
       <max value="0"/>
@@ -152,12 +213,20 @@
     <element id="Device.safety.coding">
       <path value="Device.safety.coding"/>
     </element>
+    <element id="Device.safety.coding.system">
+      <path value="Device.safety.coding.system" />
+      <definition value="http://hl7.org/fhir/uv/pocd/ValueSet/safety" />
+    </element>
     <element id="Device.safety.coding.code">
       <path value="Device.safety.coding.code"/>
+      <binding>
+        <strength value="required" />
+        <description value="Safety classification" />
+        <valueSet value="http://hl7.org/fhir/uv/pocd/ValueSet/safety" />
+      </binding>
       <mapping>
         <identity value="sdc"/>
         <map value="MdsDescriptor/Vmd/SafetyClassification"/>
-        <!--TODO Valueset einbauen-->
       </mapping>
     </element>
     <element id="Device.parent">

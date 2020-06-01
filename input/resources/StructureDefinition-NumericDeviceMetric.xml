@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../input-cache/schemas-r5/fhir-single.xsd">
+<StructureDefinition xmlns="http://hl7.org/fhir" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../input-cache/schemas-r5/fhir-single.xsd">
   <id value="NumericDeviceMetric"/>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-summary">
     <valueMarkdown value="The profile defines the following rules:&#10;
@@ -7,12 +8,12 @@
 * If `DeviceMetric.unit` is present, it shall have a coding from the ISO/IEEE 11073 MDC Units of measurement if there is an appropriate code available.&#10;
 * `DeviceMetric.source` shall be present and refer to the MDS Device resource.&#10;
 * `DeviceMetric.parent` shall be present and refer to the Channel Device resource where this metric belongs to."/>
-  </extension>  
+  </extension>
   <url value="http://hl7.org/fhir/uv/pocd/StructureDefinition/NumericDeviceMetric"/>
   <name value="NumericDeviceMetric"/>
   <title value="Numeric DeviceMetric profile"/>
   <status value="draft"/>
-  <date value="2020-05-16"/>
+  <date value="2020-05-30"/>
   <publisher value="HL7 International - Health Care Devices Work Group"/>
   <description value="StructureDefinition for DeviceMetric resources that represent numerical measurements, calculations, or settings characteristics and capabilities."/>
   <fhirVersion value="4.0.1"/>
@@ -26,25 +27,71 @@
     <uri value="urn:iso:std:iso:11073:10201"/>
     <name value="IEEE 11073-10201 DIM"/>
   </mapping>
+  <mapping>
+    <identity value="sdc"/>
+    <uri value="urn:iso:std:iso:11073:10207"/>
+    <name value="IEEE 11073-10207 SDC"/>
+  </mapping>
   <differential>
     <element id="DeviceMetric">
       <path value="DeviceMetric"/>
     </element>
+    <element id="DeviceMetric.extension">
+      <path value="DeviceMetric.extension"/>
+      <slicing>
+        <discriminator>
+          <type value="value"/>
+          <path value="url"/>
+        </discriminator>
+        <rules value="open"/>
+      </slicing>
+    </element>
+    <element id="DeviceMetric.extension:relation">
+      <path value="DeviceMetric.extension" />
+      <sliceName value="relation" />
+      <short value="Modelling relationships" />
+      <definition value="Relation allows the modelling of relationships between a metric and other containment tree entries.
+Related containment tree entries are defined in Entries, whereby the flavor of a relationship can be set up in Kind." />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org/fhir/uv/pocd/StructureDefinition/relation" />
+      </type>
+    </element>
     <element id="DeviceMetric.type">
       <path value="DeviceMetric.type"/>
-      <binding> 
-        <strength value="extensible"/> 
-        <valueSet value="http://hl7.org/fhir/uv/pocd/ValueSet/11073MDC-metric"/> 
-      </binding>     
+      <binding>
+        <strength value="extensible"/>
+        <valueSet value="http://hl7.org/fhir/uv/pocd/ValueSet/11073MDC-metric"/>
+      </binding>
     </element>
     <element id="DeviceMetric.type.coding">
       <path value="DeviceMetric.type.coding"/>
+    </element>
+    <element id="DeviceMetric.type.coding.system">
+      <path value="DeviceMetric.type.coding.system"/>
+      <mapping>
+        <identity value="sdc"/>
+        <map value="NumericMetricDescriptor/Type/CodingSystem"/>
+      </mapping>
+    </element>
+    <element id="DeviceMetric.type.coding.version">
+      <path value="DeviceMetric.type.coding.version"/>
+      <mapping>
+        <identity value="sdc"/>
+        <map value="NumericMetricDescriptor/Type/CodingSystemVersion"/>
+      </mapping>
     </element>
     <element id="DeviceMetric.type.coding.code">
       <path value="DeviceMetric.type.coding.code"/>
       <mapping>
         <identity value="dim"/>
         <map value="VMO::Type"/>
+      </mapping>
+      <mapping>
+        <identity value="sdc"/>
+        <map value="NumericMetricDescriptor/Type/Code"/>
       </mapping>
     </element>
     <element id="DeviceMetric.type.text">
@@ -56,19 +103,37 @@
     </element>
     <element id="DeviceMetric.unit">
       <path value="DeviceMetric.unit"/>
-      <binding> 
-        <strength value="extensible"/> 
-        <valueSet value="http://hl7.org/fhir/uv/pocd/ValueSet/11073MDC-dimension"/> 
-      </binding>     
+      <binding>
+        <strength value="extensible"/>
+        <valueSet value="http://hl7.org/fhir/uv/pocd/ValueSet/11073MDC-dimension"/>
+      </binding>
     </element>
     <element id="DeviceMetric.unit.coding">
       <path value="DeviceMetric.unit.coding"/>
+    </element>
+    <element id="DeviceMetric.unit.coding.system">
+      <path value="DeviceMetric.unit.coding.system"/>
+      <mapping>
+        <identity value="sdc"/>
+        <map value="NumericMetricDescriptor/Unit/CodingSystem"/>
+      </mapping>
+    </element>
+    <element id="DeviceMetric.unit.coding.version">
+      <path value="DeviceMetric.unit.coding.version"/>
+      <mapping>
+        <identity value="sdc"/>
+        <map value="NumericMetricDescriptor/Type/CodingSystemVersion"/>
+      </mapping>
     </element>
     <element id="DeviceMetric.unit.coding.code">
       <path value="DeviceMetric.unit.coding.code"/>
       <mapping>
         <identity value="dim"/>
         <map value="Metric::Unit-Code"/>
+      </mapping>
+      <mapping>
+        <identity value="sdc"/>
+        <map value="NumericMetricDescriptor/Unit/Code"/>
       </mapping>
     </element>
     <element id="DeviceMetric.unit.text">
@@ -100,6 +165,10 @@
         <identity value="dim"/>
         <map value="Metric::Metric-Status"/>
       </mapping>
+      <mapping>
+        <identity value="sdc"/>
+        <map value="NumericMetricState/ActivationState"/>
+      </mapping>
     </element>
     <element id="DeviceMetric.color">
       <path value="DeviceMetric.color"/>
@@ -114,9 +183,17 @@
         <identity value="dim"/>
         <map value="Metric::Metric-Specification::category"/>
       </mapping>
+      <mapping>
+        <identity value="sdc"/>
+        <map value="NumericMetricDescriptor/MetricCategory"/>
+      </mapping>
     </element>
     <element id="DeviceMetric.measurementPeriod">
       <path value="DeviceMetric.measurementPeriod"/>
+      <mapping>
+        <identity value="sdc"/>
+        <map value="NumericMetricDescriptor/DeterminationPeriod"/>
+      </mapping>
     </element>
     <element id="DeviceMetric.measurementPeriod.repeat">
       <path value="DeviceMetric.measurementPeriod.repeat"/>

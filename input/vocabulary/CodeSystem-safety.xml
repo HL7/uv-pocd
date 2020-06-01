@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSystem xmlns="http://hl7.org/fhir">
+    <id value="safety"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/StructureDefinition/shareablecodesystem" />
+  </meta>
+  <url value="http://hl7.org/fhir/uv/pocd/CodeSystem/safety" />
+  <name value="Safety" />
+  <title value="Safety" />
+  <status value="draft" />
+  <experimental value="false" />
+  <date value="2020-05-12" />
+  <description value="CodeSystem for IEEE 11073-10207 SafetyClassification" />
+  <caseSensitive value="false" />
+  <content value="complete" />
+  <concept>
+    <code value="Inf" />
+    <display value="Informational" />
+	<definition value="The descriptor and the related state information are intended to be used for information purposes only. They are not intended to be used in clinical functions."/>
+  </concept>
+  <concept>
+    <code value="MedA" />
+    <display value="Medical Class A" />
+    <definition value="Medical Class A. The descriptor and related state information are intended to be used in clinical functions, specifically for general display in order to support patient and device monitoring. The displayed data is not intended to be used as sole source for diagnostic or therapeutic decisions. Deviations from this intended use are in the sole responsibility of the SERVICE CONSUMER." />
+  </concept>
+  <concept>
+    <code value="MedB" />
+    <display value="Medical Class B" />
+    <definition value="AThe descriptor and related state information are intended to be used in clinical functions. The manufacturer has specified and considered a specific intended use for the data, which could result in nonserious injury. Deviations from this intended use are in the sole responsibility of the SERVICE CONSUMER." />
+  </concept>
+  <concept>
+    <code value="MedC" />
+    <display value="Medical Class C" />
+    <definition value="The descriptor and related state information are intended to be used in clinical functions. The manufacturer has specified and considered a specific intended use for the data, which could result in serious injury. Deviations from this intended use are in the sole responsibility of the SERVICE CONSUMER." />
+  </concept>
+</CodeSystem>
