@@ -7,7 +7,7 @@
   <title value="Point-of-Care Device Implementation Guide"/>
   <status value="draft"/>
   <experimental value="false"/>
-  <date value="2020-03-02"/>
+  <date value="2020-06-03"/>
   <publisher value="HL7 International - Health Care Devices Work Group"/>
   <contact>
     <telecom>
@@ -103,7 +103,7 @@
         <reference value="StructureDefinition/approved-jurisdictions"/>
       </reference>
       <name value="Approved Jurisdictions extension"/>
-      <description value="StructureDefinition that adds approved jursidictions to a Device."/>
+      <description value="StructureDefinition that adds approved jurisdictions to a Device."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -124,14 +124,6 @@
     </resource>
     <resource>
       <reference>
-        <reference value="StructureDefinition/operating-mode"/>
-      </reference>
-      <name value="Operating mode extension"/>
-      <description value="StructureDefinition that adds an operating mode to a Device."/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <reference>
         <reference value="StructureDefinition/operating-cycles"/>
       </reference>
       <name value="Operating cycles extension"/>
@@ -140,18 +132,18 @@
     </resource>
     <resource>
       <reference>
-        <reference value="StructureDefinition/relation"/>
+        <reference value="StructureDefinition/operating-mode"/>
       </reference>
-      <name value="Relation extension"/>
-      <description value="StructureDefinition that adds relations cycles to a DeviceMetric."/>
+      <name value="Operating mode extension"/>
+      <description value="StructureDefinition that adds an operating mode to a Device."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
       <reference>
-        <reference value="CodeSystem/measurement-status"/>
+        <reference value="StructureDefinition/relation"/>
       </reference>
-      <name value="Measurement status codes"/>
-      <description value="Measurement status definitions from the ISO/IEEE 11073-10201 DIM."/>
+      <name value="Relation extension"/>
+      <description value="StructureDefinition that adds relations to a DeviceMetric."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -164,39 +156,26 @@
     </resource>
     <resource>
       <reference>
-        <reference value="CodeSystem/kind-of-relation"/>
-      </reference>
-      <name value="kind of relation codes"/>
-      <description value="relation definitions from the ISO/IEEE 11073-10207."/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <reference>
         <reference value="CodeSystem/safety"/>
       </reference>
-      <name value="safety classification codes"/>
-      <description value="safety classification definitions from the ISO/IEEE 11073-10207."/>
+      <name value="Safety classification codes"/>
+      <description value="Safety classification definitions from the ISO/IEEE 11073-10207."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
       <reference>
-        <reference value="ValueSet/safety"/>
+        <reference value="CodeSystem/kind-of-relation"/>
       </reference>
-      <name value="safety classification ValueSet"/>
+      <name value="Kind of relation codes"/>
+      <description value="Relation definitions from the ISO/IEEE 11073-10207."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
       <reference>
-        <reference value="ValueSet/kind-of-relation"/>
+        <reference value="CodeSystem/measurement-status"/>
       </reference>
-      <name value="Kind of relation ValueSet"/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="ValueSet/operating-mode"/>
-      </reference>
-      <name value="Operating mode ValueSet"/>
+      <name value="Measurement status codes"/>
+      <description value="Measurement status definitions from the ISO/IEEE 11073-10201 DIM."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -220,6 +199,30 @@
       </reference>
       <name value="MDC Unit of Measurement"/>
       <description value="ValueSet for the ISO/IEEE 11073-10101 Nomenclature filtered by Dimension partition."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="ValueSet/operating-mode"/>
+      </reference>
+      <name value="Operating mode codes"/>
+      <description value="ValueSet for IEEE 11073-10207 MdsState/OperatingMode."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="ValueSet/safety"/>
+      </reference>
+      <name value="Safety classification codes"/>
+      <description value="ValueSet for IEEE 11073-10207 SafetyClassification."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="ValueSet/kind-of-relation"/>
+      </reference>
+      <name value="Kind of relation codes"/>
+      <description value="ValueSet for IEEE 11073-10207 Relation/Kind."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>

@@ -31,16 +31,104 @@
       There is only a single coding that needs to be <a href="{{site.data.fhir.path}}ucum.html">UCUM</a> for all vital signs. Therefore the PoCD profiles require UCUM coding for all numerics.
     </li>
   </ul>
+  <a name="1"></a>
   <h3>Code Systems</h3>
   <table class="table-striped" style="width:100%">
     <col style="width:40%"/>
     <col style="width:60%"/>
-    {% include table-codesystems.xhtml %}
+    <tr>
+      <td>
+        <a href="CodeSystem-operating-mode.html">Operating mode codes</a>
+      </td>
+      <td>
+        <p>Operating mode definitions from the ISO/IEEE 11073-10207.</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="CodeSystem-safety.html">Safety classification codes</a>
+      </td>
+      <td>
+        <p>Safety classification definitions from the ISO/IEEE 11073-10207.</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="CodeSystem-kind-of-relation.html">Kind of relation codes</a>
+      </td>
+      <td>
+        <p>Relation definitions from the ISO/IEEE 11073-10207.</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="CodeSystem-measurement-status.html">Measurement status codes</a>
+      </td>
+      <td>
+        <p>Measurement status definitions from the ISO/IEEE 11073-10201 DIM.</p>
+      </td>
+    </tr>
   </table>
+  <a name="2"></a>
   <h3>Value Sets</h3>
   <table class="table-striped" style="width:100%">
     <col style="width:40%"/>
     <col style="width:60%"/>
-    {% include table-valuesets.xhtml %}
+    <tr>
+      <td>
+        <a href="ValueSet-11073MDC-object.html">MDC Object infrastructure and Device nomenclature</a>
+      </td>
+      <td>
+        <p>ValueSet for the ISO/IEEE 11073-10101 Nomenclature filtered by Object partition.</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="ValueSet-11073MDC-metric.html">MDC Metric nomenclature</a>
+      </td>
+      <td>
+        <p>ValueSet for the ISO/IEEE 11073-10101 Nomenclature filtered by Metric partition.</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="ValueSet-11073MDC-dimension.html">MDC Unit of Measurement</a>
+      </td>
+      <td>
+        <p>ValueSet for the ISO/IEEE 11073-10101 Nomenclature filtered by Dimension partition.</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="ValueSet-operating-mode.html">Operating mode codes</a>
+      </td>
+      <td>
+        <p>ValueSet for IEEE 11073-10207 MdsState/OperatingMode.</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="ValueSet-safety.html">Safety classification codes</a>
+      </td>
+      <td>
+        <p>ValueSet for IEEE 11073-10207 SafetyClassification.</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="ValueSet-kind-of-relation.html">Kind of relation codes</a>
+      </td>
+      <td>
+        <p>ValueSet for IEEE 11073-10207 Relation/Kind.</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="ValueSet-observation-interpretation.html">Observation interpretation codes</a>
+      </td>
+      <td>
+        <p>Observation interpretation codes including measurement status.</p>
+      </td>
+    </tr>
   </table>
 </div>
