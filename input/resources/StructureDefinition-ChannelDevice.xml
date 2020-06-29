@@ -13,7 +13,7 @@
   <name value="ChannelDevice"/>
   <title value="Channel Device profile"/>
   <status value="draft"/>
-  <date value="2020-05-30"/>
+  <date value="2020-06-29"/>
   <publisher value="HL7 International - Health Care Devices Work Group"/>
   <description value="StructureDefinition for Device resources that represent Channels, which are used for grouping metrics together."/>
   <fhirVersion value="4.0.1"/>
@@ -22,6 +22,11 @@
   <type value="Device"/>
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Device"/>
   <derivation value="constraint"/>
+  <mapping>
+    <identity value="dim"/>
+    <uri value="urn:iso:std:iso:11073:10201"/>
+    <name value="IEEE 11073-10201 DIM"/>
+  </mapping>
   <mapping>
     <identity value="sdc"/>
     <uri value="urn:iso:std:iso:11073:10207"/>
@@ -50,6 +55,13 @@
         <code value="Extension"/>
         <profile value="http://hl7.org/fhir/uv/pocd/StructureDefinition/device-instance"/>
       </type>
+    </element>
+    <element id="Device.extension:instance.valueUnsignedInt">
+      <path value="Device.extension.valueUnsignedInt"/>
+      <mapping>
+        <identity value="dim"/>
+        <map value="Channel::Physical-Channel-No or Channel::Logical-Channel-No"/>
+      </mapping>
     </element>
     <element id="Device.extension:operatingHours">
       <path value="Device.extension" />
@@ -100,6 +112,13 @@
         <map value="MdsDescriptor/Vmd/Channel/ProductionSpecification/ComponentId/Extension"/>
       </mapping>
     </element>
+    <element id="Device.statusReason">
+      <path value="Device.statusReason"/>
+      <mapping>
+        <identity value="dim"/>
+        <map value="Channel::Channel-Status"/>
+      </mapping>
+    </element>
     <element id="Device.type">
       <path value="Device.type"/>
       <min value="1"/>
@@ -128,8 +147,19 @@
     <element id="Device.type.coding.code">
       <path value="Device.type.coding.code"/>
       <mapping>
+        <identity value="dim"/>
+        <map value="VMO::Type"/>
+      </mapping>
+      <mapping>
         <identity value="sdc"/>
         <map value="MdsDescriptor/Vmd/Channel/Type/Code"/>
+      </mapping>
+    </element>
+    <element id="Device.type.text">
+      <path value="Device.type.text"/>
+      <mapping>
+        <identity value="dim"/>
+        <map value="VMO::Label-String"/>
       </mapping>
     </element>
     <element id="Device.version">

@@ -13,7 +13,7 @@
   <name value="VmdDevice"/>
   <title value="VMD Device profile"/>
   <status value="draft"/>
-  <date value="2020-05-30"/>
+  <date value="2020-06-29"/>
   <publisher value="HL7 International - Health Care Devices Work Group"/>
   <description value="StructureDefinition for Device resources that represent Virtual Medical Devices (VMD). These are medical-related subsystems in the hierarchical model of a Point-of-Care device."/>
   <fhirVersion value="4.0.1"/>
@@ -22,6 +22,11 @@
   <type value="Device"/>
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Device"/>
   <derivation value="constraint"/>
+  <mapping>
+    <identity value="dim"/>
+    <uri value="urn:iso:std:iso:11073:10201"/>
+    <name value="IEEE 11073-10201 DIM"/>
+  </mapping>
   <mapping>
     <identity value="sdc"/>
     <uri value="urn:iso:std:iso:11073:10207"/>
@@ -50,6 +55,13 @@
         <code value="Extension"/>
         <profile value="http://hl7.org/fhir/uv/pocd/StructureDefinition/device-instance"/>
       </type>
+    </element>
+    <element id="Device.extension:instance.valueUnsignedInt">
+      <path value="Device.extension.valueUnsignedInt"/>
+      <mapping>
+        <identity value="dim"/>
+        <map value="VMD::Instance-Number"/>
+      </mapping>
     </element>
     <element id="Device.extension:approvedJurisdictions">
       <path value="Device.extension" />
@@ -97,6 +109,13 @@ any entries, then the DEVICE COMPONENT is not approved for any region." />
         <map value="VmdState/OperatingHours"/>
       </mapping>
     </element>
+    <element id="Device.extension:operatingHours.valuePositiveInt">
+      <path value="Device.extension.valuePositiveInt"/>
+      <mapping>
+        <identity value="dim"/>
+        <map value="VMD::Operating-Hours"/>
+      </mapping>
+    </element>
     <element id="Device.extension:operatingCycles">
       <path value="Device.extension" />
       <sliceName value="operatingCycles" />
@@ -111,6 +130,13 @@ any entries, then the DEVICE COMPONENT is not approved for any region." />
       <mapping>
         <identity value="sdc"/>
         <map value="VmdState/OperatingCycles"/>
+      </mapping>
+    </element>
+    <element id="Device.extension:operatingCycles.valueInteger">
+      <path value="Device.extension.valueInteger"/>
+      <mapping>
+        <identity value="dim"/>
+        <map value="VMD::Operation-Cycles"/>
       </mapping>
     </element>
     <element id="Device.identifier">
@@ -128,6 +154,93 @@ any entries, then the DEVICE COMPONENT is not approved for any region." />
       <mapping>
         <identity value="sdc"/>
         <map value="MdsDescriptor/Vmd/ProductionSpecification/ComponentId/Extension"/>
+      </mapping>
+    </element>
+    <element id="Device.udiCarrier">
+      <path value="Device.udiCarrier"/>
+    </element>
+    <element id="Device.udiCarrier.deviceIdentifier">
+      <path value="Device.udiCarrier.deviceIdentifier"/>
+      <mapping>
+        <identity value="dim"/>
+        <map value="VMD::Production-Specification[spec-type=device-identifier]::prod-spec"/>
+      </mapping>
+    </element>
+    <element id="Device.udiCarrier.issuer">
+      <path value="Device.udiCarrier.issuer"/>
+      <mapping>
+        <identity value="dim"/>
+        <map value="VMD::Udi::udi-issuer"/>
+      </mapping>
+    </element>
+    <element id="Device.udiCarrier.jurisdiction">
+      <path value="Device.udiCarrier.jurisdiction"/>
+      <mapping>
+        <identity value="dim"/>
+        <map value="VMD::Udi::udi-authority"/>
+      </mapping>
+    </element>
+    <element id="Device.udiCarrier.carrierHRF">
+      <path value="Device.udiCarrier.carrierHRF"/>
+      <mapping>
+        <identity value="dim"/>
+        <map value="VMD::Udi::udi-label"/>
+      </mapping>
+    </element>
+    <element id="Device.statusReason">
+      <path value="Device.statusReason"/>
+      <mapping>
+        <identity value="dim"/>
+        <map value="VMD::Vmd-Status"/>
+      </mapping>
+    </element>
+    <element id="Device.manufacturer">
+      <path value="Device.manufacturer"/>
+      <mapping>
+        <identity value="dim"/>
+        <map value="VMD::Vmd-Model::manufacturer"/>
+      </mapping>
+    </element>
+    <element id="Device.manufactureDate">
+      <path value="Device.manufactureDate"/>
+      <mapping>
+        <identity value="dim"/>
+        <map value="VMD::Production-Specification[spec-type=manufacture-date]::prod-spec"/>
+      </mapping>
+    </element>
+    <element id="Device.expirationDate">
+      <path value="Device.expirationDate"/>
+      <mapping>
+        <identity value="dim"/>
+        <map value="VMD::Production-Specification[spec-type=expiry-date]::prod-spec"/>
+      </mapping>
+    </element>
+    <element id="Device.lotNumber">
+      <path value="Device.lotNumber"/>
+      <mapping>
+        <identity value="dim"/>
+        <map value="VMD::Production-Specification[spec-type=lot-number]::prod-spec"/>
+      </mapping>
+    </element>
+    <element id="Device.serialNumber">
+      <path value="Device.serialNumber"/>
+      <mapping>
+        <identity value="dim"/>
+        <map value="VMD::Production-Specification[spec-type=serial-number]::prod-spec"/>
+      </mapping>
+    </element>
+    <element id="Device.modelNumber">
+      <path value="Device.modelNumber"/>
+      <mapping>
+        <identity value="dim"/>
+        <map value="VMD::Vmd-Model::model-number"/>
+      </mapping>
+    </element>
+    <element id="Device.partNumber">
+      <path value="Device.partNumber"/>
+      <mapping>
+        <identity value="dim"/>
+        <map value="VMD::Production-Specification[spec-type=part-number]::prod-spec"/>
       </mapping>
     </element>
     <element id="Device.type">
@@ -158,8 +271,19 @@ any entries, then the DEVICE COMPONENT is not approved for any region." />
     <element id="Device.type.coding.code">
       <path value="Device.type.coding.code"/>
       <mapping>
+        <identity value="dim"/>
+        <map value="VMO::Type"/>
+      </mapping>
+      <mapping>
         <identity value="sdc"/>
         <map value="MdsDescriptor/Vmd/Type/Code"/>
+      </mapping>
+    </element>
+    <element id="Device.type.text">
+      <path value="Device.type.text"/>
+      <mapping>
+        <identity value="dim"/>
+        <map value="VMO::Label-String"/>
       </mapping>
     </element>
     <element id="Device.version">
@@ -167,6 +291,10 @@ any entries, then the DEVICE COMPONENT is not approved for any region." />
     </element>
     <element id="Device.version.type">
       <path value="Device.version.type"/>
+      <mapping>
+        <identity value="dim"/>
+        <map value="VMD::Production-Specification[spec-type=hw-revision|sw-revision|fw-revision]::spec-type"/>
+      </mapping>
     </element>
     <element id="Device.version.type.coding">
       <path value="Device.version.type.coding"/>
@@ -192,8 +320,19 @@ any entries, then the DEVICE COMPONENT is not approved for any region." />
         <map value="MdsDescriptor/Vmd/ProductionSpecification/SpecType/Code"/>
       </mapping>
     </element>
+    <element id="Device.version.component">
+      <path value="Device.version.component"/>
+      <mapping>
+        <identity value="dim"/>
+        <map value="VMD::Production-Specification[spec-type=hw-revision|sw-revision|fw-revision]::component-id"/>
+      </mapping>
+    </element>
     <element id="Device.version.value">
       <path value="Device.version.value"/>
+      <mapping>
+        <identity value="dim"/>
+        <map value="VMD::Production-Specification[spec-type=hw-revision|sw-revision|fw-revision]::prod-spec"/>
+      </mapping>
       <mapping>
         <identity value="sdc"/>
         <map value="MdsDescriptor/Vmd/ProductionSpecification/ProductionSpec"/>
