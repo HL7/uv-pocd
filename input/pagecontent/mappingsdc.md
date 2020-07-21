@@ -12,7 +12,8 @@ Most object classes in ISO/IEEE 11073 SDC can be mapped to FHIR resources as out
 | Enumeration | [DeviceMetric]({{site.data.fhir.path}}devicemetric.html) (according to the [Enumeration DeviceMetric profile](StructureDefinition-EnumerationDeviceMetric.html)) and <br/>[Observation]({{site.data.fhir.path}}observation.html) (according to the [Enumeration Observation profile](StructureDefinition-EnumerationObservation.html)) |
 | TimeSampleArray <br/> RealTimeSampleArray<br/> DistributionSampleArray | *to be completed* |
 | Alert <br/> AlertStatus <br/> AlertMonitor | *to be completed* |
-| PatientDemographics | [Patient]({{site.data.fhir.path}}patient.html) |
+| PatientDemographics | [Patient]({{site.data.fhir.path}}patient.html) (according to the [Patient profile](StructureDefinition-Patient.html)) |
+| OperatorDemographics | [Practitioner]({{site.data.fhir.path}}practitioner.html) (according to the [Practitioner profile](StructureDefinition-Practitioner.html)) |
 {: .grid}
 
 ### SDC Object Attributes

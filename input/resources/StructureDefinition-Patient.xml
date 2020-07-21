@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../input-cache/schemas-r5/fhir-single.xsd">
+  <id value="Patient"/>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-summary">
+    <valueMarkdown value="The profile defines the following rules:&#10;
+* The representation of a person's birthname requieres an additional HumanName type with the use maiden and a familyname because HL7 FHIR does not explicitly address a birthname."/>
+  </extension>
+  <url value="http://hl7.org/fhir/uv/pocd/StructureDefinition/Patient"/>
+  <name value="Patient"/>
+  <title value="Patient profile"/>
+  <status value="draft"/>
+  <date value="2020-07-15"/>
+  <publisher value="HL7 International - Health Care Devices Work Group"/>
+  <description value="StructureDefinition for Patient resources that represent demographics and other administrative information."/>
+  <fhirVersion value="4.0.1"/>
+  <kind value="resource"/>
+  <abstract value="false"/>
+  <type value="Patient"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Patient"/>
+  <derivation value="constraint"/>
+  <mapping>
+    <identity value="dim"/>
+    <uri value="urn:iso:std:iso:11073:10201"/>
+    <name value="IEEE 11073-10201 DIM"/>
+  </mapping>
+  <mapping>
+    <identity value="sdc"/>
+    <uri value="urn:iso:std:iso:11073:10207"/>
+    <name value="IEEE 11073-10207 SDC"/>
+  </mapping>
+  <differential>
+    <element id="Patient">
+      <path value="Patient"/>
+    </element>
+    <element id="Patient.identifier">
+      <path value="Patient.identifier"/>
+    </element>
+    <element id="Patient.identifier.system">
+      <path value="Patient.identifier.system"/>
+      <mapping>
+        <identity value="sdc"/>
+        <map value="WorkflowContextState/WorkflowDetail/Patient/Identification/Root"/>
+      </mapping>
+    </element>
+    <element id="Patient.identifier.value">
+      <path value="Patient.identifier.value"/>
+      <mapping>
+        <identity value="sdc"/>
+        <map value="WorkflowContextState/WorkflowDetail/Patient/Identification/Extension"/>
+      </mapping>
+    </element>
+    <element id="Patient.name">
+      <path value="Patient.name"/>
+    </element>
+    <element id="Patient.name.given">
+    	<path value="Patient.name.given"/>
+      <mapping>
+        <identity value="sdc"/>
+        <map value="PatientContextState/CoreData/Givenname, PatientContextState/CoreData/Middlename"/>
+      </mapping>
+    </element>
+     <element id="Patient.name.family">
+    	<path value="Patient.name.family"/>
+      <mapping>
+        <identity value="sdc"/>
+        <map value="PatientContextState/CoreData/Familyname"/>
+      </mapping>
+    </element>
+    <element id="Patient.name.prefix">
+    	<path value="Patient.name.prefix"/>
+      <mapping>
+        <identity value="sdc"/>
+        <map value="PatientContextState/CoreData/Title"/>
+      </mapping>
+    </element>
+    <element id="Patient.birthdate">
+      <path value="Patient.birthdate"/>
+       <mapping>
+        <identity value="sdc"/>
+        <map value="PatientContextState/CoreData/Birthname"/>
+      </mapping>
+    </element>
+  </differential>
+</StructureDefinition>
