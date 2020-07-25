@@ -209,6 +209,11 @@
     </element>
     <element id="Device.safety">
       <path value="Device.safety"/>
+      <binding>
+        <strength value="extensible" />
+        <description value="Safety classification" />
+        <valueSet value="http://hl7.org/fhir/uv/pocd/ValueSet/safety" />
+      </binding>
     </element>
     <element id="Device.safety.coding">
       <path value="Device.safety.coding"/>
@@ -219,11 +224,6 @@
     </element>
     <element id="Device.safety.coding.code">
       <path value="Device.safety.coding.code"/>
-      <binding>
-        <strength value="required" />
-        <description value="Safety classification" />
-        <valueSet value="http://hl7.org/fhir/uv/pocd/ValueSet/safety" />
-      </binding>
       <mapping>
         <identity value="sdc"/>
         <map value="MdsDescriptor/Vmd/Channel/SafetyClassification"/>

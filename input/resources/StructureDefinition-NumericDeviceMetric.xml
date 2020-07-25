@@ -167,7 +167,7 @@ Related containment tree entries are defined in Entries, whereby the flavor of a
       </mapping>
       <mapping>
         <identity value="sdc"/>
-        <map value="NumericMetricState/ActivationState"/>
+        <map value="NumericMetricState/ActivationState note the mapping of the value set"/>
       </mapping>
     </element>
     <element id="DeviceMetric.color">
@@ -185,18 +185,21 @@ Related containment tree entries are defined in Entries, whereby the flavor of a
       </mapping>
       <mapping>
         <identity value="sdc"/>
-        <map value="NumericMetricDescriptor/MetricCategory"/>
+        <map value="NumericMetricDescriptor/MetricCategory note the mapping of the value set"/>
       </mapping>
     </element>
     <element id="DeviceMetric.measurementPeriod">
       <path value="DeviceMetric.measurementPeriod"/>
-      <mapping>
-        <identity value="sdc"/>
-        <map value="NumericMetricDescriptor/DeterminationPeriod"/>
-      </mapping>
     </element>
     <element id="DeviceMetric.measurementPeriod.repeat">
       <path value="DeviceMetric.measurementPeriod.repeat"/>
+    </element>
+    <element id="DeviceMetric.measurementPeriod.repeat.duration">
+      <path value="DeviceMetric.measurementPeriod.repeat.duration"/>
+      <mapping>
+        <identity value="sdc"/>
+        <map value="NumericMetricDescriptor/DeterminationPeriod Unit can be specified by durationUnit"/>
+      </mapping>
     </element>
     <element id="DeviceMetric.measurementPeriod.repeat.period">
       <path value="DeviceMetric.measurementPeriod.repeat.period"/>

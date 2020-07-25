@@ -28,7 +28,7 @@
         <code value="code" />
       </type>
       <binding>
-        <strength value="required" />
+        <strength value="extensible" />
         <description value="Operating Mode of the MDS" />
         <valueSet value="http://hl7.org/fhir/uv/pocd/ValueSet/operating-mode" />
       </binding>

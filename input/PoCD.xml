@@ -92,6 +92,22 @@
     </resource>
     <resource>
       <reference>
+        <reference value="StructureDefinition/Patient"/>
+      </reference>
+      <name value="Patient profile"/>
+      <description value="StructureDefinition for Patient resources that represent demographics and other administrative information."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/Practitioner"/>
+      </reference>
+      <name value="Practitioner profile"/>
+      <description value="StructureDefinition for Practitioner resources that represent demographics and other administrative information."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="StructureDefinition/device-instance"/>
       </reference>
       <name value="Device Instance extension"/>

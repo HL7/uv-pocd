@@ -58,6 +58,25 @@ Related containment tree entries are defined in Entries, whereby the flavor of a
         <profile value="http://hl7.org/fhir/uv/pocd/StructureDefinition/relation" />
       </type>
     </element>
+
+    <element id="DeviceMetric.extension.extension:relation.kind.valueCode">
+      <path value="Device.extension.extension.valueCode"/>
+      <mapping>
+        <identity value="sdc"/>
+        <map value="AbstractMetricDescriptor/Relation/Kind"/>
+      </mapping>
+    </element>
+    <element id="DeviceMetric.extension.extension:relation.entries.valueReference">
+      <path value="Device.extension.extension.valueReference"/>
+      <mapping>
+        <identity value="sdc"/>
+        <map value=""/>
+      </mapping>
+    </element>
+    <element id="DeviceMetric.extension.extension:relation.code.valueCoding">
+      <path value="Device.extension.extension.valueCoding"/>
+    </element>
+    
     <element id="DeviceMetric.type">
       <path value="DeviceMetric.type"/>
       <binding>
@@ -152,7 +171,7 @@ Related containment tree entries are defined in Entries, whereby the flavor of a
       </mapping>
       <mapping>
         <identity value="sdc"/>
-        <map value="EnumStringMetricState/ActivationState"/>
+        <map value="EnumStringMetricState/ActivationState note the mapping of the value set"/>
       </mapping>
     </element>
     <element id="DeviceMetric.color">
@@ -170,18 +189,21 @@ Related containment tree entries are defined in Entries, whereby the flavor of a
       </mapping>
       <mapping>
         <identity value="sdc"/>
-        <map value="EnumStringMetricDescriptor/MetricCategory"/>
+        <map value="EnumStringMetricDescriptor/MetricCategory Note the mapping of the value set"/>
       </mapping>
     </element>
     <element id="DeviceMetric.measurementPeriod">
       <path value="DeviceMetric.measurementPeriod"/>
-      <mapping>
-        <identity value="sdc"/>
-        <map value="EnumStringMetricDescriptor/DeterminationPeriod"/>
-      </mapping>
     </element>
     <element id="DeviceMetric.measurementPeriod.repeat">
       <path value="DeviceMetric.measurementPeriod.repeat"/>
+    </element>
+    <element id="DeviceMetric.measurementPeriod.repeat.duration">
+      <path value="DeviceMetric.measurementPeriod.repeat.duration"/>
+      <mapping>
+        <identity value="sdc"/>
+        <map value="EnumStringMetricDescriptor/DeterminationPeriod Unit can specified by durationUnit"/>
+      </mapping>
     </element>
     <element id="DeviceMetric.measurementPeriod.repeat.period">
       <path value="DeviceMetric.measurementPeriod.repeat.period"/>
