@@ -59,24 +59,6 @@ Related containment tree entries are defined in Entries, whereby the flavor of a
       </type>
     </element>
 
-    <element id="DeviceMetric.extension.extension:relation.kind.valueCode">
-      <path value="Device.extension.extension.valueCode"/>
-      <mapping>
-        <identity value="sdc"/>
-        <map value="AbstractMetricDescriptor/Relation/Kind"/>
-      </mapping>
-    </element>
-    <element id="DeviceMetric.extension.extension:relation.entries.valueReference">
-      <path value="Device.extension.extension.valueReference"/>
-      <mapping>
-        <identity value="sdc"/>
-        <map value=""/>
-      </mapping>
-    </element>
-    <element id="DeviceMetric.extension.extension:relation.code.valueCoding">
-      <path value="Device.extension.extension.valueCoding"/>
-    </element>
-    
     <element id="DeviceMetric.type">
       <path value="DeviceMetric.type"/>
       <binding>
