@@ -17,6 +17,11 @@
   <type value="Extension" />
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
   <derivation value="constraint" />
+  <mapping>
+    <identity value="sdc"/>
+    <uri value="urn:iso:std:iso:11073:10207"/>
+    <name value="IEEE 11073-10207 SDC"/>
+  </mapping>
   <differential>
     <element id="Extension.extension">
       <path value="Extension.extension" />
@@ -44,6 +49,10 @@
         <description value="Kind of relationship" />
         <valueSet value="http://hl7.org/fhir/uv/pocd/ValueSet/kind-of-relation" />
       </binding>
+      <mapping>
+        <identity value="sdc"/>
+        <map value="AbstractMetricDescriptor/Relation/Kind"/>
+      </mapping>
     </element>
     <element id="Extension.extension:entries">
       <path value="Extension.extension" />
@@ -56,6 +65,30 @@
       <type>
         <code value="Reference" />
       </type>
+     </element>
+    <element id="Extension.extension.value[x]:valueReference.reference">
+      <path value="Extension.extension.valueReference.reference" />
+      <mapping>
+        <identity value="sdc"/>
+        <map value="AbstractMetricDescriptor/Relation/Entries"/>
+      </mapping>
+    </element>
+    <element id="Extension.extension.value[x]:valueReference.identifier">
+      <path value="Extension.extension.valueReference.identifier" />
+     </element>
+     <element id="Extension.extension.value[x]:valueReference.identifier.system">
+      <path value="Extension.extension.valueReference.identifier.system" />
+      <mapping>
+        <identity value="sdc"/>
+        <map value="AbstractMetricDescriptor/Relation/Identification/Root"/>
+      </mapping>
+    </element>
+    <element id="Extension.extension.value[x]:valueReference.identifier.value">
+      <path value="Extension.extension.valueReference.identifier.value" />
+      <mapping>
+        <identity value="sdc"/>
+        <map value="AbstractMetricDescriptor/Relation/Identification/Extension"/>
+      </mapping>
     </element>
     <element id="Extension.extension:code">
       <path value="Extension.extension" />
@@ -69,6 +102,27 @@
         <code value="Coding" />
       </type>
     </element>
+    <element id="Extension.extension.value[x]:valueCoding.system">
+      <path value="Extension.extension.valueCoding.system" />
+      <mapping>
+        <identity value="sdc"/>
+        <map value="AbstractMetricDescriptor/Relation/Code/CodingSystem"/>
+      </mapping>
+     </element>
+     <element id="Extension.extension.value[x]:valueCoding.version">
+      <path value="Extension.extension.valueCoding.version" />
+      <mapping>
+        <identity value="sdc"/>
+        <map value="AbstractMetricDescriptor/Relation/Code/CodingSystemVersion"/>
+      </mapping>
+     </element>
+    <element id="Extension.extension.value[x]:valueCoding.code">
+      <path value="Extension.extension.valueCoding.code" />
+      <mapping>
+        <identity value="sdc"/>
+        <map value="AbstractMetricDescriptor/Relation/Code/Code"/>
+      </mapping>
+     </element>
     <element id="Extension.value[x]">
       <path value="Extension.value[x]" />
       <max value="0" />

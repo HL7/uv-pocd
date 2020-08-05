@@ -115,7 +115,7 @@
       <path value="Observation.effectiveInstant"/>
       <mapping>
         <identity value="sdc"/>
-        <map value="AbstractMetricValue/DeterminationTime"/>
+        <map value="NumericMetricValue/DeterminationTime"/>
       </mapping>
     </element>
     <element id="Observation.value[x]">

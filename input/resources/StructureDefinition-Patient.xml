@@ -4,7 +4,8 @@
   <id value="Patient"/>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-summary">
     <valueMarkdown value="The profile defines the following rules:&#10;
-* The representation of a person's birthname requieres an additional HumanName type with the use maiden and a familyname because HL7 FHIR does not explicitly address a birthname."/>
+* The representation of a person's birthname requieres an additional HumanName type with the use maiden and a familyname because HL7 FHIR does not explicitly address a birthname.&#10;
+* The sex and gender of a patient (or a newborn) cannot be mapped from ISO/IEEE 11073-10207 to FHIR. The domain information and service model only contains an attribute for sex as defined by biological and physiological characteristics. FHIR, on the other hand, only provides a field for gender as defined by the socially constructed roles, behaviours, activities, and attributes that a given society considers appropriate. The biological sex, however, does not necessarily match a person’s administrative gender. Mapping from one to the other would therefore introduce errors. If necessary, an implementer can convey the biological sex as a coded Observation type."/>
   </extension>
   <url value="http://hl7.org/fhir/uv/pocd/StructureDefinition/Patient"/>
   <name value="Patient"/>
@@ -53,32 +54,32 @@
     <element id="Patient.name">
       <path value="Patient.name"/>
     </element>
+    <element id="Patient.name.family">
+    	<path value="Patient.name.family"/>
+      <mapping>
+        <identity value="sdc"/>
+        <map value="PatientContextState/CoreData/Familyname, NeonatalPatientDemographicsCoreData/Familyname"/>
+      </mapping>
+    </element>
     <element id="Patient.name.given">
     	<path value="Patient.name.given"/>
       <mapping>
         <identity value="sdc"/>
-        <map value="PatientContextState/CoreData/Givenname, PatientContextState/CoreData/Middlename"/>
-      </mapping>
-    </element>
-     <element id="Patient.name.family">
-    	<path value="Patient.name.family"/>
-      <mapping>
-        <identity value="sdc"/>
-        <map value="PatientContextState/CoreData/Familyname"/>
+        <map value="PatientContextState/CoreData/Givenname, PatientContextState/CoreData/Middlename, NeonatalPatientDemographicsCoreData/Givenname, NeonatalPatientDemographicsCoreData/Middlename"/>
       </mapping>
     </element>
     <element id="Patient.name.prefix">
     	<path value="Patient.name.prefix"/>
       <mapping>
         <identity value="sdc"/>
-        <map value="PatientContextState/CoreData/Title"/>
+        <map value="PatientContextState/CoreData/Title, NeonatalPatientDemographicsCoreData/Title"/>
       </mapping>
     </element>
-    <element id="Patient.birthdate">
-      <path value="Patient.birthdate"/>
+    <element id="Patient.birthDate">
+      <path value="Patient.birthDate"/>
        <mapping>
         <identity value="sdc"/>
-        <map value="PatientContextState/CoreData/Birthname"/>
+        <map value="PatientContextState/CoreData/Birthname, NeonatalPatientDemographicsCoreData/DateOfBirth"/>
       </mapping>
     </element>
   </differential>

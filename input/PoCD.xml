@@ -108,6 +108,14 @@
     </resource>
     <resource>
       <reference>
+        <reference value="StructureDefinition/Observation"/>
+      </reference>
+      <name value="Observation profile"/>
+      <description value="StructureDefinition for measurements and simple assertions made about a patient, device or other subject."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="StructureDefinition/device-instance"/>
       </reference>
       <name value="Device Instance extension"/>

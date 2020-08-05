@@ -2,8 +2,6 @@
 <StructureDefinition xmlns="http://hl7.org/fhir" 
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../input-cache/schemas-r5/fhir-single.xsd">
   <id value="Practitioner"/>
-  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-summary">
-  </extension>
   <url value="http://hl7.org/fhir/uv/pocd/StructureDefinition/Practitioner"/>
   <name value="Practitioner"/>
   <title value="Practitioner profile"/>
@@ -17,11 +15,6 @@
   <type value="Practitioner"/>
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Practitioner"/>
   <derivation value="constraint"/>
-  <mapping>
-    <identity value="dim"/>
-    <uri value="urn:iso:std:iso:11073:10201"/>
-    <name value="IEEE 11073-10201 DIM"/>
-  </mapping>
   <mapping>
     <identity value="sdc"/>
     <uri value="urn:iso:std:iso:11073:10207"/>
@@ -51,18 +44,18 @@
     <element id="Practitioner.name">
       <path value="Practitioner.name"/>
     </element>
-    <element id="Practitioner.name.given">
-    	<path value="Practitioner.name.given"/>
-      <mapping>
-        <identity value="sdc"/>
-        <map value="OperatorContextState/OperatorDetails/Givenname, OperatorContextState/OperatorDetails/Middlename"/>
-      </mapping>
-    </element>
      <element id="Practitioner.name.family">
     	<path value="Practitioner.name.family"/>
       <mapping>
         <identity value="sdc"/>
         <map value="OperatorContextState/OperatorDetails/Familyname"/>
+      </mapping>
+    </element>
+    <element id="Practitioner.name.given">
+    	<path value="Practitioner.name.given"/>
+      <mapping>
+        <identity value="sdc"/>
+        <map value="OperatorContextState/OperatorDetails/Givenname, OperatorContextState/OperatorDetails/Middlename"/>
       </mapping>
     </element>
     <element id="Practitioner.name.prefix">

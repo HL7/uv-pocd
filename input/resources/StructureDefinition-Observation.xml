@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../input-cache/schemas-r5/fhir-single.xsd">
+  <id value="Observation"/>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-summary">
+    <valueMarkdown value="The profile defines the following rules:&#10;
+* This is an additional Observation Resource and not the same that has been used for the DeviceMetric."/>
+  </extension>
+  <url value="http://hl7.org/fhir/uv/pocd/StructureDefinition/Observation"/>
+  <name value="Observation"/>
+  <title value="Observation profile"/>
+  <status value="draft"/>
+  <date value="2020-08-03"/>
+  <publisher value="HL7 International - Health Care Devices Work Group"/>
+  <description value="StructureDefinition for measurements and simple assertions made about a patient, device or other subject."/>
+  <fhirVersion value="4.0.1"/>
+  <kind value="resource"/>
+  <abstract value="false"/>
+  <type value="Observation"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Observation"/>
+  <derivation value="constraint"/>
+  <mapping>
+    <identity value="dim"/>
+    <uri value="urn:iso:std:iso:11073:10201"/>
+    <name value="IEEE 11073-10201 DIM"/>
+  </mapping>
+  <mapping>
+    <identity value="sdc"/>
+    <uri value="urn:iso:std:iso:11073:10207"/>
+    <name value="IEEE 11073-10207 SDC"/>
+  </mapping>
+  <differential>
+    <element id="Observation">
+      <path value="Observation"/>
+    </element>
+    <element id="Observation.category">
+      <path value="Observation.category"/>
+    </element>
+    <element id="Observation.category.coding">
+      <path value="Observation.category.coding"/>
+    </element>
+    <element id="Observation.category.coding.system">
+    	<path value="Observation.category.coding.system"/>
+      <mapping>
+        <identity value="sdc"/>
+        <map value="AbstractMultiState/Category/CodingSystem"/>
+      </mapping>
+    </element>
+    <element id="Observation.category.coding.version">
+    	<path value="Observation.category.coding.version"/>
+      <mapping>
+        <identity value="sdc"/>
+        <map value="AbstractMultiState/Category/CodingSystemVersion"/>
+      </mapping>
+    </element>
+    <element id="Observation.category.coding.code">
+    	<path value="Observation.category.coding.code"/>
+      <mapping>
+        <identity value="sdc"/>
+        <map value="AbstractMultiState/Category/Code"/>
+      </mapping>
+    </element>    
+    <element id="Observation.code">
+      <path value="Observation.code"/>
+    </element>
+    <element id="Observation.code.coding">
+      <path value="Observation.code.coding"/>
+    </element>
+    <element id="Observation.code.coding.system">
+      <path value="Observation.code.coding.system"/>
+      <mapping>
+        <identity value="sdc"/>
+        <map value="ClinicalInfo/Code/CodingSystem"/>
+      </mapping>
+    </element>
+    <element id="Observation.code.coding.version">
+    	<path value="Observation.code.coding.version"/>
+      <mapping>
+        <identity value="sdc"/>
+        <map value="ClinicalInfo/Code/CodingSystemVersion"/>
+      </mapping>
+    </element>
+    <element id="Observation.code.coding.code">
+      <path value="Observation.code.coding.code"/>
+      <mapping>
+        <identity value="sdc"/>
+        <map value="ClinicalInfo/Code/Code"/>
+      </mapping>
+    </element>
+    <element id="Observation.valueQuantity">
+      <path value="Observation.valueQuantity"/>
+    </element>
+    <element id="Observation.valueQuantity.value">
+    	<path value="Observation.valueQuantity.value"/>
+      <mapping>
+        <identity value="sdc"/>
+        <map value="ClinicalInfo/RelatedMeasurement/Value/MeasuredValue"/>
+      </mapping>
+    </element>
+    <element id="Observation.valueQuantity.unit">
+    	<path value="Observation.valueQuantity.unit"/>
+      <mapping>
+        <identity value="sdc"/>
+        <map value="ClinicalInfo/RelatedMeasurement/Value/MeasurementUnit"/>
+      </mapping>
+    </element>
+    <element id="Observation.interpretation">
+    	<path value="Observation.interpretation"/>
+      <mapping>
+        <identity value="sdc"/>
+        <map value="ClinicalInfo/RelatedMeasurement/Validity note the mapping of the valueset"/>
+      </mapping>
+    </element>
+    <element id="Observation.note">
+      <path value="Observation.note"/>
+    </element>
+     <element id="Observation.note.text">
+    	<path value="Observation.note.text"/>
+      <mapping>
+        <identity value="sdc"/>
+        <map value="ClinicalInfo/Description/Ref"/>
+      </mapping>
+    </element>    
+    <element id="Observation.referenceRange">
+      <path value="Observation.referenceRange"/>
+    </element>
+    <element id="Observation.referenceRange.low">
+    	<path value="Observation.referenceRange.low"/>
+      <mapping>
+        <identity value="sdc"/>
+        <map value="ClinicalInfo/RelatedMeasurement/ReferenceRange/Range/Lower"/>
+      </mapping>
+    </element>
+    <element id="Observation.referenceRange.high">
+    	<path value="Observation.referenceRange.high"/>
+      <mapping>
+        <identity value="sdc"/>
+        <map value="ClinicalInfo/RelatedMeasurement/ReferenceRange/Range/Upper"/>
+      </mapping>
+    </element>
+    <element id="Observation.referenceRange.type">
+      <path value="Observation.referenceRange.type"/>
+    </element>
+    <element id="Observation.referenceRange.type.coding">
+      <path value="Observation.referenceRange.type.coding"/>
+    </element>
+    <element id="Observation.referenceRange.type.coding.system">
+    	<path value="Observation.referenceRange.type.coding.system"/>
+      <mapping>
+        <identity value="sdc"/>
+        <map value="ClinicalInfo/RelatedMeasurement/ReferenceRange/Meaning/CodingSystem"/>
+      </mapping>
+    </element>
+    <element id="Observation.referenceRange.type.coding.version">
+    	<path value="Observation.referenceRange.type.coding.version"/>
+      <mapping>
+        <identity value="sdc"/>
+        <map value="ClinicalInfo/RelatedMeasurement/ReferenceRange/Meaning/CodingSystemVersion"/>
+      </mapping>
+    </element>
+    <element id="Observation.referenceRange.type.coding.code">
+    	<path value="Observation.referenceRange.type.coding.code"/>
+      <mapping>
+        <identity value="sdc"/>
+        <map value="ClinicalInfo/RelatedMeasurement/ReferenceRange/Meaning/Code"/>
+      </mapping>
+    </element>
+  </differential>
+</StructureDefinition>

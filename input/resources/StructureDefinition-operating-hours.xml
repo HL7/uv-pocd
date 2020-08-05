@@ -25,7 +25,7 @@
       <path value="Extension.value[x]" />
       <short value="Operating hours" />
       <type>
-        <code value="positiveInt" />
+        <code value="unsignedInt" />
       </type>
     </element>
   </differential>

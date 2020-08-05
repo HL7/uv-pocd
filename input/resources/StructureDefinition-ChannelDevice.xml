@@ -74,6 +74,9 @@
         <code value="Extension" />
         <profile value="http://hl7.org/fhir/uv/pocd/StructureDefinition/operating-hours" />
       </type>
+     </element>
+      <element id="Device.extension:operatingHours.valueUnsignedInt">
+      <path value="Device.extension.valueUnsignedInt"/>
       <mapping>
         <identity value="sdc"/>
         <map value="ChannelState/OperatingHours"/>
@@ -90,6 +93,9 @@
         <code value="Extension" />
         <profile value="http://hl7.org/fhir/uv/pocd/StructureDefinition/operating-cycles" />
       </type>
+     </element>
+      <element id="Device.extension:operatingCycles.valueUnsignedInt">
+      <path value="Device.extension.valueUnsignedInt"/>
       <mapping>
         <identity value="sdc"/>
         <map value="ChannelState/OperatingCycles"/>

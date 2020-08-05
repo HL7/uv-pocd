@@ -10,6 +10,7 @@ Most object classes in ISO/IEEE 11073 SDC can be mapped to FHIR resources as out
 | Channel | [Device]({{site.data.fhir.path}}device.html) (according to the [Channel Device profile](StructureDefinition-ChannelDevice.html)) |
 | Numeric | [DeviceMetric]({{site.data.fhir.path}}devicemetric.html) (according to the [Numeric DeviceMetric profile](StructureDefinition-NumericDeviceMetric.html)) and <br/>[Observation]({{site.data.fhir.path}}observation.html) (according to the [Numeric Observation profile](StructureDefinition-NumericObservation.html) or [Compound Numeric Observation profile](StructureDefinition-CompoundNumericObservation.html)) |
 | Enumeration | [DeviceMetric]({{site.data.fhir.path}}devicemetric.html) (according to the [Enumeration DeviceMetric profile](StructureDefinition-EnumerationDeviceMetric.html)) and <br/>[Observation]({{site.data.fhir.path}}observation.html) (according to the [Enumeration Observation profile](StructureDefinition-EnumerationObservation.html)) |
+| ClinicalInfo | [Observation]({{site.data.fhir.path}}observation.html) (according to the [Observation profile](StructureDefinition-Observation.html)) |
 | TimeSampleArray <br/> RealTimeSampleArray<br/> DistributionSampleArray | *to be completed* |
 | Alert <br/> AlertStatus <br/> AlertMonitor | *to be completed* |
 | PatientDemographics | [Patient]({{site.data.fhir.path}}patient.html) (according to the [Patient profile](StructureDefinition-Patient.html)) |
@@ -20,6 +21,127 @@ Most object classes in ISO/IEEE 11073 SDC can be mapped to FHIR resources as out
 Please refer to the Mappings tab of each profile page for mapping ISO/IEEE 11073 SDC object attributes to FHIR resource elements.
 
 ### Mapping Details
+
+#### Patient
+For each of the measurements Height and Weight is an Observation Resource requiered with mandatory requirements. Observation.subject shall be present and refer to a Patient resource or MDS Device resource.
+
+Summary of the mandatory requirements for the Height:
+- One code in Observation.code which must have
+    - a fixed Observation.code.coding.system='http://loinc.org' 
+    - a fixed Observation.code.coding.code= '8302-2'
+    - 8306-3 -Body height - lying (i.e., body length - typically used for infants) MAY be included as an additional observation code - Other additional Codings are allowed in Observation.code- e.g. more specific LOINC Codes, SNOMED CT concepts, system specific codes. All codes SHALL have an system value
+- Either one Observation.valueQuantity or, if there is no value, one code in Observation.DataAbsentReason
+    - Each Observation.valueQuantity must have:
+        - One numeric value in Observation.valueQuantity.value
+        - a fixed Observation.valueQuantity.system="http://unitsofmeasure.org"
+        - a UCUM unit code in Observation.valueQuantity.code = 'cm', or '[in_i]'
+
+Summary of the mandatory requirements for the Weight:
+- One code in Observation.code which must have
+    - a fixed Observation.code.coding.system='http://loinc.org'
+    - a fixed Observation.code.coding.code= '29463-7'
+    - Other additional Codings are allowed in Observation.code- e.g. more specific LOINC Codes, SNOMED CT concepts, system specific codes. All codes SHALL have an system value
+- Either one Observation.valueQuantity or, if there is no value, one code in Observation.DataAbsentReason
+    - Each Observation.valueQuantity must have:
+        - One numeric value in Observation.valueQuantity.value
+        - a fixed Observation.valueQuantity.system="http://unitsofmeasure.org"
+        - a UCUM unit code in Observation.valueQuantity.code = 'kg', 'g', or '[lb_av]'
+
+#### Neonatal Patient
+Information about the mother should be included in the FHIR Resource RelatedPerson. RelatedPerson.patient should be used for the reference of the patient this RelatedPerson is related to. The relationship can be modeled by using RelatedPerson.relationship with the terminology binding MTH, to express that the RelatedPerson is the mother.
+
+For each of the measurements GestationalAge, BirthLength, BirthWeight and HeadCircumference is an Observation Resource requiered with mandatory requirements. Observation.subject shall be present and refer to a Patient resource or MDS Device resource.
+
+Summary of the mandatory requirements for the HeadCircumference:
+- One code in Observation.code which must have
+    - a fixed Observation.code.coding.system='http ://loinc.org'
+    - a fixed Observation.code.coding.code= '9843-4'
+    - Other additional Codings are allowed in Observation.code- e.g. more specific LOINC Codes, SNOMED CT concepts, system specific codes. All codes SHALL have an system value
+- Either one Observation.valueQuantity or, if there is no value, one code in Observation.DataAbsentReason
+    - Each Observation.valueQuantity must have:
+        - One numeric value in Observation.valueQuantity.value
+        - a fixed Observation.valueQuantity.system="http://unitsofmeasure.org"
+        - a UCUM unit code in Observation.valueQuantity.code = 'cm', or '[in_i]'
+
+
+Summary of the mandatory requirements for the BirthWeight:
+- One code in Observation.code which must have
+    - a fixed Observation.code.coding.system='http ://loinc.org'
+    - a fixed Observation.code.coding.code= '8339-4'
+    - Other additional Codings are allowed in Observation.code- e.g. more specific LOINC Codes, SNOMED CT concepts, system specific codes. All codes SHALL have an system value
+- Either one Observation.valueQuantity or, if there is no value, one code in Observation.DataAbsentReason
+    - Each Observation.valueQuantity must have:
+        - One numeric value in Observation.valueQuantity.value
+        - a fixed Observation.valueQuantity.system="http://unitsofmeasure.org"
+        - a UCUM unit code in Observation.valueQuantity.code = 'kg', 'g', or '[lb_av]'
+
+Summary of the mandatory requirements for the BirthLength:
+- One code in Observation.code which must have
+    - a fixed Observation.code.coding.system='http ://loinc.org'
+    - a fixed Observation.code.coding.code= '89269-5'
+    - Other additional Codings are allowed in Observation.code- e.g. more specific LOINC Codes, SNOMED CT concepts, system specific codes. All codes SHALL have an system value
+- Either one Observation.valueQuantity or, if there is no value, one code in Observation.DataAbsentReason
+    - Each Observation.valueQuantity must have:
+        - One numeric value in Observation.valueQuantity.value
+        - a fixed Observation.valueQuantity.system="http://unitsofmeasure.org"
+        - a UCUM unit code in Observation.valueQuantity.code = 'cm', or '[in_i]'
+
+
+Summary of the mandatory requirements for the GestationalAge:
+- One code in Observation.code which must have
+    - a fixed Observation.code.coding.system='http ://loinc.org'
+    - a fixed Observation.code.coding.code= '72147-2'
+    - Other additional Codings are allowed in Observation.code- e.g. more specific LOINC Codes, SNOMED CT concepts, system specific codes. All codes SHALL have an system value
+- Either one Observation.valueQuantity or, if there is no value, one code in Observation.DataAbsentReason
+    - Each Observation.valueQuantity must have:
+        - One numeric value in Observation.valueQuantity.value
+        - a fixed Observation.valueQuantity.system="http://unitsofmeasure.org"
+        - a UCUM unit code in Observation.valueQuantity.code = 'd'
+
+#### Location
+For every physicalType of a Location an additional Location Resource needs to be created. If this Location is physically a part of another Location they can only be connected via a Location.partOf Reference to the other Location. It is working in the same way with the managing Organization. Both need to reference the the lowest Location or Organization in the hierarchy because the references point upwards.
+
+| IEEE 11073 SDC | HL7 FHIR Resources | Comment |
+| ---
+| LocationContextState/Identification/Root | Location.identifier.system ||
+| LocationContextState/Identification/Extension | Location.identifier.value ||
+| LocationContextState/LocationDetail/Bed | Location.physicalType | An additional Location Resource with the physicalType bd and references (Location.partOf and/or Location.managingOrganization) to another Location/Organization if the Bed is physically a part of a Location/Organization |
+| LocationContextState/LocationDetail/Room | Location.physicalType | An additional Location Resource with the physicalType ro and references (Location.partOf and/or Location.managingOrganization) to another Location/Organization if the Bed is physically a part of a Location/Organization |
+| LocationContextState/LocationDetail/PoC | Organization.type | An additional Organization Resource with the Organization type dept and a reference (Organization.partOf) to another Organization if the PoC is part of an Organization |
+| LocationContextState/LocationDetail/Floor | Location.physicalType | An additional Location Resource with the physicalType lvl and references (Location.partOf and/or Location.managingOrganization) to another Location/Organization if the Floor is physically a part of a Location/Organization |
+| LocationContextState/LocationDetail/Building | Location.physicalType | An additional Location Resource with the physicalType bu and references (Location.partOf and/or Location.managingOrganization) to another Location/Organization if the Bed is physically a part of a Location/Organization |
+| LocationContextState/LocationDetail/Facility | Organization.type | An Organization Resource with the Organization type prov and a reference (Organization.partOf) to another Organization if the Facility is part of an Organization |
+{: .grid}
+
+#### ImagingStudy
+The WorklflowConextState should only be used if the ContextAssociation is Assoc (=Associated).
+The ImagingProcedure/RequestedProcedureId can be mapped to the id of the basedOn reference, which exists when the ImagingProcedure is based on a ServiceRequest. 
+
+| IEEE 11073 SDC | HL7 FHIR Resources |
+| ---
+| WorkflowContextState/WorkflowDetail/RequestedOrderDetail/ImagingProcedure/AccessionIdentifier/Root WorkflowContextState/WorkflowDetail/RequestedOrderDetail/ImagingProcedure/StudyInstanceUid/Root | ImagingStudy.identifier.system ||
+| WorkflowContextState/WorkflowDetail/RequestedOrderDetail/ImagingProcedure/AccessionIdentifier/Extension WorkflowContextState/WorkflowDetail/RequestedOrderDetail/ImagingProcedure/StudyInstanceUid/Extension | ImagingStudy.identifier.value |
+| WorkflowContextState/WorkflowDetail/RequestedOrderDetail/ImagingProcedure/Modality/Code | ImagingStudy.modality.code |
+| WorkflowContextState/WorkflowDetail/RequestedOrderDetail/ImagingProcedure/Modality/CodingSystem | ImagingStudy.modality.system |
+| WorkflowContextState/WorkflowDetail/RequestedOrderDetail/ImagingProcedure/Modality/CodingSystemVersion | ImagingStudy.modality.version |
+| WorkflowContextState/WorkflowDetail/RequestedOrderDetail/ImagingProcedure/ProtocolCode/Code | ImagingStudy.procedureCode.coding.code |
+| WorkflowContextState/WorkflowDetail/RequestedOrderDetail/ImagingProcedure/ProtocolCode/CodingSystem | ImagingStudy.procedureCode.coding.system |
+| WorkflowContextState/WorkflowDetail/RequestedOrderDetail/ImagingProcedure/ProtocolCode/CodingSystemVersion | ImagingStudy.procedureCode.coding.version |
+{: .grid}
+
+#### ServiceRequest
+The WorklflowConextState should only be used if the ContextAssociation is Assoc (=Associated).
+The resource ServiceRequest may be used to share relevant information required to support a referral or a transfer of care request from one practitioner or organization to another. 
+	
+| IEEE 11073 SDC Status | HL7 FHIR | Comment |
+| ---
+| WorkflowContextState/WorkflowDetail/AssignedLocation | ServiceRequest.locationReference ||
+| WorkflowContextState/WorkflowDetail/RelevantClinicalInfo | ServiceRequest.supportingInfo ||
+| WorkflowContextState/WorkflowDetail/RequestedOrderDetail/Performer | ServiceRequest.performer ||
+| WorkflowContextState/WorkflowDetail/RequestedOrderDetail/ReferringPhysician WorkflowContextState/WorkflowDetail/RequestedOrderDetail/RequestingPhysician | ServiceRequest.requester | The resource ServiceRequest may be used to share relevant information required to support a referral or a transfer of care request from one practitioner or organization to another. Therefore, both the RequestingPhysician and the ReferringPhysician are mapped to the ServiceRequest.requester. If both are existing, there should be a reference (ServiceRequest.basedOn) from the RequestingPhysician to the ReferringPhysician. |
+| WorkflowContextState/WorkflowDetail/PerformedOrderDetail/ResultingClinicalInfo | DiagnosticReport.result ||
+{: .grid}
+
 #### Valuesets
 
 ##### Valuesets for MdsState/ActivationState:

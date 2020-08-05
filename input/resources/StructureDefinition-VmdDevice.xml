@@ -104,16 +104,16 @@ any entries, then the DEVICE COMPONENT is not approved for any region." />
         <code value="Extension" />
         <profile value="http://hl7.org/fhir/uv/pocd/StructureDefinition/operating-hours" />
       </type>
-      <mapping>
-        <identity value="sdc"/>
-        <map value="VmdState/OperatingHours"/>
-      </mapping>
     </element>
-    <element id="Device.extension:operatingHours.valuePositiveInt">
-      <path value="Device.extension.valuePositiveInt"/>
+    <element id="Device.extension:operatingHours.valueUnsignedInt">
+      <path value="Device.extension.valueUnsignedInt"/>
       <mapping>
         <identity value="dim"/>
         <map value="VMD::Operating-Hours"/>
+      </mapping>
+      <mapping>
+        <identity value="sdc"/>
+        <map value="VmdState/OperatingHours"/>
       </mapping>
     </element>
     <element id="Device.extension:operatingCycles">
@@ -127,13 +127,13 @@ any entries, then the DEVICE COMPONENT is not approved for any region." />
         <code value="Extension" />
         <profile value="http://hl7.org/fhir/uv/pocd/StructureDefinition/operating-cycles" />
       </type>
+    </element>
+    <element id="Device.extension:operatingCycles.valueUnsignedInt">
+      <path value="Device.extension.valueUnsignedInt"/>
       <mapping>
         <identity value="sdc"/>
         <map value="VmdState/OperatingCycles"/>
       </mapping>
-    </element>
-    <element id="Device.extension:operatingCycles.valueInteger">
-      <path value="Device.extension.valueInteger"/>
       <mapping>
         <identity value="dim"/>
         <map value="VMD::Operation-Cycles"/>
