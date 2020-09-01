@@ -29,5 +29,6 @@
             "fhirversion": "3.0.0",
             "sequence": "STU 1"
         }
-    ]
+    ],
+    "category": "Diagnostics"
 }

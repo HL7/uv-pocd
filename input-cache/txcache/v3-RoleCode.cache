@@ -1,0 +1,26 @@
+-------------------------------------------------------------------------------------
+{"code" : {
+  "coding" : [{
+    "system" : "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+    "code" : "ICU",
+    "display" : "Intensive care unit"
+  }]
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "descendent-of",
+        "value" : "_ServiceDeliveryLocationRoleType"
+      }]
+    }]
+  }
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"CHECK_MEMERSHIP_ONLY"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The filter \"concept descendent-of _ServiceDeliveryLocationRoleType\" was not understood in the context of http://terminology.hl7.org/CodeSystem/v3-RoleCode (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
