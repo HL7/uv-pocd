@@ -7,7 +7,7 @@
   <title value="Point-of-Care Device Implementation Guide"/>
   <status value="draft"/>
   <experimental value="false"/>
-  <date value="2020-06-03"/>
+  <date value="2020-09-01"/>
   <publisher value="HL7 International - Health Care Devices Work Group"/>
   <contact>
     <telecom>
@@ -68,6 +68,14 @@
     </resource>
     <resource>
       <reference>
+        <reference value="StructureDefinition/SampleArrayDeviceMetric"/>
+      </reference>
+      <name value="Sample Array DeviceMetric profile"/>
+      <description value="StructureDefinition for DeviceMetric resources that represent real-time waveforms or wave snippets characteristics and capabilities."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="StructureDefinition/NumericObservation"/>
       </reference>
       <name value="Numeric Observation profile"/>
@@ -88,6 +96,14 @@
       </reference>
       <name value="Enumeration Observation profile"/>
       <description value="StructureDefinition for Observation resources that represent coded or text status, annotations, or settings."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/SampleArrayObservation"/>
+      </reference>
+      <name value="Sample Array Observation profile"/>
+      <description value="StructureDefinition for Observation resources that represent real-time waveforms or wave snippets."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>

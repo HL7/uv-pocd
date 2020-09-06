@@ -111,6 +111,14 @@
     </tr>
     <tr>
       <td>
+        <a href="StructureDefinition-SampleArrayDeviceMetric.html">Sample Array DeviceMetric profile</a>
+      </td>
+      <td>
+        <p>StructureDefinition for DeviceMetric resources that represent real-time waveforms or wave snippets characteristics and capabilities.</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
         <a href="StructureDefinition-relation.html">Relation extension</a>
       </td>
       <td>
@@ -145,6 +153,14 @@
       </td>
       <td>
         <p>StructureDefinition for Observation resources that represent coded or text status, annotations, or settings.</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="StructureDefinition-SampleArrayObservation.html">Sample Array Observation profile</a>
+      </td>
+      <td>
+        <p>StructureDefinition for Observation resources that represent real-time waveforms or wave snippets.</p>
       </td>
     </tr>
   </table>

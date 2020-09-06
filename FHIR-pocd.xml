@@ -49,6 +49,8 @@
 <artifact id="Observation/RhythmStatusEnumerationObservation" key="Observation-RhythmStatusEnumerationObservation" name="Rhythm Status Enumeration observation example"/>
 <artifact id="CodeSystem/safety" key="CodeSystem-safety" name="Safety classification codes"/>
 <artifact id="ValueSet/safety" key="ValueSet-safety" name="Safety classification codes"/>
+<artifact id="StructureDefinition/SampleArrayDeviceMetric" key="StructureDefinition-SampleArrayDeviceMetric" name="Sample Array DeviceMetric profile"/>
+<artifact id="StructureDefinition/SampleArrayObservation" key="StructureDefinition-SampleArrayObservation" name="Sample Array Observation profile"/>
 <artifact id="Location/SomeLocation" key="Location-SomeLocation" name="Some Location example"/>
 <artifact id="Patient/SomePatient" key="Patient-SomePatient" name="Some Patient example"/>
 <artifact id="StructureDefinition/VmdDevice" key="StructureDefinition-VmdDevice" name="VMD Device profile"/>
