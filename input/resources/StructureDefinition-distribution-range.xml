@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+<id value="distribution-range"/>
+  <url value="http://hl7.org/fhir/uv/pocd/StructureDefinition/distribution-range" />
+  <name value="DistributionRange" />
+   <title value="Distribution range extension"/>
+  <status value="draft" />
+    <date value="2020-09-28"/>
+  <description value="Minimum and maximum domain values." />
+  <fhirVersion value="4.0.1" />
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <context>
+    <type value="element" />
+    <expression value="SampledData" />
+  </context>
+  <type value="Extension" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Extension.extension">
+      <path value="Extension.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Extension.extension:lower">
+      <path value="Extension.extension" />
+      <sliceName value="lower" />
+    </element>
+    <element id="Extension.extension:lower.value[x]">
+      <path value="Extension.extension.value[x]" />
+      <type>
+        <code value="decimal" />
+      </type>
+    </element>
+    <element id="Extension.extension:upper">
+      <path value="Extension.extension" />
+      <sliceName value="upper" />
+    </element>
+    <element id="Extension.extension:upper.value[x]">
+      <path value="Extension.extension.value[x]" />
+      <type>
+        <code value="decimal" />
+      </type>
+    </element>
+    <element id="Extension.extension:stepWidth">
+      <path value="Extension.extension" />
+      <sliceName value="stepWidth" />
+    </element>
+    <element id="Extension.extension:stepWidth.value[x]">
+      <path value="Extension.extension.value[x]" />
+      <type>
+        <code value="decimal" />
+      </type>
+    </element>
+    <element id="Extension.extension:relativeAccuracy">
+      <path value="Extension.extension" />
+      <sliceName value="relativeAccuracy" />
+    </element>
+    <element id="Extension.extension:relativeAccuracy.value[x]">
+      <path value="Extension.extension.value[x]" />
+      <type>
+        <code value="decimal" />
+      </type>
+    </element>
+    <element id="Extension.extension:absoluteAccuracy">
+      <path value="Extension.extension" />
+      <sliceName value="absoluteAccuracy" />
+    </element>
+    <element id="Extension.extension:absoluteAccuracy.value[x]">
+      <path value="Extension.extension.value[x]" />
+      <type>
+        <code value="decimal" />
+      </type>
+    </element>
+    <element id="Extension.value[x]">
+      <path value="Extension.value[x]" />
+      <max value="0" />
+    </element>
+  </differential>
+</StructureDefinition>

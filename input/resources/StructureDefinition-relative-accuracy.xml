@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-    <id value="operating-cycles"/>
-  <url value="http://hl7.org/fhir/uv/pocd/StructureDefinition/operating-cycles" />
-  <name value="OperatingCycles" />
-  <title value="Operating cycles extension"/>
+<id value="relative-accuracy"/>
+  <url value="http://hl7.org/fhir/uv/pocd/StructureDefinition/relative-accuracy" />
+  <name value="RelativeAccuracy" />
+   <title value="Relative accuracy extension"/>
   <status value="draft" />
-  <date value="2020-05-11"/>
-  <description value="OPTIONAL amount of operarting cycles, e.g., the number of measurements taken within the component." />
+   <date value="2020-09-28"/>
+  <description value="Maximum relative error in relation to the correct value within the given range." />
   <fhirVersion value="4.0.1" />
   <kind value="complex-type" />
   <abstract value="false" />
   <context>
     <type value="element" />
-    <expression value="Device" />
+    <expression value="SampledData" />
   </context>
   <type value="Extension" />
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
   <derivation value="constraint" />
   <differential>
     <element id="Extension">
-          <path value="Extension"/>
-     </element>
+      <path value="Extension" />
+      <definition value="Maximum relative error in relation to the correct value within the given range." />
+    </element>
     <element id="Extension.value[x]">
       <path value="Extension.value[x]" />
-      <short value="Operating cycles" />
       <type>
-        <code value="unsignedInt" />
+        <code value="decimal" />
       </type>
     </element>
   </differential>
