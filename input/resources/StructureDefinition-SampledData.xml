@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../input-cache/schemas-r5/fhir-single.xsd">
     <id value="SampledData"/>
-    <url value="<url value="http://hl7.org/fhir/uv/pocd/StructureDefinition/SampledData"/>" />
+    <url value="http://hl7.org/fhir/uv/pocd/StructureDefinition/SampledData"/>
     <name value="SampledData" />
     <title value="SampledData profile"/>
     <status value="draft" />
@@ -78,7 +78,7 @@
             <max value="1" />
             <type>
                 <code value="Extension" />
-                <profile value="http://hl7.org/fhir/uv/pocd/StructureDefinition/daomain-unit" />
+                <profile value="http://hl7.org/fhir/uv/pocd/StructureDefinition/domain-unit" />
             </type>
         </element>
         <element id="SampledData.extension:distributionRange">
