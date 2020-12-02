@@ -214,6 +214,10 @@
         <identity value="dim"/>
         <map value="Numeric::Nu-Observed-Value::state (refer to MeasurementStatus mapping details)"/>
       </mapping>
+       <mapping>
+        <identity value="sdc"/>
+        <map value="NumericMetricValue/MetricQuality/Validity (refer to Measurement Validity mapping details)"/>
+      </mapping>
     </element>
     <element id="Observation.bodySite">
       <path value="Observation.bodySite"/>    

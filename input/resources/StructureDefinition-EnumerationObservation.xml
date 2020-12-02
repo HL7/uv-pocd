@@ -109,7 +109,7 @@
       <path value="Observation.effectiveInstant"/>
       <mapping>
         <identity value="sdc"/>
-        <map value="EnumStringMetricState/MetricValue/DeterminationTime"/>
+        <map value="StringMetricState/MetricValue/DeterminationTime, EnumStringMetricState/MetricValue/DeterminationTime"/>
       </mapping>
     </element>
     <element id="Observation.value[x]">
@@ -136,7 +136,7 @@
       </mapping>
       <mapping>
         <identity value="sdc"/>
-        <map value="EnumStringMetricState/MetricValue/Value"/>
+        <map value="StringMetricState/MetricValue/Value, EnumStringMetricState/MetricValue/Value"/>
       </mapping>
     </element>
     <element id="Observation.dataAbsentReason">
@@ -157,6 +157,10 @@
         <identity value="dim"/>
         <map value="Enumeration::Enum-Observed-Value::state (refer to MeasurementStatus mapping details)"/>
       </mapping>
+      <mapping>
+        <identity value="sdc"/>
+        <map value="StringMetricValue/MetricQuality/Validity (refer to Measurement Validity mapping details)"/>
+      </mapping>
     </element>
     <element id="Observation.bodySite">
       <path value="Observation.bodySite"/>    
@@ -168,21 +172,21 @@
       <path value="Observation.bodySite.coding.system"/>
       <mapping>
         <identity value="sdc"/>
-        <map value="EnumStringMetricState/BodySite/CodingSystem"/>
+        <map value="StringMetricState/BodySite/CodingSystem, EnumStringMetricState/BodySite/CodingSystem"/>
       </mapping>
     </element>
     <element id="Observation.bodySite.coding.version">
       <path value="Observation.bodySite.coding.version"/>
       <mapping>
         <identity value="sdc"/>
-        <map value="EnumStringMetricState/BodySite/CodingSystemVersion"/>
+        <map value="StringMetricState/BodySite/CodingSystemVersion, EnumStringMetricState/BodySite/CodingSystemVersion"/>
       </mapping>
     </element>
     <element id="Observation.bodySite.coding.code">
       <path value="Observation.bodySite.coding.code"/>
       <mapping>
         <identity value="sdc"/>
-        <map value="EnumStringMetricState/BodySite/Code"/> 
+        <map value="StringMetricState/BodySite/Code, EnumStringMetricState/BodySite/Code"/> 
       </mapping>
     </element>
     <element id="Observation.device">

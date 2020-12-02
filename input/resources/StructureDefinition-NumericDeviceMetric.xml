@@ -65,6 +65,10 @@ Related containment tree entries are defined in Entries, whereby the flavor of a
         <strength value="extensible"/>
         <valueSet value="http://hl7.org/fhir/uv/pocd/ValueSet/11073MDC-metric"/>
       </binding>
+       <mapping>
+        <identity value="sdc"/>
+        <map value="According to ISO/IEEE 11073-20701 this element can't be empty"/>
+      </mapping>
     </element>
     <element id="DeviceMetric.type.coding">
       <path value="DeviceMetric.type.coding"/>
