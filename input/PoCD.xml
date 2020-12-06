@@ -146,46 +146,6 @@
       <description value="StructureDefinition that adds an instance number to Device."/>
       <exampleBoolean value="false"/>
     </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/absolute-accuracy"/>
-      </reference>
-      <name value="Absolute accuracy extension"/>
-      <description value="StructureDefinition that adds an absolute accuracy to SampledData."/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/distribution-range"/>
-      </reference>
-      <name value="Distribution range extension"/>
-      <description value="StructureDefinition that adds a distribution range to SampledData."/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/domain-unit"/>
-      </reference>
-      <name value="Domain unit extension"/>
-      <description value="StructureDefinition that adds a domain unit to SampledData."/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/relative-accuracy"/>
-      </reference>
-      <name value="Relative accuracy extension"/>
-      <description value="StructureDefinition that adds an relative accuracy to SampledData."/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/resolution"/>
-      </reference>
-      <name value="Resolution extension"/>
-      <description value="StructureDefinition that adds a resolution to SampledData."/>
-      <exampleBoolean value="false"/>
-    </resource>
      <resource>
       <reference>
         <reference value="StructureDefinition/approved-jurisdictions"/>
@@ -232,6 +192,62 @@
       </reference>
       <name value="Relation extension"/>
       <description value="StructureDefinition that adds relations to a DeviceMetric."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/sweep-speed"/>
+      </reference>
+      <name value="Sweep Speed extension"/>
+      <description value="StructureDefinition that adds default sweep speed to a DeviceMetric."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/visual-grid"/>
+      </reference>
+      <name value="Visual Grid extension"/>
+      <description value="StructureDefinition that adds grid line definitions to a DeviceMetric."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/resolution"/>
+      </reference>
+      <name value="Resolution extension"/>
+      <description value="StructureDefinition that adds a resolution to SampledData."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/relative-accuracy"/>
+      </reference>
+      <name value="Relative accuracy extension"/>
+      <description value="StructureDefinition that adds a relative accuracy to SampledData."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/absolute-accuracy"/>
+      </reference>
+      <name value="Absolute accuracy extension"/>
+      <description value="StructureDefinition that adds an absolute accuracy to SampledData."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/domain-unit"/>
+      </reference>
+      <name value="Domain unit extension"/>
+      <description value="StructureDefinition that adds a domain unit to SampledData."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/distribution-range"/>
+      </reference>
+      <name value="Distribution range extension"/>
+      <description value="StructureDefinition that adds a distribution range to SampledData."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>

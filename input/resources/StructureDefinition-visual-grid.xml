@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../input-cache/schemas-r5/fhir-single.xsd">
+  <id value="visual-grid"/>
+  <url value="http://hl7.org/fhir/uv/pocd/StructureDefinition/visual-grid"/>
+  <name value="VisualGrid"/>
+  <title value="Visual Grid extension"/>
+  <status value="draft"/>
+  <date value="2020-12-06"/>
+  <publisher value="HL7 International - Health Care Devices Work Group"/>
+  <description value="StructureDefinition that adds grid line definitions to a DeviceMetric."/>
+  <fhirVersion value="4.0.1"/>
+  <kind value="complex-type"/>
+  <abstract value="false"/>
+  <context>
+    <type value="element"/>
+    <expression value="DeviceMetric"/>
+  </context>
+  <type value="Extension"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension"/>
+  <derivation value="constraint"/>
+  <differential>
+    <element id="Extension">
+      <path value="Extension"/>
+    </element>
+    <element id="Extension.extension">
+      <path value="Extension.extension"/>
+      <slicing>
+        <discriminator>
+          <type value="value"/>
+          <path value="url"/>
+        </discriminator>
+        <rules value="open"/>
+      </slicing>
+    </element>
+    <element id="Extension.extension:position">
+      <path value="Extension.extension"/>
+      <sliceName value="position"/>
+      <short value="Grid line position"/>
+      <definition value="Grid line position for waveform presentation"/>
+    </element>
+    <element id="Extension.extension:position.url">
+      <path value="Extension.extension.url"/>
+      <fixedUri value="position"/>
+    </element>
+    <element id="Extension.extension:position.value[x]:valueQuantity">
+      <path value="Extension.extension.valueQuantity"/>
+      <min value="1"/>
+      <type>
+        <code value="Quantity"/>
+      </type>
+    </element>
+    <element id="Extension.extension:level">
+      <path value="Extension.extension"/>
+      <sliceName value="level"/>
+      <short value="Grid line level"/>
+      <definition value="Grid line level (0 is most important)"/>
+    </element>
+    <element id="Extension.extension:level.url">
+      <path value="Extension.extension.url"/>
+      <fixedUri value="level"/>
+    </element>
+    <element id="Extension.extension:level.value[x]:valueUnsignedInt">
+      <path value="Extension.extension.valueUnsignedInt"/>
+      <type>
+        <code value="unsignedInt"/>
+      </type>
+    </element>
+    <element id="Extension.url">
+      <path value="Extension.url"/>
+      <fixedUri value="http://hl7.org/fhir/uv/pocd/StructureDefinition/visual-grid"/>
+    </element>
+    <element id="Extension.value[x]">
+      <path value="Extension.value[x]" />
+      <max value="0" />
+    </element>
+  </differential>
+</StructureDefinition>

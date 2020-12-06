@@ -59,6 +59,37 @@ Related containment tree entries are defined in Entries, whereby the flavor of a
         <profile value="http://hl7.org/fhir/uv/pocd/StructureDefinition/relation" />
       </type>
     </element>
+    <element id="DeviceMetric.extension:sweep-speed">
+      <path value="DeviceMetric.extension"/>
+      <sliceName value="sweep-speed"/>
+      <short value="Default sweep speed"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://hl7.org/fhir/uv/pocd/StructureDefinition/sweep-speed"/>
+      </type>
+    </element>
+    <element id="DeviceMetric.extension:sweep-speed.valueQuantity">
+      <path value="DeviceMetric.extension.valueQuantity"/>
+      <mapping>
+        <identity value="dim"/>
+        <map value="RealTimeSampleArray::Sweep-Speed"/>
+      </mapping>
+    </element>
+    <element id="DeviceMetric.extension:visual-grid">
+      <path value="DeviceMetric.extension"/>
+      <sliceName value="visual-grid"/>
+      <short value="Grid line definitions"/>
+      <max value="*"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://hl7.org/fhir/uv/pocd/StructureDefinition/visual-grid"/>
+      </type>
+      <mapping>
+        <identity value="dim"/>
+        <map value="SampleArray::Visual-Grid"/>
+      </mapping>
+    </element>
     <element id="DeviceMetric.type">
       <path value="DeviceMetric.type"/>
       <binding>
@@ -205,14 +236,7 @@ Related containment tree entries are defined in Entries, whereby the flavor of a
       <path value="DeviceMetric.measurementPeriod.repeat.period"/>
       <mapping>
         <identity value="dim"/>
-        <map value="Metric::Measure-Period::value"/>
-      </mapping>
-    </element>
-    <element id="DeviceMetric.measurementPeriod.repeat.periodUnit">
-      <path value="DeviceMetric.measurementPeriod.repeat.periodUnit"/>
-      <mapping>
-        <identity value="dim"/>
-        <map value="Metric::Measure-Period::unit-code"/>
+        <map value="RealTimeSampleArray::Sample-Period"/>
       </mapping>
     </element>
     <element id="DeviceMetric.calibration">

@@ -3,28 +3,6 @@
   "system" : "http://loinc.org",
   "code" : "8867-4",
   "display" : "Heart rate"
-}, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "urn:iso:std:iso:11073:10101",
-      "filter" : [{
-        "property" : "partition",
-        "op" : "=",
-        "value" : "2"
-      }]
-    }]
-  }
-}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK"}####
-v: {
-  "display" : "",
-  "severity" : "error",
-  "error" : "The filter \"partition = 2\" was not understood in the context of urn:iso:std:iso:11073:10101 (from http://tx.fhir.org/r4)"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://loinc.org",
-  "code" : "8867-4"
 }, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
 v: {
   "display" : "Heart rate",
@@ -36,28 +14,6 @@ v: {
   "system" : "http://loinc.org",
   "code" : "85354-9",
   "display" : "Blood pressure panel with all children optional"
-}, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "urn:iso:std:iso:11073:10101",
-      "filter" : [{
-        "property" : "partition",
-        "op" : "=",
-        "value" : "2"
-      }]
-    }]
-  }
-}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK"}####
-v: {
-  "display" : "",
-  "severity" : "error",
-  "error" : "The filter \"partition = 2\" was not understood in the context of urn:iso:std:iso:11073:10101 (from http://tx.fhir.org/r4)"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://loinc.org",
-  "code" : "85354-9"
 }, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
 v: {
   "display" : "Blood pressure panel with all children optional",
@@ -69,28 +25,6 @@ v: {
   "system" : "http://loinc.org",
   "code" : "8480-6",
   "display" : "Systolic blood pressure"
-}, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "urn:iso:std:iso:11073:10101",
-      "filter" : [{
-        "property" : "partition",
-        "op" : "=",
-        "value" : "2"
-      }]
-    }]
-  }
-}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK"}####
-v: {
-  "display" : "",
-  "severity" : "error",
-  "error" : "The filter \"partition = 2\" was not understood in the context of urn:iso:std:iso:11073:10101 (from http://tx.fhir.org/r4)"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://loinc.org",
-  "code" : "8480-6"
 }, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
 v: {
   "display" : "Systolic blood pressure",
@@ -102,28 +36,6 @@ v: {
   "system" : "http://loinc.org",
   "code" : "8462-4",
   "display" : "Diastolic blood pressure"
-}, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "urn:iso:std:iso:11073:10101",
-      "filter" : [{
-        "property" : "partition",
-        "op" : "=",
-        "value" : "2"
-      }]
-    }]
-  }
-}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK"}####
-v: {
-  "display" : "",
-  "severity" : "error",
-  "error" : "The filter \"partition = 2\" was not understood in the context of urn:iso:std:iso:11073:10101 (from http://tx.fhir.org/r4)"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://loinc.org",
-  "code" : "8462-4"
 }, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
 v: {
   "display" : "Diastolic blood pressure",
@@ -135,28 +47,6 @@ v: {
   "system" : "http://loinc.org",
   "code" : "8478-0",
   "display" : "Mean blood pressure"
-}, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "urn:iso:std:iso:11073:10101",
-      "filter" : [{
-        "property" : "partition",
-        "op" : "=",
-        "value" : "2"
-      }]
-    }]
-  }
-}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK"}####
-v: {
-  "display" : "",
-  "severity" : "error",
-  "error" : "The filter \"partition = 2\" was not understood in the context of urn:iso:std:iso:11073:10101 (from http://tx.fhir.org/r4)"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://loinc.org",
-  "code" : "8478-0"
 }, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
 v: {
   "display" : "Mean blood pressure",
