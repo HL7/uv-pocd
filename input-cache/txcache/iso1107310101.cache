@@ -321,7 +321,7 @@ v: {
   }
 }}####
 e: {
-  "error" : "Error from server: The filter \"partition = 4\" was not understood in the context of urn:iso:std:iso:11073:10101"
+  "error" : "Error from server: Unable to provide support for code system urn:iso:std:iso:11073:10101"
 }
 -------------------------------------------------------------------------------------
 {"hierarchical" : true, "valueSet" :{
@@ -338,7 +338,7 @@ e: {
   }
 }}####
 e: {
-  "error" : "Error from server: The filter \"partition = 2\" was not understood in the context of urn:iso:std:iso:11073:10101"
+  "error" : "Error from server: Unable to provide support for code system urn:iso:std:iso:11073:10101"
 }
 -------------------------------------------------------------------------------------
 {"hierarchical" : true, "valueSet" :{
@@ -355,6 +355,6 @@ e: {
   }
 }}####
 e: {
-  "error" : "Error from server: The filter \"partition = 1\" was not understood in the context of urn:iso:std:iso:11073:10101"
+  "error" : "Error from server: Unable to provide support for code system urn:iso:std:iso:11073:10101"
 }
 -------------------------------------------------------------------------------------

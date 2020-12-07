@@ -204,6 +204,14 @@
     </resource>
     <resource>
       <reference>
+        <reference value="CodeSystem/metric-availability"/>
+      </reference>
+      <name value="Metric Availability codes"/>
+      <description value="metric availability definitions from the ISO/IEEE 11073-10207."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="ValueSet/11073MDC-object"/>
       </reference>
       <name value="MDC Object infrastructure and Device nomenclature"/>
@@ -257,6 +265,14 @@
       <description value="Observation interpretation codes including measurement status."/>
       <exampleBoolean value="false"/>
     </resource>
+    <resource>
+      <reference>
+        <reference value="ValueSet/metric-availability"/>
+      </reference>
+      <name value="Metric Availability codes"/>
+      <description value="ValueSet for IEEE 11073-10207 MetricAvailability"/>
+      <exampleBoolean value="false"/>
+    </resource>   
     <resource>
       <reference>
         <reference value="Device/PhysioMonitorMdsDevice"/>
