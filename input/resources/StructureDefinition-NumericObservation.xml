@@ -64,15 +64,27 @@
     </element>
     <element id="Observation.code.coding.system">
       <path value="Observation.code.coding.system"/>
+      <mapping>
+        <identity value="sdc"/>
+        <map value="NumericMetricDescriptor/Type/CodingSystem"/>
+      </mapping>
     </element>
     <element id="Observation.code.coding.version">
       <path value="Observation.code.coding.version"/>
+      <mapping>
+        <identity value="sdc"/>
+        <map value="NumericMetricDescriptor/Type/CodingSystemVersion"/>
+      </mapping>
     </element>
     <element id="Observation.code.coding.code">
       <path value="Observation.code.coding.code"/>
       <mapping>
         <identity value="dim"/>
         <map value="Metric::Metric-Id or Numeric::Nu-Observed-Value::metric-id"/>
+      </mapping>
+      <mapping>
+        <identity value="sdc"/>
+        <map value="NumericMetricDescriptor/Type/Code"/>
       </mapping>
     </element>
     <element id="Observation.subject">
@@ -103,12 +115,20 @@
         <identity value="dim"/>
         <map value="Metric::Start-Time"/>
       </mapping>
+      <mapping>
+        <identity value="sdc"/>
+        <map value="NumericMetricValue/StartTime"/>
+      </mapping>
     </element>
     <element id="Observation.effective[x]:effectivePeriod.end">
       <path value="Observation.effectivePeriod.end"/>
       <mapping>
         <identity value="dim"/>
         <map value="Metric::Stop-Time"/>
+      </mapping>
+       <mapping>
+        <identity value="sdc"/>
+        <map value="The minimum of the end of NumericMetricState/ActiveDeterminationPeriod and NumericMetricState/LifeTimePeriod, or the minimum of the end of NumericMetricDescriptor/DeterminationPeriod and NumericMetricDescriptor/LifeTimePeriod"/>
       </mapping>
     </element>
     <element id="Observation.effective[x]:effectiveInstant">

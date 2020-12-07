@@ -62,11 +62,29 @@
     <element id="Observation.code.coding">
       <path value="Observation.code.coding"/>
     </element>
+    <element id="Observation.code.coding.system">
+      <path value="Observation.code.coding.system"/>
+      <mapping>
+        <identity value="sdc"/>
+        <map value="StringMetricDescriptor/Type/CodingSystem, EnumStringMetricDescriptor/Type/CodingSystem"/>
+      </mapping>
+    </element>
+    <element id="Observation.code.coding.version">
+      <path value="Observation.code.coding.version"/>
+      <mapping>
+        <identity value="sdc"/>
+        <map value="StringMetricDescriptor/Type/CodingSystemVersion, EnumStringMetricDescriptor/Type/CodingSystemVersion"/>
+      </mapping>
+    </element>
     <element id="Observation.code.coding.code">
       <path value="Observation.code.coding.code"/>
       <mapping>
         <identity value="dim"/>
         <map value="Metric::Metric-Id or Enumeration::Enum-Observed-Value::metric-id"/>
+      </mapping>
+       <mapping>
+        <identity value="sdc"/>
+        <map value="StringMetricDescriptor/Type/Code, EnumStringMetricDescriptor/Type/Code"/>
       </mapping>
     </element>
     <element id="Observation.subject">
@@ -97,6 +115,10 @@
         <identity value="dim"/>
         <map value="Metric::Start-Time"/>
       </mapping>
+      <mapping>
+        <identity value="sdc"/>
+        <map value="StringMetricValue/StartTime, EnumStringMetricValue/StartTime"/>
+      </mapping>
     </element>
     <element id="Observation.effective[x]:effectivePeriod.end">
       <path value="Observation.effectivePeriod.end"/>
@@ -104,12 +126,16 @@
         <identity value="dim"/>
         <map value="Metric::Stop-Time"/>
       </mapping>
+      <mapping>
+        <identity value="sdc"/>
+        <map value="The minimum of the end of MetricState/ActiveDeterminationPeriod and MetricState/LifeTimePeriod, or the minimum of the end of MetricDescriptor/DeterminationPeriod and MetricDescriptor/LifeTimePeriod"/>
+      </mapping>
     </element>
     <element id="Observation.effective[x]:effectiveInstant">
       <path value="Observation.effectiveInstant"/>
       <mapping>
         <identity value="sdc"/>
-        <map value="StringMetricState/MetricValue/DeterminationTime, EnumStringMetricState/MetricValue/DeterminationTime"/>
+        <map value="StringMetricValue/DeterminationTime, EnumStringMetricValue/DeterminationTime"/>
       </mapping>
     </element>
     <element id="Observation.value[x]">
