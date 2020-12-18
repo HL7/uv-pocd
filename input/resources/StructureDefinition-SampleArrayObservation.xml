@@ -54,15 +54,27 @@
     </element>
     <element id="Observation.code.coding.system">
       <path value="Observation.code.coding.system"/>
+      <mapping>
+        <identity value="sdc"/>
+        <map value="DistributionSampleArrayMetricDescriptor/Type/CodingSystem, RealTimeSampleArrayMetricDescriptor/Type/CodingSystem"/>
+      </mapping>
     </element>
     <element id="Observation.code.coding.version">
       <path value="Observation.code.coding.version"/>
+       <mapping>
+        <identity value="sdc"/>
+        <map value="DistributionSampleArrayMetricDescriptor/Type/CodingSystemVersion, RealTimeSampleArrayMetricDescriptor/Type/CodingSystemVersion"/>
+      </mapping>
     </element>
     <element id="Observation.code.coding.code">
       <path value="Observation.code.coding.code"/>
       <mapping>
         <identity value="dim"/>
         <map value="Metric::Metric-Id or SampleArray::Sa-Observed-Value::metric-id"/>
+      </mapping>
+      <mapping>
+        <identity value="sdc"/>
+        <map value="DistributionSampleArrayMetricDescriptor/Type/Code, RealTimeSampleArrayMetricDescriptor/Type/Code"/>
       </mapping>
     </element>
     <element id="Observation.subject">
@@ -86,6 +98,10 @@
         <identity value="dim"/>
         <map value="Metric::Start-Time"/>
       </mapping>
+      <mapping>
+        <identity value="sdc"/>
+        <map value="SampleArrayValue/StartTime"/>
+      </mapping>
     </element>
     <element id="Observation.effective[x]:effectivePeriod.end">
       <path value="Observation.effectivePeriod.end"/>
@@ -93,12 +109,16 @@
         <identity value="dim"/>
         <map value="Metric::Stop-Time"/>
       </mapping>
+       <mapping>
+        <identity value="sdc"/>
+        <map value="The minimum of the end of SampleArrayMetricState/ActiveDeterminationPeriod and SampleArrayMetricState/LifeTimePeriod, or the minimum of the end of SampleArrayMetricDescriptor/DeterminationPeriod and SampleArrayMetricDescriptor/LifeTimePeriod"/>
+      </mapping>
     </element>
     <element id="Observation.effective[x]:effectiveInstant">
       <path value="Observation.effectiveInstant"/>
       <mapping>
         <identity value="sdc"/>
-        <map value="NumericMetricValue/DeterminationTime"/>
+        <map value="SampleArrayValue/DeterminationTime"/>
       </mapping>
     </element>
     <element id="Observation.value[x]">
@@ -148,6 +168,10 @@
         <identity value="dim"/>
         <map value="SampleArray::Sa-Observed-Value::state (refer to MeasurementStatus mapping details)"/>
       </mapping>
+      <mapping>
+        <identity value="sdc"/>
+        <map value="SampleArrayValue/MetricQuality/Validity (refer to Measurement Validity mapping details)"/>
+      </mapping>
     </element>
     <element id="Observation.bodySite">
       <path value="Observation.bodySite"/>    
@@ -159,21 +183,21 @@
       <path value="Observation.bodySite.coding.system"/>
       <mapping>
         <identity value="sdc"/>
-        <map value="NumericMetricState/BodySite/CodingSystem"/>
+        <map value="DistributionSampleArrayMetricState/BodySite/CodingSystem, RealTimeSampleArrayMetricState/BodySite/CodingSystem"/>
       </mapping>
     </element>
     <element id="Observation.bodySite.coding.version">
       <path value="Observation.bodySite.coding.version"/>
       <mapping>
         <identity value="sdc"/>
-        <map value="NumericMetricState/BodySite/CodingSystemVersion"/>
+        <map value="DistributionSampleArrayMetricState/BodySite/CodingSystemVersion, RealTimeSampleArrayMetricState/BodySite/CodingSystemVersion"/>
       </mapping>
     </element>
     <element id="Observation.bodySite.coding.code">
       <path value="Observation.bodySite.coding.code"/>
       <mapping>
         <identity value="sdc"/>
-        <map value="NumericMetricState/BodySite/Code"/> 
+        <map value="DistributionSampleArrayMetricState/BodySite/Code, RealTimeSampleArrayMetricState/BodySite/Code"/> 
       </mapping>
     </element>
     <element id="Observation.device">
@@ -195,7 +219,7 @@
       </mapping>
       <mapping>
         <identity value="sdc"/>
-        <map value="NumericMetricState/PhysiologicalRange/Lower"/>
+        <map value="DistributionSampleArrayMetricState/PhysiologicalRange/Lower, RealTimeSampleArrayMetricState/PhysiologicalRange/Lower"/>
       </mapping>
     </element>
     <element id="Observation.referenceRange.high">
@@ -206,7 +230,7 @@
       </mapping>
       <mapping>
         <identity value="sdc"/>
-        <map value="NumericMetricState/PhysiologicalRange/Upper"/>
+        <map value="DistributionSampleArrayMetricState/PhysiologicalRange/Upper,RealTimeSampleArrayMetricState/PhysiologicalRange/Upper"/>
       </mapping>
     </element>
     <element id="Observation.component">

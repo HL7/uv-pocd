@@ -59,6 +59,22 @@ Related containment tree entries are defined in Entries, whereby the flavor of a
         <profile value="http://hl7.org/fhir/uv/pocd/StructureDefinition/relation" />
       </type>
     </element>
+    <element id="DeviceMetric.extension:metricAvailability">
+      <path value="DeviceMetric.extension" />
+      <sliceName value="metricAvailability" />
+      <short value="Availability of metrics" />
+      <definition value="Availability of the means that derives the metric state." />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org/fhir/uv/pocd/StructureDefinition/metric-availability" />
+      </type>
+      <mapping>
+        <identity value="sdc"/>
+        <map value="DistributionSampleArrayMetricDescriptor/MetricAvailability, RealTimeSampleArrayMetricDescriptor/MetricAvailability"/>
+      </mapping>
+    </element>
     <element id="DeviceMetric.extension:sweep-speed">
       <path value="DeviceMetric.extension"/>
       <sliceName value="sweep-speed"/>
@@ -96,6 +112,10 @@ Related containment tree entries are defined in Entries, whereby the flavor of a
         <strength value="extensible"/>
         <valueSet value="http://hl7.org/fhir/uv/pocd/ValueSet/11073MDC-metric"/>
       </binding>
+      <mapping>
+        <identity value="sdc"/>
+        <map value="According to ISO/IEEE 11073-20701 this element can't be empty"/>
+      </mapping>
     </element>
     <element id="DeviceMetric.type.coding">
       <path value="DeviceMetric.type.coding"/>
@@ -104,14 +124,14 @@ Related containment tree entries are defined in Entries, whereby the flavor of a
       <path value="DeviceMetric.type.coding.system"/>
       <mapping>
         <identity value="sdc"/>
-        <map value="NumericMetricDescriptor/Type/CodingSystem"/>
+        <map value="DistributionSampleArrayMetricDescriptor/Type/CodingSystem, RealTimeSampleArrayMetricDescriptor/Type/CodingSystem"/>
       </mapping>
     </element>
     <element id="DeviceMetric.type.coding.version">
       <path value="DeviceMetric.type.coding.version"/>
       <mapping>
         <identity value="sdc"/>
-        <map value="NumericMetricDescriptor/Type/CodingSystemVersion"/>
+        <map value="DistributionSampleArrayMetricDescriptor/Type/CodingSystemVersion, RealTimeSampleArrayMetricDescriptor/Type/CodingSystemVersion"/>
       </mapping>
     </element>
     <element id="DeviceMetric.type.coding.code">
@@ -122,7 +142,7 @@ Related containment tree entries are defined in Entries, whereby the flavor of a
       </mapping>
       <mapping>
         <identity value="sdc"/>
-        <map value="NumericMetricDescriptor/Type/Code"/>
+        <map value="DistributionSampleArrayMetricDescriptor/Type/Code, RealTimeSampleArrayMetricDescriptor/Type/Code"/>
       </mapping>
     </element>
     <element id="DeviceMetric.type.text">
@@ -146,14 +166,14 @@ Related containment tree entries are defined in Entries, whereby the flavor of a
       <path value="DeviceMetric.unit.coding.system"/>
       <mapping>
         <identity value="sdc"/>
-        <map value="NumericMetricDescriptor/Unit/CodingSystem"/>
+        <map value="DistributionSampleArrayMetricDescriptor/Unit/CodingSystem, RealTimeSampleArrayMetricDescriptor/Unit/CodingSystem"/>
       </mapping>
     </element>
     <element id="DeviceMetric.unit.coding.version">
       <path value="DeviceMetric.unit.coding.version"/>
       <mapping>
         <identity value="sdc"/>
-        <map value="NumericMetricDescriptor/Type/CodingSystemVersion"/>
+        <map value="DistributionSampleArrayMetricDescriptor/Type/CodingSystemVersion, RealTimeSampleArrayMetricDescriptor/Type/CodingSystemVersion"/>
       </mapping>
     </element>
     <element id="DeviceMetric.unit.coding.code">
@@ -164,7 +184,7 @@ Related containment tree entries are defined in Entries, whereby the flavor of a
       </mapping>
       <mapping>
         <identity value="sdc"/>
-        <map value="NumericMetricDescriptor/Unit/Code"/>
+        <map value="DistributionSampleArrayMetricDescriptor/Unit/Code, RealTimeSampleArrayMetricDescriptor/Unit/Code"/>
       </mapping>
     </element>
     <element id="DeviceMetric.unit.text">
@@ -198,7 +218,7 @@ Related containment tree entries are defined in Entries, whereby the flavor of a
       </mapping>
       <mapping>
         <identity value="sdc"/>
-        <map value="NumericMetricState/ActivationState note the mapping of the value set"/>
+        <map value="DistributionSampleArrayMetricState/ActivationState, RealTimeSampleArrayMetricState/ActivationState note the mapping of the value set"/>
       </mapping>
     </element>
     <element id="DeviceMetric.color">
@@ -216,7 +236,7 @@ Related containment tree entries are defined in Entries, whereby the flavor of a
       </mapping>
       <mapping>
         <identity value="sdc"/>
-        <map value="NumericMetricDescriptor/MetricCategory note the mapping of the value set"/>
+        <map value="DistributionSampleArrayMetricDescriptor/MetricCategory, RealTimeSampleArrayMetricDescriptor/MetricCategory note the mapping of the value set"/>
       </mapping>
     </element>
     <element id="DeviceMetric.measurementPeriod">
@@ -229,7 +249,7 @@ Related containment tree entries are defined in Entries, whereby the flavor of a
       <path value="DeviceMetric.measurementPeriod.repeat.duration"/>
       <mapping>
         <identity value="sdc"/>
-        <map value="NumericMetricDescriptor/DeterminationPeriod Unit can be specified by durationUnit"/>
+        <map value="DistributionSampleArrayMetricDescriptor/DeterminationPeriod, RealTimeSampleArrayMetricDescriptor/DeterminationPeriod Unit can be specified by durationUnit"/>
       </mapping>
     </element>
     <element id="DeviceMetric.measurementPeriod.repeat.period">
