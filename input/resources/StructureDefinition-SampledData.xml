@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../input-cache/schemas-r5/fhir-single.xsd">
+    <id value="SampledData"/>
+    <url value="http://hl7.org/fhir/uv/pocd/StructureDefinition/SampledData"/>
+    <name value="SampledData" />
+    <title value="SampledData profile"/>
+    <status value="draft" />
+    <date value="2020-09-28"/>
+  <publisher value="HL7 International - Health Care Devices Work Group"/>
+  <description value="StructureDefinition for SampledData that provides a concise way to handle the data produced by devices that sample a particular physical state at a high frequency."/>
+  <fhirVersion value="4.0.1"/>
+    <kind value="complex-type" />
+    <abstract value="false" />
+    <type value="SampledData" />
+    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/SampledData" />
+    <derivation value="constraint" />
+    <mapping>
+    <identity value="dim"/>
+    <uri value="urn:iso:std:iso:11073:10201"/>
+    <name value="IEEE 11073-10201 DIM"/>
+  </mapping>
+  <mapping>
+    <identity value="sdc"/>
+    <uri value="urn:iso:std:iso:11073:10207"/>
+    <name value="IEEE 11073-10207 SDC"/>
+  </mapping>
+    <differential>
+    <element id="SampledData">
+      <path value="SampledData"/>
+    </element>
+        <element id="SampledData.extension">
+            <path value="SampledData.extension" />
+            <slicing>
+                <discriminator>
+                    <type value="value" />
+                    <path value="url" />
+                </discriminator>
+                <rules value="open" />
+            </slicing>
+        </element>
+        <element id="SampledData.extension:resolution">
+            <path value="SampledData.extension" />
+            <sliceName value="resolution" />
+            <short value="minimum determinable difference" />
+            <definition value="The resolution of the means to determine the METRIC&#39;s value. Resolution is the minimum determinable\difference between two determined values." />
+            <max value="1" />
+            <type>
+                <code value="Extension" />
+                <profile value="http://hl7.org/fhir/uv/pocd/StructureDefinition/resolution" />
+            </type>
+        </element>
+        <element id="SampledData.extension:relativeAccuracy">
+            <path value="SampledData.extension" />
+            <sliceName value="relativeAccuracy" />
+            <short value="relative error" />
+            <max value="1" />
+            <type>
+                <code value="Extension" />
+                <profile value="http://hl7.org/fhir/uv/pocd/StructureDefinition/relative-accuracy" />
+            </type>
+        </element>
+        <element id="SampledData.extension:absoluteAccuracy">
+            <path value="SampledData.extension" />
+            <sliceName value="bsoluteAccuracy" />
+            <short value="absolute error" />
+            <definition value="Maximum absolute error in relation to the correct value within the given range." />
+            <max value="1" />
+            <type>
+                <code value="Extension" />
+                <profile value="http://hl7.org/fhir/uv/pocd/StructureDefinition/absolute-accuracy" />
+            </type>
+        </element>
+        <element id="SampledData.extension:domainUnit">
+            <path value="SampledData.extension" />
+            <sliceName value="domainUnit" />
+            <short value="coded values for domain values" />
+            <definition value="The coded value that is used for domain values (x axis)." />
+            <max value="1" />
+            <type>
+                <code value="Extension" />
+                <profile value="http://hl7.org/fhir/uv/pocd/StructureDefinition/domain-unit" />
+            </type>
+        </element>
+        <element id="SampledData.extension:distributionRange">
+            <path value="SampledData.extension" />
+            <sliceName value="distributionRange" />
+            <short value="domain values" />
+            <definition value="Minimum and maximum domain values." />
+            <max value="1" />
+            <type>
+                <code value="Extension" />
+                <profile value="http://hl7.org/fhir/uv/pocd/StructureDefinition/distribution-range" />
+            </type>
+        </element>
+        <element id="SampledData.extension:distributionRange.extension:lower">
+            <path value="SampledData.extension.extension" />
+            <sliceName value="lower" />
+            <short value="lower bound" />
+            <definition value="The including lower bound of the range." />
+            <max value="1" />
+        </element>
+        <element id="SampledData.extension:distributionRange.extension:upper">
+            <path value="SampledData.extension.extension" />
+            <sliceName value="upper" />
+            <short value="upper bound" />
+            <definition value="The including upper bound of the range." />
+            <max value="1" />
+        </element>
+        <element id="SampledData.extension:distributionRange.extension:stepWidth">
+            <path value="SampledData.extension.extension" />
+            <sliceName value="stepWidth" />
+            <short value="distance between two values" />
+            <definition value="The numerical distance between two values in the range of the given upper and lower bound." />
+            <max value="1" />
+        </element>
+        <element id="SampledData.extension:distributionRange.extension:relativeAccuracy">
+            <path value="SampledData.extension.extension" />
+            <sliceName value="relativeAccuracy" />
+            <short value="relative error" />
+            <definition value="Maximum relative error in relation to the correct value within the given range." />
+            <max value="1" />
+        </element>
+        <element id="SampledData.extension:distributionRange.extension:absoluteAccuracy">
+            <path value="SampledData.extension.extension" />
+            <sliceName value="absoluteAccuracy" />
+            <short value="absolute error" />
+            <definition value="Maximum absolute error in relation to the correct value within the given range." />
+            <max value="1" />
+        </element>
+    </differential>
+</StructureDefinition>

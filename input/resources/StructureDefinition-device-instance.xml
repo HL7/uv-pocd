@@ -5,7 +5,7 @@
   <name value="DeviceInstance"/>
   <title value="Device Instance extension"/>
   <status value="draft"/>
-  <date value="2020-03-29"/>
+  <date value="2020-12-06"/>
   <publisher value="HL7 International - Health Care Devices Work Group"/>
   <description value="StructureDefinition that adds an instance number to Device."/>
   <fhirVersion value="4.0.1"/>
@@ -21,6 +21,8 @@
   <differential>
     <element id="Extension">
       <path value="Extension"/>
+      <short value="Instance number"/>
+      <definition value="Instance number for multiple components of the same type"/>
     </element>
     <element id="Extension.url">
       <path value="Extension.url"/>
@@ -28,9 +30,7 @@
     </element>
     <element id="Extension.value[x]:valueUnsignedInt">
       <path value="Extension.valueUnsignedInt"/>
-      <sliceName value="valueUnsignedInt"/>
-      <short value="Instance number"/>
-      <definition value="Instance number for multiple components of the same type"/>
+      <min value="1"/>
       <type>
         <code value="unsignedInt"/>
       </type>

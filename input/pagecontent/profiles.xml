@@ -111,10 +111,34 @@
     </tr>
     <tr>
       <td>
+        <a href="StructureDefinition-SampleArrayDeviceMetric.html">Sample Array DeviceMetric profile</a>
+      </td>
+      <td>
+        <p>StructureDefinition for DeviceMetric resources that represent real-time waveforms or wave snippets characteristics and capabilities.</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
         <a href="StructureDefinition-relation.html">Relation extension</a>
       </td>
       <td>
         <p>StructureDefinition that adds relations to a DeviceMetric.</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="StructureDefinition-sweep-speed.html">Sweep Speed extension</a>
+      </td>
+      <td>
+        <p>StructureDefinition that adds default sweep speed to a DeviceMetric.</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="StructureDefinition-visual-grid.html">Visual Grid extension</a>
+      </td>
+      <td>
+        <p>StructureDefinition that adds grid line definitions to a DeviceMetric.</p>
       </td>
     </tr>
   </table>
@@ -145,6 +169,62 @@
       </td>
       <td>
         <p>StructureDefinition for Observation resources that represent coded or text status, annotations, or settings.</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="StructureDefinition-SampleArrayObservation.html">Sample Array Observation profile</a>
+      </td>
+      <td>
+        <p>StructureDefinition for Observation resources that represent real-time waveforms or wave snippets.</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="StructureDefinition-SampledData.html">SampledData profile</a>
+      </td>
+      <td>
+        <p>StructureDefinition for SampledData that provides a concise way to handle the data produced by devices that sample a particular physical state at a high frequency.</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="StructureDefinition-resolution.html">Resolution extension</a>
+      </td>
+      <td>
+        <p>StructureDefinition that adds a resolution to SampledData.</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="StructureDefinition-relative-accuracy.html">Relative accuracy extension</a>
+      </td>
+      <td>
+        <p>StructureDefinition that adds a relative accuracy to SampledData.</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="StructureDefinition-absolute-accuracy.html">Absolute accuracy extension</a>
+      </td>
+      <td>
+        <p>StructureDefinition that adds an absolute accuracy to SampledData.</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="StructureDefinition-domain-unit.html">Domain unit extension</a>
+      </td>
+      <td>
+        <p>StructureDefinition that adds a domain unit to SampledData.</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="StructureDefinition-distribution-range.html">Distribution range extension</a>
+      </td>
+      <td>
+        <p>StructureDefinition that adds a distribution range to SampledData.</p>
       </td>
     </tr>
   </table>

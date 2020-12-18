@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../input-cache/schemas-r5/fhir-single.xsd">
+  <id value="sweep-speed"/>
+  <url value="http://hl7.org/fhir/uv/pocd/StructureDefinition/sweep-speed"/>
+  <name value="SweepSpeed"/>
+  <title value="Sweep Speed extension"/>
+  <status value="draft"/>
+  <date value="2020-12-06"/>
+  <publisher value="HL7 International - Health Care Devices Work Group"/>
+  <description value="StructureDefinition that adds default sweep speed to a DeviceMetric."/>
+  <fhirVersion value="4.0.1"/>
+  <kind value="complex-type"/>
+  <abstract value="false"/>
+  <context>
+    <type value="element"/>
+    <expression value="DeviceMetric"/>
+  </context>
+  <type value="Extension"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension"/>
+  <derivation value="constraint"/>
+  <differential>
+    <element id="Extension">
+      <path value="Extension"/>
+      <short value="Default sweep speed"/>
+      <definition value="Default sweep speed for real-time waveform presentation"/>
+    </element>
+    <element id="Extension.url">
+      <path value="Extension.url"/>
+      <fixedUri value="http://hl7.org/fhir/uv/pocd/StructureDefinition/sweep-speed"/>
+    </element>
+    <element id="Extension.value[x]:valueQuantity">
+      <path value="Extension.valueQuantity"/>
+      <min value="1"/>
+      <type>
+        <code value="Quantity"/>
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>

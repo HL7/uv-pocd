@@ -1,0 +1,300 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../input-cache/schemas-r5/fhir-single.xsd">
+  <id value="SampleArrayObservation"/>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-summary">
+    <valueMarkdown value="The profile defines the following rules:&#10;
+* `Observation.code` shall have a coding from the ISO/IEEE 11073 MDC Metric nomenclature if there is an appropriate code available.&#10;
+* Either `Observation.valueSampledData` or `Observation.component.valueSampledData` shall be present. Values shall have a UCUM unit code.&#10;
+* `Observation.interpretation` or `Observation.component.interpretation` coding includes measurement status.&#10;
+* `Observation.device` shall be present and refer to the Sample Array DeviceMetric resource where this observation belongs to."/>
+  </extension>
+  <url value="http://hl7.org/fhir/uv/pocd/StructureDefinition/SampleArrayObservation"/>
+  <name value="SampleArrayObservation"/>
+  <title value="Sample Array Observation profile"/>
+  <status value="draft"/>
+  <date value="2020-09-06"/>
+  <publisher value="HL7 International - Health Care Devices Work Group"/>
+  <description value="StructureDefinition for Observation resources that represent real-time waveforms or wave snippets."/>
+  <fhirVersion value="4.0.1"/>
+  <kind value="resource"/>
+  <abstract value="false"/>
+  <type value="Observation"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Observation"/>
+  <derivation value="constraint"/>
+  <mapping>
+    <identity value="dim"/>
+    <uri value="urn:iso:std:iso:11073:10201"/>
+    <name value="IEEE 11073-10201 DIM"/>
+  </mapping>
+  <mapping>
+    <identity value="sdc"/>
+    <uri value="urn:iso:std:iso:11073:10207"/>
+    <name value="IEEE 11073-10207 SDC"/>
+  </mapping>
+  <differential>
+    <element id="Observation.meta">
+      <path value="Observation.meta"/>
+    </element>
+    <element id="Observation.meta.security">
+      <path value="Observation.meta.security"/>
+      <mapping>
+        <identity value="dim"/>
+        <map value="SampleArray::Sa-Observed-Value::state or SampleArray::Compound-Sa-Observed-Value::state (refer to MeasurementStatus mapping details)"/>
+      </mapping>
+    </element>
+    <element id="Observation.code">
+      <path value="Observation.code"/>
+      <binding> 
+        <strength value="extensible"/> 
+        <valueSet value="http://hl7.org/fhir/uv/pocd/ValueSet/11073MDC-metric"/> 
+      </binding>     
+    </element>
+    <element id="Observation.code.coding">
+      <path value="Observation.code.coding"/>
+    </element>
+    <element id="Observation.code.coding.system">
+      <path value="Observation.code.coding.system"/>
+    </element>
+    <element id="Observation.code.coding.version">
+      <path value="Observation.code.coding.version"/>
+    </element>
+    <element id="Observation.code.coding.code">
+      <path value="Observation.code.coding.code"/>
+      <mapping>
+        <identity value="dim"/>
+        <map value="Metric::Metric-Id or SampleArray::Sa-Observed-Value::metric-id"/>
+      </mapping>
+    </element>
+    <element id="Observation.subject">
+      <path value="Observation.subject"/>
+      <min value="1"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient"/>
+        <targetProfile value="http://hl7.org/fhir/uv/pocd/StructureDefinition/MdsDevice"/>
+      </type>
+    </element>
+    <element id="Observation.effective[x]">
+      <path value="Observation.effective[x]"/>
+    </element>
+    <element id="Observation.effective[x]:effectivePeriod">
+      <path value="Observation.effectivePeriod"/>
+    </element>
+    <element id="Observation.effective[x]:effectivePeriod.start">
+      <path value="Observation.effectivePeriod.start"/>
+      <mapping>
+        <identity value="dim"/>
+        <map value="Metric::Start-Time"/>
+      </mapping>
+    </element>
+    <element id="Observation.effective[x]:effectivePeriod.end">
+      <path value="Observation.effectivePeriod.end"/>
+      <mapping>
+        <identity value="dim"/>
+        <map value="Metric::Stop-Time"/>
+      </mapping>
+    </element>
+    <element id="Observation.effective[x]:effectiveInstant">
+      <path value="Observation.effectiveInstant"/>
+      <mapping>
+        <identity value="sdc"/>
+        <map value="NumericMetricValue/DeterminationTime"/>
+      </mapping>
+    </element>
+    <element id="Observation.value[x]">
+      <path value="Observation.value[x]"/>
+      <slicing>
+        <discriminator>
+          <type value="type"/>
+          <path value="$this"/>
+        </discriminator>
+        <rules value="closed"/>
+      </slicing>
+      <min value="0"/>
+      <max value="1"/>
+    </element>
+    <element id="Observation.value[x]:valueSampledData">
+      <path value="Observation.valueSampledData"/>
+      <sliceName value="valueSampledData"/>
+      <type>
+        <code value="SampledData"/>
+        <profile value="http://hl7.org/fhir/uv/pocd/StructureDefinition/SampledData" />
+      </type>
+    </element>
+    <element id="Observation.value[x]:valueSampledData.origin">
+      <path value="Observation.valueSampledData.origin"/>
+    </element>
+    <element id="Observation.value[x]:valueSampledData.origin.system">
+      <path value="Observation.valueSampledData.origin.system"/>
+      <fixedUri value="http://unitsofmeasure.org"/>
+    </element>
+    <element id="Observation.value[x]:valueSampledData.origin.code">
+      <path value="Observation.valueSampledData.origin.code"/>
+    </element>
+    <element id="Observation.value[x]:valueSampledData.data">
+      <path value="Observation.valueSampledData.data"/>
+      <mapping>
+        <identity value="dim"/>
+        <map value="SampleArray::Sa-Observed-Value::array"/>
+      </mapping>
+    </element>
+    <element id="Observation.interpretation">
+      <path value="Observation.interpretation"/>
+      <binding> 
+        <strength value="extensible"/> 
+        <valueSet value="http://hl7.org/fhir/uv/pocd/ValueSet/observation-interpretation"/> 
+      </binding>     
+      <mapping>
+        <identity value="dim"/>
+        <map value="SampleArray::Sa-Observed-Value::state (refer to MeasurementStatus mapping details)"/>
+      </mapping>
+    </element>
+    <element id="Observation.bodySite">
+      <path value="Observation.bodySite"/>    
+    </element>
+    <element id="Observation.bodySite.coding">
+      <path value="Observation.bodySite.coding"/>
+    </element>
+    <element id="Observation.bodySite.coding.system">
+      <path value="Observation.bodySite.coding.system"/>
+      <mapping>
+        <identity value="sdc"/>
+        <map value="NumericMetricState/BodySite/CodingSystem"/>
+      </mapping>
+    </element>
+    <element id="Observation.bodySite.coding.version">
+      <path value="Observation.bodySite.coding.version"/>
+      <mapping>
+        <identity value="sdc"/>
+        <map value="NumericMetricState/BodySite/CodingSystemVersion"/>
+      </mapping>
+    </element>
+    <element id="Observation.bodySite.coding.code">
+      <path value="Observation.bodySite.coding.code"/>
+      <mapping>
+        <identity value="sdc"/>
+        <map value="NumericMetricState/BodySite/Code"/> 
+      </mapping>
+    </element>
+    <element id="Observation.device">
+      <path value="Observation.device"/>
+      <min value="1"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/uv/pocd/StructureDefinition/SampleArrayDeviceMetric"/>
+      </type>
+    </element>
+    <element id="Observation.referenceRange">
+      <path value="Observation.referenceRange"/>
+    </element>
+    <element id="Observation.referenceRange.low">
+      <path value="Observation.referenceRange.low"/>
+      <mapping>
+        <identity value="dim"/>
+        <map value="SampleArray::Sa-Physiological-Range::lower-scaled-value"/>
+      </mapping>
+      <mapping>
+        <identity value="sdc"/>
+        <map value="NumericMetricState/PhysiologicalRange/Lower"/>
+      </mapping>
+    </element>
+    <element id="Observation.referenceRange.high">
+      <path value="Observation.referenceRange.high"/>
+      <mapping>
+        <identity value="dim"/>
+        <map value="SampleArray::Sa-Physiological-Range::upper-scaled-value"/>
+      </mapping>
+      <mapping>
+        <identity value="sdc"/>
+        <map value="NumericMetricState/PhysiologicalRange/Upper"/>
+      </mapping>
+    </element>
+    <element id="Observation.component">
+      <path value="Observation.component"/>
+    </element>
+    <element id="Observation.component.code">
+      <path value="Observation.component.code"/>
+      <binding>
+        <strength value="extensible"/>
+        <valueSet value="http://hl7.org/fhir/uv/pocd/ValueSet/11073MDC-metric"/>
+      </binding>
+    </element>
+    <element id="Observation.component.code.coding">
+      <path value="Observation.component.code.coding"/>
+    </element>
+    <element id="Observation.component.code.coding.code">
+      <path value="Observation.component.code.coding.code"/>
+      <mapping>
+        <identity value="dim"/>
+        <map value="SampleArray::Compound-Sa-Observed-Value::metric-id"/>
+      </mapping>
+    </element>
+    <element id="Observation.component.value[x]">
+      <path value="Observation.component.value[x]"/>
+      <slicing>
+        <discriminator>
+          <type value="type"/>
+          <path value="$this"/>
+        </discriminator>
+        <rules value="closed"/>
+      </slicing>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="SampledData"/>
+      </type>
+    </element>
+    <element id="Observation.component.value[x]:valueSampledData">
+      <path value="Observation.component.valueSampledData"/>
+      <sliceName value="valueSampledData"/>
+      <type>
+        <code value="SampledData"/>
+      </type>
+    </element>
+    <element id="Observation.component.value[x]:valueSampledData.origin">
+      <path value="Observation.component.valueSampledData.origin"/>
+    </element>
+    <element id="Observation.component.value[x]:valueSampledData.origin.system">
+      <path value="Observation.component.valueSampledData.origin.system"/>
+      <fixedUri value="http://unitsofmeasure.org"/>
+    </element>
+    <element id="Observation.component.value[x]:valueSampledData.origin.code">
+      <path value="Observation.component.valueSampledData.origin.code"/>
+    </element>
+    <element id="Observation.component.value[x]:valueSampledData.data">
+      <path value="Observation.component.valueSampledData.data"/>
+      <mapping>
+        <identity value="dim"/>
+        <map value="SampleArray::Compound-Sa-Observed-Value::array"/>
+      </mapping>
+    </element>
+    <element id="Observation.component.interpretation">
+      <path value="Observation.component.interpretation"/>
+      <binding> 
+        <strength value="extensible"/> 
+        <valueSet value="http://hl7.org/fhir/uv/pocd/ValueSet/observation-interpretation"/> 
+      </binding>     
+      <mapping>
+        <identity value="dim"/>
+        <map value="SampleArray::Compound-Sa-Observed-Value::state (refer to MeasurementStatus mapping details)"/>
+      </mapping>
+    </element>
+    <element id="Observation.component.referenceRange">
+      <path value="Observation.component.referenceRange"/>
+    </element>
+    <element id="Observation.component.referenceRange.low">
+      <path value="Observation.component.referenceRange.low"/>
+      <mapping>
+        <identity value="dim"/>
+        <map value="SampleArray::Sa-Physiological-Range::lower-scaled-value"/>
+      </mapping>
+    </element>
+    <element id="Observation.component.referenceRange.high">
+      <path value="Observation.component.referenceRange.high"/>
+      <mapping>
+        <identity value="dim"/>
+        <map value="SampleArray::Sa-Physiological-Range::upper-scaled-value"/>
+      </mapping>
+    </element>
+  </differential>
+</StructureDefinition>
