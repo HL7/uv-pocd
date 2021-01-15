@@ -162,6 +162,7 @@
       <sliceName value="valueQuantity"/>
       <type>
         <code value="Quantity"/>
+        <profile value="http://hl7.org/fhir/uv/pocd/StructureDefinition/Quantity" />
       </type>
     </element>
     <element id="Observation.value[x]:valueQuantity.value">

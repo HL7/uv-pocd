@@ -124,6 +124,10 @@
         <identity value="dim"/>
         <map value="Channel::Channel-Status"/>
       </mapping>
+      <mapping>
+        <identity value="sdc"/>
+        <map value="ChannelState/ActivationState note the mapping of the value set"/>
+      </mapping>
     </element>
     <element id="Device.type">
       <path value="Device.type"/>

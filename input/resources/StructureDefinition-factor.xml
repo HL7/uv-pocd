@@ -1,19 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-<id value="relative-accuracy"/>
-  <url value="http://hl7.org/fhir/uv/pocd/StructureDefinition/relative-accuracy" />
-  <name value="RelativeAccuracy" />
-   <title value="Relative accuracy extension"/>
+<id value="factor"/>
+  <url value="http://hl7.org/fhir/uv/pocd/StructureDefinition/factor" />
+  <name value="factor" />
+   <title value="factor extension"/>
   <status value="draft" />
-   <date value="2020-09-28"/>
-  <description value="Maximum relative error in relation to the correct value within the given range." />
+   <date value="2021-01-15"/>
+  <description value="Multiply data by this before adding to origin." />
   <fhirVersion value="4.0.1" />
   <kind value="complex-type" />
   <abstract value="false" />
-  <context>
-    <type value="element" />
-    <expression value="SampledData" />
-  </context>
   <context>
     <type value="element" />
     <expression value="Quantity" />
@@ -24,7 +20,7 @@
   <differential>
     <element id="Extension">
       <path value="Extension" />
-      <definition value="Maximum relative error in relation to the correct value within the given range." />
+      <definition value="Multiply data by this before adding to origin." />
     </element>
     <element id="Extension.value[x]">
       <path value="Extension.value[x]" />

@@ -61,7 +61,7 @@
         </element>
         <element id="SampledData.extension:absoluteAccuracy">
             <path value="SampledData.extension" />
-            <sliceName value="bsoluteAccuracy" />
+            <sliceName value="absoluteAccuracy" />
             <short value="absolute error" />
             <definition value="Maximum absolute error in relation to the correct value within the given range." />
             <max value="1" />

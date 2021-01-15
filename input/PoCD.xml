@@ -140,6 +140,14 @@
     </resource>
     <resource>
       <reference>
+        <reference value="StructureDefinition/Quantity"/>
+      </reference>
+      <name value="Quantity profile"/>
+      <description value="StructureDefinition for Quantity that provides a measured amount (or an amount that can potentially be measured)."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="StructureDefinition/device-instance"/>
       </reference>
       <name value="Device Instance extension"/>
@@ -248,6 +256,30 @@
       </reference>
       <name value="Distribution range extension"/>
       <description value="StructureDefinition that adds a distribution range to SampledData."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/lower-limit"/>
+      </reference>
+      <name value="Lower Limit extension"/>
+      <description value="StructureDefinition that adds a lower limit to Quantity."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/upper-limit"/>
+      </reference>
+      <name value="Upper limit extension"/>
+      <description value="StructureDefinition that adds a upper limit to Quantity."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/factor"/>
+      </reference>
+      <name value="Factor extension"/>
+      <description value="StructureDefinition that adds a factor to Quantity."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>

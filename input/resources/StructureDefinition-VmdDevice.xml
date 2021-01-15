@@ -193,6 +193,10 @@ any entries, then the DEVICE COMPONENT is not approved for any region." />
         <identity value="dim"/>
         <map value="VMD::Vmd-Status"/>
       </mapping>
+      <mapping>
+        <identity value="sdc"/>
+        <map value="VmdState/ActivationState note the mapping of the value set"/>
+      </mapping>
     </element>
     <element id="Device.manufacturer">
       <path value="Device.manufacturer"/>

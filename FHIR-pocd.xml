@@ -20,11 +20,13 @@
 <artifact id="Device/ECGVmdDevice" key="Device-ECGVmdDevice" name="ECG VMD example"/>
 <artifact id="StructureDefinition/EnumerationDeviceMetric" key="StructureDefinition-EnumerationDeviceMetric" name="Enumeration DeviceMetric profile"/>
 <artifact id="StructureDefinition/EnumerationObservation" key="StructureDefinition-EnumerationObservation" name="Enumeration Observation profile"/>
+<artifact id="StructureDefinition/factor" key="StructureDefinition-factor" name="Factor extension"/>
 <artifact id="Device/HeartRateChannelDevice" key="Device-HeartRateChannelDevice" name="Heart Rate Channel example"/>
 <artifact id="DeviceMetric/HeartRateNumericDeviceMetric" key="DeviceMetric-HeartRateNumericDeviceMetric" name="Heart Rate Numeric metric example"/>
 <artifact id="Observation/HeartRateNumericObservation" key="Observation-HeartRateNumericObservation" name="Heart Rate Numeric observation example"/>
 <artifact id="CodeSystem/kind-of-relation" key="CodeSystem-kind-of-relation" name="Kind of relation codes"/>
 <artifact id="ValueSet/kind-of-relation" key="ValueSet-kind-of-relation" name="Kind of relation codes"/>
+<artifact id="StructureDefinition/lower-limit" key="StructureDefinition-lower-limit" name="Lower Limit extension"/>
 <artifact id="ValueSet/11073MDC-metric" key="ValueSet-11073MDC-metric" name="MDC Metric nomenclature"/>
 <artifact id="ValueSet/11073MDC-object" key="ValueSet-11073MDC-object" name="MDC Object infrastructure and Device nomenclature"/>
 <artifact id="ValueSet/11073MDC-dimension" key="ValueSet-11073MDC-dimension" name="MDC Unit of Measurement"/>
@@ -50,6 +52,7 @@
 <artifact id="Device/PhysioMonitorMdsDevice" key="Device-PhysioMonitorMdsDevice" name="Patient Monitor MDS example"/>
 <artifact id="StructureDefinition/Patient" key="StructureDefinition-Patient" name="Patient profile"/>
 <artifact id="StructureDefinition/Practitioner" key="StructureDefinition-Practitioner" name="Practitioner profile"/>
+<artifact id="StructureDefinition/Quantity" key="StructureDefinition-Quantity" name="Quantity profile"/>
 <artifact id="StructureDefinition/relation" key="StructureDefinition-relation" name="Relation extension"/>
 <artifact id="StructureDefinition/relative-accuracy" key="StructureDefinition-relative-accuracy" name="Relative accuracy extension"/>
 <artifact id="StructureDefinition/resolution" key="StructureDefinition-resolution" name="Resolution extension"/>
@@ -63,6 +66,7 @@
 <artifact id="Location/SomeLocation" key="Location-SomeLocation" name="Some Location example"/>
 <artifact id="Patient/SomePatient" key="Patient-SomePatient" name="Some Patient example"/>
 <artifact id="StructureDefinition/sweep-speed" key="StructureDefinition-sweep-speed" name="Sweep Speed extension"/>
+<artifact id="StructureDefinition/upper-limit" key="StructureDefinition-upper-limit" name="Upper limit extension"/>
 <artifact id="StructureDefinition/VmdDevice" key="StructureDefinition-VmdDevice" name="VMD Device profile"/>
 <artifact id="StructureDefinition/visual-grid" key="StructureDefinition-visual-grid" name="Visual Grid extension"/>
 <page key="NA" name="(NA)"/>
