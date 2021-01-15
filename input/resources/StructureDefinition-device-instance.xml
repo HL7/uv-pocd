@@ -18,6 +18,11 @@
   <type value="Extension"/>
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension"/>
   <derivation value="constraint"/>
+  <mapping>
+    <identity value="sdc"/>
+    <uri value="urn:iso:std:iso:11073:10207"/>
+    <name value="IEEE 11073-10207 SDC"/>
+  </mapping>
   <differential>
     <element id="Extension">
       <path value="Extension"/>
@@ -34,6 +39,22 @@
       <type>
         <code value="unsignedInt"/>
       </type>
+    </element>
+     <element id="Extension.extension:label">
+      <path value="Extension.extension" />
+      <sliceName value="label" />
+      <short value="label" />
+      <definition value="A human-readable label that describes the physical connector" />
+    </element>
+    <element id="Extension.extension.value[x]:valueString">
+      <path value="Extension.extension.valueString" />
+      <type>
+        <code value="string" />
+      </type>
+       <mapping>
+        <identity value="sdc"/>
+        <map value="AbstractMetricState/PhysicalConnector/Label"/>
+      </mapping>
     </element>
   </differential>
 </StructureDefinition>
