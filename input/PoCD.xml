@@ -516,6 +516,11 @@
         <title value="Use Cases"/>
         <generation value="markdown"/>
       </page> -->
+        <page>
+          <nameUrl value="glossary.html"/>
+          <title value="Glossary"/>
+          <generation value="markdown"/>
+        </page>
       <page>
         <nameUrl value="guidance.html"/>
         <title value="Technical Implementation Guidance"/>

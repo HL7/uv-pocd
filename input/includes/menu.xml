@@ -5,8 +5,17 @@
   <li>
     <a href="toc.html">Table of Contents</a>
   </li>
-  <li>
-    <a href="overview.html">Overview</a>
+
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Getting Started<b class="caret"></b></a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="overview.html">Overview</a>
+      </li>
+      <li>
+        <a href="glossary.html">Abbreviations and Glossary</a>
+      </li>
+    </ul>
   </li>
   <!-- <li>
     <a href="usecases.html">Use Cases</a>
