@@ -15,6 +15,10 @@
     <type value="element"/>
     <expression value="Device"/>
   </context>
+  <context>
+    <type value="element"/>
+    <expression value="DeviceMetric"/>
+  </context>
   <type value="Extension"/>
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension"/>
   <derivation value="constraint"/>
@@ -53,7 +57,7 @@
       </type>
        <mapping>
         <identity value="sdc"/>
-        <map value="AbstractMetricState/PhysicalConnector/Label"/>
+        <map value="AbstractDeviceComponentState/PhysicalConnector/Label, AbstractMetricState/PhysicalConnector/Label"/>
       </mapping>
     </element>
   </differential>

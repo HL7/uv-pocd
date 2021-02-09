@@ -59,12 +59,22 @@ Related containment tree entries are defined in Entries, whereby the flavor of a
         <profile value="http://hl7.org/fhir/uv/pocd/StructureDefinition/relation" />
       </type>
     </element>
+    <element id="DeviceMetric.extension:instance">
+      <path value="DeviceMetric.extension"/>
+      <sliceName value="instance"/>
+      <short value="Instance number"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://hl7.org/fhir/uv/pocd/StructureDefinition/device-instance"/>
+      </type>
+    </element>
     <element id="DeviceMetric.extension:metricAvailability">
       <path value="DeviceMetric.extension" />
       <sliceName value="metricAvailability" />
       <short value="Availability of metrics" />
       <definition value="Availability of the means that derives the metric state." />
-      <min value="1" />
+      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />

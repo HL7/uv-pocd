@@ -144,7 +144,7 @@ The resource ServiceRequest may be used to share relevant information required t
 
 #### Valuesets
 
-##### Valuesets for MdsState/ActivationState:
+##### Valuesets for AbstractDeviceComponentState/ActivationState:
 
 | IEEE 11073 SDC Status | HL7 FHIR Device.statusReason | Comment |
 | ---

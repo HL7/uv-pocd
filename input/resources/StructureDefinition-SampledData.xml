@@ -48,6 +48,10 @@
                 <code value="Extension" />
                 <profile value="http://hl7.org/fhir/uv/pocd/StructureDefinition/resolution" />
             </type>
+            <mapping>
+       			<identity value="sdc"/>
+        		<map value="DistributionSampleArrayMetricDescriptor/Resolution, RealTimeSampleArrayMetricDescriptor/Resolution"/>
+      		</mapping>
         </element>
         <element id="SampledData.extension:relativeAccuracy">
             <path value="SampledData.extension" />
@@ -58,6 +62,10 @@
                 <code value="Extension" />
                 <profile value="http://hl7.org/fhir/uv/pocd/StructureDefinition/relative-accuracy" />
             </type>
+            <mapping>
+       			<identity value="sdc"/>
+        		<map value="DistributionSampleArrayMetricDescriptor/TechnicalRange/RelativeAccuracy, RealTimeSampleArrayMetricDescriptor/TechnicalRange/RelativeAccuracy"/>
+      		</mapping>
         </element>
         <element id="SampledData.extension:absoluteAccuracy">
             <path value="SampledData.extension" />
@@ -69,6 +77,10 @@
                 <code value="Extension" />
                 <profile value="http://hl7.org/fhir/uv/pocd/StructureDefinition/absolute-accuracy" />
             </type>
+            <mapping>
+       			<identity value="sdc"/>
+        		<map value="DistributionSampleArrayMetricDescriptor/TechnicalRange/AbsoluteAccuracy, RealTimeSampleArrayMetricDescriptor/TechnicalRange/AbsoluteAccuracy"/>
+      		</mapping>
         </element>
         <element id="SampledData.extension:domainUnit">
             <path value="SampledData.extension" />
@@ -80,6 +92,30 @@
                 <code value="Extension" />
                 <profile value="http://hl7.org/fhir/uv/pocd/StructureDefinition/domain-unit" />
             </type>
+        </element>
+        <element id="SampledData.extension:domainUnit.coding">
+            <path value="SampledData.extension.coding" />
+        </element>
+        <element id="SampledData.extension:domainUnit.coding.system">
+            <path value="SampledData.extension.coding.system" />
+            <mapping>
+       			<identity value="sdc"/>
+        		<map value="DistributionSampleArrayMetricDescriptor/DomainUnit/CodingSystem, RealTimeSampleArrayMetricDescriptor/DomainUnit/CodingSystem"/>
+      		</mapping>
+        </element>
+         <element id="SampledData.extension:domainUnit.coding.version">
+            <path value="SampledData.extension.coding.version" />
+            <mapping>
+       			<identity value="sdc"/>
+        		<map value="DistributionSampleArrayMetricDescriptor/DomainUnit/CodingSystemVersion, RealTimeSampleArrayMetricDescriptor/DomainUnit/CodingSystemVersion"/>
+      		</mapping>
+        </element>
+         <element id="SampledData.extension:domainUnit.coding.code">
+            <path value="SampledData.extension.coding.code" />
+            <mapping>
+       			<identity value="sdc"/>
+        		<map value="DistributionSampleArrayMetricDescriptor/DomainUnit/Code, RealTimeSampleArrayMetricDescriptor/DomainUnit/Code"/>
+      		</mapping>
         </element>
         <element id="SampledData.extension:distributionRange">
             <path value="SampledData.extension" />
@@ -98,6 +134,10 @@
             <short value="lower bound" />
             <definition value="The including lower bound of the range." />
             <max value="1" />
+            <mapping>
+       			<identity value="sdc"/>
+        		<map value="DistributionSampleArrayMetricDescriptor/DistributionRange/Lower"/>
+      		</mapping>
         </element>
         <element id="SampledData.extension:distributionRange.extension:upper">
             <path value="SampledData.extension.extension" />
@@ -105,6 +145,10 @@
             <short value="upper bound" />
             <definition value="The including upper bound of the range." />
             <max value="1" />
+            <mapping>
+       			<identity value="sdc"/>
+        		<map value="DistributionSampleArrayMetricDescriptor/DistributionRange/Upper"/>
+      		</mapping>
         </element>
         <element id="SampledData.extension:distributionRange.extension:stepWidth">
             <path value="SampledData.extension.extension" />
@@ -112,6 +156,10 @@
             <short value="distance between two values" />
             <definition value="The numerical distance between two values in the range of the given upper and lower bound." />
             <max value="1" />
+            <mapping>
+       			<identity value="sdc"/>
+        		<map value="DistributionSampleArrayMetricDescriptor/DistributionRange/StepWidth"/>
+      		</mapping>
         </element>
         <element id="SampledData.extension:distributionRange.extension:relativeAccuracy">
             <path value="SampledData.extension.extension" />
@@ -119,6 +167,10 @@
             <short value="relative error" />
             <definition value="Maximum relative error in relation to the correct value within the given range." />
             <max value="1" />
+            <mapping>
+       			<identity value="sdc"/>
+        		<map value="DistributionSampleArrayMetricDescriptor/DistributionRange/RelativeAccuracy"/>
+      		</mapping>
         </element>
         <element id="SampledData.extension:distributionRange.extension:absoluteAccuracy">
             <path value="SampledData.extension.extension" />
@@ -126,6 +178,10 @@
             <short value="absolute error" />
             <definition value="Maximum absolute error in relation to the correct value within the given range." />
             <max value="1" />
+            <mapping>
+       			<identity value="sdc"/>
+        		<map value="DistributionSampleArrayMetricDescriptor/DistributionSampleArrayMetricDescriptor/DistributionRange/AbsoluteAccuracy"/>
+      		</mapping>
         </element>
     </differential>
 </StructureDefinition>
