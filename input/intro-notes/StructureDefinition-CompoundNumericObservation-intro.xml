@@ -1,0 +1,7 @@
+<div xmlns="http://www.w3.org/1999/xhtml">
+  <a name="scope"/>
+  <h3>Scope and Usage</h3>
+  <p>
+    This profile sets minimum expectations for the <a href="{{site.data.fhir.path}}observation.html">Observation</a> resource that represents numerical measurement, calculation, or setting with multiple components.
+  </p>
+</div>
