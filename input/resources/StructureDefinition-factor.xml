@@ -2,8 +2,8 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
 <id value="factor"/>
   <url value="http://hl7.org/fhir/uv/pocd/StructureDefinition/factor" />
-  <name value="factor" />
-   <title value="factor extension"/>
+  <name value="Factor" />
+   <title value="Factor extension"/>
   <status value="draft" />
    <date value="2021-01-15"/>
   <description value="Multiply data by this before adding to origin." />

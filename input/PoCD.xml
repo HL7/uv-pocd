@@ -151,7 +151,7 @@
         <reference value="StructureDefinition/device-instance"/>
       </reference>
       <name value="Device Instance extension"/>
-      <description value="StructureDefinition that adds an instance number to Device."/>
+      <description value="StructureDefinition that adds an instance number or label to Device or DeviceMetric."/>
       <exampleBoolean value="false"/>
     </resource>
      <resource>

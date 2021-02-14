@@ -13,7 +13,7 @@
   <name value="ChannelDevice"/>
   <title value="Channel Device profile"/>
   <status value="draft"/>
-  <date value="2020-06-29"/>
+  <date value="2021-02-14"/>
   <publisher value="HL7 International - Health Care Devices Work Group"/>
   <description value="StructureDefinition for Device resources that represent Channels, which are used for grouping metrics together."/>
   <fhirVersion value="4.0.1"/>
@@ -49,18 +49,35 @@
     <element id="Device.extension:instance">
       <path value="Device.extension"/>
       <sliceName value="instance"/>
-      <short value="Instance number"/>
+      <short value="Instance number or label"/>
       <max value="1"/>
       <type>
         <code value="Extension"/>
         <profile value="http://hl7.org/fhir/uv/pocd/StructureDefinition/device-instance"/>
       </type>
     </element>
-    <element id="Device.extension:instance.valueUnsignedInt">
-      <path value="Device.extension.valueUnsignedInt"/>
+    <element id="Device.extension:instance.extension:number">
+      <path value="Device.extension.extension"/>
+      <sliceName value="number"/>
+      <short value="Instance number"/>
+    </element>
+    <element id="Device.extension:instance.extension:number.valueUnsignedInt">
+      <path value="Device.extension.extension.valueUnsignedInt"/>
       <mapping>
         <identity value="dim"/>
         <map value="Channel::Physical-Channel-No or Channel::Logical-Channel-No"/>
+      </mapping>
+    </element>
+    <element id="Device.extension:instance.extension:label">
+      <path value="Device.extension.extension"/>
+      <sliceName value="label"/>
+      <short value="Instance label"/>
+    </element>
+    <element id="Device.extension:instance.extension:number.valueString">
+      <path value="Device.extension.extension.valueString"/>
+      <mapping>
+        <identity value="sdc"/>
+        <map value="AbstractDeviceComponentState/PhysicalConnector/Label"/>
       </mapping>
     </element>
     <element id="Device.extension:operatingHours">

@@ -44,7 +44,7 @@
         <a href="StructureDefinition-device-instance.html">Device Instance extension</a>
       </td>
       <td>
-        <p>StructureDefinition that adds an instance number to Device.</p>
+        <p>StructureDefinition that adds an instance number or label to Device or DeviceMetric.</p>
       </td>
     </tr>
     <tr>
@@ -115,6 +115,14 @@
       </td>
       <td>
         <p>StructureDefinition for DeviceMetric resources that represent real-time waveforms or wave snippets characteristics and capabilities.</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="StructureDefinition-device-instance.html">Device Instance extension</a>
+      </td>
+      <td>
+        <p>StructureDefinition that adds an instance number or label to Device or DeviceMetric.</p>
       </td>
     </tr>
     <tr>

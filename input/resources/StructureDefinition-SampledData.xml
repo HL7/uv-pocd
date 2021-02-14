@@ -5,7 +5,7 @@
     <name value="SampledData" />
     <title value="SampledData profile"/>
     <status value="draft" />
-    <date value="2020-09-28"/>
+    <date value="2021-02-11"/>
   <publisher value="HL7 International - Health Care Devices Work Group"/>
   <description value="StructureDefinition for SampledData that provides a concise way to handle the data produced by devices that sample a particular physical state at a high frequency."/>
   <fhirVersion value="4.0.1"/>
@@ -93,25 +93,25 @@
                 <profile value="http://hl7.org/fhir/uv/pocd/StructureDefinition/domain-unit" />
             </type>
         </element>
-        <element id="SampledData.extension:domainUnit.coding">
-            <path value="SampledData.extension.coding" />
+        <element id="SampledData.extension:domainUnit.valueCoding">
+            <path value="SampledData.extension.valueCoding" />
         </element>
-        <element id="SampledData.extension:domainUnit.coding.system">
-            <path value="SampledData.extension.coding.system" />
+        <element id="SampledData.extension:domainUnit.valueCoding.system">
+            <path value="SampledData.extension.valueCoding.system" />
             <mapping>
        			<identity value="sdc"/>
         		<map value="DistributionSampleArrayMetricDescriptor/DomainUnit/CodingSystem, RealTimeSampleArrayMetricDescriptor/DomainUnit/CodingSystem"/>
       		</mapping>
         </element>
-         <element id="SampledData.extension:domainUnit.coding.version">
-            <path value="SampledData.extension.coding.version" />
+         <element id="SampledData.extension:domainUnit.valueCoding.version">
+            <path value="SampledData.extension.valueCoding.version" />
             <mapping>
        			<identity value="sdc"/>
         		<map value="DistributionSampleArrayMetricDescriptor/DomainUnit/CodingSystemVersion, RealTimeSampleArrayMetricDescriptor/DomainUnit/CodingSystemVersion"/>
       		</mapping>
         </element>
-         <element id="SampledData.extension:domainUnit.coding.code">
-            <path value="SampledData.extension.coding.code" />
+         <element id="SampledData.extension:domainUnit.valueCoding.code">
+            <path value="SampledData.extension.valueCoding.code" />
             <mapping>
        			<identity value="sdc"/>
         		<map value="DistributionSampleArrayMetricDescriptor/DomainUnit/Code, RealTimeSampleArrayMetricDescriptor/DomainUnit/Code"/>

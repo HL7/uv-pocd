@@ -5,9 +5,9 @@
   <name value="DeviceInstance"/>
   <title value="Device Instance extension"/>
   <status value="draft"/>
-  <date value="2020-12-06"/>
+  <date value="2021-02-14"/>
   <publisher value="HL7 International - Health Care Devices Work Group"/>
-  <description value="StructureDefinition that adds an instance number to Device."/>
+  <description value="StructureDefinition that adds an instance number or label to Device or DeviceMetric."/>
   <fhirVersion value="4.0.1"/>
   <kind value="complex-type"/>
   <abstract value="false"/>
@@ -22,43 +22,62 @@
   <type value="Extension"/>
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension"/>
   <derivation value="constraint"/>
-  <mapping>
-    <identity value="sdc"/>
-    <uri value="urn:iso:std:iso:11073:10207"/>
-    <name value="IEEE 11073-10207 SDC"/>
-  </mapping>
   <differential>
     <element id="Extension">
       <path value="Extension"/>
+    </element>
+    <element id="Extension.extension">
+      <path value="Extension.extension"/>
+      <slicing>
+        <discriminator>
+          <type value="value"/>
+          <path value="url"/>
+        </discriminator>
+        <rules value="open"/>
+      </slicing>
+    </element>
+    <element id="Extension.extension:number">
+      <path value="Extension.extension"/>
+      <sliceName value="number"/>
       <short value="Instance number"/>
       <definition value="Instance number for multiple components of the same type"/>
+      <min value="1"/>
+      <max value="1"/>
+    </element>
+    <element id="Extension.extension:number.url">
+      <path value="Extension.extension.url"/>
+      <fixedUri value="number"/>
+    </element>
+    <element id="Extension.extension:number.value[x]:valueUnsignedInt">
+      <path value="Extension.extension.valueUnsignedInt"/>
+      <type>
+        <code value="unsignedInt"/>
+      </type>
+    </element>
+    <element id="Extension.extension:label">
+      <path value="Extension.extension"/>
+      <sliceName value="label"/>
+      <short value="Instance label"/>
+      <definition value="A human-readable label that describes the physical connector"/>
+      <max value="1"/>
+    </element>
+    <element id="Extension.extension:label.url">
+      <path value="Extension.extension.url"/>
+      <fixedUri value="label"/>
+    </element>
+    <element id="Extension.extension:label.value[x]:valueString">
+      <path value="Extension.extension.valueString"/>
+      <type>
+        <code value="string"/>
+      </type>
     </element>
     <element id="Extension.url">
       <path value="Extension.url"/>
       <fixedUri value="http://hl7.org/fhir/uv/pocd/StructureDefinition/device-instance"/>
     </element>
-    <element id="Extension.value[x]:valueUnsignedInt">
-      <path value="Extension.valueUnsignedInt"/>
-      <min value="1"/>
-      <type>
-        <code value="unsignedInt"/>
-      </type>
-    </element>
-     <element id="Extension.extension:label">
-      <path value="Extension.extension" />
-      <sliceName value="label" />
-      <short value="label" />
-      <definition value="A human-readable label that describes the physical connector" />
-    </element>
-    <element id="Extension.extension.value[x]:valueString">
-      <path value="Extension.extension.valueString" />
-      <type>
-        <code value="string" />
-      </type>
-       <mapping>
-        <identity value="sdc"/>
-        <map value="AbstractDeviceComponentState/PhysicalConnector/Label, AbstractMetricState/PhysicalConnector/Label"/>
-      </mapping>
+    <element id="Extension.value[x]">
+      <path value="Extension.value[x]" />
+      <max value="0" />
     </element>
   </differential>
 </StructureDefinition>
