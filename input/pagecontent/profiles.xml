@@ -135,6 +135,14 @@
     </tr>
     <tr>
       <td>
+        <a href="StructureDefinition-metric-availability.html">Metric availability extension</a>
+      </td>
+      <td>
+        <p>StructureDefinition that adds metric availability to a DeviceMetric.</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
         <a href="StructureDefinition-sweep-speed.html">Sweep Speed extension</a>
       </td>
       <td>
@@ -189,6 +197,14 @@
     </tr>
     <tr>
       <td>
+        <a href="StructureDefinition-Quantity.html">Quantity profile</a>
+      </td>
+      <td>
+        <p>StructureDefinition for Quantity that provides a measured amount (or an amount that can potentially be measured).</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
         <a href="StructureDefinition-SampledData.html">SampledData profile</a>
       </td>
       <td>
@@ -197,10 +213,26 @@
     </tr>
     <tr>
       <td>
-        <a href="StructureDefinition-resolution.html">Resolution extension</a>
+        <a href="StructureDefinition-lower-limit.html">Lower limit extension</a>
       </td>
       <td>
-        <p>StructureDefinition that adds a resolution to SampledData.</p>
+        <p>StructureDefinition that adds a lower limit to Quantity.</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="StructureDefinition-upper-limit.html">Upper limit extension</a>
+      </td>
+      <td>
+        <p>StructureDefinition that adds an upper limit to Quantity.</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="StructureDefinition-factor.html">Factor extension</a>
+      </td>
+      <td>
+        <p>StructureDefinition that adds a factor to Quantity.</p>
       </td>
     </tr>
     <tr>
@@ -208,7 +240,7 @@
         <a href="StructureDefinition-relative-accuracy.html">Relative accuracy extension</a>
       </td>
       <td>
-        <p>StructureDefinition that adds a relative accuracy to SampledData.</p>
+        <p>StructureDefinition that adds a relative accuracy to Quantity or SampledData.</p>
       </td>
     </tr>
     <tr>
@@ -216,7 +248,15 @@
         <a href="StructureDefinition-absolute-accuracy.html">Absolute accuracy extension</a>
       </td>
       <td>
-        <p>StructureDefinition that adds an absolute accuracy to SampledData.</p>
+        <p>StructureDefinition that adds an absolute accuracy to Quantity or SampledData.</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="StructureDefinition-resolution.html">Resolution extension</a>
+      </td>
+      <td>
+        <p>StructureDefinition that adds a resolution to SampledData.</p>
       </td>
     </tr>
     <tr>

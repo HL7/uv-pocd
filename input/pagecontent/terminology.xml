@@ -62,6 +62,14 @@
     </tr>
     <tr>
       <td>
+        <a href="CodeSystem-metric-availability.html">Metric availability codes</a>
+      </td>
+      <td>
+        <p>Metric availability definitions from the ISO/IEEE 11073-10207.</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
         <a href="CodeSystem-measurement-status.html">Measurement status codes</a>
       </td>
       <td>
@@ -120,6 +128,14 @@
       </td>
       <td>
         <p>ValueSet for IEEE 11073-10207 Relation/Kind.</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="ValueSet-metric-availability.html">Metric availability codes</a>
+      </td>
+      <td>
+        <p>ValueSet for IEEE 11073-10207 MetricAvailability.</p>
       </td>
     </tr>
     <tr>
