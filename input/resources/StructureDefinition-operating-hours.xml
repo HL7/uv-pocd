@@ -21,6 +21,11 @@
      <element id="Extension">
           <path value="Extension"/>
      </element>
+     <element id="Extension.url">
+      <path value="Extension.url" />
+      <short value="Uri indicating this is the operating hours extension" />
+      <fixedUri value="http://hl7.org/fhir/uv/pocd/StructureDefinition/operating-hours" />
+    </element>
     <element id="Extension.value[x]">
       <path value="Extension.value[x]" />
       <short value="Operating hours" />

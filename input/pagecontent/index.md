@@ -15,7 +15,7 @@ This Implementation Guide is intended for device system developers, system integ
 This Implementation Guide covers material related to work in other projects and guides including the Personal Health Device Implementation Guide, and IHE Patient Care Device (PCD) profiles.
 
 #### Personal Health Device IG
-The [Personal Health Device Implementation guide](http://hl7.org/fhir/uv/phd/) treats wellness and chronic disease management devices used mainly by nonprofessionals in home and exercise settings. This Guide is focused on acute-care devices for professional use mainly in healthcare delivery facilities. The Personal Health Device and Point-of-Care Device guides both use information models and nomenclature from the IEEE 11073 Medical Device Communications series of standards and the guides for these two kinds of devices are being developed cooperatively in the Devices On FHIR project with a goal of consistency and ease of use by use by receiving systems.
+The [Personal Health Device Implementation guide](http://hl7.org/fhir/uv/phd/) treats wellness and chronic disease management devices used mainly by nonprofessionals in home and exercise settings. This Guide is focused on acute-care devices for professional use mainly in healthcare delivery facilities. The Personal Health Device and Point-of-Care Device guides both use information models and nomenclature from the IEEE 11073 Medical Device Communications series of standards and the guides for these two kinds of devices are being developed cooperatively in the Devices On FHIR project with a goal of consistency and ease of use by receiving systems.
 
 #### Unique Device Identifier (UDI) IG(s)
 **Editor**:  UDI Pattern IG and any other IGs.
