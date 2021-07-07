@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<StructureDefinition xmlns="http://hl7.org/fhir">
-    <id value="operating-hours"/>
+<StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas-r5/fhir-single.xsd">
+  <id value="operating-hours"/>
   <url value="http://hl7.org/fhir/uv/pocd/StructureDefinition/operating-hours" />
   <name value="OperatingHours" />
   <title value="Operating hours extension"/>
   <status value="draft" />
-  <date value="2020-05-11"/>
+  <date value="2021-07-07"/>
+  <publisher value="HL7 International - Devices Work Group"/>
   <description value="OPTIONAL amount of operating hours (e.g., an OR light). There are no further semantics defined." />
   <fhirVersion value="4.0.1" />
   <kind value="complex-type" />
@@ -18,12 +19,22 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
   <derivation value="constraint" />
   <differential>
-     <element id="Extension">
-          <path value="Extension"/>
-     </element>
+    <element id="Extension">
+      <path value="Extension"/>
+      <max value="1"/>
+    </element>
+    <element id="Extension.extension">
+      <path value="Extension.extension"/>
+      <max value="0"/>
+    </element>
+    <element id="Extension.url">
+      <path value="Extension.url" />
+      <fixedUri value="http://hl7.org/fhir/uv/pocd/StructureDefinition/operating-hours" />
+    </element>
     <element id="Extension.value[x]">
       <path value="Extension.value[x]" />
       <short value="Operating hours" />
+      <min value="1"/>
       <type>
         <code value="unsignedInt" />
       </type>
