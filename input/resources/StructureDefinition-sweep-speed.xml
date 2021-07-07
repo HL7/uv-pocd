@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../input-cache/schemas-r5/fhir-single.xsd">
+<StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas-r5/fhir-single.xsd">
   <id value="sweep-speed"/>
   <url value="http://hl7.org/fhir/uv/pocd/StructureDefinition/sweep-speed"/>
   <name value="SweepSpeed"/>
   <title value="Sweep Speed extension"/>
   <status value="draft"/>
-  <date value="2020-12-06"/>
-  <publisher value="HL7 International - Health Care Devices Work Group"/>
+  <date value="2021-07-07"/>
+  <publisher value="HL7 International - Devices Work Group"/>
   <description value="StructureDefinition that adds default sweep speed to a DeviceMetric."/>
   <fhirVersion value="4.0.1"/>
   <kind value="complex-type"/>
@@ -23,6 +23,11 @@
       <path value="Extension"/>
       <short value="Default sweep speed"/>
       <definition value="Default sweep speed for real-time waveform presentation"/>
+      <max value="1"/>
+    </element>
+    <element id="Extension.extension">
+      <path value="Extension.extension"/>
+      <max value="0"/>
     </element>
     <element id="Extension.url">
       <path value="Extension.url"/>

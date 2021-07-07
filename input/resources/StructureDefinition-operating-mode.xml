@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<StructureDefinition xmlns="http://hl7.org/fhir">
+<StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas-r5/fhir-single.xsd">
   <id value="operating-mode"/>
   <url value="http://hl7.org/fhir/uv/pocd/StructureDefinition/operating-mode" />
   <name value="OperatingMode" />
   <title value="Operating mode extension"/>
   <status value="draft" />
-  <date value="2020-05-11"/>
-    <description value="Operating mode that defines if the operation is accessible." />
+  <date value="2021-07-07"/>
+  <publisher value="HL7 International - Devices Work Group"/>
+  <description value="Operating mode that defines if the operation is accessible." />
   <fhirVersion value="4.0.1" />
   <kind value="complex-type" />
   <abstract value="false" />
@@ -19,11 +20,21 @@
   <derivation value="constraint" />
   <differential>
     <element id="Extension">
-          <path value="Extension"/>
-     </element>
+      <path value="Extension"/>
+      <max value="1"/>
+    </element>
+    <element id="Extension.extension">
+      <path value="Extension.extension"/>
+      <max value="0"/>
+    </element>
+    <element id="Extension.url">
+      <path value="Extension.url"/>
+      <fixedUri value="http://hl7.org/fhir/uv/pocd/StructureDefinition/operating-mode"/>
+    </element>
     <element id="Extension.value[x]">
       <path value="Extension.value[x]" />
       <short value="Operating mode" />
+      <min value="1"/>
       <type>
         <code value="code" />
       </type>

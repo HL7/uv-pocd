@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../input-cache/schemas-r5/fhir-single.xsd">
+<StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas-r5/fhir-single.xsd">
   <id value="device-instance"/>
   <url value="http://hl7.org/fhir/uv/pocd/StructureDefinition/device-instance"/>
   <name value="DeviceInstance"/>
   <title value="Device Instance extension"/>
   <status value="draft"/>
-  <date value="2021-02-14"/>
-  <publisher value="HL7 International - Health Care Devices Work Group"/>
+  <date value="2021-07-07"/>
+  <publisher value="HL7 International - Devices Work Group"/>
   <description value="StructureDefinition that adds an instance number or label to Device or DeviceMetric."/>
   <fhirVersion value="4.0.1"/>
   <kind value="complex-type"/>
@@ -25,6 +25,7 @@
   <differential>
     <element id="Extension">
       <path value="Extension"/>
+      <max value="1"/>
     </element>
     <element id="Extension.extension">
       <path value="Extension.extension"/>
@@ -41,7 +42,6 @@
       <sliceName value="number"/>
       <short value="Instance number"/>
       <definition value="Instance number for multiple components of the same type"/>
-      <min value="1"/>
       <max value="1"/>
     </element>
     <element id="Extension.extension:number.url">
@@ -50,6 +50,7 @@
     </element>
     <element id="Extension.extension:number.value[x]:valueUnsignedInt">
       <path value="Extension.extension.valueUnsignedInt"/>
+      <min value="1"/>
       <type>
         <code value="unsignedInt"/>
       </type>
@@ -67,6 +68,7 @@
     </element>
     <element id="Extension.extension:label.value[x]:valueString">
       <path value="Extension.extension.valueString"/>
+      <min value="1"/>
       <type>
         <code value="string"/>
       </type>
@@ -76,8 +78,8 @@
       <fixedUri value="http://hl7.org/fhir/uv/pocd/StructureDefinition/device-instance"/>
     </element>
     <element id="Extension.value[x]">
-      <path value="Extension.value[x]" />
-      <max value="0" />
+      <path value="Extension.value[x]"/>
+      <max value="0"/>
     </element>
   </differential>
 </StructureDefinition>

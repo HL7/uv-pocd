@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../input-cache/schemas-r5/fhir-single.xsd">
+<StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas-r5/fhir-single.xsd">
   <id value="visual-grid"/>
   <url value="http://hl7.org/fhir/uv/pocd/StructureDefinition/visual-grid"/>
   <name value="VisualGrid"/>
   <title value="Visual Grid extension"/>
   <status value="draft"/>
-  <date value="2020-12-06"/>
-  <publisher value="HL7 International - Health Care Devices Work Group"/>
+  <date value="2021-07-07"/>
+  <publisher value="HL7 International - Devices Work Group"/>
   <description value="StructureDefinition that adds grid line definitions to a DeviceMetric."/>
   <fhirVersion value="4.0.1"/>
   <kind value="complex-type"/>
@@ -37,6 +37,7 @@
       <sliceName value="position"/>
       <short value="Grid line position"/>
       <definition value="Grid line position for waveform presentation"/>
+      <min value="1"/>
     </element>
     <element id="Extension.extension:position.url">
       <path value="Extension.extension.url"/>
@@ -54,6 +55,7 @@
       <sliceName value="level"/>
       <short value="Grid line level"/>
       <definition value="Grid line level (0 is most important)"/>
+      <max value="1"/>
     </element>
     <element id="Extension.extension:level.url">
       <path value="Extension.extension.url"/>
@@ -61,6 +63,7 @@
     </element>
     <element id="Extension.extension:level.value[x]:valueUnsignedInt">
       <path value="Extension.extension.valueUnsignedInt"/>
+      <min value="1"/>
       <type>
         <code value="unsignedInt"/>
       </type>
