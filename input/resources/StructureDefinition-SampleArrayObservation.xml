@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../input-cache/schemas-r5/fhir-single.xsd">
+<StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas-r5/fhir-single.xsd">
   <id value="SampleArrayObservation"/>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-summary">
     <valueMarkdown value="The profile defines the following rules:&#10;
@@ -12,15 +12,10 @@
   <name value="SampleArrayObservation"/>
   <title value="Sample Array Observation profile"/>
   <status value="draft"/>
-  <date value="2020-09-06"/>
-  <publisher value="HL7 International - Health Care Devices Work Group"/>
+  <date value="2021-07-07"/>
+  <publisher value="HL7 International - Devices Work Group"/>
   <description value="StructureDefinition for Observation resources that represent real-time waveforms or wave snippets."/>
   <fhirVersion value="4.0.1"/>
-  <kind value="resource"/>
-  <abstract value="false"/>
-  <type value="Observation"/>
-  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Observation"/>
-  <derivation value="constraint"/>
   <mapping>
     <identity value="dim"/>
     <uri value="urn:iso:std:iso:11073:10201"/>
@@ -31,6 +26,11 @@
     <uri value="urn:iso:std:iso:11073:10207"/>
     <name value="IEEE 11073-10207 SDC"/>
   </mapping>
+  <kind value="resource"/>
+  <abstract value="false"/>
+  <type value="Observation"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Observation"/>
+  <derivation value="constraint"/>
   <differential>
     <element id="Observation.meta">
       <path value="Observation.meta"/>

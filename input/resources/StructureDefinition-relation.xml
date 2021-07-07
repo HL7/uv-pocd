@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<StructureDefinition xmlns="http://hl7.org/fhir">
+<StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas-r5/fhir-single.xsd">
     <id value="relation"/>
   <url value="http://hl7.org/fhir/uv/pocd/StructureDefinition/relation" />
   <name value="Relation" />
-  <title value="relation extension"/>
+  <title value="Relation extension"/>
   <status value="draft" />
-  <date value="2020-05-11"/>
+  <date value="2021-07-07"/>
+  <publisher value="HL7 International - Devices Work Group"/>
   <description value="Relation allows the modelling of relationships between a metric and other containment tree entries.&#xD;&#xA;Related containment tree entries are defined in Entries, whereby the flavor of a relationship can be&#xD;&#xA;set up in Kind." />
   <fhirVersion value="4.0.1" />
+  <mapping>
+    <identity value="sdc"/>
+    <uri value="urn:iso:std:iso:11073:10207"/>
+    <name value="IEEE 11073-10207 SDC"/>
+  </mapping>
   <kind value="complex-type" />
   <abstract value="false" />
   <context>
@@ -17,11 +23,6 @@
   <type value="Extension" />
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
   <derivation value="constraint" />
-  <mapping>
-    <identity value="sdc"/>
-    <uri value="urn:iso:std:iso:11073:10207"/>
-    <name value="IEEE 11073-10207 SDC"/>
-  </mapping>
   <differential>
     <element id="Extension.extension">
       <path value="Extension.extension" />
@@ -108,21 +109,25 @@
         <identity value="sdc"/>
         <map value="AbstractMetricDescriptor/Relation/Code/CodingSystem"/>
       </mapping>
-     </element>
-     <element id="Extension.extension.value[x]:valueCoding.version">
+    </element>
+    <element id="Extension.extension.value[x]:valueCoding.version">
       <path value="Extension.extension.valueCoding.version" />
       <mapping>
         <identity value="sdc"/>
         <map value="AbstractMetricDescriptor/Relation/Code/CodingSystemVersion"/>
       </mapping>
-     </element>
+    </element>
     <element id="Extension.extension.value[x]:valueCoding.code">
       <path value="Extension.extension.valueCoding.code" />
       <mapping>
         <identity value="sdc"/>
         <map value="AbstractMetricDescriptor/Relation/Code/Code"/>
       </mapping>
-     </element>
+    </element>
+    <element id="Extension.url">
+      <path value="Extension.url"/>
+      <fixedUri value="http://hl7.org/fhir/uv/pocd/StructureDefinition/relation"/>
+    </element>
     <element id="Extension.value[x]">
       <path value="Extension.value[x]" />
       <max value="0" />
