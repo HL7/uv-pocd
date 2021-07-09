@@ -4,14 +4,26 @@
   <meta>
     <profile value="http://hl7.org/fhir/uv/pocd/StructureDefinition/MdsDevice"/>
   </meta>
+  <extension url="http://hl7.org/fhir/uv/pocd/StructureDefinition/operator">
+    <valueReference>
+      <reference value="Practitioner/SomePractitioner"/>
+    </valueReference>
+  </extension>
+  <extension url="http://hl7.org/fhir/uv/pocd/StructureDefinition/operating-hours">
+    <valueUnsignedInt value="8760"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/uv/pocd/StructureDefinition/operating-cycles">
+    <valueUnsignedInt value="156"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/uv/pocd/StructureDefinition/operating-mode">
+    <valueCode value="Dmo"/>
+  </extension>
   <identifier>
     <system value="urn:oid:1.2.840.10004.1.1.1.0.0.1.0.0.1.2680"/>
     <value value="01-23-45-67-89-AB-CD-EF"/>
   </identifier>
   <udiCarrier>
     <deviceIdentifier value="00012345678905"/>
-    <issuer value="http://hl7.org/fhir/NamingSystem/gs1-di"/>
-    <jurisdiction value="http://hl7.org/fhir/NamingSystem/fda-udi"/>
     <carrierHRF value="(01)00012345678905(21)123456"/>
   </udiCarrier>
   <status value="active"/>
@@ -21,7 +33,7 @@
     <name value="MyPhysioMonitor"/>
     <type value="model-name"/>
   </deviceName>
-  <modelNumber value="PM42"/>
+  <modelNumber value="PM1"/>
   <type>
     <coding>
       <system value="urn:iso:std:iso:11073:10101"/>

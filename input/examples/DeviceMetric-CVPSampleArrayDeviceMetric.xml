@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DeviceMetric xmlns="http://hl7.org/fhir">
+  <id value="CVPSampleArrayDeviceMetric"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/uv/pocd/StructureDefinition/SampleArrayDeviceMetric"/>
+  </meta>
+  <extension url="http://hl7.org/fhir/uv/pocd/StructureDefinition/sweep-speed">
+    <valueQuantity>
+      <value value="25"/>
+      <unit value="mm/s"/>
+      <system value="http://unitsofmeasure.org"/>
+      <code value="mm/s"/>
+    </valueQuantity>
+  </extension>
+  <extension url="http://hl7.org/fhir/uv/pocd/StructureDefinition/visual-grid">
+    <extension url="position">
+      <valueQuantity>
+        <value value="0"/>
+        <unit value="mmHg"/>
+        <system value="http://unitsofmeasure.org"/>
+        <code value="mm[Hg]"/>
+      </valueQuantity>
+    </extension>
+    <extension url="position">
+      <valueQuantity>
+        <value value="10"/>
+        <unit value="mmHg"/>
+        <system value="http://unitsofmeasure.org"/>
+        <code value="mm[Hg]"/>
+      </valueQuantity>
+    </extension>
+    <extension url="level">
+      <valueUnsignedInt value="0"/>
+    </extension>
+  </extension>
+  <extension url="http://hl7.org/fhir/uv/pocd/StructureDefinition/visual-grid">
+    <extension url="position">
+      <valueQuantity>
+        <value value="5"/>
+        <unit value="mmHg"/>
+        <system value="http://unitsofmeasure.org"/>
+        <code value="mm[Hg]"/>
+      </valueQuantity>
+    </extension>
+    <extension url="level">
+      <valueUnsignedInt value="1"/>
+    </extension>
+  </extension>
+  <type>
+    <coding>
+      <system value="urn:iso:std:iso:11073:10101"/>
+      <code value="150084"/>
+      <display value="MDC_PRESS_BLD_VEN_CENT"/>
+    </coding>
+    <text value="CVP"/>
+  </type>
+  <unit>
+    <coding>
+      <system value="urn:iso:std:iso:11073:10101"/>
+      <code value="266016"/>
+      <display value="MDC_DIM_MMHG"/>
+    </coding>
+    <text value="mmHg"/>
+  </unit>
+  <source>
+    <reference value="Device/PhysioMonitorMdsDevice"/>
+  </source>
+  <parent>
+    <reference value="Device/BloodPressureChannelDevice"/>
+  </parent>
+  <operationalStatus value="on"/>
+  <color value="cyan"/>
+  <category value="measurement"/>
+  <calibration>
+    <type value="offset"/>
+    <state value="calibrated"/>
+    <time value="2021-07-09T10:20:30+02:00"/>
+  </calibration>
+</DeviceMetric>

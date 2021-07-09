@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Device xmlns="http://hl7.org/fhir">
+  <id value="BloodPressureVmdDevice"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/uv/pocd/StructureDefinition/VmdDevice"/>
+  </meta>
+  <extension url="http://hl7.org/fhir/uv/pocd/StructureDefinition/device-instance">
+    <extension url="number">
+      <valueUnsignedInt value="1"/>
+    </extension>
+  </extension>
+  <status value="active"/>
+  <type>
+    <coding>
+       <system value="urn:iso:std:iso:11073:10101"/>
+       <code value="69710"/>
+       <display value="MDC_DEV_ANALY_PRESS_BLD_VMD"/>
+    </coding>
+ </type>
+<parent>
+    <reference value="Device/PhysioMonitorMdsDevice"/>
+  </parent>
+</Device>

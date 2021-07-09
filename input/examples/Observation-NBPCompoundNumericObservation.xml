@@ -27,7 +27,7 @@
   <subject>
     <reference value="Patient/SomePatient"/>
   </subject>
-  <effectiveDateTime value="2019-09-24T15:22:25+02:00"/>
+  <effectiveDateTime value="2021-07-09T11:30:12+02:00"/>
   <device>
     <reference value="DeviceMetric/NBPNumericDeviceMetric"/>
   </device>

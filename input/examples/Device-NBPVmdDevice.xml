@@ -6,8 +6,6 @@
   </meta>
   <udiCarrier>
     <deviceIdentifier value="00012345678912"/>
-    <issuer value="http://hl7.org/fhir/NamingSystem/gs1-di"/>
-    <jurisdiction value="http://hl7.org/fhir/NamingSystem/fda-udi"/>
     <carrierHRF value="(01)00012345678912(21)567890"/>
   </udiCarrier>
   <status value="active"/>

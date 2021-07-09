@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Device xmlns="http://hl7.org/fhir">
+  <id value="BloodPressureChannelDevice"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/uv/pocd/StructureDefinition/ChannelDevice"/>
+  </meta>
+  <status value="active"/>
+  <type>
+    <coding>
+      <system value="urn:iso:std:iso:11073:10101"/>
+      <code value="69711"/>
+      <display value="MDC_DEV_ANALY_PRESS_BLD_CHAN"/>
+    </coding>
+  </type>
+  <parent>
+    <reference value="Device/BloodPressureVmdDevice"/>
+  </parent>
+</Device>

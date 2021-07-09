@@ -27,7 +27,7 @@
   <subject>
     <reference value="Patient/SomePatient"/>
   </subject>
-  <effectiveDateTime value="2019-09-24T15:22:25+02:00"/>
+  <effectiveDateTime value="2021-07-09T11:33:24+02:00"/>
   <valueQuantity>
     <value value="60"/>
     <unit value="bpm"/>

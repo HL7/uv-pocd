@@ -4,6 +4,9 @@
   <meta>
     <profile value="http://hl7.org/fhir/uv/pocd/StructureDefinition/NumericDeviceMetric"/>
   </meta>
+  <extension url="http://hl7.org/fhir/uv/pocd/StructureDefinition/metric-availability">
+    <valueCode value="Intr"/>
+  </extension>
   <type>
     <coding>
       <system value="urn:iso:std:iso:11073:10101"/>

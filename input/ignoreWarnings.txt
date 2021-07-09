@@ -2,10 +2,3 @@
 
 # Add warning and/or information messages here after you've confirmed that they aren't really a problem
 # (And include comments like this justifying why)
-
-# The following code systems are external and not supported by terminology server
-Error from server: Unable to provide support for code system urn:iso:std:iso:11073:10101
-Code System URI 'urn:iso:std:iso:11073:10101' is unknown so the code cannot be validated
-[Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/uv/pocd/ValueSet/11073MDC-object because the value set or code system is not known to the validator]
-[Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/uv/pocd/ValueSet/11073MDC-metric because the value set or code system is not known to the validator]
-[Unable to determine whether the provided codes are in the value set http://hl7.org/fhir/uv/pocd/ValueSet/11073MDC-dimension because the value set or code system is not known to the validator]

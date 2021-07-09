@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Practitioner xmlns="http://hl7.org/fhir">
+  <id value="SomePractitioner"/>
+  <active value="true"/>
+  <name>
+     <family value="Careful"/>
+     <given value="Alice"/>
+     <given value="B."/>
+     <prefix value="Dr."/>
+  </name>
+</Practitioner>

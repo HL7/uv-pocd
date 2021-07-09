@@ -7,7 +7,7 @@
   <title value="Point-of-Care Device Implementation Guide"/>
   <status value="draft"/>
   <experimental value="false"/>
-  <date value="2021-06-22"/>
+  <date value="2021-07-09"/>
   <publisher value="HL7 International - Devices Work Group"/>
   <contact>
     <telecom>
@@ -411,14 +411,6 @@
     </resource>
     <resource>
       <reference>
-        <reference value="Device/NBPVmdDevice"/>
-      </reference> 
-      <name value="NBP VMD example"/>
-      <description value="Example of a Device resource that represents a non-invasive blood pressure subsystem."/>
-      <exampleCanonical value="http://hl7.org/fhir/uv/pocd/StructureDefinition/VmdDevice"/>
-    </resource>
-    <resource>
-      <reference>
         <reference value="Device/ECGChannelDevice"/>
       </reference> 
       <name value="ECG Channel example"/>
@@ -427,19 +419,19 @@
     </resource>
     <resource>
       <reference>
-        <reference value="Device/HeartRateChannelDevice"/>
+        <reference value="DeviceMetric/ECGSampleArrayDeviceMetric"/>
       </reference> 
-      <name value="Heart Rate Channel example"/>
-      <description value="Example of a Device resource that represents a heart rate channel."/>
-      <exampleCanonical value="http://hl7.org/fhir/uv/pocd/StructureDefinition/ChannelDevice"/>
+      <name value="ECG Sample Array metric example"/>
+      <description value="Example of a DeviceMetric resource that represents an ECG metric."/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/pocd/StructureDefinition/SampleArrayDeviceMetric"/>
     </resource>
     <resource>
       <reference>
-        <reference value="Device/NBPChannelDevice"/>
+        <reference value="Observation/ECGSampleArrayObservation"/>
       </reference> 
-      <name value="NBP Channel example"/>
-      <description value="Example of a Device resource that represents a non-invasive blood pressure channel."/>
-      <exampleCanonical value="http://hl7.org/fhir/uv/pocd/StructureDefinition/ChannelDevice"/>
+      <name value="ECG Sample Array observation example"/>
+      <description value="Example of an Observation resource that represents ECG waveforms."/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/pocd/StructureDefinition/SampleArrayObservation"/>
     </resource>
     <resource>
       <reference>
@@ -451,11 +443,83 @@
     </resource>
     <resource>
       <reference>
+        <reference value="Observation/RhythmStatusEnumerationObservation"/>
+      </reference> 
+      <name value="Rhythm Status Enumeration observation example"/>
+      <description value="Example of an Observation resource that represents coded rhythm status."/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/pocd/StructureDefinition/EnumerationObservation"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Device/HeartRateChannelDevice"/>
+      </reference> 
+      <name value="Heart Rate Channel example"/>
+      <description value="Example of a Device resource that represents a heart rate channel."/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/pocd/StructureDefinition/ChannelDevice"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="DeviceMetric/HeartRateNumericDeviceMetric"/>
       </reference> 
       <name value="Heart Rate Numeric metric example"/>
       <description value="Example of a DeviceMetric resource that represents a heart rate metric."/>
       <exampleCanonical value="http://hl7.org/fhir/uv/pocd/StructureDefinition/NumericDeviceMetric"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Observation/HeartRateNumericObservation"/>
+      </reference> 
+      <name value="Heart Rate Numeric observation example"/>
+      <description value="Example of an Observation resource that represents heart rate measurement."/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/pocd/StructureDefinition/NumericObservation"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Device/BloodPressureVmdDevice"/>
+      </reference> 
+      <name value="Blood Pressure VMD example"/>
+      <description value="Example of a Device resource that represents an invasive blood pressure subsystem."/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/pocd/StructureDefinition/VmdDevice"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Device/BloodPressureChannelDevice"/>
+      </reference> 
+      <name value="Blood Pressure Channel example"/>
+      <description value="Example of a Device resource that represents an invasive blood pressure channel."/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/pocd/StructureDefinition/ChannelDevice"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="DeviceMetric/CVPSampleArrayDeviceMetric"/>
+      </reference> 
+      <name value="CVP Sample Array metric example"/>
+      <description value="Example of a DeviceMetric resource that represents a central venous pressure metric."/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/pocd/StructureDefinition/SampleArrayDeviceMetric"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Observation/CVPSampleArrayObservation"/>
+      </reference> 
+      <name value="CVP Sample Array observation example"/>
+      <description value="Example of an Observation resource that represents central venous pressure waveform."/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/pocd/StructureDefinition/SampleArrayObservation"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Device/NBPVmdDevice"/>
+      </reference> 
+      <name value="NBP VMD example"/>
+      <description value="Example of a Device resource that represents a non-invasive blood pressure subsystem."/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/pocd/StructureDefinition/VmdDevice"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Device/NBPChannelDevice"/>
+      </reference> 
+      <name value="NBP Channel example"/>
+      <description value="Example of a Device resource that represents a non-invasive blood pressure channel."/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/pocd/StructureDefinition/ChannelDevice"/>
     </resource>
     <resource>
       <reference>
@@ -467,26 +531,10 @@
     </resource>
     <resource>
       <reference>
-        <reference value="Observation/RhythmStatusEnumerationObservation"/>
-      </reference> 
-      <name value="Rhythm Status Enumeration observation example"/>
-      <description value="Example of an Observation resource that represents coded status."/>
-      <exampleCanonical value="http://hl7.org/fhir/uv/pocd/StructureDefinition/EnumerationObservation"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="Observation/HeartRateNumericObservation"/>
-      </reference> 
-      <name value="Heart Rate Numeric observation example"/>
-      <description value="Example of an Observation resource that represents numerical measurement."/>
-      <exampleCanonical value="http://hl7.org/fhir/uv/pocd/StructureDefinition/NumericObservation"/>
-    </resource>
-    <resource>
-      <reference>
         <reference value="Observation/NBPCompoundNumericObservation"/>
       </reference> 
       <name value="NBP Numeric observation example"/>
-      <description value="Example of an Observation resource that represents numerical measurement with multiple components."/>
+      <description value="Example of an Observation resource that represents non-invasive blood pressure measurement."/>
       <exampleCanonical value="http://hl7.org/fhir/uv/pocd/StructureDefinition/CompoundNumericObservation"/>
     </resource>
     <resource>
@@ -495,7 +543,15 @@
       </reference>
       <name value="Some Patient example"/>
       <description value="Example of a Patient resource."/>
-      <exampleBoolean value="true"/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/pocd/StructureDefinition/Patient"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Practitioner/SomePractitioner"/>
+      </reference>
+      <name value="Some Practitioner example"/>
+      <description value="Example of a Practitioner resource."/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/pocd/StructureDefinition/Practitioner"/>
     </resource>
     <resource>
       <reference>
@@ -538,7 +594,7 @@
           <title value="Mapping from IEEE 11073-10201 DIM to FHIR"/>
           <generation value="markdown"/>
         </page>
-		<page>
+		    <page>
           <nameUrl value="mappingsdc.html"/>
           <title value="Mapping from IEEE 11073-10207 SDC to FHIR"/>
           <generation value="markdown"/>

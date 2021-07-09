@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DeviceMetric xmlns="http://hl7.org/fhir">
+  <id value="ECGSampleArrayDeviceMetric"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/uv/pocd/StructureDefinition/SampleArrayDeviceMetric"/>
+  </meta>
+  <extension url="http://hl7.org/fhir/uv/pocd/StructureDefinition/sweep-speed">
+    <valueQuantity>
+      <value value="25"/>
+      <unit value="mm/s"/>
+      <system value="http://unitsofmeasure.org"/>
+      <code value="mm/s"/>
+    </valueQuantity>
+  </extension>
+  <type>
+    <coding>
+      <system value="urn:iso:std:iso:11073:10101"/>
+      <code value="131328"/>
+      <display value="MDC_ECG_ELEC_POTL"/>
+    </coding>
+    <text value="ECG"/>
+  </type>
+  <unit>
+    <coding>
+      <system value="urn:iso:std:iso:11073:10101"/>
+      <code value="266418"/>
+      <display value="MDC_DIM_MILLI_VOLT"/>
+    </coding>
+    <text value="mV"/>
+  </unit>
+  <source>
+    <reference value="Device/PhysioMonitorMdsDevice"/>
+  </source>
+  <parent>
+    <reference value="Device/ECGChannelDevice"/>
+  </parent>
+  <operationalStatus value="on"/>
+  <color value="green"/>
+  <category value="measurement"/>
+</DeviceMetric>

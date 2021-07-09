@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="CVPSampleArrayObservation"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/uv/pocd/StructureDefinition/SampleArrayObservation"/>
+  </meta>
+  <status value="final"/>
+  <code>
+    <coding>
+      <system value="urn:iso:std:iso:11073:10101"/>
+      <code value="150084"/>
+      <display value="MDC_PRESS_BLD_VEN_CENT"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/SomePatient"/>
+  </subject>
+  <effectivePeriod>
+    <start value="2021-07-09T11:33:23+02:00"/>
+    <end value="2021-07-09T11:33:24+02:00"/>
+  </effectivePeriod>
+  <valueSampledData>
+    <origin>
+      <value value="0"/>
+      <unit value="mmHg"/>
+      <system value="http://unitsofmeasure.org"/>
+      <code value="mm[Hg]"/>
+    </origin>
+    <period value="8"/>
+    <dimensions value="1"/>
+    <data value="2.00 2.00 2.00 2.01 2.02 2.03 2.06 2.09 2.13 2.19 2.25 2.33 2.42 2.53 2.65 2.78 2.93 3.09 3.27 3.47 3.68 3.90 4.14 4.40 4.67 4.96 5.34 5.82 6.37 6.90 7.35 7.68 7.89 7.98 8.00 7.94 7.82 7.64 7.41 7.14 6.84 6.48 6.11 5.85 5.73 5.79 5.95 6.22 6.45 6.54 6.56 6.44 6.20 5.88 5.48 5.01 4.71 4.44 4.18 3.95 3.73 3.53 3.36 3.20 3.06 2.94 2.85 2.77 2.70 2.67 2.64 2.64 2.65 2.70 2.75 2.82 2.91 3.02 3.15 3.29 3.46 3.64 3.84 4.06 4.27 4.48 4.68 4.88 5.06 5.23 5.38 5.52 5.63 5.71 5.76 5.75 5.72 5.62 5.47 5.26 5.01 4.74 4.45 4.16 3.90 3.66 3.45 3.25 3.08 2.92 2.78 2.66 2.55 2.46 2.37 2.31 2.24 2.19 2.15 2.11 2.08 2.05 2.03 2.02 2.01"/>
+ </valueSampledData>
+  <device>
+    <reference value="DeviceMetric/CVPSampleArrayDeviceMetric"/>
+  </device>
+</Observation>

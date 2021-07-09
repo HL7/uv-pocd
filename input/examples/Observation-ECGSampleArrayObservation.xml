@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="ECGSampleArrayObservation"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/uv/pocd/StructureDefinition/SampleArrayObservation"/>
+  </meta>
+  <status value="final"/>
+  <code>
+    <coding>
+      <system value="urn:iso:std:iso:11073:10101"/>
+      <code value="131328"/>
+      <display value="MDC_ECG_ELEC_POTL"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/SomePatient"/>
+  </subject>
+  <effectivePeriod>
+    <start value="2021-07-09T11:33:23+02:00"/>
+    <end value="2021-07-09T11:33:24+02:00"/>
+  </effectivePeriod>
+  <device>
+    <reference value="DeviceMetric/ECGSampleArrayDeviceMetric"/>
+  </device>
+  <component>
+    <code>
+      <coding>
+        <system value="urn:iso:std:iso:11073:10101"/>
+        <code value="131329"/>
+        <display value="MDC_ECG_ELEC_POTL_I"/>
+      </coding>
+    </code>
+    <valueSampledData>
+      <origin>
+        <value value="-0.5"/>
+        <unit value="mV"/>
+        <system value="http://unitsofmeasure.org"/>
+        <code value="mV"/>
+      </origin>
+      <period value="8"/>
+      <factor value="0.001"/>
+      <dimensions value="1"/>
+      <data value="500 500 500 500 500 500 500 500 500 500 500 500 500 507 514 521 525 528 530 532 530 528 525 521 514 507 500 500 500 500 500 500 500 500 500 500 500 500 500 600 700 800 900 1000 1100 983 867 750 633 517 400 425 450 475 500 500 500 500 500 500 500 500 500 500 500 500 500 500 500 500 500 500 500 510 519 529 536 543 549 554 558 562 563 565 566 565 563 562 558 554 549 543 536 529 519 510 500 500 500 500 500 500 500 500 500 500 500 500 500 500 500 500 500 500 500 500 500 500 500 500 500 500 500 500 500"/>
+    </valueSampledData>
+  </component>
+  <component>
+    <code>
+      <coding>
+        <system value="urn:iso:std:iso:11073:10101"/>
+        <code value="131330"/>
+        <display value="MDC_ECG_ELEC_POTL_II"/>
+      </coding>
+    </code>
+    <valueSampledData>
+      <origin>
+        <value value="-0.5"/>
+        <unit value="mV"/>
+        <system value="http://unitsofmeasure.org"/>
+        <code value="mV"/>
+      </origin>
+      <period value="8"/>
+      <factor value="0.001"/>
+      <dimensions value="1"/>
+      <data value="500 500 500 500 500 500 500 500 500 500 500 500 500 511 523 534 543 549 551 553 551 549 543 534 523 511 500 500 500 500 500 500 500 500 500 475 450 425 400 583 767 950 1133 1317 1500 1300 1100 900 700 500 300 340 380 420 460 500 500 500 500 500 500 500 500 500 500 500 500 500 500 500 500 500 500 517 535 552 565 577 590 597 605 612 615 617 620 617 615 612 605 597 590 577 565 552 535 517 500 500 500 500 500 500 500 500 500 500 500 500 500 500 500 500 500 500 500 500 500 500 500 500 500 500 500 500 500"/>
+    </valueSampledData>
+  </component>
+  <component>
+    <code>
+      <coding>
+        <system value="urn:iso:std:iso:11073:10101"/>
+        <code value="131389"/>
+        <display value="MDC_ECG_ELEC_POTL_III"/>
+      </coding>
+    </code>
+    <valueSampledData>
+      <origin>
+        <value value="-0.5"/>
+        <unit value="mV"/>
+        <system value="http://unitsofmeasure.org"/>
+        <code value="mV"/>
+      </origin>
+      <period value="8"/>
+      <factor value="0.001"/>
+      <dimensions value="1"/>
+      <data value="500 500 500 500 500 500 500 500 500 500 500 500 500 507 513 520 525 527 530 532 530 528 526 521 514 507 500 500 500 500 500 500 500 500 500 475 450 425 400 483 567 650 733 817 900 817 733 650 567 483 400 425 450 475 500 500 500 500 500 500 500 500 500 500 500 500 500 500 500 500 500 500 500 510 519 529 536 543 549 554 558 562 563 565 566 565 563 562 558 554 549 543 536 529 519 510 500 500 500 500 500 500 500 500 500 500 500 500 500 500 500 500 500 500 500 500 500 500 500 500 500 500 500 500 500"/>
+    </valueSampledData>
+  </component>
+</Observation>
