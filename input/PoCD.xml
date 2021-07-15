@@ -7,7 +7,7 @@
   <title value="Point-of-Care Device Implementation Guide"/>
   <status value="draft"/>
   <experimental value="false"/>
-  <date value="2021-07-09"/>
+  <date value="2021-07-15"/>
   <publisher value="HL7 International - Devices Work Group"/>
   <contact>
     <telecom>
@@ -335,6 +335,7 @@
         <reference value="ValueSet/11073MDC-object"/>
       </reference>
       <name value="MDC Object infrastructure and Device nomenclature"/>
+      <description value="ValueSet for the ISO/IEEE 11073-10101 Nomenclature filtered by Object partition."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -342,7 +343,7 @@
         <reference value="ValueSet/11073MDC-metric"/>
       </reference>
       <name value="MDC Metric nomenclature"/>
-      <description value="ValueSet for the ISO/IEEE 11073-10101 Nomenclature filtered by Metric partition."/>
+      <description value="ValueSet for the ISO/IEEE 11073-10101 Nomenclature filtered by Metric (SCADA or Settings) partition."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -599,11 +600,11 @@
           <title value="Mapping from IEEE 11073-10207 SDC to FHIR"/>
           <generation value="markdown"/>
         </page>
-        <!-- <page>
+        <page>
           <nameUrl value="transfer.html"/>
           <title value="RESTful Transfer"/>
           <generation value="markdown"/>
-        </page> -->
+        </page>
       </page>
       <page>
         <nameUrl value="profiles.html"/>

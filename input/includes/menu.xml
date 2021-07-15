@@ -27,7 +27,7 @@
         <a href="mappingsdc.html">Mapping from IEEE 11073-10207 SDC to FHIR</a>
       </li>
       <li>
-        <a href="#">RESTful Transfer</a>
+        <a href="transfer.html">RESTful Transfer</a>
       </li>
       <!-- <li>
         <a href="#">Safety Considerations</a>
