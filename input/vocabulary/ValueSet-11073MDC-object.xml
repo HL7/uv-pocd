@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ValueSet xmlns="http://hl7.org/fhir">
+<ValueSet xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas-r5/fhir-single.xsd">
   <id value="11073MDC-object"/>
   <meta>
     <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
@@ -9,8 +9,8 @@
   <title value="MDC Object infrastructure and Device nomenclature"/>
   <status value="draft"/>
   <experimental value="false"/>
-  <date value="2019-09-28"/>
-  <publisher value="HL7 International - Health Care Devices Work Group"/>
+  <date value="2021-07-14"/>
+  <publisher value="HL7 International - Devices Work Group"/>
   <description value="ValueSet for the ISO/IEEE 11073-10101 Nomenclature filtered by Object partition."/>
   <compose>
     <include>

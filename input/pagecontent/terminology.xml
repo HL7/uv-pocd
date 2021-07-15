@@ -1,29 +1,29 @@
 <div xmlns="http://www.w3.org/1999/xhtml">
   <p>
-    The ISO/IEEE 11073-10101 Nomenclature standard (11073 MDC) provides a comprehensive terminology for device models according to the ISO/IEEE 11073-10201 Domain information model (DIM). 
+    The ISO/IEEE 11073-10101 Nomenclature standard (MDC) provides a comprehensive terminology for device models according to the ISO/IEEE 11073-10201 Domain information model (DIM). 
     It's the preferred code system for profiles in this implementation guide. 
     Reference identifiers, terminology codes, and descriptions are available at the <a href="https://rtmms.nist.gov/rtmms/index.htm">Rosetta Terminology Mapping Management System</a> (RTMMS).
   </p>
   <p>The PoCD profiles define rules for terminology usage:</p>
   <ul>
     <li>
-      <code>Device.type</code> shall have a coding from the 11073 MDC Device nomenclature if there is an appropriate code available. 
+      <code>Device.type</code> shall have a coding from the MDC Device nomenclature if there is an appropriate code available. 
       This ensures consistent coding using the ISO/IEEE 11073-10101 Nomenclature standard, which provides MDS, VMD, and Channel codes for device models according to the DIM. 
-      If there is no code available, proposed or private 11073 MDC codes or coding from an alternative code system may be used. 
+      If there is no code available, proposed or private MDC codes or coding from an alternative code system may be used. 
       As this element is of type CodeableConcept there can be additional coding from other code systems.
     </li>
-    <li>Same for the <code>DeviceMetric.type</code>, which shall have a coding from the 11073 MDC Metric nomenclature if there is an appropriate code available.</li>
+    <li>Same for the <code>DeviceMetric.type</code>, which shall have a coding from the MDC Metric nomenclature if there is an appropriate code available.</li>
     <li>
       <code>DeviceMetric.unit</code> is an optional element of type CodeableConcept. 
-      If present, it shall have a coding from the 11073 MDC Units of measurement if there is an appropriate code available. Additional other coding is allowed as well. 
-      This element is the place for the 11073 MDC unit code, because the Observation resource has other constraints - see below.
+      If present, it shall have a coding from the MDC Units of measurement if there is an appropriate code available. Additional other coding is allowed as well. 
+      This element is the place for the MDC unit code, because the Observation resource has other constraints - see below.
     </li>
   </ul>
-  <p>The <a href="{{site.data.fhir.path}}observation-vitalsigns.html">Vital Signs Profile</a>, which is part of FHIR core specification, applies for some commonly used measurement observations (e. g., heart rate, blood pressure, respiratory rate, oxygen saturation, body temperature):</p>
+  <p>The <a href="{{site.data.fhir.path}}observation-vitalsigns.html">Vital Signs Profile</a>, which is part of FHIR core specification, applies for some commonly used measurement observations (e.g., heart rate, blood pressure, respiratory rate, oxygen saturation, body temperature):</p>
   <ul>
     <li>
-      The PoCD profiles require an 11073 MDC coding in <code>Observation.code</code> and, for compound metrics, in <code>Observation.component.code</code>. 
-      Depending on the type of measurement, the Vital Signs profiles may require <a href="{{site.data.fhir.path}}loinc.html">LOINC</a> codes. 
+      The PoCD profiles require an MDC coding in <code>Observation.code</code> and, for compound metrics, in <code>Observation.component.code</code>. 
+      Depending on the type of measurement, the Vital Signs profile may require <a href="{{site.data.fhir.path}}loinc.html">LOINC</a> codes as additional coding. 
       Note that the MDC code can be more specific than the Vital Signs LOINC code.
     </li>
     <li>
@@ -31,7 +31,11 @@
       There is only a single coding that needs to be <a href="{{site.data.fhir.path}}ucum.html">UCUM</a> for all vital signs. Therefore the PoCD profiles require UCUM coding for all numerics.
     </li>
   </ul>
-  <a name="1"></a>
+  <p>
+    Regenstrief, developers of LOINC, and IEEE, developers of the 11073 standards, are working together to support interoperable communications of medical and personal health devices.
+    There is a <a href="https://loinc.org/download/loincieee-medical-device-code-mapping-table/">LOINC/IEEE Medical Device Code Mapping Table</a> available as product of this collaboration.
+  </p>
+  <a name="1"> </a>
   <h3>Code Systems</h3>
   <table class="table-striped" style="width:100%">
     <col style="width:40%"/>
@@ -77,7 +81,7 @@
       </td>
     </tr>
   </table>
-  <a name="2"></a>
+  <a name="2"> </a>
   <h3>Value Sets</h3>
   <table class="table-striped" style="width:100%">
     <col style="width:40%"/>
@@ -95,7 +99,7 @@
         <a href="ValueSet-11073MDC-metric.html">MDC Metric nomenclature</a>
       </td>
       <td>
-        <p>ValueSet for the ISO/IEEE 11073-10101 Nomenclature filtered by Metric partition.</p>
+        <p>ValueSet for the ISO/IEEE 11073-10101 Nomenclature filtered by Metric (SCADA or Settings) partition.</p>
       </td>
     </tr>
     <tr>
