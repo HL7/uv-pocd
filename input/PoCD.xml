@@ -7,7 +7,7 @@
   <title value="Point-of-Care Device Implementation Guide"/>
   <status value="draft"/>
   <experimental value="false"/>
-  <date value="2021-07-15"/>
+  <date value="2021-07-17"/>
   <publisher value="HL7 International - Devices Work Group"/>
   <contact>
     <telecom>
@@ -26,6 +26,14 @@
   <license value="CC0-1.0"/>
   <fhirVersion value="4.0.1"/>
   <definition>
+    <resource>
+      <reference>
+        <reference value="CapabilityStatement/ServerCapabilityStatement"/>
+      </reference>
+      <name value="Server CapabilityStatement"/>
+      <description value="CapabilityStatement that describes the expected capabilities of a server processing data from Point-of-Care devices."/>
+      <exampleBoolean value="false"/>
+    </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/MdsDevice"/>

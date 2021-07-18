@@ -1,6 +1,6 @@
 Most FHIR implementations follow the [RESTful]({{site.data.fhir.path}}http.html) approach for transferring resources between client and server. The FHIR server provides the RESTful API for managing resources. A medical device or gateway acts as FHIR client, which reports device data using create and update interactions. Other clients (e.g., clinical applications) use read or search interactions to access stored data. There is also a subscription mechanism to get notifications when data becomes available.
 
-Requirements for a FHIR server supporting this implementation guide are listed in the (*to be completed*) CapabilityStatement.
+Requirements for a FHIR server supporting this implementation guide are listed in the [Server CapabilityStatement](CapabilityStatement-ServerCapabilityStatement.html).
 
 This section explains the transfer of device-sourced resources as listed on the [Profiles](profiles.html) page to a FHIR server using transaction bundles.
 
@@ -269,3 +269,5 @@ Note that this approach will fail if there are multiple resource instances that 
 
 ### Delete
 A resource should only be deleted if the object that it represents does no longer exist. In most cases, changing the operational status (`Device.status` or `DeviceMetric.operationalStatus`) is more appropriate.
+
+**Delete** is an HTTP DELETE request without resource content.
