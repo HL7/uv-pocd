@@ -7,7 +7,7 @@
 * `Observation.subject` shall be present and refer to a Patient resource or MDS Device resource.&#10;
 * Either `Observation.valueCodeableConcept` or `Observation.valueString` or, if there is no value, `Observation.dataAbsentReason` shall be present.&#10;
 * `Observation.interpretation` coding includes measurement status.&#10;
-* `Observation.device` shall be present and refer to the Enumeration DeviceMetric resource where this observation belongs to."/>
+* `Observation.device` shall be present and refer to the Enumeration DeviceMetric resource which this observation belongs to."/>
   </extension>
   <url value="http://hl7.org/fhir/uv/pocd/StructureDefinition/EnumerationObservation"/>
   <name value="EnumerationObservation"/>
