@@ -7,7 +7,7 @@
 * `Observation.subject` shall be present and refer to a Patient resource or MDS Device resource.&#10;
 * Either `Observation.valueQuantity` or `Observation.valueRatio` or, if there is no value, `Observation.dataAbsentReason` shall be present. Values shall have a UCUM unit code.&#10;
 * `Observation.interpretation` coding includes measurement status.&#10;
-* `Observation.device` shall be present and refer to the Numeric DeviceMetric resource where this observation belongs to."/>
+* `Observation.device` shall be present and refer to the Numeric DeviceMetric resource which this observation belongs to."/>
   </extension>
   <url value="http://hl7.org/fhir/uv/pocd/StructureDefinition/NumericObservation"/>
   <name value="NumericObservation"/>

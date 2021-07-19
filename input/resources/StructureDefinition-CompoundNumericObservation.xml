@@ -5,8 +5,8 @@
     <valueMarkdown value="The profile defines the following rules:&#10;
 * `Observation.code` and `Observation.component.code` shall have a coding from the ISO/IEEE 11073 MDC Metric nomenclature if there is an appropriate code available. Depending on the type of measurement, the [Vital Signs profiles](http://hl7.org/fhir/observation-vitalsigns.html) may require additional LOINC codes.&#10;
 * `Observation.subject` shall be present and refer to a Patient resource or MDS Device resource.&#10;
-* `Observation.value[x]` must not be there.&#10;
-* `Observation.device` shall be present and refer to the Numeric DeviceMetric resource where this observation belongs to.&#10;
+* `Observation.value[x]` must not be present.&#10;
+* `Observation.device` shall be present and refer to the Numeric DeviceMetric resource which this observation belongs to.&#10;
 * For each component, `Observation.component.valueQuantity` or, if there is no value, `Observation.component.dataAbsentReason` shall be present. Values shall have a UCUM unit code.&#10;
 * `Observation.component.interpretation` coding includes measurement status."/>
   </extension>
