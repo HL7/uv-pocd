@@ -7,13 +7,14 @@
 * `Device.type` shall be present and have a coding from the ISO/IEEE 11073 MDC Device nomenclature if there is an appropriate code available.&#10;
 * `Device.patient` and `Device.location` references must not be present.&#10;
 * `Device.parent` shall be pesent and refer to the VMD Device resource which this channel belongs to.&#10;
-* If multiple instances of the same Channel type exist, the Instance extension allows a sequence to be defined."/>
+* If multiple instances of the same Channel type exist, the Instance extension allows a sequence to be defined.&#10;
+* Extensions allow operating hours and operating cycles to be added."/>
   </extension>
   <url value="http://hl7.org/fhir/uv/pocd/StructureDefinition/ChannelDevice"/>
   <name value="ChannelDevice"/>
   <title value="Channel Device profile"/>
   <status value="draft"/>
-  <date value="2021-07-07"/>
+  <date value="2021-07-24"/>
   <publisher value="HL7 International - Devices Work Group"/>
   <description value="StructureDefinition for Device resources that represent Channels, which are used for grouping metrics together."/>
   <fhirVersion value="4.0.1"/>
@@ -55,6 +56,7 @@
         <code value="Extension"/>
         <profile value="http://hl7.org/fhir/uv/pocd/StructureDefinition/device-instance"/>
       </type>
+      <mustSupport value="true"/>
     </element>
     <element id="Device.extension:instance.extension:number">
       <path value="Device.extension.extension"/>
@@ -83,14 +85,15 @@
     <element id="Device.extension:operatingHours">
       <path value="Device.extension" />
       <sliceName value="operatingHours" />
-      <short value="operating hours" />
-      <definition value="optional amount of operating hours (e.g., an OR light)" />
+      <short value="Operating hours" />
+      <definition value="Optional amount of operating hours (e.g., an OR light)" />
       <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="http://hl7.org/fhir/uv/pocd/StructureDefinition/operating-hours" />
       </type>
+      <mustSupport value="true"/>
      </element>
       <element id="Device.extension:operatingHours.valueUnsignedInt">
       <path value="Device.extension.valueUnsignedInt"/>
@@ -102,14 +105,15 @@
     <element id="Device.extension:operatingCycles">
       <path value="Device.extension" />
       <sliceName value="operatingCycles" />
-      <short value="operating cycles" />
-      <definition value="optional amount of operarting cycles, e.g., the number of measurements taken within the component." />
+      <short value="Operating cycles" />
+      <definition value="Optional amount of operating cycles, e.g., the number of measurements taken within the component." />
       <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="http://hl7.org/fhir/uv/pocd/StructureDefinition/operating-cycles" />
       </type>
+      <mustSupport value="true"/>
      </element>
       <element id="Device.extension:operatingCycles.valueUnsignedInt">
       <path value="Device.extension.valueUnsignedInt"/>
@@ -120,6 +124,7 @@
     </element>
     <element id="Device.identifier">
       <path value="Device.identifier"/>
+      <mustSupport value="true"/>
     </element>
     <element id="Device.identifier.system">
       <path value="Device.identifier.system"/>
@@ -135,8 +140,13 @@
         <map value="MdsDescriptor/Vmd/Channel/ProductionSpecification/ComponentId/Extension"/>
       </mapping>
     </element>
+    <element id="Device.status">
+      <path value="Device.status"/>
+      <mustSupport value="true"/>
+    </element>
     <element id="Device.statusReason">
       <path value="Device.statusReason"/>
+      <mustSupport value="true"/>
       <mapping>
         <identity value="dim"/>
         <map value="Channel::Channel-Status"/>
@@ -149,6 +159,7 @@
     <element id="Device.type">
       <path value="Device.type"/>
       <min value="1"/>
+      <mustSupport value="true"/>
       <binding>
         <strength value="extensible"/>
         <valueSet value="http://hl7.org/fhir/uv/pocd/ValueSet/11073MDC-object"/>
@@ -191,6 +202,7 @@
     </element>
     <element id="Device.version">
       <path value="Device.version"/>
+      <mustSupport value="true"/>
     </element>
     <element id="Device.version.type">
       <path value="Device.version.type"/>
@@ -236,6 +248,7 @@
     </element>
     <element id="Device.safety">
       <path value="Device.safety"/>
+      <mustSupport value="true"/>
       <binding>
         <strength value="extensible" />
         <description value="Safety classification" />
@@ -263,6 +276,7 @@
         <code value="Reference"/>
         <targetProfile value="http://hl7.org/fhir/uv/pocd/StructureDefinition/VmdDevice"/>
       </type>
+      <mustSupport value="true"/>
     </element>
   </differential>
 </StructureDefinition>

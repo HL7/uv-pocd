@@ -12,7 +12,7 @@
   <name value="SampleArrayObservation"/>
   <title value="Sample Array Observation profile"/>
   <status value="draft"/>
-  <date value="2021-07-07"/>
+  <date value="2021-07-24"/>
   <publisher value="HL7 International - Devices Work Group"/>
   <description value="StructureDefinition for Observation resources that represent real-time waveforms or wave snippets."/>
   <fhirVersion value="4.0.1"/>
@@ -37,13 +37,23 @@
     </element>
     <element id="Observation.meta.security">
       <path value="Observation.meta.security"/>
+      <mustSupport value="true"/>
       <mapping>
         <identity value="dim"/>
         <map value="SampleArray::Sa-Observed-Value::state or SampleArray::Compound-Sa-Observed-Value::state (refer to MeasurementStatus mapping details)"/>
       </mapping>
     </element>
+    <element id="Observation.status">
+      <path value="Observation.status"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Observation.category">
+      <path value="Observation.category"/>
+      <mustSupport value="true"/>
+    </element>
     <element id="Observation.code">
       <path value="Observation.code"/>
+      <mustSupport value="true"/>
       <binding> 
         <strength value="extensible"/> 
         <valueSet value="http://hl7.org/fhir/uv/pocd/ValueSet/11073MDC-metric"/> 
@@ -85,9 +95,11 @@
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient"/>
         <targetProfile value="http://hl7.org/fhir/uv/pocd/StructureDefinition/MdsDevice"/>
       </type>
+      <mustSupport value="true"/>
     </element>
     <element id="Observation.effective[x]">
       <path value="Observation.effective[x]"/>
+      <mustSupport value="true"/>
     </element>
     <element id="Observation.effective[x]:effectivePeriod">
       <path value="Observation.effectivePeriod"/>
@@ -132,6 +144,10 @@
       </slicing>
       <min value="0"/>
       <max value="1"/>
+      <type>
+        <code value="SampledData"/>
+      </type>
+      <mustSupport value="true"/>
     </element>
     <element id="Observation.value[x]:valueSampledData">
       <path value="Observation.valueSampledData"/>
@@ -160,6 +176,7 @@
     </element>
     <element id="Observation.interpretation">
       <path value="Observation.interpretation"/>
+      <mustSupport value="true"/>
       <binding> 
         <strength value="extensible"/> 
         <valueSet value="http://hl7.org/fhir/uv/pocd/ValueSet/observation-interpretation"/> 
@@ -175,6 +192,7 @@
     </element>
     <element id="Observation.bodySite">
       <path value="Observation.bodySite"/>    
+      <mustSupport value="true"/>
     </element>
     <element id="Observation.bodySite.coding">
       <path value="Observation.bodySite.coding"/>
@@ -207,9 +225,11 @@
         <code value="Reference"/>
         <targetProfile value="http://hl7.org/fhir/uv/pocd/StructureDefinition/SampleArrayDeviceMetric"/>
       </type>
+      <mustSupport value="true"/>
     </element>
     <element id="Observation.referenceRange">
       <path value="Observation.referenceRange"/>
+      <mustSupport value="true"/>
     </element>
     <element id="Observation.referenceRange.low">
       <path value="Observation.referenceRange.low"/>
@@ -238,6 +258,7 @@
     </element>
     <element id="Observation.component.code">
       <path value="Observation.component.code"/>
+      <mustSupport value="true"/>
       <binding>
         <strength value="extensible"/>
         <valueSet value="http://hl7.org/fhir/uv/pocd/ValueSet/11073MDC-metric"/>
@@ -267,6 +288,7 @@
       <type>
         <code value="SampledData"/>
       </type>
+      <mustSupport value="true"/>
     </element>
     <element id="Observation.component.value[x]:valueSampledData">
       <path value="Observation.component.valueSampledData"/>
@@ -294,6 +316,7 @@
     </element>
     <element id="Observation.component.interpretation">
       <path value="Observation.component.interpretation"/>
+      <mustSupport value="true"/>
       <binding> 
         <strength value="extensible"/> 
         <valueSet value="http://hl7.org/fhir/uv/pocd/ValueSet/observation-interpretation"/> 
@@ -305,6 +328,7 @@
     </element>
     <element id="Observation.component.referenceRange">
       <path value="Observation.component.referenceRange"/>
+      <mustSupport value="true"/>
     </element>
     <element id="Observation.component.referenceRange.low">
       <path value="Observation.component.referenceRange.low"/>

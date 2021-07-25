@@ -7,13 +7,14 @@
 * `Device.type` shall be present and have a coding from the ISO/IEEE 11073 MDC Device nomenclature if there is an appropriate code available.&#10;
 * `Device.patient` and `Device.location` references must not be present.&#10;
 * `Device.parent` shall be pesent and refer to the MDS Device resource.&#10;
-* If multiple instances of the same VMD type exist, the Instance extension allows a squence to be defined."/>
+* If multiple instances of the same VMD type exist, the Instance extension allows a squence to be defined.&#10;
+* Extensions allow approved jurisdictions, operating hours, and operating cycles to be added."/>
   </extension>
   <url value="http://hl7.org/fhir/uv/pocd/StructureDefinition/VmdDevice"/>
   <name value="VmdDevice"/>
   <title value="VMD Device profile"/>
   <status value="draft"/>
-  <date value="2021-07-07"/>
+  <date value="2021-07-24"/>
   <publisher value="HL7 International - Devices Work Group"/>
   <description value="StructureDefinition for Device resources that represent Virtual Medical Devices (VMD). These are medical-related subsystems in the hierarchical model of a Point-of-Care device."/>
   <fhirVersion value="4.0.1"/>
@@ -55,6 +56,7 @@
         <code value="Extension"/>
         <profile value="http://hl7.org/fhir/uv/pocd/StructureDefinition/device-instance"/>
       </type>
+      <mustSupport value="true"/>
     </element>
     <element id="Device.extension:instance.extension:number">
       <path value="Device.extension.extension"/>
@@ -92,6 +94,7 @@ any entries, then the DEVICE COMPONENT is not approved for any region." />
         <code value="Extension" />
         <profile value="http://hl7.org/fhir/uv/pocd/StructureDefinition/approved-jurisdictions" />
       </type>
+      <mustSupport value="true"/>
     </element>
     <element id="Device.extension:approvedJurisdictions.valueIdentifier">
       <path value="Device.extension.valueIdentifier"/>
@@ -113,14 +116,15 @@ any entries, then the DEVICE COMPONENT is not approved for any region." />
     <element id="Device.extension:operatingHours">
       <path value="Device.extension" />
       <sliceName value="operatingHours" />
-      <short value="operating hours" />
-      <definition value="optional amount of operating hours (e.g., an OR light)" />
+      <short value="Operating hours" />
+      <definition value="Optional amount of operating hours (e.g., an OR light)" />
       <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="http://hl7.org/fhir/uv/pocd/StructureDefinition/operating-hours" />
       </type>
+      <mustSupport value="true"/>
     </element>
     <element id="Device.extension:operatingHours.valueUnsignedInt">
       <path value="Device.extension.valueUnsignedInt"/>
@@ -136,14 +140,15 @@ any entries, then the DEVICE COMPONENT is not approved for any region." />
     <element id="Device.extension:operatingCycles">
       <path value="Device.extension" />
       <sliceName value="operatingCycles" />
-      <short value="operating cycles" />
-      <definition value="optional amount of operarting cycles, e.g., the number of measurements taken within the component." />
+      <short value="Operating cycles" />
+      <definition value="Optional amount of operating cycles, e.g., the number of measurements taken within the component." />
       <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="http://hl7.org/fhir/uv/pocd/StructureDefinition/operating-cycles" />
       </type>
+      <mustSupport value="true"/>
     </element>
     <element id="Device.extension:operatingCycles.valueUnsignedInt">
       <path value="Device.extension.valueUnsignedInt"/>
@@ -158,6 +163,7 @@ any entries, then the DEVICE COMPONENT is not approved for any region." />
     </element>
     <element id="Device.identifier">
       <path value="Device.identifier"/>
+      <mustSupport value="true"/>
     </element>
     <element id="Device.identifier.system">
       <path value="Device.identifier.system"/>
@@ -175,6 +181,7 @@ any entries, then the DEVICE COMPONENT is not approved for any region." />
     </element>
     <element id="Device.udiCarrier">
       <path value="Device.udiCarrier"/>
+      <mustSupport value="true"/>
     </element>
     <element id="Device.udiCarrier.deviceIdentifier">
       <path value="Device.udiCarrier.deviceIdentifier"/>
@@ -204,8 +211,13 @@ any entries, then the DEVICE COMPONENT is not approved for any region." />
         <map value="VMD::Udi::udi-label"/>
       </mapping>
     </element>
+    <element id="Device.status">
+      <path value="Device.status"/>
+      <mustSupport value="true"/>
+    </element>
     <element id="Device.statusReason">
       <path value="Device.statusReason"/>
+      <mustSupport value="true"/>
       <mapping>
         <identity value="dim"/>
         <map value="VMD::Vmd-Status"/>
@@ -217,6 +229,7 @@ any entries, then the DEVICE COMPONENT is not approved for any region." />
     </element>
     <element id="Device.manufacturer">
       <path value="Device.manufacturer"/>
+      <mustSupport value="true"/>
       <mapping>
         <identity value="dim"/>
         <map value="VMD::Vmd-Model::manufacturer"/>
@@ -245,13 +258,19 @@ any entries, then the DEVICE COMPONENT is not approved for any region." />
     </element>
     <element id="Device.serialNumber">
       <path value="Device.serialNumber"/>
+      <mustSupport value="true"/>
       <mapping>
         <identity value="dim"/>
         <map value="VMD::Production-Specification[spec-type=serial-number]::prod-spec"/>
       </mapping>
     </element>
+    <element id="Device.deviceName">
+      <path value="Device.deviceName"/>
+      <mustSupport value="true"/>
+    </element>
     <element id="Device.modelNumber">
       <path value="Device.modelNumber"/>
+      <mustSupport value="true"/>
       <mapping>
         <identity value="dim"/>
         <map value="VMD::Vmd-Model::model-number"/>
@@ -259,6 +278,7 @@ any entries, then the DEVICE COMPONENT is not approved for any region." />
     </element>
     <element id="Device.partNumber">
       <path value="Device.partNumber"/>
+      <mustSupport value="true"/>
       <mapping>
         <identity value="dim"/>
         <map value="VMD::Production-Specification[spec-type=part-number]::prod-spec"/>
@@ -267,6 +287,7 @@ any entries, then the DEVICE COMPONENT is not approved for any region." />
     <element id="Device.type">
       <path value="Device.type"/>
       <min value="1"/>
+      <mustSupport value="true"/>
       <binding>
         <strength value="extensible"/>
         <valueSet value="http://hl7.org/fhir/uv/pocd/ValueSet/11073MDC-object"/>
@@ -309,6 +330,7 @@ any entries, then the DEVICE COMPONENT is not approved for any region." />
     </element>
     <element id="Device.version">
       <path value="Device.version"/>
+      <mustSupport value="true"/>
     </element>
     <element id="Device.version.type">
       <path value="Device.version.type"/>
@@ -369,6 +391,7 @@ any entries, then the DEVICE COMPONENT is not approved for any region." />
     </element>
     <element id="Device.safety">
       <path value="Device.safety"/>
+      <mustSupport value="true"/>
     </element>
     <element id="Device.safety.coding">
       <path value="Device.safety.coding"/>
@@ -396,6 +419,7 @@ any entries, then the DEVICE COMPONENT is not approved for any region." />
         <code value="Reference"/>
         <targetProfile value="http://hl7.org/fhir/uv/pocd/StructureDefinition/MdsDevice"/>
       </type>
+      <mustSupport value="true"/>
     </element>
   </differential>
 </StructureDefinition>

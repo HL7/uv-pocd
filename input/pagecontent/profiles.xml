@@ -4,17 +4,26 @@
     Each profile defines constraints, extensions, and terminology requirements for an implementation that claims conformance to this guide.
   </p>
   <div class="clearfix">
-    <img src="PoCD_Profiles.png" alt="PoCD Profiles" style="float:right" />
+    <img src="PoCD_Profiles.png" alt="PoCD Profiles" style="float:right"/>
     <p>
       A point-of-care device model is made of multiple resource instances	and the relationships between them.
       The following diagram shows the FHIR resource profiles (blue) and references to other profiles or FHIR core resources (white).
     </p>
   </div>
-  <a name="1"></a>
+  <a name="1"> </a>
+  <h3>Must Support</h3>
+  <p>
+    For the profiles listed below, <code>mustSupport</code> set to true on data elements (flagged with an <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span> in table view) shall be interpreted as follows:
+    <ul>
+      <li>Data sources shall be capable of populating the element in a resource instance if the data is available and permissions allow.</li>
+      <li>Data consumers shall be capable of consuming the element from the resource instance if the data is relevant to their business case.</li>
+    </ul>
+  </p>
+  <a name="2"> </a>
   <h3>Device Profiles and Extensions</h3>
   <table class="table-striped" style="width:100%">
-    <col style="width:40%" />
-    <col style="width:60%" />
+    <col style="width:40%"/>
+    <col style="width:60%"/>
     <tr>
       <td>
         <a href="StructureDefinition-MdsDevice.html">MDS Device profile</a>
@@ -88,11 +97,11 @@
       </td>
     </tr>
   </table>
-  <a name="2"></a>
+  <a name="3"> </a>
   <h3>DeviceMetric Profiles and Extensions</h3>
   <table class="table-striped" style="width:100%">
-    <col style="width:40%" />
-    <col style="width:60%" />
+    <col style="width:40%"/>
+    <col style="width:60%"/>
     <tr>
       <td>
         <a href="StructureDefinition-NumericDeviceMetric.html">Numeric DeviceMetric profile</a>
@@ -158,11 +167,11 @@
       </td>
     </tr>
   </table>
-  <a name="3"></a>
+  <a name="4"> </a>
   <h3>Observation Profiles and Extensions</h3>
   <table class="table-striped" style="width:100%">
-    <col style="width:40%" />
-    <col style="width:60%" />
+    <col style="width:40%"/>
+    <col style="width:60%"/>
     <tr>
       <td>
         <a href="StructureDefinition-NumericObservation.html">Numeric Observation profile</a>

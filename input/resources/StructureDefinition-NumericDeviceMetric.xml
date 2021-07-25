@@ -7,13 +7,15 @@
 * `DeviceMetric.type` shall have a coding from the ISO/IEEE 11073 MDC Metric nomenclature if there is an appropriate code available.&#10;
 * If `DeviceMetric.unit` is present, it shall have a coding from the ISO/IEEE 11073 MDC Units of measurement if there is an appropriate code available.&#10;
 * `DeviceMetric.source` shall be present and refer to the MDS Device resource.&#10;
-* `DeviceMetric.parent` shall be present and refer to the Channel Device resource which this metric belongs to."/>
+* `DeviceMetric.parent` shall be present and refer to the Channel Device resource which this metric belongs to.&#10;
+* If multiple instances of the same metric type exist, the Instance extension allows a squence to be defined.&#10;
+* Extensions allow relationships and metric availability to be added."/>
   </extension>
   <url value="http://hl7.org/fhir/uv/pocd/StructureDefinition/NumericDeviceMetric"/>
   <name value="NumericDeviceMetric"/>
   <title value="Numeric DeviceMetric profile"/>
   <status value="draft"/>
-  <date value="2021-07-07"/>
+  <date value="2021-07-24"/>
   <publisher value="HL7 International - Devices Work Group"/>
   <description value="StructureDefinition for DeviceMetric resources that represent numerical measurements, calculations, or settings characteristics and capabilities."/>
   <fhirVersion value="4.0.1"/>
@@ -55,6 +57,7 @@
         <code value="Extension"/>
         <profile value="http://hl7.org/fhir/uv/pocd/StructureDefinition/device-instance"/>
       </type>
+      <mustSupport value="true"/>
     </element>
     <element id="DeviceMetric.extension:instance.extension:label">
       <path value="DeviceMetric.extension.extension"/>
@@ -92,6 +95,7 @@ Related containment tree entries are defined in Entries, whereby the flavor of a
         <code value="Extension" />
         <profile value="http://hl7.org/fhir/uv/pocd/StructureDefinition/metric-availability" />
       </type>
+      <mustSupport value="true"/>
       <mapping>
         <identity value="sdc"/>
         <map value="NumericMetricDescriptor/MetricAvailability"/>
@@ -99,11 +103,12 @@ Related containment tree entries are defined in Entries, whereby the flavor of a
     </element>
     <element id="DeviceMetric.type">
       <path value="DeviceMetric.type"/>
+      <mustSupport value="true"/>
       <binding>
         <strength value="extensible"/>
         <valueSet value="http://hl7.org/fhir/uv/pocd/ValueSet/11073MDC-metric"/>
       </binding>
-       <mapping>
+      <mapping>
         <identity value="sdc"/>
         <map value="According to ISO/IEEE 11073-20701 this element can't be empty"/>
       </mapping>
@@ -192,6 +197,7 @@ Related containment tree entries are defined in Entries, whereby the flavor of a
         <code value="Reference"/>
         <targetProfile value="http://hl7.org/fhir/uv/pocd/StructureDefinition/MdsDevice"/>
       </type>
+      <mustSupport value="true"/>
     </element>
     <element id="DeviceMetric.parent">
       <path value="DeviceMetric.parent"/>
@@ -200,9 +206,11 @@ Related containment tree entries are defined in Entries, whereby the flavor of a
         <code value="Reference"/>
         <targetProfile value="http://hl7.org/fhir/uv/pocd/StructureDefinition/ChannelDevice"/>
       </type>
+      <mustSupport value="true"/>
     </element>
     <element id="DeviceMetric.operationalStatus">
       <path value="DeviceMetric.operationalStatus"/>
+      <mustSupport value="true"/>
       <mapping>
         <identity value="dim"/>
         <map value="Metric::Metric-Status"/>
@@ -221,6 +229,7 @@ Related containment tree entries are defined in Entries, whereby the flavor of a
     </element>
     <element id="DeviceMetric.category">
       <path value="DeviceMetric.category"/>
+      <mustSupport value="true"/>
       <mapping>
         <identity value="dim"/>
         <map value="Metric::Metric-Specification::category"/>
@@ -232,6 +241,7 @@ Related containment tree entries are defined in Entries, whereby the flavor of a
     </element>
     <element id="DeviceMetric.measurementPeriod">
       <path value="DeviceMetric.measurementPeriod"/>
+      <mustSupport value="true"/>
     </element>
     <element id="DeviceMetric.measurementPeriod.repeat">
       <path value="DeviceMetric.measurementPeriod.repeat"/>
@@ -259,6 +269,7 @@ Related containment tree entries are defined in Entries, whereby the flavor of a
     </element>
     <element id="DeviceMetric.calibration">
       <path value="DeviceMetric.calibration"/>
+      <mustSupport value="true"/>
     </element>
     <element id="DeviceMetric.calibration.type">
       <path value="DeviceMetric.calibration.type"/>
