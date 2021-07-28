@@ -5,8 +5,16 @@
   <li>
     <a href="toc.html">Table of Contents</a>
   </li>
-  <li>
-    <a href="overview.html">Overview</a>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Getting Started<b class="caret"></b></a>
+		<ul class="dropdown-menu">
+		      <li>
+		        <a href="overview.html">Overview</a>
+		      </li>
+		      <li>
+		        <a href="definitions.html">Abbreviations and Definitions</a>
+		      </li>
+	</ul>      
   </li>
   <!-- <li>
     <a href="usecases.html">Use Cases</a>
@@ -18,7 +26,7 @@
         <a href="modeling.html">Creating a Device Model</a>
       </li> -->
       <li>
-        <a href="#">Mapping from HL7 v2 to FHIR</a>
+        <a href="mappingv2.html">Mapping from HL7 v2 to FHIR</a>
       </li>
       <li>
         <a href="mappingdim.html">Mapping from IEEE 11073-10201 DIM to FHIR</a>
