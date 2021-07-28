@@ -584,6 +584,11 @@
         <title value="Overview"/>
         <generation value="markdown"/>
       </page>
+      <page>
+        <nameUrl value="definitions.html"/>
+        <title value="Abbreviations and Definitions"/>
+        <generation value="markdown"/>
+      </page>
       <!-- <page>
         <nameUrl value="usecases.html"/>
         <title value="Use Cases"/>
@@ -611,6 +616,11 @@
         <page>
           <nameUrl value="transfer.html"/>
           <title value="RESTful Transfer"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <nameUrl value="mappingv2.html"/>
+          <title value="HL7 V2 Mapping"/>
           <generation value="markdown"/>
         </page>
       </page>
