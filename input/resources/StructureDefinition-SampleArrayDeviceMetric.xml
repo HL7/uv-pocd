@@ -128,6 +128,33 @@ Related containment tree entries are defined in Entries, whereby the flavor of a
         <map value="SampleArray::Visual-Grid"/>
       </mapping>
     </element>
+    <element id="DeviceMetric.extension:technicalRange">
+      <path value="DeviceMetric.extension" />
+      <sliceName value="technicalRange" />
+      <short value="Technical Range" />
+      <definition value="The technical possible range of determined values." />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org/fhir/uv/pocd/StructureDefinition/technical-range" />
+      </type>
+    </element>
+     <element id="DeviceMetric.extension:resolution">
+            <path value="DeviceMetric.extension" />
+            <sliceName value="resolution" />
+            <short value="minimum determinable difference" />
+            <definition value="The resolution of the means to determine the METRIC&#39;s value. Resolution is the minimum determinable\difference between two determined values." />
+            <max value="1" />
+            <type>
+                <code value="Extension" />
+                <profile value="http://hl7.org/fhir/uv/pocd/StructureDefinition/resolution" />
+            </type>
+            <mapping>
+       			<identity value="sdc"/>
+        		<map value="DistributionSampleArrayMetricDescriptor/Resolution, RealTimeSampleArrayMetricDescriptor/Resolution"/>
+      		</mapping>
+        </element>
     <element id="DeviceMetric.type">
       <path value="DeviceMetric.type"/>
       <binding>

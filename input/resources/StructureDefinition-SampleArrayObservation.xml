@@ -138,7 +138,6 @@
       <sliceName value="valueSampledData"/>
       <type>
         <code value="SampledData"/>
-        <profile value="http://hl7.org/fhir/uv/pocd/StructureDefinition/SampledData" />
       </type>
     </element>
     <element id="Observation.value[x]:valueSampledData.origin">
