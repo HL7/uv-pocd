@@ -4,6 +4,16 @@
   <meta>
     <profile value="http://hl7.org/fhir/uv/pocd/StructureDefinition/NumericDeviceMetric"/>
   </meta>
+  <extension url="http://hl7.org/fhir/uv/pocd/StructureDefinition/relation">
+  	<extension url="kind">
+  		<valueCode value="DCE"/>
+  	</extension>
+  	<extension url="entries">
+  		<valueReference>
+  			<reference value="DeviceMetric/ECGSampleArrayDeviceMetric"/>
+  		</valueReference>
+  	</extension>
+  </extension>
   <type>
     <coding>
       <system value="urn:iso:std:iso:11073:10101"/>

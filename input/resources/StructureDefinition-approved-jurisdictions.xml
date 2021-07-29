@@ -25,14 +25,18 @@
 	      <path value="Extension.url"/>
 	      <fixedUri value="http://hl7.org/fhir/uv/pocd/StructureDefinition/approved-jurisdictions"/>
 	    </element>
-        <element id="Extension.value[x]:valueIdentifier">
-            <path value="Extension.valueIdentifier" />
+        <element id="Extension.value[x]:valueCoding">
+            <path value="Extension.valueCoding" />
             <short value="Approved Jurisdictions" />
-            <definition value="List of regions in which a DEVICE COMPONENT is approved to be operated. If the list does not contain
-any entries, then the DEVICE COMPONENT is not approved for any region." />
+            <definition value="List of regions in which a device is approved to be operated." />
             <type>
-                <code value="Identifier" />
+                <code value="Coding" />
             </type>
+            <binding>
+		        <strength value="extensible" />
+		        <description value="M49 Codes" />
+		        <valueSet value="https://unstats.un.org/unsd/methodology/m49/" />
+		      </binding>
         </element>
     </differential>
 </StructureDefinition>

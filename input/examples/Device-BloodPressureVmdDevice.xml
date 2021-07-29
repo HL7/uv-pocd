@@ -9,6 +9,12 @@
       <valueUnsignedInt value="1"/>
     </extension>
   </extension>
+  <extension url="http://hl7.org/fhir/uv/pocd/StructureDefinition/approved-jurisdictions">
+  	<valueCoding>
+  		<system value="https://unstats.un.org/unsd/methodology/m49/"/>
+  		<code value="840"/>
+  	</valueCoding>
+  </extension>
   <status value="active"/>
   <type>
     <coding>
