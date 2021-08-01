@@ -4,6 +4,15 @@
   <meta>
     <profile value="http://hl7.org/fhir/uv/pocd/StructureDefinition/MdsDevice"/>
   </meta>
+  <extension url="http://hl7.org/fhir/uv/pocd/StructureDefinition/approved-jurisdictions">
+    <valueCodeableConcept>
+      <coding>
+        <system value="urn:iso:std:iso:3166"/>
+        <code value="840"/>
+        <display value="United States of America"/>
+      </coding>
+    </valueCodeableConcept>
+  </extension>
   <extension url="http://hl7.org/fhir/uv/pocd/StructureDefinition/operator">
     <valueReference>
       <reference value="Practitioner/SomePractitioner"/>

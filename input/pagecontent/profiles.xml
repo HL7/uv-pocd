@@ -143,6 +143,22 @@
     </tr>
     <tr>
       <td>
+        <a href="StructureDefinition-technical-range.html">Technical range extension</a>
+      </td>
+      <td>
+        <p>StructureDefinition that adds technical range and accuracy to a DeviceMetric.</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="StructureDefinition-resolution.html">Resolution extension</a>
+      </td>
+      <td>
+        <p>StructureDefinition that adds resolution to a DeviceMetric.</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
         <a href="StructureDefinition-sweep-speed.html">Sweep Speed extension</a>
       </td>
       <td>
@@ -193,14 +209,6 @@
       </td>
       <td>
         <p>StructureDefinition for Observation resources that represent real-time waveforms or wave snippets.</p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <a href="StructureDefinition-resolution.html">Resolution extension</a>
-      </td>
-      <td>
-        <p>StructureDefinition that adds a resolution to SampledData.</p>
       </td>
     </tr>
   </table>

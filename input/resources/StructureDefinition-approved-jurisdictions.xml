@@ -1,42 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<StructureDefinition xmlns="http://hl7.org/fhir">
-    <id value="approved-jurisdictions"/>
-    <url value="http://hl7.org/fhir/uv/pocd/StructureDefinition/approved-jurisdictions" />
-    <name value="ApprovedJurisdictions" />
-    <title value="Approved Jurisdictions extension"/>
-    <status value="draft" />
-    <date value="2020-05-11"/>
-    <description value="StructureDefinition that adds approved jurisdictions to a Device."/>
-    <fhirVersion value="4.0.1" />
-    <kind value="complex-type" />
-    <abstract value="false" />
-    <context>
-        <type value="element" />
-        <expression value="Device" />
-    </context>
-    <type value="Extension" />
-    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
-    <derivation value="constraint" />
-    <differential>
-	    <element id="Extension">
-	      <path value="Extension"/>
-	    </element>
-	    <element id="Extension.url">
-	      <path value="Extension.url"/>
-	      <fixedUri value="http://hl7.org/fhir/uv/pocd/StructureDefinition/approved-jurisdictions"/>
-	    </element>
-        <element id="Extension.value[x]:valueCoding">
-            <path value="Extension.valueCoding" />
-            <short value="Approved Jurisdictions" />
-            <definition value="List of regions in which a device is approved to be operated." />
-            <type>
-                <code value="Coding" />
-            </type>
-            <binding>
-		        <strength value="extensible" />
-		        <description value="M49 Codes" />
-		        <valueSet value="https://unstats.un.org/unsd/methodology/m49/" />
-		      </binding>
-        </element>
-    </differential>
+<StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas-r5/fhir-single.xsd">
+  <id value="approved-jurisdictions"/>
+  <url value="http://hl7.org/fhir/uv/pocd/StructureDefinition/approved-jurisdictions" />
+  <name value="ApprovedJurisdictions" />
+  <title value="Approved Jurisdictions extension"/>
+  <status value="draft" />
+  <date value="2021-08-01"/>
+  <description value="StructureDefinition that adds approved jurisdictions to a Device."/>
+  <fhirVersion value="4.0.1" />
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <context>
+    <type value="element" />
+    <expression value="Device" />
+  </context>
+  <type value="Extension" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
+  <derivation value="constraint" />
+  <differential>
+	  <element id="Extension">
+	    <path value="Extension"/>
+	  </element>
+    <element id="Extension.extension">
+      <path value="Extension.extension"/>
+      <max value="0"/>
+    </element>
+	  <element id="Extension.url">
+	    <path value="Extension.url"/>
+	    <fixedUri value="http://hl7.org/fhir/uv/pocd/StructureDefinition/approved-jurisdictions"/>
+	  </element>
+    <element id="Extension.value[x]:valueCodeableConcept">
+      <path value="Extension.valueCodeableConcept" />
+      <short value="Approved Jurisdictions" />
+      <definition value="List of regions in which a device is approved to be operated." />
+      <min value="1"/>
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <binding>
+	      <strength value="extensible" />
+	      <description value="Codes for country, country subdivision and region" />
+	      <valueSet value="http://hl7.org/fhir/ValueSet/jurisdiction" />
+	    </binding>
+    </element>
+  </differential>
 </StructureDefinition>

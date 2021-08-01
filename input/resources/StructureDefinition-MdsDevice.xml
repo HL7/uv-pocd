@@ -64,18 +64,21 @@
         <profile value="http://hl7.org/fhir/uv/pocd/StructureDefinition/approved-jurisdictions" />
       </type>
     </element>
-    <element id="Device.extension:approvedJurisdictions.valueCoding">
-      <path value="Device.extension.valueCoding"/>
+    <element id="Device.extension:approvedJurisdictions.valueCodeableConcept">
+      <path value="Device.extension.valueCodeableConcept"/>
     </element>
-    <element id="Device.extension:approvedJurisdictions.valueCoding.system">
-      <path value="Device.extension.valueCoding.system"/>
+    <element id="Device.extension:approvedJurisdictions.valueCodeableConcept.coding">
+      <path value="Device.extension.valueCodeableConcept.coding"/>
+    </element>
+    <element id="Device.extension:approvedJurisdictions.valueCodeableConcept.coding.system">
+      <path value="Device.extension.valueCodeableConcept.coding.system"/>
       <mapping>
         <identity value="sdc"/>
         <map value="ApprovedJurisdictions/ApprovedJurisdiction/Root"/>
       </mapping>
     </element>
-    <element id="Device.extension:approvedJurisdictions.valueCoding.code">
-      <path value="Device.extension.valueCoding.code"/>
+    <element id="Device.extension:approvedJurisdictions.valueCodeableConcept.coding.code">
+      <path value="Device.extension.valueCodeableConcept.coding.code"/>
       <mapping>
         <identity value="sdc"/>
         <map value="ApprovedJurisdictions/ApprovedJurisdiction/Extension"/>
