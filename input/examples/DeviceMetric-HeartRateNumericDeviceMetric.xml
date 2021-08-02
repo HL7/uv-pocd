@@ -14,6 +14,23 @@
   		</valueReference>
   	</extension>
   </extension>
+  <extension url="http://hl7.org/fhir/uv/pocd/StructureDefinition/technical-range">
+  	<extension url="lowerLimit">
+  		<valueDecimal value="0"/>
+  	</extension>
+  	<extension url="upperLimit">
+  		<valueDecimal value="200"/>
+  	</extension>
+  	<extension url="stepWidth">
+  		<valueDecimal value="1"/>
+  	</extension>
+  	<extension url="relativeAccuracy">
+  		<valueDecimal value="0.01"/>
+  	</extension>
+  	<extension url="absoluteAccuracy">
+  		<valueDecimal value="0.01"/>
+  	</extension>
+  </extension>
   <type>
     <coding>
       <system value="urn:iso:std:iso:11073:10101"/>

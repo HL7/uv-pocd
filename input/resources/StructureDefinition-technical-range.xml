@@ -89,18 +89,18 @@
         <map value="AbstractMetricDescriptor/TechnicalRange/Upper"/>
       </mapping>
     </element>
-    <element id="Extension.extension:factor">
+    <element id="Extension.extension:stepWidth">
       <path value="Extension.extension" />
-      <sliceName value="factor" />
-      <short value="Factor" />
-      <definition value="Multiply data by this before adding to origin." />
+      <sliceName value="stepWidth" />
+      <short value="Step width" />
+      <definition value="The numerical distance between two values in the range of the given upper and lower bound." />
       <max value="1" />
     </element>
-    <element id="Extension.extension:factor.url">
+    <element id="Extension.extension:stepWidth.url">
       <path value="Extension.extension.url"/>
-      <fixedUri value="factor"/>
+      <fixedUri value="stepWidth"/>
     </element>
-    <element id="Extension.extension:factor.value[x]:valueDecimal">
+    <element id="Extension.extension:stepWidth.value[x]:valueDecimal">
       <path value="Extension.extension.valueDecimal"/>
       <min value="1"/>
       <type>
