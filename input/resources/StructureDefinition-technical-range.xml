@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas-r5/fhir-single.xsd">
+  <id value="technical-range"/>
+  <url value="http://hl7.org/fhir/uv/pocd/StructureDefinition/technical-range"/>
+  <name value="TechnicalRange" />
+  <title value="Technical range extension"/>
+  <status value="draft" />
+  <date value="2021-08-01"/>
+  <publisher value="HL7 International - Devices Work Group"/>
+  <description value="StructureDefinition that adds technical range and accuracy to a DeviceMetric."/>
+  <fhirVersion value="4.0.1"/>
+  <mapping>
+    <identity value="dim"/>
+    <uri value="urn:iso:std:iso:11073:10201"/>
+    <name value="IEEE 11073-10201 DIM"/>
+  </mapping>
+  <mapping>
+    <identity value="sdc"/>
+    <uri value="urn:iso:std:iso:11073:10207"/>
+    <name value="IEEE 11073-10207 SDC"/>
+  </mapping>
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <context>
+    <type value="element" />
+    <expression value="DeviceMetric" />
+  </context>
+  <type value="Extension" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Extension">
+      <path value="Extension"/>
+      <short value="Technical range"/>
+      <definition value="The technical possible range of determined values"/>
+      <max value="1"/>
+    </element>
+    <element id="Extension.extension">
+      <path value="Extension.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Extension.extension:lowerLimit">
+      <path value="Extension.extension" />
+      <sliceName value="lowerLimit" />
+      <short value="Lower limit" />
+      <definition value="Lower limit of detection." />
+      <max value="1" />
+    </element>
+    <element id="Extension.extension:lowerLimit.url">
+      <path value="Extension.extension.url"/>
+        <fixedUri value="lowerLimit"/>
+    </element>
+    <element id="Extension.extension:lowerLimit.value[x]:valueDecimal">
+      <path value="Extension.extension.valueDecimal"/>
+      <min value="1"/>
+      <type>
+        <code value="decimal"/>
+      </type>
+      <mapping>
+        <identity value="sdc"/>
+        <map value="AbstractMetricDescriptor/TechnicalRange/Lower"/>
+      </mapping>
+    </element>
+    <element id="Extension.extension:upperLimit">
+      <path value="Extension.extension" />
+      <sliceName value="upperLimit" />
+      <short value="Upper limit" />
+      <definition value="Upper limit of detection." />
+      <max value="1" />
+    </element>
+    <element id="Extension.extension:upperLimit.url">
+      <path value="Extension.extension.url"/>
+      <fixedUri value="upperLimit"/>
+    </element>
+    <element id="Extension.extension:upperLimit.value[x]:valueDecimal">
+      <path value="Extension.extension.valueDecimal"/>
+      <min value="1"/>
+      <type>
+        <code value="decimal"/>
+      </type>
+      <mapping>
+        <identity value="sdc"/>
+        <map value="AbstractMetricDescriptor/TechnicalRange/Upper"/>
+      </mapping>
+    </element>
+    <element id="Extension.extension:stepWidth">
+      <path value="Extension.extension" />
+      <sliceName value="stepWidth" />
+      <short value="Step width" />
+      <definition value="The numerical distance between two values in the range of the given upper and lower bound." />
+      <max value="1" />
+    </element>
+    <element id="Extension.extension:stepWidth.url">
+      <path value="Extension.extension.url"/>
+      <fixedUri value="stepWidth"/>
+    </element>
+    <element id="Extension.extension:stepWidth.value[x]:valueDecimal">
+      <path value="Extension.extension.valueDecimal"/>
+      <min value="1"/>
+      <type>
+        <code value="decimal"/>
+      </type>
+      <mapping>
+        <identity value="sdc"/>
+        <map value="AbstractMetricDescriptor/TechnicalRange/StepWidth"/>
+      </mapping>
+    </element>
+    <element id="Extension.extension:relativeAccuracy">
+      <path value="Extension.extension" />
+      <sliceName value="relativeAccuracy" />
+      <short value="Relative error" />
+      <max value="1" />
+    </element>
+    <element id="Extension.extension:relativeAccuracy.url">
+      <path value="Extension.extension.url"/>
+      <fixedUri value="relativeAccuracy"/>
+    </element>
+    <element id="Extension.extension:relativeAccuracy.value[x]:valueDecimal">
+      <path value="Extension.extension.valueDecimal"/>
+      <min value="1"/>
+      <type>
+        <code value="decimal"/>
+      </type>
+      <mapping>
+        <identity value="sdc"/>
+        <map value="AbstractMetricDescriptor/TechnicalRange/RelativeAccuracy"/>
+      </mapping>
+    </element>
+    <element id="Extension.extension:absoluteAccuracy">
+      <path value="Extension.extension" />
+      <sliceName value="absoluteAccuracy" />
+      <short value="Absolute error" />
+      <definition value="Maximum absolute error in relation to the correct value within the given range." />
+      <max value="1" />
+    </element>
+    <element id="Extension.extension:absoluteAccuracy.url">
+      <path value="Extension.extension.url"/>
+      <fixedUri value="absoluteAccuracy"/>
+    </element>
+    <element id="Extension.extension:absoluteAccuracy.value[x]:valueDecimal">
+      <path value="Extension.extension.valueDecimal"/>
+      <min value="1"/>
+      <type>
+        <code value="decimal"/>
+      </type>
+      <mapping>
+        <identity value="sdc"/>
+        <map value="AbstractMetricDescriptor/TechnicalRange/AbsoluteAccuracy"/>
+      </mapping>
+    </element>
+    <element id="Extension.url">
+      <path value="Extension.url"/>
+      <fixedUri value="http://hl7.org/fhir/uv/pocd/StructureDefinition/technical-range"/>
+    </element>
+    <element id="Extension.value[x]">
+      <path value="Extension.value[x]" />
+      <max value="0" />
+    </element>
+  </differential>
+</StructureDefinition>
+  

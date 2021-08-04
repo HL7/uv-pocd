@@ -140,18 +140,10 @@
     </resource>
     <resource>
       <reference>
-        <reference value="StructureDefinition/Quantity"/>
+        <reference value="StructureDefinition/technical-range"/>
       </reference>
-      <name value="Quantity profile"/>
-      <description value="StructureDefinition for Quantity that provides a measured amount (or an amount that can potentially be measured)."/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/SampledData"/>
-      </reference>
-      <name value="SampledData profile"/>
-      <description value="StructureDefinition for SampledData that provides a concise way to handle the data produced by devices that sample a particular physical state at a high frequency."/>
+      <name value="Technical range extension"/>
+      <description value="StructureDefinition for the technical possible range of determined values."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -236,68 +228,28 @@
     </resource>
     <resource>
       <reference>
-        <reference value="StructureDefinition/lower-limit"/>
-      </reference>
-      <name value="Lower limit extension"/>
-      <description value="StructureDefinition that adds a lower limit to Quantity."/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/upper-limit"/>
-      </reference>
-      <name value="Upper limit extension"/>
-      <description value="StructureDefinition that adds an upper limit to Quantity."/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/factor"/>
-      </reference>
-      <name value="Factor extension"/>
-      <description value="StructureDefinition that adds a factor to Quantity."/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/relative-accuracy"/>
-      </reference>
-      <name value="Relative accuracy extension"/>
-      <description value="StructureDefinition that adds a relative accuracy to Quantity or SampledData."/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/absolute-accuracy"/>
-      </reference>
-      <name value="Absolute accuracy extension"/>
-      <description value="StructureDefinition that adds an absolute accuracy to Quantity or SampledData."/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <reference>
         <reference value="StructureDefinition/resolution"/>
       </reference>
       <name value="Resolution extension"/>
       <description value="StructureDefinition that adds a resolution to SampledData."/>
       <exampleBoolean value="false"/>
     </resource>
-    <resource>
-      <reference>
+     <!--<resource>
+     <reference>
         <reference value="StructureDefinition/domain-unit"/>
       </reference>
       <name value="Domain unit extension"/>
       <description value="StructureDefinition that adds a domain unit to SampledData."/>
       <exampleBoolean value="false"/>
     </resource>
-    <resource>
+      <resource>
       <reference>
         <reference value="StructureDefinition/distribution-range"/>
       </reference>
       <name value="Distribution range extension"/>
       <description value="StructureDefinition that adds a distribution range to SampledData."/>
       <exampleBoolean value="false"/>
-    </resource>
+    </resource>-->
     <resource>
       <reference>
         <reference value="CodeSystem/operating-mode"/>

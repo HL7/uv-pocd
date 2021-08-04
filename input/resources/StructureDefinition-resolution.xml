@@ -1,25 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<StructureDefinition xmlns="http://hl7.org/fhir">
-<id value="resolution"/>
+<StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas-r5/fhir-single.xsd">
+  <id value="resolution"/>
   <url value="http://hl7.org/fhir/uv/pocd/StructureDefinition/resolution" />
   <name value="Resolution" />
-   <title value="Resolution extension"/>
+  <title value="Resolution extension"/>
   <status value="draft" />
-    <date value="2020-09-28"/>
-  <description value="The Resolution is the minimum determinable difference between two determined values." />
+  <date value="2021-08-01"/>
+  <publisher value="HL7 International - Devices Work Group"/>
+  <description value="StructureDefinition that adds resolution to a DeviceMetric." />
   <fhirVersion value="4.0.1" />
   <kind value="complex-type" />
   <abstract value="false" />
   <context>
     <type value="element" />
-    <expression value="SampledData" />
+    <expression value="DeviceMetric" />
   </context>
   <type value="Extension" />
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
   <derivation value="constraint" />
   <differential>
-    <element id="Extension.value[x]">
-      <path value="Extension.value[x]" />
+    <element id="Extension">
+      <path value="Extension"/>
+      <short value="Resolution"/>
+      <definition value="Resolution is the minimum determinable difference between two determined values"/>
+      <max value="1"/>
+    </element>
+    <element id="Extension.extension">
+      <path value="Extension.extension"/>
+      <max value="0"/>
+    </element>
+    <element id="Extension.url">
+      <path value="Extension.url"/>
+      <fixedUri value="http://hl7.org/fhir/uv/pocd/StructureDefinition/resolution"/>
+    </element>
+    <element id="Extension.value[x]:valueDecimal">
+      <path value="Extension.valueDecimal"/>
+      <min value="1"/>
       <type>
         <code value="decimal" />
       </type>

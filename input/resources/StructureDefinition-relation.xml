@@ -5,7 +5,7 @@
   <name value="Relation" />
   <title value="Relation extension"/>
   <status value="draft" />
-  <date value="2021-07-07"/>
+  <date value="2021-08-01"/>
   <publisher value="HL7 International - Devices Work Group"/>
   <description value="Relation allows the modelling of relationships between a metric and other containment tree entries.&#xD;&#xA;Related containment tree entries are defined in Entries, whereby the flavor of a relationship can be&#xD;&#xA;set up in Kind." />
   <fhirVersion value="4.0.1" />
@@ -37,11 +37,18 @@
     <element id="Extension.extension:kind">
       <path value="Extension.extension" />
       <sliceName value="kind" />
-      <short value="kind of relation" />
+      <short value="Kind of relation" />
       <definition value="Kind specifies the relationship between the METRIC and referenced containment tree entries.&#xD;&#xA;Referenced containment tree entries are defined in ./pm:Relation/@Entries." />
+      <min value="1"/>
+      <max value="1"/>
+    </element>
+    <element id="Extension.extension:kind.url">
+      <path value="Extension.extension.url"/>
+      <fixedUri value="kind"/>
     </element>
     <element id="Extension.extension.value[x]:valueCode">
       <path value="Extension.extension.valueCode" />
+      <min value="1"/>
       <type>
         <code value="code" />
       </type>
@@ -60,13 +67,19 @@
       <sliceName value="entries" />
       <short value="Entries" />
       <definition value="List of references that relate to the METRIC" />
+      <min value="1"/>
+    </element>
+    <element id="Extension.extension:entries.url">
+      <path value="Extension.extension.url"/>
+      <fixedUri value="entries"/>
     </element>
     <element id="Extension.extension.value[x]:valueReference">
       <path value="Extension.extension.valueReference" />
+      <min value="1"/>
       <type>
         <code value="Reference" />
       </type>
-     </element>
+    </element>
     <element id="Extension.extension.value[x]:valueReference.reference">
       <path value="Extension.extension.valueReference.reference" />
       <mapping>
@@ -94,11 +107,17 @@
     <element id="Extension.extension:code">
       <path value="Extension.extension" />
       <sliceName value="code" />
-      <short value="description of relation" />
+      <short value="Description of relation" />
       <definition value="Code allows the semantic description of the relationship between the METRIC and the list of related containment tree entries defined in Entries." />
+      <max value="1"/>
+    </element>
+    <element id="Extension.extension:code.url">
+      <path value="Extension.extension.url"/>
+      <fixedUri value="code"/>
     </element>
     <element id="Extension.extension.value[x]:valueCoding">
       <path value="Extension.extension.valueCoding" />
+      <min value="1"/>
       <type>
         <code value="Coding" />
       </type>

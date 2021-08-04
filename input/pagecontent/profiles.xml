@@ -152,6 +152,22 @@
     </tr>
     <tr>
       <td>
+        <a href="StructureDefinition-technical-range.html">Technical range extension</a>
+      </td>
+      <td>
+        <p>StructureDefinition that adds technical range and accuracy to a DeviceMetric.</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="StructureDefinition-resolution.html">Resolution extension</a>
+      </td>
+      <td>
+        <p>StructureDefinition that adds resolution to a DeviceMetric.</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
         <a href="StructureDefinition-sweep-speed.html">Sweep Speed extension</a>
       </td>
       <td>
@@ -202,86 +218,6 @@
       </td>
       <td>
         <p>StructureDefinition for Observation resources that represent real-time waveforms or wave snippets.</p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <a href="StructureDefinition-Quantity.html">Quantity profile</a>
-      </td>
-      <td>
-        <p>StructureDefinition for Quantity that provides a measured amount (or an amount that can potentially be measured).</p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <a href="StructureDefinition-SampledData.html">SampledData profile</a>
-      </td>
-      <td>
-        <p>StructureDefinition for SampledData that provides a concise way to handle the data produced by devices that sample a particular physical state at a high frequency.</p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <a href="StructureDefinition-lower-limit.html">Lower limit extension</a>
-      </td>
-      <td>
-        <p>StructureDefinition that adds a lower limit to Quantity.</p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <a href="StructureDefinition-upper-limit.html">Upper limit extension</a>
-      </td>
-      <td>
-        <p>StructureDefinition that adds an upper limit to Quantity.</p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <a href="StructureDefinition-factor.html">Factor extension</a>
-      </td>
-      <td>
-        <p>StructureDefinition that adds a factor to Quantity.</p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <a href="StructureDefinition-relative-accuracy.html">Relative accuracy extension</a>
-      </td>
-      <td>
-        <p>StructureDefinition that adds a relative accuracy to Quantity or SampledData.</p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <a href="StructureDefinition-absolute-accuracy.html">Absolute accuracy extension</a>
-      </td>
-      <td>
-        <p>StructureDefinition that adds an absolute accuracy to Quantity or SampledData.</p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <a href="StructureDefinition-resolution.html">Resolution extension</a>
-      </td>
-      <td>
-        <p>StructureDefinition that adds a resolution to SampledData.</p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <a href="StructureDefinition-domain-unit.html">Domain unit extension</a>
-      </td>
-      <td>
-        <p>StructureDefinition that adds a domain unit to SampledData.</p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <a href="StructureDefinition-distribution-range.html">Distribution range extension</a>
-      </td>
-      <td>
-        <p>StructureDefinition that adds a distribution range to SampledData.</p>
       </td>
     </tr>
   </table>

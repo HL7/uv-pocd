@@ -6,7 +6,6 @@
 <artifactPageExtension value="-definitions"/>
 <artifactPageExtension value="-examples"/>
 <artifactPageExtension value="-mappings"/>
-<artifact id="StructureDefinition/absolute-accuracy" key="StructureDefinition-absolute-accuracy" name="Absolute accuracy extension"/>
 <artifact id="StructureDefinition/approved-jurisdictions" key="StructureDefinition-approved-jurisdictions" name="Approved Jurisdictions extension"/>
 <artifact id="Device/BloodPressureChannelDevice" key="Device-BloodPressureChannelDevice" name="Blood Pressure Channel example"/>
 <artifact id="Device/BloodPressureVmdDevice" key="Device-BloodPressureVmdDevice" name="Blood Pressure VMD example"/>
@@ -18,21 +17,17 @@
 <artifact id="StructureDefinition/device-instance" key="StructureDefinition-device-instance" name="Device Instance extension"/>
 <artifact deprecated="true" key="DeviceComponent" name="DeviceComponent"/>
 <artifact deprecated="true" key="DeviceMetric" name="DeviceMetric"/>
-<artifact id="StructureDefinition/distribution-range" key="StructureDefinition-distribution-range" name="Distribution range extension"/>
-<artifact id="StructureDefinition/domain-unit" key="StructureDefinition-domain-unit" name="Domain unit extension"/>
 <artifact id="Device/ECGChannelDevice" key="Device-ECGChannelDevice" name="ECG Channel example"/>
 <artifact id="DeviceMetric/ECGSampleArrayDeviceMetric" key="DeviceMetric-ECGSampleArrayDeviceMetric" name="ECG Sample Array metric example"/>
 <artifact id="Observation/ECGSampleArrayObservation" key="Observation-ECGSampleArrayObservation" name="ECG Sample Array observation example"/>
 <artifact id="Device/ECGVmdDevice" key="Device-ECGVmdDevice" name="ECG VMD example"/>
 <artifact id="StructureDefinition/EnumerationDeviceMetric" key="StructureDefinition-EnumerationDeviceMetric" name="Enumeration DeviceMetric profile"/>
 <artifact id="StructureDefinition/EnumerationObservation" key="StructureDefinition-EnumerationObservation" name="Enumeration Observation profile"/>
-<artifact id="StructureDefinition/factor" key="StructureDefinition-factor" name="Factor extension"/>
 <artifact id="Device/HeartRateChannelDevice" key="Device-HeartRateChannelDevice" name="Heart Rate Channel example"/>
 <artifact id="DeviceMetric/HeartRateNumericDeviceMetric" key="DeviceMetric-HeartRateNumericDeviceMetric" name="Heart Rate Numeric metric example"/>
 <artifact id="Observation/HeartRateNumericObservation" key="Observation-HeartRateNumericObservation" name="Heart Rate Numeric observation example"/>
 <artifact id="CodeSystem/kind-of-relation" key="CodeSystem-kind-of-relation" name="Kind of relation codes"/>
 <artifact id="ValueSet/kind-of-relation" key="ValueSet-kind-of-relation" name="Kind of relation codes"/>
-<artifact id="StructureDefinition/lower-limit" key="StructureDefinition-lower-limit" name="Lower limit extension"/>
 <artifact id="ValueSet/11073MDC-metric" key="ValueSet-11073MDC-metric" name="MDC Metric nomenclature"/>
 <artifact id="ValueSet/11073MDC-object" key="ValueSet-11073MDC-object" name="MDC Object infrastructure and Device nomenclature"/>
 <artifact id="ValueSet/11073MDC-dimension" key="ValueSet-11073MDC-dimension" name="MDC Unit of Measurement"/>
@@ -58,9 +53,7 @@
 <artifact id="Device/PhysioMonitorMdsDevice" key="Device-PhysioMonitorMdsDevice" name="Patient Monitor MDS example"/>
 <artifact id="StructureDefinition/Patient" key="StructureDefinition-Patient" name="Patient profile"/>
 <artifact id="StructureDefinition/Practitioner" key="StructureDefinition-Practitioner" name="Practitioner profile"/>
-<artifact id="StructureDefinition/Quantity" key="StructureDefinition-Quantity" name="Quantity profile"/>
 <artifact id="StructureDefinition/relation" key="StructureDefinition-relation" name="Relation extension"/>
-<artifact id="StructureDefinition/relative-accuracy" key="StructureDefinition-relative-accuracy" name="Relative accuracy extension"/>
 <artifact id="StructureDefinition/resolution" key="StructureDefinition-resolution" name="Resolution extension"/>
 <artifact id="DeviceMetric/RhythmStatusEnumerationDeviceMetric" key="DeviceMetric-RhythmStatusEnumerationDeviceMetric" name="Rhythm Status Enumeration metric example"/>
 <artifact id="Observation/RhythmStatusEnumerationObservation" key="Observation-RhythmStatusEnumerationObservation" name="Rhythm Status Enumeration observation example"/>
@@ -68,13 +61,11 @@
 <artifact id="ValueSet/safety" key="ValueSet-safety" name="Safety classification codes"/>
 <artifact id="StructureDefinition/SampleArrayDeviceMetric" key="StructureDefinition-SampleArrayDeviceMetric" name="Sample Array DeviceMetric profile"/>
 <artifact id="StructureDefinition/SampleArrayObservation" key="StructureDefinition-SampleArrayObservation" name="Sample Array Observation profile"/>
-<artifact id="StructureDefinition/SampledData" key="StructureDefinition-SampledData" name="SampledData profile"/>
-<artifact id="CapabilityStatement/ServerCapabilityStatement" key="CapabilityStatement-ServerCapabilityStatement" name="Server CapabilityStatement"/>
 <artifact id="Location/SomeLocation" key="Location-SomeLocation" name="Some Location example"/>
 <artifact id="Patient/SomePatient" key="Patient-SomePatient" name="Some Patient example"/>
 <artifact id="Practitioner/SomePractitioner" key="Practitioner-SomePractitioner" name="Some Practitioner example"/>
 <artifact id="StructureDefinition/sweep-speed" key="StructureDefinition-sweep-speed" name="Sweep Speed extension"/>
-<artifact id="StructureDefinition/upper-limit" key="StructureDefinition-upper-limit" name="Upper limit extension"/>
+<artifact id="StructureDefinition/technical-range" key="StructureDefinition-technical-range" name="Technical range extension"/>
 <artifact id="StructureDefinition/VmdDevice" key="StructureDefinition-VmdDevice" name="VMD Device profile"/>
 <artifact id="StructureDefinition/visual-grid" key="StructureDefinition-visual-grid" name="Visual Grid extension"/>
 <page key="NA" name="(NA)"/>

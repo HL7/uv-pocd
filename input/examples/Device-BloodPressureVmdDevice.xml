@@ -12,9 +12,9 @@
   <status value="active"/>
   <type>
     <coding>
-       <system value="urn:iso:std:iso:11073:10101"/>
-       <code value="69710"/>
-       <display value="MDC_DEV_ANALY_PRESS_BLD_VMD"/>
+      <system value="urn:iso:std:iso:11073:10101"/>
+      <code value="69710"/>
+      <display value="MDC_DEV_ANALY_PRESS_BLD_VMD"/>
     </coding>
  </type>
 <parent>

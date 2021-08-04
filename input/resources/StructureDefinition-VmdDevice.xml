@@ -86,8 +86,7 @@
       <path value="Device.extension" />
       <sliceName value="approvedJurisdictions" />
       <short value="Approved jurisdictions" />
-      <definition value="List of regions in which a DEVICE COMPONENT is approved to be operated. If the list does not contain
-any entries, then the DEVICE COMPONENT is not approved for any region." />
+      <definition value="List of regions in which a device is approved to be operated." />
       <min value="0" />
       <max value="*" />
       <type>
@@ -96,18 +95,21 @@ any entries, then the DEVICE COMPONENT is not approved for any region." />
       </type>
       <mustSupport value="true"/>
     </element>
-    <element id="Device.extension:approvedJurisdictions.valueIdentifier">
-      <path value="Device.extension.valueIdentifier"/>
+    <element id="Device.extension:approvedJurisdictions.valueCodeableConcept">
+      <path value="Device.extension.valueCodeableConcept"/>
     </element>
-    <element id="Device.extension:approvedJurisdictions.valueIdentifier.system">
-      <path value="Device.extension.valueIdentifier.system"/>
+    <element id="Device.extension:approvedJurisdictions.valueCodeableConcept.coding">
+      <path value="Device.extension.valueCodeableConcept.coding"/>
+    </element>
+    <element id="Device.extension:approvedJurisdictions.valueCodeableConcept.coding.system">
+      <path value="Device.extension.valueCodeableConcept.coding.system"/>
       <mapping>
         <identity value="sdc"/>
         <map value="ApprovedJurisdictions/ApprovedJurisdiction/Root"/>
       </mapping>
     </element>
-    <element id="Device.extension:approvedJurisdictions.valueIdentifier.value">
-      <path value="Device.extension.valueIdentifier.value"/>
+    <element id="Device.extension:approvedJurisdictions.valueCodeableConcept.coding.code">
+      <path value="Device.extension.valueCodeableConcept.coding.code"/>
       <mapping>
         <identity value="sdc"/>
         <map value="ApprovedJurisdictions/ApprovedJurisdiction/Extension"/>
