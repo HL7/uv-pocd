@@ -234,7 +234,7 @@
       <path value="Observation.referenceRange.low"/>
       <mapping>
         <identity value="dim"/>
-        <map value="SampleArray::Sa-Physiological-Range::lower-scaled-value"/>
+        <map value="SampleArray::Sa-Physiological-Range::lower-scaled-value (convert to absolute value)"/>
       </mapping>
       <mapping>
         <identity value="sdc"/>
@@ -245,7 +245,7 @@
       <path value="Observation.referenceRange.high"/>
       <mapping>
         <identity value="dim"/>
-        <map value="SampleArray::Sa-Physiological-Range::upper-scaled-value"/>
+        <map value="SampleArray::Sa-Physiological-Range::upper-scaled-value (convert to absolute value)"/>
       </mapping>
       <mapping>
         <identity value="sdc"/>
@@ -333,14 +333,14 @@
       <path value="Observation.component.referenceRange.low"/>
       <mapping>
         <identity value="dim"/>
-        <map value="SampleArray::Sa-Physiological-Range::lower-scaled-value"/>
+        <map value="SampleArray::Sa-Physiological-Range::lower-scaled-value (convert to absolute value)"/>
       </mapping>
     </element>
     <element id="Observation.component.referenceRange.high">
       <path value="Observation.component.referenceRange.high"/>
       <mapping>
         <identity value="dim"/>
-        <map value="SampleArray::Sa-Physiological-Range::upper-scaled-value"/>
+        <map value="SampleArray::Sa-Physiological-Range::upper-scaled-value (convert to absolute value)"/>
       </mapping>
     </element>
   </differential>

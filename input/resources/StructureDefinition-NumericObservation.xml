@@ -173,6 +173,9 @@
     <element id="Observation.value[x]:valueQuantity">
       <path value="Observation.valueQuantity"/>
       <sliceName value="valueQuantity"/>
+      <type>
+        <code value="Quantity"/>
+      </type>
     </element>
     <element id="Observation.value[x]:valueQuantity.value">
       <path value="Observation.valueQuantity.value"/>

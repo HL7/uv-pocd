@@ -153,16 +153,16 @@
         <profile value="http://hl7.org/fhir/uv/pocd/StructureDefinition/operating-mode" />
       </type>
       <mustSupport value="true"/>
+      <mapping>
+        <identity value="dim"/>
+        <map value="MDS::Operating-Mode"/>
+      </mapping>
     </element>
     <element id="Device.extension:operatingMode.valueCode">
       <path value="Device.extension.valueCode"/>
        <mapping>
         <identity value="sdc"/>
         <map value="MdsState/OperatingMode"/>
-      </mapping>
-      <mapping>
-        <identity value="dim"/>
-        <map value="MDS::Operating-Mode"/>
       </mapping>
     </element>
     <element id="Device.identifier">

@@ -61,6 +61,7 @@
 <artifact id="ValueSet/safety" key="ValueSet-safety" name="Safety classification codes"/>
 <artifact id="StructureDefinition/SampleArrayDeviceMetric" key="StructureDefinition-SampleArrayDeviceMetric" name="Sample Array DeviceMetric profile"/>
 <artifact id="StructureDefinition/SampleArrayObservation" key="StructureDefinition-SampleArrayObservation" name="Sample Array Observation profile"/>
+<artifact id="CapabilityStatement/ServerCapabilityStatement" key="CapabilityStatement-ServerCapabilityStatement" name="Server CapabilityStatement"/>
 <artifact id="Location/SomeLocation" key="Location-SomeLocation" name="Some Location example"/>
 <artifact id="Patient/SomePatient" key="Patient-SomePatient" name="Some Patient example"/>
 <artifact id="Practitioner/SomePractitioner" key="Practitioner-SomePractitioner" name="Some Practitioner example"/>
@@ -70,9 +71,11 @@
 <artifact id="StructureDefinition/visual-grid" key="StructureDefinition-visual-grid" name="Visual Grid extension"/>
 <page key="NA" name="(NA)"/>
 <page key="many" name="(many)"/>
+<page key="definitions" name="Abbreviations and Definitions"/>
 <page key="artifacts" name="Artifact List"/>
 <page key="changes" name="Change Log"/>
 <page key="downloads" name="Downloads"/>
+<page key="mappingv2" name="HL7 V2 Mapping"/>
 <page key="index" name="Home"/>
 <page key="mappingdim" name="Mapping from IEEE 11073-10201 DIM to FHIR"/>
 <page key="mappingsdc" name="Mapping from IEEE 11073-10207 SDC to FHIR"/>

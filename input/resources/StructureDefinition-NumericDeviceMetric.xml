@@ -9,13 +9,13 @@
 * `DeviceMetric.source` shall be present and refer to the MDS Device resource.&#10;
 * `DeviceMetric.parent` shall be present and refer to the Channel Device resource which this metric belongs to.&#10;
 * If multiple instances of the same metric type exist, the Instance extension allows a squence to be defined.&#10;
-* Extensions allow relationships and metric availability to be added."/>
+* Extensions allow relationships, metric availability, technical range, and resolution to be added."/>
   </extension>
   <url value="http://hl7.org/fhir/uv/pocd/StructureDefinition/NumericDeviceMetric"/>
   <name value="NumericDeviceMetric"/>
   <title value="Numeric DeviceMetric profile"/>
   <status value="draft"/>
-  <date value="2021-07-24"/>
+  <date value="2021-08-04"/>
   <publisher value="HL7 International - Devices Work Group"/>
   <description value="StructureDefinition for DeviceMetric resources that represent numerical measurements, calculations, or settings characteristics and capabilities."/>
   <fhirVersion value="4.0.1"/>
@@ -112,6 +112,27 @@ Related containment tree entries are defined in Entries, whereby the flavor of a
         <code value="Extension" />
         <profile value="http://hl7.org/fhir/uv/pocd/StructureDefinition/technical-range" />
       </type>
+      <mustSupport value="true"/>
+    </element>
+    <element id="DeviceMetric.extension:resolution">
+      <path value="DeviceMetric.extension" />
+      <sliceName value="resolution" />
+      <short value="Minimum determinable difference" />
+      <definition value="The resolution of the means to determine the METRIC&#39;s value. Resolution is the minimum determinable\difference between two determined values." />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org/fhir/uv/pocd/StructureDefinition/resolution" />
+      </type>
+      <mustSupport value="true"/>
+      <mapping>
+        <identity value="dim"/>
+        <map value="Numeric::Nu-Measure-Resolution"/>
+      </mapping>
+      <mapping>
+        <identity value="sdc"/>
+        <map value="NumericMetricDescriptor/Resolution"/>
+      </mapping>
     </element>
     <element id="DeviceMetric.type">
       <path value="DeviceMetric.type"/>
@@ -162,6 +183,7 @@ Related containment tree entries are defined in Entries, whereby the flavor of a
     </element>
     <element id="DeviceMetric.unit">
       <path value="DeviceMetric.unit"/>
+      <mustSupport value="true"/>
       <binding>
         <strength value="extensible"/>
         <valueSet value="http://hl7.org/fhir/uv/pocd/ValueSet/11073MDC-dimension"/>

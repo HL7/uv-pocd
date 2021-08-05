@@ -4,6 +4,9 @@
   <meta>
     <profile value="http://hl7.org/fhir/uv/pocd/StructureDefinition/SampleArrayDeviceMetric"/>
   </meta>
+  <extension url="http://hl7.org/fhir/uv/pocd/StructureDefinition/resolution">
+  	<valueDecimal value="0.001"/>
+  </extension>
   <extension url="http://hl7.org/fhir/uv/pocd/StructureDefinition/sweep-speed">
     <valueQuantity>
       <value value="25"/>
@@ -11,9 +14,6 @@
       <system value="http://unitsofmeasure.org"/>
       <code value="mm/s"/>
     </valueQuantity>
-  </extension>
-  <extension url="http://hl7.org/fhir/uv/pocd/StructureDefinition/resolution">
-  	<valueDecimal value="1"/>
   </extension>
   <type>
     <coding>

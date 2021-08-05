@@ -5,7 +5,7 @@
   <name value="TechnicalRange" />
   <title value="Technical range extension"/>
   <status value="draft" />
-  <date value="2021-08-01"/>
+  <date value="2021-08-04"/>
   <publisher value="HL7 International - Devices Work Group"/>
   <description value="StructureDefinition that adds technical range and accuracy to a DeviceMetric."/>
   <fhirVersion value="4.0.1"/>
@@ -63,6 +63,10 @@
         <code value="decimal"/>
       </type>
       <mapping>
+        <identity value="dim"/>
+        <map value="Numeric::Nu-Measure-Range::lower-value, SampleArray::Scale-And-Range-Specification::lower-absolute-value"/>
+      </mapping>
+      <mapping>
         <identity value="sdc"/>
         <map value="AbstractMetricDescriptor/TechnicalRange/Lower"/>
       </mapping>
@@ -84,6 +88,10 @@
       <type>
         <code value="decimal"/>
       </type>
+      <mapping>
+        <identity value="dim"/>
+        <map value="Numeric::Nu-Measure-Range::upper-value, SampleArray::Scale-And-Range-Specification::upper-absolute-value"/>
+      </mapping>
       <mapping>
         <identity value="sdc"/>
         <map value="AbstractMetricDescriptor/TechnicalRange/Upper"/>
@@ -149,6 +157,10 @@
       <type>
         <code value="decimal"/>
       </type>
+      <mapping>
+        <identity value="dim"/>
+        <map value="Numeric::Accuracy"/>
+      </mapping>
       <mapping>
         <identity value="sdc"/>
         <map value="AbstractMetricDescriptor/TechnicalRange/AbsoluteAccuracy"/>
