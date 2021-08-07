@@ -1,4 +1,31 @@
 <div xmlns="http://www.w3.org/1999/xhtml">
+  <h3>Version 0.3.0</h3>
+  <ul>
+    <li>
+      Add "Getting Started" section.
+    </li>
+    <li>
+      Add "Technical Implementation Guidance" section with mappings from HL7 V2 and ISO/IEEE 11073.
+    </li>
+    <li>
+      Update all artifacts to FHIR Release #4 (version 4.0.1).
+    </li>
+    <li>
+      Add Sample Array DeviceMetric and Observation profiles and extensions for waveforms.
+    </li>
+    <li>
+      Add Device and DeviceMetric extensions and value sets for SDC mappings.
+    </li>
+    <li>
+      Add mustSupport flags to profile definitions.
+    </li>
+    <li>
+      Add Server CapabilityStatement.
+    </li>
+    <li>
+      Update and add examples.
+    </li>
+  </ul>
   <h3>Version 0.2.0</h3>
   <ul>
     <li>
