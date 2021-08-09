@@ -4,6 +4,7 @@
 <version code="0.3.0" url="http://hl7.org/fhir/uv/pocd/2021Sep"/>
 <version code="0.2.0" deprecated="true" url="http://hl7.org/fhir/uv/pocd/2018Sep"/>
 <version code="0.1.0" deprecated="true" url="http://hl7.org/fhir/uv/pocd/2018Jan"/>
+<version code="0.1" deprecated="true"/>
 <artifactPageExtension value="-definitions"/>
 <artifactPageExtension value="-examples"/>
 <artifactPageExtension value="-mappings"/>
@@ -27,16 +28,16 @@
 <artifact id="Device/HeartRateChannelDevice" key="Device-HeartRateChannelDevice" name="Heart Rate Channel example"/>
 <artifact id="DeviceMetric/HeartRateNumericDeviceMetric" key="DeviceMetric-HeartRateNumericDeviceMetric" name="Heart Rate Numeric metric example"/>
 <artifact id="Observation/HeartRateNumericObservation" key="Observation-HeartRateNumericObservation" name="Heart Rate Numeric observation example"/>
-<artifact id="CodeSystem/kind-of-relation" key="CodeSystem-kind-of-relation" name="Kind of relation codes"/>
-<artifact id="ValueSet/kind-of-relation" key="ValueSet-kind-of-relation" name="Kind of relation codes"/>
+<artifact id="CodeSystem/kind-of-relation" key="CodeSystem-kind-of-relation" name="Kind of relation code system"/>
+<artifact id="ValueSet/kind-of-relation" key="ValueSet-kind-of-relation" name="Kind of relation value set"/>
 <artifact id="ValueSet/11073MDC-metric" key="ValueSet-11073MDC-metric" name="MDC Metric nomenclature"/>
 <artifact id="ValueSet/11073MDC-object" key="ValueSet-11073MDC-object" name="MDC Object infrastructure and Device nomenclature"/>
 <artifact id="ValueSet/11073MDC-dimension" key="ValueSet-11073MDC-dimension" name="MDC Unit of Measurement"/>
 <artifact id="StructureDefinition/MdsDevice" key="StructureDefinition-MdsDevice" name="MDS Device profile"/>
 <artifact id="CodeSystem/measurement-status" key="CodeSystem-measurement-status" name="Measurement status codes"/>
-<artifact id="CodeSystem/metric-availability" key="CodeSystem-metric-availability" name="Metric availability codes"/>
-<artifact id="ValueSet/metric-availability" key="ValueSet-metric-availability" name="Metric availability codes"/>
+<artifact id="CodeSystem/metric-availability" key="CodeSystem-metric-availability" name="Metric availability code system"/>
 <artifact id="StructureDefinition/metric-availability" key="StructureDefinition-metric-availability" name="Metric availability extension"/>
+<artifact id="ValueSet/metric-availability" key="ValueSet-metric-availability" name="Metric availability value set"/>
 <artifact id="Device/NBPChannelDevice" key="Device-NBPChannelDevice" name="NBP Channel example"/>
 <artifact id="DeviceMetric/NBPNumericDeviceMetric" key="DeviceMetric-NBPNumericDeviceMetric" name="NBP Numeric metric example"/>
 <artifact id="Observation/NBPCompoundNumericObservation" key="Observation-NBPCompoundNumericObservation" name="NBP Numeric observation example"/>
@@ -47,9 +48,9 @@
 <artifact id="StructureDefinition/Observation" key="StructureDefinition-Observation" name="Observation profile"/>
 <artifact id="StructureDefinition/operating-cycles" key="StructureDefinition-operating-cycles" name="Operating cycles extension"/>
 <artifact id="StructureDefinition/operating-hours" key="StructureDefinition-operating-hours" name="Operating hours extension"/>
-<artifact id="CodeSystem/operating-mode" key="CodeSystem-operating-mode" name="Operating mode codes"/>
-<artifact id="ValueSet/operating-mode" key="ValueSet-operating-mode" name="Operating mode codes"/>
+<artifact id="CodeSystem/operating-mode" key="CodeSystem-operating-mode" name="Operating mode code system"/>
 <artifact id="StructureDefinition/operating-mode" key="StructureDefinition-operating-mode" name="Operating mode extension"/>
+<artifact id="ValueSet/operating-mode" key="ValueSet-operating-mode" name="Operating mode value set"/>
 <artifact id="StructureDefinition/operator" key="StructureDefinition-operator" name="Operator extension"/>
 <artifact id="Device/PhysioMonitorMdsDevice" key="Device-PhysioMonitorMdsDevice" name="Patient Monitor MDS example"/>
 <artifact id="StructureDefinition/Patient" key="StructureDefinition-Patient" name="Patient profile"/>
@@ -58,8 +59,8 @@
 <artifact id="StructureDefinition/resolution" key="StructureDefinition-resolution" name="Resolution extension"/>
 <artifact id="DeviceMetric/RhythmStatusEnumerationDeviceMetric" key="DeviceMetric-RhythmStatusEnumerationDeviceMetric" name="Rhythm Status Enumeration metric example"/>
 <artifact id="Observation/RhythmStatusEnumerationObservation" key="Observation-RhythmStatusEnumerationObservation" name="Rhythm Status Enumeration observation example"/>
-<artifact id="CodeSystem/safety" key="CodeSystem-safety" name="Safety classification codes"/>
-<artifact id="ValueSet/safety" key="ValueSet-safety" name="Safety classification codes"/>
+<artifact id="CodeSystem/safety" key="CodeSystem-safety" name="Safety classification code system"/>
+<artifact id="ValueSet/safety" key="ValueSet-safety" name="Safety classification value set"/>
 <artifact id="StructureDefinition/SampleArrayDeviceMetric" key="StructureDefinition-SampleArrayDeviceMetric" name="Sample Array DeviceMetric profile"/>
 <artifact id="StructureDefinition/SampleArrayObservation" key="StructureDefinition-SampleArrayObservation" name="Sample Array Observation profile"/>
 <artifact id="CapabilityStatement/ServerCapabilityStatement" key="CapabilityStatement-ServerCapabilityStatement" name="Server CapabilityStatement"/>

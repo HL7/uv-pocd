@@ -238,7 +238,7 @@
       <reference>
         <reference value="CodeSystem/operating-mode"/>
       </reference>
-      <name value="Operating mode codes"/>
+      <name value="Operating mode code system"/>
       <description value="Operating mode definitions from the ISO/IEEE 11073-10207."/>
       <exampleBoolean value="false"/>
     </resource>
@@ -246,7 +246,7 @@
       <reference>
         <reference value="CodeSystem/safety"/>
       </reference>
-      <name value="Safety classification codes"/>
+      <name value="Safety classification code system"/>
       <description value="Safety classification definitions from the ISO/IEEE 11073-10207."/>
       <exampleBoolean value="false"/>
     </resource>
@@ -254,7 +254,7 @@
       <reference>
         <reference value="CodeSystem/kind-of-relation"/>
       </reference>
-      <name value="Kind of relation codes"/>
+      <name value="Kind of relation code system"/>
       <description value="Relation definitions from the ISO/IEEE 11073-10207."/>
       <exampleBoolean value="false"/>
     </resource>
@@ -262,7 +262,7 @@
       <reference>
         <reference value="CodeSystem/metric-availability"/>
       </reference>
-      <name value="Metric availability codes"/>
+      <name value="Metric availability code system"/>
       <description value="Metric availability definitions from the ISO/IEEE 11073-10207."/>
       <exampleBoolean value="false"/>
     </resource>
@@ -302,7 +302,7 @@
       <reference>
         <reference value="ValueSet/operating-mode"/>
       </reference>
-      <name value="Operating mode codes"/>
+      <name value="Operating mode value set"/>
       <description value="ValueSet for IEEE 11073-10207 MdsState/OperatingMode."/>
       <exampleBoolean value="false"/>
     </resource>
@@ -310,7 +310,7 @@
       <reference>
         <reference value="ValueSet/safety"/>
       </reference>
-      <name value="Safety classification codes"/>
+      <name value="Safety classification value set"/>
       <description value="ValueSet for IEEE 11073-10207 SafetyClassification."/>
       <exampleBoolean value="false"/>
     </resource>
@@ -318,7 +318,7 @@
       <reference>
         <reference value="ValueSet/kind-of-relation"/>
       </reference>
-      <name value="Kind of relation codes"/>
+      <name value="Kind of relation value set"/>
       <description value="ValueSet for IEEE 11073-10207 Relation/Kind."/>
       <exampleBoolean value="false"/>
     </resource>
@@ -326,7 +326,7 @@
       <reference>
         <reference value="ValueSet/metric-availability"/>
       </reference>
-      <name value="Metric availability codes"/>
+      <name value="Metric availability value set"/>
       <description value="ValueSet for IEEE 11073-10207 MetricAvailability."/>
       <exampleBoolean value="false"/>
     </resource>   

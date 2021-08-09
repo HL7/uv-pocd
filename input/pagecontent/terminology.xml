@@ -42,7 +42,7 @@
     <col style="width:60%"/>
     <tr>
       <td>
-        <a href="CodeSystem-operating-mode.html">Operating mode codes</a>
+        <a href="CodeSystem-operating-mode.html">Operating mode code system</a>
       </td>
       <td>
         <p>Operating mode definitions from the ISO/IEEE 11073-10207.</p>
@@ -50,7 +50,7 @@
     </tr>
     <tr>
       <td>
-        <a href="CodeSystem-safety.html">Safety classification codes</a>
+        <a href="CodeSystem-safety.html">Safety classification code system</a>
       </td>
       <td>
         <p>Safety classification definitions from the ISO/IEEE 11073-10207.</p>
@@ -58,7 +58,7 @@
     </tr>
     <tr>
       <td>
-        <a href="CodeSystem-kind-of-relation.html">Kind of relation codes</a>
+        <a href="CodeSystem-kind-of-relation.html">Kind of relation code system</a>
       </td>
       <td>
         <p>Relation definitions from the ISO/IEEE 11073-10207.</p>
@@ -66,7 +66,7 @@
     </tr>
     <tr>
       <td>
-        <a href="CodeSystem-metric-availability.html">Metric availability codes</a>
+        <a href="CodeSystem-metric-availability.html">Metric availability code system</a>
       </td>
       <td>
         <p>Metric availability definitions from the ISO/IEEE 11073-10207.</p>
@@ -112,7 +112,7 @@
     </tr>
     <tr>
       <td>
-        <a href="ValueSet-operating-mode.html">Operating mode codes</a>
+        <a href="ValueSet-operating-mode.html">Operating mode value set</a>
       </td>
       <td>
         <p>ValueSet for IEEE 11073-10207 MdsState/OperatingMode.</p>
@@ -120,7 +120,7 @@
     </tr>
     <tr>
       <td>
-        <a href="ValueSet-safety.html">Safety classification codes</a>
+        <a href="ValueSet-safety.html">Safety classification value set</a>
       </td>
       <td>
         <p>ValueSet for IEEE 11073-10207 SafetyClassification.</p>
@@ -128,7 +128,7 @@
     </tr>
     <tr>
       <td>
-        <a href="ValueSet-kind-of-relation.html">Kind of relation codes</a>
+        <a href="ValueSet-kind-of-relation.html">Kind of relation value set</a>
       </td>
       <td>
         <p>ValueSet for IEEE 11073-10207 Relation/Kind.</p>
@@ -136,7 +136,7 @@
     </tr>
     <tr>
       <td>
-        <a href="ValueSet-metric-availability.html">Metric availability codes</a>
+        <a href="ValueSet-metric-availability.html">Metric availability value set</a>
       </td>
       <td>
         <p>ValueSet for IEEE 11073-10207 MetricAvailability.</p>
