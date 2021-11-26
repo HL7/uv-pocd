@@ -14,7 +14,7 @@
   <name value="CompoundNumericObservation"/>
   <title value="Compound Numeric Observation profile"/>
   <status value="draft"/>
-  <date value="2021-07-24"/>
+  <date value="2021-11-26"/>
   <publisher value="HL7 International - Devices Work Group"/>
   <description value="StructureDefinition for Observation resources that represent numerical measurements, calculations, or settings with multiple components."/>
   <fhirVersion value="4.0.1"/>
@@ -170,14 +170,14 @@
       <mustSupport value="true"/>
     </element>
     <element id="Observation.component.value[x]:valueQuantity">
-      <path value="Observation.component.valueQuantity"/>
+      <path value="Observation.component.value[x]"/>
       <sliceName value="valueQuantity"/>
       <type>
         <code value="Quantity"/>
       </type>
     </element>
     <element id="Observation.component.value[x]:valueQuantity.value">
-      <path value="Observation.component.valueQuantity.value"/>
+      <path value="Observation.component.value[x].value"/>
       <min value="1"/>
       <mapping>
         <identity value="dim"/>
@@ -185,11 +185,11 @@
       </mapping>
     </element>
     <element id="Observation.component.value[x]:valueQuantity.system">
-      <path value="Observation.component.valueQuantity.system"/>
+      <path value="Observation.component.value[x].system"/>
       <fixedUri value="http://unitsofmeasure.org"/>
     </element>
     <element id="Observation.component.value[x]:valueQuantity.code">
-      <path value="Observation.component.valueQuantity.code"/>
+      <path value="Observation.component.value[x].code"/>
       <mapping>
         <identity value="dim"/>
         <map value="Numeric::Compound-Nu-Observed-Value::unit-code (convert to UCUM)"/>

@@ -12,7 +12,7 @@
   <name value="SampleArrayObservation"/>
   <title value="Sample Array Observation profile"/>
   <status value="draft"/>
-  <date value="2021-07-24"/>
+  <date value="2021-11-26"/>
   <publisher value="HL7 International - Devices Work Group"/>
   <description value="StructureDefinition for Observation resources that represent real-time waveforms or wave snippets."/>
   <fhirVersion value="4.0.1"/>
@@ -150,24 +150,24 @@
       <mustSupport value="true"/>
     </element>
     <element id="Observation.value[x]:valueSampledData">
-      <path value="Observation.valueSampledData"/>
+      <path value="Observation.value[x]"/>
       <sliceName value="valueSampledData"/>
       <type>
         <code value="SampledData"/>
       </type>
     </element>
     <element id="Observation.value[x]:valueSampledData.origin">
-      <path value="Observation.valueSampledData.origin"/>
+      <path value="Observation.value[x].origin"/>
     </element>
     <element id="Observation.value[x]:valueSampledData.origin.system">
-      <path value="Observation.valueSampledData.origin.system"/>
+      <path value="Observation.value[x].origin.system"/>
       <fixedUri value="http://unitsofmeasure.org"/>
     </element>
     <element id="Observation.value[x]:valueSampledData.origin.code">
-      <path value="Observation.valueSampledData.origin.code"/>
+      <path value="Observation.value[x].origin.code"/>
     </element>
     <element id="Observation.value[x]:valueSampledData.data">
-      <path value="Observation.valueSampledData.data"/>
+      <path value="Observation.value[x].data"/>
       <mapping>
         <identity value="dim"/>
         <map value="SampleArray::Sa-Observed-Value::array"/>
@@ -290,24 +290,24 @@
       <mustSupport value="true"/>
     </element>
     <element id="Observation.component.value[x]:valueSampledData">
-      <path value="Observation.component.valueSampledData"/>
+      <path value="Observation.component.value[x]"/>
       <sliceName value="valueSampledData"/>
       <type>
         <code value="SampledData"/>
       </type>
     </element>
     <element id="Observation.component.value[x]:valueSampledData.origin">
-      <path value="Observation.component.valueSampledData.origin"/>
+      <path value="Observation.component.value[x].origin"/>
     </element>
     <element id="Observation.component.value[x]:valueSampledData.origin.system">
-      <path value="Observation.component.valueSampledData.origin.system"/>
+      <path value="Observation.component.value[x].origin.system"/>
       <fixedUri value="http://unitsofmeasure.org"/>
     </element>
     <element id="Observation.component.value[x]:valueSampledData.origin.code">
-      <path value="Observation.component.valueSampledData.origin.code"/>
+      <path value="Observation.component.value[x].origin.code"/>
     </element>
     <element id="Observation.component.value[x]:valueSampledData.data">
-      <path value="Observation.component.valueSampledData.data"/>
+      <path value="Observation.component.value[x].data"/>
       <mapping>
         <identity value="dim"/>
         <map value="SampleArray::Compound-Sa-Observed-Value::array"/>

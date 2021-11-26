@@ -13,7 +13,7 @@
   <name value="NumericObservation"/>
   <title value="Numeric Observation profile"/>
   <status value="draft"/>
-  <date value="2021-07-24"/>
+  <date value="2021-11-26"/>
   <publisher value="HL7 International - Devices Work Group"/>
   <description value="StructureDefinition for Observation resources that represent numerical measurements, calculations, or settings."/>
   <fhirVersion value="4.0.1"/>
@@ -171,14 +171,14 @@
       <mustSupport value="true"/>
     </element>
     <element id="Observation.value[x]:valueQuantity">
-      <path value="Observation.valueQuantity"/>
+      <path value="Observation.value[x]"/>
       <sliceName value="valueQuantity"/>
       <type>
         <code value="Quantity"/>
       </type>
     </element>
     <element id="Observation.value[x]:valueQuantity.value">
-      <path value="Observation.valueQuantity.value"/>
+      <path value="Observation.value[x].value"/>
       <min value="1"/>
       <mapping>
         <identity value="dim"/>
@@ -190,43 +190,43 @@
       </mapping>
     </element>
     <element id="Observation.value[x]:valueQuantity.system">
-      <path value="Observation.valueQuantity.system"/>
+      <path value="Observation.value[x].system"/>
       <fixedUri value="http://unitsofmeasure.org"/>
     </element>
     <element id="Observation.value[x]:valueQuantity.code">
-      <path value="Observation.valueQuantity.code"/>
+      <path value="Observation.value[x].code"/>
       <mapping>
         <identity value="dim"/>
         <map value="Numeric::Nu-Observed-Value::unit-code (convert to UCUM)"/>
       </mapping>
     </element>
     <element id="Observation.value[x]:valueRatio">
-      <path value="Observation.valueRatio"/>
+      <path value="Observation.value[x]"/>
       <sliceName value="valueRatio"/>
       <type>
         <code value="Ratio"/>
       </type>
     </element>
     <element id="Observation.value[x]:valueRatio.numerator">
-      <path value="Observation.valueRatio.numerator"/>
+      <path value="Observation.value[x].numerator"/>
     </element>
     <element id="Observation.value[x]:valueRatio.numerator.value">
-      <path value="Observation.valueRatio.numerator.value"/>
+      <path value="Observation.value[x].numerator.value"/>
       <min value="1"/>
     </element>
     <element id="Observation.value[x]:valueRatio.numerator.system">
-      <path value="Observation.valueRatio.numerator.system"/>
+      <path value="Observation.value[x].numerator.system"/>
       <fixedUri value="http://unitsofmeasure.org"/>
     </element>
     <element id="Observation.value[x]:valueRatio.denominator">
-      <path value="Observation.valueRatio.denominator"/>
+      <path value="Observation.value[x].denominator"/>
     </element>
     <element id="Observation.value[x]:valueRatio.denominator.value">
-      <path value="Observation.valueRatio.denominator.value"/>
+      <path value="Observation.value[x].denominator.value"/>
       <min value="1"/>
     </element>
     <element id="Observation.value[x]:valueRatio.denominator.system">
-      <path value="Observation.valueRatio.denominator.system"/>
+      <path value="Observation.value[x].denominator.system"/>
       <fixedUri value="http://unitsofmeasure.org"/>
     </element>
     <element id="Observation.dataAbsentReason">
