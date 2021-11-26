@@ -13,23 +13,31 @@
         "op" : "=",
         "value" : "2"
       }]
+    },
+    {
+      "system" : "urn:iso:std:iso:11073:10101",
+      "filter" : [{
+        "property" : "partition",
+        "op" : "=",
+        "value" : "258"
+      }]
     }]
   }
-}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK"}####
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK", "versionFlexible":"true"}####
 v: {
   "display" : "Heart rate",
-  "severity" : null,
-  "error" : ""
+  "code" : "8867-4",
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "8867-4"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "Heart rate",
-  "severity" : null,
-  "error" : ""
+  "code" : "8867-4",
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
@@ -46,23 +54,31 @@ v: {
         "op" : "=",
         "value" : "2"
       }]
+    },
+    {
+      "system" : "urn:iso:std:iso:11073:10101",
+      "filter" : [{
+        "property" : "partition",
+        "op" : "=",
+        "value" : "258"
+      }]
     }]
   }
-}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK"}####
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK", "versionFlexible":"true"}####
 v: {
   "display" : "Blood pressure panel with all children optional",
-  "severity" : null,
-  "error" : ""
+  "code" : "85354-9",
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "85354-9"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "Blood pressure panel with all children optional",
-  "severity" : null,
-  "error" : ""
+  "code" : "85354-9",
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
@@ -79,23 +95,31 @@ v: {
         "op" : "=",
         "value" : "2"
       }]
+    },
+    {
+      "system" : "urn:iso:std:iso:11073:10101",
+      "filter" : [{
+        "property" : "partition",
+        "op" : "=",
+        "value" : "258"
+      }]
     }]
   }
-}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK"}####
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK", "versionFlexible":"true"}####
 v: {
   "display" : "Systolic blood pressure",
-  "severity" : null,
-  "error" : ""
+  "code" : "8480-6",
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "8480-6"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "Systolic blood pressure",
-  "severity" : null,
-  "error" : ""
+  "code" : "8480-6",
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
@@ -112,23 +136,31 @@ v: {
         "op" : "=",
         "value" : "2"
       }]
+    },
+    {
+      "system" : "urn:iso:std:iso:11073:10101",
+      "filter" : [{
+        "property" : "partition",
+        "op" : "=",
+        "value" : "258"
+      }]
     }]
   }
-}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK"}####
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK", "versionFlexible":"true"}####
 v: {
   "display" : "Diastolic blood pressure",
-  "severity" : null,
-  "error" : ""
+  "code" : "8462-4",
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "8462-4"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "Diastolic blood pressure",
-  "severity" : null,
-  "error" : ""
+  "code" : "8462-4",
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
@@ -145,177 +177,30 @@ v: {
         "op" : "=",
         "value" : "2"
       }]
+    },
+    {
+      "system" : "urn:iso:std:iso:11073:10101",
+      "filter" : [{
+        "property" : "partition",
+        "op" : "=",
+        "value" : "258"
+      }]
     }]
   }
-}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK"}####
+}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK", "versionFlexible":"true"}####
 v: {
   "display" : "Mean blood pressure",
-  "severity" : null,
-  "error" : ""
+  "code" : "8478-0",
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "http://loinc.org",
   "code" : "8478-0"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
 v: {
   "display" : "Mean blood pressure",
-  "severity" : null,
-  "error" : ""
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://loinc.org",
-  "code" : "8867-4",
-  "display" : "Heart rate"
-}, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "urn:iso:std:iso:11073:10101",
-      "filter" : [{
-        "property" : "partition",
-        "op" : "=",
-        "value" : "2"
-      }]
-    },
-    {
-      "system" : "urn:iso:std:iso:11073:10101",
-      "filter" : [{
-        "property" : "partition",
-        "op" : "=",
-        "value" : "258"
-      }]
-    }]
-  }
-}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK"}####
-v: {
-  "display" : "Heart rate",
-  "severity" : null,
-  "error" : ""
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://loinc.org",
-  "code" : "85354-9",
-  "display" : "Blood pressure panel with all children optional"
-}, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "urn:iso:std:iso:11073:10101",
-      "filter" : [{
-        "property" : "partition",
-        "op" : "=",
-        "value" : "2"
-      }]
-    },
-    {
-      "system" : "urn:iso:std:iso:11073:10101",
-      "filter" : [{
-        "property" : "partition",
-        "op" : "=",
-        "value" : "258"
-      }]
-    }]
-  }
-}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK"}####
-v: {
-  "display" : "Blood pressure panel with all children optional",
-  "severity" : null,
-  "error" : ""
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://loinc.org",
-  "code" : "8480-6",
-  "display" : "Systolic blood pressure"
-}, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "urn:iso:std:iso:11073:10101",
-      "filter" : [{
-        "property" : "partition",
-        "op" : "=",
-        "value" : "2"
-      }]
-    },
-    {
-      "system" : "urn:iso:std:iso:11073:10101",
-      "filter" : [{
-        "property" : "partition",
-        "op" : "=",
-        "value" : "258"
-      }]
-    }]
-  }
-}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK"}####
-v: {
-  "display" : "Systolic blood pressure",
-  "severity" : null,
-  "error" : ""
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://loinc.org",
-  "code" : "8462-4",
-  "display" : "Diastolic blood pressure"
-}, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "urn:iso:std:iso:11073:10101",
-      "filter" : [{
-        "property" : "partition",
-        "op" : "=",
-        "value" : "2"
-      }]
-    },
-    {
-      "system" : "urn:iso:std:iso:11073:10101",
-      "filter" : [{
-        "property" : "partition",
-        "op" : "=",
-        "value" : "258"
-      }]
-    }]
-  }
-}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK"}####
-v: {
-  "display" : "Diastolic blood pressure",
-  "severity" : null,
-  "error" : ""
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://loinc.org",
   "code" : "8478-0",
-  "display" : "Mean blood pressure"
-}, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "urn:iso:std:iso:11073:10101",
-      "filter" : [{
-        "property" : "partition",
-        "op" : "=",
-        "value" : "2"
-      }]
-    },
-    {
-      "system" : "urn:iso:std:iso:11073:10101",
-      "filter" : [{
-        "property" : "partition",
-        "op" : "=",
-        "value" : "258"
-      }]
-    }]
-  }
-}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK"}####
-v: {
-  "display" : "Mean blood pressure",
-  "severity" : null,
-  "error" : ""
+  "system" : "http://loinc.org"
 }
 -------------------------------------------------------------------------------------

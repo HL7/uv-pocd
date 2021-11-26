@@ -31,7 +31,7 @@
 <artifact id="CodeSystem/kind-of-relation" key="CodeSystem-kind-of-relation" name="Kind of relation code system"/>
 <artifact id="ValueSet/kind-of-relation" key="ValueSet-kind-of-relation" name="Kind of relation value set"/>
 <artifact id="ValueSet/11073MDC-metric" key="ValueSet-11073MDC-metric" name="MDC Metric nomenclature"/>
-<artifact id="ValueSet/11073MDC-object" key="ValueSet-11073MDC-object" name="MDC Object infrastructure and Device nomenclature"/>
+<artifact id="ValueSet/11073MDC-object" key="ValueSet-11073MDC-object" name="MDC Object infrastructure and Device nomenclature (ValueSet)"/>
 <artifact id="ValueSet/11073MDC-dimension" key="ValueSet-11073MDC-dimension" name="MDC Unit of Measurement"/>
 <artifact id="StructureDefinition/MdsDevice" key="StructureDefinition-MdsDevice" name="MDS Device profile"/>
 <artifact id="CodeSystem/measurement-status" key="CodeSystem-measurement-status" name="Measurement status codes"/>

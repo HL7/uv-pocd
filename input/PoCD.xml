@@ -2,12 +2,12 @@
 <ImplementationGuide xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../input-cache/schemas-r5/fhir-single.xsd">
   <id value="hl7.fhir.uv.pocd"/>
   <url value="http://hl7.org/fhir/uv/pocd/ImplementationGuide/hl7.fhir.uv.pocd"/>
-  <version value="0.3.0"/>
+  <version value="current"/>
   <name value="PoCDImplementationGuide"/>
   <title value="Point-of-Care Device Implementation Guide"/>
   <status value="draft"/>
   <experimental value="false"/>
-  <date value="2021-08-06"/>
+  <date value="2021-11-26"/>
   <publisher value="HL7 International - Devices Work Group"/>
   <contact>
     <telecom>
@@ -592,7 +592,7 @@
     </parameter>
     <parameter>
       <code value="releaselabel"/>
-      <value value="STU 1 Ballot"/>
+      <value value="CI Build"/>
     </parameter>
     <parameter>
       <code value="find-other-resources"/>
