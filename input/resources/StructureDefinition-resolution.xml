@@ -5,7 +5,7 @@
   <name value="Resolution" />
   <title value="Resolution extension"/>
   <status value="draft" />
-  <date value="2021-08-01"/>
+  <date value="2022-01-16"/>
   <publisher value="HL7 International - Devices Work Group"/>
   <description value="StructureDefinition that adds resolution to a DeviceMetric." />
   <fhirVersion value="4.0.1" />
@@ -21,9 +21,8 @@
   <differential>
     <element id="Extension">
       <path value="Extension"/>
-      <short value="Resolution"/>
-      <definition value="Resolution is the minimum determinable difference between two determined values"/>
-      <max value="1"/>
+      <short value="Minimum determinable difference" />
+      <definition value="Resolution is the minimum determinable difference between two determined values."/>
     </element>
     <element id="Extension.extension">
       <path value="Extension.extension"/>

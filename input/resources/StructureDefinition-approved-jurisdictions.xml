@@ -5,7 +5,7 @@
   <name value="ApprovedJurisdictions" />
   <title value="Approved Jurisdictions extension"/>
   <status value="draft" />
-  <date value="2021-08-01"/>
+  <date value="2022-01-16"/>
   <description value="StructureDefinition that adds approved jurisdictions to a Device."/>
   <fhirVersion value="4.0.1" />
   <kind value="complex-type" />
@@ -20,6 +20,8 @@
   <differential>
 	  <element id="Extension">
 	    <path value="Extension"/>
+      <short value="Approved jurisdictions" />
+      <definition value="List of regions in which a device is approved to be operated." />
 	  </element>
     <element id="Extension.extension">
       <path value="Extension.extension"/>
@@ -31,8 +33,6 @@
 	  </element>
     <element id="Extension.value[x]:valueCodeableConcept">
       <path value="Extension.valueCodeableConcept" />
-      <short value="Approved Jurisdictions" />
-      <definition value="List of regions in which a device is approved to be operated." />
       <min value="1"/>
       <type>
         <code value="CodeableConcept" />

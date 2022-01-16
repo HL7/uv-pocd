@@ -16,7 +16,7 @@
   <name value="SampleArrayDeviceMetric"/>
   <title value="Sample Array DeviceMetric profile"/>
   <status value="draft"/>
-  <date value="2021-08-04"/>
+  <date value="2022-01-16"/>
   <publisher value="HL7 International - Devices Work Group"/>
   <description value="StructureDefinition for DeviceMetric resources that represent real-time waveforms or wave snippets characteristics and capabilities."/>
   <fhirVersion value="4.0.1"/>
@@ -53,6 +53,7 @@
       <path value="DeviceMetric.extension"/>
       <sliceName value="instance"/>
       <short value="Instance number or label"/>
+      <definition value="Instance number or label for multiple components of the same type."/>
       <max value="1"/>
       <type>
         <code value="Extension"/>
@@ -76,10 +77,7 @@
       <path value="DeviceMetric.extension" />
       <sliceName value="relation" />
       <short value="Modelling relationships" />
-      <definition value="Relation allows the modelling of relationships between a metric and other containment tree entries.
-Related containment tree entries are defined in Entries, whereby the flavor of a relationship can be set up in Kind." />
-      <min value="0" />
-      <max value="*" />
+      <definition value="Relation allows the modelling of relationships between a metric and other containment tree entries." />
       <type>
         <code value="Extension" />
         <profile value="http://hl7.org/fhir/uv/pocd/StructureDefinition/relation" />
@@ -90,7 +88,6 @@ Related containment tree entries are defined in Entries, whereby the flavor of a
       <sliceName value="metricAvailability" />
       <short value="Availability of metrics" />
       <definition value="Availability of the means that derives the metric state." />
-      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -105,9 +102,8 @@ Related containment tree entries are defined in Entries, whereby the flavor of a
     <element id="DeviceMetric.extension:technicalRange">
       <path value="DeviceMetric.extension" />
       <sliceName value="technicalRange" />
-      <short value="Technical Range" />
+      <short value="Technical range and accuracy"/>
       <definition value="The technical possible range of determined values." />
-      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -119,7 +115,7 @@ Related containment tree entries are defined in Entries, whereby the flavor of a
       <path value="DeviceMetric.extension" />
       <sliceName value="resolution" />
       <short value="Minimum determinable difference" />
-      <definition value="The resolution of the means to determine the METRIC&#39;s value. Resolution is the minimum determinable\difference between two determined values." />
+      <definition value="Resolution is the minimum determinable difference between two determined values." />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -139,6 +135,7 @@ Related containment tree entries are defined in Entries, whereby the flavor of a
       <path value="DeviceMetric.extension"/>
       <sliceName value="sweep-speed"/>
       <short value="Default sweep speed"/>
+      <definition value="Default sweep speed for real-time waveform presentation."/>
       <max value="1"/>
       <type>
         <code value="Extension"/>
@@ -153,7 +150,7 @@ Related containment tree entries are defined in Entries, whereby the flavor of a
       <path value="DeviceMetric.extension"/>
       <sliceName value="visual-grid"/>
       <short value="Grid line definitions"/>
-      <max value="*"/>
+      <definition value="Grid line definitions for waveform presentation."/>
       <type>
         <code value="Extension"/>
         <profile value="http://hl7.org/fhir/uv/pocd/StructureDefinition/visual-grid"/>

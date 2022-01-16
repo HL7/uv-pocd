@@ -5,9 +5,9 @@
   <name value="OperatingMode" />
   <title value="Operating mode extension"/>
   <status value="draft" />
-  <date value="2021-07-07"/>
+  <date value="2022-01-16"/>
   <publisher value="HL7 International - Devices Work Group"/>
-  <description value="Operating mode that defines if the operation is accessible." />
+  <description value="StructureDefinition that adds an operating mode to a Device." />
   <fhirVersion value="4.0.1" />
   <kind value="complex-type" />
   <abstract value="false" />
@@ -21,7 +21,8 @@
   <differential>
     <element id="Extension">
       <path value="Extension"/>
-      <max value="1"/>
+      <short value="Operating mode" />
+      <definition value="Operating mode that defines the interpretation constraints of the data that is provided." />
     </element>
     <element id="Extension.extension">
       <path value="Extension.extension"/>
@@ -33,14 +34,13 @@
     </element>
     <element id="Extension.value[x]">
       <path value="Extension.value[x]" />
-      <short value="Operating mode" />
       <min value="1"/>
       <type>
         <code value="code" />
       </type>
       <binding>
         <strength value="extensible" />
-        <description value="Operating Mode of the MDS" />
+	      <description value="Codes that indicate the device operating mode" />
         <valueSet value="http://hl7.org/fhir/uv/pocd/ValueSet/operating-mode" />
       </binding>
     </element>

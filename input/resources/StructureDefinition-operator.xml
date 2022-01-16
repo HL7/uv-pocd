@@ -5,7 +5,7 @@
   <name value="Operator" />
   <title value="Operator extension"/>
   <status value="draft" />
-  <date value="2021-07-07"/>
+  <date value="2022-01-16"/>
   <publisher value="HL7 International - Devices Work Group"/>
   <description value="StructureDefinition that adds an operator to a Device."/>
   <fhirVersion value="4.0.1" />
@@ -21,9 +21,8 @@
   <differential>
     <element id="Extension">
       <path value="Extension" />
-      <short value="The operator of the device" />
-      <definition value="The operator of the device" />
-      <max value="1"/>
+      <short value="Operator of the device" />
+      <definition value="Identifies an operator of the device." />
     </element>
     <element id="Extension.extension">
       <path value="Extension.extension"/>
@@ -35,8 +34,6 @@
     </element>
     <element id="Extension.value[x]">
       <path value="Extension.value[x]" />
-      <short value="Operator" />
-      <definition value="A context state that identifies an operator of an MDS or a part of it." />
       <min value="1"/>
       <type>
         <code value="Reference" />

@@ -5,9 +5,9 @@
   <name value="OperatingCycles" />
   <title value="Operating cycles extension"/>
   <status value="draft" />
-  <date value="2021-07-07"/>
+  <date value="2022-01-16"/>
   <publisher value="HL7 International - Devices Work Group"/>
-  <description value="OPTIONAL amount of operating cycles, e.g., the number of measurements taken within the component." />
+  <description value="StructureDefinition that adds operating cycles to a Device." />
   <fhirVersion value="4.0.1" />
   <kind value="complex-type" />
   <abstract value="false" />
@@ -21,7 +21,8 @@
   <differential>
     <element id="Extension">
       <path value="Extension"/>
-      <max value="1"/>
+      <short value="Operating cycles" />
+      <definition value="Optional amount of operating cycles, e.g., the number of measurements taken within the component." />
     </element>
     <element id="Extension.extension">
       <path value="Extension.extension"/>
@@ -33,7 +34,6 @@
     </element>
     <element id="Extension.value[x]">
       <path value="Extension.value[x]" />
-      <short value="Operating cycles" />
       <min value="1"/>
       <type>
         <code value="unsignedInt" />

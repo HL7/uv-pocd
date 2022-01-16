@@ -14,7 +14,7 @@
   <name value="VmdDevice"/>
   <title value="VMD Device profile"/>
   <status value="draft"/>
-  <date value="2021-07-24"/>
+  <date value="2022-01-16"/>
   <publisher value="HL7 International - Devices Work Group"/>
   <description value="StructureDefinition for Device resources that represent Virtual Medical Devices (VMD). These are medical-related subsystems in the hierarchical model of a Point-of-Care device."/>
   <fhirVersion value="4.0.1"/>
@@ -51,6 +51,7 @@
       <path value="Device.extension"/>
       <sliceName value="instance"/>
       <short value="Instance number or label"/>
+      <definition value="Instance number or label for multiple components of the same type."/>
       <max value="1"/>
       <type>
         <code value="Extension"/>
@@ -87,8 +88,6 @@
       <sliceName value="approvedJurisdictions" />
       <short value="Approved jurisdictions" />
       <definition value="List of regions in which a device is approved to be operated." />
-      <min value="0" />
-      <max value="*" />
       <type>
         <code value="Extension" />
         <profile value="http://hl7.org/fhir/uv/pocd/StructureDefinition/approved-jurisdictions" />
@@ -119,8 +118,7 @@
       <path value="Device.extension" />
       <sliceName value="operatingHours" />
       <short value="Operating hours" />
-      <definition value="Optional amount of operating hours (e.g., an OR light)" />
-      <min value="0" />
+      <definition value="Optional amount of operating hours (e.g., an OR light)." />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -144,7 +142,6 @@
       <sliceName value="operatingCycles" />
       <short value="Operating cycles" />
       <definition value="Optional amount of operating cycles, e.g., the number of measurements taken within the component." />
-      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />

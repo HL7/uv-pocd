@@ -5,9 +5,9 @@
   <name value="MetricAvailability" />
   <title value="Metric availability extension"/>
   <status value="draft" />
-  <date value="2021-07-07"/>
+  <date value="2022-01-16"/>
   <publisher value="HL7 International - Devices Work Group"/>
-  <description value="Availability of the means that derives the METRIC state." />
+  <description value="StructureDefinition that adds metric availability to a DeviceMetric."/>
   <fhirVersion value="4.0.1" />
   <kind value="complex-type" />
   <abstract value="false" />
@@ -21,7 +21,8 @@
   <differential>
     <element id="Extension">
       <path value="Extension"/>
-      <max value="1"/>
+      <short value="Availability of metrics" />
+      <definition value="Availability of the means that derives the metric state." />
     </element>
     <element id="Extension.extension">
       <path value="Extension.extension"/>

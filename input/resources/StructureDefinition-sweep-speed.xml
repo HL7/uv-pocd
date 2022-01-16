@@ -5,7 +5,7 @@
   <name value="SweepSpeed"/>
   <title value="Sweep Speed extension"/>
   <status value="draft"/>
-  <date value="2021-07-07"/>
+  <date value="2022-01-16"/>
   <publisher value="HL7 International - Devices Work Group"/>
   <description value="StructureDefinition that adds default sweep speed to a DeviceMetric."/>
   <fhirVersion value="4.0.1"/>
@@ -22,8 +22,7 @@
     <element id="Extension">
       <path value="Extension"/>
       <short value="Default sweep speed"/>
-      <definition value="Default sweep speed for real-time waveform presentation"/>
-      <max value="1"/>
+      <definition value="Default sweep speed for real-time waveform presentation."/>
     </element>
     <element id="Extension.extension">
       <path value="Extension.extension"/>
