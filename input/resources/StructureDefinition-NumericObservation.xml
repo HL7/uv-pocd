@@ -5,6 +5,7 @@
     <valueMarkdown value="The profile defines the following rules:&#10;
 * `Observation.code` shall have a coding from the ISO/IEEE 11073 MDC Metric nomenclature if there is an appropriate code available. Depending on the type of measurement, the [Vital Signs profiles](http://hl7.org/fhir/observation-vitalsigns.html) may require an additional LOINC code.&#10;
 * `Observation.subject` shall be present and refer to a Patient resource or MDS Device resource.&#10;
+* Either `Observation.effectiveDateTime` or `Observation.effectivePeriod` shall be present.&#10;
 * Either `Observation.valueQuantity` or `Observation.valueRatio` or, if there is no value, `Observation.dataAbsentReason` shall be present. Values shall have a UCUM unit code.&#10;
 * `Observation.interpretation` coding includes measurement status.&#10;
 * `Observation.device` shall be present and refer to the Numeric DeviceMetric resource which this observation belongs to."/>
@@ -13,7 +14,7 @@
   <name value="NumericObservation"/>
   <title value="Numeric Observation profile"/>
   <status value="draft"/>
-  <date value="2021-11-26"/>
+  <date value="2022-01-21"/>
   <publisher value="HL7 International - Devices Work Group"/>
   <description value="StructureDefinition for Observation resources that represent numerical measurements, calculations, or settings."/>
   <fhirVersion value="4.0.1"/>
@@ -109,20 +110,46 @@
     </element>
     <element id="Observation.effective[x]">
       <path value="Observation.effective[x]"/>
+      <slicing>
+        <discriminator>
+          <type value="type"/>
+          <path value="$this"/>
+        </discriminator>
+        <rules value="closed"/>
+      </slicing>
+      <min value="1"/>
+      <type>
+        <code value="dateTime"/>
+      </type>
+      <type>
+        <code value="Period"/>
+      </type>
       <mustSupport value="true"/>
     </element>
     <element id="Observation.effective[x]:effectiveDateTime">
-      <path value="Observation.effectiveDateTime"/>
+      <path value="Observation.effective[x]"/>
+      <sliceName value="effectiveDateTime"/>
+      <type>
+        <code value="dateTime"/>
+      </type>
       <mapping>
         <identity value="dim"/>
         <map value="Numeric::Absolute-Time-Stamp"/>
       </mapping>
+      <mapping>
+        <identity value="sdc"/>
+        <map value="NumericMetricValue/DeterminationTime"/>
+      </mapping>
     </element>
     <element id="Observation.effective[x]:effectivePeriod">
-      <path value="Observation.effectivePeriod"/>
+      <path value="Observation.effective[x]"/>
+      <sliceName value="effectivePeriod"/>
+      <type>
+        <code value="Period"/>
+      </type>
     </element>
     <element id="Observation.effective[x]:effectivePeriod.start">
-      <path value="Observation.effectivePeriod.start"/>
+      <path value="Observation.effective[x].start"/>
       <mapping>
         <identity value="dim"/>
         <map value="Metric::Start-Time"/>
@@ -133,7 +160,7 @@
       </mapping>
     </element>
     <element id="Observation.effective[x]:effectivePeriod.end">
-      <path value="Observation.effectivePeriod.end"/>
+      <path value="Observation.effective[x].end"/>
       <mapping>
         <identity value="dim"/>
         <map value="Metric::Stop-Time"/>
@@ -141,13 +168,6 @@
        <mapping>
         <identity value="sdc"/>
         <map value="The minimum of the end of NumericMetricState/ActiveDeterminationPeriod and NumericMetricState/LifeTimePeriod, or the minimum of the end of NumericMetricDescriptor/DeterminationPeriod and NumericMetricDescriptor/LifeTimePeriod"/>
-      </mapping>
-    </element>
-    <element id="Observation.effective[x]:effectiveInstant">
-      <path value="Observation.effectiveInstant"/>
-      <mapping>
-        <identity value="sdc"/>
-        <map value="NumericMetricValue/DeterminationTime"/>
       </mapping>
     </element>
     <element id="Observation.value[x]">
@@ -159,8 +179,6 @@
         </discriminator>
         <rules value="closed"/>
       </slicing>
-      <min value="0"/>
-      <max value="1"/>
       <type>
         <code value="Quantity"/>
       </type>
