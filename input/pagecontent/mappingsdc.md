@@ -67,7 +67,8 @@ Summary of the mandatory requirements for the HeadCircumference:
 Summary of the mandatory requirements for the BirthWeight:
 - One code in Observation.code which must have
     - a fixed Observation.code.coding.system='http ://loinc.org'
-    - a fixed Observation.code.coding.code= '8339-4'
+    - a fixed Observation.code.coding.code= '29463-7'
+	- an additional Observation.code.coding.code= '8339-4' shall be provided, to indicate that the value applies to an infant
     - Other additional Codings are allowed in Observation.code- e.g. more specific LOINC Codes, SNOMED CT concepts, system specific codes. All codes SHALL have an system value
 - Either one Observation.valueQuantity or, if there is no value, one code in Observation.DataAbsentReason
     - Each Observation.valueQuantity must have:
@@ -78,7 +79,8 @@ Summary of the mandatory requirements for the BirthWeight:
 Summary of the mandatory requirements for the BirthLength:
 - One code in Observation.code which must have
     - a fixed Observation.code.coding.system='http ://loinc.org'
-    - a fixed Observation.code.coding.code= '89269-5'
+    - a fixed Observation.code.coding.code= '8302-2'
+	- an additional Observation.code.coding.code= '89269-5' shall be provided, to indicate that the value applies to an infant
     - Other additional Codings are allowed in Observation.code- e.g. more specific LOINC Codes, SNOMED CT concepts, system specific codes. All codes SHALL have an system value
 - Either one Observation.valueQuantity or, if there is no value, one code in Observation.DataAbsentReason
     - Each Observation.valueQuantity must have:
@@ -106,10 +108,10 @@ For every physicalType of a Location an additional Location Resource needs to be
 | LocationContextState/Identification/Root | Location.identifier.system ||
 | LocationContextState/Identification/Extension | Location.identifier.value ||
 | LocationContextState/LocationDetail/Bed | Location.physicalType | An additional Location Resource with the physicalType bd and references (Location.partOf and/or Location.managingOrganization) to another Location/Organization if the Bed is physically a part of a Location/Organization |
-| LocationContextState/LocationDetail/Room | Location.physicalType | An additional Location Resource with the physicalType ro and references (Location.partOf and/or Location.managingOrganization) to another Location/Organization if the Bed is physically a part of a Location/Organization |
+| LocationContextState/LocationDetail/Room | Location.physicalType | An additional Location Resource with the physicalType ro and references (Location.partOf and/or Location.managingOrganization) to another Location/Organization if the Room is physically a part of a Location/Organization |
 | LocationContextState/LocationDetail/PoC | Organization.type | An additional Organization Resource with the Organization type dept and a reference (Organization.partOf) to another Organization if the PoC is part of an Organization |
 | LocationContextState/LocationDetail/Floor | Location.physicalType | An additional Location Resource with the physicalType lvl and references (Location.partOf and/or Location.managingOrganization) to another Location/Organization if the Floor is physically a part of a Location/Organization |
-| LocationContextState/LocationDetail/Building | Location.physicalType | An additional Location Resource with the physicalType bu and references (Location.partOf and/or Location.managingOrganization) to another Location/Organization if the Bed is physically a part of a Location/Organization |
+| LocationContextState/LocationDetail/Building | Location.physicalType | An additional Location Resource with the physicalType bu and references (Location.partOf and/or Location.managingOrganization) to another Location/Organization if the Building is physically a part of a Location/Organization |
 | LocationContextState/LocationDetail/Facility | Organization.type | An Organization Resource with the Organization type prov and a reference (Organization.partOf) to another Organization if the Facility is part of an Organization |
 {: .grid}
 
