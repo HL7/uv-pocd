@@ -37,18 +37,39 @@
     <element id="Patient.identifier">
       <path value="Patient.identifier"/>
     </element>
+    <element id="Patient.identifier.type.coding.system">
+      <path value="Patient.identifier.type.coding.system"/>
+      <mapping>
+        <identity value="sdc"/>
+        <map value="PatientContextState/Identification/Type/CodingSystem"/>
+      </mapping>
+    </element>
+    <element id="Patient.identifier.type.coding.version">
+      <path value="Patient.identifier.type.coding.version"/>
+      <mapping>
+        <identity value="sdc"/>
+        <map value="PatientContextState/Identification/Type/CodingSystemVersion"/>
+      </mapping>
+    </element>
+    <element id="Patient.identifier.type.coding.code">
+      <path value="Patient.identifier.type.coding.code"/>
+      <mapping>
+        <identity value="sdc"/>
+        <map value="PatientContextState/Identification/Type/Code"/>
+      </mapping>
+    </element>git add 
     <element id="Patient.identifier.system">
       <path value="Patient.identifier.system"/>
       <mapping>
         <identity value="sdc"/>
-        <map value="WorkflowContextState/WorkflowDetail/Patient/Identification/Root"/>
+        <map value="PatientContextState/Identification/Root, WorkflowContextState/WorkflowDetail/Patient/Identification/Root"/>
       </mapping>
     </element>
     <element id="Patient.identifier.value">
       <path value="Patient.identifier.value"/>
       <mapping>
         <identity value="sdc"/>
-        <map value="WorkflowContextState/WorkflowDetail/Patient/Identification/Extension"/>
+        <map value="PatientContextState/Identification/Extension, WorkflowContextState/WorkflowDetail/Patient/Identification/Extension"/>
       </mapping>
     </element>
     <element id="Patient.name">
@@ -79,7 +100,7 @@
       <path value="Patient.birthDate"/>
        <mapping>
         <identity value="sdc"/>
-        <map value="PatientContextState/CoreData/Birthname, NeonatalPatientDemographicsCoreData/DateOfBirth"/>
+        <map value="PatientContextState/CoreData/DateofBirth, NeonatalPatientDemographicsCoreData/DateOfBirth"/>
       </mapping>
     </element>
   </differential>
