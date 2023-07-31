@@ -44,6 +44,10 @@
         <identity value="dim"/>
         <map value="SampleArray::Sa-Observed-Value::state or SampleArray::Compound-Sa-Observed-Value::state (refer to MeasurementStatus mapping details)"/>
       </mapping>
+      <mapping>
+        <identity value="sdc"/>
+        <map value="SampleArrayValue/MetricQuality/Validity (refer to Measurement Validity mapping details)"/>
+      </mapping>
     </element>
     <element id="Observation.status">
       <path value="Observation.status"/>
@@ -154,7 +158,7 @@
       </mapping>
        <mapping>
         <identity value="sdc"/>
-        <map value="The minimum of the end of SampleArrayMetricState/ActiveDeterminationPeriod and SampleArrayMetricState/LifeTimePeriod, or the minimum of the end of SampleArrayMetricDescriptor/DeterminationPeriod and SampleArrayMetricDescriptor/LifeTimePeriod"/>
+        <map value="SampleArrayValue/StopTime"/>
       </mapping>
     </element>
     <element id="Observation.value[x]">
@@ -193,6 +197,14 @@
       <mapping>
         <identity value="dim"/>
         <map value="SampleArray::Sa-Observed-Value::array"/>
+      </mapping>
+    </element>
+    <element id="Observation.dataAbsentReason">
+      <path value="Observation.dataAbsentReason"/>
+      <mustSupport value="true"/>
+      <mapping>
+        <identity value="sdc"/>
+        <map value="SampleArrayValue/MetricQuality/Validity (refer to Measurement Validity mapping details)"/>
       </mapping>
     </element>
     <element id="Observation.interpretation">
