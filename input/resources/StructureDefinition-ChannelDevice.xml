@@ -70,17 +70,21 @@
         <identity value="dim"/>
         <map value="Channel::Physical-Channel-No or Channel::Logical-Channel-No"/>
       </mapping>
+      <mapping>
+        <identity value="sdc"/>
+        <map value="ChannelState/PhysicalConnector/Number"/>
+      </mapping>
     </element>
     <element id="Device.extension:instance.extension:label">
       <path value="Device.extension.extension"/>
       <sliceName value="label"/>
       <short value="Instance label"/>
     </element>
-    <element id="Device.extension:instance.extension:number.valueString">
+    <element id="Device.extension:instance.extension:label.valueString">
       <path value="Device.extension.extension.valueString"/>
       <mapping>
         <identity value="sdc"/>
-        <map value="AbstractDeviceComponentState/PhysicalConnector/Label"/>
+        <map value="ChannelState/PhysicalConnector/Label"/>
       </mapping>
     </element>
     <element id="Device.extension:operatingHours">

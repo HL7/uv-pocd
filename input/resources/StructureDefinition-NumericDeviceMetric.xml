@@ -60,12 +60,24 @@
       </type>
       <mustSupport value="true"/>
     </element>
+    <element id="DeviceMetric.extension:instance.extension:number">
+      <path value="DeviceMetric.extension.extension"/>
+      <sliceName value="number"/>
+      <short value="Instance number"/>
+    </element>
+    <element id="DeviceMetric.extension:instance.extension:number.valueUnsignedInt">
+      <path value="DeviceMetric.extension.extension.valueUnsignedInt"/>
+      <mapping>
+        <identity value="sdc"/>
+        <map value="AbstractMetricState/PhysicalConnector/Number"/>
+      </mapping>
+    </element>
     <element id="DeviceMetric.extension:instance.extension:label">
       <path value="DeviceMetric.extension.extension"/>
       <sliceName value="label"/>
       <short value="Instance label"/>
     </element>
-    <element id="DeviceMetric.extension:instance.extension:number.valueString">
+    <element id="DeviceMetric.extension:instance.extension:label.valueString">
       <path value="DeviceMetric.extension.extension.valueString"/>
       <mapping>
         <identity value="sdc"/>
