@@ -192,7 +192,8 @@
       </mapping>
       <mapping>
         <identity value="sdc"/>
-        <map value="StringMetricState/MetricValue/Value, EnumStringMetricState/MetricValue/Value"/>
+        <map value="StringMetricState/MetricValue/Value, EnumStringMetricState/MetricValue/Value (The EnumStringMetricState/MetricValue/Value contains the string of the selected enumerated element. The actual coded element value can be retrieved from the EnumStringMetricDescriptor/AllowedValue list by comparing the EnumStringMetricState/MetricValue/Value with the EnumStringMetricDescriptor/AllowedValue/Value.
+If a match has been found, the EnumStringMetricDescriptor/AllowedValue/Type can be mapped as defined. If no matching value has been found, the EnumStringMetricState/MetricValue/Value can be set to Observation.valueString.)"/>
       </mapping>
     </element>
     <element id="Observation.dataAbsentReason">
