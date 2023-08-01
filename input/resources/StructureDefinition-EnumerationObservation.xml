@@ -186,6 +186,30 @@
       </type>
       <condition value="pocd-obs-1"/>
       <mustSupport value="true"/>
+    </element>
+    <element id="Observation.value[x]:valueCodeableConcept.coding.system">
+      <path value="Observation.value[x].coding.system"/>
+      <mapping>
+        <identity value="sdc"/>
+        <map value="EnumStringMetricDescriptor/AllowedValue/Type/CodingSystem"/>
+      </mapping>
+    </element>
+    <element id="Observation.value[x]:valueCodeableConcept.coding.code">
+      <path value="Observation.value[x].coding.code"/>
+      <mapping>
+        <identity value="sdc"/>
+        <map value="EnumStringMetricDescriptor/AllowedValue/Type/Code"/>
+      </mapping>
+    </element>
+    <element id="Observation.value[x]:valueCodeableConcept.coding.display">
+      <path value="Observation.value[x].coding.display"/>
+      <mapping>
+        <identity value="sdc"/>
+        <map value="EnumStringMetricDescriptor/AllowedValue/Type/SymbolicCodeName"/>
+      </mapping>
+    </element>
+    <element id="Observation.value[x]:valueString">
+      <path value="Observation.value[x]"/>
       <mapping>
         <identity value="dim"/>
         <map value="Enumeration::Enum-Observed-Value::value"/>
