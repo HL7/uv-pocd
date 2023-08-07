@@ -57,7 +57,7 @@
         <identity value="sdc"/>
         <map value="PatientContextState/Identification/Type/Code"/>
       </mapping>
-    </element>git add 
+    </element>
     <element id="Patient.identifier.system">
       <path value="Patient.identifier.system"/>
       <mapping>
