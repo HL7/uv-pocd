@@ -198,6 +198,10 @@
         <identity value="dim"/>
         <map value="SampleArray::Sa-Observed-Value::array"/>
       </mapping>
+      <mapping>
+        <identity value="sdc"/>
+        <map value="SampleArrayValue/Samples"/>
+      </mapping>
     </element>
     <element id="Observation.dataAbsentReason">
       <path value="Observation.dataAbsentReason"/>
