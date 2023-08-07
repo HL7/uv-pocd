@@ -53,6 +53,10 @@
         <identity value="dim"/>
         <map value="Numeric::Nu-Observed-Value::state (refer to MeasurementStatus mapping details)"/>
       </mapping>
+      <mapping>
+        <identity value="sdc"/>
+        <map value="NumericMetricValue/MetricQuality/Validity (refer to Measurement Validity mapping details)"/>
+      </mapping>
     </element>
     <element id="Observation.status">
       <path value="Observation.status"/>
@@ -167,7 +171,7 @@
       </mapping>
        <mapping>
         <identity value="sdc"/>
-        <map value="The minimum of the end of NumericMetricState/ActiveDeterminationPeriod and NumericMetricState/LifeTimePeriod, or the minimum of the end of NumericMetricDescriptor/DeterminationPeriod and NumericMetricDescriptor/LifeTimePeriod"/>
+        <map value="NumericMetricValue/StopTime"/>
       </mapping>
     </element>
     <element id="Observation.value[x]">
@@ -254,6 +258,10 @@
       <mapping>
         <identity value="dim"/>
         <map value="Numeric::Nu-Observed-Value::state (refer to MeasurementStatus mapping details)"/>
+      </mapping>
+      <mapping>
+        <identity value="sdc"/>
+        <map value="NumericMetricValue/MetricQuality/Validity (refer to Measurement Validity mapping details)"/>
       </mapping>
     </element>
     <element id="Observation.interpretation">

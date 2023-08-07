@@ -53,6 +53,10 @@
         <identity value="dim"/>
         <map value="Enumeration::Enum-Observed-Value::state (refer to MeasurementStatus mapping details)"/>
       </mapping>
+      <mapping>
+        <identity value="sdc"/>
+        <map value="StringMetricValue/MetricQuality/Validity (refer to Measurement Validity mapping details)"/>
+      </mapping>
     </element>
     <element id="Observation.status">
       <path value="Observation.status"/>
@@ -166,7 +170,7 @@
       </mapping>
       <mapping>
         <identity value="sdc"/>
-        <map value="The minimum of the end of MetricState/ActiveDeterminationPeriod and MetricState/LifeTimePeriod, or the minimum of the end of MetricDescriptor/DeterminationPeriod and MetricDescriptor/LifeTimePeriod"/>
+        <map value="StringMetricValue/StopTime, EnumStringMetricValue/StopTime"/>
       </mapping>
     </element>
     <element id="Observation.value[x]">
@@ -202,6 +206,10 @@
       <mapping>
         <identity value="dim"/>
         <map value="Enumeration::Enum-Observed-Value::state (refer to MeasurementStatus mapping details)"/>
+      </mapping>
+      <mapping>
+        <identity value="sdc"/>
+        <map value="StringMetricValue/MetricQuality/Validity (refer to Measurement Validity mapping details)"/>
       </mapping>
     </element>
     <element id="Observation.interpretation">
