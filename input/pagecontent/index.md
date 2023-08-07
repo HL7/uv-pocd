@@ -12,7 +12,7 @@ Another related implementation guide focuses on home-based personal health devic
 
 ### Scope and Boundaries
 The scope of this Implementation Guide is a FHIR-based treatment of
-quatitative and qualitative observations communicated from point-of-care medical devices. Devices without communications capabilities are out of scope. Imaging devices are also out of scope.
+quantitative and qualitative observations communicated from point-of-care medical devices. Devices without communications capabilities are out of scope. Imaging devices are also out of scope.
 Personal devices intented for home health and fitness 
 purposes to be used by non-professional users are excluded becasue they are covered by a
 related Implementation Guide. See below.
