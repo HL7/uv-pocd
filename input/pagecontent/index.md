@@ -37,7 +37,7 @@ up device models in such a way as to  accomodate the needs of data consumer appl
 This Implementation Guide covers material related to work in other projects and guides including the Personal Health Device Implementation Guide, and IHE Patient Care Device (PCD) profiles.
 
 #### Personal Health Device IG
-The [Personal Health Device Implementation guide](http://hl7.org/fhir/uv/phd/) treats wellness and chronic disease management devices used mainly by nonprofessionals in home and exercise settings. 
+The [Personal Health Device Implementation guide](http://hl7.org/fhir/uv/phd/) focuses on wellness and chronic disease management devices used mainly by nonprofessionals in home and exercise settings. 
 
 This Point-of-Care Device Implementation Guide is focused on acute-care devices for professional use mainly in healthcare delivery facilities. 
 
