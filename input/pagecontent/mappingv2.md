@@ -52,13 +52,13 @@ to making an adequate, patient-safe, set of FHIR resources within that context.
 |OBX-20|CWE|[0..*]|163|Observation Site|Observation.bodySite|Site on the body where the observation was made.|
 {: .grid}
 
-## Detail notes for OBX segment mappings 
+### Detail notes for OBX segment mappings 
 
-### OBX-3 Observation Identifier. PCD-01 uses the IEEE 11073-10101 Nomenclature Standard. In FHIR, for observations 
+#### OBX-3 Observation Identifier. PCD-01 uses the IEEE 11073-10101 Nomenclature Standard. In FHIR, for observations 
 in the Vital Signs category, the corresponding LOINC code must also be given. 
 Equivalent codes in other code systems such as SNOMED may also be given.
 
-### OBX-4 Observation Sub-ID
+#### OBX-4 Observation Sub-ID
 The IHE PCD-01 sub-id field is a key identifying the place of the Metric within the containment tree of Virtual Medical Devices (medical subsystems), channels (groupings of metrics 
 within a VMD), and Metrics (individual measurement objects supported by the device. In
 the profile, it is a 4-tuple of nonzero positive integers separated by dots (periods), 
@@ -71,24 +71,24 @@ a special form for the Sub-ID with trailing zero elements identifying the logica
 of the device element they represent: three trailing zero elements identify an MDS, two 
 a VMD, two a channel, and one a metric. See the IHE PCD Technical Framework for details.
 
-### OBX-5 Observation Value 
+#### OBX-5 Observation Value 
 Kind of FHIR value mapped to depends on HL7 V2 Value Type. 
 Ex. For NM Numeric Value Type, will map to valueQuantity. 
 Other common mappings NA Numeric Array -> SampledData, ST String Data -> ValueString.
 See HL7 V2.7 Specification and FHIR Specification for other cases.
 
-### OBX-7 Reference Range. 
+#### OBX-7 Reference Range. 
 In IHE PCD-01, Reference Range gives the alarm range set by the user on the device, 
 if available in the output of the device. 
 Ex. 40-120 set for a patient for heart rate means that values outside of that range will result in an alarm condition signaled by the device.
 
-### OBX-8 Abnormal Flags
+#### OBX-8 Abnormal Flags
 
 This field provides for adding information about a particular abnormal result. This is a repeatable field,
 so that multiple flags from the following tables may be included, separated by the HL7 repeat separator,
 which is normally the character '~'.
 
-#### OBX-8 Abnormality types
+##### OBX-8 Abnormality types
 
 |Abnormality Type|Abbreviation|
 | --- | --- |
@@ -100,7 +100,7 @@ which is normally the character '~'.
 |Abnormal (for non-numeric results)|A|
 {: .grid}
 
-#### OBX-8 Measurement status
+##### OBX-8 Measurement status
 
 |MeasurementStatus ::= BITS-16 { ... }|OBX-8  |OBX-11|Column1|
 | --- | --- | --- | --- |
@@ -118,7 +118,7 @@ which is normally the character '~'.
 |msmt-state-al-inhibited(15) -- metric supports alarming and alarms are turned off -- (optional)|ALINH|R|
 {: .grid}
 
-#### OBX-8 Missing or invalid data flags
+##### OBX-8 Missing or invalid data flags
 
 |Value|ExtendedValue?|Description|Comment|
 | --- | --- | --- | --- |
@@ -129,14 +129,14 @@ which is normally the character '~'.
 |<|N|Below absolute low-off instrument scale.|Provide the low-off instrument scale number in OBX-5 if available.|
 {: .grid}
 
-### OBX-18 Equipment Instance Identifier 
+#### OBX-18 Equipment Instance Identifier 
 
 In IHE PCD-01, the purpose of this field is to uniquely identify the source of the observation based on the EUI-64 of the Virtual Medical Device (VMD) if that has a unique identifier, or if not, the EUI-64 of the Medical Device System.
 
-### OBX-20 Observation site
+#### OBX-20 Observation site
 This often does not need to be given, since in many cases the OBX-3 Observation Identifier clearly indicates the body site. Otherwise, in IHE PCD-01, body site values from MDC nomenclature may be used. Equivalent codes from other systems, e.g. SNOMED, should also be given in the CodeableConcept for user convenience.
 
-## OBR Observation Request Segment
+### OBR Observation Request Segment
 
 The OBR segment in a device data segment contains information mostly about the order associated with 
 the data in the set of OBX segments that follows the OBR segment.
@@ -158,7 +158,7 @@ resources generated from those OBX segments.
 {: .grid}
 
 
-## MSH Message Header Segment
+### MSH Message Header Segment
 
 This segment largely contains HL7 Version 2-specific information.
 Only a small proportion of it is pertinent to implementers of this Guide
@@ -182,7 +182,7 @@ except possibly as context information.
 |MSH-25|227|HD|X|[0..0]||Receiving Network Address|
 {: .grid}
 
-## PID Patient Identification Setment
+### PID Patient Identification Setment
 
 As has been stated, other hospital systems mainly manage patient identity data and device systems or gateways 
 play little role. The few data fields that are sometimes pertinent to devices 
@@ -196,7 +196,7 @@ or gateway implementation, mainly as searh keys for linking to other information
 |8|1|IS|O|||Administrative Sex|
 {: .grid}
 
-## PID Patient Visit Segment
+### PID Patient Visit Segment
 
 Assigned patient location could be needed to link to other data.
 
