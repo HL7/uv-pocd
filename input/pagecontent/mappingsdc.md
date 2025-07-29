@@ -23,7 +23,7 @@ Please refer to the Mappings tab of each profile page for mapping ISO/IEEE 11073
 ### Mapping Details
 
 #### Patient
-For each of the measurements Height and Weight is an Observation Resource requiered with mandatory requirements. Observation.subject shall be present and refer to a Patient resource or MDS Device resource.
+For each of the measurements Height and Weight is an Observation Resource required with mandatory requirements. Observation.subject shall be present and refer to a Patient resource or MDS Device resource.
 
 Summary of the mandatory requirements for the Height:
 - One code in Observation.code which must have
