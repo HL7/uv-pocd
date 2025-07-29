@@ -140,7 +140,7 @@ not neglecting the non-clinical information that the device can communicate abou
 
 If this is a "green field" project for a device that is in the design phase, consider the range of uses for the device
 
-It is probably commoner that you are retrofitting FHIR output to a device that already has a legacy form of data output and you 
+It is probably more common that you are retrofitting FHIR output to a device that already has a legacy form of data output and you 
 must fit a "gateway" to convert data in a form the device
 already uses to a form compatible with a "containment tree".
 
