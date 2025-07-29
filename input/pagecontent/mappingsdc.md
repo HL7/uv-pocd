@@ -116,7 +116,7 @@ For every physicalType of a Location an additional Location Resource needs to be
 {: .grid}
 
 #### ImagingStudy
-The WorklflowConextState should only be used if the ContextAssociation is Assoc (=Associated).
+The WorkflowContextState should only be used if the ContextAssociation is Assoc (=Associated).
 The ImagingProcedure/RequestedProcedureId can be mapped to the id of the basedOn reference, which exists when the ImagingProcedure is based on a ServiceRequest. 
 
 | IEEE 11073 SDC | HL7 FHIR Resources |
