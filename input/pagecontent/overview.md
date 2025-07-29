@@ -69,7 +69,7 @@ For details see IHE Patient Care Device (PCD) Technical Framework Volume 2, Tran
 
 ### Data flow from device to clinical flowsheet
 
-Devices are a key part of keeping current situational awareness in treating high-acuity patients. Information not normally provided in the Observation resource ay be relevant to care, as, for example, is the device or one of its subsystems or measurements in standby mode or otherwise disabled because of user action. Technical metadata such as battery performance may be valuable for early warning of potential device problems.
+Devices are a key part of keeping current situational awareness in treating high-acuity patients. Information not normally provided in the Observation resource may be relevant to care, as, for example, is the device or one of its subsystems or measurements in standby mode or otherwise disabled because of user action. Technical metadata such as battery performance may be valuable for early warning of potential device problems.
 
 ## Clinical and technical data archiving and retrospective data feed
 
