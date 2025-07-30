@@ -3,7 +3,7 @@ This Implementation Guide defines the use of FHIR resources to convey measuremen
 from acute care point-of-care medical devices (PoCD) intended for use by qualified professional to receiving systems for electronic medical records, 
 clinical decision support, and medical data archiving for aggregate quality measurement and research purposes. 
 It adds "deep metadata for device observations".  
-Key goals include supplementing the measurement values in an Observatiion resourcewith full provenance for traceability, and with 
+Key goals include supplementing the measurement values in an Observation resource with full provenance for traceability, and with 
 fuller details of device architecture and dynamically changing attributes such as 
 calibration history and battery state than is provided for in a FHIR Observation resource. 
 
@@ -14,7 +14,7 @@ Another related implementation guide focuses on home-based personal health devic
 The scope of this Implementation Guide is a FHIR-based treatment of
 quantitative and qualitative observations communicated from point-of-care medical devices. Devices without communications capabilities are out of scope. Imaging devices are also out of scope.
 Personal devices intented for home health and fitness 
-purposes to be used by non-professional users are excluded becasue they are covered by a
+purposes to be used by non-professional users are excluded because they are covered by a
 related Implementation Guide. See below.
 
 ### Intended Readers
@@ -29,7 +29,7 @@ The "Getting Started" pages, which include a reference page on Abbreviations and
 - information relevant to implementers of systems consuming data that has 
 and "Profile" section details
 
-- Fuller information for implementers of device and gateway systems who are setting 
+- More detailed information for implementers of device and gateway systems who are setting 
 up device models in such a way as to  accomodate the needs of data consumer applications.
 
 
