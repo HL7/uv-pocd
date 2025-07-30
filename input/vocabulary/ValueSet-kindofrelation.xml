@@ -4,7 +4,7 @@
     <meta>
         <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset" />
     </meta>
-    <url value="http://terminology.hl7.org/VaueSet/kind-of-relation" />
+    <url value="http://terminology.hl7.org/ValueSet/kind-of-relation" />
     <name value="Kind" />
     <title value="Kind" />
     <status value="draft" />

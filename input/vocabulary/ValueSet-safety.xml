@@ -4,7 +4,7 @@
     <meta>
         <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset" />
     </meta>
-    <url value="http://terminology.hl7.org/VaueSet/safety" />
+    <url value="http://terminology.hl7.org/ValueSet/safety" />
     <name value="Safety" />
     <title value="Safety" />
     <status value="draft" />
