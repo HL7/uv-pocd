@@ -50,7 +50,7 @@ Summary of the mandatory requirements for the Weight:
 #### Neonatal Patient
 Information about the mother should be included in the FHIR Resource RelatedPerson. RelatedPerson.patient should be used for the reference of the patient this RelatedPerson is related to. The relationship can be modeled by using RelatedPerson.relationship with the terminology binding MTH, to express that the RelatedPerson is the mother.
 
-For each of the measurements GestationalAge, BirthLength, BirthWeight and HeadCircumference is an Observation Resource requiered with mandatory requirements. Observation.subject shall be present and refer to a Patient resource or MDS Device resource.
+For each of the measurements GestationalAge, BirthLength, BirthWeight and HeadCircumference is an Observation Resource required with mandatory requirements. Observation.subject shall be present and refer to a Patient resource or MDS Device resource.
 
 Summary of the mandatory requirements for the HeadCircumference:
 - One code in Observation.code which must have
