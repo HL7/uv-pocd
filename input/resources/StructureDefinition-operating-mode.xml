@@ -41,7 +41,7 @@
       <binding>
         <strength value="extensible" />
 	      <description value="Codes that indicate the device operating mode" />
-        <valueSet value="http://hl7.org/fhir/uv/pocd/ValueSet/operating-mode" />
+        <valueSet value="http://terminology.hl7.org/uv/pocd/ValueSet/operating-mode" />
       </binding>
     </element>
   </differential>
