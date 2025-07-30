@@ -4,7 +4,7 @@
   <meta>
     <profile value="http://hl7.org/fhir/StructureDefinition/shareablecodesystem"/>
   </meta>
-  <url value="http://terminology.hl7.org/uv/pocd/CodeSystem/measurement-status"/>
+  <url value="http://terminology.hl7.org/CodeSystem/measurement-status"/>
   <name value="MeasurementStatus"/>
   <title value="Measurement status codes"/>
   <status value="draft"/>
