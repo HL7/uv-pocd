@@ -13,7 +13,7 @@
     <description value="CodeSystem for IEEE 11073-10207 MdsState/OperatingMode" />
     <compose>
         <include>
-            <system value="http://hl7.org/fhir/uv/pocd/CodeSystem/operating-mode" />
+            <system value="http://terminology.hl7.org/CodeSystem/operating-mode" />
         </include>
     </compose>
 </ValueSet>

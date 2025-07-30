@@ -13,7 +13,7 @@
     <description value="CodeSystem for IEEE 11073-10207 Relation/Kind" />
     <compose>
         <include>
-            <system value="http://hl7.org/fhir/uv/pocd/CodeSystem/kind-of-relation" />
+            <system value="http://terminology.hl7.org/CodeSystem/kind-of-relation" />
         </include>
     </compose>
 </ValueSet>

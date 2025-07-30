@@ -13,7 +13,7 @@
     <description value="CodeSystem for IEEE 11073-10207 SafetyClassification" />
     <compose>
         <include>
-            <system value="http://hl7.org/fhir/uv/pocd/CodeSystem/safety" />
+            <system value="http://terminology.hl7.org/CodeSystem/safety" />
         </include>
     </compose>
 </ValueSet>

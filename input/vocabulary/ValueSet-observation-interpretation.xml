@@ -17,7 +17,7 @@
       <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
     </include>
     <include>
-      <system value="http://hl7.org/fhir/uv/pocd/CodeSystem/measurement-status"/>
+      <system value="http://terminology.hl7.org/CodeSystem/measurement-status"/>
     </include>
   </compose>
 </ValueSet>

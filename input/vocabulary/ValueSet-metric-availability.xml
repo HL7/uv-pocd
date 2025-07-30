@@ -13,7 +13,7 @@
     <description value="CodeSystem for availability of the means that derives the metric state" />
     <compose>
         <include>
-            <system value="http://hl7.org/fhir/uv/pocd/CodeSystem/metric-availability" />
+            <system value="http://terminology.hl7.org/CodeSystem/metric-availability" />
         </include>
     </compose>
 </ValueSet>
