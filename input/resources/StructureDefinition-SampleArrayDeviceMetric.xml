@@ -177,7 +177,7 @@
       <mustSupport value="true"/>
       <binding>
         <strength value="extensible"/>
-        <valueSet value="http://terminology.hl7.org/VaueSet/11073MDC-metric"/>
+        <valueSet value="http://terminology.hl7.org/ValueSet/11073MDC-metric"/>
       </binding>
       <mapping>
         <identity value="sdc"/>
@@ -224,7 +224,7 @@
       <mustSupport value="true"/>
       <binding>
         <strength value="extensible"/>
-        <valueSet value="http://terminology.hl7.org/VaueSet/11073MDC-dimension"/>
+        <valueSet value="http://terminology.hl7.org/ValueSet/11073MDC-dimension"/>
       </binding>
     </element>
     <element id="DeviceMetric.unit.coding">

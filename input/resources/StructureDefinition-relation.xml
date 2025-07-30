@@ -61,7 +61,7 @@
       <binding>
         <strength value="required" />
         <description value="Kind of relationship" />
-        <valueSet value="http://terminology.hl7.org/VaueSet/kind-of-relation" />
+        <valueSet value="http://terminology.hl7.org/ValueSet/kind-of-relation" />
       </binding>
       <mapping>
         <identity value="sdc"/>

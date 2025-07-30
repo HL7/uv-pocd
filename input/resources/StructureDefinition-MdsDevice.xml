@@ -359,7 +359,7 @@
       <mustSupport value="true"/>
       <binding>
         <strength value="extensible"/>
-        <valueSet value="http://terminology.hl7.org/VaueSet/11073MDC-object"/>
+        <valueSet value="http://terminology.hl7.org/ValueSet/11073MDC-object"/>
       </binding>
     </element>
     <element id="Device.type.coding">
@@ -518,7 +518,7 @@
       <binding>
         <strength value="extensible" />
         <description value="Safety classification" />
-        <valueSet value="http://terminology.hl7.org/VaueSet/safety" />
+        <valueSet value="http://terminology.hl7.org/ValueSet/safety" />
       </binding>
     </element>
     <element id="Device.safety.coding">
@@ -526,7 +526,7 @@
     </element>
     <element id="Device.safety.coding.system">
       <path value="Device.safety.coding.system" />
-      <definition value="http://terminology.hl7.org/VaueSet/safety" />
+      <definition value="http://terminology.hl7.org/ValueSet/safety" />
     </element>
     <element id="Device.safety.coding.code">
       <path value="Device.safety.coding.code"/>

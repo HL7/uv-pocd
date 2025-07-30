@@ -62,7 +62,7 @@
       <mustSupport value="true"/>
       <binding> 
         <strength value="extensible"/> 
-        <valueSet value="http://terminology.hl7.org/VaueSet/11073MDC-metric"/> 
+        <valueSet value="http://terminology.hl7.org/ValueSet/11073MDC-metric"/> 
       </binding>     
     </element>
     <element id="Observation.code.coding">
@@ -216,7 +216,7 @@
       <mustSupport value="true"/>
       <binding> 
         <strength value="extensible"/> 
-        <valueSet value="http://terminology.hl7.org/VaueSet/observation-interpretation"/> 
+        <valueSet value="http://terminology.hl7.org/ValueSet/observation-interpretation"/> 
       </binding>     
       <mapping>
         <identity value="dim"/>
@@ -298,7 +298,7 @@
       <mustSupport value="true"/>
       <binding>
         <strength value="extensible"/>
-        <valueSet value="http://terminology.hl7.org/VaueSet/11073MDC-metric"/>
+        <valueSet value="http://terminology.hl7.org/ValueSet/11073MDC-metric"/>
       </binding>
     </element>
     <element id="Observation.component.code.coding">
@@ -354,7 +354,7 @@
       <mustSupport value="true"/>
       <binding> 
         <strength value="extensible"/> 
-        <valueSet value="http://terminology.hl7.org/VaueSet/observation-interpretation"/> 
+        <valueSet value="http://terminology.hl7.org/ValueSet/observation-interpretation"/> 
       </binding>     
       <mapping>
         <identity value="dim"/>
