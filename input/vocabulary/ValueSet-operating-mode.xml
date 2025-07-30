@@ -4,7 +4,7 @@
     <meta>
         <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset" />
     </meta>
-    <url value="http://hl7.org/fhir/uv/pocd/ValueSet/operating-mode" />
+    <url value="http://terminology.hl7.org/uv/pocd/ValueSet/operating-mode" />
     <name value="OperatingMode" />
     <title value="Operating Mode" />
     <status value="draft" />
