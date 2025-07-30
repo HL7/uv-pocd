@@ -114,7 +114,7 @@
       <mustSupport value="true"/>
       <binding>
         <strength value="extensible"/>
-        <valueSet value="http://hl7.org/fhir/uv/pocd/ValueSet/11073MDC-metric"/>
+        <valueSet value="http://terminology.hl7.org/uv/pocd/ValueSet/11073MDC-metric"/>
       </binding>
       <mapping>
         <identity value="sdc"/>
