@@ -132,7 +132,7 @@ The ImagingProcedure/RequestedProcedureId can be mapped to the id of the basedOn
 {: .grid}
 
 #### ServiceRequest
-The WorklflowConextState should only be used if the ContextAssociation is Assoc (=Associated).
+The WorkflowContextState should only be used if the ContextAssociation is Assoc (=Associated).
 The resource ServiceRequest may be used to share relevant information required to support a referral or a transfer of care request from one practitioner or organization to another. 
 	
 | IEEE 11073 SDC Status | HL7 FHIR | Comment |
