@@ -4,7 +4,7 @@
   <meta>
     <profile value="http://hl7.org/fhir/StructureDefinition/shareablecodesystem" />
   </meta>
-  <url value="http://terminology.hl7.org/uv/pocd/CodeSystem/operating-mode" />
+  <url value="http://hl7.org/fhir/uv/pocd/CodeSystem/operating-mode" />
   <name value="OperatingMode" />
   <title value="Operating mode" />
   <status value="draft" />
