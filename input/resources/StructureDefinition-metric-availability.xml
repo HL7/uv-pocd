@@ -42,7 +42,7 @@
       <binding>
         <strength value="extensible" />
         <description value="Metric Availability" />
-        <valueSet value="http://hl7.org/fhir/uv/pocd/ValueSet/metric-availability" />
+        <valueSet value="http://terminology.hl7.org/ValueSet/metric-availability" />
       </binding>
     </element>
   </differential>
