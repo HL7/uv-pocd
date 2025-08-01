@@ -5,7 +5,6 @@
     <profile value="http://hl7.org/fhir/StructureDefinition/shareablecodesystem" />
   </meta>
   <url value="http://hl7.org/fhir/uv/pocd/CodeSystem/kind-of-relation" />
-  
   <name value="Kind" />
   <title value="Kind" />
   <status value="draft" />
