@@ -4,7 +4,7 @@
     <meta>
         <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset" />
     </meta>
-    <url value="http://hl7.org/fhir/uv/pocd/ValueSet/metric-availability" />
+    <url value="http://terminology.hl7.org/ValueSet/metric-availability" />
     <name value="MetricAvailability" />
     <title value="Metric Availability" />
     <status value="draft" />
@@ -13,7 +13,7 @@
     <description value="CodeSystem for availability of the means that derives the metric state" />
     <compose>
         <include>
-            <system value="http://hl7.org/fhir/uv/pocd/CodeSystem/metric-availability" />
+            <system value="http://terminology.hl7.org/CodeSystem/metric-availability" />
         </include>
     </compose>
 </ValueSet>
