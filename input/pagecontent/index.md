@@ -5,7 +5,7 @@ clinical decision support, and medical data archiving for aggregate quality meas
 It adds "deep metadata for device observations".  
 Key goals include supplementing the measurement values in an Observation resource with full provenance for traceability, and with 
 fuller details of device architecture and dynamically changing attributes such as 
-calibration history and battery state than is provided for in a FHIR Observation resource. 
+calibration history and battery state than is provided for in a FHIR Observation resource. This guide is intended to supplement — not replace — existing approaches such as HL7v2/IHE PCD-01 for communicating device data to device observation consumers.
 
 The next release of this Guide intends to cover physiological and technical alerts from medical devices.
 Another related implementation guide focuses on home-based personal health devices. 
@@ -55,7 +55,9 @@ A planned future FHIR use case for the Devices on FHIR group is the near-real-ti
 
 Other PCD profiles include Implantable Device Cardiac Observations (IDCO), Point-of-Care Infusion Verification (PIV) and Point-of-Care Identity Management (PCIM). Future versions of this Implementation Guide will extend scope to cover related functionality based on FHIR rather than HL7 V2.
 
-#### Vital Signs Profile
+#### HL7 FHIR Profiles
+
+##### Vital Signs Profile
 The Observation resource is used to record data that is retrieved from a device. Some values that are 
 formalized in this resource are required to conform to the 
 [Vital Signs Profile](http://hl7.org/fhir/observation-vitalsigns.html),

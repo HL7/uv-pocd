@@ -41,7 +41,7 @@ These are not necessarily single quantitative measurements. They may be:
 An individual measurement has a context made up of all the levels of the containment tree.
 At each level there are attributes that condition the understanding of the measurements
 
-An Observation may link to the DeviceMetric to gain access to all levels of the containment tree. See the "Implementation Guidance" sections of this Implementation Guide for further details.
+An Observation shall link to the DeviceMetric to gain access to all levels of the containment tree. See the "Implementation Guidance" sections of this Implementation Guide for further details.
 
 ### Value of the MDC Nomenclature model
 
