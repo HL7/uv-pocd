@@ -5,7 +5,7 @@ clinical decision support, and medical data archiving for aggregate quality meas
 It adds "deep metadata for device observations".  
 Key goals include supplementing the measurement values in an Observation resource with full provenance for traceability, and with 
 fuller details of device architecture and dynamically changing attributes such as 
-calibration history and battery state than is provided for in a FHIR Observation resource. 
+calibration history and battery state than is provided for in a FHIR Observation resource. This guide is intended to supplement — not replace — existing approaches such as HL7v2/IHE PCD-01 for communicating device data to device observation consumers.
 
 The next release of this Guide intends to cover physiological and technical alerts from medical devices.
 Another related implementation guide focuses on home-based personal health devices. 
