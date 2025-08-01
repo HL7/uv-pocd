@@ -4,7 +4,7 @@
     <meta>
         <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset" />
     </meta>
-    <url value="http://hl7.org/fhir/uv/pocd/ValueSet/operating-mode" />
+    <url value="http://terminology.hl7.org/ValueSet/operating-mode" />
     <name value="OperatingMode" />
     <title value="Operating Mode" />
     <status value="draft" />
@@ -13,7 +13,7 @@
     <description value="CodeSystem for IEEE 11073-10207 MdsState/OperatingMode" />
     <compose>
         <include>
-            <system value="http://hl7.org/fhir/uv/pocd/CodeSystem/operating-mode" />
+            <system value="http://terminology.hl7.org/CodeSystem/operating-mode" />
         </include>
     </compose>
 </ValueSet>

@@ -70,7 +70,7 @@
       <path value="Observation.code"/>
       <binding>
         <strength value="extensible"/>
-        <valueSet value="http://hl7.org/fhir/uv/pocd/ValueSet/11073MDC-metric"/>
+        <valueSet value="http://terminology.hl7.org/ValueSet/11073MDC-metric"/>
       </binding>
     </element>
     <element id="Observation.code.coding">
@@ -218,7 +218,7 @@ If a match has been found, the EnumStringMetricDescriptor/AllowedValue/Type can 
       <mustSupport value="true"/>
       <binding> 
         <strength value="extensible"/> 
-        <valueSet value="http://hl7.org/fhir/uv/pocd/ValueSet/observation-interpretation"/> 
+        <valueSet value="http://terminology.hl7.org/ValueSet/observation-interpretation"/> 
       </binding>     
       <mapping>
         <identity value="dim"/>

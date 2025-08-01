@@ -4,7 +4,7 @@
   <meta>
     <profile value="http://hl7.org/fhir/StructureDefinition/shareablecodesystem" />
   </meta>
-  <url value="http://hl7.org/fhir/uv/pocd/CodeSystem/safety" />
+  <url value="http://terminology.hl7.org/CodeSystem/safety" />
   <name value="Safety" />
   <title value="Safety" />
   <status value="draft" />
