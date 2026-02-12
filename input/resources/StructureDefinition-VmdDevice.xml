@@ -10,13 +10,22 @@
 * If multiple instances of the same VMD type exist, the Instance extension allows a squence to be defined.&#10;
 * Extensions allow approved jurisdictions, operating hours, and operating cycles to be added."/>
   </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
+    <valueCode value="dev"/>
+  </extension>
   <url value="http://hl7.org/fhir/uv/pocd/StructureDefinition/VmdDevice"/>
   <name value="VmdDevice"/>
   <title value="VMD Device profile"/>
   <status value="draft"/>
   <date value="2022-01-16"/>
-  <publisher value="HL7 International - Devices Work Group"/>
+  <publisher value="HL7 International / Health Care Devices"/>
   <description value="StructureDefinition for Device resources that represent Virtual Medical Devices (VMD). These are medical-related subsystems in the hierarchical model of a Point-of-Care device."/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://www.hl7.org/Special/committees/healthcaredevices"/>
+    </telecom>
+  </contact>
   <fhirVersion value="4.0.1"/>
   <mapping>
     <identity value="dim"/>

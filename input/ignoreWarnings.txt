@@ -3,5 +3,8 @@
 # Add warning and/or information messages here after you've confirmed that they aren't really a problem
 # (And include comments like this justifying why)
 
+# Example observation in this IG are supposed to be device generated with often an unknown performer. There is text in the IG to explain this. The affected example observations / bundles are: bits-observation.json, bundle-continuousnonin.json, bundle-example-1.json, coin-20181119174911.json, coin-20181119202022.json, coin-example-1.json, coin-example-timefault.json, glucose-1.0.0.4.json, numeric-observation-not-a-number.json, numeric-spotnumeric.json, stringenum-1234.json
+Best Practice Recommendation: In general, all observations should have a performer
+
 # The following profiles are only used to define mappings
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/uv/pocd/StructureDefinition/Observation'): The Implementation Guide contains no examples for this profile

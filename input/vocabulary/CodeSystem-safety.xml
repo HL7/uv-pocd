@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <CodeSystem xmlns="http://hl7.org/fhir">
-    <id value="safety"/>
+  <id value="safety"/>
   <meta>
     <profile value="http://hl7.org/fhir/StructureDefinition/shareablecodesystem" />
   </meta>
@@ -11,12 +11,21 @@
   <experimental value="false" />
   <date value="2020-05-12" />
   <description value="CodeSystem for IEEE 11073-10207 SafetyClassification" />
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
+    <valueCode value="dev"/>
+  </extension>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://www.hl7.org/Special/committees/healthcaredevices"/>
+    </telecom>
+  </contact>
   <caseSensitive value="false" />
   <content value="complete" />
   <concept>
     <code value="Inf" />
     <display value="Informational" />
-	<definition value="The descriptor and the related state information are intended to be used for information purposes only. They are not intended to be used in clinical functions."/>
+    <definition value="The descriptor and the related state information are intended to be used for information purposes only. They are not intended to be used in clinical functions."/>
   </concept>
   <concept>
     <code value="MedA" />

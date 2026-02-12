@@ -7,13 +7,22 @@
 * The representation of a person's birthname requieres an additional HumanName type with the use maiden and a familyname because HL7 FHIR does not explicitly address a birthname.&#10;
 * The sex and gender of a patient (or a newborn) cannot be mapped from ISO/IEEE 11073-10207 to FHIR. The domain information and service model only contains an attribute for sex as defined by biological and physiological characteristics. FHIR, on the other hand, only provides a field for gender as defined by the socially constructed roles, behaviours, activities, and attributes that a given society considers appropriate. The biological sex, however, does not necessarily match a person’s administrative gender. Mapping from one to the other would therefore introduce errors. If necessary, an implementer can convey the biological sex as a coded Observation type."/>
   </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
+    <valueCode value="dev"/>
+  </extension>
   <url value="http://hl7.org/fhir/uv/pocd/StructureDefinition/Patient"/>
   <name value="Patient"/>
   <title value="Patient profile"/>
   <status value="draft"/>
   <date value="2020-07-15"/>
-  <publisher value="HL7 International - Health Care Devices Work Group"/>
+  <publisher value="HL7 International / Health Care Devices"/>
   <description value="StructureDefinition for Patient resources that represent demographics and other administrative information."/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://www.hl7.org/Special/committees/healthcaredevices"/>
+    </telecom>
+  </contact>
   <fhirVersion value="4.0.1"/>
   <kind value="resource"/>
   <abstract value="false"/>

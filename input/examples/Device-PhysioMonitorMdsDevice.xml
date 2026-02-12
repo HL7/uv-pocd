@@ -9,7 +9,7 @@
       <coding>
         <system value="urn:iso:std:iso:3166"/>
         <code value="840"/>
-        <display value="United States of America"/>
+        <display value="United States of America (the)"/>
       </coding>
     </valueCodeableConcept>
   </extension>

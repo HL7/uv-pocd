@@ -10,13 +10,22 @@
 * `Device.parent` is optional and may refer to another MDS Device resource as a composite MDS.&#10;
 * Extensions allow approved jurisdictions, device operator, operating hours, operating cycles, and operating mode to be added."/>
   </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
+    <valueCode value="dev"/>
+  </extension>
   <url value="http://hl7.org/fhir/uv/pocd/StructureDefinition/MdsDevice"/>
   <name value="MdsDevice"/>
   <title value="MDS Device profile"/>
   <status value="draft"/>
   <date value="2022-01-16"/>
-  <publisher value="HL7 International - Devices Work Group"/>
+  <publisher value="HL7 International / Health Care Devices"/>
   <description value="StructureDefinition for Device resources that represent a Medical Device System (MDS). This is the top-level resource in the hierarchical model of a Point-of-Care device."/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://www.hl7.org/Special/committees/healthcaredevices"/>
+    </telecom>
+  </contact>
   <fhirVersion value="4.0.1"/>
   <mapping>
     <identity value="dim"/>

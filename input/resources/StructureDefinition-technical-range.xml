@@ -6,8 +6,17 @@
   <title value="Technical range extension"/>
   <status value="draft" />
   <date value="2022-01-16"/>
-  <publisher value="HL7 International - Devices Work Group"/>
+  <publisher value="HL7 International / Health Care Devices"/>
   <description value="StructureDefinition that adds technical range and accuracy to a DeviceMetric."/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://www.hl7.org/Special/committees/healthcaredevices"/>
+    </telecom>
+  </contact>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
+    <valueCode value="dev"/>
+  </extension>
   <fhirVersion value="4.0.1"/>
   <mapping>
     <identity value="dim"/>

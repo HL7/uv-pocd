@@ -15,8 +15,17 @@
   <title value="Sample Array Observation profile"/>
   <status value="draft"/>
   <date value="2022-01-21"/>
-  <publisher value="HL7 International - Devices Work Group"/>
+  <publisher value="HL7 International / Health Care Devices"/>
   <description value="StructureDefinition for Observation resources that represent real-time waveforms or wave snippets."/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://www.hl7.org/Special/committees/healthcaredevices"/>
+    </telecom>
+  </contact>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
+    <valueCode value="dev"/>
+  </extension>
   <fhirVersion value="4.0.1"/>
   <mapping>
     <identity value="dim"/>

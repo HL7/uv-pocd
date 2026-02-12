@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<StructureDefinition xmlns="http://hl7.org/fhir" 
+<StructureDefinition xmlns="http://hl7.org/fhir"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas-r5/fhir-single.xsd">
   <id value="ChannelDevice"/>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-summary">
@@ -10,13 +10,22 @@
 * If multiple instances of the same Channel type exist, the Instance extension allows a sequence to be defined.&#10;
 * Extensions allow operating hours and operating cycles to be added."/>
   </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
+    <valueCode value="dev"/>
+  </extension>
   <url value="http://hl7.org/fhir/uv/pocd/StructureDefinition/ChannelDevice"/>
   <name value="ChannelDevice"/>
   <title value="Channel Device profile"/>
   <status value="draft"/>
   <date value="2022-01-16"/>
-  <publisher value="HL7 International - Devices Work Group"/>
+  <publisher value="HL7 International / Health Care Devices"/>
   <description value="StructureDefinition for Device resources that represent Channels, which are used for grouping metrics together."/>
+  <contact>
+    <telecom>
+      <system value='url'/>
+      <value value='http://www.hl7.org/Special/committees/healthcaredevices'/>
+    </telecom>
+  </contact>  
   <fhirVersion value="4.0.1"/>
   <mapping>
     <identity value="dim"/>
@@ -98,8 +107,8 @@
         <profile value="http://hl7.org/fhir/uv/pocd/StructureDefinition/operating-hours" />
       </type>
       <mustSupport value="true"/>
-     </element>
-      <element id="Device.extension:operatingHours.valueUnsignedInt">
+    </element>
+    <element id="Device.extension:operatingHours.valueUnsignedInt">
       <path value="Device.extension.valueUnsignedInt"/>
       <mapping>
         <identity value="sdc"/>
@@ -117,8 +126,8 @@
         <profile value="http://hl7.org/fhir/uv/pocd/StructureDefinition/operating-cycles" />
       </type>
       <mustSupport value="true"/>
-     </element>
-      <element id="Device.extension:operatingCycles.valueUnsignedInt">
+    </element>
+    <element id="Device.extension:operatingCycles.valueUnsignedInt">
       <path value="Device.extension.valueUnsignedInt"/>
       <mapping>
         <identity value="sdc"/>

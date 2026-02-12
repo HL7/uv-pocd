@@ -10,12 +10,15 @@
 * `Observation.interpretation` coding includes measurement status.&#10;
 * `Observation.device` shall be present and refer to the Numeric DeviceMetric resource which this observation belongs to."/>
   </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
+    <valueCode value="dev"/>
+  </extension>
   <url value="http://hl7.org/fhir/uv/pocd/StructureDefinition/NumericObservation"/>
   <name value="NumericObservation"/>
   <title value="Numeric Observation profile"/>
   <status value="draft"/>
   <date value="2022-01-21"/>
-  <publisher value="HL7 International - Devices Work Group"/>
+  <publisher value="HL7 International / Health Care Devices"/>
   <description value="StructureDefinition for Observation resources that represent numerical measurements, calculations, or settings."/>
   <fhirVersion value="4.0.1"/>
   <mapping>

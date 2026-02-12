@@ -12,6 +12,15 @@
   <date value="2019-09-28"/>
   <publisher value="HL7 International - Health Care Devices Work Group"/>
   <description value="Observation interpretation codes including measurement status."/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://www.hl7.org/Special/committees/healthcaredevices"/>
+    </telecom>
+  </contact>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
+    <valueCode value="dev"/>
+  </extension>
   <compose>
     <include>
       <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
