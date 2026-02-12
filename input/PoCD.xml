@@ -19,7 +19,7 @@
   <contact>
     <telecom>
       <system value="url"/>
-      <value value="http://hl7.org/Special/committees/healthcaredevices"/>
+      <value value="http://www.hl7.org/Special/committees/healthcaredevices"/>
     </telecom>
   </contact>
   <description value="ImplementationGuide for Point-of-Care Devices (PoCD), such as those typically found in a hospital care setting (e.g., physiological monitors, infusion pumps, ventilators, pulse-oximeters, etc.)."/>
@@ -586,6 +586,11 @@
         <nameUrl value="downloads.html"/>
         <title value="Downloads"/>
         <generation value="html"/>
+      </page>
+      <page>
+        <nameUrl value="appendix.html"/>
+        <title value="Appendix"/>
+        <generation value="markdown"/>
       </page>
       <page>
         <nameUrl value="changes.html"/>

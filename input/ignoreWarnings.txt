@@ -8,3 +8,6 @@ Best Practice Recommendation: In general, all observations should have a perform
 
 # The following profiles are only used to define mappings
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/uv/pocd/StructureDefinition/Observation'): The Implementation Guide contains no examples for this profile
+
+# Reference to external draft code system that is not really draft. This message can be ignored safely.
+Reference to draft CodeSystem urn:iso:std:iso:11073:10101|2024-12-05 from fhir.tx.support.r4#0.32.0

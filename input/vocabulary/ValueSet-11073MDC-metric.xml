@@ -13,15 +13,6 @@
   <date value="2021-07-14"/>
   <publisher value="HL7 International / Health Care Devices"/>
   <description value="ValueSet for the ISO/IEEE 11073-10101 Nomenclature filtered by Metric (SCADA or Settings) partition."/>
-  <contact>
-    <telecom>
-      <system value="url"/>
-      <value value="http://www.hl7.org/Special/committees/healthcaredevices"/>
-    </telecom>
-  </contact>
-  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
-    <valueCode value="dev"/>
-  </extension>
   <compose>
     <include>
       <system value="urn:iso:std:iso:11073:10101"/>

@@ -11,15 +11,6 @@
   <experimental value="false" />
   <date value="2020-12-06" />
   <description value="CodeSystem for availability of the means that derives the metric state" />
-  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
-    <valueCode value="dev"/>
-  </extension>
-  <contact>
-    <telecom>
-      <system value="url"/>
-      <value value="http://www.hl7.org/Special/committees/healthcaredevices"/>
-    </telecom>
-  </contact>
   <caseSensitive value="false" />
   <content value="complete" />
   <concept>
