@@ -136,6 +136,7 @@
       <type>
         <code value="dateTime"/>
       </type>
+      <mustSupport value="true"/>
       <mapping>
         <identity value="sdc"/>
         <map value="SampleArrayValue/DeterminationTime"/>
@@ -147,6 +148,7 @@
       <type>
         <code value="Period"/>
       </type>
+      <mustSupport value="true"/>
     </element>
     <element id="Observation.effective[x]:effectivePeriod.start">
       <path value="Observation.effective[x].start"/>
@@ -190,6 +192,7 @@
       <type>
         <code value="SampledData"/>
       </type>
+      <mustSupport value="true"/>
     </element>
     <element id="Observation.value[x]:valueSampledData.origin">
       <path value="Observation.value[x].origin"/>
@@ -340,6 +343,7 @@
       <type>
         <code value="SampledData"/>
       </type>
+      <mustSupport value="true"/>
     </element>
     <element id="Observation.component.value[x]:valueSampledData.origin">
       <path value="Observation.component.value[x].origin"/>

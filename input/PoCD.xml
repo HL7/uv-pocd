@@ -2,6 +2,7 @@
 <ImplementationGuide xmlns="http://hl7.org/fhir"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../input-cache/schemas-r5/fhir-single.xsd">
   <id value="hl7.fhir.uv.pocd"/>
+  <language value="en-US"/>
   <url value="http://hl7.org/fhir/uv/pocd/ImplementationGuide/hl7.fhir.uv.pocd"/>
   <version value="4.0.0"/>
   <name value="PoCDImplementationGuide"/>
@@ -13,6 +14,9 @@
   <experimental value="false"/>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
     <valueCode value="dev"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+    <valueInteger value="2"/>
   </extension>
   <date value="2021-11-26"/>
   <publisher value="HL7 International / Health Care Devices"/>

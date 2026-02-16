@@ -9,7 +9,7 @@
   <title value="Approved Jurisdictions extension"/>
   <status value="draft" />
   <date value="2022-01-16"/>
-  <description value="StructureDefinition that adds approved jurisdictions to a Device."/>
+  <description value="StructureDefinition that adds approved jurisdictions to a Device. Note that the FHIR jurisdiction extension could be used as well - URL: http://hl7.org/fhir/StructureDefinition/identifier-jurisdiction ."/>
   <fhirVersion value="4.0.1" />
   <kind value="complex-type" />
   <abstract value="false" />

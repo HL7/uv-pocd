@@ -187,6 +187,7 @@
       <sliceName value="EUI-64"/>
       <short value="IEEE 64-bit Extended Unique Identifier (EUI-64)"/>
       <max value="1"/>
+      <mustSupport value="true"/>
     </element>
     <element id="Device.identifier:EUI-64.system">
       <path value="Device.identifier.system"/>

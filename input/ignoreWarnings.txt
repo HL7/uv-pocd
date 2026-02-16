@@ -3,7 +3,7 @@
 # Add warning and/or information messages here after you've confirmed that they aren't really a problem
 # (And include comments like this justifying why)
 
-# Example observation in this IG are supposed to be device generated with often an unknown performer. There is text in the IG to explain this. The affected example observations / bundles are: bits-observation.json, bundle-continuousnonin.json, bundle-example-1.json, coin-20181119174911.json, coin-20181119202022.json, coin-example-1.json, coin-example-timefault.json, glucose-1.0.0.4.json, numeric-observation-not-a-number.json, numeric-spotnumeric.json, stringenum-1234.json
+# Example observation in this IG are supposed to be device generated with often an unknown performer. There will be text in the IG to explain this.
 Best Practice Recommendation: In general, all observations should have a performer
 
 # The following profiles are only used to define mappings
@@ -11,3 +11,22 @@ WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/uv/pocd/StructureD
 
 # Reference to external draft code system that is not really draft. This message can be ignored safely.
 Reference to draft CodeSystem urn:iso:std:iso:11073:10101|2024-12-05 from fhir.tx.support.r4#0.32.0
+
+# This code system is referenced by a FHIR core value set and is really not a draft. This warning can safely be ignored. And instead of defining a local extension in the IG the FHIR jurisdiction extension could be used as well in
+Reference to draft CodeSystem urn:iso:std:iso:3166|20210120
+
+# These warnings are caused by checking a slice with an MDC code against a the BP profile in FHIR core. These messages are expected and can be ignored safely.
+This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/bp|4.0.1 (this may not be a problem, but you should check that it's not intended to match a slice)
+
+# Moving code systems and URLs to THO will be discussed in the near future. For now, these warnings can be ignored safely.
+Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
+
+# partition is a known IEEE 11073-10101 concept - discussion on Zulip how to fix this: https://chat.fhir.org/#narrow/stream/179166-implementers/topic/Why.20is.20the.20ISO.2FIEEE.2011073.20Codesystem.20seen.20as.20draft.3F/near/456526001
+No definition can be found for the system urn:iso:std:iso:11073:10101, and the property 'partition' is not a generally known property, so the property might not be valid, or understood by the terminology ecosystem. In case it's useful, the list of generally known properties for all systems is concept,code,status,inactive,effectiveDate,deprecationDate,retirementDate,notSelectable,synonym,comment,itemWeight
+
+# extension used in FHIR core R4 that is now deprecated - this warning can be ignored safely
+The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.2.0 is deprecated
+
+# Publisher process choice - can safely be ignored
+The value set expansion is too large, and only a subset has been displayed
+

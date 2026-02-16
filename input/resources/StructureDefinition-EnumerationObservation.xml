@@ -144,6 +144,7 @@
       <type>
         <code value="dateTime"/>
       </type>
+      <mustSupport value="true"/>
       <mapping>
         <identity value="dim"/>
         <map value="Enumeration::Absolute-Time-Stamp"/>
@@ -159,6 +160,7 @@
       <type>
         <code value="Period"/>
       </type>
+      <mustSupport value="true"/>
     </element>
     <element id="Observation.effective[x]:effectivePeriod.start">
       <path value="Observation.effective[x].start"/>
