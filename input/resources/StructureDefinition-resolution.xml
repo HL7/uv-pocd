@@ -6,7 +6,6 @@
   <title value="Resolution extension"/>
   <status value="draft" />
   <date value="2022-01-16"/>
-  <publisher value="HL7 International / Devices"/>
   <description value="StructureDefinition that adds resolution to a DeviceMetric." />
   <contact>
     <telecom>

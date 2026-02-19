@@ -11,7 +11,6 @@
   <status value="draft"/>
   <experimental value="false"/>
   <date value="2021-07-14"/>
-  <publisher value="HL7 International / Devices"/>
   <description value="ValueSet for the ISO/IEEE 11073-10101 Nomenclature filtered by Dimension partition."/>
   <compose>
     <include>

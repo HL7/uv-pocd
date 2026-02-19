@@ -14,7 +14,6 @@
   <title value="Observation profile"/>
   <status value="draft"/>
   <date value="2020-08-03"/>
-  <publisher value="HL7 International / Devices"/>
   <description value="StructureDefinition for measurements and simple assertions made about a patient, device or other subject."/>
   <contact>
     <telecom>

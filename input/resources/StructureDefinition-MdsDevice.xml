@@ -18,7 +18,6 @@
   <title value="MDS Device profile"/>
   <status value="draft"/>
   <date value="2022-01-16"/>
-  <publisher value="HL7 International / Devices"/>
   <description value="StructureDefinition for Device resources that represent a Medical Device System (MDS). This is the top-level resource in the hierarchical model of a Point-of-Care device."/>
   <contact>
     <telecom>

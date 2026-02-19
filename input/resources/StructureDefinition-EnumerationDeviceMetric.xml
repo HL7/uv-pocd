@@ -18,7 +18,6 @@
   <title value="Enumeration DeviceMetric profile"/>
   <status value="draft"/>
   <date value="2022-01-16"/>
-  <publisher value="HL7 International / Devices"/>
   <description value="StructureDefinition for DeviceMetric resources that represent coded or text status, annotations, or settings characteristics and capabilities."/>
   <contact>
     <telecom>

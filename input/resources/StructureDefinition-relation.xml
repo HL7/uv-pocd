@@ -6,7 +6,7 @@
   <title value="Relation extension"/>
   <status value="draft" />
   <date value="2022-01-16"/>
-  <publisher value="HL7 International / Devices"/>
+
   <description value="Relation allows the modelling of relationships between a metric and other containment tree entries.&#xD;&#xA;Related containment tree entries are defined in Entries, whereby the flavor of a relationship can be&#xD;&#xA;set up in Kind." />
   <contact>
     <telecom>

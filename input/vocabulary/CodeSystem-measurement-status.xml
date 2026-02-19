@@ -10,7 +10,6 @@
   <status value="draft"/>
   <experimental value="false"/>
   <date value="2019-09-28"/>
-  <publisher value="HL7 International - Devices Work Group"/>
   <description value="Measurement status definitions from the ISO/IEEE 11073-10201 DIM."/>
   <caseSensitive value="false"/>
   <content value="complete"/>

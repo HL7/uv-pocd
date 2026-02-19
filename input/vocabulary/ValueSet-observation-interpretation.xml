@@ -10,7 +10,6 @@
   <status value="draft"/>
   <experimental value="false"/>
   <date value="2019-09-28"/>
-  <publisher value="HL7 International - Devices Work Group"/>
   <description value="Observation interpretation codes including measurement status."/>
   <compose>
     <include>

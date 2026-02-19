@@ -20,7 +20,6 @@
   <title value="Sample Array DeviceMetric profile"/>
   <status value="draft"/>
   <date value="2022-01-16"/>
-  <publisher value="HL7 International / Devices"/>
   <description value="StructureDefinition for DeviceMetric resources that represent real-time waveforms or wave snippets characteristics and capabilities."/>
   <contact>
     <telecom>

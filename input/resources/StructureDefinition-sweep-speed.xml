@@ -6,7 +6,6 @@
   <title value="Sweep Speed extension"/>
   <status value="draft"/>
   <date value="2022-01-16"/>
-  <publisher value="HL7 International / Devices"/>
   <description value="StructureDefinition that adds default sweep speed to a DeviceMetric."/>
   <contact>
     <telecom>

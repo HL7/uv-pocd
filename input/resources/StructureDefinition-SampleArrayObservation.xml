@@ -15,7 +15,6 @@
   <title value="Sample Array Observation profile"/>
   <status value="draft"/>
   <date value="2022-01-21"/>
-  <publisher value="HL7 International / Devices"/>
   <description value="StructureDefinition for Observation resources that represent real-time waveforms or wave snippets."/>
   <contact>
     <telecom>
