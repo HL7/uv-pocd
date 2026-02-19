@@ -19,7 +19,7 @@
   <title value="Compound Numeric Observation profile"/>
   <status value="draft"/>
   <date value="2022-01-21"/>
-  <publisher value="HL7 International / Health Care Devices"/>
+  <publisher value="HL7 International / Devices"/>
   <description value="StructureDefinition for Observation resources that represent numerical measurements, calculations, or settings with multiple components."/>
   <contact>
     <telecom>

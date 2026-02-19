@@ -6,7 +6,7 @@
   <title value="Device Instance extension"/>
   <status value="draft"/>
   <date value="2022-01-16"/>
-  <publisher value="HL7 International / Health Care Devices"/>
+  <publisher value="HL7 International / Devices"/>
   <description value="StructureDefinition that adds an instance number or label to Device or DeviceMetric."/>
   <contact>
     <telecom>

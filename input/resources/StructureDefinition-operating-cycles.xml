@@ -6,7 +6,7 @@
   <title value="Operating cycles extension"/>
   <status value="draft" />
   <date value="2022-01-16"/>
-  <publisher value="HL7 International / Health Care Devices"/>
+  <publisher value="HL7 International / Devices"/>
   <description value="StructureDefinition that adds operating cycles to a Device." />
   <contact>
     <telecom>

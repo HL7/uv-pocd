@@ -18,7 +18,7 @@
   <title value="Enumeration Observation profile"/>
   <status value="draft"/>
   <date value="2022-01-21"/>
-  <publisher value="HL7 International / Health Care Devices"/>
+  <publisher value="HL7 International / Devices"/>
   <description value="StructureDefinition for Observation resources that represent coded or text status, annotations, or settings."/>
   <contact>
     <telecom>

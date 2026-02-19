@@ -19,7 +19,7 @@
     <valueInteger value="2"/>
   </extension>
   <date value="2021-11-26"/>
-  <publisher value="HL7 International / Health Care Devices"/>
+  <publisher value="HL7 International / Devices"/>
   <contact>
     <telecom>
       <system value="url"/>

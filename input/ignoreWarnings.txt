@@ -30,3 +30,6 @@ The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValue
 # Publisher process choice - can safely be ignored
 The value set expansion is too large, and only a subset has been displayed
 
+# HAPI uses old name for dev work group - can be ignored safely
+The nominated WG 'dev' means that the publisher should be 'HL7 International / Health Care Devices' but 'HL7 International / Devices' was found
+
