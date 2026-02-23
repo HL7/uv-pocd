@@ -4,7 +4,7 @@
   <id value="hl7.fhir.uv.pocd"/>
   <language value="en-US"/>
   <url value="http://hl7.org/fhir/uv/pocd/ImplementationGuide/hl7.fhir.uv.pocd"/>
-  <version value="4.0.0"/>
+  <version value="0.4.0"/>
   <name value="PoCDImplementationGuide"/>
   <title value="Point-of-Care Device Implementation Guide"/>
   <status value="draft"/>
