@@ -16,5 +16,6 @@ Install the FHIR IG Publisher and Jekyll as described in the [IG Publisher Docum
 
 Clone the Git repository to your local file system: `git clone https://github.com/HL7/uv-pocd.git`  
 In the `uv-pocd` directory, run the publisher with control file as argument: `java -jar org.hl7.fhir.igpublisher.jar -ig ig.ini`  
-`_updatePublisher.bat` and `_genonce.bat` perform a local build in a Windows environment.  
+`_updatePublisher.bat` and `_genonce.bat` updates the build tooling and performs a local build in a Windows environment,
+`./_updatePublisher.sh` and `./_genonce.sh` updates the build tooling and performs a local build in a Linux environment.
 When completed, point your browser to `index.html` in the `uv-pocd/output` directory.
