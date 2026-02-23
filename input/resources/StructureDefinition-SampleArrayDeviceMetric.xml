@@ -12,13 +12,21 @@
 * Extensions allow relationships, metric availability, technical range, and resolution to be added.&#10;
 * For waveform presentation, extensions allow sweep speed and grid lines to be defined."/>
   </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
+    <valueCode value="dev"/>
+  </extension>
   <url value="http://hl7.org/fhir/uv/pocd/StructureDefinition/SampleArrayDeviceMetric"/>
   <name value="SampleArrayDeviceMetric"/>
   <title value="Sample Array DeviceMetric profile"/>
   <status value="draft"/>
   <date value="2022-01-16"/>
-  <publisher value="HL7 International - Devices Work Group"/>
   <description value="StructureDefinition for DeviceMetric resources that represent real-time waveforms or wave snippets characteristics and capabilities."/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://www.hl7.org/Special/committees/healthcaredevices"/>
+    </telecom>
+  </contact>
   <fhirVersion value="4.0.1"/>
   <mapping>
     <identity value="dim"/>

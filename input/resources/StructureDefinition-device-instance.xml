@@ -6,8 +6,16 @@
   <title value="Device Instance extension"/>
   <status value="draft"/>
   <date value="2022-01-16"/>
-  <publisher value="HL7 International - Devices Work Group"/>
   <description value="StructureDefinition that adds an instance number or label to Device or DeviceMetric."/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://www.hl7.org/Special/committees/healthcaredevices"/>
+    </telecom>
+  </contact>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
+    <valueCode value="dev"/>
+  </extension>
   <fhirVersion value="4.0.1"/>
   <kind value="complex-type"/>
   <abstract value="false"/>

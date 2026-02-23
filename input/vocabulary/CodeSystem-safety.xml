@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <CodeSystem xmlns="http://hl7.org/fhir">
-    <id value="safety"/>
+  <id value="safety"/>
   <meta>
     <profile value="http://hl7.org/fhir/StructureDefinition/shareablecodesystem" />
   </meta>
@@ -16,7 +16,7 @@
   <concept>
     <code value="Inf" />
     <display value="Informational" />
-	<definition value="The descriptor and the related state information are intended to be used for information purposes only. They are not intended to be used in clinical functions."/>
+    <definition value="The descriptor and the related state information are intended to be used for information purposes only. They are not intended to be used in clinical functions."/>
   </concept>
   <concept>
     <code value="MedA" />

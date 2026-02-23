@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <CodeSystem xmlns="http://hl7.org/fhir">
-    <id value="kind-of-relation"/>
+  <id value="kind-of-relation"/>
   <meta>
     <profile value="http://hl7.org/fhir/StructureDefinition/shareablecodesystem" />
   </meta>
@@ -16,7 +16,7 @@
   <concept>
     <code value="Rcm" />
     <display value="Recommendation" />
-	<definition value="The METRIC is a recommendation for the containment tree entries defined in ./pm:Relation/@Entries"/>
+    <definition value="The METRIC is a recommendation for the containment tree entries defined in ./pm:Relation/@Entries"/>
   </concept>
   <concept>
     <code value="PS" />
@@ -36,11 +36,11 @@
   <concept>
     <code value="DCE" />
     <display value="Derived from containment tree entries" />
-	<definition value="The METRIC is derived from the containment tree entries defined in ./pm:Relation/@Entries. If Kind is DCE, ./pm:Relation/pm:Code MAY be set to classify the form of derivation."/>
+    <definition value="The METRIC is derived from the containment tree entries defined in ./pm:Relation/@Entries. If Kind is DCE, ./pm:Relation/pm:Code MAY be set to classify the form of derivation."/>
   </concept>
   <concept>
     <code value="Oth" />
     <display value="Other" />
-	<definition value="Relation is specified by other means, e.g., ./pm:Relation/pm:Code or extension element."/>
+    <definition value="Relation is specified by other means, e.g., ./pm:Relation/pm:Code or extension element."/>
   </concept>
 </CodeSystem>

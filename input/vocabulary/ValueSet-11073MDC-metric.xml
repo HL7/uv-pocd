@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ValueSet xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas-r5/fhir-single.xsd">
+<ValueSet xmlns="http://hl7.org/fhir"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas-r5/fhir-single.xsd">
   <id value="11073MDC-metric"/>
   <meta>
     <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
@@ -10,24 +11,23 @@
   <status value="draft"/>
   <experimental value="false"/>
   <date value="2021-07-14"/>
-  <publisher value="HL7 International - Devices Work Group"/>
   <description value="ValueSet for the ISO/IEEE 11073-10101 Nomenclature filtered by Metric (SCADA or Settings) partition."/>
   <compose>
     <include>
-	    <system value="urn:iso:std:iso:11073:10101"/>
-	    <filter>
-	      <property value="partition"/>
-		    <op value="="/>
-		    <value value="2"/>
-	    </filter>
-	  </include>
+      <system value="urn:iso:std:iso:11073:10101"/>
+      <filter>
+        <property value="partition"/>
+        <op value="="/>
+        <value value="2"/>
+      </filter>
+    </include>
     <include>
-	    <system value="urn:iso:std:iso:11073:10101"/>
-	    <filter>
-	      <property value="partition"/>
-		    <op value="="/>
-		    <value value="258"/>
-	    </filter>
-	  </include>
+      <system value="urn:iso:std:iso:11073:10101"/>
+      <filter>
+        <property value="partition"/>
+        <op value="="/>
+        <value value="258"/>
+      </filter>
+    </include>
   </compose>
 </ValueSet>

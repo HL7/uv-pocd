@@ -1,148 +1,162 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<CapabilityStatement xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas-r5/fhir-single.xsd">
-  <id value="ServerCapabilityStatement"/>
-  <url value="http://hl7.org/fhir/uv/pocd/CapabilityStatement/ServerCapabilityStatement"/>
-  <version value="current"/>
-  <name value="ServerCapabilityStatement"/>
-  <title value="Server capability requirements"/>
-  <status value="draft"/>
-  <experimental value="false"/>
-  <date value="2021-07-17"/>
-  <publisher value="HL7 International - Devices Work Group"/>
-  <description value="CapabilityStatement that describes the expected capabilities of a server processing data from Point-of-Care devices."/>
-  <kind value="requirements"/>
-  <fhirVersion value="4.0.1"/>
-  <format value="xml"/>
-  <format value="json"/>
-  <implementationGuide value="http://hl7.org/fhir/uv/pocd/ImplementationGuide/hl7.fhir.uv.pocd"/>
+<CapabilityStatement xmlns='http://hl7.org/fhir'>
+  <id value='ServerCapabilityStatement'/>
+  <extension url='http://hl7.org/fhir/StructureDefinition/structuredefinition-wg'>
+    <valueCode value='dev'/>
+  </extension>
+  <url value='http://hl7.org/fhir/uv/pocd/CapabilityStatement/ServerCapabilityStatement'/>
+  <version value='current'/>
+  <name value='ServerCapabilityStatement'/>
+  <title value='Server capability requirements'/>
+  <status value='draft'/>
+  <experimental value='false'/>
+  <date value='2021-07-17'/>
+  <contact>
+    <telecom>
+      <system value='url'/>
+      <value value='http://www.hl7.org/Special/committees/healthcaredevices'/>
+    </telecom>
+  </contact>
+  <description value='CapabilityStatement that describes the expected capabilities of a server processing data from Point-of-Care devices.'/>
+  <jurisdiction>
+    <coding>
+      <system value='http://unstats.un.org/unsd/methods/m49/m49.htm'/>
+      <code value='001'/>
+    </coding>
+  </jurisdiction>
+  <kind value='requirements'/>
+  <fhirVersion value='4.0.1'/>
+  <format value='xml'/>
+  <format value='json'/>
+  <implementationGuide value='http://hl7.org/fhir/uv/pocd/ImplementationGuide/hl7.fhir.uv.pocd'/>
   <rest>
-    <mode value="server"/>
-    <documentation value="A FHIR server conforming to the Point-of-Care Device Implementation Guide shall:&#10;
-* Implement the &quot;RESTful FHIR&quot; exchange framework according to the FHIR specification.&#10;
-* Accept both XML and JSON resource format for interactions.&#10;
-* Support all profiles, extensions, and terminologies as defined in this implementation guide.&#10;
-* Support transactions."/>
+    <mode value='server'/>
+    <documentation value='A FHIR server conforming to the Point-of-Care Device Implementation Guide shall:
+ * Implement the "RESTful FHIR" exchange framework according to the FHIR specification.
+ * Accept both XML and JSON resource format for interactions.
+ * Support all profiles, extensions, and terminologies as defined in this implementation guide.
+ * Support transactions.'/>
     <resource>
-      <type value="Device"/>
-      <supportedProfile value="http://hl7.org/fhir/uv/pocd/StructureDefinition/MdsDevice"/>
-      <supportedProfile value="http://hl7.org/fhir/uv/pocd/StructureDefinition/VmdDevice"/>
-      <supportedProfile value="http://hl7.org/fhir/uv/pocd/StructureDefinition/ChannelDevice"/>
+      <type value='Device'/>
+      <supportedProfile value='http://hl7.org/fhir/uv/pocd/StructureDefinition/MdsDevice'/>
+      <supportedProfile value='http://hl7.org/fhir/uv/pocd/StructureDefinition/VmdDevice'/>
+      <supportedProfile value='http://hl7.org/fhir/uv/pocd/StructureDefinition/ChannelDevice'/>
       <interaction>
-        <code value="read"/>
+        <code value='read'/>
       </interaction>
       <interaction>
-        <code value="vread"/>
+        <code value='vread'/>
       </interaction>
       <interaction>
-        <code value="update"/>
+        <code value='update'/>
       </interaction>
       <interaction>
-        <code value="delete"/>
+        <code value='delete'/>
       </interaction>
       <interaction>
-        <code value="create"/>
+        <code value='create'/>
       </interaction>
       <interaction>
-        <code value="search-type"/>
+        <code value='search-type'/>
       </interaction>
-      <versioning value="versioned"/>
-      <conditionalCreate value="true"/>
-      <conditionalUpdate value="true"/>
+      <versioning value='versioned'/>
+      <conditionalCreate value='true'/>
+      <conditionalUpdate value='true'/>
     </resource>
     <resource>
-      <type value="DeviceMetric"/>
-      <supportedProfile value="http://hl7.org/fhir/uv/pocd/StructureDefinition/NumericDeviceMetric"/>
-      <supportedProfile value="http://hl7.org/fhir/uv/pocd/StructureDefinition/EnumerationDeviceMetric"/>
-      <supportedProfile value="http://hl7.org/fhir/uv/pocd/StructureDefinition/SampleArrayDeviceMetric"/>
+      <type value='DeviceMetric'/>
+      <supportedProfile value='http://hl7.org/fhir/uv/pocd/StructureDefinition/NumericDeviceMetric'/>
+      <supportedProfile value='http://hl7.org/fhir/uv/pocd/StructureDefinition/EnumerationDeviceMetric'/>
+      <supportedProfile value='http://hl7.org/fhir/uv/pocd/StructureDefinition/SampleArrayDeviceMetric'/>
       <interaction>
-        <code value="read"/>
+        <code value='read'/>
       </interaction>
       <interaction>
-        <code value="vread"/>
+        <code value='vread'/>
       </interaction>
       <interaction>
-        <code value="update"/>
+        <code value='update'/>
       </interaction>
       <interaction>
-        <code value="delete"/>
+        <code value='delete'/>
       </interaction>
       <interaction>
-        <code value="create"/>
+        <code value='create'/>
       </interaction>
       <interaction>
-        <code value="search-type"/>
+        <code value='search-type'/>
       </interaction>
-      <versioning value="versioned"/>
-      <conditionalCreate value="true"/>
-      <conditionalUpdate value="true"/>
+      <versioning value='versioned'/>
+      <conditionalCreate value='true'/>
+      <conditionalUpdate value='true'/>
     </resource>
     <resource>
-      <type value="Observation"/>
-      <supportedProfile value="http://hl7.org/fhir/uv/pocd/StructureDefinition/NumericObservation"/>
-      <supportedProfile value="http://hl7.org/fhir/uv/pocd/StructureDefinition/CompoundNumericObservation"/>
-      <supportedProfile value="http://hl7.org/fhir/uv/pocd/StructureDefinition/EnumerationObservation"/>
-      <supportedProfile value="http://hl7.org/fhir/uv/pocd/StructureDefinition/SampleArrayObservation"/>
+      <type value='Observation'/>
+      <supportedProfile value='http://hl7.org/fhir/uv/pocd/StructureDefinition/NumericObservation'/>
+      <supportedProfile value='http://hl7.org/fhir/uv/pocd/StructureDefinition/CompoundNumericObservation'/>
+      <supportedProfile value='http://hl7.org/fhir/uv/pocd/StructureDefinition/EnumerationObservation'/>
+      <supportedProfile value='http://hl7.org/fhir/uv/pocd/StructureDefinition/SampleArrayObservation'/>
       <interaction>
-        <code value="read"/>
+        <code value='read'/>
       </interaction>
       <interaction>
-        <code value="vread"/>
+        <code value='vread'/>
       </interaction>
       <interaction>
-        <code value="update"/>
+        <code value='update'/>
       </interaction>
       <interaction>
-        <code value="delete"/>
+        <code value='delete'/>
       </interaction>
       <interaction>
-        <code value="create"/>
+        <code value='create'/>
       </interaction>
       <interaction>
-        <code value="search-type"/>
+        <code value='search-type'/>
       </interaction>
-      <versioning value="versioned"/>
+      <versioning value='versioned'/>
     </resource>
     <resource>
-      <type value="Patient"/>
+      <type value='Patient'/>
       <interaction>
-        <code value="read"/>
+        <code value='read'/>
       </interaction>
       <interaction>
-        <code value="create"/>
+        <code value='create'/>
       </interaction>
       <interaction>
-        <code value="search-type"/>
+        <code value='search-type'/>
       </interaction>
-      <conditionalCreate value="true"/>
+      <conditionalCreate value='true'/>
     </resource>
     <resource>
-      <type value="Practitioner"/>
+      <type value='Practitioner'/>
       <interaction>
-        <code value="read"/>
+        <code value='read'/>
       </interaction>
       <interaction>
-        <code value="create"/>
+        <code value='create'/>
       </interaction>
       <interaction>
-        <code value="search-type"/>
+        <code value='search-type'/>
       </interaction>
-      <conditionalCreate value="true"/>
+      <conditionalCreate value='true'/>
     </resource>
     <resource>
-      <type value="Location"/>
+      <type value='Location'/>
       <interaction>
-        <code value="read"/>
+        <code value='read'/>
       </interaction>
       <interaction>
-        <code value="create"/>
+        <code value='create'/>
       </interaction>
       <interaction>
-        <code value="search-type"/>
+        <code value='search-type'/>
       </interaction>
-      <conditionalCreate value="true"/>
+      <conditionalCreate value='true'/>
     </resource>
     <interaction>
-      <code value="transaction"/>
+      <code value='transaction'/>
     </interaction>
   </rest>
 </CapabilityStatement>

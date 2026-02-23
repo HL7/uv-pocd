@@ -10,7 +10,6 @@
   <status value="draft"/>
   <experimental value="false"/>
   <date value="2021-07-14"/>
-  <publisher value="HL7 International - Devices Work Group"/>
   <description value="ValueSet for the ISO/IEEE 11073-10101 Nomenclature filtered by Object partition."/>
   <compose>
     <include>

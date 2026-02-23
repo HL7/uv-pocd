@@ -11,13 +11,21 @@
 * For each component, `Observation.component.valueQuantity` or, if there is no value, `Observation.component.dataAbsentReason` shall be present. Values shall have a UCUM unit code.&#10;
 * `Observation.component.interpretation` coding includes measurement status."/>
   </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
+    <valueCode value="dev"/>
+  </extension>
   <url value="http://hl7.org/fhir/uv/pocd/StructureDefinition/CompoundNumericObservation"/>
   <name value="CompoundNumericObservation"/>
   <title value="Compound Numeric Observation profile"/>
   <status value="draft"/>
   <date value="2022-01-21"/>
-  <publisher value="HL7 International - Devices Work Group"/>
   <description value="StructureDefinition for Observation resources that represent numerical measurements, calculations, or settings with multiple components."/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://www.hl7.org/Special/committees/healthcaredevices"/>
+    </telecom>
+  </contact>
   <fhirVersion value="4.0.1"/>
   <mapping>
     <identity value="dim"/>
@@ -104,6 +112,7 @@
       <type>
         <code value="dateTime"/>
       </type>
+      <mustSupport value="true"/>
       <mapping>
         <identity value="dim"/>
         <map value="Numeric::Absolute-Time-Stamp"/>
@@ -115,6 +124,7 @@
       <type>
         <code value="Period"/>
       </type>
+      <mustSupport value="true"/>
     </element>
     <element id="Observation.effective[x]:effectivePeriod.start">
       <path value="Observation.effective[x].start"/>
@@ -196,6 +206,7 @@
       <type>
         <code value="Quantity"/>
       </type>
+      <mustSupport value="true"/>
     </element>
     <element id="Observation.component.value[x]:valueQuantity.value">
       <path value="Observation.component.value[x].value"/>

@@ -10,13 +10,21 @@
 * `Observation.interpretation` coding includes measurement status.&#10;
 * `Observation.device` shall be present and refer to the Enumeration DeviceMetric resource which this observation belongs to."/>
   </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
+    <valueCode value="dev"/>
+  </extension>
   <url value="http://hl7.org/fhir/uv/pocd/StructureDefinition/EnumerationObservation"/>
   <name value="EnumerationObservation"/>
   <title value="Enumeration Observation profile"/>
   <status value="draft"/>
   <date value="2022-01-21"/>
-  <publisher value="HL7 International - Devices Work Group"/>
   <description value="StructureDefinition for Observation resources that represent coded or text status, annotations, or settings."/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://www.hl7.org/Special/committees/healthcaredevices"/>
+    </telecom>
+  </contact>
   <fhirVersion value="4.0.1"/>
   <mapping>
     <identity value="dim"/>
@@ -135,6 +143,7 @@
       <type>
         <code value="dateTime"/>
       </type>
+      <mustSupport value="true"/>
       <mapping>
         <identity value="dim"/>
         <map value="Enumeration::Absolute-Time-Stamp"/>
@@ -150,6 +159,7 @@
       <type>
         <code value="Period"/>
       </type>
+      <mustSupport value="true"/>
     </element>
     <element id="Observation.effective[x]:effectivePeriod.start">
       <path value="Observation.effective[x].start"/>

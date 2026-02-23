@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <CodeSystem xmlns="http://hl7.org/fhir">
-    <id value="operating-mode"/>
+  <id value="operating-mode"/>
   <meta>
     <profile value="http://hl7.org/fhir/StructureDefinition/shareablecodesystem" />
   </meta>
@@ -16,7 +16,7 @@
   <concept>
     <code value="Nml" />
     <display value="Normal" />
-	<definition value="The POC MEDICAL DEVICE operates in a mode that supports the fulfillment of its clinical functions."/>
+    <definition value="The POC MEDICAL DEVICE operates in a mode that supports the fulfillment of its clinical functions."/>
   </concept>
   <concept>
     <code value="Dmo" />

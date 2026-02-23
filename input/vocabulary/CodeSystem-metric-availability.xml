@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <CodeSystem xmlns="http://hl7.org/fhir">
-    <id value="metric-availability"/>
+  <id value="metric-availability"/>
   <meta>
     <profile value="http://hl7.org/fhir/StructureDefinition/shareablecodesystem" />
   </meta>
@@ -16,7 +16,7 @@
   <concept>
     <code value="Intr" />
     <display value="Intermittent" />
-	<definition value="Stopping or ceasing for a time; alternately ceasing and beginning again."/>
+    <definition value="Stopping or ceasing for a time; alternately ceasing and beginning again."/>
   </concept>
   <concept>
     <code value="Cont" />

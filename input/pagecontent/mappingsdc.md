@@ -29,7 +29,7 @@ Summary of the mandatory requirements for the Height:
 - One code in Observation.code which must have
     - a fixed Observation.code.coding.system='http://loinc.org' 
     - a fixed Observation.code.coding.code= '8302-2'
-    - 8306-3 -Body height - lying (i.e., body length - typically used for infants) MAY be included as an additional observation code - Other additional Codings are allowed in Observation.code- e.g. more specific LOINC Codes, SNOMED CT concepts, system specific codes. All codes SHALL have an system value
+    - 8306-3 -Body height - lying (i.e., body length - typically used for infants) can be included as an additional observation code. Other additional Codings are allowed in Observation.code- e.g. more specific LOINC Codes, SNOMED CT concepts, system specific codes. All codes should have a system value.
 - Either one Observation.valueQuantity or, if there is no value, one code in Observation.DataAbsentReason
     - Each Observation.valueQuantity must have:
         - One numeric value in Observation.valueQuantity.value
@@ -40,7 +40,7 @@ Summary of the mandatory requirements for the Weight:
 - One code in Observation.code which must have
     - a fixed Observation.code.coding.system='http://loinc.org'
     - a fixed Observation.code.coding.code= '29463-7'
-    - Other additional Codings are allowed in Observation.code- e.g. more specific LOINC Codes, SNOMED CT concepts, system specific codes. All codes SHALL have an system value
+    - Other additional Codings are allowed in Observation.code- e.g. more specific LOINC Codes, SNOMED CT concepts, system specific codes. All codes should have a system value.
 - Either one Observation.valueQuantity or, if there is no value, one code in Observation.DataAbsentReason
     - Each Observation.valueQuantity must have:
         - One numeric value in Observation.valueQuantity.value
@@ -56,7 +56,7 @@ Summary of the mandatory requirements for the HeadCircumference:
 - One code in Observation.code which must have
     - a fixed Observation.code.coding.system='http ://loinc.org'
     - a fixed Observation.code.coding.code= '9843-4'
-    - Other additional Codings are allowed in Observation.code- e.g. more specific LOINC Codes, SNOMED CT concepts, system specific codes. All codes SHALL have an system value
+    - Other additional Codings are allowed in Observation.code- e.g. more specific LOINC Codes, SNOMED CT concepts, system specific codes. All codes should have a system value.
 - Either one Observation.valueQuantity or, if there is no value, one code in Observation.DataAbsentReason
     - Each Observation.valueQuantity must have:
         - One numeric value in Observation.valueQuantity.value
@@ -69,7 +69,7 @@ Summary of the mandatory requirements for the BirthWeight:
     - a fixed Observation.code.coding.system='http ://loinc.org'
     - a fixed Observation.code.coding.code= '29463-7'
 	- an additional Observation.code.coding.code= '8339-4' shall be provided, to indicate that the value applies to an infant
-    - Other additional Codings are allowed in Observation.code- e.g. more specific LOINC Codes, SNOMED CT concepts, system specific codes. All codes SHALL have an system value
+    - Other additional Codings are allowed in Observation.code- e.g. more specific LOINC Codes, SNOMED CT concepts, system specific codes. All codes should have a system value.
 - Either one Observation.valueQuantity or, if there is no value, one code in Observation.DataAbsentReason
     - Each Observation.valueQuantity must have:
         - One numeric value in Observation.valueQuantity.value
@@ -81,7 +81,7 @@ Summary of the mandatory requirements for the BirthLength:
     - a fixed Observation.code.coding.system='http ://loinc.org'
     - a fixed Observation.code.coding.code= '8302-2'
 	- an additional Observation.code.coding.code= '89269-5' shall be provided, to indicate that the value applies to an infant
-    - Other additional Codings are allowed in Observation.code- e.g. more specific LOINC Codes, SNOMED CT concepts, system specific codes. All codes SHALL have an system value
+    - Other additional Codings are allowed in Observation.code- e.g. more specific LOINC Codes, SNOMED CT concepts, system specific codes. All codes should have a system value.
 - Either one Observation.valueQuantity or, if there is no value, one code in Observation.DataAbsentReason
     - Each Observation.valueQuantity must have:
         - One numeric value in Observation.valueQuantity.value
@@ -93,7 +93,7 @@ Summary of the mandatory requirements for the GestationalAge:
 - One code in Observation.code which must have
     - a fixed Observation.code.coding.system='http ://loinc.org'
     - a fixed Observation.code.coding.code= '72147-2'
-    - Other additional Codings are allowed in Observation.code- e.g. more specific LOINC Codes, SNOMED CT concepts, system specific codes. All codes SHALL have an system value
+    - Other additional Codings are allowed in Observation.code- e.g. more specific LOINC Codes, SNOMED CT concepts, system specific codes. All codes should have a system value.
 - Either one Observation.valueQuantity or, if there is no value, one code in Observation.DataAbsentReason
     - Each Observation.valueQuantity must have:
         - One numeric value in Observation.valueQuantity.value

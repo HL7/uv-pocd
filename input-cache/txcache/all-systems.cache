@@ -8,11 +8,42 @@
       "system" : "urn:ietf:bcp:13"
     }]
   }
-}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"true", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+}, "langs":"", "useServer":"true", "useClient":"false", "guessSystem":"true", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "x-system-cache-id",
+    "valueString" : "dc8fd4bc-091a-424a-8a3b-6198ef146891"
+  }]
+}}####
 v: {
   "display" : "xml",
   "code" : "xml",
-  "system" : "urn:ietf:bcp:13"
+  "system" : "urn:ietf:bcp:13",
+  "server" : "http://tx.fhir.org/r4",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "code" : "xml"
+}, "url": "http://hl7.org/fhir/ValueSet/mimetypes", "version": "4.0.1", "langs":"", "useServer":"true", "useClient":"true", "guessSystem":"true", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "x-system-cache-id",
+    "valueString" : "dc8fd4bc-091a-424a-8a3b-6198ef146891"
+  }]
+}}####
+v: {
+  "display" : "xml",
+  "code" : "xml",
+  "system" : "urn:ietf:bcp:13",
+  "server" : "http://tx.fhir.org/r4",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
 }
 -------------------------------------------------------------------------------------
 {"code" : {
@@ -24,110 +55,1328 @@ v: {
       "system" : "urn:ietf:bcp:13"
     }]
   }
-}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"true", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+}, "langs":"", "useServer":"true", "useClient":"false", "guessSystem":"true", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "x-system-cache-id",
+    "valueString" : "dc8fd4bc-091a-424a-8a3b-6198ef146891"
+  }]
+}}####
 v: {
   "display" : "json",
   "code" : "json",
-  "system" : "urn:ietf:bcp:13"
+  "system" : "urn:ietf:bcp:13",
+  "server" : "http://tx.fhir.org/r4",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "code" : "json"
+}, "url": "http://hl7.org/fhir/ValueSet/mimetypes", "version": "4.0.1", "langs":"", "useServer":"true", "useClient":"true", "guessSystem":"true", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "x-system-cache-id",
+    "valueString" : "dc8fd4bc-091a-424a-8a3b-6198ef146891"
+  }]
+}}####
+v: {
+  "display" : "json",
+  "code" : "json",
+  "system" : "urn:ietf:bcp:13",
+  "server" : "http://tx.fhir.org/r4",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "code" : "min"
-}, "valueSet" :{
-  "resourceType" : "ValueSet",
-  "compose" : {
-    "include" : [{
-      "system" : "http://unitsofmeasure.org",
-      "concept" : [{
-        "extension" : [{
-          "url" : "http://hl7.org/fhir/StructureDefinition/valueset-concept-definition",
-          "valueString" : "second"
-        }],
-        "code" : "s",
-        "display" : "second",
-        "designation" : [{
-          "language" : "zh",
-          "value" : "秒"
-        }]
-      },
-      {
-        "extension" : [{
-          "url" : "http://hl7.org/fhir/StructureDefinition/valueset-concept-definition",
-          "valueString" : "minute"
-        }],
-        "code" : "min",
-        "display" : "minute",
-        "designation" : [{
-          "language" : "zh",
-          "value" : "分钟"
-        }]
-      },
-      {
-        "extension" : [{
-          "url" : "http://hl7.org/fhir/StructureDefinition/valueset-concept-definition",
-          "valueString" : "hour"
-        }],
-        "code" : "h",
-        "display" : "hour",
-        "designation" : [{
-          "language" : "zh",
-          "value" : "小时"
-        }]
-      },
-      {
-        "extension" : [{
-          "url" : "http://hl7.org/fhir/StructureDefinition/valueset-concept-definition",
-          "valueString" : "day"
-        }],
-        "code" : "d",
-        "display" : "day",
-        "designation" : [{
-          "language" : "zh",
-          "value" : "天"
-        }]
-      },
-      {
-        "extension" : [{
-          "url" : "http://hl7.org/fhir/StructureDefinition/valueset-concept-definition",
-          "valueString" : "week"
-        }],
-        "code" : "wk",
-        "display" : "week",
-        "designation" : [{
-          "language" : "zh",
-          "value" : "星期"
-        }]
-      },
-      {
-        "extension" : [{
-          "url" : "http://hl7.org/fhir/StructureDefinition/valueset-concept-definition",
-          "valueString" : "month"
-        }],
-        "code" : "mo",
-        "display" : "month",
-        "designation" : [{
-          "language" : "zh",
-          "value" : "月"
-        }]
-      },
-      {
-        "extension" : [{
-          "url" : "http://hl7.org/fhir/StructureDefinition/valueset-concept-definition",
-          "valueString" : "year"
-        }],
-        "code" : "a",
-        "display" : "year",
-        "designation" : [{
-          "language" : "zh",
-          "value" : "年"
-        }]
-      }]
-    }]
-  }
-}, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"true", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+}, "url": "http://hl7.org/fhir/ValueSet/units-of-time", "version": "4.0.1", "langs":"", "useServer":"true", "useClient":"true", "guessSystem":"true", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "x-system-cache-id",
+    "valueString" : "dc8fd4bc-091a-424a-8a3b-6198ef146891"
+  }]
+}}####
 v: {
-  "display" : "分钟",
+  "display" : "min",
   "code" : "min",
-  "system" : "http://unitsofmeasure.org"
+  "system" : "http://unitsofmeasure.org",
+  "version" : "2.0.1",
+  "server" : "http://tx.fhir.org/r4",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "code" : "min"
+}, "url": "http://hl7.org/fhir/ValueSet/units-of-time", "version": "4.0.1", "langs":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"true", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "x-system-cache-id",
+    "valueString" : "dc8fd4bc-091a-424a-8a3b-6198ef146891"
+  },
+  {
+    "name" : "defaultDisplayLanguage",
+    "valueCode" : "en-US"
+  }]
+}}####
+v: {
+  "display" : "min",
+  "code" : "min",
+  "system" : "http://unitsofmeasure.org",
+  "version" : "2.2",
+  "server" : "https://tx.fhir.org/r4",
+  "diagnostics" : "0 0 : start\r\n15 15   : 0ms  : Analysing http://hl7.org/fhir/ValueSet/units-of-time|4.0.1 for validation purposes\r\n15 0    : 0ms  : Parameters: disp-lang=en-US, default-to-latest\r\n15 0    : 0ms  : Prepare include: \"(http://unitsofmeasure.org)(s,min,h,d,wk,mo,a)\"\r\n15 0    : 0ms  : CodeSystem found: \"http://unitsofmeasure.org|2.2\"\r\n15 0    : 0ms  : Validate \"[#min (\"\")]\" and infer system\r\n15 0    : 0ms  : Check \"#min\"\r\n15 0    : 0ms  : Inferred CodeSystem = \"http://unitsofmeasure.org\"\r\n15 0    : 0ms  : CodeSystem found: http://unitsofmeasure.org|2.2 for http://unitsofmeasure.org\r\n15 0    : 0ms  : check code in (http://unitsofmeasure.org)(s,min,h,d,wk,mo,a) at \r\n15 0    : 0ms  : Code \"min\" found in http://unitsofmeasure.org|2.2\r\n",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "coding" : [{
+    "system" : "http://loinc.org",
+    "code" : "8867-4",
+    "display" : "Heart rate"
+  },
+  {
+    "system" : "urn:iso:std:iso:11073:10101",
+    "code" : "147842",
+    "display" : "MDC_ECG_HEART_RATE"
+  }]
+}, "url": "http://hl7.org/fhir/uv/pocd/ValueSet/11073MDC-metric", "version": "current", "langs":"en-US", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "x-system-cache-id",
+    "valueString" : "dc8fd4bc-091a-424a-8a3b-6198ef146891"
+  },
+  {
+    "name" : "defaultDisplayLanguage",
+    "valueCode" : "en-US"
+  }]
+}}####
+v: {
+  "display" : "Heart rate",
+  "code" : "147842",
+  "system" : "urn:iso:std:iso:11073:10101",
+  "version" : "2024-12-05",
+  "server" : "https://tx.fhir.org/r4",
+  "diagnostics" : "0 0 : start\r\n16 16   : 0ms  : Analysing http://hl7.org/fhir/uv/pocd/ValueSet/11073MDC-metric|current for validation purposes\r\n16 0    : 0ms  : Parameters: disp-lang=en-US, default-to-latest\r\n16 0    : 0ms  : Prepare include: \"(urn:iso:std:iso:11073:10101)(partition=2)\"\r\n32 16   : 16ms : CodeSystem found: \"urn:iso:std:iso:11073:10101|2024-12-05 (from fhir.tx.support.r4#0.32.0)\"\r\n469 437 : 453ms : Prepare include: \"(urn:iso:std:iso:11073:10101)(partition=258)\"\r\n485 16  : 469ms : CodeSystem found: \"urn:iso:std:iso:11073:10101|2024-12-05 (from fhir.tx.support.r4#0.32.0)\"\r\n891 406 : 875ms : Validate \"[http://loinc.org#8867-4 (\"Heart rate\"), urn:iso:std:iso:11073:10101#147842 (\"MDC_ECG_HEART_RATE\")]\"\r\n891 0   : 875ms : Check \"http://loinc.org#8867-4\"\r\n891 0   : 875ms : Check \"urn:iso:std:iso:11073:10101#147842\"\r\n922 31  : 906ms : CodeSystem found: urn:iso:std:iso:11073:10101|2024-12-05 (from fhir.tx.support.r4#0.32.0) for urn:iso:std:iso:11073:10101\r\n922 0   : 906ms : check code in (urn:iso:std:iso:11073:10101)(partition=2) at CodeableConcept.coding[1]\r\n1313 391: 1297ms : Filter \"partition=2\": Code \"147842\" found in urn:iso:std:iso:11073:10101|2024-12-05 (from fhir.tx.support.r4#0.32.0)\r\n",
+  "issues" : {
+  "resourceType" : "OperationOutcome",
+  "issue" : [{
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString" : "None_of_the_provided_codes_are_in_the_value_set_one"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-server",
+      "valueUrl" : "https://tx.fhir.org/r4"
+    }],
+    "severity" : "information",
+    "code" : "code-invalid",
+    "details" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+        "code" : "this-code-not-in-vs"
+      }],
+      "text" : "The provided code 'http://loinc.org#8867-4 ('Heart rate')' was not found in the value set 'http://hl7.org/fhir/uv/pocd/ValueSet/11073MDC-metric|current'"
+    },
+    "location" : ["CodeableConcept.coding[0].code"],
+    "expression" : ["CodeableConcept.coding[0].code"]
+  }]
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "coding" : [{
+    "system" : "http://loinc.org",
+    "code" : "8867-4",
+    "display" : "Heart rate"
+  },
+  {
+    "system" : "urn:iso:std:iso:11073:10101",
+    "code" : "147842",
+    "display" : "MDC_ECG_HEART_RATE"
+  }]
+}, "url": "http://hl7.org/fhir/ValueSet/observation-vitalsignresult", "version": "4.0.1", "langs":"en-US", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "x-system-cache-id",
+    "valueString" : "dc8fd4bc-091a-424a-8a3b-6198ef146891"
+  },
+  {
+    "name" : "defaultDisplayLanguage",
+    "valueCode" : "en-US"
+  }]
+}}####
+v: {
+  "display" : "Heart rate",
+  "code" : "8867-4",
+  "system" : "http://loinc.org",
+  "version" : "2.81",
+  "server" : "https://tx.fhir.org/r4",
+  "diagnostics" : "0 0 : start\r\n0 0     : 0ms  : Analysing http://hl7.org/fhir/ValueSet/observation-vitalsignresult|4.0.1 for validation purposes\r\n0 0     : 0ms  : Parameters: disp-lang=en-US, default-to-latest\r\n0 0     : 0ms  : Prepare include: \"(http://loinc.org)(85353-1,9279-1,8867-4,2708-6,8310-5,8302-2,9843-4,29463-7,39156-5,85354-9,8480-6,8462-4,8478-0)\"\r\n0 0     : 0ms  : CodeSystem found: \"http://loinc.org|2.81\"\r\n0 0     : 0ms  : Validate \"[http://loinc.org#8867-4 (\"Heart rate\"), urn:iso:std:iso:11073:10101#147842 (\"MDC_ECG_HEART_RATE\")]\"\r\n0 0     : 0ms  : Check \"http://loinc.org#8867-4\"\r\n0 0     : 0ms  : CodeSystem found: http://loinc.org|2.81 for http://loinc.org\r\n0 0     : 0ms  : check code in (http://loinc.org)(85353-1,9279-1,8867-4,2708-6,8310-5,8302-2,9843-4,29463-7,39156-5,85354-9,8480-6,8462-4,8478-0) at CodeableConcept.coding[0]\r\n0 0     : 0ms  : Code \"8867-4\" found in http://loinc.org|2.81\r\n0 0     : 0ms  : Check \"urn:iso:std:iso:11073:10101#147842\"\r\n",
+  "issues" : {
+  "resourceType" : "OperationOutcome",
+  "issue" : [{
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString" : "None_of_the_provided_codes_are_in_the_value_set_one"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-server",
+      "valueUrl" : "https://tx.fhir.org/r4"
+    }],
+    "severity" : "information",
+    "code" : "code-invalid",
+    "details" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+        "code" : "this-code-not-in-vs"
+      }],
+      "text" : "The provided code 'urn:iso:std:iso:11073:10101#147842 ('MDC_ECG_HEART_RATE')' was not found in the value set 'http://hl7.org/fhir/ValueSet/observation-vitalsignresult|4.0.1'"
+    },
+    "location" : ["CodeableConcept.coding[1].code"],
+    "expression" : ["CodeableConcept.coding[1].code"]
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString" : "MSG_DRAFT"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-server",
+      "valueUrl" : "https://tx.fhir.org/r4"
+    }],
+    "severity" : "information",
+    "code" : "business-rule",
+    "details" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+        "code" : "status-check"
+      }],
+      "text" : "Reference to draft CodeSystem urn:iso:std:iso:11073:10101|2024-12-05 from fhir.tx.support.r4#0.32.0"
+    }
+  }]
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "coding" : [{
+    "system" : "http://loinc.org",
+    "code" : "85354-9",
+    "display" : "Blood pressure panel with all children optional"
+  },
+  {
+    "system" : "urn:iso:std:iso:11073:10101",
+    "code" : "150020",
+    "display" : "MDC_PRESS_BLD_NONINV"
+  }]
+}, "url": "http://hl7.org/fhir/uv/pocd/ValueSet/11073MDC-metric", "version": "current", "langs":"en-US", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "x-system-cache-id",
+    "valueString" : "dc8fd4bc-091a-424a-8a3b-6198ef146891"
+  },
+  {
+    "name" : "defaultDisplayLanguage",
+    "valueCode" : "en-US"
+  }]
+}}####
+v: {
+  "display" : "Blood pressure panel with all children optional",
+  "code" : "150020",
+  "system" : "urn:iso:std:iso:11073:10101",
+  "version" : "2024-12-05",
+  "server" : "https://tx.fhir.org/r4",
+  "diagnostics" : "0 0 : start\r\n16 16   : 0ms  : Analysing http://hl7.org/fhir/uv/pocd/ValueSet/11073MDC-metric|current for validation purposes\r\n16 0    : 0ms  : Parameters: disp-lang=en-US, default-to-latest\r\n16 0    : 0ms  : Prepare include: \"(urn:iso:std:iso:11073:10101)(partition=2)\"\r\n31 15   : 15ms : CodeSystem found: \"urn:iso:std:iso:11073:10101|2024-12-05 (from fhir.tx.support.r4#0.32.0)\"\r\n453 422 : 437ms : Prepare include: \"(urn:iso:std:iso:11073:10101)(partition=258)\"\r\n469 16  : 453ms : CodeSystem found: \"urn:iso:std:iso:11073:10101|2024-12-05 (from fhir.tx.support.r4#0.32.0)\"\r\n891 422 : 875ms : Validate \"[http://loinc.org#85354-9 (\"Blood pressure panel with all children optional\"), urn:iso:std:iso:11073:10101#150020 (\"MDC_PRESS_BLD_NONINV\")]\"\r\n891 0   : 875ms : Check \"http://loinc.org#85354-9\"\r\n891 0   : 875ms : Check \"urn:iso:std:iso:11073:10101#150020\"\r\n922 31  : 906ms : CodeSystem found: urn:iso:std:iso:11073:10101|2024-12-05 (from fhir.tx.support.r4#0.32.0) for urn:iso:std:iso:11073:10101\r\n922 0   : 906ms : check code in (urn:iso:std:iso:11073:10101)(partition=2) at CodeableConcept.coding[1]\r\n1313 391: 1297ms : Filter \"partition=2\": Code \"150020\" found in urn:iso:std:iso:11073:10101|2024-12-05 (from fhir.tx.support.r4#0.32.0)\r\n",
+  "issues" : {
+  "resourceType" : "OperationOutcome",
+  "issue" : [{
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString" : "None_of_the_provided_codes_are_in_the_value_set_one"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-server",
+      "valueUrl" : "https://tx.fhir.org/r4"
+    }],
+    "severity" : "information",
+    "code" : "code-invalid",
+    "details" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+        "code" : "this-code-not-in-vs"
+      }],
+      "text" : "The provided code 'http://loinc.org#85354-9 ('Blood pressure panel with all children optional')' was not found in the value set 'http://hl7.org/fhir/uv/pocd/ValueSet/11073MDC-metric|current'"
+    },
+    "location" : ["CodeableConcept.coding[0].code"],
+    "expression" : ["CodeableConcept.coding[0].code"]
+  }]
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "coding" : [{
+    "system" : "http://loinc.org",
+    "code" : "8480-6",
+    "display" : "Systolic blood pressure"
+  },
+  {
+    "system" : "urn:iso:std:iso:11073:10101",
+    "code" : "150021",
+    "display" : "MDC_PRESS_BLD_NONINV_SYS"
+  }]
+}, "url": "http://hl7.org/fhir/uv/pocd/ValueSet/11073MDC-metric", "version": "current", "langs":"en-US", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "x-system-cache-id",
+    "valueString" : "dc8fd4bc-091a-424a-8a3b-6198ef146891"
+  },
+  {
+    "name" : "defaultDisplayLanguage",
+    "valueCode" : "en-US"
+  }]
+}}####
+v: {
+  "display" : "Systolic blood pressure",
+  "code" : "150021",
+  "system" : "urn:iso:std:iso:11073:10101",
+  "version" : "2024-12-05",
+  "server" : "https://tx.fhir.org/r4",
+  "diagnostics" : "0 0 : start\r\n16 16   : 0ms  : Analysing http://hl7.org/fhir/uv/pocd/ValueSet/11073MDC-metric|current for validation purposes\r\n16 0    : 0ms  : Parameters: disp-lang=en-US, default-to-latest\r\n16 0    : 0ms  : Prepare include: \"(urn:iso:std:iso:11073:10101)(partition=2)\"\r\n31 15   : 15ms : CodeSystem found: \"urn:iso:std:iso:11073:10101|2024-12-05 (from fhir.tx.support.r4#0.32.0)\"\r\n609 578 : 593ms : Prepare include: \"(urn:iso:std:iso:11073:10101)(partition=258)\"\r\n625 16  : 609ms : CodeSystem found: \"urn:iso:std:iso:11073:10101|2024-12-05 (from fhir.tx.support.r4#0.32.0)\"\r\n1422 797: 1406ms : Validate \"[http://loinc.org#8480-6 (\"Systolic blood pressure\"), urn:iso:std:iso:11073:10101#150021 (\"MDC_PRESS_BLD_NONINV_SYS\")]\"\r\n1422 0  : 1406ms : Check \"http://loinc.org#8480-6\"\r\n1422 0  : 1406ms : Check \"urn:iso:std:iso:11073:10101#150021\"\r\n1469 47 : 1453ms : CodeSystem found: urn:iso:std:iso:11073:10101|2024-12-05 (from fhir.tx.support.r4#0.32.0) for urn:iso:std:iso:11073:10101\r\n1469 0  : 1453ms : check code in (urn:iso:std:iso:11073:10101)(partition=2) at CodeableConcept.coding[1]\r\n2063 594: 2047ms : Filter \"partition=2\": Code \"150021\" found in urn:iso:std:iso:11073:10101|2024-12-05 (from fhir.tx.support.r4#0.32.0)\r\n",
+  "issues" : {
+  "resourceType" : "OperationOutcome",
+  "issue" : [{
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString" : "None_of_the_provided_codes_are_in_the_value_set_one"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-server",
+      "valueUrl" : "https://tx.fhir.org/r4"
+    }],
+    "severity" : "information",
+    "code" : "code-invalid",
+    "details" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+        "code" : "this-code-not-in-vs"
+      }],
+      "text" : "The provided code 'http://loinc.org#8480-6 ('Systolic blood pressure')' was not found in the value set 'http://hl7.org/fhir/uv/pocd/ValueSet/11073MDC-metric|current'"
+    },
+    "location" : ["CodeableConcept.coding[0].code"],
+    "expression" : ["CodeableConcept.coding[0].code"]
+  }]
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "coding" : [{
+    "system" : "http://loinc.org",
+    "code" : "8462-4",
+    "display" : "Diastolic blood pressure"
+  },
+  {
+    "system" : "urn:iso:std:iso:11073:10101",
+    "code" : "150022",
+    "display" : "MDC_PRESS_BLD_NONINV_DIA"
+  }]
+}, "url": "http://hl7.org/fhir/uv/pocd/ValueSet/11073MDC-metric", "version": "current", "langs":"en-US", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "x-system-cache-id",
+    "valueString" : "dc8fd4bc-091a-424a-8a3b-6198ef146891"
+  },
+  {
+    "name" : "defaultDisplayLanguage",
+    "valueCode" : "en-US"
+  }]
+}}####
+v: {
+  "display" : "Diastolic blood pressure",
+  "code" : "150022",
+  "system" : "urn:iso:std:iso:11073:10101",
+  "version" : "2024-12-05",
+  "server" : "https://tx.fhir.org/r4",
+  "diagnostics" : "0 0 : start\r\n15 15   : 0ms  : Analysing http://hl7.org/fhir/uv/pocd/ValueSet/11073MDC-metric|current for validation purposes\r\n15 0    : 0ms  : Parameters: disp-lang=en-US, default-to-latest\r\n15 0    : 0ms  : Prepare include: \"(urn:iso:std:iso:11073:10101)(partition=2)\"\r\n31 16   : 16ms : CodeSystem found: \"urn:iso:std:iso:11073:10101|2024-12-05 (from fhir.tx.support.r4#0.32.0)\"\r\n468 437 : 453ms : Prepare include: \"(urn:iso:std:iso:11073:10101)(partition=258)\"\r\n484 16  : 469ms : CodeSystem found: \"urn:iso:std:iso:11073:10101|2024-12-05 (from fhir.tx.support.r4#0.32.0)\"\r\n890 406 : 875ms : Validate \"[http://loinc.org#8462-4 (\"Diastolic blood pressure\"), urn:iso:std:iso:11073:10101#150022 (\"MDC_PRESS_BLD_NONINV_DIA\")]\"\r\n890 0   : 875ms : Check \"http://loinc.org#8462-4\"\r\n890 0   : 875ms : Check \"urn:iso:std:iso:11073:10101#150022\"\r\n921 31  : 906ms : CodeSystem found: urn:iso:std:iso:11073:10101|2024-12-05 (from fhir.tx.support.r4#0.32.0) for urn:iso:std:iso:11073:10101\r\n921 0   : 906ms : check code in (urn:iso:std:iso:11073:10101)(partition=2) at CodeableConcept.coding[1]\r\n1343 422: 1328ms : Filter \"partition=2\": Code \"150022\" found in urn:iso:std:iso:11073:10101|2024-12-05 (from fhir.tx.support.r4#0.32.0)\r\n",
+  "issues" : {
+  "resourceType" : "OperationOutcome",
+  "issue" : [{
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString" : "None_of_the_provided_codes_are_in_the_value_set_one"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-server",
+      "valueUrl" : "https://tx.fhir.org/r4"
+    }],
+    "severity" : "information",
+    "code" : "code-invalid",
+    "details" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+        "code" : "this-code-not-in-vs"
+      }],
+      "text" : "The provided code 'http://loinc.org#8462-4 ('Diastolic blood pressure')' was not found in the value set 'http://hl7.org/fhir/uv/pocd/ValueSet/11073MDC-metric|current'"
+    },
+    "location" : ["CodeableConcept.coding[0].code"],
+    "expression" : ["CodeableConcept.coding[0].code"]
+  }]
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "coding" : [{
+    "system" : "http://loinc.org",
+    "code" : "8478-0",
+    "display" : "Mean blood pressure"
+  },
+  {
+    "system" : "urn:iso:std:iso:11073:10101",
+    "code" : "150023",
+    "display" : "MDC_PRESS_BLD_NONINV_MEAN"
+  }]
+}, "url": "http://hl7.org/fhir/uv/pocd/ValueSet/11073MDC-metric", "version": "current", "langs":"en-US", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "x-system-cache-id",
+    "valueString" : "dc8fd4bc-091a-424a-8a3b-6198ef146891"
+  },
+  {
+    "name" : "defaultDisplayLanguage",
+    "valueCode" : "en-US"
+  }]
+}}####
+v: {
+  "display" : "Mean blood pressure",
+  "code" : "150023",
+  "system" : "urn:iso:std:iso:11073:10101",
+  "version" : "2024-12-05",
+  "server" : "https://tx.fhir.org/r4",
+  "diagnostics" : "0 0 : start\r\n0 0     : 0ms  : Analysing http://hl7.org/fhir/uv/pocd/ValueSet/11073MDC-metric|current for validation purposes\r\n0 0     : 0ms  : Parameters: disp-lang=en-US, default-to-latest\r\n0 0     : 0ms  : Prepare include: \"(urn:iso:std:iso:11073:10101)(partition=2)\"\r\n32 32   : 32ms : CodeSystem found: \"urn:iso:std:iso:11073:10101|2024-12-05 (from fhir.tx.support.r4#0.32.0)\"\r\n422 390 : 422ms : Prepare include: \"(urn:iso:std:iso:11073:10101)(partition=258)\"\r\n438 16  : 438ms : CodeSystem found: \"urn:iso:std:iso:11073:10101|2024-12-05 (from fhir.tx.support.r4#0.32.0)\"\r\n938 500 : 938ms : Validate \"[http://loinc.org#8478-0 (\"Mean blood pressure\"), urn:iso:std:iso:11073:10101#150023 (\"MDC_PRESS_BLD_NONINV_MEAN\")]\"\r\n938 0   : 938ms : Check \"http://loinc.org#8478-0\"\r\n938 0   : 938ms : Check \"urn:iso:std:iso:11073:10101#150023\"\r\n969 31  : 969ms : CodeSystem found: urn:iso:std:iso:11073:10101|2024-12-05 (from fhir.tx.support.r4#0.32.0) for urn:iso:std:iso:11073:10101\r\n969 0   : 969ms : check code in (urn:iso:std:iso:11073:10101)(partition=2) at CodeableConcept.coding[1]\r\n1469 500: 1469ms : Filter \"partition=2\": Code \"150023\" found in urn:iso:std:iso:11073:10101|2024-12-05 (from fhir.tx.support.r4#0.32.0)\r\n",
+  "issues" : {
+  "resourceType" : "OperationOutcome",
+  "issue" : [{
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString" : "None_of_the_provided_codes_are_in_the_value_set_one"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-server",
+      "valueUrl" : "https://tx.fhir.org/r4"
+    }],
+    "severity" : "information",
+    "code" : "code-invalid",
+    "details" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+        "code" : "this-code-not-in-vs"
+      }],
+      "text" : "The provided code 'http://loinc.org#8478-0 ('Mean blood pressure')' was not found in the value set 'http://hl7.org/fhir/uv/pocd/ValueSet/11073MDC-metric|current'"
+    },
+    "location" : ["CodeableConcept.coding[0].code"],
+    "expression" : ["CodeableConcept.coding[0].code"]
+  }]
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "coding" : [{
+    "system" : "http://loinc.org",
+    "code" : "85354-9",
+    "display" : "Blood pressure panel with all children optional"
+  },
+  {
+    "system" : "urn:iso:std:iso:11073:10101",
+    "code" : "150020",
+    "display" : "MDC_PRESS_BLD_NONINV"
+  }]
+}, "url": "http://hl7.org/fhir/ValueSet/observation-vitalsignresult", "version": "4.0.1", "langs":"en-US", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "x-system-cache-id",
+    "valueString" : "dc8fd4bc-091a-424a-8a3b-6198ef146891"
+  },
+  {
+    "name" : "defaultDisplayLanguage",
+    "valueCode" : "en-US"
+  }]
+}}####
+v: {
+  "display" : "Blood pressure panel with all children optional",
+  "code" : "85354-9",
+  "system" : "http://loinc.org",
+  "version" : "2.81",
+  "server" : "https://tx.fhir.org/r4",
+  "diagnostics" : "0 0 : start\r\n16 16   : 0ms  : Analysing http://hl7.org/fhir/ValueSet/observation-vitalsignresult|4.0.1 for validation purposes\r\n16 0    : 0ms  : Parameters: disp-lang=en-US, default-to-latest\r\n16 0    : 0ms  : Prepare include: \"(http://loinc.org)(85353-1,9279-1,8867-4,2708-6,8310-5,8302-2,9843-4,29463-7,39156-5,85354-9,8480-6,8462-4,8478-0)\"\r\n16 0    : 0ms  : CodeSystem found: \"http://loinc.org|2.81\"\r\n16 0    : 0ms  : Validate \"[http://loinc.org#85354-9 (\"Blood pressure panel with all children optional\"), urn:iso:std:iso:11073:10101#150020 (\"MDC_PRESS_BLD_NONINV\")]\"\r\n16 0    : 0ms  : Check \"http://loinc.org#85354-9\"\r\n16 0    : 0ms  : CodeSystem found: http://loinc.org|2.81 for http://loinc.org\r\n16 0    : 0ms  : check code in (http://loinc.org)(85353-1,9279-1,8867-4,2708-6,8310-5,8302-2,9843-4,29463-7,39156-5,85354-9,8480-6,8462-4,8478-0) at CodeableConcept.coding[0]\r\n16 0    : 0ms  : Code \"85354-9\" found in http://loinc.org|2.81\r\n16 0    : 0ms  : Check \"urn:iso:std:iso:11073:10101#150020\"\r\n",
+  "issues" : {
+  "resourceType" : "OperationOutcome",
+  "issue" : [{
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString" : "None_of_the_provided_codes_are_in_the_value_set_one"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-server",
+      "valueUrl" : "https://tx.fhir.org/r4"
+    }],
+    "severity" : "information",
+    "code" : "code-invalid",
+    "details" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+        "code" : "this-code-not-in-vs"
+      }],
+      "text" : "The provided code 'urn:iso:std:iso:11073:10101#150020 ('MDC_PRESS_BLD_NONINV')' was not found in the value set 'http://hl7.org/fhir/ValueSet/observation-vitalsignresult|4.0.1'"
+    },
+    "location" : ["CodeableConcept.coding[1].code"],
+    "expression" : ["CodeableConcept.coding[1].code"]
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString" : "MSG_DRAFT"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-server",
+      "valueUrl" : "https://tx.fhir.org/r4"
+    }],
+    "severity" : "information",
+    "code" : "business-rule",
+    "details" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+        "code" : "status-check"
+      }],
+      "text" : "Reference to draft CodeSystem urn:iso:std:iso:11073:10101|2024-12-05 from fhir.tx.support.r4#0.32.0"
+    }
+  }]
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "coding" : [{
+    "system" : "http://loinc.org",
+    "code" : "8480-6",
+    "display" : "Systolic blood pressure"
+  },
+  {
+    "system" : "urn:iso:std:iso:11073:10101",
+    "code" : "150021",
+    "display" : "MDC_PRESS_BLD_NONINV_SYS"
+  }]
+}, "url": "http://hl7.org/fhir/ValueSet/observation-vitalsignresult", "version": "4.0.1", "langs":"en-US", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "x-system-cache-id",
+    "valueString" : "dc8fd4bc-091a-424a-8a3b-6198ef146891"
+  },
+  {
+    "name" : "defaultDisplayLanguage",
+    "valueCode" : "en-US"
+  }]
+}}####
+v: {
+  "display" : "Systolic blood pressure",
+  "code" : "8480-6",
+  "system" : "http://loinc.org",
+  "version" : "2.81",
+  "server" : "https://tx.fhir.org/r4",
+  "diagnostics" : "0 0 : start\r\n0 0     : 0ms  : Analysing http://hl7.org/fhir/ValueSet/observation-vitalsignresult|4.0.1 for validation purposes\r\n0 0     : 0ms  : Parameters: disp-lang=en-US, default-to-latest\r\n0 0     : 0ms  : Prepare include: \"(http://loinc.org)(85353-1,9279-1,8867-4,2708-6,8310-5,8302-2,9843-4,29463-7,39156-5,85354-9,8480-6,8462-4,8478-0)\"\r\n0 0     : 0ms  : CodeSystem found: \"http://loinc.org|2.81\"\r\n0 0     : 0ms  : Validate \"[http://loinc.org#8480-6 (\"Systolic blood pressure\"), urn:iso:std:iso:11073:10101#150021 (\"MDC_PRESS_BLD_NONINV_SYS\")]\"\r\n0 0     : 0ms  : Check \"http://loinc.org#8480-6\"\r\n0 0     : 0ms  : CodeSystem found: http://loinc.org|2.81 for http://loinc.org\r\n0 0     : 0ms  : check code in (http://loinc.org)(85353-1,9279-1,8867-4,2708-6,8310-5,8302-2,9843-4,29463-7,39156-5,85354-9,8480-6,8462-4,8478-0) at CodeableConcept.coding[0]\r\n0 0     : 0ms  : Code \"8480-6\" found in http://loinc.org|2.81\r\n0 0     : 0ms  : Check \"urn:iso:std:iso:11073:10101#150021\"\r\n",
+  "issues" : {
+  "resourceType" : "OperationOutcome",
+  "issue" : [{
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString" : "None_of_the_provided_codes_are_in_the_value_set_one"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-server",
+      "valueUrl" : "https://tx.fhir.org/r4"
+    }],
+    "severity" : "information",
+    "code" : "code-invalid",
+    "details" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+        "code" : "this-code-not-in-vs"
+      }],
+      "text" : "The provided code 'urn:iso:std:iso:11073:10101#150021 ('MDC_PRESS_BLD_NONINV_SYS')' was not found in the value set 'http://hl7.org/fhir/ValueSet/observation-vitalsignresult|4.0.1'"
+    },
+    "location" : ["CodeableConcept.coding[1].code"],
+    "expression" : ["CodeableConcept.coding[1].code"]
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString" : "MSG_DRAFT"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-server",
+      "valueUrl" : "https://tx.fhir.org/r4"
+    }],
+    "severity" : "information",
+    "code" : "business-rule",
+    "details" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+        "code" : "status-check"
+      }],
+      "text" : "Reference to draft CodeSystem urn:iso:std:iso:11073:10101|2024-12-05 from fhir.tx.support.r4#0.32.0"
+    }
+  }]
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "coding" : [{
+    "system" : "http://loinc.org",
+    "code" : "8462-4",
+    "display" : "Diastolic blood pressure"
+  },
+  {
+    "system" : "urn:iso:std:iso:11073:10101",
+    "code" : "150022",
+    "display" : "MDC_PRESS_BLD_NONINV_DIA"
+  }]
+}, "url": "http://hl7.org/fhir/ValueSet/observation-vitalsignresult", "version": "4.0.1", "langs":"en-US", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "x-system-cache-id",
+    "valueString" : "dc8fd4bc-091a-424a-8a3b-6198ef146891"
+  },
+  {
+    "name" : "defaultDisplayLanguage",
+    "valueCode" : "en-US"
+  }]
+}}####
+v: {
+  "display" : "Diastolic blood pressure",
+  "code" : "8462-4",
+  "system" : "http://loinc.org",
+  "version" : "2.81",
+  "server" : "https://tx.fhir.org/r4",
+  "diagnostics" : "0 0 : start\r\n15 15   : 0ms  : Analysing http://hl7.org/fhir/ValueSet/observation-vitalsignresult|4.0.1 for validation purposes\r\n15 0    : 0ms  : Parameters: disp-lang=en-US, default-to-latest\r\n15 0    : 0ms  : Prepare include: \"(http://loinc.org)(85353-1,9279-1,8867-4,2708-6,8310-5,8302-2,9843-4,29463-7,39156-5,85354-9,8480-6,8462-4,8478-0)\"\r\n15 0    : 0ms  : CodeSystem found: \"http://loinc.org|2.81\"\r\n15 0    : 0ms  : Validate \"[http://loinc.org#8462-4 (\"Diastolic blood pressure\"), urn:iso:std:iso:11073:10101#150022 (\"MDC_PRESS_BLD_NONINV_DIA\")]\"\r\n15 0    : 0ms  : Check \"http://loinc.org#8462-4\"\r\n15 0    : 0ms  : CodeSystem found: http://loinc.org|2.81 for http://loinc.org\r\n15 0    : 0ms  : check code in (http://loinc.org)(85353-1,9279-1,8867-4,2708-6,8310-5,8302-2,9843-4,29463-7,39156-5,85354-9,8480-6,8462-4,8478-0) at CodeableConcept.coding[0]\r\n15 0    : 0ms  : Code \"8462-4\" found in http://loinc.org|2.81\r\n15 0    : 0ms  : Check \"urn:iso:std:iso:11073:10101#150022\"\r\n",
+  "issues" : {
+  "resourceType" : "OperationOutcome",
+  "issue" : [{
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString" : "None_of_the_provided_codes_are_in_the_value_set_one"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-server",
+      "valueUrl" : "https://tx.fhir.org/r4"
+    }],
+    "severity" : "information",
+    "code" : "code-invalid",
+    "details" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+        "code" : "this-code-not-in-vs"
+      }],
+      "text" : "The provided code 'urn:iso:std:iso:11073:10101#150022 ('MDC_PRESS_BLD_NONINV_DIA')' was not found in the value set 'http://hl7.org/fhir/ValueSet/observation-vitalsignresult|4.0.1'"
+    },
+    "location" : ["CodeableConcept.coding[1].code"],
+    "expression" : ["CodeableConcept.coding[1].code"]
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString" : "MSG_DRAFT"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-server",
+      "valueUrl" : "https://tx.fhir.org/r4"
+    }],
+    "severity" : "information",
+    "code" : "business-rule",
+    "details" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+        "code" : "status-check"
+      }],
+      "text" : "Reference to draft CodeSystem urn:iso:std:iso:11073:10101|2024-12-05 from fhir.tx.support.r4#0.32.0"
+    }
+  }]
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "coding" : [{
+    "system" : "http://loinc.org",
+    "code" : "8478-0",
+    "display" : "Mean blood pressure"
+  },
+  {
+    "system" : "urn:iso:std:iso:11073:10101",
+    "code" : "150023",
+    "display" : "MDC_PRESS_BLD_NONINV_MEAN"
+  }]
+}, "url": "http://hl7.org/fhir/ValueSet/observation-vitalsignresult", "version": "4.0.1", "langs":"en-US", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "x-system-cache-id",
+    "valueString" : "dc8fd4bc-091a-424a-8a3b-6198ef146891"
+  },
+  {
+    "name" : "defaultDisplayLanguage",
+    "valueCode" : "en-US"
+  }]
+}}####
+v: {
+  "display" : "Mean blood pressure",
+  "code" : "8478-0",
+  "system" : "http://loinc.org",
+  "version" : "2.81",
+  "server" : "https://tx.fhir.org/r4",
+  "diagnostics" : "0 0 : start\r\n16 16   : 0ms  : Analysing http://hl7.org/fhir/ValueSet/observation-vitalsignresult|4.0.1 for validation purposes\r\n16 0    : 0ms  : Parameters: disp-lang=en-US, default-to-latest\r\n16 0    : 0ms  : Prepare include: \"(http://loinc.org)(85353-1,9279-1,8867-4,2708-6,8310-5,8302-2,9843-4,29463-7,39156-5,85354-9,8480-6,8462-4,8478-0)\"\r\n16 0    : 0ms  : CodeSystem found: \"http://loinc.org|2.81\"\r\n16 0    : 0ms  : Validate \"[http://loinc.org#8478-0 (\"Mean blood pressure\"), urn:iso:std:iso:11073:10101#150023 (\"MDC_PRESS_BLD_NONINV_MEAN\")]\"\r\n16 0    : 0ms  : Check \"http://loinc.org#8478-0\"\r\n16 0    : 0ms  : CodeSystem found: http://loinc.org|2.81 for http://loinc.org\r\n16 0    : 0ms  : check code in (http://loinc.org)(85353-1,9279-1,8867-4,2708-6,8310-5,8302-2,9843-4,29463-7,39156-5,85354-9,8480-6,8462-4,8478-0) at CodeableConcept.coding[0]\r\n16 0    : 0ms  : Code \"8478-0\" found in http://loinc.org|2.81\r\n16 0    : 0ms  : Check \"urn:iso:std:iso:11073:10101#150023\"\r\n",
+  "issues" : {
+  "resourceType" : "OperationOutcome",
+  "issue" : [{
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString" : "None_of_the_provided_codes_are_in_the_value_set_one"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-server",
+      "valueUrl" : "https://tx.fhir.org/r4"
+    }],
+    "severity" : "information",
+    "code" : "code-invalid",
+    "details" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+        "code" : "this-code-not-in-vs"
+      }],
+      "text" : "The provided code 'urn:iso:std:iso:11073:10101#150023 ('MDC_PRESS_BLD_NONINV_MEAN')' was not found in the value set 'http://hl7.org/fhir/ValueSet/observation-vitalsignresult|4.0.1'"
+    },
+    "location" : ["CodeableConcept.coding[1].code"],
+    "expression" : ["CodeableConcept.coding[1].code"]
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString" : "MSG_DRAFT"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-server",
+      "valueUrl" : "https://tx.fhir.org/r4"
+    }],
+    "severity" : "information",
+    "code" : "business-rule",
+    "details" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+        "code" : "status-check"
+      }],
+      "text" : "Reference to draft CodeSystem urn:iso:std:iso:11073:10101|2024-12-05 from fhir.tx.support.r4#0.32.0"
+    }
+  }]
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "coding" : [{
+    "system" : "http://loinc.org",
+    "code" : "8867-4",
+    "display" : "Heart rate"
+  },
+  {
+    "system" : "urn:iso:std:iso:11073:10101",
+    "code" : "147842",
+    "display" : "MDC_ECG_HEART_RATE"
+  }]
+}, "url": "http://hl7.org/fhir/uv/pocd/ValueSet/11073MDC-metric", "version": "4.0.0", "langs":"en-US", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "x-system-cache-id",
+    "valueString" : "dc8fd4bc-091a-424a-8a3b-6198ef146891"
+  },
+  {
+    "name" : "defaultDisplayLanguage",
+    "valueCode" : "en-US"
+  }]
+}}####
+v: {
+  "display" : "Heart rate",
+  "code" : "147842",
+  "system" : "urn:iso:std:iso:11073:10101",
+  "version" : "2024-12-05",
+  "server" : "https://tx.fhir.org/r4",
+  "diagnostics" : "0 0 : start\r\n15 15   : 0ms  : Analysing http://hl7.org/fhir/uv/pocd/ValueSet/11073MDC-metric|4.0.0 for validation purposes\r\n15 0    : 0ms  : Parameters: disp-lang=en-US, default-to-latest\r\n15 0    : 0ms  : Prepare include: \"(urn:iso:std:iso:11073:10101)(partition=2)\"\r\n31 16   : 16ms : CodeSystem found: \"urn:iso:std:iso:11073:10101|2024-12-05 (from fhir.tx.support.r4#0.32.0)\"\r\n484 453 : 469ms : Prepare include: \"(urn:iso:std:iso:11073:10101)(partition=258)\"\r\n500 16  : 485ms : CodeSystem found: \"urn:iso:std:iso:11073:10101|2024-12-05 (from fhir.tx.support.r4#0.32.0)\"\r\n1000 500: 985ms : Validate \"[http://loinc.org#8867-4 (\"Heart rate\"), urn:iso:std:iso:11073:10101#147842 (\"MDC_ECG_HEART_RATE\")]\"\r\n1000 0  : 985ms : Check \"http://loinc.org#8867-4\"\r\n1000 0  : 985ms : Check \"urn:iso:std:iso:11073:10101#147842\"\r\n1031 31 : 1016ms : CodeSystem found: urn:iso:std:iso:11073:10101|2024-12-05 (from fhir.tx.support.r4#0.32.0) for urn:iso:std:iso:11073:10101\r\n1031 0  : 1016ms : check code in (urn:iso:std:iso:11073:10101)(partition=2) at CodeableConcept.coding[1]\r\n1484 453: 1469ms : Filter \"partition=2\": Code \"147842\" found in urn:iso:std:iso:11073:10101|2024-12-05 (from fhir.tx.support.r4#0.32.0)\r\n",
+  "issues" : {
+  "resourceType" : "OperationOutcome",
+  "issue" : [{
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString" : "None_of_the_provided_codes_are_in_the_value_set_one"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-server",
+      "valueUrl" : "https://tx.fhir.org/r4"
+    }],
+    "severity" : "information",
+    "code" : "code-invalid",
+    "details" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+        "code" : "this-code-not-in-vs"
+      }],
+      "text" : "The provided code 'http://loinc.org#8867-4 ('Heart rate')' was not found in the value set 'http://hl7.org/fhir/uv/pocd/ValueSet/11073MDC-metric|4.0.0'"
+    },
+    "location" : ["CodeableConcept.coding[0].code"],
+    "expression" : ["CodeableConcept.coding[0].code"]
+  }]
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "coding" : [{
+    "system" : "http://loinc.org",
+    "code" : "85354-9",
+    "display" : "Blood pressure panel with all children optional"
+  },
+  {
+    "system" : "urn:iso:std:iso:11073:10101",
+    "code" : "150020",
+    "display" : "MDC_PRESS_BLD_NONINV"
+  }]
+}, "url": "http://hl7.org/fhir/uv/pocd/ValueSet/11073MDC-metric", "version": "4.0.0", "langs":"en-US", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "x-system-cache-id",
+    "valueString" : "dc8fd4bc-091a-424a-8a3b-6198ef146891"
+  },
+  {
+    "name" : "defaultDisplayLanguage",
+    "valueCode" : "en-US"
+  }]
+}}####
+v: {
+  "display" : "Blood pressure panel with all children optional",
+  "code" : "150020",
+  "system" : "urn:iso:std:iso:11073:10101",
+  "version" : "2024-12-05",
+  "server" : "https://tx.fhir.org/r4",
+  "diagnostics" : "0 0 : start\r\n15 15   : 0ms  : Analysing http://hl7.org/fhir/uv/pocd/ValueSet/11073MDC-metric|4.0.0 for validation purposes\r\n15 0    : 0ms  : Parameters: disp-lang=en-US, default-to-latest\r\n15 0    : 0ms  : Prepare include: \"(urn:iso:std:iso:11073:10101)(partition=2)\"\r\n31 16   : 16ms : CodeSystem found: \"urn:iso:std:iso:11073:10101|2024-12-05 (from fhir.tx.support.r4#0.32.0)\"\r\n500 469 : 485ms : Prepare include: \"(urn:iso:std:iso:11073:10101)(partition=258)\"\r\n515 15  : 500ms : CodeSystem found: \"urn:iso:std:iso:11073:10101|2024-12-05 (from fhir.tx.support.r4#0.32.0)\"\r\n968 453 : 953ms : Validate \"[http://loinc.org#85354-9 (\"Blood pressure panel with all children optional\"), urn:iso:std:iso:11073:10101#150020 (\"MDC_PRESS_BLD_NONINV\")]\"\r\n968 0   : 953ms : Check \"http://loinc.org#85354-9\"\r\n968 0   : 953ms : Check \"urn:iso:std:iso:11073:10101#150020\"\r\n1015 47 : 1000ms : CodeSystem found: urn:iso:std:iso:11073:10101|2024-12-05 (from fhir.tx.support.r4#0.32.0) for urn:iso:std:iso:11073:10101\r\n1015 0  : 1000ms : check code in (urn:iso:std:iso:11073:10101)(partition=2) at CodeableConcept.coding[1]\r\n1484 469: 1469ms : Filter \"partition=2\": Code \"150020\" found in urn:iso:std:iso:11073:10101|2024-12-05 (from fhir.tx.support.r4#0.32.0)\r\n",
+  "issues" : {
+  "resourceType" : "OperationOutcome",
+  "issue" : [{
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString" : "None_of_the_provided_codes_are_in_the_value_set_one"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-server",
+      "valueUrl" : "https://tx.fhir.org/r4"
+    }],
+    "severity" : "information",
+    "code" : "code-invalid",
+    "details" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+        "code" : "this-code-not-in-vs"
+      }],
+      "text" : "The provided code 'http://loinc.org#85354-9 ('Blood pressure panel with all children optional')' was not found in the value set 'http://hl7.org/fhir/uv/pocd/ValueSet/11073MDC-metric|4.0.0'"
+    },
+    "location" : ["CodeableConcept.coding[0].code"],
+    "expression" : ["CodeableConcept.coding[0].code"]
+  }]
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "coding" : [{
+    "system" : "http://loinc.org",
+    "code" : "8480-6",
+    "display" : "Systolic blood pressure"
+  },
+  {
+    "system" : "urn:iso:std:iso:11073:10101",
+    "code" : "150021",
+    "display" : "MDC_PRESS_BLD_NONINV_SYS"
+  }]
+}, "url": "http://hl7.org/fhir/uv/pocd/ValueSet/11073MDC-metric", "version": "4.0.0", "langs":"en-US", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "x-system-cache-id",
+    "valueString" : "dc8fd4bc-091a-424a-8a3b-6198ef146891"
+  },
+  {
+    "name" : "defaultDisplayLanguage",
+    "valueCode" : "en-US"
+  }]
+}}####
+v: {
+  "display" : "Systolic blood pressure",
+  "code" : "150021",
+  "system" : "urn:iso:std:iso:11073:10101",
+  "version" : "2024-12-05",
+  "server" : "https://tx.fhir.org/r4",
+  "diagnostics" : "0 0 : start\r\n16 16   : 0ms  : Analysing http://hl7.org/fhir/uv/pocd/ValueSet/11073MDC-metric|4.0.0 for validation purposes\r\n16 0    : 0ms  : Parameters: disp-lang=en-US, default-to-latest\r\n16 0    : 0ms  : Prepare include: \"(urn:iso:std:iso:11073:10101)(partition=2)\"\r\n32 16   : 16ms : CodeSystem found: \"urn:iso:std:iso:11073:10101|2024-12-05 (from fhir.tx.support.r4#0.32.0)\"\r\n500 468 : 484ms : Prepare include: \"(urn:iso:std:iso:11073:10101)(partition=258)\"\r\n516 16  : 500ms : CodeSystem found: \"urn:iso:std:iso:11073:10101|2024-12-05 (from fhir.tx.support.r4#0.32.0)\"\r\n1000 484: 984ms : Validate \"[http://loinc.org#8480-6 (\"Systolic blood pressure\"), urn:iso:std:iso:11073:10101#150021 (\"MDC_PRESS_BLD_NONINV_SYS\")]\"\r\n1000 0  : 984ms : Check \"http://loinc.org#8480-6\"\r\n1000 0  : 984ms : Check \"urn:iso:std:iso:11073:10101#150021\"\r\n1047 47 : 1031ms : CodeSystem found: urn:iso:std:iso:11073:10101|2024-12-05 (from fhir.tx.support.r4#0.32.0) for urn:iso:std:iso:11073:10101\r\n1047 0  : 1031ms : check code in (urn:iso:std:iso:11073:10101)(partition=2) at CodeableConcept.coding[1]\r\n1547 500: 1531ms : Filter \"partition=2\": Code \"150021\" found in urn:iso:std:iso:11073:10101|2024-12-05 (from fhir.tx.support.r4#0.32.0)\r\n",
+  "issues" : {
+  "resourceType" : "OperationOutcome",
+  "issue" : [{
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString" : "None_of_the_provided_codes_are_in_the_value_set_one"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-server",
+      "valueUrl" : "https://tx.fhir.org/r4"
+    }],
+    "severity" : "information",
+    "code" : "code-invalid",
+    "details" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+        "code" : "this-code-not-in-vs"
+      }],
+      "text" : "The provided code 'http://loinc.org#8480-6 ('Systolic blood pressure')' was not found in the value set 'http://hl7.org/fhir/uv/pocd/ValueSet/11073MDC-metric|4.0.0'"
+    },
+    "location" : ["CodeableConcept.coding[0].code"],
+    "expression" : ["CodeableConcept.coding[0].code"]
+  }]
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "coding" : [{
+    "system" : "http://loinc.org",
+    "code" : "8462-4",
+    "display" : "Diastolic blood pressure"
+  },
+  {
+    "system" : "urn:iso:std:iso:11073:10101",
+    "code" : "150022",
+    "display" : "MDC_PRESS_BLD_NONINV_DIA"
+  }]
+}, "url": "http://hl7.org/fhir/uv/pocd/ValueSet/11073MDC-metric", "version": "4.0.0", "langs":"en-US", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "x-system-cache-id",
+    "valueString" : "dc8fd4bc-091a-424a-8a3b-6198ef146891"
+  },
+  {
+    "name" : "defaultDisplayLanguage",
+    "valueCode" : "en-US"
+  }]
+}}####
+v: {
+  "display" : "Diastolic blood pressure",
+  "code" : "150022",
+  "system" : "urn:iso:std:iso:11073:10101",
+  "version" : "2024-12-05",
+  "server" : "https://tx.fhir.org/r4",
+  "diagnostics" : "0 0 : start\r\n16 16   : 0ms  : Analysing http://hl7.org/fhir/uv/pocd/ValueSet/11073MDC-metric|4.0.0 for validation purposes\r\n16 0    : 0ms  : Parameters: disp-lang=en-US, default-to-latest\r\n16 0    : 0ms  : Prepare include: \"(urn:iso:std:iso:11073:10101)(partition=2)\"\r\n32 16   : 16ms : CodeSystem found: \"urn:iso:std:iso:11073:10101|2024-12-05 (from fhir.tx.support.r4#0.32.0)\"\r\n532 500 : 516ms : Prepare include: \"(urn:iso:std:iso:11073:10101)(partition=258)\"\r\n547 15  : 531ms : CodeSystem found: \"urn:iso:std:iso:11073:10101|2024-12-05 (from fhir.tx.support.r4#0.32.0)\"\r\n1063 516: 1047ms : Validate \"[http://loinc.org#8462-4 (\"Diastolic blood pressure\"), urn:iso:std:iso:11073:10101#150022 (\"MDC_PRESS_BLD_NONINV_DIA\")]\"\r\n1063 0  : 1047ms : Check \"http://loinc.org#8462-4\"\r\n1063 0  : 1047ms : Check \"urn:iso:std:iso:11073:10101#150022\"\r\n1110 47 : 1094ms : CodeSystem found: urn:iso:std:iso:11073:10101|2024-12-05 (from fhir.tx.support.r4#0.32.0) for urn:iso:std:iso:11073:10101\r\n1110 0  : 1094ms : check code in (urn:iso:std:iso:11073:10101)(partition=2) at CodeableConcept.coding[1]\r\n1578 468: 1562ms : Filter \"partition=2\": Code \"150022\" found in urn:iso:std:iso:11073:10101|2024-12-05 (from fhir.tx.support.r4#0.32.0)\r\n",
+  "issues" : {
+  "resourceType" : "OperationOutcome",
+  "issue" : [{
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString" : "None_of_the_provided_codes_are_in_the_value_set_one"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-server",
+      "valueUrl" : "https://tx.fhir.org/r4"
+    }],
+    "severity" : "information",
+    "code" : "code-invalid",
+    "details" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+        "code" : "this-code-not-in-vs"
+      }],
+      "text" : "The provided code 'http://loinc.org#8462-4 ('Diastolic blood pressure')' was not found in the value set 'http://hl7.org/fhir/uv/pocd/ValueSet/11073MDC-metric|4.0.0'"
+    },
+    "location" : ["CodeableConcept.coding[0].code"],
+    "expression" : ["CodeableConcept.coding[0].code"]
+  }]
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "coding" : [{
+    "system" : "http://loinc.org",
+    "code" : "8478-0",
+    "display" : "Mean blood pressure"
+  },
+  {
+    "system" : "urn:iso:std:iso:11073:10101",
+    "code" : "150023",
+    "display" : "MDC_PRESS_BLD_NONINV_MEAN"
+  }]
+}, "url": "http://hl7.org/fhir/uv/pocd/ValueSet/11073MDC-metric", "version": "4.0.0", "langs":"en-US", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "x-system-cache-id",
+    "valueString" : "dc8fd4bc-091a-424a-8a3b-6198ef146891"
+  },
+  {
+    "name" : "defaultDisplayLanguage",
+    "valueCode" : "en-US"
+  }]
+}}####
+v: {
+  "display" : "Mean blood pressure",
+  "code" : "150023",
+  "system" : "urn:iso:std:iso:11073:10101",
+  "version" : "2024-12-05",
+  "server" : "https://tx.fhir.org/r4",
+  "diagnostics" : "0 0 : start\r\n15 15   : 0ms  : Analysing http://hl7.org/fhir/uv/pocd/ValueSet/11073MDC-metric|4.0.0 for validation purposes\r\n15 0    : 0ms  : Parameters: disp-lang=en-US, default-to-latest\r\n15 0    : 0ms  : Prepare include: \"(urn:iso:std:iso:11073:10101)(partition=2)\"\r\n31 16   : 16ms : CodeSystem found: \"urn:iso:std:iso:11073:10101|2024-12-05 (from fhir.tx.support.r4#0.32.0)\"\r\n531 500 : 516ms : Prepare include: \"(urn:iso:std:iso:11073:10101)(partition=258)\"\r\n547 16  : 532ms : CodeSystem found: \"urn:iso:std:iso:11073:10101|2024-12-05 (from fhir.tx.support.r4#0.32.0)\"\r\n984 437 : 969ms : Validate \"[http://loinc.org#8478-0 (\"Mean blood pressure\"), urn:iso:std:iso:11073:10101#150023 (\"MDC_PRESS_BLD_NONINV_MEAN\")]\"\r\n984 0   : 969ms : Check \"http://loinc.org#8478-0\"\r\n984 0   : 969ms : Check \"urn:iso:std:iso:11073:10101#150023\"\r\n1031 47 : 1016ms : CodeSystem found: urn:iso:std:iso:11073:10101|2024-12-05 (from fhir.tx.support.r4#0.32.0) for urn:iso:std:iso:11073:10101\r\n1031 0  : 1016ms : check code in (urn:iso:std:iso:11073:10101)(partition=2) at CodeableConcept.coding[1]\r\n1500 469: 1485ms : Filter \"partition=2\": Code \"150023\" found in urn:iso:std:iso:11073:10101|2024-12-05 (from fhir.tx.support.r4#0.32.0)\r\n",
+  "issues" : {
+  "resourceType" : "OperationOutcome",
+  "issue" : [{
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString" : "None_of_the_provided_codes_are_in_the_value_set_one"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-server",
+      "valueUrl" : "https://tx.fhir.org/r4"
+    }],
+    "severity" : "information",
+    "code" : "code-invalid",
+    "details" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+        "code" : "this-code-not-in-vs"
+      }],
+      "text" : "The provided code 'http://loinc.org#8478-0 ('Mean blood pressure')' was not found in the value set 'http://hl7.org/fhir/uv/pocd/ValueSet/11073MDC-metric|4.0.0'"
+    },
+    "location" : ["CodeableConcept.coding[0].code"],
+    "expression" : ["CodeableConcept.coding[0].code"]
+  }]
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "code" : "en-US"
+}, "url": "http://hl7.org/fhir/ValueSet/languages", "version": "4.0.1", "langs":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"true", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "x-system-cache-id",
+    "valueString" : "dc8fd4bc-091a-424a-8a3b-6198ef146891"
+  },
+  {
+    "name" : "defaultDisplayLanguage",
+    "valueCode" : "en-US"
+  }]
+}}####
+v: {
+  "display" : "English (United States)",
+  "code" : "en-US",
+  "system" : "urn:ietf:bcp:47",
+  "server" : "https://tx.fhir.org/r4",
+  "diagnostics" : "0 0 : start\r\n78 78   : 0ms  : Analysing http://hl7.org/fhir/ValueSet/languages|4.0.1 for validation purposes\r\n78 0    : 0ms  : Parameters: disp-lang=en-US, default-to-latest\r\n94 16   : 16ms : Prepare include: \"(urn:ietf:bcp:47)(ar,bn,cs,da,de,de-AT,de-CH,de-DE,el,en,en-AU,en-CA,en-GB,en-IN,en-NZ,en-SG,en-US,es,es-AR,es-ES,es-UY,fi,fr,fr-BE,fr-CH,fr-FR,fy,fy-NL,hi,hr,it,it-CH,it-IT,ja,ko,nl,nl-BE,nl-NL,no,no-NO,pa,pl,pt,pt-BR,ru,ru-RU,sr,sr-RS,sv,sv-SE,te,zh,zh-CN,zh-HK,zh-SG,zh-TW)\"\r\n94 0    : 16ms : CodeSystem found: \"urn:ietf:bcp:47|\"\r\n94 0    : 16ms : Validate \"[#en-US (\"\")]\" and infer system\r\n94 0    : 16ms : Check \"#en-US\"\r\n94 0    : 16ms : Inferred CodeSystem = \"urn:ietf:bcp:47\"\r\n94 0    : 16ms : CodeSystem found: urn:ietf:bcp:47| for urn:ietf:bcp:47\r\n94 0    : 16ms : check code in (urn:ietf:bcp:47)(ar,bn,cs,da,de,de-AT,de-CH,de-DE,el,en,en-AU,en-CA,en-GB,en-IN,en-NZ,en-SG,en-US,es,es-AR,es-ES,es-UY,fi,fr,fr-BE,fr-CH,fr-FR,fy,fy-NL,hi,hr,it,it-CH,it-IT,ja,ko,nl,nl-BE,nl-NL,no,no-NO,pa,pl,pt,pt-BR,ru,ru-RU,sr,sr-RS,sv,sv-SE,te,zh,zh-CN,zh-HK,zh-SG,zh-TW) at \r\n94 0    : 16ms : Code \"en-US\" found in urn:ietf:bcp:47|\r\n",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "coding" : [{
+    "system" : "http://loinc.org",
+    "code" : "8867-4",
+    "display" : "Heart rate"
+  },
+  {
+    "system" : "urn:iso:std:iso:11073:10101",
+    "code" : "147842",
+    "display" : "MDC_ECG_HEART_RATE"
+  }]
+}, "url": "http://hl7.org/fhir/uv/pocd/ValueSet/11073MDC-metric", "version": "0.4.0", "langs":"en-US", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "x-system-cache-id",
+    "valueString" : "dc8fd4bc-091a-424a-8a3b-6198ef146891"
+  },
+  {
+    "name" : "defaultDisplayLanguage",
+    "valueCode" : "en-US"
+  }]
+}}####
+v: {
+  "display" : "Heart rate",
+  "code" : "147842",
+  "system" : "urn:iso:std:iso:11073:10101",
+  "version" : "2024-12-05",
+  "server" : "https://tx.fhir.org/r4",
+  "diagnostics" : "0ms tx-op\n1ms http://hl7.org/fhir/uv/pocd/ValueSet/11073MDC-metric|0.4.0: Analysing http://hl7.org/fhir/uv/pocd/ValueSet/11073MDC-metric|0.4.0 for validation purposes\n1ms http://hl7.org/fhir/uv/pocd/ValueSet/11073MDC-metric|0.4.0: Prepare include[0]: \"()\"\n1ms http://hl7.org/fhir/uv/pocd/ValueSet/11073MDC-metric|0.4.0: CodeSystem found: \"urn:iso:std:iso:11073:10101|2024-12-05\"\n1ms http://hl7.org/fhir/uv/pocd/ValueSet/11073MDC-metric|0.4.0: Prepare include[1]: \"()\"\n1ms http://hl7.org/fhir/uv/pocd/ValueSet/11073MDC-metric|0.4.0: CodeSystem found: \"urn:iso:std:iso:11073:10101|2024-12-05\"\n1ms http://hl7.org/fhir/uv/pocd/ValueSet/11073MDC-metric|0.4.0: Validate \"[undefined#8867-4 (\"Heart rate\"), undefined#147842 (\"MDC_ECG_HEART_RATE\")]\"\n6ms http://hl7.org/fhir/uv/pocd/ValueSet/11073MDC-metric|0.4.0: Check \"http://loinc.org#8867-4\"\n8ms http://hl7.org/fhir/uv/pocd/ValueSet/11073MDC-metric|0.4.0: Check \"urn:iso:std:iso:11073:10101#147842\"\n8ms http://hl7.org/fhir/uv/pocd/ValueSet/11073MDC-metric|0.4.0: CodeSystem found: urn:iso:std:iso:11073:10101|2024-12-05 for urn:iso:std:iso:11073:10101\n8ms http://hl7.org/fhir/uv/pocd/ValueSet/11073MDC-metric|0.4.0: check code in () at CodeableConcept.coding[1]\n17ms http://hl7.org/fhir/uv/pocd/ValueSet/11073MDC-metric|0.4.0: Filter undefined = 2: Code \"147842\" found in urn:iso:std:iso:11073:10101|2024-12-05",
+  "unknown-systems" : "",
+  "issues" : {
+  "resourceType" : "OperationOutcome",
+  "issue" : [{
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString" : "None_of_the_provided_codes_are_in_the_value_set_one"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-server",
+      "valueUrl" : "https://tx.fhir.org/r4"
+    }],
+    "severity" : "information",
+    "code" : "code-invalid",
+    "details" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+        "code" : "this-code-not-in-vs"
+      }],
+      "text" : "The provided code 'http://loinc.org#8867-4 ('Heart rate')' was not found in the value set 'http://hl7.org/fhir/uv/pocd/ValueSet/11073MDC-metric|0.4.0'"
+    },
+    "expression" : ["CodeableConcept.coding[0].code"]
+  }]
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "coding" : [{
+    "system" : "http://loinc.org",
+    "code" : "85354-9",
+    "display" : "Blood pressure panel with all children optional"
+  },
+  {
+    "system" : "urn:iso:std:iso:11073:10101",
+    "code" : "150020",
+    "display" : "MDC_PRESS_BLD_NONINV"
+  }]
+}, "url": "http://hl7.org/fhir/uv/pocd/ValueSet/11073MDC-metric", "version": "0.4.0", "langs":"en-US", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "x-system-cache-id",
+    "valueString" : "dc8fd4bc-091a-424a-8a3b-6198ef146891"
+  },
+  {
+    "name" : "defaultDisplayLanguage",
+    "valueCode" : "en-US"
+  }]
+}}####
+v: {
+  "display" : "Blood pressure panel with all children optional",
+  "code" : "150020",
+  "system" : "urn:iso:std:iso:11073:10101",
+  "version" : "2024-12-05",
+  "server" : "https://tx.fhir.org/r4",
+  "diagnostics" : "0ms tx-op\n1ms http://hl7.org/fhir/uv/pocd/ValueSet/11073MDC-metric|0.4.0: Analysing http://hl7.org/fhir/uv/pocd/ValueSet/11073MDC-metric|0.4.0 for validation purposes\n1ms http://hl7.org/fhir/uv/pocd/ValueSet/11073MDC-metric|0.4.0: Prepare include[0]: \"()\"\n1ms http://hl7.org/fhir/uv/pocd/ValueSet/11073MDC-metric|0.4.0: CodeSystem found: \"urn:iso:std:iso:11073:10101|2024-12-05\"\n1ms http://hl7.org/fhir/uv/pocd/ValueSet/11073MDC-metric|0.4.0: Prepare include[1]: \"()\"\n1ms http://hl7.org/fhir/uv/pocd/ValueSet/11073MDC-metric|0.4.0: CodeSystem found: \"urn:iso:std:iso:11073:10101|2024-12-05\"\n1ms http://hl7.org/fhir/uv/pocd/ValueSet/11073MDC-metric|0.4.0: Validate \"[undefined#85354-9 (\"Blood pressure panel with all children optional\"), undefined#150020 (\"MDC_PRESS_BLD_NONINV\")]\"\n3ms http://hl7.org/fhir/uv/pocd/ValueSet/11073MDC-metric|0.4.0: Check \"http://loinc.org#85354-9\"\n4ms http://hl7.org/fhir/uv/pocd/ValueSet/11073MDC-metric|0.4.0: Check \"urn:iso:std:iso:11073:10101#150020\"\n4ms http://hl7.org/fhir/uv/pocd/ValueSet/11073MDC-metric|0.4.0: CodeSystem found: urn:iso:std:iso:11073:10101|2024-12-05 for urn:iso:std:iso:11073:10101\n4ms http://hl7.org/fhir/uv/pocd/ValueSet/11073MDC-metric|0.4.0: check code in () at CodeableConcept.coding[1]\n14ms http://hl7.org/fhir/uv/pocd/ValueSet/11073MDC-metric|0.4.0: Filter undefined = 2: Code \"150020\" found in urn:iso:std:iso:11073:10101|2024-12-05",
+  "unknown-systems" : "",
+  "issues" : {
+  "resourceType" : "OperationOutcome",
+  "issue" : [{
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString" : "None_of_the_provided_codes_are_in_the_value_set_one"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-server",
+      "valueUrl" : "https://tx.fhir.org/r4"
+    }],
+    "severity" : "information",
+    "code" : "code-invalid",
+    "details" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+        "code" : "this-code-not-in-vs"
+      }],
+      "text" : "The provided code 'http://loinc.org#85354-9 ('Blood pressure panel with all children optional')' was not found in the value set 'http://hl7.org/fhir/uv/pocd/ValueSet/11073MDC-metric|0.4.0'"
+    },
+    "expression" : ["CodeableConcept.coding[0].code"]
+  }]
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "coding" : [{
+    "system" : "http://loinc.org",
+    "code" : "8480-6",
+    "display" : "Systolic blood pressure"
+  },
+  {
+    "system" : "urn:iso:std:iso:11073:10101",
+    "code" : "150021",
+    "display" : "MDC_PRESS_BLD_NONINV_SYS"
+  }]
+}, "url": "http://hl7.org/fhir/uv/pocd/ValueSet/11073MDC-metric", "version": "0.4.0", "langs":"en-US", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "x-system-cache-id",
+    "valueString" : "dc8fd4bc-091a-424a-8a3b-6198ef146891"
+  },
+  {
+    "name" : "defaultDisplayLanguage",
+    "valueCode" : "en-US"
+  }]
+}}####
+v: {
+  "display" : "Systolic blood pressure",
+  "code" : "150021",
+  "system" : "urn:iso:std:iso:11073:10101",
+  "version" : "2024-12-05",
+  "server" : "https://tx.fhir.org/r4",
+  "diagnostics" : "0ms tx-op\n1ms http://hl7.org/fhir/uv/pocd/ValueSet/11073MDC-metric|0.4.0: Analysing http://hl7.org/fhir/uv/pocd/ValueSet/11073MDC-metric|0.4.0 for validation purposes\n1ms http://hl7.org/fhir/uv/pocd/ValueSet/11073MDC-metric|0.4.0: Prepare include[0]: \"()\"\n1ms http://hl7.org/fhir/uv/pocd/ValueSet/11073MDC-metric|0.4.0: CodeSystem found: \"urn:iso:std:iso:11073:10101|2024-12-05\"\n1ms http://hl7.org/fhir/uv/pocd/ValueSet/11073MDC-metric|0.4.0: Prepare include[1]: \"()\"\n1ms http://hl7.org/fhir/uv/pocd/ValueSet/11073MDC-metric|0.4.0: CodeSystem found: \"urn:iso:std:iso:11073:10101|2024-12-05\"\n1ms http://hl7.org/fhir/uv/pocd/ValueSet/11073MDC-metric|0.4.0: Validate \"[undefined#8480-6 (\"Systolic blood pressure\"), undefined#150021 (\"MDC_PRESS_BLD_NONINV_SYS\")]\"\n3ms http://hl7.org/fhir/uv/pocd/ValueSet/11073MDC-metric|0.4.0: Check \"http://loinc.org#8480-6\"\n7ms http://hl7.org/fhir/uv/pocd/ValueSet/11073MDC-metric|0.4.0: Check \"urn:iso:std:iso:11073:10101#150021\"\n7ms http://hl7.org/fhir/uv/pocd/ValueSet/11073MDC-metric|0.4.0: CodeSystem found: urn:iso:std:iso:11073:10101|2024-12-05 for urn:iso:std:iso:11073:10101\n7ms http://hl7.org/fhir/uv/pocd/ValueSet/11073MDC-metric|0.4.0: check code in () at CodeableConcept.coding[1]\n17ms http://hl7.org/fhir/uv/pocd/ValueSet/11073MDC-metric|0.4.0: Filter undefined = 2: Code \"150021\" found in urn:iso:std:iso:11073:10101|2024-12-05",
+  "unknown-systems" : "",
+  "issues" : {
+  "resourceType" : "OperationOutcome",
+  "issue" : [{
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString" : "None_of_the_provided_codes_are_in_the_value_set_one"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-server",
+      "valueUrl" : "https://tx.fhir.org/r4"
+    }],
+    "severity" : "information",
+    "code" : "code-invalid",
+    "details" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+        "code" : "this-code-not-in-vs"
+      }],
+      "text" : "The provided code 'http://loinc.org#8480-6 ('Systolic blood pressure')' was not found in the value set 'http://hl7.org/fhir/uv/pocd/ValueSet/11073MDC-metric|0.4.0'"
+    },
+    "expression" : ["CodeableConcept.coding[0].code"]
+  }]
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "coding" : [{
+    "system" : "http://loinc.org",
+    "code" : "8462-4",
+    "display" : "Diastolic blood pressure"
+  },
+  {
+    "system" : "urn:iso:std:iso:11073:10101",
+    "code" : "150022",
+    "display" : "MDC_PRESS_BLD_NONINV_DIA"
+  }]
+}, "url": "http://hl7.org/fhir/uv/pocd/ValueSet/11073MDC-metric", "version": "0.4.0", "langs":"en-US", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "x-system-cache-id",
+    "valueString" : "dc8fd4bc-091a-424a-8a3b-6198ef146891"
+  },
+  {
+    "name" : "defaultDisplayLanguage",
+    "valueCode" : "en-US"
+  }]
+}}####
+v: {
+  "display" : "Diastolic blood pressure",
+  "code" : "150022",
+  "system" : "urn:iso:std:iso:11073:10101",
+  "version" : "2024-12-05",
+  "server" : "https://tx.fhir.org/r4",
+  "diagnostics" : "0ms tx-op\n1ms http://hl7.org/fhir/uv/pocd/ValueSet/11073MDC-metric|0.4.0: Analysing http://hl7.org/fhir/uv/pocd/ValueSet/11073MDC-metric|0.4.0 for validation purposes\n1ms http://hl7.org/fhir/uv/pocd/ValueSet/11073MDC-metric|0.4.0: Prepare include[0]: \"()\"\n1ms http://hl7.org/fhir/uv/pocd/ValueSet/11073MDC-metric|0.4.0: CodeSystem found: \"urn:iso:std:iso:11073:10101|2024-12-05\"\n1ms http://hl7.org/fhir/uv/pocd/ValueSet/11073MDC-metric|0.4.0: Prepare include[1]: \"()\"\n1ms http://hl7.org/fhir/uv/pocd/ValueSet/11073MDC-metric|0.4.0: CodeSystem found: \"urn:iso:std:iso:11073:10101|2024-12-05\"\n1ms http://hl7.org/fhir/uv/pocd/ValueSet/11073MDC-metric|0.4.0: Validate \"[undefined#8462-4 (\"Diastolic blood pressure\"), undefined#150022 (\"MDC_PRESS_BLD_NONINV_DIA\")]\"\n3ms http://hl7.org/fhir/uv/pocd/ValueSet/11073MDC-metric|0.4.0: Check \"http://loinc.org#8462-4\"\n4ms http://hl7.org/fhir/uv/pocd/ValueSet/11073MDC-metric|0.4.0: Check \"urn:iso:std:iso:11073:10101#150022\"\n4ms http://hl7.org/fhir/uv/pocd/ValueSet/11073MDC-metric|0.4.0: CodeSystem found: urn:iso:std:iso:11073:10101|2024-12-05 for urn:iso:std:iso:11073:10101\n4ms http://hl7.org/fhir/uv/pocd/ValueSet/11073MDC-metric|0.4.0: check code in () at CodeableConcept.coding[1]\n14ms http://hl7.org/fhir/uv/pocd/ValueSet/11073MDC-metric|0.4.0: Filter undefined = 2: Code \"150022\" found in urn:iso:std:iso:11073:10101|2024-12-05",
+  "unknown-systems" : "",
+  "issues" : {
+  "resourceType" : "OperationOutcome",
+  "issue" : [{
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString" : "None_of_the_provided_codes_are_in_the_value_set_one"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-server",
+      "valueUrl" : "https://tx.fhir.org/r4"
+    }],
+    "severity" : "information",
+    "code" : "code-invalid",
+    "details" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+        "code" : "this-code-not-in-vs"
+      }],
+      "text" : "The provided code 'http://loinc.org#8462-4 ('Diastolic blood pressure')' was not found in the value set 'http://hl7.org/fhir/uv/pocd/ValueSet/11073MDC-metric|0.4.0'"
+    },
+    "expression" : ["CodeableConcept.coding[0].code"]
+  }]
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "coding" : [{
+    "system" : "http://loinc.org",
+    "code" : "8478-0",
+    "display" : "Mean blood pressure"
+  },
+  {
+    "system" : "urn:iso:std:iso:11073:10101",
+    "code" : "150023",
+    "display" : "MDC_PRESS_BLD_NONINV_MEAN"
+  }]
+}, "url": "http://hl7.org/fhir/uv/pocd/ValueSet/11073MDC-metric", "version": "0.4.0", "langs":"en-US", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "x-system-cache-id",
+    "valueString" : "dc8fd4bc-091a-424a-8a3b-6198ef146891"
+  },
+  {
+    "name" : "defaultDisplayLanguage",
+    "valueCode" : "en-US"
+  }]
+}}####
+v: {
+  "display" : "Mean blood pressure",
+  "code" : "150023",
+  "system" : "urn:iso:std:iso:11073:10101",
+  "version" : "2024-12-05",
+  "server" : "https://tx.fhir.org/r4",
+  "diagnostics" : "0ms tx-op\n1ms http://hl7.org/fhir/uv/pocd/ValueSet/11073MDC-metric|0.4.0: Analysing http://hl7.org/fhir/uv/pocd/ValueSet/11073MDC-metric|0.4.0 for validation purposes\n1ms http://hl7.org/fhir/uv/pocd/ValueSet/11073MDC-metric|0.4.0: Prepare include[0]: \"()\"\n1ms http://hl7.org/fhir/uv/pocd/ValueSet/11073MDC-metric|0.4.0: CodeSystem found: \"urn:iso:std:iso:11073:10101|2024-12-05\"\n1ms http://hl7.org/fhir/uv/pocd/ValueSet/11073MDC-metric|0.4.0: Prepare include[1]: \"()\"\n1ms http://hl7.org/fhir/uv/pocd/ValueSet/11073MDC-metric|0.4.0: CodeSystem found: \"urn:iso:std:iso:11073:10101|2024-12-05\"\n1ms http://hl7.org/fhir/uv/pocd/ValueSet/11073MDC-metric|0.4.0: Validate \"[undefined#8478-0 (\"Mean blood pressure\"), undefined#150023 (\"MDC_PRESS_BLD_NONINV_MEAN\")]\"\n7ms http://hl7.org/fhir/uv/pocd/ValueSet/11073MDC-metric|0.4.0: Check \"http://loinc.org#8478-0\"\n9ms http://hl7.org/fhir/uv/pocd/ValueSet/11073MDC-metric|0.4.0: Check \"urn:iso:std:iso:11073:10101#150023\"\n9ms http://hl7.org/fhir/uv/pocd/ValueSet/11073MDC-metric|0.4.0: CodeSystem found: urn:iso:std:iso:11073:10101|2024-12-05 for urn:iso:std:iso:11073:10101\n9ms http://hl7.org/fhir/uv/pocd/ValueSet/11073MDC-metric|0.4.0: check code in () at CodeableConcept.coding[1]\n19ms http://hl7.org/fhir/uv/pocd/ValueSet/11073MDC-metric|0.4.0: Filter undefined = 2: Code \"150023\" found in urn:iso:std:iso:11073:10101|2024-12-05",
+  "unknown-systems" : "",
+  "issues" : {
+  "resourceType" : "OperationOutcome",
+  "issue" : [{
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString" : "None_of_the_provided_codes_are_in_the_value_set_one"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-server",
+      "valueUrl" : "https://tx.fhir.org/r4"
+    }],
+    "severity" : "information",
+    "code" : "code-invalid",
+    "details" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+        "code" : "this-code-not-in-vs"
+      }],
+      "text" : "The provided code 'http://loinc.org#8478-0 ('Mean blood pressure')' was not found in the value set 'http://hl7.org/fhir/uv/pocd/ValueSet/11073MDC-metric|0.4.0'"
+    },
+    "expression" : ["CodeableConcept.coding[0].code"]
+  }]
+}
+
 }
 -------------------------------------------------------------------------------------

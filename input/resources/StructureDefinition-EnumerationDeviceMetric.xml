@@ -10,13 +10,21 @@
 * If multiple instances of the same metric type exist, the Instance extension allows a squence to be defined.&#10;
 * Extensions allow relationships and metric availability to be added."/>
   </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
+    <valueCode value="dev"/>
+  </extension>
   <url value="http://hl7.org/fhir/uv/pocd/StructureDefinition/EnumerationDeviceMetric"/>
   <name value="EnumerationDeviceMetric"/>
   <title value="Enumeration DeviceMetric profile"/>
   <status value="draft"/>
   <date value="2022-01-16"/>
-  <publisher value="HL7 International - Devices Work Group"/>
   <description value="StructureDefinition for DeviceMetric resources that represent coded or text status, annotations, or settings characteristics and capabilities."/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://www.hl7.org/Special/committees/healthcaredevices"/>
+    </telecom>
+  </contact>
   <fhirVersion value="4.0.1"/>
   <mapping>
     <identity value="dim"/>

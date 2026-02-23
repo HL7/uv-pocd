@@ -58,11 +58,14 @@
     <a data-toggle="dropdown" href="#" class="dropdown-toggle">Support<b class="caret"></b></a>
     <ul class="dropdown-menu">
       <li>
-        <a target="_blank" href="{{site.data.fhir.path}}index.html">FHIR Spec <img src="external.png" style="text-align: baseline"/></a>
+        <a target="_blank" href="{{site.data.fhir.path}}index.html">FHIR Spec</a>
       </li>
       <li>
         <a href="downloads.html">Downloads</a>
       </li>
+      <li>
+        <a href="appendix.html">Appendix</a>
+      </li>      
     </ul>
   </li>
 </ul>
