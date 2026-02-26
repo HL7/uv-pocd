@@ -15,6 +15,7 @@ For validation output, see https://build.fhir.org/ig/HL7/uv-pocd/qa.html
 Install the FHIR IG Publisher and Jekyll as described in the [IG Publisher Documentation](http://wiki.hl7.org/index.php?title=IG_Publisher_Documentation#Installing).
 
 Clone the Git repository to your local file system: `git clone https://github.com/HL7/uv-pocd.git`  
-In the `uv-pocd` directory, run the publisher with control file as argument: `java -jar org.hl7.fhir.igpublisher.jar -ig ig.ini`  
-`_updatePublisher.bat` and `_genonce.bat` perform a local build in a Windows environment.  
+In the `uv-pocd` directory, run the publisher with control file as argument: `java -jar org.hl7.fhir.igpublisher.jar -ig ig.ini` or use the provided scripts to perform a local build:
+- `_updatePublisher.bat` and `_genonce.bat` performs a local build in a Windows environment.  
+- `./_updatePublisher.sh` and `./_genonce.sh` performs a local build in a Linux/Unix environment.
 When completed, point your browser to `index.html` in the `uv-pocd/output` directory.
