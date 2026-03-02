@@ -24,13 +24,22 @@ This Implementation Guide is intended for
 - device and device gateway system developers. 
 
 ### Structure of this Guide
-The "Getting Started" pages, which include a reference page on Abbreviations and Definitions, give a general introduction to the concepts and approach used in this Implementation Guide, relevant to all potential users of this Guide including end users of the data. There are also pages devoted to each of the two main categories of implementers needing developer-level information:
+The "Getting Started" pages provide a general introduction to the concepts and approach used in this Implementation Guide, relevant to all potential users including clinical staff and system implementers. These pages include:
+- Overview and context for PoCD implementations
+- A reference page on Abbreviations and Definitions
+- Connectivity and throughput considerations
 
-- information relevant to implementers of systems consuming data that has 
-and "Profile" section details
+The Implementation Guide is organized around two main categories of implementers:
 
-- More detailed information for implementers of device and gateway systems who are setting 
-up device models in such a way as to  accomodate the needs of data consumer applications.
+1. **For Data Consumer Systems**: Pages addressing implementers of systems that consume PoCD data, including:
+   - How to interpret and use device data in clinical workflows
+   - FHIR profiles for working with device observations
+   - Guidance on integrating device data into electronic medical records and clinical decision support systems
+
+2. **For Device and Gateway Systems**: Pages addressing implementers setting up device models and data transmission, including:
+   - Device modeling and metadata requirements
+   - Guidance on mapping device nomenclature to FHIR terminology
+   - Technical implementation details for device and gateway systems
 
 
 ### Relationship to Other Projects & Guides
@@ -66,6 +75,51 @@ It is possible that in rare cases using this Implementation Guide that a device 
 
 This is an area of necessary coordination between this IG and the Vital Signs Profile.
 
+
+### Connectivity and Throughput Considerations
+
+This Implementation Guide addresses device data modeling and representation in FHIR resources, but implementers must also consider the connectivity behavior and network characteristics required for safe and effective PoCD deployments. The following considerations are important for understanding how to deploy and operate PoCD systems in practice.
+
+#### Data Throughput Profiling
+
+Point-of-care devices can generate data at widely varying rates. Some devices produce observations at discrete intervals (e.g., every few seconds or minutes), while others may produce continuous waveform data or high-frequency measurements requiring substantial bandwidth. Implementation planning must account for:
+- Expected observation frequency and data volume from each device type
+- Peak vs. average throughput requirements
+- Storage and performance implications for receiving systems handling multiple devices simultaneously
+- Network capacity planning for clinical settings with many connected devices
+
+#### Connection Persistence and Reliability Models
+
+Different clinical use cases require different connectivity patterns:
+- **Persistent connections**: Continuous real-time streaming is appropriate for critical monitoring in ICU settings where immediate visibility of patient data is essential and network infrastructure is reliable
+- **Episodic connections**: Scheduled or event-triggered data transmission may be suitable for periodic monitoring or in settings with less stable network connectivity
+- **Hybrid models**: Some implementations may combine persistent connections for critical data with periodic synchronization for less time-sensitive observations
+
+The choice of connectivity model should be guided by clinical requirements, network reliability, and system architecture.
+
+#### Clinical Setting Differences
+
+The requirements for PoCD connectivity vary significantly by clinical context:
+
+- **Intensive Care Unit (ICU) and Operating Room (OR)**: These settings typically demand real-time or near-real-time visibility of device data with high reliability. Network infrastructure is usually robust, and clinical staff are trained to interpret continuous device streams. Systems in these settings should support persistent connections and handle high-frequency data transmission.
+
+- **General Hospital Wards and Acute Care Settings**: Clinical needs for data vary by department and patient acuity. Some observations benefit from continuous monitoring while others can be recorded at intervals. System design should accommodate mixed connectivity models.
+
+- **Home and Ambulatory Settings**: These settings often have less reliable network connectivity and different clinical workflows. Data may be collected and stored locally on the device or gateway, then transmitted when connectivity is available.
+
+Understanding these differences is essential for designing systems that safely and effectively integrate PoCD data into diverse clinical environments.
+
+#### Real-Time Monitoring vs. Data Persistence
+
+Clinical decision-making depends on understanding both the immediate values of device measurements and their historical context. Implementation selection must consider:
+- What data needs immediate visibility to clinicians (real-time requirements)
+- What data should be persisted for longitudinal analysis, quality measurement, and research
+- How to balance immediate transmission with network efficiency
+- Clinical workflows and how they use device data at different time scales
+
+#### Evolution of Implementation Experience
+
+This Implementation Guide focuses on the data models and FHIR representation necessary for exchanging PoCD observations. As experience accumulates from prototype implementations and real-world deployments, further guidance on optimal connectivity patterns, throughput profiling, and operational practices for different clinical settings will be developed. The interaction between multiple implementations, including considerations of performance under different network conditions and clinical workflow integration, will inform future versions of this guide.
 
 ### Abbreviations & Definitions
 
