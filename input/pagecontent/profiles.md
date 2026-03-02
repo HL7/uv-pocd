@@ -21,6 +21,16 @@ A point-of-care device model is made of multiple resource instances and the rela
 <figcaption><i>PoCD Profiles diagram showing FHIR resource profiles and references</i></figcaption>
 </figure>
 
+### Observation Subject Guidance
+
+The Observation profiles in this Implementation Guide require the `subject` element to be present and shall reference a Patient resource or MDS Device resource.
+
+**Patient References**: A Patient resource is referenced when the observation is about a patient, such as a physiological measurement or vital sign. This is the typical use case for clinical observations.
+
+**Device References**: An MDS Device resource is referenced when the observation is about the device itself, such as a device setting or a technical device measurement (e.g., ventilator air pressure or infusion rate). For therapeutic devices, device settings are often patient-related but are documented as observations about the device resource. When an observation's subject points to a Device resource, the associated patient can be found using the Device.patient reference.
+
+**Version-Specific References for Device Observations**: When an observation's subject points to a Device resource with dynamic content that is relevant to the observation (such as configuration parameters or settings that changed over time), a version-specific reference should be used. This ensures that for retrospective analysis, the exact state of the device's patient reference at the time the observation was made is available, rather than potentially resolving to a different patient reference at a later time.
+
 ### Must Support
 
 For the profiles listed below, `mustSupport` set to true on data elements (flagged with a <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span> in table view) shall be interpreted as follows:
