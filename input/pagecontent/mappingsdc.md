@@ -28,7 +28,7 @@ For each of the measurements Height and Weight is an Observation Resource requir
 Summary of the mandatory requirements for the Height:
 - One coding in Observation.category for vital-signs  with code='vital-signs' and system='http://terminology.hl7.org/CodeSystem/observation-category', 
 - One coding in Observation.code which must have code= '8302-2' (for Body Height) and system='http://loinc.org' 
-- An additional coding in Observation.code with code= '8306-3' (for Body Height - Lying) and system='http://loinc.org' in compliance with the [FHIR Vital Signs Body Length profile]({{site.data.fhir.path}}observation-bodylength.html)
+- An additional coding in Observation.code with code= '8306-3' (for Body Height - Lying) and system='http://loinc.org' in compliance with the [FHIR Vital Signs Body Length profile]({{site.data.fhir.path}}observation-bodyheight.html)
 - Other additional Codings are allowed in Observation.code- e.g. more specific LOINC Codes, SNOMED CT concepts, system specific codes. All codes should have a system value.
 - Either one Observation.valueQuantity or, if there is no value, one code in Observation.DataAbsentReason
     - Each Observation.valueQuantity must have:
@@ -80,7 +80,7 @@ Summary of the mandatory requirements for the BirthLength:
     - One coding for in Observation.category for the vital-signs category with system='http://terminology.hl7.org/CodeSystem/observation-category' and code='vital-signs'
     - A coding in Observation.code for Body Height with system='http://loinc.org' and code='8302-2'
 	- An additional coding in Observation.code with system='http://loinc.org' and code= '89269-5', to indicate that the value applies to an infant
-	- An additional coding in Observation.code with system='http://loinc.org' and code= '8306-3', to indicate body height while lying in compliance with the [FHIR Vital Signs Body Length profile]({{site.data.fhir.path}}observation-bodylength.html)
+	- An additional coding in Observation.code with system='http://loinc.org' and code= '8306-3', to indicate body height while lying in compliance with the [FHIR Vital Signs Body Length profile]({{site.data.fhir.path}}observation-bodyheight.html)
     - Other additional Codings are allowed in Observation.code- e.g. more specific LOINC Codes, SNOMED CT concepts, system specific codes. All codes should have a system value.
 - Either one Observation.valueQuantity or, if there is no value, one code in Observation.DataAbsentReason
     - Each Observation.valueQuantity must have:
