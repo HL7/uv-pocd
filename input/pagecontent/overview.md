@@ -13,30 +13,86 @@ hierarchical representation of a typical medical device as an overall system
 with logically distinct subsystems, which in turn have 
 additional levels of contained objects.
 
-#### Medical Device System
+```mermaid
+graph TD
+    MDS["Medical Device System MDS<br/>Overall device system<br/>Device model and serial number<br/>Configuration and state"]
+    
+    VMD1["Virtual Medical Device VMD<br/>Logical subsystem<br/>e.g., ECG module<br/>Model and serial number"]
+    VMD2["Virtual Medical Device VMD<br/>Logical subsystem<br/>e.g., SpO2 module<br/>Model and serial number"]
+    VMD3["Virtual Medical Device VMD<br/>Logical subsystem<br/>e.g., Infusion pump"]
+    
+    CH1["Channel<br/>Logical grouping<br/>e.g., Lead II"]
+    CH2["Channel<br/>Logical grouping<br/>e.g., Lead III"]
+    CH3["Channel<br/>Logical grouping"]
+    CH4["Channel<br/>Logical grouping<br/>e.g., Infusion line 1"]
+    
+    M1["Metric<br/>Measurement/Observation<br/>e.g., Heart Rate"]
+    M2["Metric<br/>Waveform<br/>e.g., ECG waveform"]
+    M3["Metric<br/>Measurement<br/>e.g., SpO2 %"]
+    M4["Metric<br/>Measurement<br/>e.g., Pulse Rate"]
+    M5["Metric<br/>Setting<br/>e.g., Infusion Rate"]
+    M6["Metric<br/>State<br/>e.g., Pump status"]
+    
+    MDS --> VMD1
+    MDS --> VMD2
+    MDS --> VMD3
+    
+    VMD1 --> CH1
+    VMD1 --> CH2
+    VMD2 --> CH3
+    VMD3 --> CH4
+    
+    CH1 --> M1
+    CH1 --> M2
+    CH2 --> M3
+    CH3 --> M4
+    CH4 --> M5
+    CH4 --> M6
+    
+    style MDS fill:#e1f5ff,stroke:#01579b,stroke-width:3px,color:#000
+    style VMD1 fill:#b3e5fc,stroke:#0277bd,stroke-width:2px,color:#000
+    style VMD2 fill:#b3e5fc,stroke:#0277bd,stroke-width:2px,color:#000
+    style VMD3 fill:#b3e5fc,stroke:#0277bd,stroke-width:2px,color:#000
+    style CH1 fill:#81d4fa,stroke:#0288d1,stroke-width:2px,color:#000
+    style CH2 fill:#81d4fa,stroke:#0288d1,stroke-width:2px,color:#000
+    style CH3 fill:#81d4fa,stroke:#0288d1,stroke-width:2px,color:#000
+    style CH4 fill:#81d4fa,stroke:#0288d1,stroke-width:2px,color:#000
+    style M1 fill:#4fc3f7,stroke:#0297d1,color:#000
+    style M2 fill:#4fc3f7,stroke:#0297d1,color:#000
+    style M3 fill:#4fc3f7,stroke:#0297d1,color:#000
+    style M4 fill:#4fc3f7,stroke:#0297d1,color:#000
+    style M5 fill:#4fc3f7,stroke:#0297d1,color:#000
+    style M6 fill:#4fc3f7,stroke:#0297d1,color:#000
+```
+
+##### Medical Device System
  
 The containment tree is rooted at the overall system, with is identified 
 in the model as a Medical Device System (MDS object). representing the whole device, 
 with logical subsystems identified as Virtual Medical Devices (VMDs)
  
-#### Virtual Medical Devices
+##### Virtual Medical Devices
 
 These VMD logical subsystems may also have a physical aspect -- they may be
 detachable, as in a measurement module in a multi-parameter physiological monitor, so have an individual identity (model and serial number), and may move from MDS to MDS. The tracking of this dynamic relationships is required for the results to be traceable to their precise source.
 
-#### Channels
+##### Channels
 
 VMDs may need to have the measurements they report grouped into logical channels. This is sometimes not necessary to model, but in
 cases like certain infusion pumps, or EEG modules, there is a meaningful partition of the data into channels that may be critical to the safe treatment of the patient.
 
-#### Metrics
+##### Metrics
 At the lowest level, observations correspond to what the IEEE 11073-10101 Domain Information Model calls a 'Metric'. 
 These are not necessarily single quantitative measurements. They may be:
  - enumerations (qualitative or categorical variables, like a "mild - moderate - severe" rating).
  - or a metric may represent a set of closely related values that are best kept together and recorded as a compound value, as for example, a systolic, diastolic, and mean blood  pressure report at the same time from the same site
  - a metric may also represent a vector of quantities in a segment of a waveform.
- 
-#### Attributes may exist at all levels of the tree
+
+##### Representing the Hierarchy in FHIR Profiles
+
+In the PoCD FHIR profiles, the hierarchical containment relationships of the IEEE 11073 model are explicitly represented using the `parent` element in Device and DeviceMetric resources. Each child resource (a VMD Device, a Channel Device, or a DeviceMetric) contains a reference to its parent resource, establishing the containment tree. This parent-child relationship structure allows implementations to traverse the hierarchy and reconstruct the full context of any measurement. For example, a DeviceMetric representing an observation will reference its parent Channel Device, which in turn references its parent VMD Device, which references the MDS Device. This explicit representation of the hierarchy ensures that device data is properly contextualized and traceable to its source within the device structure.
+
+##### Attributes may exist at all levels of the tree
 
 An individual measurement has a context made up of all the levels of the containment tree.
 At each level there are attributes that condition the understanding of the measurements

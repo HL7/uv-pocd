@@ -31,6 +31,16 @@ The Observation profiles in this Implementation Guide require the `subject` elem
 
 **Version-Specific References for Device Observations**: When an observation's subject points to a Device resource with dynamic content that is relevant to the observation (such as configuration parameters or settings that changed over time), a version-specific reference should be used. This ensures that for retrospective analysis, the exact state of the device's patient reference at the time the observation was made is available, rather than potentially resolving to a different patient reference at a later time.
 
+### DeviceMetric Source and Observation Device Attributes
+
+To support traceability and contextualization of observations within the device hierarchy, the PoCD profiles use two key reference elements:
+
+**DeviceMetric.source**: The `source` element in a DeviceMetric profile shall reference the MDS (Medical Device System) Device resource. This establishes the connection from the metric (the lowest level of the hierarchy) back to the root device system, enabling complete traceability of the measurement to its source device. This is essential for identifying which physical device produced the measurement, particularly in environments with multiple connected devices.
+
+**Observation.device**: The `device` element in an Observation profile shall reference the DeviceMetric resource that provided the measurement. This direct connection allows consumers of observation data to access the full device context and hierarchy by following the reference chain: Observation → DeviceMetric → MDS Device (and from there to VMDs and Channels as needed). This approach supports the IEEE 11073 hierarchical model and ensures observations can be properly contextualized with all relevant device metadata.
+
+These references together ensure that clinical systems and archives can reconstruct the complete device configuration and hierarchy for any observation, supporting safe clinical use and comprehensive retrospective analysis.
+
 ### Must Support
 
 For the profiles listed below, `mustSupport` set to true on data elements (flagged with a <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span> in table view) shall be interpreted as follows:
