@@ -23,7 +23,7 @@ This element does not match any known slice defined in the profile http://hl7.or
 Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
 
 # partition is a known IEEE 11073-10101 concept - discussion on Zulip how to fix this: https://chat.fhir.org/#narrow/stream/179166-implementers/topic/Why.20is.20the.20ISO.2FIEEE.2011073.20Codesystem.20seen.20as.20draft.3F/near/456526001
-# No definition can be found for the system urn:iso:std:iso:11073:10101, and the property 'partition' is not a generally known property, so the property might not be valid, or understood by the terminology ecosystem. In case it's useful, the list of generally known properties for all systems is concept,code,status,inactive,effectiveDate,deprecationDate,retirementDate,notSelectable,synonym,comment,itemWeight
+No definition can be found for the system urn:iso:std:iso:11073:10101, and the property 'partition' is not a generally known property, so the property might not be valid, or understood by the terminology ecosystem. In case it's useful, the list of generally known properties for all systems is concept,code,status,inactive,effectiveDate,deprecationDate,retirementDate,notSelectable,synonym,comment,itemWeight
 
 # extension used in FHIR core R4 that is now deprecated - this warning can be ignored safely
 The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.2.0 is deprecated
