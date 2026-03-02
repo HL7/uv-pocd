@@ -77,10 +77,13 @@ Summary of the mandatory requirements for the BirthWeight:
         - a UCUM unit code in Observation.valueQuantity.code = 'kg', 'g', or '[lb_av]'
 
 Summary of the mandatory requirements for the BirthLength:
+- One code in Observation.category which must have
+    - Observation.category with a coding for vital-signs (system='http://terminology.hl7.org/CodeSystem/observation-category', code='vital-signs')
 - One code in Observation.code which must have
-    - a fixed Observation.code.coding.system='http ://loinc.org'
+    - a fixed Observation.code.coding.system='http://loinc.org'
     - a fixed Observation.code.coding.code= '8302-2'
 	- an additional Observation.code.coding.code= '89269-5' shall be provided, to indicate that the value applies to an infant
+	- an additional Observation.code.coding.code= '8306-3' shall be provided to indicate body height while lying (in compliance with the FHIR Vital Signs Body Length profile)
     - Other additional Codings are allowed in Observation.code- e.g. more specific LOINC Codes, SNOMED CT concepts, system specific codes. All codes should have a system value.
 - Either one Observation.valueQuantity or, if there is no value, one code in Observation.DataAbsentReason
     - Each Observation.valueQuantity must have:
