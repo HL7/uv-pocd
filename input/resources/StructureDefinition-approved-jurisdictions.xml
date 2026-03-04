@@ -10,6 +10,7 @@
   <status value="draft" />
   <date value="2022-01-16"/>
   <description value="StructureDefinition that adds approved jurisdictions to a Device. Note that the FHIR jurisdiction extension could be used as well - URL: http://hl7.org/fhir/StructureDefinition/identifier-jurisdiction ."/>
+  <purpose value="This extension is intended to declare countries or regions in which the device or device component is approved to be operated. Multiple instances can appear in a single Device resource instance. Missing Approved Jurisdictions extension shall be interpreted as unknown (i.e., defined elsewhere). This extension is different from Device.udiCarrier.jurisdiction, which identifies the authoritative source for UDI generation. The approved jurisdictions refer to the countries or regions where the device has regulatory approval, while UDI jurisdiction refers to the authoritative source for UDI generation."/>
   <fhirVersion value="4.0.1" />
   <kind value="complex-type" />
   <abstract value="false" />
@@ -24,27 +25,48 @@
 	  <element id="Extension">
 	    <path value="Extension"/>
       <short value="Approved jurisdictions" />
-      <definition value="List of regions in which a device is approved to be operated." />
+	    <definition value="List of regions in which a device or device component is approved to be operated. This corresponds to the ApprovedJurisdictions element from IEEE 11073-10207. This extension is different to Device.udiCarrier.jurisdiction, which identifies the authoritative source for UDI generation."/>
 	  </element>
     <element id="Extension.extension">
       <path value="Extension.extension"/>
-      <max value="0"/>
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Extension.extension:approvedJurisdiction">
+      <path value="Extension.extension" />
+      <sliceName value="approvedJurisdiction" />
+      <short value="Approved jurisdiction" />
+      <definition value="National state, territory, or region where the device is approved to be operated. If the list does not contain any entries, then the device or component is not approved for any region." />
+      <min value="0" />
+      <max value="*" />
+    </element>
+    <element id="Extension.extension:approvedJurisdiction.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="approvedJurisdiction" />
+    </element>
+    <element id="Extension.extension:approvedJurisdiction.value[x]">
+      <path value="Extension.extension.valueUri" />
+      <type>
+        <code value="uri" />
+      </type>
+      <binding>
+        <strength value="extensible" />
+        <description value="Codes for country, country subdivision and region" />
+        <valueSet value="http://hl7.org/fhir/ValueSet/jurisdiction" />
+      </binding>
     </element>
 	  <element id="Extension.url">
 	    <path value="Extension.url"/>
 	    <fixedUri value="http://hl7.org/fhir/uv/pocd/StructureDefinition/approved-jurisdictions"/>
 	  </element>
-    <element id="Extension.value[x]:valueCodeableConcept">
-      <path value="Extension.valueCodeableConcept" />
-      <min value="1"/>
-      <type>
-        <code value="CodeableConcept" />
-      </type>
-      <binding>
-	      <strength value="extensible" />
-	      <description value="Codes for country, country subdivision and region" />
-	      <valueSet value="http://hl7.org/fhir/ValueSet/jurisdiction" />
-	    </binding>
+    <element id="Extension.value[x]">
+      <path value="Extension.value[x]" />
+      <max value="0" />
     </element>
   </differential>
 </StructureDefinition>
