@@ -31,6 +31,8 @@ The Observation profiles in this Implementation Guide require the `subject` elem
 
 **Version-Specific References for Device Observations**: When an observation's subject points to a Device resource with dynamic content that is relevant to the observation (such as configuration parameters or settings that changed over time), a version-specific reference should be used. This ensures that for retrospective analysis, the exact state of the device's patient reference at the time the observation was made is available, rather than potentially resolving to a different patient reference at a later time.
 
+**Mandatory Subject and Handling Unknown Patient Demographics**: The `subject` element is mandatory in all Observation profiles in this Implementation Guide to ensure compatibility with the FHIR Vital Signs Profile. In situations where patient demographics are unknown to the device—such as due to privacy concerns or because measurements are taken before the patient is admitted—implementers may create a temporary Patient resource that contains only a unique identifier. This temporary resource can be referenced by observations and can be updated, linked to, or merged with the final Patient resource when complete demographic information becomes available. This approach maintains data integrity and allows observations to be properly contextualized while accommodating real-world device deployment scenarios.
+
 ### DeviceMetric Source and Observation Device Attributes
 
 To support traceability and contextualization of observations within the device hierarchy, the PoCD profiles use two key reference elements:
