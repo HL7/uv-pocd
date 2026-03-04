@@ -4,7 +4,7 @@ Within the context of the ISO/IEEE 11073 Point-of-care medical device communicat
 Most object classes in ISO/IEEE 11073 SDC can be mapped to FHIR resources as outlined in the following table.
 
 | DIM Object Class | FHIR Resource |
-| ---
+| --- | --- |
 | MDS | [Device]({{site.data.fhir.path}}device.html) (according to the [MDS Device profile](StructureDefinition-MdsDevice.html)) and <br/>[Location]({{site.data.fhir.path}}location.html) or [Organization]({{site.data.fhir.path}}organization.html) (if needed) |
 | VMD | [Device]({{site.data.fhir.path}}device.html) (according to the [VMD Device profile](StructureDefinition-VmdDevice.html)) |
 | Channel | [Device]({{site.data.fhir.path}}device.html) (according to the [Channel Device profile](StructureDefinition-ChannelDevice.html)) |
@@ -26,10 +26,10 @@ Please refer to the Mappings tab of each profile page for mapping ISO/IEEE 11073
 For each of the measurements Height and Weight is an Observation Resource required with mandatory requirements. Observation.subject shall be present and refer to a Patient resource or MDS Device resource.
 
 Summary of the mandatory requirements for the Height:
-- One code in Observation.code which must have
-    - a fixed Observation.code.coding.system='http://loinc.org' 
-    - a fixed Observation.code.coding.code= '8302-2'
-    - 8306-3 -Body height - lying (i.e., body length - typically used for infants) can be included as an additional observation code. Other additional Codings are allowed in Observation.code- e.g. more specific LOINC Codes, SNOMED CT concepts, system specific codes. All codes should have a system value.
+- A coding in Observation.category for vital-signs with system='http://terminology.hl7.org/CodeSystem/observation-category' and code='vital-signs'
+- A coding in Observation.code for Body Height with system='http://loinc.org' and code='8302-2'
+- A coding in Observation.code for Body Height - Lying with system='http://loinc.org' and code='8306-3' in compliance with the [FHIR Vital Signs Body Length profile]({{site.data.fhir.path}}observation-bodyheight.html)
+- Other additional Codings are allowed in Observation.code- e.g. more specific LOINC Codes, SNOMED CT concepts, system specific codes. All codes should have a system value.
 - Either one Observation.valueQuantity or, if there is no value, one code in Observation.DataAbsentReason
     - Each Observation.valueQuantity must have:
         - One numeric value in Observation.valueQuantity.value
@@ -37,9 +37,7 @@ Summary of the mandatory requirements for the Height:
         - a UCUM unit code in Observation.valueQuantity.code = 'cm', or '[in_i]'
 
 Summary of the mandatory requirements for the Weight:
-- One code in Observation.code which must have
-    - a fixed Observation.code.coding.system='http://loinc.org'
-    - a fixed Observation.code.coding.code= '29463-7'
+- A coding in Observation.code for Body Weight with system='http://loinc.org' and code='29463-7'
     - Other additional Codings are allowed in Observation.code- e.g. more specific LOINC Codes, SNOMED CT concepts, system specific codes. All codes should have a system value.
 - Either one Observation.valueQuantity or, if there is no value, one code in Observation.DataAbsentReason
     - Each Observation.valueQuantity must have:
@@ -53,9 +51,7 @@ Information about the mother should be included in the FHIR Resource RelatedPers
 For each of the measurements GestationalAge, BirthLength, BirthWeight and HeadCircumference is an Observation Resource required with mandatory requirements. Observation.subject shall be present and refer to a Patient resource or MDS Device resource.
 
 Summary of the mandatory requirements for the HeadCircumference:
-- One code in Observation.code which must have
-    - a fixed Observation.code.coding.system='http ://loinc.org'
-    - a fixed Observation.code.coding.code= '9843-4'
+- A coding in Observation.code for Head Circumference with system='http://loinc.org' and code='9843-4'
     - Other additional Codings are allowed in Observation.code- e.g. more specific LOINC Codes, SNOMED CT concepts, system specific codes. All codes should have a system value.
 - Either one Observation.valueQuantity or, if there is no value, one code in Observation.DataAbsentReason
     - Each Observation.valueQuantity must have:
@@ -65,10 +61,8 @@ Summary of the mandatory requirements for the HeadCircumference:
 
 
 Summary of the mandatory requirements for the BirthWeight:
-- One code in Observation.code which must have
-    - a fixed Observation.code.coding.system='http ://loinc.org'
-    - a fixed Observation.code.coding.code= '29463-7'
-	- an additional Observation.code.coding.code= '8339-4' shall be provided, to indicate that the value applies to an infant
+- A coding in Observation.code for Body Weight with system='http://loinc.org' and code='29463-7'
+- A coding in Observation.code for Birth Weight - Infant with system='http://loinc.org' and code='8339-4' to indicate that the value applies to an infant
     - Other additional Codings are allowed in Observation.code- e.g. more specific LOINC Codes, SNOMED CT concepts, system specific codes. All codes should have a system value.
 - Either one Observation.valueQuantity or, if there is no value, one code in Observation.DataAbsentReason
     - Each Observation.valueQuantity must have:
@@ -77,10 +71,10 @@ Summary of the mandatory requirements for the BirthWeight:
         - a UCUM unit code in Observation.valueQuantity.code = 'kg', 'g', or '[lb_av]'
 
 Summary of the mandatory requirements for the BirthLength:
-- One code in Observation.code which must have
-    - a fixed Observation.code.coding.system='http ://loinc.org'
-    - a fixed Observation.code.coding.code= '8302-2'
-	- an additional Observation.code.coding.code= '89269-5' shall be provided, to indicate that the value applies to an infant
+- A coding in Observation.category for vital-signs with system='http://terminology.hl7.org/CodeSystem/observation-category' and code='vital-signs'
+- A coding in Observation.code for Body Height with system='http://loinc.org' and code='8302-2'
+- A coding in Observation.code for Birth Length - Infant with system='http://loinc.org' and code='89269-5' to indicate that the value applies to an infant
+- A coding in Observation.code for Body Height - Lying with system='http://loinc.org' and code='8306-3' in compliance with the [FHIR Vital Signs Body Length profile]({{site.data.fhir.path}}observation-bodyheight.html)
     - Other additional Codings are allowed in Observation.code- e.g. more specific LOINC Codes, SNOMED CT concepts, system specific codes. All codes should have a system value.
 - Either one Observation.valueQuantity or, if there is no value, one code in Observation.DataAbsentReason
     - Each Observation.valueQuantity must have:
@@ -90,9 +84,7 @@ Summary of the mandatory requirements for the BirthLength:
 
 
 Summary of the mandatory requirements for the GestationalAge:
-- One code in Observation.code which must have
-    - a fixed Observation.code.coding.system='http ://loinc.org'
-    - a fixed Observation.code.coding.code= '72147-2'
+- A coding in Observation.code for Gestational Age with system='http://loinc.org' and code='72147-2'
     - Other additional Codings are allowed in Observation.code- e.g. more specific LOINC Codes, SNOMED CT concepts, system specific codes. All codes should have a system value.
 - Either one Observation.valueQuantity or, if there is no value, one code in Observation.DataAbsentReason
     - Each Observation.valueQuantity must have:
@@ -104,7 +96,7 @@ Summary of the mandatory requirements for the GestationalAge:
 For every physicalType of a Location an additional Location Resource needs to be created. If this Location is physically a part of another Location they can only be connected via a Location.partOf Reference to the other Location. It is working in the same way with the managing Organization. Both need to reference the the lowest Location or Organization in the hierarchy because the references point upwards.
 
 | IEEE 11073 SDC | HL7 FHIR Resources | Comment |
-| ---
+| --- | --- | --- |
 | LocationContextState/Identification/Root | Location.identifier.system ||
 | LocationContextState/Identification/Extension | Location.identifier.value ||
 | LocationContextState/LocationDetail/Bed | Location.physicalType | An additional Location Resource with the physicalType bd and references (Location.partOf and/or Location.managingOrganization) to another Location/Organization if the Bed is physically a part of a Location/Organization |
@@ -120,7 +112,7 @@ The WorkflowContextState should only be used if the ContextAssociation is Assoc 
 The ImagingProcedure/RequestedProcedureId can be mapped to the id of the basedOn reference, which exists when the ImagingProcedure is based on a ServiceRequest. 
 
 | IEEE 11073 SDC | HL7 FHIR Resources |
-| ---
+| --- | --- |
 | WorkflowContextState/WorkflowDetail/RequestedOrderDetail/ImagingProcedure/AccessionIdentifier/Root WorkflowContextState/WorkflowDetail/RequestedOrderDetail/ImagingProcedure/StudyInstanceUid/Root | ImagingStudy.identifier.system ||
 | WorkflowContextState/WorkflowDetail/RequestedOrderDetail/ImagingProcedure/AccessionIdentifier/Extension WorkflowContextState/WorkflowDetail/RequestedOrderDetail/ImagingProcedure/StudyInstanceUid/Extension | ImagingStudy.identifier.value |
 | WorkflowContextState/WorkflowDetail/RequestedOrderDetail/ImagingProcedure/Modality/Code | ImagingStudy.modality.code |
@@ -136,7 +128,7 @@ The WorkflowContextState should only be used if the ContextAssociation is Assoc 
 The resource ServiceRequest may be used to share relevant information required to support a referral or a transfer of care request from one practitioner or organization to another. 
 	
 | IEEE 11073 SDC Status | HL7 FHIR | Comment |
-| ---
+| --- | --- | --- |
 | WorkflowContextState/WorkflowDetail/AssignedLocation | ServiceRequest.locationReference ||
 | WorkflowContextState/WorkflowDetail/RelevantClinicalInfo | ServiceRequest.supportingInfo ||
 | WorkflowContextState/WorkflowDetail/RequestedOrderDetail/Performer | ServiceRequest.performer ||
@@ -149,7 +141,7 @@ The resource ServiceRequest may be used to share relevant information required t
 ##### Valuesets for AbstractDeviceComponentState/ActivationState:
 
 | IEEE 11073 SDC Status | HL7 FHIR Device.statusReason | Comment |
-| ---
+| --- | --- | --- |
 | On | online ||
 | NotRdy | not-ready ||
 | StndBy | standby ||
@@ -161,7 +153,7 @@ The resource ServiceRequest may be used to share relevant information required t
 ##### Valuesets for AbstractMetricState/ActivationState:
 
 | IEEE 11073 SDC Status | HL7 FHIR DeviceMetric.operationalStatus | Comment |
-| ---
+| --- | --- | --- |
 | On | on ||
 | NotRdy | off ||
 | StndBy | standby ||
@@ -173,7 +165,7 @@ The resource ServiceRequest may be used to share relevant information required t
 ##### Valuesets for MetricCategory:
 
 | IEEE 11073 SDC MetricCategory | HL7 FHIR DeviceMetric.category | Comment |
-| ---
+| --- | --- | --- |
 | Unspec | unspecified ||
 | Mrsmt | measurement ||
 | Clc | calculation ||
@@ -185,7 +177,7 @@ The resource ServiceRequest may be used to share relevant information required t
 ##### Valuesets for calibration state:
 
 | IEEE 11073 SDC ComponentCalibrationState | HL7 FHIR DeviceMetric.calibration.state | Comment |
-| --- 
+| --- | --- | --- |
 | No | not-calibrated ||
 | Req | calibration-required ||
 | Run | not-calibrated ||
@@ -196,7 +188,7 @@ The resource ServiceRequest may be used to share relevant information required t
 ##### Valuesets for calibration type:
 
 | IEEE 11073 SDC ComponentCalibrationType | HL7 FHIR DeviceMetric.calibration.type | Comment |
-| ---
+| --- | --- | --- |
 | Offset | offset ||
 | Gain | gain ||
 | TP | two-point ||
@@ -208,7 +200,7 @@ Observed values in ISO/IEEE 11073 SDC include a field that indicates measurement
 Measurement validity information is mapped to `Resource.meta.security`, `Observation.dataAbsentReason` or `Observation.component.dataAbsentReason`, and `Observation.interpretation` or `Observation.component.interpretation` elements. The interpretation value set binding is extended to add relevant codes from the [Measurement status codes](CodeSystem-measurement-status.html) defined in this implementation guide.
 
 | MeasurementValidity | meta.security | dataAbsentReason | interpretation |
-| ---
+| --- | --- | --- | --- |
 | Vld | REALIABLE |||
 | Vldated  | HRELIABLE | | validated-data |
 | Ong | | temp-unknown|msmt-ongoing|

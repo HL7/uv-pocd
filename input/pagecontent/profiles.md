@@ -21,6 +21,28 @@ A point-of-care device model is made of multiple resource instances and the rela
 <figcaption><i>PoCD Profiles diagram showing FHIR resource profiles and references</i></figcaption>
 </figure>
 
+### Observation Subject Guidance
+
+The Observation profiles in this Implementation Guide require the `subject` element to be present and shall reference a Patient resource or MDS Device resource.
+
+**Patient References**: A Patient resource is referenced when the observation is about a patient, such as a physiological measurement or vital sign. This is the typical use case for clinical observations.
+
+**Device References**: An MDS Device resource is referenced when the observation is about the device itself, such as a device setting or a technical device measurement (e.g., ventilator air pressure or infusion rate). For therapeutic devices, device settings are often patient-related but are documented as observations about the device resource. When an observation's subject points to a Device resource, the associated patient can be found using the Device.patient reference.
+
+**Version-Specific References for Device Observations**: When an observation's subject points to a Device resource with dynamic content that is relevant to the observation (such as configuration parameters or settings that changed over time), a version-specific reference should be used. This ensures that for retrospective analysis, the exact state of the device's patient reference at the time the observation was made is available, rather than potentially resolving to a different patient reference at a later time.
+
+**Mandatory Subject and Handling Unknown Patient Demographics**: The `subject` element is mandatory in all Observation profiles in this Implementation Guide to ensure compatibility with the FHIR Vital Signs Profile. In situations where patient demographics are unknown to the device—such as due to privacy concerns or because measurements are taken before the patient is admitted—implementers may create a temporary Patient resource that contains only a unique identifier. This temporary resource can be referenced by observations and can be updated, linked to, or merged with the final Patient resource when complete demographic information becomes available. This approach maintains data integrity and allows observations to be properly contextualized while accommodating real-world device deployment scenarios.
+
+### DeviceMetric Source and Observation Device Attributes
+
+To support traceability and contextualization of observations within the device hierarchy, the PoCD profiles use two key reference elements:
+
+**DeviceMetric.source**: The `source` element in a DeviceMetric profile shall reference the MDS (Medical Device System) Device resource. This establishes the connection from the metric (the lowest level of the hierarchy) back to the root device system, enabling complete traceability of the measurement to its source device. This is essential for identifying which physical device produced the measurement, particularly in environments with multiple connected devices.
+
+**Observation.device**: The `device` element in an Observation profile shall reference the DeviceMetric resource that provided the measurement. This direct connection allows consumers of observation data to access the full device context and hierarchy by following the reference chain: Observation → DeviceMetric → MDS Device (and from there to VMDs and Channels as needed). This approach supports the IEEE 11073 hierarchical model and ensures observations can be properly contextualized with all relevant device metadata.
+
+These references together ensure that clinical systems and archives can reconstruct the complete device configuration and hierarchy for any observation, supporting safe clinical use and comprehensive retrospective analysis.
+
 ### Must Support
 
 For the profiles listed below, `mustSupport` set to true on data elements (flagged with a <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span> in table view) shall be interpreted as follows:

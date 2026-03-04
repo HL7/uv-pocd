@@ -131,7 +131,38 @@ Future capabilities are planned for this General PoCD IG including:
 2. Device Events & Alerts including:
   * Basic PCD ACM / IEC 60601-1-8 reporting
   * Status notifications back to the source Device
-  
+
+### References and External Resources
+
+This Implementation Guide builds upon and references the following standards, guides, and external sources:
+
+#### FHIR Implementation Guides
+
+- [Personal Health Device (PHD) Implementation Guide](http://hl7.org/fhir/uv/phd/) - Focuses on wellness and chronic disease management devices used by nonprofessionals in home and exercise settings
+
+#### IEEE 11073 Medical Device Communications Standards
+
+- **IEEE 11073-10101: Medical Device Communication - Nomenclature** - Defines the standard nomenclature and information codification for medical device communications
+- **IEEE 11073-10201: Domain Information Model (DIM)** - Defines the conceptual model for medical device data and nomenclature used across the IEEE 11073 suite
+- **IEEE 11073-10207: Service-Oriented Device Exchange Protocol (SDC)** - Defines service-oriented architecture for medical device communication
+
+#### IHE Patient Care Device (PCD) Profiles
+
+- **IHE PCD-01: Device Enterprise Communications (DEC)** - Profile for reporting device observations to enterprise systems
+- **IHE PCD-03: Alert Communication Management (ACM)** - Profile for communicating physiological and technical alerts
+- **IHE PCD-04: Infusion Pump Event Communication (IPEC)** - Profile for infusion pump-related communications
+- **IHE PCD-05: Implantable Device Cardiac Observations (IDCO)** - Profile for implantable cardiac device observations
+- **IHE PCD-06: Point-of-Care Infusion Verification (PIV)** - Profile for infusion verification
+- **IHE PCD-07: Point-of-Care Identity Management (PCIM)** - Profile for device and patient identity management
+
+#### Other HL7 Standards
+
+- **HL7 V2.x** - Messaging standard for healthcare information exchange, referenced for compatibility and migration considerations
+
+#### Other Nomenclature Standards
+- **LOINC** - Logical Observation Identifiers Names and Codes, used for terminology mapping of observations
+- **SNOMED CT** - Systematized Nomenclature of Medicine Clinical Terms, used for clinical terminology
+ 
   
   
 
