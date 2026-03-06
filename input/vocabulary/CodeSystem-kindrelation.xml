@@ -10,7 +10,7 @@
   <status value="draft" />
   <experimental value="false" />
   <date value="2020-05-12" />
-  <description value="CodeSystem for IEEE 11073-10207 Relation/Kind" />
+  <description value="CodeSystem for IEEE 11073-10207 Relation/Kind. The 'pm' namespace prefix refers to the BICEPS Participant Model (pm), which is the Domain Information Model defined in IEEE 11073-10207 Service-Oriented Device Exchange Protocol Specification (BICEPS). BICEPS (Basic Integrated Clinical Environment Protocol Specification) is the XML schema representation of the IEEE 11073-10201 point-of-care medical device communication model." />
   <caseSensitive value="false" />
   <content value="complete" />
   <concept>
