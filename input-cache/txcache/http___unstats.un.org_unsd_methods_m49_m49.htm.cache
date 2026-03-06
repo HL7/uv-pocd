@@ -155,7 +155,6 @@ v: {
   "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
   "server" : "https://tx.fhir.org/r4",
   "diagnostics" : "0ms tx-op\n1ms http://unstats.un.org/unsd/methods/m49/m49.htm/vs: Validate \"[http://unstats.un.org/unsd/methods/m49/m49.htm#001 (\"undefined\")]\"\n1ms http://unstats.un.org/unsd/methods/m49/m49.htm/vs: Check \"http://unstats.un.org/unsd/methods/m49/m49.htm#001\"\n1ms http://unstats.un.org/unsd/methods/m49/m49.htm/vs: CodeSystem found: http://unstats.un.org/unsd/methods/m49/m49.htm|null for http://unstats.un.org/unsd/methods/m49/m49.htm\n1ms http://unstats.un.org/unsd/methods/m49/m49.htm/vs: check code in (http://unstats.un.org/unsd/methods/m49/m49.htm) at Coding\n1ms http://unstats.un.org/unsd/methods/m49/m49.htm/vs: Code \"001\" found in http://unstats.un.org/unsd/methods/m49/m49.htm|null",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -182,9 +181,89 @@ v: {
   "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
   "server" : "https://tx.fhir.org/r4",
   "diagnostics" : "0ms tx-op\n1ms http://hl7.org/fhir/ValueSet/jurisdiction--2|4.0.1: Analysing http://hl7.org/fhir/ValueSet/jurisdiction--2|4.0.1 for validation purposes\n1ms http://hl7.org/fhir/ValueSet/jurisdiction--2|4.0.1: Parameters: disp-lang=en-US, generate-narrative, default-to-latest\n1ms http://hl7.org/fhir/ValueSet/jurisdiction--2|4.0.1: Prepare include[0]: \"(http://unstats.un.org/unsd/methods/m49/m49.htm)(class=region)\"\n1ms http://hl7.org/fhir/ValueSet/jurisdiction--2|4.0.1: CodeSystem found: \"http://unstats.un.org/unsd/methods/m49/m49.htm|null\"\n1ms http://hl7.org/fhir/ValueSet/jurisdiction--2|4.0.1: Validate \"[http://unstats.un.org/unsd/methods/m49/m49.htm#001 (\"undefined\")]\"\n1ms http://hl7.org/fhir/ValueSet/jurisdiction--2|4.0.1: Check \"http://unstats.un.org/unsd/methods/m49/m49.htm#001\"\n1ms http://hl7.org/fhir/ValueSet/jurisdiction--2|4.0.1: CodeSystem found: http://unstats.un.org/unsd/methods/m49/m49.htm|null for http://unstats.un.org/unsd/methods/m49/m49.htm\n1ms http://hl7.org/fhir/ValueSet/jurisdiction--2|4.0.1: check code in (http://unstats.un.org/unsd/methods/m49/m49.htm)(class=region) at Coding\n1ms http://hl7.org/fhir/ValueSet/jurisdiction--2|4.0.1: Filter class = region: Code \"001\" found in http://unstats.un.org/unsd/methods/m49/m49.htm|null",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+  "code" : "urn:iso:std:iso:3166#US"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+      "filter" : [{
+        "property" : "class",
+        "op" : "=",
+        "value" : "region"
+      }]
+    }]
+  }
+}, "langs":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "noAbstract":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "x-system-cache-id",
+    "valueString" : "dc8fd4bc-091a-424a-8a3b-6198ef146891"
+  },
+  {
+    "name" : "defaultDisplayLanguage",
+    "valueCode" : "en-US"
+  }]
+}}####
+v: {
+  "code" : "urn:iso:std:iso:3166#US",
+  "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+  "severity" : "error",
+  "error" : "Code 'urn:iso:std:iso:3166#US' not found in filter set; The provided code 'http://unstats.un.org/unsd/methods/m49/m49.htm#urn:iso:std:iso:3166#US' was not found in the value set 'urn:uuid:ca214fdb-0788-4841-aee8-207b280c596e'; Unknown code 'urn:iso:std:iso:3166#US' in the CodeSystem 'http://unstats.un.org/unsd/methods/m49/m49.htm'",
+  "class" : "UNKNOWN",
+  "server" : "https://tx.fhir.org/r4",
+  "diagnostics" : "Local Error: The local terminology server cannot handle this request. Server Error: Code 'urn:iso:std:iso:3166#US' not found in filter set; The provided code 'http://unstats.un.org/unsd/methods/m49/m49.htm#urn:iso:std:iso:3166#US' was not found in the value set 'urn:uuid:ca214fdb-0788-4841-aee8-207b280c596e'; Unknown code 'urn:iso:std:iso:3166#US' in the CodeSystem 'http://unstats.un.org/unsd/methods/m49/m49.htm'",
+  "unknown-systems" : "",
+  "issues" : {
+  "resourceType" : "OperationOutcome",
+  "issue" : [{
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString" : "Unknown_Code_in_Version"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-server",
+      "valueUrl" : "https://tx.fhir.org/r4"
+    }],
+    "severity" : "error",
+    "code" : "code-invalid",
+    "details" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+        "code" : "invalid-code"
+      }],
+      "text" : "Unknown code 'urn:iso:std:iso:3166#US' in the CodeSystem 'http://unstats.un.org/unsd/methods/m49/m49.htm'"
+    },
+    "expression" : ["Coding.code"]
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString" : "None_of_the_provided_codes_are_in_the_value_set_one"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-server",
+      "valueUrl" : "https://tx.fhir.org/r4"
+    }],
+    "severity" : "error",
+    "code" : "code-invalid",
+    "details" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+        "code" : "not-in-vs"
+      }],
+      "text" : "The provided code 'http://unstats.un.org/unsd/methods/m49/m49.htm#urn:iso:std:iso:3166#US' was not found in the value set 'urn:uuid:ca214fdb-0788-4841-aee8-207b280c596e'"
+    },
+    "expression" : ["Coding.code"]
+  }]
 }
 
 }
