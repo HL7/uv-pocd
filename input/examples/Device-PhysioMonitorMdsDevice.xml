@@ -5,13 +5,9 @@
     <profile value="http://hl7.org/fhir/uv/pocd/StructureDefinition/MdsDevice"/>
   </meta>
   <extension url="http://hl7.org/fhir/uv/pocd/StructureDefinition/approved-jurisdictions">
-    <valueCodeableConcept>
-      <coding>
-        <system value="urn:iso:std:iso:3166"/>
-        <code value="US"/>
-        <display value="United States of America (the)"/>
-      </coding>
-    </valueCodeableConcept>
+    <extension url="approvedJurisdiction">
+      <valueUri value="urn:iso:std:iso:3166#US"/>
+    </extension>
   </extension>
   <extension url="http://hl7.org/fhir/uv/pocd/StructureDefinition/operator">
     <valueReference>
