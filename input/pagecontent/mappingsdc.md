@@ -30,7 +30,7 @@ Summary of the mandatory requirements for the Height:
 - A coding in Observation.code for Body Height with system='http://loinc.org' and code='8302-2'
 - A coding in Observation.code for Body Height - Lying with system='http://loinc.org' and code='8306-3' in compliance with the [FHIR Vital Signs Body Length profile]({{site.data.fhir.path}}observation-bodyheight.html)
 - Other additional Codings are allowed in Observation.code- e.g. more specific LOINC Codes, SNOMED CT concepts, system specific codes. All codes should have a system value.
-- Either one Observation.valueQuantity or, if there is no value, one code in Observation.DataAbsentReason
+- Either one Observation.valueQuantity or, if there is no value, one code in Observation.dataAbsentReason
     - Each Observation.valueQuantity must have:
         - One numeric value in Observation.valueQuantity.value
         - a fixed Observation.valueQuantity.system="http://unitsofmeasure.org"
@@ -39,21 +39,21 @@ Summary of the mandatory requirements for the Height:
 Summary of the mandatory requirements for the Weight:
 - A coding in Observation.code for Body Weight with system='http://loinc.org' and code='29463-7'
     - Other additional Codings are allowed in Observation.code- e.g. more specific LOINC Codes, SNOMED CT concepts, system specific codes. All codes should have a system value.
-- Either one Observation.valueQuantity or, if there is no value, one code in Observation.DataAbsentReason
+- Either one Observation.valueQuantity or, if there is no value, one code in Observation.dataAbsentReason
     - Each Observation.valueQuantity must have:
         - One numeric value in Observation.valueQuantity.value
         - a fixed Observation.valueQuantity.system="http://unitsofmeasure.org"
         - a UCUM unit code in Observation.valueQuantity.code = 'kg', 'g', or '[lb_av]'
 
 #### Neonatal Patient
-Information about the mother should be included in the FHIR Resource RelatedPerson. RelatedPerson.patient should be used for the reference of the patient this RelatedPerson is related to. The relationship can be modeled by using RelatedPerson.relationship with the terminology binding MTH, to express that the RelatedPerson is the mother.
+Information about the mother should be included in the FHIR Resource RelatedPerson. RelatedPerson.patient should be used to reference the patient this RelatedPerson is related to. The relationship can be modeled by using RelatedPerson.relationship with the terminology binding MTH, to express that the RelatedPerson is the mother.
 
 For each of the measurements GestationalAge, BirthLength, BirthWeight and HeadCircumference is an Observation Resource required with mandatory requirements. Observation.subject shall be present and refer to a Patient resource or MDS Device resource.
 
 Summary of the mandatory requirements for the HeadCircumference:
 - A coding in Observation.code for Head Circumference with system='http://loinc.org' and code='9843-4'
     - Other additional Codings are allowed in Observation.code- e.g. more specific LOINC Codes, SNOMED CT concepts, system specific codes. All codes should have a system value.
-- Either one Observation.valueQuantity or, if there is no value, one code in Observation.DataAbsentReason
+- Either one Observation.valueQuantity or, if there is no value, one code in Observation.dataAbsentReason
     - Each Observation.valueQuantity must have:
         - One numeric value in Observation.valueQuantity.value
         - a fixed Observation.valueQuantity.system="http://unitsofmeasure.org"
@@ -64,7 +64,7 @@ Summary of the mandatory requirements for the BirthWeight:
 - A coding in Observation.code for Body Weight with system='http://loinc.org' and code='29463-7'
 - A coding in Observation.code for Birth Weight - Infant with system='http://loinc.org' and code='8339-4' to indicate that the value applies to an infant
     - Other additional Codings are allowed in Observation.code- e.g. more specific LOINC Codes, SNOMED CT concepts, system specific codes. All codes should have a system value.
-- Either one Observation.valueQuantity or, if there is no value, one code in Observation.DataAbsentReason
+- Either one Observation.valueQuantity or, if there is no value, one code in Observation.dataAbsentReason
     - Each Observation.valueQuantity must have:
         - One numeric value in Observation.valueQuantity.value
         - a fixed Observation.valueQuantity.system="http://unitsofmeasure.org"
@@ -76,7 +76,7 @@ Summary of the mandatory requirements for the BirthLength:
 - A coding in Observation.code for Birth Length - Infant with system='http://loinc.org' and code='89269-5' to indicate that the value applies to an infant
 - A coding in Observation.code for Body Height - Lying with system='http://loinc.org' and code='8306-3' in compliance with the [FHIR Vital Signs Body Length profile]({{site.data.fhir.path}}observation-bodyheight.html)
     - Other additional Codings are allowed in Observation.code- e.g. more specific LOINC Codes, SNOMED CT concepts, system specific codes. All codes should have a system value.
-- Either one Observation.valueQuantity or, if there is no value, one code in Observation.DataAbsentReason
+- Either one Observation.valueQuantity or, if there is no value, one code in Observation.dataAbsentReason
     - Each Observation.valueQuantity must have:
         - One numeric value in Observation.valueQuantity.value
         - a fixed Observation.valueQuantity.system="http://unitsofmeasure.org"
@@ -86,14 +86,14 @@ Summary of the mandatory requirements for the BirthLength:
 Summary of the mandatory requirements for the GestationalAge:
 - A coding in Observation.code for Gestational Age with system='http://loinc.org' and code='72147-2'
     - Other additional Codings are allowed in Observation.code- e.g. more specific LOINC Codes, SNOMED CT concepts, system specific codes. All codes should have a system value.
-- Either one Observation.valueQuantity or, if there is no value, one code in Observation.DataAbsentReason
+- Either one Observation.valueQuantity or, if there is no value, one code in Observation.dataAbsentReason
     - Each Observation.valueQuantity must have:
         - One numeric value in Observation.valueQuantity.value
         - a fixed Observation.valueQuantity.system="http://unitsofmeasure.org"
         - a UCUM unit code in Observation.valueQuantity.code = 'd'
 
 #### Location
-For every physicalType of a Location an additional Location Resource needs to be created. If this Location is physically a part of another Location they can only be connected via a Location.partOf Reference to the other Location. It is working in the same way with the managing Organization. Both need to reference the the lowest Location or Organization in the hierarchy because the references point upwards.
+For every physicalType of a Location an additional Location Resource needs to be created. If this Location is physically a part of another Location they can only be connected via a Location.partOf Reference to the other Location. It is working in the same way with the managing Organization. Both need to reference the lowest Location or Organization in the hierarchy because the references point upwards.
 
 | IEEE 11073 SDC | HL7 FHIR Resources | Comment |
 | --- | --- | --- |
@@ -167,7 +167,7 @@ The resource ServiceRequest may be used to share relevant information required t
 | IEEE 11073 SDC MetricCategory | HL7 FHIR DeviceMetric.category | Comment |
 | --- | --- | --- |
 | Unspec | unspecified ||
-| Mrsmt | measurement ||
+| Msrmt | measurement ||
 | Clc | calculation ||
 | Set | setting ||
 | Preset | unspecified ||
@@ -201,7 +201,7 @@ Measurement validity information is mapped to `Resource.meta.security`, `Observa
 
 | MeasurementValidity | meta.security | dataAbsentReason | interpretation |
 | --- | --- | --- | --- |
-| Vld | REALIABLE |||
+| Vld | RELIABLE |||
 | Vldated  | HRELIABLE | | validated-data |
 | Ong | | temp-unknown|msmt-ongoing|
 | Qst | UNCERTREL | | questionable|

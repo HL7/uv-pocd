@@ -45,7 +45,7 @@ These references together ensure that clinical systems and archives can reconstr
 
 ### Must Support
 
-For the profiles listed below, `mustSupport` set to true on data elements (flagged with a <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span> in table view) shall be interpreted as follows:
+For the profiles listed below, when `mustSupport` is set to true on data elements (flagged with a <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span> in table view) this shall be interpreted as follows:
 
 - Data sources shall be capable of populating the element in a resource instance if the data is available and permissions allow.
 - Data consumers shall be capable of consuming the element from the resource instance if the data is relevant to their business case.
@@ -68,9 +68,9 @@ For the profiles listed below, `mustSupport` set to true on data elements (flagg
 
 | Profile/Extension | Description |
 |---|---|
-| [Numeric DeviceMetric profile](StructureDefinition-NumericDeviceMetric.html) | StructureDefinition for DeviceMetric resources that represent numerical measurements, calculations, or settings characteristics and capabilities. |
-| [Enumeration DeviceMetric profile](StructureDefinition-EnumerationDeviceMetric.html) | StructureDefinition for DeviceMetric resources that represent coded or text status, annotations, or settings characteristics and capabilities. |
-| [Sample Array DeviceMetric profile](StructureDefinition-SampleArrayDeviceMetric.html) | StructureDefinition for DeviceMetric resources that represent real-time waveforms or wave snippets characteristics and capabilities. |
+| [Numeric DeviceMetric profile](StructureDefinition-NumericDeviceMetric.html) | StructureDefinition for DeviceMetric resources that represent numerical measurements, calculations, or settings. |
+| [Enumeration DeviceMetric profile](StructureDefinition-EnumerationDeviceMetric.html) | StructureDefinition for DeviceMetric resources that represent coded or text status, annotations, or settings. |
+| [Sample Array DeviceMetric profile](StructureDefinition-SampleArrayDeviceMetric.html) | StructureDefinition for DeviceMetric resources that represent real-time waveforms or wave snippets. |
 | [Device Instance extension](StructureDefinition-device-instance.html) | StructureDefinition that adds an instance number or label to Device or DeviceMetric. |
 | [Relation extension](StructureDefinition-relation.html) | StructureDefinition that adds relations to a DeviceMetric. |
 | [Metric availability extension](StructureDefinition-metric-availability.html) | StructureDefinition that adds metric availability to a DeviceMetric. |
