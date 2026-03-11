@@ -58,9 +58,9 @@
       <fixedUri value="approvedJurisdiction" />
     </element>
     <element id="Extension.extension:approvedJurisdiction.value[x]">
-      <path value="Extension.extension.valueCoding" />
+      <path value="Extension.extension.valueCodeableConcept" />
       <type>
-        <code value="Coding" />
+        <code value="CodeableConcept" />
       </type>
       <binding>
         <strength value="extensible" />
