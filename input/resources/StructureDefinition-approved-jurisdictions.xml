@@ -72,7 +72,7 @@
       <path value="Extension.extension" />
       <sliceName value="noApprovedJurisdictions" />
       <short value="No approved jurisdictions" />
-      <definition value="Explicit indication that the device has no approved jurisdictions. A value of false signals that the device is not approved for any region, as opposed to the jurisdiction being unknown." />
+      <definition value="Explicit indication that the device has no approved jurisdictions. A value of false signals that the device is not approved for any region, as opposed to the jurisdiction being unknown. When this extension is present, there are no approved jurisdictions (yet)." />
       <min value="0" />
       <max value="1" />
     </element>
