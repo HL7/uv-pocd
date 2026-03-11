@@ -4,7 +4,7 @@ Within the context of the ISO/IEEE 11073 Point-of-care medical device communicat
 Most object classes in ISO/IEEE 11073 DIM can be mapped to FHIR resources as outlined in the following table.
 
 | DIM Object Class | FHIR Resource |
-| ---
+| --- | --- |
 | SimpleMDS <br/>HydraMDS <br/>CompositeSingleBedMDS <br/>CompositeMultipleBedMDS | [Device]({{site.data.fhir.path}}device.html) (according to the [MDS Device profile](StructureDefinition-MdsDevice.html)) and <br/>[Location]({{site.data.fhir.path}}location.html) (if needed) |
 | VMD | [Device]({{site.data.fhir.path}}device.html) (according to the [VMD Device profile](StructureDefinition-VmdDevice.html)) |
 | Channel | [Device]({{site.data.fhir.path}}device.html) (according to the [Channel Device profile](StructureDefinition-ChannelDevice.html)) |
@@ -24,7 +24,7 @@ Observed values in ISO/IEEE 11073 DIM include a bit field that indicates measure
 Measurement status information is mapped to `Resource.meta.security`, `Observation.dataAbsentReason` or `Observation.component.dataAbsentReason`, and `Observation.interpretation` or `Observation.component.interpretation` elements. The interpretation value set binding is extended to add relevant codes from the [Measurement status codes](CodeSystem-measurement-status.html) defined in this implementation guide.
 
 | MeasurementStatus Bit | meta.security | dataAbsentReason | interpretation |
-| ---
+| --- | --- | --- | --- |
 | invalid (0) | UNRELIABLE | error | |
 | questionable (1) | UNCERTREL | | questionable |
 | not-available (2) | | not-performed | |

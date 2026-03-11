@@ -11,7 +11,7 @@ especially [Chapter 2.A](http://www.hl7.eu/HL7v2x/v27/std27/ch02a.html) for data
 which have some differences from FHIR data types
 
 - The [IHE Patient Care Devices Technical Framework](https://www.ihe.net/resources/technical_frameworks/#dev), 
-Volume 2, Transactions ([download PDF](https://www.ihe.net/uploadedFiles/Documents/PCD/IHE_PCD_TF_Vol2.pdf`), 
+Volume 2, Transactions ([download PDF](https://www.ihe.net/uploadedFiles/Documents/PCD/IHE_PCD_TF_Vol2.pdf)), 
 Section 3.x, for specifics on which
 HL7 V2 segments and fields are used in the profile, their data types, and usage notes.
 This document is the source of the information in the tables of this Guide.
@@ -25,7 +25,7 @@ Some device systems and gateways will have limited information about patient ide
 The implementer of a system creating and organizing links among the FHIR resources
 must use their understanding of the capabilities of the devices being interfaced,
 the context or contexts for their implementation,
-including the sources for authorative patient identity, location, and reliable information 
+including the sources for authoritative patient identity, location, and reliable information 
 on the associations between particular patients and particular device instances
 to making an adequate, patient-safe, set of FHIR resources within that context.
 
@@ -40,12 +40,12 @@ to making an adequate, patient-safe, set of FHIR resources within that context.
 |Field ID|DT|Card.|TBL#|HL7 Field Name|FHIR Mapping|NOTES|
 | --- | --- | --- | --- | --- | --- | --- |
 |OBX-2|ID|[0..1]|125|Value Type||Identifies the kind of data in OBX-5 Observation Value. Ex. NM Numeric, NA Numeric Array|
-|OBX-3|CWE|[1..1]||Observation Identifier|Observation.code|Identifers the observation according to a coding system.|
+|OBX-3|CWE|[1..1]||Observation Identifier|Observation.code|Identifiers the observation according to a coding system.|
 |OBX-4|ST|[1..1]||Observation Sub-ID||See Interpretation of OBX-4 Observation Sub-ID in IHE PCD-01|
-|OBX-5|Varies|[0..1]||Observation Value|Observation.value[x]|Kind of FHIR value mapped to depends on HL7 V2 Value Type. Ex. For NM Numeric Value Type, will map to valueQuantity. Other common mappings NA Numeric Array -> SampledData, ST String Data -> ValueString|
+|OBX-5|Varies|[0..1]||Observation Value|Observation.value[x]|Kind of FHIR value mapped to depends on HL7 V2 Value Type. Ex. For NM Numeric Value Type, will map to valueQuantity. Other common mappings NA Numeric Array -> SampledData, ST String Data -> valueString|
 |OBX-6|CWE|[0..1]||Units||Where Units are applicable to Observation Value, it will map within the FHIR Observation.value[x]. Ex. valueQuantity.unit|
 |OBX-7|ST|[0..1]||References Range|Observation.referenceRange|Range of values inside of which the measurement is considered normal for the condition of the patient.|
-|OBX-8|IS|[0..1]|78|Abnormal Flags|Observation.interpretation|See note below on OBX-8 Abnormal Flags in PCD-01`|
+|OBX-8|IS|[0..1]|78|Abnormal Flags|Observation.interpretation|See note below on OBX-8 Abnormal Flags in PCD-01|
 |OBX-11|ID|[1..1]|85|Observation Result Status||See table Observation result status|
 |OBX-16|XCN|[0..1]||Responsible Observer|Observation.performer|Some devices support entry of observer information. If available, this information should be provided.|
 |OBX-18|EI|[0..1]||Equipment Instance Identifier||A unique identifier of the particular piece of equipment used in the observation.|
@@ -56,6 +56,7 @@ to making an adequate, patient-safe, set of FHIR resources within that context.
 
 #### OBX-3 Observation Identifier. PCD-01 uses the IEEE 11073-10101 Nomenclature Standard. In FHIR, for observations 
 in the Vital Signs category, the corresponding LOINC code must also be given. 
+For other observations, for user convenience, LOINC codes should be given where a mapping is available (see ConceptMap resource available on [loinc.org](https://loinc.org/collaboration/ieee/)). 
 Equivalent codes in other code systems such as SNOMED may also be given.
 
 #### OBX-4 Observation Sub-ID
@@ -64,7 +65,7 @@ within a VMD), and Metrics (individual measurement objects supported by the devi
 the profile, it is a 4-tuple of nonzero positive integers separated by dots (periods), 
 where the first element identifies the Medical Device System (MDS), the second identifies 
 the VMD, the third identifies the channel, and the fourth identifies the Metric.
-Each of these integer elements maps to a hierachical level of the containment tree.
+Each of these integer elements maps to a hierarchical level of the containment tree.
 They can be used to look up attributes in "device-related" OBX segments relating to
 each logical element (MDS, VMD, Channel, Metric). The "device-related" elements have
 a special form for the Sub-ID with trailing zero elements identifying the logical level
@@ -74,7 +75,7 @@ a VMD, two a channel, and one a metric. See the IHE PCD Technical Framework for 
 #### OBX-5 Observation Value 
 Kind of FHIR value mapped to depends on HL7 V2 Value Type. 
 Ex. For NM Numeric Value Type, will map to valueQuantity. 
-Other common mappings NA Numeric Array -> SampledData, ST String Data -> ValueString.
+Other common mappings NA Numeric Array -> SampledData, ST String Data -> valueString.
 See HL7 V2.7 Specification and FHIR Specification for other cases.
 
 #### OBX-7 Reference Range. 
@@ -111,7 +112,7 @@ which is normally the character '~'.
 |calibration-ongoing(3),|CAL|R|
 |test-data(4),|TEST|R|
 |demo-data(5),|DEMO|R|
-|validated-data(8),|#NAME?||F|
+|validated-data(8),|VAL||F|
 |early-indication(9), -- early estimate of value|EARLY|R|
 |msmt-ongoing(10), -- indicates that a new measurement is just being taken -- (episodic)|BUSY|X|
 |msmt-state-in-alarm(14), -- indicates that the metric has an active alarm condition|ALACT|R|
@@ -127,6 +128,18 @@ which is normally the character '~'.
 |OFF|Yes|Numeric measurement function is available but has been deactivated by user.|No value is provided in OBX-5.|
 |>|N|Above absolute high-off instrument scale.|Provide the high-off instrument scale number in OBX-5 if available.|
 |<|N|Below absolute low-off instrument scale.|Provide the low-off instrument scale number in OBX-5 if available.|
+{: .grid}
+
+##### OBX-8 Alert Priority
+
+Alert Priority indicates the severity level of an alert or alarm condition generated by a medical device. This IEEE 11073 classification helps receiving systems prioritize how clinical alerts are handled and displayed to clinicians.
+
+| Alert Priority | Abbreviation |
+| --- | --- |
+| no-alarm | PN |
+| low priority | PL |
+| medium priority | PM |
+| high priority | PH |
 {: .grid}
 
 #### OBX-18 Equipment Instance Identifier 
@@ -182,11 +195,11 @@ except possibly as context information.
 |MSH-25|227|HD|X|[0..0]||Receiving Network Address|
 {: .grid}
 
-### PID Patient Identification Setment
+### PID Patient Identification Segment
 
 As has been stated, other hospital systems mainly manage patient identity data and device systems or gateways 
 play little role. The few data fields that are sometimes pertinent to devices 
-or gateway implementation, mainly as searh keys for linking to other information, are included in this table.
+or gateway implementation, mainly as search keys for linking to other information, are included in this table.
 
 |SEQ|LEN|DT|OPT|RP/#|TBL#|ELEMENT NAME|
 | --- | --- | --- | --- | --- | --- | --- |

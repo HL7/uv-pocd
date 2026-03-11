@@ -4,8 +4,36 @@
     "dictionaryDefinitions": [],
     "dictionaries": [],
     "words": [
-        "FHIR"
+        "AAMI",
+        "CodeableConcept",
+        "Connectathons",
+        "Electrotechnical",
+        "FHIR",
+        "flowsheet",
+        "LOINC",
+        "RTMMS",
+        "Shtdn",
+        "SNOMED",
+        "Valuesets"
     ],
-    "ignoreWords": [],
+    "ignoreWords": [
+        "ALACT",
+        "ALINH",
+        "Calib",
+        "HRELIABLE",
+        "HTEST",
+        "IDCO",
+        "IPEC",
+        "Msrmt",
+        "Oflw",
+        "PCIM",
+        "Rcmm",
+        "StndBy",
+        "UNCERTREL",
+        "Uflw",
+        "Unspec",
+        "Vldated",
+        "msmt"
+    ],
     "import": []
 }

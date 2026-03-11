@@ -26,6 +26,14 @@
 	    <path value="Extension"/>
       <short value="Approved jurisdictions" />
 	    <definition value="List of regions in which a device or device component is approved to be operated. This corresponds to the ApprovedJurisdictions element from IEEE 11073-10207. This extension is different to Device.udiCarrier.jurisdiction, which identifies the authoritative source for UDI generation."/>
+      <min value="0" />
+      <max value="1" />
+      <constraint>
+        <key value="apj-1" />
+        <severity value="error" />
+        <human value="When noApprovedJurisdictions is present, there shall be no approvedJurisdiction extensions." />
+        <expression value="extension('noApprovedJurisdictions').exists() implies extension('approvedJurisdiction').empty()" />
+      </constraint>
 	  </element>
     <element id="Extension.extension">
       <path value="Extension.extension"/>
@@ -50,15 +58,34 @@
       <fixedUri value="approvedJurisdiction" />
     </element>
     <element id="Extension.extension:approvedJurisdiction.value[x]">
-      <path value="Extension.extension.valueUri" />
+      <path value="Extension.extension.valueCodeableConcept" />
       <type>
-        <code value="uri" />
+        <code value="CodeableConcept" />
       </type>
       <binding>
         <strength value="extensible" />
         <description value="Codes for country, country subdivision and region" />
         <valueSet value="http://hl7.org/fhir/ValueSet/jurisdiction" />
       </binding>
+    </element>
+    <element id="Extension.extension:noApprovedJurisdictions">
+      <path value="Extension.extension" />
+      <sliceName value="noApprovedJurisdictions" />
+      <short value="No approved jurisdictions" />
+      <definition value="Explicit indication that the device has no approved jurisdictions. A value of false signals that the device is not approved for any region, as opposed to the jurisdiction being unknown. When this extension is present, there are no approved jurisdictions (yet)." />
+      <min value="0" />
+      <max value="1" />
+    </element>
+    <element id="Extension.extension:noApprovedJurisdictions.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="noApprovedJurisdictions" />
+    </element>
+    <element id="Extension.extension:noApprovedJurisdictions.value[x]">
+      <path value="Extension.extension.valueBoolean" />
+      <type>
+        <code value="boolean" />
+      </type>
+      <fixedBoolean value="true" />
     </element>
 	  <element id="Extension.url">
 	    <path value="Extension.url"/>

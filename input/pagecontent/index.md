@@ -1,6 +1,6 @@
 ### Purpose
 This Implementation Guide defines the use of FHIR resources to convey measurements and supporting data 
-from acute care point-of-care medical devices (PoCD) intended for use by qualified professional to receiving systems for electronic medical records, 
+from acute care point-of-care medical devices (PoCD) intended for use by qualified professional in receiving systems for electronic medical records, 
 clinical decision support, and medical data archiving for aggregate quality measurement and research purposes. 
 It adds "deep metadata for device observations".  
 Key goals include supplementing the measurement values in an Observation resource with full provenance for traceability, and with 
@@ -13,7 +13,7 @@ Another related implementation guide focuses on home-based personal health devic
 ### Scope and Boundaries
 The scope of this Implementation Guide is a FHIR-based treatment of
 quantitative and qualitative observations communicated from point-of-care medical devices. Devices without communications capabilities are out of scope. Imaging devices are also out of scope.
-Personal devices intented for home health and fitness 
+Personal devices intended for home health and fitness 
 purposes to be used by non-professional users are excluded because they are covered by a
 related Implementation Guide. See below.
 
@@ -71,7 +71,7 @@ The Observation resource is used to record data that is retrieved from a device.
 formalized in this resource are required to conform to the 
 [Vital Signs Profile](http://hl7.org/fhir/observation-vitalsigns.html),
 for example, heart rate or respiratory rate. Many of these are often provided by a PoCD patient-connected device.  
-It is possible that in rare cases using this Implementation Guide that a device or device gateway using only ISO/IEEE 11073 terminology codes may not have sufficient information to recognize a particular meaurement as within the the Vital Signs set and determine an equivalent LOINC code and UCUM unit code for the result.  Therefor, provisions must be made to correctly make the mapping for these terms from 11073 to LOINC UCUM, and to ensure that this is done at the earliest possible point.
+It is possible that in rare cases using this Implementation Guide that a device or device gateway using only ISO/IEEE 11073 terminology codes may not have sufficient information to recognize a particular measurement as within the Vital Signs set and determine an equivalent LOINC code and UCUM unit code for the result.  Therefore, provisions must be made to correctly map these terms from 11073 to LOINC and UCUM, and to ensure that this is done at the earliest possible point.
 
 This is an area of necessary coordination between this IG and the Vital Signs Profile.
 
