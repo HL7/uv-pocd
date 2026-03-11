@@ -6,7 +6,11 @@
   </meta>
   <extension url="http://hl7.org/fhir/uv/pocd/StructureDefinition/approved-jurisdictions">
     <extension url="approvedJurisdiction">
-      <valueUri value="urn:iso:std:iso:3166#US"/>
+      <valueCoding>
+        <system value="urn:iso:std:iso:3166"/>
+        <code value="US"/>
+        <display value="United States of America (the)"/>
+      </valueCoding>
     </extension>
   </extension>
   <extension url="http://hl7.org/fhir/uv/pocd/StructureDefinition/operator">

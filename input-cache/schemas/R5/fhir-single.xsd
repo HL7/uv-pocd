@@ -47,7 +47,7 @@
   POSSIBILITY OF SUCH DAMAGE.
   
 
-  Generated on Fri, Mar 6, 2026 15:48+0000 for FHIR v6.0.0-ballot4 
+  Generated on Tue, Mar 10, 2026 17:33+0000 for FHIR v6.0.0-ballot4 
 -->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://hl7.org/fhir" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" targetNamespace="http://hl7.org/fhir" elementFormDefault="qualified" version="6.0.0-ballot4">
   <!-- Note: When using this schema with some tools, it may also be necessary to declare xmlns:xml="http://www.w3.org/XML/1998/namespace", however this causes performance issues with other tools and thus is not in the base schemas. -->
@@ -35159,7 +35159,7 @@ The origin at the TLHC of the TLHC pixel is 0.0\0.0, the BRHC of the TLHC pixel 
           </xs:element>
           <xs:element name="statusReason" minOccurs="0" maxOccurs="1" type="CodeableConcept">
             <xs:annotation>
-              <xs:documentation xml:lang="en">Indicates the reason the immunization event was not performed.</xs:documentation>
+              <xs:documentation xml:lang="en">Indicates the reason the immunization event was **not performed** or was **entered in error**.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="vaccineCode" minOccurs="1" maxOccurs="1" type="CodeableConcept">
@@ -52628,11 +52628,6 @@ Deceased patients may also be marked as inactive for the same reasons, but may b
           <xs:element name="supportingInfo" minOccurs="0" maxOccurs="unbounded" type="CodeableReference">
             <xs:annotation>
               <xs:documentation xml:lang="en">Additional clinical information about the patient or specimen that may influence the services or their interpretations. This information includes diagnosis, clinical findings and other observations. In laboratory ordering these are typically referred to as 'ask at order entry questions (AOEs).' This includes observations explicitly requested by the producer (filler) to provide context or supporting information needed to complete the order. For example, reporting the amount of inspired oxygen for blood gas measurements.</xs:documentation>
-           </xs:annotation>
-          </xs:element>
-          <xs:element name="specimen" minOccurs="0" maxOccurs="unbounded" type="Reference">
-            <xs:annotation>
-              <xs:documentation xml:lang="en">One or more specimens that the laboratory procedure will use.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="bodyStructure" minOccurs="0" maxOccurs="1" type="CodeableReference">
