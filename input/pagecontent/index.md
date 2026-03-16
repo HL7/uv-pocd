@@ -23,6 +23,8 @@ This Implementation Guide is intended for
 - implementers of other health information systems wishing to use this extended data,
 - device and device gateway system developers. 
 
+All implementers are encouraged to review the [FHIR Implementer's Safety Check List](http://hl7.org/fhir/safety.html).
+
 ### Structure of this Guide
 The "Getting Started" pages provide a general introduction to the concepts and approach used in this Implementation Guide, relevant to all potential users including clinical staff and system implementers. These pages include:
 - Overview and context for PoCD implementations
@@ -154,6 +156,10 @@ This Implementation Guide builds upon and references the following standards, gu
 - **IHE PCD-05: Implantable Device Cardiac Observations (IDCO)** - Profile for implantable cardiac device observations
 - **IHE PCD-06: Point-of-Care Infusion Verification (PIV)** - Profile for infusion verification
 - **IHE PCD-07: Point-of-Care Identity Management (PCIM)** - Profile for device and patient identity management
+
+#### FHIR Safety
+
+- [FHIR Implementer's Safety Check List](http://hl7.org/fhir/safety.html) - Important safety considerations that all FHIR implementers should review and address in their implementations
 
 #### Other HL7 Standards
 
