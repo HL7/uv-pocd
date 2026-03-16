@@ -27,8 +27,8 @@ For each of the measurements Height and Weight, an Observation resource is requi
 
 Summary of the mandatory requirements for the Height:
 - A coding in `Observation.category` for vital-signs with `system`='http://terminology.hl7.org/CodeSystem/observation-category' and `code`=`vital-signs`
-- A coding in `Observation.code` for Body Height - Lying with `system`='http://loinc.org' and `code`=`8306-3` in compliance with the [FHIR Vital Signs Body Length profile]({{site.data.fhir.path}}observation-bodyheight.html)
-- A coding in `Observation.code` for Body Height with `system`='http://loinc.org' and `code`=`8302-2`
+- A coding in `Observation.code` for Body Height - Lying with `system`='http://loinc.org' and `code`=`8306-3`
+- A coding in `Observation.code` for Body Height with `system`='http://loinc.org' and `code`=`8302-2` in compliance with the [FHIR Vital Signs Body Length profile]({{site.data.fhir.path}}observation-bodyheight.html)
 - Other additional codings are allowed in `Observation.code`- e.g. more specific LOINC Codes, SNOMED CT concepts, system specific codes. All codes should have a system value.
 - Either an `Observation.valueQuantity` or, if there is no value, a code in `Observation.dataAbsentReason`
     - The `Observation.valueQuantity` must have:
@@ -76,7 +76,7 @@ Summary of the mandatory requirements for the BirthLength:
 - A coding in `Observation.category` for vital-signs with `system`='http://terminology.hl7.org/CodeSystem/observation-category' and `code`=`vital-signs`
 - A coding in `Observation.code` for Body Height with `system`='http://loinc.org' and `code`=`8302-2`
 - A coding in `Observation.code` for Birth Length - Infant with `system`='http://loinc.org' and `code`=`89269-5` to indicate that the value applies to an infant
-- A coding in `Observation.code` for Body Height - Lying with `system`='http://loinc.org' and `code`=`8306-3` in compliance with the [FHIR Vital Signs Body Length profile]({{site.data.fhir.path}}observation-bodyheight.html)
+- A coding in `Observation.code` for Body Height - Lying with `system`='http://loinc.org' and `code`=`8306-3` 
 - Other additional codings are allowed in `Observation.code`- e.g. more specific LOINC Codes, SNOMED CT concepts, system specific codes. All codes should have a system value.
 - Either an `Observation.valueQuantity` or, if there is no value, a code in `Observation.dataAbsentReason`
     - The `Observation.valueQuantity` must have:
