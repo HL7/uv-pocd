@@ -31,7 +31,7 @@ Summary of the mandatory requirements for the Height:
 - A coding in `Observation.code` for Body Height with `system`='http://loinc.org' and `code`=`8302-2`
 - Other additional codings are allowed in `Observation.code`- e.g. more specific LOINC Codes, SNOMED CT concepts, system specific codes. All codes should have a system value.
 - Either an `Observation.valueQuantity` or, if there is no value, a code in `Observation.dataAbsentReason`
-- The `Observation.valueQuantity` must have:
+    - The `Observation.valueQuantity` must have:
         - One numeric value in `Observation.valueQuantity.value`
         - a fixed `Observation.valueQuantity.system`="http://unitsofmeasure.org"
         - a UCUM unit code in `Observation.valueQuantity.code` = `cm`, or `[in_i]`
@@ -41,7 +41,7 @@ Summary of the mandatory requirements for the Weight:
 - A coding in `Observation.code` for Body Weight with `system`='http://loinc.org' and `code`=`29463-7` in compliance with the [FHIR Vital Signs Body Weight profile]({{site.data.fhir.path}}observation-bodyweight.html)
 - Other additional codings are allowed in `Observation.code`- e.g. more specific LOINC Codes, SNOMED CT concepts, system specific codes. All codes should have a system value.
 - Either an `Observation.valueQuantity` or, if there is no value, a code in `Observation.dataAbsentReason`
-- The `Observation.valueQuantity` must have:
+    - The `Observation.valueQuantity` must have:
         - One numeric value in `Observation.valueQuantity.value`
         - a fixed `Observation.valueQuantity.system`="http://unitsofmeasure.org"
         - a UCUM unit code in `Observation.valueQuantity.code` = `kg`, `g`, or `[lb_av]`
@@ -55,7 +55,7 @@ Summary of the mandatory requirements for the HeadCircumference:
 - A coding in `Observation.code` for Head Circumference with `system`='http://loinc.org' and `code`=`9843-4`
 - Other additional codings are allowed in `Observation.code`- e.g. more specific LOINC Codes, SNOMED CT concepts, system specific codes. All codes should have a system value.
 - Either an `Observation.valueQuantity` or, if there is no value, a code in `Observation.dataAbsentReason`
-- The `Observation.valueQuantity` must have:
+    - The `Observation.valueQuantity` must have:
         - One numeric value in `Observation.valueQuantity.value`
         - a fixed `Observation.valueQuantity.system`="http://unitsofmeasure.org"
         - a UCUM unit code in `Observation.valueQuantity.code` = `cm`, or `[in_i]`
@@ -67,7 +67,7 @@ Summary of the mandatory requirements for the BirthWeight:
 - A coding in `Observation.code` for Birth Weight - Infant with `system`='http://loinc.org' and `code`=`8339-4` to indicate that the value applies to an infant
 - Other additional codings are allowed in `Observation.code`- e.g. more specific LOINC Codes, SNOMED CT concepts, system specific codes. All codes should have a system value.
 - Either an `Observation.valueQuantity` or, if there is no value, a code in `Observation.dataAbsentReason`
-- The `Observation.valueQuantity` must have:
+    - The `Observation.valueQuantity` must have:
         - One numeric value in `Observation.valueQuantity.value`
         - a fixed `Observation.valueQuantity.system`="http://unitsofmeasure.org"
         - a UCUM unit code in `Observation.valueQuantity.code` = `kg`, `g`, or `[lb_av]`
@@ -77,7 +77,7 @@ Summary of the mandatory requirements for the BirthLength:
 - A coding in `Observation.code` for Body Height with `system`='http://loinc.org' and `code`=`8302-2`
 - A coding in `Observation.code` for Birth Length - Infant with `system`='http://loinc.org' and `code`=`89269-5` to indicate that the value applies to an infant
 - A coding in `Observation.code` for Body Height - Lying with `system`='http://loinc.org' and `code`=`8306-3` in compliance with the [FHIR Vital Signs Body Length profile]({{site.data.fhir.path}}observation-bodyheight.html)
-    - Other additional codings are allowed in `Observation.code`- e.g. more specific LOINC Codes, SNOMED CT concepts, system specific codes. All codes should have a system value.
+- Other additional codings are allowed in `Observation.code`- e.g. more specific LOINC Codes, SNOMED CT concepts, system specific codes. All codes should have a system value.
 - Either an `Observation.valueQuantity` or, if there is no value, a code in `Observation.dataAbsentReason`
   - The `Observation.valueQuantity` must have:
         - One numeric value in `Observation.valueQuantity.value`
@@ -87,7 +87,7 @@ Summary of the mandatory requirements for the BirthLength:
 
 Summary of the mandatory requirements for the GestationalAge:
 - A coding in `Observation.code` for Gestational Age with `system`='http://loinc.org' and `code`=`72147-2`
-    - Other additional codings are allowed in `Observation.code`- e.g. more specific LOINC Codes, SNOMED CT concepts, system specific codes. All codes should have a system value.
+- Other additional codings are allowed in `Observation.code`- e.g. more specific LOINC Codes, SNOMED CT concepts, system specific codes. All codes should have a system value.
 - Either an `Observation.valueQuantity` or, if there is no value, a code in `Observation.dataAbsentReason`
   - The `Observation.valueQuantity` must have:
         - One numeric value in `Observation.valueQuantity.value`
@@ -169,7 +169,7 @@ The resource ServiceRequest may be used to share relevant information required t
 | IEEE 11073 SDC MetricCategory | HL7 FHIR `DeviceMetric.category` | Comment |
 | --- | --- | --- |
 | `Unspec` | `unspecified` ||
-| `Mmt` | `measurement` ||
+| `Msrmt` | `measurement` ||
 | `Clc` | `calculation` ||
 | `Set` | `setting` ||
 | `Preset` | `unspecified` ||
