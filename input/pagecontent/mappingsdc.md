@@ -23,7 +23,7 @@ Please refer to the Mappings tab of each profile page for mapping ISO/IEEE 11073
 ### Mapping Details
 
 #### Patient
-For each of the measurements Height and Weight an Observation Resource is required with mandatory data elements. `Observation.subject` shall be present and refer to a Patient resource or to an MDS Device resource.
+For each of the measurements Height and Weight, an Observation resource is required with mandatory data elements. `Observation.subject` shall be present and refer to a Patient resource or to an MDS Device resource.
 
 Summary of the mandatory requirements for the Height:
 - A coding in `Observation.category` for vital-signs with `system`='http://terminology.hl7.org/CodeSystem/observation-category' and `code`=`vital-signs`
@@ -47,9 +47,9 @@ Summary of the mandatory requirements for the Weight:
         - a UCUM unit code in `Observation.valueQuantity.code` = `kg`, `g`, or `[lb_av]`
 
 #### Neonatal Patient
-Information about the mother should be included in the FHIR Resource RelatedPerson. `RelatedPerson.patient` should be used to reference the patient this RelatedPerson is related to. The relationship can be modeled by using `RelatedPerson.relationship` with the terminology binding `MTH`, to express that the RelatedPerson is the mother.
+Information about the mother should be included in the FHIR resource RelatedPerson. `RelatedPerson.patient` should be used to reference the patient this RelatedPerson is related to. The relationship can be modeled by using `RelatedPerson.relationship` with the terminology binding `MTH`, to express that the RelatedPerson is the mother.
 
-For each of the measurements GestationalAge, BirthLength, BirthWeight and HeadCircumference an Observation Resource is required with mandatory requirements. `Observation.subject` shall be present and refer to a Patient resource or MDS Device resource.
+For each of the measurements GestationalAge, BirthLength, BirthWeight and HeadCircumference an Observation resource is required with mandatory requirements. `Observation.subject` shall be present and refer to a Patient resource or MDS Device resource.
 
 Summary of the mandatory requirements for the HeadCircumference:
 - A coding in `Observation.code` for Head Circumference with `system`='http://loinc.org' and `code`=`9843-4`
@@ -79,7 +79,7 @@ Summary of the mandatory requirements for the BirthLength:
 - A coding in `Observation.code` for Body Height - Lying with `system`='http://loinc.org' and `code`=`8306-3` in compliance with the [FHIR Vital Signs Body Length profile]({{site.data.fhir.path}}observation-bodyheight.html)
 - Other additional codings are allowed in `Observation.code`- e.g. more specific LOINC Codes, SNOMED CT concepts, system specific codes. All codes should have a system value.
 - Either an `Observation.valueQuantity` or, if there is no value, a code in `Observation.dataAbsentReason`
-  - The `Observation.valueQuantity` must have:
+    - The `Observation.valueQuantity` must have:
         - One numeric value in `Observation.valueQuantity.value`
         - a fixed `Observation.valueQuantity.system`="http://unitsofmeasure.org"
         - a UCUM unit code in `Observation.valueQuantity.code` = `cm`, or `[in_i]`
@@ -89,23 +89,23 @@ Summary of the mandatory requirements for the GestationalAge:
 - A coding in `Observation.code` for Gestational Age with `system`='http://loinc.org' and `code`=`72147-2`
 - Other additional codings are allowed in `Observation.code`- e.g. more specific LOINC Codes, SNOMED CT concepts, system specific codes. All codes should have a system value.
 - Either an `Observation.valueQuantity` or, if there is no value, a code in `Observation.dataAbsentReason`
-  - The `Observation.valueQuantity` must have:
+    - The `Observation.valueQuantity` must have:
         - One numeric value in `Observation.valueQuantity.value`
         - a fixed `Observation.valueQuantity.system`="http://unitsofmeasure.org"
         - a UCUM unit code in `Observation.valueQuantity.code` = `d`
 
 #### Location
-For every physicalType of a Location an additional Location Resource needs to be created. If this Location is physically a part of another Location they can only be connected via a `Location.partOf` Reference to the other Location. It is working in the same way with the managing Organization. Both need to reference the lowest Location or Organization in the hierarchy because the references point upwards.
+For every physicalType of a Location an additional Location resource needs to be created. If this Location is physically a part of another Location they can only be connected via a `Location.partOf` reference to the other Location. It is working in the same way with the managing Organization. Both need to reference the lowest Location or Organization in the hierarchy because the references point upwards.
 
 | IEEE 11073 SDC | HL7 FHIR Resources | Comment |
 | --- | --- | --- |
 | LocationContextState/Identification/Root | `Location.identifier.system` ||
 | LocationContextState/Identification/Extension | `Location.identifier.value` ||
-| LocationContextState/LocationDetail/Bed | `Location.physicalType` | An additional Location Resource with the physicalType `bd` and references (`Location.partOf`  and/or `Location.managingOrganization`)  to another Location/Organization if the Bed is physically a part of a Location/Organization |
-| LocationContextState/LocationDetail/Room | `Location.physicalType` | An additional Location Resource with the physicalType `ro` and references (`Location.partOf`  and/or `Location.managingOrganization`)  to another Location/Organization if the Room is physically a part of a Location/Organization |
-| LocationContextState/LocationDetail/PoC | `Organization.type` | An additional Organization Resource with the Organization type `dept` and a reference (`Organization.partOf`)  to another Organization if the PoC is part of an Organization |
-| LocationContextState/LocationDetail/Floor | `Location.physicalType` | An additional Location Resource with the physicalType `lvl` and references (`Location.partOf`  and/or `Location.managingOrganization`)  to another Location/Organization if the Floor is physically a part of a Location/Organization |
-| LocationContextState/LocationDetail/Building | `Location.physicalType` | An additional Location Resource with the physicalType `bu` and references (`Location.partOf`  and/or `Location.managingOrganization`)  to another Location/Organization if the Building is physically a part of a Location/Organization |
+| LocationContextState/LocationDetail/Bed | `Location.physicalType` | An additional Location resource with the physicalType `bd` and references (`Location.partOf`  and/or `Location.managingOrganization`)  to another Location/Organization if the Bed is physically a part of a Location/Organization |
+| LocationContextState/LocationDetail/Room | `Location.physicalType` | An additional Location resource with the physicalType `ro` and references (`Location.partOf`  and/or `Location.managingOrganization`)  to another Location/Organization if the Room is physically a part of a Location/Organization |
+| LocationContextState/LocationDetail/PoC | `Organization.type` | An additional Organization resource with the Organization type `dept` and a reference (`Organization.partOf`)  to another Organization if the PoC is part of an Organization |
+| LocationContextState/LocationDetail/Floor | `Location.physicalType` | An additional Location resource with the physicalType `lvl` and references (`Location.partOf`  and/or `Location.managingOrganization`)  to another Location/Organization if the Floor is physically a part of a Location/Organization |
+| LocationContextState/LocationDetail/Building | `Location.physicalType` | An additional Location resource with the physicalType `bu` and references (`Location.partOf`  and/or `Location.managingOrganization`)  to another Location/Organization if the Building is physically a part of a Location/Organization |
 | LocationContextState/LocationDetail/Facility | `Organization.type` | An Organization Resource with the Organization type `prov` and a reference (`Organization.partOf`)  to another Organization if the Facility is part of an Organization |
 {: .grid}
 
@@ -113,7 +113,7 @@ For every physicalType of a Location an additional Location Resource needs to be
 The WorkflowContextState should only be used if the ContextAssociation is `Assoc` (=Associated).
 The ImagingProcedure/RequestedProcedureId can be mapped to the id of the basedOn reference, which exists when the ImagingProcedure is based on a ServiceRequest. 
 
-| IEEE 11073 SDC | HL7 FHIR Resources |
+| IEEE 11073 SDC | HL7 FHIR resources |
 | --- | --- |
 | WorkflowContextState/WorkflowDetail/RequestedOrderDetail/ImagingProcedure/AccessionIdentifier/Root WorkflowContextState/WorkflowDetail/RequestedOrderDetail/ImagingProcedure/StudyInstanceUid/Root | `ImagingStudy.identifier.system` ||
 | WorkflowContextState/WorkflowDetail/RequestedOrderDetail/ImagingProcedure/AccessionIdentifier/Extension WorkflowContextState/WorkflowDetail/RequestedOrderDetail/ImagingProcedure/StudyInstanceUid/Extension | `ImagingStudy.identifier.value` |
@@ -134,7 +134,7 @@ The resource ServiceRequest may be used to share relevant information required t
 | WorkflowContextState/WorkflowDetail/AssignedLocation | `ServiceRequest.locationReference` ||
 | WorkflowContextState/WorkflowDetail/RelevantClinicalInfo | `ServiceRequest.supportingInfo` ||
 | WorkflowContextState/WorkflowDetail/RequestedOrderDetail/Performer | `ServiceRequest.performer` ||
-| WorkflowContextState/WorkflowDetail/RequestedOrderDetail/ReferringPhysician WorkflowContextState/WorkflowDetail/RequestedOrderDetail/RequestingPhysician | `ServiceRequest.requester` | The resource ServiceRequest may be used to share relevant information required to support a referral or a transfer of care request from one practitioner or organization to another. Therefore, both the RequestingPhysician and the ReferringPhysician are mapped to the `ServiceRequest.requester`. If both are existing, there should be a reference (`ServiceRequest.basedOn`)  from the RequestingPhysician to the ReferringPhysician. |
+| WorkflowContextState/WorkflowDetail/RequestedOrderDetail/ReferringPhysician WorkflowContextState/WorkflowDetail/RequestedOrderDetail/RequestingPhysician | `ServiceRequest.requester` | The resource ServiceRequest may be used to share relevant information required to support a referral or a transfer of care request from one practitioner or organization to another. Therefore, both the RequestingPhysician and the ReferringPhysician are mapped to the `ServiceRequest.requester`. If both exist, there should be a reference (`ServiceRequest.basedOn`)  from the RequestingPhysician to the ReferringPhysician. |
 | WorkflowContextState/WorkflowDetail/PerformedOrderDetail/ResultingClinicalInfo | `DiagnosticReport.result` ||
 {: .grid}
 
@@ -199,7 +199,7 @@ The resource ServiceRequest may be used to share relevant information required t
 
 ##### Measurement Validity
 Observed values in ISO/IEEE 11073 SDC include a field that indicates measurement validity. FHIR Observations do not have a single element for this purpose. Instead there is security metadata, `dataAbsentReason` for missing values, and `interpretation` to report significance of a result.  
-Measurement validity information is mapped to `Resource.meta.security`, `Observation.dataAbsentReason` or `Observation.component.dataAbsentReason`, and `Observation.interpretation` or `Observation.component.interpretation` elements. The `interpretation` value set binding is extended to add relevant codes from the [Measurement status codes](CodeSystem-measurement-status.html) defined in this implementation guide.
+Measurement validity information is mapped to `Observation.meta.security`, `Observation.dataAbsentReason` or `Observation.component.dataAbsentReason`, and `Observation.interpretation` or `Observation.component.interpretation` elements. The `interpretation` value set binding is extended to add relevant codes from the [Measurement status codes](CodeSystem-measurement-status.html) defined in this implementation guide.
 
 | MeasurementValidity | `meta.security`  | `dataAbsentReason` | `interpretation` |
 | --- | --- | --- | --- |
