@@ -618,5 +618,9 @@
       <code value="show-inherited-invariants"/>
       <value value="false"/>
     </parameter>
+    <parameter>
+      <code value="special-url"/>
+      <value value="http://terminology.hl7.org/CodeSystem/safety-classification"/>
+    </parameter>
   </definition>
 </ImplementationGuide>
