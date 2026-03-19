@@ -570,6 +570,11 @@
           <title value="RESTful Transfer"/>
           <generation value="markdown"/>
         </page>
+        <page>
+          <nameUrl value="messaging.html"/>
+          <title value="FHIR Messaging"/>
+          <generation value="markdown"/>
+        </page>
       </page>
       <page>
         <nameUrl value="profiles.html"/>
