@@ -33,6 +33,34 @@ The Observation profiles in this Implementation Guide require the `subject` elem
 
 **Mandatory Subject and Handling Unknown Patient Demographics**: The `subject` element is mandatory in all Observation profiles in this Implementation Guide to ensure compatibility with the FHIR Vital Signs Profile. In situations where patient demographics are unknown to the device—such as due to privacy concerns or because measurements are taken before the patient is admitted—implementers may create a temporary Patient resource that contains only a unique identifier. This temporary resource can be referenced by observations and can be updated, linked to, or merged with the final Patient resource when complete demographic information becomes available. This approach maintains data integrity and allows observations to be properly contextualized while accommodating real-world device deployment scenarios.
 
+### Patient and Location Resource Handling
+
+Point-of-care devices generate observations that reference Patient and Location resources, but the device or gateway typically is not the authoritative source for these resources. This section provides guidance on how to handle Patient and Location references in different deployment scenarios.
+
+#### Reference Patterns
+
+There are three patterns for including Patient and Location references in device data, and the choice depends on the deployment context:
+
+1. **Reference existing resources**: When the destination FHIR server is the system of record for Patient and Location resources (the most common scenario in enterprise deployments), the device or gateway resolves references by searching with known identifiers before submitting observations. This requires the device or gateway to have access to patient and location identifiers, typically received through an ADT feed or device association workflow.
+
+2. **Conditional create in the bundle**: When the device or gateway has sufficient identity information but does not know whether the resource already exists on the server, it can include a Patient or Location resource in the transaction bundle with a conditional create request (`ifNoneExist`). The server will use the existing resource if found, or create a new one. This approach requires strong identifiers (such as MRN for Patient or a unique name for Location) to avoid creating duplicates. See the [RESTful Transfer](transfer.html#conditional-create) page for examples.
+
+3. **Include in the bundle**: When the device is the source of truth for the resource (rare for Patient, but possible for Location in mobile or temporary setups), the resource is included directly in the transaction bundle. This pattern should be used with caution, as it may conflict with resources managed by other systems.
+
+#### Minimum Identity Requirements
+
+For **Patient** references, the device or gateway should supply at least a medical record number (MRN) or other facility-specific identifier received from an ADT system or device association workflow. When patient demographics are unknown, see the guidance under [Observation Subject Guidance](#observation-subject-guidance) above for handling temporary Patient resources.
+
+For **Location** references, the device or gateway should supply at least a bed label or location identifier that can be matched against existing Location resources on the server. The MDS Device profile supports a `Device.location` reference for establishing the device's physical location.
+
+#### Conformance to Destination Profiles
+
+This Implementation Guide does not profile the Patient or Location resources for clinical use (Patient and Practitioner profiles exist for mapping purposes only). Implementers should conform to Patient and Location profiles required by their deployment context, such as [US Core](http://hl7.org/fhir/us/core/) or [International Patient Access (IPA)](http://hl7.org/fhir/uv/ipa/). When the device or gateway creates Patient or Location resources via conditional create, it should populate elements required by the destination server's profiles to the extent possible.
+
+#### Future Work
+
+Deployment archetypes and workflow integration patterns — including the relationship between device observations and clinical orders — are expected to be addressed in future versions of this guide as implementation experience accumulates.
+
 ### DeviceMetric Source and Observation Device Attributes
 
 To support traceability and contextualization of observations within the device hierarchy, the PoCD profiles use two key reference elements:
