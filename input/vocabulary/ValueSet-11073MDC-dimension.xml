@@ -5,13 +5,13 @@
   <meta>
     <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
   </meta>
-  <url value="http://hl7.org/fhir/uv/pocd/ValueSet/11073MDC-dimension"/>
+  <url value="http://terminology.hl7.org/ValueSet/11073MDC-dimension"/>
   <name value="MdcDimension"/>
   <title value="MDC Unit of Measurement"/>
   <status value="draft"/>
   <experimental value="false"/>
   <date value="2021-07-14"/>
-  <description value="ValueSet for the ISO/IEEE 11073-10101 Nomenclature filtered by Dimension partition."/>
+  <description value="ValueSet for the ISO/IEEE 11073-10101 Nomenclature filtered by Dimension partition. This ValueSet is intended to be part of THO (terminology.hl7.org) and the URL already assumes that."/>
   <compose>
     <include>
       <system value="urn:iso:std:iso:11073:10101"/>

@@ -4,23 +4,28 @@
   <meta>
     <profile value="http://hl7.org/fhir/StructureDefinition/shareablecodesystem" />
   </meta>
-  <url value="http://hl7.org/fhir/uv/pocd/CodeSystem/metric-availability" />
+  <url value="http://terminology.hl7.org/CodeSystem/metric-availability" />
   <name value="MetricAvailability" />
   <title value="Metric Availability" />
   <status value="draft" />
   <experimental value="false" />
   <date value="2020-12-06" />
-  <description value="CodeSystem for availability of the means that derives the metric state" />
+  <description value="CodeSystem for availability of the means that derives the metric state. This CodeSystem is intended to be part of THO (terminology.hl7.org) and the URL already assumes that." />
   <caseSensitive value="false" />
   <content value="complete" />
   <concept>
-    <code value="Intr" />
+    <code value="intr" />
     <display value="Intermittent" />
     <definition value="Stopping or ceasing for a time; alternately ceasing and beginning again."/>
   </concept>
   <concept>
-    <code value="Cont" />
+    <code value="cont" />
     <display value="Continuous" />
     <definition value="Without break, cessation, or interruption; without intervening time." />
+  </concept>
+  <concept>
+    <code value="unknown" />
+    <display value="Unknown" />
+    <definition value="The availability of the means of derivation of the metric is unknown." />
   </concept>
 </CodeSystem>

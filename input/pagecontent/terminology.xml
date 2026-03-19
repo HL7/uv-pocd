@@ -120,7 +120,7 @@
     </tr>
     <tr>
       <td>
-        <a href="ValueSet-safety.html">Safety classification value set</a>
+        <a href="ValueSet-safety-classification.html">Safety classification value set</a>
       </td>
       <td>
         <p>ValueSet for IEEE 11073-10207 SafetyClassification.</p>

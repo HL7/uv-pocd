@@ -319,7 +319,7 @@
     </resource>
     <resource>
       <reference>
-        <reference value="ValueSet/safety"/>
+        <reference value="ValueSet/safety-classification"/>
       </reference>
       <name value="Safety classification value set"/>
       <description value="ValueSet for IEEE 11073-10207 SafetyClassification."/>
@@ -617,6 +617,38 @@
     <parameter>
       <code value="show-inherited-invariants"/>
       <value value="false"/>
+    </parameter>
+    <parameter>
+      <code value="special-url"/>
+      <value value="http://terminology.hl7.org/CodeSystem/safety-classification"/>
+    </parameter>
+    <parameter>
+      <code value="special-url"/>
+      <value value="http://terminology.hl7.org/CodeSystem/measurement-status"/>
+    </parameter>
+    <parameter>
+      <code value="special-url"/>
+      <value value="http://terminology.hl7.org/ValueSet/11073MDC-dimension"/>
+    </parameter>
+    <parameter>
+      <code value="special-url"/>
+      <value value="http://terminology.hl7.org/ValueSet/11073MDC-metric"/>
+    </parameter>
+    <parameter>
+      <code value="special-url"/>
+      <value value="http://terminology.hl7.org/ValueSet/11073MDC-object"/>
+    </parameter>
+    <parameter>
+      <code value="special-url"/>
+      <value value="http://terminology.hl7.org/CodeSystem/metric-availability"/>
+    </parameter>
+    <parameter>
+      <code value="special-url"/>
+      <value value="http://terminology.hl7.org/ValueSet/metric-availability"/>
+    </parameter>
+    <parameter>
+      <code value="special-url"/>
+      <value value="http://terminology.hl7.org/ValueSet/safety-classification"/>
     </parameter>
   </definition>
 </ImplementationGuide>
