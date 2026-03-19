@@ -11,7 +11,7 @@
   <experimental value="false" />
   <date value="2020-12-06" />
   <description value="CodeSystem for availability of the means that derives the metric state" />
-  <caseSensitive value="true" />
+  <caseSensitive value="false" />
   <content value="complete" />
   <concept>
     <code value="intr" />
