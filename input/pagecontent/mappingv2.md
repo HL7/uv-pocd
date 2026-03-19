@@ -142,6 +142,41 @@ Alert Priority indicates the severity level of an alert or alarm condition gener
 | high priority | PH |
 {: .grid}
 
+##### OBX-8 FHIR Encoding
+
+The OBX-8 flags listed above do not all map directly to `Observation.interpretation`. Similar to the [Measurement Validity mapping for IEEE 11073 SDC](mappingsdc.html#measurement-validity), the full encoding uses a combination of `Observation.meta.security`, `Observation.dataAbsentReason` (or `Observation.component.dataAbsentReason`), and `Observation.interpretation` (or `Observation.component.interpretation`). The `interpretation` value set binding is extended to add relevant codes from the [Measurement status codes](CodeSystem-measurement-status.html) defined in this implementation guide.
+
+**Measurement status mapping:**
+
+| OBX-8 | MeasurementStatus | `meta.security` | `dataAbsentReason` | `interpretation` |
+| --- | --- | --- | --- | --- |
+| *(none)* | No bits set | `RELIABLE` | | |
+| INV | invalid(0) | `UNRELIABLE` | `error` | |
+| QUES | questionable(1) | `UNCERTREL` | | `questionable` |
+| NAV | not-available(2) | | `temp-unknown` | |
+| CAL | calibration-ongoing(3) | `UNCERTREL` | | `calibration-ongoing` |
+| TEST | test-data(4) | | | `test-data` |
+| DEMO | demo-data(5) | | | `demo-data` |
+| VAL | validated-data(8) | `HRELIABLE` | | `validated-data` |
+| EARLY | early-indication(9) | | | `early-indication` |
+| BUSY | msmt-ongoing(10) | | `temp-unknown` | `msmt-ongoing` |
+| ALACT | msmt-state-in-alarm(14) | | | `in-alarm` |
+| ALINH | msmt-state-al-inhibited(15) | | | `al-inhibited` |
+{: .grid}
+
+**Missing or invalid data flags mapping:**
+
+| OBX-8 | `meta.security` | `dataAbsentReason` | `interpretation` |
+| --- | --- | --- | --- |
+| NI | | `unknown` | |
+| NAV | | `temp-unknown` | |
+| OFF | | `not-performed` | |
+| > | | | `>` |
+| < | | | `<` |
+{: .grid}
+
+**Abnormality types** map directly to `Observation.interpretation` using the standard [ObservationInterpretation]({{site.data.fhir.path}}valueset-observation-interpretation.html) value set (codes N, L, LL, H, HH, A).
+
 #### OBX-18 Equipment Instance Identifier 
 
 In IHE PCD-01, the purpose of this field is to uniquely identify the source of the observation based on the EUI-64 of the Virtual Medical Device (VMD) if that has a unique identifier, or if not, the EUI-64 of the Medical Device System.
