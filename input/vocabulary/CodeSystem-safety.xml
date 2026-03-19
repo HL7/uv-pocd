@@ -7,7 +7,7 @@
   <url value="http://terminology.hl7.org/CodeSystem/safety-classification" />
   <name value="Safety" />
   <title value="Safety" />
-  <status value="draft" />
+  <status value="active" />
   <experimental value="false" />
   <date value="2020-05-12" />
   <description value="CodeSystem for IEEE 11073-10207 SafetyClassification. This CodeSystem is intended to be part of THO (terminology.hl7.org) and the URL already assumes that." />

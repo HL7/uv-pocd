@@ -13,7 +13,7 @@
   <url value="http://hl7.org/fhir/uv/pocd/StructureDefinition/SampleArrayObservation"/>
   <name value="SampleArrayObservation"/>
   <title value="Sample Array Observation profile"/>
-  <status value="draft"/>
+  <status value="active"/>
   <date value="2022-01-21"/>
   <description value="StructureDefinition for Observation resources that represent real-time waveforms or wave snippets."/>
   <contact>

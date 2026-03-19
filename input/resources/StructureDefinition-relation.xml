@@ -4,7 +4,7 @@
   <url value="http://hl7.org/fhir/uv/pocd/StructureDefinition/relation" />
   <name value="Relation" />
   <title value="Relation extension"/>
-  <status value="draft" />
+  <status value="active" />
   <date value="2022-01-16"/>
 
   <description value="Relation allows the modelling of relationships between a metric and other containment tree entries.&#xD;&#xA;Related containment tree entries are defined in Entries, whereby the flavor of a relationship can be&#xD;&#xA;set up in Kind." />

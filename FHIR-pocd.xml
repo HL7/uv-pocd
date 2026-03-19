@@ -61,6 +61,7 @@
 <artifact id="StructureDefinition/resolution" key="StructureDefinition-resolution" name="Resolution extension"/>
 <artifact id="DeviceMetric/RhythmStatusEnumerationDeviceMetric" key="DeviceMetric-RhythmStatusEnumerationDeviceMetric" name="Rhythm Status Enumeration metric example"/>
 <artifact id="Observation/RhythmStatusEnumerationObservation" key="Observation-RhythmStatusEnumerationObservation" name="Rhythm Status Enumeration observation example"/>
+<artifact id="ValueSet/safety" key="ValueSet-safety" name="Safety"/>
 <artifact id="CodeSystem/safety" key="CodeSystem-safety" name="Safety classification code system"/>
 <artifact id="ValueSet/safety-classification" key="ValueSet-safety" name="Safety classification value set"/>
 <artifact id="StructureDefinition/SampleArrayDeviceMetric" key="StructureDefinition-SampleArrayDeviceMetric" name="Sample Array DeviceMetric profile"/>

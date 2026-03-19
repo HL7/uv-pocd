@@ -7,7 +7,7 @@
   <url value="http://terminology.hl7.org/ValueSet/11073MDC-object"/>
   <name value="MdcObject"/>
   <title value="MDC Object infrastructure and Device nomenclature"/>
-  <status value="draft"/>
+  <status value="active"/>
   <experimental value="false"/>
   <date value="2021-07-14"/>
   <description value="ValueSet for the ISO/IEEE 11073-10101 Nomenclature filtered by Object partition. This ValueSet is intended to be part of THO (terminology.hl7.org) and the URL already assumes that."/>
