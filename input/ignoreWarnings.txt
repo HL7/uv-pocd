@@ -27,3 +27,8 @@ The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValue
 # Publisher process choice - can safely be ignored
 The value set expansion is too large, and only a subset has been displayed
 
+# These profiles are only used to define mappings and are not intended to be used for validation. These warnings can be ignored safely.
+Observation is labeled as an abstract type, but no concrete descendants were found (check definitions - this is usually an error unless concrete definitions are in some other package)
+Patient is labeled as an abstract type, but no concrete descendants were found (check definitions - this is usually an error unless concrete definitions are in some other package)
+Practitioner is labeled as an abstract type, but no concrete descendants were found (check definitions - this is usually an error unless concrete definitions are in some other package)
+
