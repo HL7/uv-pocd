@@ -11,7 +11,7 @@
   <status value="draft"/>
   <experimental value="false"/>
   <date value="2021-07-14"/>
-  <description value="ValueSet for the ISO/IEEE 11073-10101 Nomenclature filtered by Metric (SCADA or Settings) partition."/>
+  <description value="ValueSet for the ISO/IEEE 11073-10101 Nomenclature filtered by Metric (SCADA or Settings) partition. This ValueSet is intended to be part of THO (terminology.hl7.org) and the URL already assumes that."/>
   <compose>
     <include>
       <system value="urn:iso:std:iso:11073:10101"/>

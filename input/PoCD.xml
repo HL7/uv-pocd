@@ -640,11 +640,11 @@
     </parameter>
     <parameter>
       <code value="special-url"/>
-      <value value="http://hl7.org/fhir/metric-availability"/>
+      <value value="http://terminology.hl7.org/CodeSystem/metric-availability"/>
     </parameter>
     <parameter>
       <code value="special-url"/>
-      <value value="http://hl7.org/fhir/ValueSet/metric-availability"/>
+      <value value="http://terminology.hl7.org/ValueSet/metric-availability"/>
     </parameter>
     <parameter>
       <code value="special-url"/>

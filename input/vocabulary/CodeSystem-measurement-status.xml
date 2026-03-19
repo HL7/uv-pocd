@@ -10,7 +10,7 @@
   <status value="draft"/>
   <experimental value="false"/>
   <date value="2019-09-28"/>
-  <description value="Measurement status definitions from the ISO/IEEE 11073-10201 DIM."/>
+  <description value="Measurement status definitions from the ISO/IEEE 11073-10201 DIM. This CodeSystem is intended to be part of THO (terminology.hl7.org) and the URL already assumes that."/>
   <caseSensitive value="false"/>
   <content value="complete"/>
   <concept>

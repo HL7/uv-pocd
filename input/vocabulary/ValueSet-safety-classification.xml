@@ -10,7 +10,7 @@
     <status value="draft" />
     <experimental value="false" />
     <date value="2020-05-12" />
-    <description value="CodeSystem for IEEE 11073-10207 SafetyClassification" />
+    <description value="CodeSystem for IEEE 11073-10207 SafetyClassification. This ValueSet is intended to be part of THO (terminology.hl7.org) and the URL already assumes that." />
     <compose>
         <include>
             <system value="http://terminology.hl7.org/CodeSystem/safety-classification" />
