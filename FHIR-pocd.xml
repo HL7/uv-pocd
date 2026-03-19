@@ -61,7 +61,7 @@
 <artifact id="DeviceMetric/RhythmStatusEnumerationDeviceMetric" key="DeviceMetric-RhythmStatusEnumerationDeviceMetric" name="Rhythm Status Enumeration metric example"/>
 <artifact id="Observation/RhythmStatusEnumerationObservation" key="Observation-RhythmStatusEnumerationObservation" name="Rhythm Status Enumeration observation example"/>
 <artifact id="CodeSystem/safety" key="CodeSystem-safety" name="Safety classification code system"/>
-<artifact id="ValueSet/safety-classification" key="ValueSet-safety" name="Safety classification value set"/>
+<artifact id="ValueSet/safety-classification" key="ValueSet-safety-classification" name="Safety classification value set"/>
 <artifact id="StructureDefinition/SampleArrayDeviceMetric" key="StructureDefinition-SampleArrayDeviceMetric" name="Sample Array DeviceMetric profile"/>
 <artifact id="StructureDefinition/SampleArrayObservation" key="StructureDefinition-SampleArrayObservation" name="Sample Array Observation profile"/>
 <artifact id="CapabilityStatement/ServerCapabilityStatement" key="CapabilityStatement-ServerCapabilityStatement" name="Server CapabilityStatement"/>
