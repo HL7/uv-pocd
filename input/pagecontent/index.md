@@ -45,7 +45,7 @@ The Implementation Guide is organized around two main categories of implementers
 
 
 ### Relationship to Other Projects & Guides
-This Implementation Guide covers material related to work in other projects and guides including the Personal Health Device Implementation Guide, and IHE Patient Care Device (PCD) profiles.
+This Implementation Guide covers material related to work in other projects and guides including the Personal Health Device Implementation Guide, and IHE profiles.
 
 #### Personal Health Device IG
 The [Personal Health Device Implementation guide](http://hl7.org/fhir/uv/phd/) focuses on wellness and chronic disease management devices used mainly by nonprofessionals in home and exercise settings. 
@@ -54,17 +54,15 @@ This Point-of-Care Device Implementation Guide is focused on acute-care devices 
 
 The Personal Health Device and Point-of-Care Device guides both use information models and nomenclature from the IEEE 11073 Medical Device Communications series of standards and the guides for these two kinds of devices are being developed cooperatively in the Devices On FHIR project with a goal of consistency and ease of use by receiving systems.
 
-#### IHE Patient Care Device (PCD) Profiles
-The IHE PCD domain has developed profiles for conveying acute care device data with context using HL7 V2. The base information system and nomenclature are based on the IEEE 11073 Medical Device Communications standards, also used in this FHIR Implementation Guide. 
+#### IHE Devices (DEV) / Patient Care Device (PCD) Domain
+The [IHE Devices domain](https://www.ihe.net/ihe_domains/devices/) domain has developed profiles for conveying acute care device data with context using HL7 V2. The IHE Devices (DEV) domain is the successor to the IHE Patient Care Devices (PCD) domain.
+The base information system and nomenclature are based on the IEEE 11073 Medical Device Communications standards, also used in this FHIR Implementation Guide. 
 
-These profiles cover Device Enterprise Communications (DEC), 
-reporting device observations to enterprise systems including near-real-time 
-charting to electronic medical records, clinical decision support systems and patient data archive systems. 
-That is similar to the scope of this FHIR Implementation Guide.
+These profiles cover Device Enterprise Communications (DEC), reporting device observations to enterprise systems including near-real-time charting to electronic medical records, clinical decision support systems, and patient data archive systems. That is similar to the scope of this FHIR Implementation Guide.
 
-A planned future FHIR use case for the Devices on FHIR group is the near-real-time communication of physiological and technical alerts to clinicians, and internal device status and state transition information for systems designed to process such information. This is similar to IHE PCD Alert Communication Management (ACM) and Infusion Pump Event Communication (IPEC) profiles.
+A planned future FHIR use case for the Devices on FHIR group is the near-real-time communication of physiological and technical alerts to clinicians, and internal device status and state transition information for systems designed to process such information. This is similar to IHE DEV Alert Communication Management (ACM) and Infusion Pump Event Communication (IPEC) profiles.
 
-Other PCD profiles include Implantable Device Cardiac Observations (IDCO), Point-of-Care Infusion Verification (PIV) and Point-of-Care Identity Management (PCIM). Future versions of this Implementation Guide will extend scope to cover related functionality based on FHIR rather than HL7 V2.
+Other DEV profiles include Implantable Device Cardiac Observations (IDCO), Point-of-Care Infusion Verification (PIV), and Point-of-Care Identity Management (PCIM). Future versions of this Implementation Guide will extend scope to cover related functionality based on FHIR rather than HL7 V2.
 
 #### HL7 FHIR Profiles
 
@@ -131,7 +129,7 @@ See under "Getting Started" -> "Abbreviations and Definitions"
 Future capabilities are planned for this General PoCD IG including:
 1. Waveform Support optimized for high data volumes
 2. Device Events & Alerts including:
-  * Basic PCD ACM / IEC 60601-1-8 reporting
+  * Basic IHE DEV ACM / IEC 60601-1-8 reporting
   * Status notifications back to the source Device
 
 ### References and External Resources
@@ -140,7 +138,7 @@ This Implementation Guide builds upon and references the following standards, gu
 
 #### FHIR Implementation Guides
 
-- [Personal Health Device (PHD) Implementation Guide](http://hl7.org/fhir/uv/phd/) - Focuses on wellness and chronic disease management devices used by nonprofessionals in home and exercise settings
+- **[Personal Health Device (PHD) Implementation Guide](http://hl7.org/fhir/uv/phd/)** - Focuses on wellness and chronic disease management devices used by nonprofessionals in home and exercise settings
 
 #### IEEE 11073 Medical Device Communications Standards
 
@@ -148,27 +146,31 @@ This Implementation Guide builds upon and references the following standards, gu
 - **IEEE 11073-10201: Domain Information Model (DIM)** - Defines the conceptual model for medical device data and nomenclature used across the IEEE 11073 suite
 - **IEEE 11073-10207: Service-Oriented Device Exchange Protocol (SDC)** - Defines service-oriented architecture for medical device communication
 
-#### IHE Patient Care Device (PCD) Profiles
+These standards are available from the [IEEE Standards Association](https://standards.ieee.org/access-standards/).
 
-- **IHE PCD-01: Device Enterprise Communications (DEC)** - Profile for reporting device observations to enterprise systems
-- **IHE PCD-03: Alert Communication Management (ACM)** - Profile for communicating physiological and technical alerts
-- **IHE PCD-04: Infusion Pump Event Communication (IPEC)** - Profile for infusion pump-related communications
-- **IHE PCD-05: Implantable Device Cardiac Observations (IDCO)** - Profile for implantable cardiac device observations
-- **IHE PCD-06: Point-of-Care Infusion Verification (PIV)** - Profile for infusion verification
-- **IHE PCD-07: Point-of-Care Identity Management (PCIM)** - Profile for device and patient identity management
+#### IHE Devices (DEV) / Patient Care Device (PCD) Profiles
+IHE still uses the named transactions (PCD-01, PCD-02, etc.) for profiles within the Devices domain, although the domain itself was renamed from Patient Care Devices (PCD) to Devices (DEV) around 2019–2020.
+
+- **IHE PCD-01 / DEV-01: Device Enterprise Communications (DEC)** - Profile for reporting device observations to enterprise systems
+- **IHE PCD-03 / DEV-03: Alert Communication Management (ACM)** - Profile for communicating physiological and technical alerts
+- **IHE PCD-04 / DEV-04: Infusion Pump Event Communication (IPEC)** - Profile for infusion pump-related communications
+- **IHE PCD-05 / DEV-05: Implantable Device Cardiac Observations (IDCO)** - Profile for implantable cardiac device observations
+- **IHE PCD-06 / DEV-06: Point-of-Care Infusion Verification (PIV)** - Profile for infusion verification
+- **IHE PCD-07 / DEV-07: Point-of-Care Identity Management (PCIM)** - Profile for device and patient identity management
+
+These profiles are publicly available on the [IHE website](https://www.ihe.net/).
 
 #### FHIR Safety
 
-- [FHIR Implementer's Safety Check List](http://hl7.org/fhir/safety.html) - Important safety considerations that all FHIR implementers should review and address in their implementations
+- **[FHIR Implementer's Safety Check List](http://hl7.org/fhir/safety.html)** - Important safety considerations that all FHIR implementers should review and address in their implementations
 
 #### Other HL7 Standards
-
-- **HL7 V2.x** - Messaging standard for healthcare information exchange, referenced for compatibility and migration considerations
+- **[HL7 V2.x](https://www.hl7.org/implement/standards/product_brief.cfm?product_id=185)** - Messaging standard for healthcare information exchange, referenced for compatibility and migration considerations
 
 #### Other Nomenclature Standards
-- **LOINC** - Logical Observation Identifiers Names and Codes, used for terminology mapping of observations
-- **SNOMED CT** - Systematized Nomenclature of Medicine Clinical Terms, used for clinical terminology
- 
-  
-  
+- **[LOINC](https://loinc.org/)** - Logical Observation Identifiers Names and Codes, used for terminology mapping of observations
+- **[SNOMED CT](https://www.snomed.org/)** - Systematized Nomenclature of Medicine Clinical Terms, used for clinical terminology
+
+
+
 
