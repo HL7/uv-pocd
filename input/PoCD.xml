@@ -584,7 +584,7 @@
       <page>
         <nameUrl value="terminology.html"/>
         <title value="Terminology"/>
-        <generation value="html"/>
+        <generation value="markdown"/>
       </page>
       <page>
         <nameUrl value="artifacts.html"/>

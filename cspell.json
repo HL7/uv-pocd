@@ -6,6 +6,7 @@
     "words": [
         "AAMI",
         "CodeableConcept",
+        "codesystem",
         "Connectathons",
         "Electrotechnical",
         "FHIR",
@@ -14,6 +15,7 @@
         "RTMMS",
         "Shtdn",
         "SNOMED",
+        "valueset",
         "Valuesets"
     ],
     "ignoreWords": [
