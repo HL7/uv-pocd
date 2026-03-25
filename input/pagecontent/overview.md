@@ -84,9 +84,10 @@ cases like certain infusion pumps, or EEG modules, there is a meaningful partiti
 ##### Metrics
 At the lowest level, observations correspond to what the IEEE 11073-10101 Domain Information Model calls a 'Metric'. 
 These are not necessarily single quantitative measurements. They may be:
- - enumerations (qualitative or categorical variables, like a "mild - moderate - severe" rating).
- - or a metric may represent a set of closely related values that are best kept together and recorded as a compound value, as for example, a systolic, diastolic, and mean blood  pressure report at the same time from the same site
+ - enumerations (qualitative or categorical variables, like a "mild - moderate - severe" rating). Enumerations cover text or string-type observations, as well as CodeableConcepts, which allow for coded values with optional human-readable text.
+ - or a metric may represent a set of closely related numeric values that are best kept together and recorded as a compound value, as for example, a systolic, diastolic, and mean blood  pressure report at the same time from the same site
  - a metric may also represent a vector of quantities in a segment of a waveform.
+
 
 ##### Representing the Hierarchy in FHIR Profiles
 
