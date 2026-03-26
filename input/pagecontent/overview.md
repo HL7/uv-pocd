@@ -128,33 +128,33 @@ For details see [IHE Patient Care Device (PCD) Technical Framework Volume 2, Tra
 
 Devices are a key part of keeping current situational awareness in treating high-acuity patients. Information not normally provided in the Observation resource may be relevant to care, as, for example, is the device or one of its subsystems or measurements in standby mode or otherwise disabled because of user action. Technical metadata such as battery performance may be valuable for early warning of potential device problems.
 
-### Clinical and technical data archiving and retrospective data feed
+#### Clinical and technical data archiving and retrospective data feed
 
 It is expected that some institutions will choose to set up an archival system saving all available detail from devices as well as other data created in near real time, such as  provider notes during a procedure, including device data and context details that may not be displayed in real time. Assuming that there is such an archive system, the ability to retrieve and "look back on" all such data on request of a person or of another hospital information system can serve many use cases, including those listed. Since FHIR seems to be becoming a common interoperability medium or "lingua franca" for passing around models to retrieve data retrospectively. The strong support for search and filtering designed into FHIR are highly valuable in such uses.
 
-### Clinical decision support
+#### Clinical decision support
 
 Proper integration of clinical measurements in algorithms may depend on the method of measurement being used or even the particular model of device being used. For plug-in modules, which are modeled as Virtual Medical Devices, this information is available from the Device resource representing the module.
 
-### Clinical analytics
+#### Clinical analytics
 
 Comprehensive recording of device configuration and state information in addition to the measurements recorded supports including more kinds of information in analytics models.
 
-### Clinical engineering and technology management analytics
+#### Clinical engineering and technology management analytics
 
 In this scenario, comprehensive device configuration and state information is valuable for both real-time and post analysis of state and function of the innumerable devices that clinical engineering and healthcare technology management departments are responsible for tracking and maintaining. Devices themselves record and communicate much of this: power-up self test results, calibrations performed, operational state history, location.
 
-### Adverse event analysis
+#### Adverse event analysis
 When it is necessary to investigate an adverse event, the context information provided by thorough archiving of all background information about the state and performance of the device allows, for example, identification of specific subsystems and components of the device may have malfunctioned.
 
-### Research data feed
+#### Research data feed
 
 A key characteristic of research uses of data is the need to be able to summon up the data needed to answer unanticipated questions that are raised.
 
 
 ** The following use cases are not in this release of the Implementation Guide but are intended to be covered in the next release**
 
-### Alerting a person
+#### Alerting a person
 Devices report a rich variety of clinical and technical alerts that may require prompt or immediate action by members of the clinical care and technical teams. Current proprietary systems, and systems using the Alert Communications Management (ACM) HL7 V2 Profile serve this sector. As FHIR broadens its coverage of hospital needs, this should be supported.
 
 #### Alerting another system

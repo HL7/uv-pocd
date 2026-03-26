@@ -69,8 +69,7 @@ Introduces the IEEE 11073-10201 hierarchical device model (MDS → VMD → Chann
 **[Abbreviations and Definitions](definitions.html)**
 Reference glossary of terms, acronyms, and standard identifiers used throughout the guide.
 
-**[Technical Implementation Guidance](guidance.html)**
-Practical implementation guidance, with the following sub-pages:
+Technical Implementation Guidance is given on following sub-pages:
 
 - **[HL7 V2 Mapping](mappingv2.html)** — Maps the IHE PCD-01 / DEV-01 HL7 V2 message structure to equivalent FHIR resources, supporting migration from HL7 V2-based deployments.
 - **[Mapping from IEEE 11073-10201 DIM to FHIR](mappingdim.html)** — Tables and narrative mapping each DIM object class (MDS, VMD, Channel, Metric types) to the corresponding FHIR profile.
@@ -167,10 +166,6 @@ Clinical decision-making depends on understanding both the immediate values of d
 #### Evolution of Implementation Experience
 
 This Implementation Guide focuses on the data models and FHIR representation necessary for exchanging PoCD observations. As experience accumulates from prototype implementations and real-world deployments, further guidance on optimal connectivity patterns, throughput profiling, and operational practices for different clinical settings will be developed. The interaction between multiple implementations, including considerations of performance under different network conditions and clinical workflow integration, will inform future versions of this guide.
-
-### Abbreviations & Definitions
-
-See under "Getting Started" -> "Abbreviations and Definitions"
 
 ### Future Guide Revisions
 Future capabilities are planned for this General PoCD IG including:
