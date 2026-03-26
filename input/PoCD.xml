@@ -655,5 +655,9 @@
       <code value="special-url"/>
       <value value="http://terminology.hl7.org/ValueSet/safety-classification"/>
     </parameter>
+        <parameter>
+      <code value="special-url"/>
+      <value value="http://hl7.org/fhir/StructureDefinition/measurement-resolution"/>
+    </parameter>
   </definition>
 </ImplementationGuide>
