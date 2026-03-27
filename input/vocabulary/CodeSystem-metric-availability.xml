@@ -7,7 +7,7 @@
   <url value="http://terminology.hl7.org/CodeSystem/metric-availability" />
   <name value="MetricAvailability" />
   <title value="Metric Availability" />
-  <status value="draft" />
+  <status value="active" />
   <experimental value="false" />
   <date value="2020-12-06" />
   <description value="CodeSystem for availability of the means that derives the metric state. This CodeSystem is intended to be part of THO (terminology.hl7.org) and the URL already assumes that." />

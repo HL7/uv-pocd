@@ -4,7 +4,7 @@
   <url value="http://hl7.org/fhir/uv/pocd/StructureDefinition/operating-hours" />
   <name value="OperatingHours" />
   <title value="Operating hours extension"/>
-  <status value="draft" />
+  <status value="active" />
   <date value="2022-01-16"/>
   <description value="StructureDefinition that adds operating hours to a Device." />
   <contact>
