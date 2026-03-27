@@ -57,6 +57,9 @@
 <artifact id="Device/PhysioMonitorMdsDevice" key="Device-PhysioMonitorMdsDevice" name="Patient Monitor MDS example"/>
 <artifact id="StructureDefinition/Patient" key="StructureDefinition-Patient" name="Patient profile"/>
 <artifact id="StructureDefinition/Practitioner" key="StructureDefinition-Practitioner" name="Practitioner profile"/>
+<artifact id="StructureDefinition/reference-range" key="StructureDefinition-reference-range" name="Reference range extension"/>
+<artifact id="CodeSystem/reference-range-type" key="CodeSystem-reference-range-type" name="Reference range type code system"/>
+<artifact id="ValueSet/reference-range-type" key="ValueSet-reference-range-type" name="Reference range type value set"/>
 <artifact id="StructureDefinition/relation" key="StructureDefinition-relation" name="Relation extension"/>
 <artifact id="StructureDefinition/resolution" key="StructureDefinition-resolution" name="Resolution extension"/>
 <artifact id="DeviceMetric/RhythmStatusEnumerationDeviceMetric" key="DeviceMetric-RhythmStatusEnumerationDeviceMetric" name="Rhythm Status Enumeration metric example"/>

@@ -32,3 +32,5 @@ Observation is labeled as an abstract type, but no concrete descendants were fou
 Patient is labeled as an abstract type, but no concrete descendants were found (check definitions - this is usually an error unless concrete definitions are in some other package)
 Practitioner is labeled as an abstract type, but no concrete descendants were found (check definitions - this is usually an error unless concrete definitions are in some other package)
 
+# code system is part of the IG which has draft status. This warning can be ignored safely.
+Reference to draft CodeSystem http://hl7.org/fhir/uv/pocd/CodeSystem/reference-range-type|0.4.0

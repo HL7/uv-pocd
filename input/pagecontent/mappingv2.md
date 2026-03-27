@@ -44,7 +44,7 @@ to making an adequate, patient-safe, set of FHIR resources within that context.
 |OBX-4|ST|[1..1]||Observation Sub-ID||See Interpretation of OBX-4 Observation Sub-ID in IHE PCD-01|
 |OBX-5|Varies|[0..1]||Observation Value|Observation.value[x]|Kind of FHIR value mapped to depends on HL7 V2 Value Type. Ex. For NM Numeric Value Type, will map to valueQuantity. Other common mappings NA Numeric Array -> SampledData, ST String Data -> valueString|
 |OBX-6|CWE|[0..1]||Units||Where Units are applicable to Observation Value, it will map within the FHIR Observation.value[x]. Ex. valueQuantity.unit|
-|OBX-7|ST|[0..1]||References Range|Observation.referenceRange|Range of values inside of which the measurement is considered normal for the condition of the patient.|
+|OBX-7|ST|[0..1]||References Range|DeviceMetric (reference-range extension, type=alarm-limits); Observation.referenceRange|In PCD-01 this carries the alarm limits configured on the device. Preferred mapping is to the [reference-range extension](StructureDefinition-reference-range.html) on the associated DeviceMetric with `type` = `alarm-limits`. May also be represented as `Observation.referenceRange` on the individual Observation. See detail note below.|
 |OBX-8|IS|[0..1]|78|Abnormal Flags|Observation.interpretation|See note below on OBX-8 Abnormal Flags in PCD-01|
 |OBX-11|ID|[1..1]|85|Observation Result Status||See table Observation result status|
 |OBX-16|XCN|[0..1]||Responsible Observer|Observation.performer|Some devices support entry of observer information. If available, this information should be provided.|
@@ -78,10 +78,20 @@ Ex. For NM Numeric Value Type, will map to valueQuantity.
 Other common mappings NA Numeric Array -> SampledData, ST String Data -> valueString.
 See HL7 V2.7 Specification and FHIR Specification for other cases.
 
-#### OBX-7 Reference Range. 
-In IHE PCD-01, Reference Range gives the alarm range set by the user on the device, 
-if available in the output of the device. 
-Ex. 40-120 set for a patient for heart rate means that values outside of that range will result in an alarm condition signaled by the device.
+#### OBX-7 Reference Range
+
+In IHE PCD-01, OBX-7 carries the alarm limits configured on the device by a clinician, if the device makes them available. For example, a value of `40-120` for heart rate means that device will signal an alarm when the measured value falls outside that range.
+
+In FHIR, because these limits are a persistent configuration of the metric rather than a property of a single observation, the preferred mapping is to the [reference-range extension](StructureDefinition-reference-range.html) on the associated DeviceMetric resource:
+
+| PCD-01 OBX-7 element | FHIR mapping |
+| --- | --- |
+| Lower value (e.g. `40` from `40-120`) | `DeviceMetric.extension[reference-range].extension[low].valueQuantity` |
+| Upper value (e.g. `120` from `40-120`) | `DeviceMetric.extension[reference-range].extension[high].valueQuantity` |
+| Range type | `DeviceMetric.extension[reference-range].extension[type].valueCodeableConcept` = `alarm-limits` |
+{: .grid}
+
+The units for `low` and `high` should be taken from OBX-6 (Units). When the alarm limits are only available at the time of observation and not retained on the DeviceMetric, they may alternatively be represented using `Observation.referenceRange` on the individual Observation, with `Observation.referenceRange.type` coded to `alarm-limits` from the [reference-range-type value set](ValueSet-reference-range-type.html).
 
 #### OBX-8 Abnormal Flags
 

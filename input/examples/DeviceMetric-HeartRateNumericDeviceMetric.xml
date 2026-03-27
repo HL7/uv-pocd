@@ -31,6 +31,33 @@
   		<valueDecimal value="0.01"/>
   	</extension>
   </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/reference-range">
+    <extension url="type">
+      <valueCodeableConcept>
+        <coding>
+          <system value="http://hl7.org/fhir/uv/pocd/CodeSystem/reference-range-type"/>
+          <code value="alarm-limits"/>
+          <display value="Alarm limits"/>
+        </coding>
+      </valueCodeableConcept>
+    </extension>
+    <extension url="low">
+      <valueQuantity>
+        <value value="40"/>
+        <unit value="bpm"/>
+        <system value="urn:iso:std:iso:11073:10101"/>
+        <code value="264864"/>
+      </valueQuantity>
+    </extension>
+    <extension url="high">
+      <valueQuantity>
+        <value value="180"/>
+        <unit value="bpm"/>
+        <system value="urn:iso:std:iso:11073:10101"/>
+        <code value="264864"/>
+      </valueQuantity>
+    </extension>
+  </extension>
   <type>
     <coding>
       <system value="urn:iso:std:iso:11073:10101"/>
