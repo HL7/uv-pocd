@@ -26,7 +26,7 @@
   <concept>
     <code value="MedB" />
     <display value="Medical Class B" />
-    <definition value="AThe descriptor and related state information are intended to be used in clinical functions. The manufacturer has specified and considered a specific intended use for the data, which could result in nonserious injury. Deviations from this intended use are in the sole responsibility of the SERVICE CONSUMER." />
+    <definition value="The descriptor and related state information are intended to be used in clinical functions. The manufacturer has specified and considered a specific intended use for the data, which could result in nonserious injury. Deviations from this intended use are in the sole responsibility of the SERVICE CONSUMER." />
   </concept>
   <concept>
     <code value="MedC" />

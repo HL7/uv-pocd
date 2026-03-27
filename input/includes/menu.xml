@@ -37,6 +37,9 @@
       <li>
         <a href="transfer.html">RESTful Transfer</a>
       </li>
+      <li>
+        <a href="messaging.html">FHIR Messaging</a>
+      </li>
       <!-- <li>
         <a href="#">Safety Considerations</a>
       </li>

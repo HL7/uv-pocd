@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas-r5/fhir-single.xsd">
+  <id value="reference-range"/>
+  <url value="http://hl7.org/fhir/StructureDefinition/reference-range"/>
+  <name value="ReferenceRange"/>
+  <title value="Reference range extension"/>
+  <status value="draft"/>
+  <date value="2026-03-26"/>
+  <description value="StructureDefinition that adds a typed reference range (low, high, and range type) to a DeviceMetric."/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://www.hl7.org/Special/committees/healthcaredevices"/>
+    </telecom>
+  </contact>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
+    <valueCode value="dev"/>
+  </extension>
+  <fhirVersion value="4.0.1"/>
+  <kind value="complex-type"/>
+  <abstract value="false"/>
+  <context>
+    <type value="element"/>
+    <expression value="DeviceMetric"/>
+  </context>
+  <type value="Extension"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension"/>
+  <derivation value="constraint"/>
+  <differential>
+    <element id="Extension">
+      <path value="Extension"/>
+      <short value="Typed reference range"/>
+      <definition value="A reference range associated with a DeviceMetric, classified by type (e.g., alarm limits, physiological range, technical range)."/>
+      <constraint>
+        <key value="pocd-rr-1"/>
+        <severity value="error"/>
+        <human value="At least one of low or high limit shall be present"/>
+        <expression value="extension('low').exists() or extension('high').exists()"/>
+      </constraint>
+    </element>
+    <element id="Extension.extension">
+      <path value="Extension.extension"/>
+      <min value="1"/>
+      <slicing>
+        <discriminator>
+          <type value="value"/>
+          <path value="url"/>
+        </discriminator>
+        <rules value="open"/>
+      </slicing>
+    </element>
+    <element id="Extension.extension:low">
+      <path value="Extension.extension"/>
+      <sliceName value="low"/>
+      <short value="Low limit"/>
+      <definition value="The lower bound of the reference range."/>
+      <max value="1"/>
+    </element>
+    <element id="Extension.extension:low.url">
+      <path value="Extension.extension.url"/>
+      <fixedUri value="low"/>
+    </element>
+    <element id="Extension.extension:low.value[x]:valueQuantity">
+      <path value="Extension.extension.valueQuantity"/>
+      <min value="1"/>
+      <type>
+        <code value="Quantity"/>
+        <profile value="http://hl7.org/fhir/StructureDefinition/SimpleQuantity"/>
+      </type>
+    </element>
+    <element id="Extension.extension:high">
+      <path value="Extension.extension"/>
+      <sliceName value="high"/>
+      <short value="High limit"/>
+      <definition value="The upper bound of the reference range."/>
+      <max value="1"/>
+    </element>
+    <element id="Extension.extension:high.url">
+      <path value="Extension.extension.url"/>
+      <fixedUri value="high"/>
+    </element>
+    <element id="Extension.extension:high.value[x]:valueQuantity">
+      <path value="Extension.extension.valueQuantity"/>
+      <min value="1"/>
+      <type>
+        <code value="Quantity"/>
+        <profile value="http://hl7.org/fhir/StructureDefinition/SimpleQuantity"/>
+      </type>
+    </element>
+    <element id="Extension.extension:type">
+      <path value="Extension.extension"/>
+      <sliceName value="type"/>
+      <short value="Range type"/>
+      <definition value="Classifies the reference range as alarm limits, physiological range, or technical range."/>
+      <min value="1"/>
+      <max value="1"/>
+    </element>
+    <element id="Extension.extension:type.url">
+      <path value="Extension.extension.url"/>
+      <fixedUri value="type"/>
+    </element>
+    <element id="Extension.extension:type.value[x]:valueCodeableConcept">
+      <path value="Extension.extension.valueCodeableConcept"/>
+      <min value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <binding>
+        <strength value="extensible"/>
+        <description value="Type of reference range applied to a DeviceMetric."/>
+        <valueSet value="http://hl7.org/fhir/uv/pocd/ValueSet/reference-range-type"/>
+      </binding>
+    </element>
+    <element id="Extension.url">
+      <path value="Extension.url"/>
+      <fixedUri value="http://hl7.org/fhir/StructureDefinition/reference-range"/>
+    </element>
+    <element id="Extension.value[x]">
+      <path value="Extension.value[x]"/>
+      <max value="0"/>
+    </element>
+  </differential>
+</StructureDefinition>

@@ -89,7 +89,7 @@ For the profiles listed below, when `mustSupport` is set to true on data element
 | [Sample Array Observation profile](StructureDefinition-SampleArrayObservation.html) | StructureDefinition for Observation resources that represent real-time waveforms or wave snippets. |
 
 ### Profiles only used for mappings
-The profiles listed here are not intended to be used in actual implementations, but are used for mapping purposes for ISO/IEEE 11073-10207 (i.e. IEEE SDC) in this implementation guide.
+The profiles listed here are not intended to be used in actual implementations, but are used for mapping purposes for ISO/IEEE 11073-10207 (i.e. IEEE SDC) in this implementation guide. They are marked as abstract and cannot be instantiated directly.
 
 
 | Profile | Description |

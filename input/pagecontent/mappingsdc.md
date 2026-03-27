@@ -215,3 +215,18 @@ Measurement validity information is mapped to `Observation.meta.security`, `Obse
 {: .grid}
 
 Note that `dataAbsentReason` and `interpretation` are mutually exclusive: `dataAbsentReason` shall only be present if there is no observation value, whereas `interpretation` adds relevant information about an existing observation value.
+
+#### CalibrationInfo at MDS and VMD Level
+
+In ISO/IEEE 11073-10207 SDC, `CalibrationInfo` is part of `AbstractDeviceComponentState` and can therefore appear at the MDS, VMD, or Channel state level. For example, an anesthesia device may be required to perform a daily self-test, where `ComponentCalibrationState` transitions from `Req` (required) after system boot to `Cal` (calibrated) following a successful self-test. VMDs may also have specific calibration requirements.
+
+The current PoCD profiles define `DeviceMetric.calibration` mappings at the Channel level (see the calibration state and calibration type value set tables above), but do not address CalibrationInfo when it is associated with MDS or VMD state.
+
+Representing MDS/VMD-level calibration information in FHIR requires further analysis. Possible approaches include:
+
+- An extension on the Device resource (for MDS or VMD Device profiles) to carry calibration state and type at those levels.
+- Using DeviceMetric resources with `DeviceMetric.parent` referencing the VMD or MDS Device, combined with Observation resources for calibration result values.
+
+Additionally, when calibration involves human interaction, multiple Observations may be needed to capture different aspects such as error codes and interaction identifiers.
+
+This is tracked as an open issue in [FHIR-51356](https://jira.hl7.org/browse/FHIR-51356).
