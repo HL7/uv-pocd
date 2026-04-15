@@ -53,12 +53,12 @@ The following example shows a message bundle reporting a new observation from a 
         "endpoint": "http://example.org/fhir/device-gateway"
       },
       "focus": [ {
-        "reference": "urn:uuid:obs-1"
+        "reference": "urn:uuid:1a57efe6-5c0e-4cb5-8e9d-ccf601affbef"
       } ]
     }
   },
   {
-    "fullUrl": "urn:uuid:obs-1",
+    "fullUrl": "urn:uuid:1a57efe6-5c0e-4cb5-8e9d-ccf601affbef",
     "resource": {
       "resourceType": "Observation",
       "status": "final",
@@ -71,7 +71,7 @@ The following example shows a message bundle reporting a new observation from a 
         "text": "CVPm"
       },
       "subject": {
-        "reference": "urn:uuid:patient-1"
+        "reference": "urn:uuid:e4d2e5f9-8a67-472f-9605-9d0331407783"
       },
       "effectiveDateTime": "2024-03-04T15:16:17+00:00",
       "valueQuantity": {
@@ -81,12 +81,12 @@ The following example shows a message bundle reporting a new observation from a 
         "code": "mm[Hg]"
       },
       "device": {
-        "reference": "urn:uuid:metric-1"
+        "reference": "urn:uuid:6447b56c-819b-4bcd-9a16-6e0b8da8d6f1"
       }
     }
   },
   {
-    "fullUrl": "urn:uuid:patient-1",
+    "fullUrl": "urn:uuid:e4d2e5f9-8a67-472f-9605-9d0331407783",
     "resource": {
       "resourceType": "Patient",
       "identifier": [ {
@@ -96,7 +96,7 @@ The following example shows a message bundle reporting a new observation from a 
     }
   },
   {
-    "fullUrl": "urn:uuid:metric-1",
+    "fullUrl": "urn:uuid:6447b56c-819b-4bcd-9a16-6e0b8da8d6f1",
     "resource": {
       "resourceType": "DeviceMetric",
       "type": {
@@ -108,12 +108,13 @@ The following example shows a message bundle reporting a new observation from a 
         "text": "CVP"
       },
       "source": {
-        "reference": "urn:uuid:device-1"
-      }
+        "reference": "urn:uuid:710041a4-fb5f-4267-bcda-ce1bccb220c0"
+      },
+      "category": "measurement"
     }
   },
   {
-    "fullUrl": "urn:uuid:device-1",
+    "fullUrl": "urn:uuid:710041a4-fb5f-4267-bcda-ce1bccb220c0",
     "resource": {
       "resourceType": "Device",
       "identifier": [ {

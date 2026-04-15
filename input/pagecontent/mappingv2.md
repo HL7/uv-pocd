@@ -165,8 +165,8 @@ The OBX-8 flags listed above do not all map directly to `Observation.interpretat
 | QUES | questionable(1) | `UNCERTREL` | | `questionable` |
 | NAV | not-available(2) | | `temp-unknown` | |
 | CAL | calibration-ongoing(3) | `UNCERTREL` | | `calibration-ongoing` |
-| TEST | test-data(4) | | | `test-data` |
-| DEMO | demo-data(5) | | | `demo-data` |
+| TEST | test-data(4) | `HTEST`| | |
+| DEMO | demo-data(5) | `HTEST`| | |
 | VAL | validated-data(8) | `HRELIABLE` | | `validated-data` |
 | EARLY | early-indication(9) | | | `early-indication` |
 | BUSY | msmt-ongoing(10) | | `temp-unknown` | `msmt-ongoing` |
