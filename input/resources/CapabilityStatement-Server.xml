@@ -8,7 +8,7 @@
   <version value='current'/>
   <name value='ServerCapabilityStatement'/>
   <title value='Server capability requirements'/>
-  <status value='draft'/>
+  <status value='active'/>
   <experimental value='false'/>
   <date value='2021-07-17'/>
   <contact>

@@ -7,7 +7,7 @@
   <url value="http://hl7.org/fhir/uv/pocd/ValueSet/observation-interpretation"/>
   <name value="ObservationInterpretation"/>
   <title value="Observation interpretation codes"/>
-  <status value="draft"/>
+  <status value="active"/>
   <experimental value="false"/>
   <date value="2019-09-28"/>
   <description value="Observation interpretation codes including measurement status."/>

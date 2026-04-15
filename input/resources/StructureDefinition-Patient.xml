@@ -13,7 +13,7 @@
   <url value="http://hl7.org/fhir/uv/pocd/StructureDefinition/Patient"/>
   <name value="Patient"/>
   <title value="Patient profile"/>
-  <status value="draft"/>
+  <status value="active"/>
   <date value="2020-07-15"/>
   <description value="StructureDefinition for Patient resources that represent demographics and other administrative information. This abstract profile is only used to define mappings and is not intended for use in actual implementations."/>
   <contact>

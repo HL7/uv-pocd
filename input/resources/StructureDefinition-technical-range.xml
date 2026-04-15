@@ -4,7 +4,7 @@
   <url value="http://hl7.org/fhir/uv/pocd/StructureDefinition/technical-range"/>
   <name value="TechnicalRange" />
   <title value="Technical range extension"/>
-  <status value="draft" />
+  <status value="active" />
   <date value="2022-01-16"/>
   <description value="StructureDefinition that adds technical range and accuracy to a DeviceMetric."/>
   <contact>

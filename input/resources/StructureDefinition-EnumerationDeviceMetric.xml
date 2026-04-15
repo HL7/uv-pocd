@@ -16,7 +16,7 @@
   <url value="http://hl7.org/fhir/uv/pocd/StructureDefinition/EnumerationDeviceMetric"/>
   <name value="EnumerationDeviceMetric"/>
   <title value="Enumeration DeviceMetric profile"/>
-  <status value="draft"/>
+  <status value="active"/>
   <date value="2022-01-16"/>
   <description value="StructureDefinition for DeviceMetric resources that represent coded or text status, annotations, or settings characteristics and capabilities."/>
   <contact>

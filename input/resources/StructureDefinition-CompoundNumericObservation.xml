@@ -17,7 +17,7 @@
   <url value="http://hl7.org/fhir/uv/pocd/StructureDefinition/CompoundNumericObservation"/>
   <name value="CompoundNumericObservation"/>
   <title value="Compound Numeric Observation profile"/>
-  <status value="draft"/>
+  <status value="active"/>
   <date value="2022-01-21"/>
   <description value="StructureDefinition for Observation resources that represent numerical measurements, calculations, or settings with multiple components."/>
   <contact>

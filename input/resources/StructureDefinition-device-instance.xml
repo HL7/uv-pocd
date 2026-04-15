@@ -4,7 +4,7 @@
   <url value="http://hl7.org/fhir/uv/pocd/StructureDefinition/device-instance"/>
   <name value="DeviceInstance"/>
   <title value="Device Instance extension"/>
-  <status value="draft"/>
+  <status value="active"/>
   <date value="2022-01-16"/>
   <description value="StructureDefinition that adds an instance number or label to Device or DeviceMetric."/>
   <purpose value="This extension is intended to distinguish device components (VMDs, Channels, Metrics) of the same type. For example, an ICU patient monitor may provide multiple invasive blood pressure or temperature measurements either built-in or as pluggable modules. The Device Instance extension associates measurement hardware with a Device or DeviceMetric resource instance by number (e.g., slot position) or connector label."/>
