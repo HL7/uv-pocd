@@ -7,7 +7,7 @@
   <title value="Practitioner profile"/>
   <status value="active"/>
   <date value="2020-07-15"/>
-  <description value="StructureDefinition for Practitioner resources that represent demographics and other administrative information."/>
+  <description value="StructureDefinition for Practitioner resources that represent demographics and other administrative information. This abstract profile is only used to define mappings and is not intended for use in actual implementations."/>
   <contact>
     <telecom>
       <system value="url"/>
@@ -19,7 +19,7 @@
   </extension>
   <fhirVersion value="4.0.1"/>
   <kind value="resource"/>
-  <abstract value="false"/>
+  <abstract value="true"/>
   <type value="Practitioner"/>
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Practitioner"/>
   <derivation value="constraint"/>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="reference-range-type"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/StructureDefinition/shareablecodesystem"/>
+  </meta>
+  <url value="http://hl7.org/fhir/uv/pocd/CodeSystem/reference-range-type"/>
+  <name value="ReferenceRangeType"/>
+  <title value="Reference Range Type"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <date value="2026-03-26"/>
+  <description value="CodeSystem for classifying the type of reference range applied to a DeviceMetric."/>
+  <caseSensitive value="false"/>
+  <content value="complete"/>
+  <concept>
+    <code value="alarm-limits"/>
+    <display value="Alarm limits"/>
+    <definition value="The range defines the alarm limits configured on the device. Values outside this range trigger an alert."/>
+  </concept>
+  <concept>
+    <code value="physiological-range"/>
+    <display value="Physiological range"/>
+    <definition value="The range defines the physiologically normal or expected values for the measured parameter."/>
+  </concept>
+  <concept>
+    <code value="technical-range"/>
+    <display value="Technical range"/>
+    <definition value="The range defines the technical measurement capability of the device — the minimum and maximum values the device can report."/>
+  </concept>
+</CodeSystem>

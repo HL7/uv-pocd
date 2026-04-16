@@ -1,5 +1,7 @@
 Most FHIR implementations follow the [RESTful]({{site.data.fhir.path}}http.html) approach for transferring resources between client and server. The FHIR server provides the RESTful API for managing resources. A medical device or gateway acts as a FHIR client, which reports device data using create and update interactions. Other clients (e.g., clinical applications) use read or search interactions to access stored data. There is also a subscription mechanism to get notifications when data becomes available.
 
+For message-oriented architectures, see [FHIR Messaging](messaging.html) as an alternative approach.
+
 Requirements for a FHIR server supporting this implementation guide are listed in the [Server CapabilityStatement](CapabilityStatement-ServerCapabilityStatement.html).
 
 This section explains the transfer of device-sourced resources as listed on the [Profiles](profiles.html) page to a FHIR server using transaction bundles.
