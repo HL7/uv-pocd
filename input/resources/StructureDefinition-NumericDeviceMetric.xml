@@ -150,6 +150,16 @@
         <map value="NumericMetricDescriptor/Resolution"/>
       </mapping>
     </element>
+    <element id="DeviceMetric.extension:referenceRange">
+      <path value="DeviceMetric.extension" />
+      <sliceName value="referenceRange" />
+      <short value="Reference range" />
+      <definition value="Reference range for this metric, e.g., alarm limits." />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/reference-range" />
+      </type>
+    </element>
     <element id="DeviceMetric.type">
       <path value="DeviceMetric.type"/>
       <mustSupport value="true"/>
