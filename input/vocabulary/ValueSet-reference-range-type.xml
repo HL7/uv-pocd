@@ -7,7 +7,7 @@
   <url value="http://hl7.org/fhir/uv/pocd/ValueSet/reference-range-type"/>
   <name value="ReferenceRangeType"/>
   <title value="Reference Range Type"/>
-  <status value="draft"/>
+  <status value="active"/>
   <experimental value="false"/>
   <date value="2026-03-26"/>
   <description value="ValueSet for classifying the type of reference range applied to a DeviceMetric."/>

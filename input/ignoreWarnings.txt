@@ -6,9 +6,6 @@
 # Example observation in this IG are supposed to be device generated with often an unknown performer. There will be text in the IG to explain this.
 Best Practice Recommendation: In general, all observations should have a performer
 
-# The following profiles are only used to define mappings
-WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/uv/pocd/StructureDefinition/Observation'): The Implementation Guide contains no examples for this profile
-
 # Reference to external draft code system that is not really draft. This message can be ignored safely.
 Reference to draft CodeSystem urn:iso:std:iso:11073:10101|2024-12-05
 
@@ -22,7 +19,8 @@ This element does not match any known slice defined in the profile http://hl7.or
 Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
 
 # extension used in FHIR core R4 that is now deprecated - this warning can be ignored safely
-The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.2.0 is deprecated
+The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.3.0 is deprecated
+The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.3.0 is deprecated with the note: 'Use additionalBinding extension or element instead'
 
 # Publisher process choice - can safely be ignored
 The value set expansion is too large, and only a subset has been displayed
@@ -31,6 +29,3 @@ The value set expansion is too large, and only a subset has been displayed
 Observation is labeled as an abstract type, but no concrete descendants were found (check definitions - this is usually an error unless concrete definitions are in some other package)
 Patient is labeled as an abstract type, but no concrete descendants were found (check definitions - this is usually an error unless concrete definitions are in some other package)
 Practitioner is labeled as an abstract type, but no concrete descendants were found (check definitions - this is usually an error unless concrete definitions are in some other package)
-
-# code system is part of the IG which has draft status. This warning can be ignored safely.
-Reference to draft CodeSystem http://hl7.org/fhir/uv/pocd/CodeSystem/reference-range-type|0.4.0

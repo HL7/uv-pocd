@@ -134,7 +134,9 @@ It is expected that some institutions will choose to set up an archival system s
 
 #### Clinical decision support
 
-Proper integration of clinical measurements in algorithms may depend on the method of measurement being used or even the particular model of device being used. For plug-in modules, which are modeled as Virtual Medical Devices, this information is available from the Device resource representing the module.
+This Implementation Guide does not define clinical decision support (CDS) rules or algorithm logic. Its direct contribution to CDS is the standardized representation of device context needed by CDS engines to interpret observations safely and correctly.
+
+Specifically, this guide enables applications to link an Observation to its DeviceMetric and traverse parent relationships to Channel, VMD, and MDS FHIR Device resources. That context can provide measurement method, module identity (for plug-in devices), device configuration/state, and related technical qualifiers that may affect rule behavior. In other words, the CDS implementation is external to this guide, but the data elements defined here provide the traceable inputs that CDS workflows rely on.
 
 #### Clinical analytics
 

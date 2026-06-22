@@ -220,13 +220,18 @@ Note that `dataAbsentReason` and `interpretation` are mutually exclusive: `dataA
 
 In ISO/IEEE 11073-10207 SDC, `CalibrationInfo` is part of `AbstractDeviceComponentState` and can therefore appear at the MDS, VMD, or Channel state level. For example, an anesthesia device may be required to perform a daily self-test, where `ComponentCalibrationState` transitions from `Req` (required) after system boot to `Cal` (calibrated) following a successful self-test. VMDs may also have specific calibration requirements.
 
-The current PoCD profiles define `DeviceMetric.calibration` mappings at the Channel level (see the calibration state and calibration type value set tables above), but do not address CalibrationInfo when it is associated with MDS or VMD state.
+For this implementation guide, calibration and self-test information should be represented using `DeviceMetric` directly, when `CalibrationInfo` is carried at MDS or VMD level in SDC. not using one of the DeviceMetric profiles from this guide, because the existing DeviceMetric profiles in this guide require a Channel device to be referenced and are focused on representing measurement data.
 
-Representing MDS/VMD-level calibration information in FHIR requires further analysis. Possible approaches include:
+Guidance:
 
-- An extension on the Device resource (for MDS or VMD Device profiles) to carry calibration state and type at those levels.
-- Using DeviceMetric resources with `DeviceMetric.parent` referencing the VMD or MDS Device, combined with Observation resources for calibration result values.
+- Create a `DeviceMetric` instance for each calibration or self-test context that needs to be exchanged at MDS or VMD level.
+- Map `ComponentCalibrationState` to `DeviceMetric.calibration.state` using the value set mapping above.
+- Map `ComponentCalibrationType` to `DeviceMetric.calibration.type` using the value set mapping above.
+- Set `DeviceMetric.device` to the Device resource that is being calibrated (MDS Device or VMD Device). This identifies the calibrated target explicitly.
+- Represent calibration/self-test outcomes (for example pass/fail status, error codes, and user interaction steps) as Observation resources associated with that metric according to the observation-to-metric linkage pattern used elsewhere in this guide.
 
-Additionally, when calibration involves human interaction, multiple Observations may be needed to capture different aspects such as error codes and interaction identifiers.
+This approach supports common use cases such as anesthesia device daily self-tests, where required interactions and result details may be captured in one or more related Observations.
 
-This is tracked as an open issue in [FHIR-51356](https://jira.hl7.org/browse/FHIR-51356).
+TBD: if calibration and self-test concepts have stable MDC nomenclature codes, we will define a dedicated `CalibrationMetric` profile in this guide and add an explicit end-to-end use case in this implementation guide.
+
+Related tracking item: [FHIR-51356](https://jira.hl7.org/browse/FHIR-51356).
