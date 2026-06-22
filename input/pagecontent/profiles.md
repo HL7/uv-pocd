@@ -59,7 +59,7 @@ This Implementation Guide does not profile the Patient or Location resources for
 
 #### Future Work
 
-Deployment archetypes and workflow integration patterns — including the relationship between device observations and clinical orders — are expected to be addressed in future versions of this guide as implementation experience accumulates.
+Deployment archetypes and workflow integration patterns — including the relationship between device observations and clinical orders — could be addressed in future versions of this guide as implementation experience accumulates.
 
 ### DeviceMetric Source and Observation Device Attributes
 
