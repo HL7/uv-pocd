@@ -153,6 +153,17 @@ When it is necessary to investigate an adverse event, the context information pr
 
 A key characteristic of research uses of data is the need to be able to summon up the data needed to answer unanticipated questions that are raised.
 
+#### Inter-facility transfer continuity for critically ill but stable patients
+
+When a patient in critical but stable condition must be transferred to a more equipped or specialized health facility, baseline monitoring before transfer, monitoring during transport, and monitoring after arrival can all be part of one continuous care journey. FHIR-based access to contextual device information together with produced measurement data enables continuity across these phases and supports safer handoffs between teams and facilities.
+
+In this exchange pattern, Observation resources carry the measured values and trends, DeviceMetric resources describe the specific metrics and their constraints, and Device resources provide the hierarchical context (MDS, VMD, and Channel parent relationships). Where applicable, Patient and Practitioner resources identify care context, and CapabilityStatement resources can support onboarding between sending and receiving systems by documenting supported interactions and profiles.
+
+#### Ambulatory clinic integration with reduced infrastructure cost
+
+Ambulatory clinics that already have EMR integration in place can reduce implementation cost by using FHIR-based transport for device data exchange, avoiding the need to deploy additional proprietary integration systems and network infrastructure.
+
+Clinics can exchange Observation, DeviceMetric, and Device resources directly with existing EMR/FHIR endpoints so that measurements and device context are integrated without a separate middleware stack. Vocabulary alignment can be supported using ValueSet and CodeSystem artifacts defined by this guide, while endpoint behavior and conformance expectations can be coordinated through CapabilityStatement exchange.
 
 ** The following use cases are not in this release of the Implementation Guide but are intended to be covered in the next release**
 
