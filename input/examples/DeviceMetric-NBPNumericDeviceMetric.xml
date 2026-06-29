@@ -5,7 +5,12 @@
     <profile value="http://hl7.org/fhir/uv/pocd/StructureDefinition/NumericDeviceMetric"/>
   </meta>
   <extension url="http://hl7.org/fhir/uv/pocd/StructureDefinition/metric-availability">
-    <valueCode value="intr"/>
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/metric-availability"/>
+        <code value="intr"/>
+      </coding>
+    </valueCodeableConcept>
   </extension>
   <type>
     <coding>

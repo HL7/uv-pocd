@@ -6,7 +6,7 @@
     <a href="toc.html">Table of Contents</a>
   </li>
   <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Getting Started<b class="caret"></b></a>
+    <a data-toggle="dropdown" class="dropdown-toggle">Getting Started<b class="caret"></b></a>
 		<ul class="dropdown-menu">
 		      <li>
 		        <a href="overview.html">Overview</a>
@@ -20,7 +20,7 @@
     <a href="usecases.html">Use Cases</a>
   </li> -->
   <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Technical Implementation Guidance<b class="caret"></b></a>
+    <a data-toggle="dropdown" class="dropdown-toggle">Technical Implementation Guidance<b class="caret"></b></a>
     <ul class="dropdown-menu">
       <!-- <li>
         <a href="modeling.html">Creating a Device Model</a>
@@ -41,10 +41,10 @@
         <a href="messaging.html">FHIR Messaging</a>
       </li>
       <!-- <li>
-        <a href="#">Safety Considerations</a>
+        <a href="menu.html">Safety Considerations</a>
       </li>
       <li>
-        <a href="#">Security and Privacy Considerations</a>
+        <a href="menu.html">Security and Privacy Considerations</a>
       </li> -->
     </ul>
   </li>
@@ -58,7 +58,7 @@
     <a href="artifacts.html">Artifact List</a>
   </li>
   <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Support<b class="caret"></b></a>
+    <a data-toggle="dropdown" class="dropdown-toggle">Support<b class="caret"></b></a>
     <ul class="dropdown-menu">
       <li>
         <a target="_blank" href="{{site.data.fhir.path}}index.html">FHIR Spec</a>
