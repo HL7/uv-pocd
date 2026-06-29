@@ -124,6 +124,12 @@ For details see [IHE Patient Care Device (PCD) Technical Framework Volume 2, Tra
 
 ### Common Use Cases for this Implementation Guide
 
+Use cases in this guide are intended to demonstrate full use of the profiled resources, not only patient-to-observation value reporting. In addition to Observation, exchanges should include device context through Device and DeviceMetric so consuming systems can correctly interpret source, state, and traceability across the containment hierarchy.
+
+Observation-only reporting patterns can omit important non-measurement context and limit interoperability to simple value display. Devices on FHIR enables a broader class of applications by exchanging both measurement data and contextual device content needed for safe handoff, analytics, and advanced workflow support.
+
+Summary: Use cases should support full use of the profiled resources.
+
 #### Data flow from device to clinical flowsheet
 
 Devices are a key part of keeping current situational awareness in treating high-acuity patients. Information not normally provided in the Observation resource may be relevant to care, as, for example, is the device or one of its subsystems or measurements in standby mode or otherwise disabled because of user action. Technical metadata such as battery performance may be valuable for early warning of potential device problems.
@@ -142,16 +148,28 @@ Specifically, this guide enables applications to link an Observation to its Devi
 
 Comprehensive recording of device configuration and state information in addition to the measurements recorded supports including more kinds of information in analytics models.
 
+For this use case, implementations can combine Observation profiles such as NumericObservation, CompoundNumericObservation, EnumerationObservation, and SampleArrayObservation with the corresponding DeviceMetric profiles (NumericDeviceMetric, EnumerationDeviceMetric, and SampleArrayDeviceMetric) and Device hierarchy profiles (MdsDevice, VmdDevice, and ChannelDevice). This profile set allows analytics pipelines to evaluate not only measured values, but also device-context relationships through parent links.
+
+Analytics can be further enriched using PoCD extensions that carry technical and operational qualifiers, for example metric-availability, technical-range, reference-range, resolution, operating-mode, operating-hours, operating-cycles, sweep-speed, and visual-grid. These elements help distinguish clinically meaningful variation from device configuration or operating-state effects, improving retrospective analysis quality.
+
 #### Clinical engineering and technology management analytics
 
-In this scenario, comprehensive device configuration and state information is valuable for both real-time and post analysis of state and function of the innumerable devices that clinical engineering and healthcare technology management departments are responsible for tracking and maintaining. Devices themselves record and communicate much of this: power-up self test results, calibrations performed, operational state history, location.
+In this scenario, comprehensive device configuration and state information supports both real-time monitoring and retrospective analysis for the many devices tracked by clinical engineering and healthcare technology management teams. Devices communicate much of this directly, including power-up self-test results, calibrations performed, operational state history, and location.
+
+This use case uses Device hierarchy profiles (MdsDevice, VmdDevice, and ChannelDevice) with DeviceMetric profiles (NumericDeviceMetric, EnumerationDeviceMetric, and SampleArrayDeviceMetric) to track subsystem relationships, metric capabilities, and operational changes over time. Relevant PoCD extensions include operating-mode, operating-hours, operating-cycles, metric-availability, technical-range, resolution, sweep-speed, and visual-grid.
 
 #### Adverse event analysis
 When it is necessary to investigate an adverse event, the context information provided by thorough archiving of all background information about the state and performance of the device allows, for example, identification of specific subsystems and components of the device may have malfunctioned.
 
+For adverse event investigations, linking Observation to DeviceMetric and then through parent relationships to ChannelDevice, VmdDevice, and MdsDevice helps localize where in the device hierarchy an issue occurred. Extensions such as metric-availability, reference-range, technical-range, resolution, and operating-mode provide evidence about metric validity, expected limits, and device operating context at the time of the event.
+
 #### Research data feed
 
 A key characteristic of research uses of data is the need to be able to summon up the data needed to answer unanticipated questions that are raised.
+
+A longitudinal FHIR-based archive supports this by preserving both measurements and device context so analyses can be reproduced and reinterpreted as new hypotheses emerge. Research workflows can query Observation together with DeviceMetric and Device hierarchy resources (MDS, VMD, and Channel levels) to keep traceability to subsystem and metric definitions and improve comparability across units, institutions, and time periods.
+
+Research datasets can be further enriched with PoCD extensions such as metric-availability, technical-range, reference-range, resolution, operating-mode, operating-hours, operating-cycles, sweep-speed, and visual-grid. These qualifiers help distinguish physiologic variation from differences in device configuration, operating state, or acquisition conditions.
 
 #### Inter-facility transfer continuity for critically ill but stable patients
 
