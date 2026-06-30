@@ -191,6 +191,25 @@ The OBX-8 flags listed above do not all map directly to `Observation.interpretat
 
 In IHE PCD-01, the purpose of this field is to uniquely identify the source of the observation based on the EUI-64 of the Virtual Medical Device (VMD) if that has a unique identifier, or if not, the EUI-64 of the Medical Device System.
 
+**Device Identification and UDI Mapping**: 
+
+In PCD-01, UDI-related content is carried in OBX fields rather than in a dedicated UDI segment. The actual message elements used are:
+
+| HL7 V2 PCD-01 Element | FHIR Device Mapping | Notes |
+| --- | --- | --- |
+| OBX-18 (EI: Equipment Instance Identifier) | `Device.identifier` | Carries the source equipment instance identifier (typically EUI-64 for VMD or MDS) |
+| OBX-3 (CWE: Observation Identifier) | Device element selector (e.g., `Device.udiCarrier.deviceIdentifier`, `Device.serialNumber`) | Identifies which UDI/production attribute is being conveyed (value carried in OBX-5) |
+| OBX-4 (ST: Observation Sub-ID) | `Device` target selection (MDS/VMD/Channel context) | Locates the device object in the PCD-01 containment hierarchy for the OBX attribute |
+| OBX-5 (Varies: Observation Value) | Value for the selected `Device` element | Carries the actual attribute value (e.g., device identifier, issuer, jurisdiction, HRF label, serial number) |
+{: .grid}
+
+**Implementation Guidance for UDI**:
+- Use OBX-18 to keep persistent equipment identity and create/update the corresponding `Device.identifier`.
+- For UDI-specific components, use device-related OBX observations where OBX-3 identifies the UDI/production attribute and OBX-5 carries the value.
+- Use OBX-4 Sub-ID to bind each device-related OBX to the correct device level (MDS or VMD) before mapping into the appropriate FHIR `Device` resource.
+- When OBX device-related attributes represent UDI device identifier, issuer, authority/jurisdiction, or human-readable label, map them to `Device.udiCarrier.deviceIdentifier`, `Device.udiCarrier.issuer`, `Device.udiCarrier.jurisdiction`, and `Device.udiCarrier.carrierHRF` respectively.
+
+
 #### OBX-20 Observation site
 This often does not need to be given, since in many cases the OBX-3 Observation Identifier clearly indicates the body site. Otherwise, in IHE PCD-01, body site values from MDC nomenclature may be used. Equivalent codes from other systems, e.g. SNOMED, should also be given in the CodeableConcept for user convenience.
 

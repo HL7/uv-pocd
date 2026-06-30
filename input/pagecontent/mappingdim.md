@@ -19,6 +19,28 @@ Most object classes in ISO/IEEE 11073 DIM can be mapped to FHIR resources as out
 Please refer to the Mappings tab of each profile page for mapping ISO/IEEE 11073 DIM object attributes to FHIR resource elements.
 
 ### Mapping Details
+
+#### Device Identification and Unique Device Identification (UDI)
+
+For DIM-to-FHIR UDI mapping in this guide, use the DIM elements that are mapped in the MDS Device profile:
+
+| IEEE 11073 DIM element (actual mapping source) | FHIR Device mapping |
+| --- | --- |
+| `VMS::System-Id` | `Device.identifier.value` (EUI-64 value; `Device.identifier.system` fixed to `urn:oid:1.2.840.10004.1.1.1.0.0.1.0.0.1.2680` in the MDS Device profile) |
+| `VMS::Production-Specification[spec-type=device-identifier]::prod-spec` | `Device.udiCarrier.deviceIdentifier` |
+| `VMS::Udi::udi-issuer` | `Device.udiCarrier.issuer` |
+| `VMS::Udi::udi-authority` | `Device.udiCarrier.jurisdiction` |
+| `VMS::Udi::udi-label` | `Device.udiCarrier.carrierHRF` |
+| `VMS::Production-Specification[spec-type=serial-number]::prod-spec` | `Device.serialNumber` |
+| `VMS::System-Model::manufacturer` | `Device.manufacturer` |
+| `VMS::System-Model::model-number` | `Device.modelNumber` |
+{: .grid}
+
+**Implementation Guidance**:
+- Populate `Device.identifier` for the DIM system identity (`VMS::System-Id`) and use `Device.udiCarrier` for explicit UDI elements (`deviceIdentifier`, `issuer`, `jurisdiction`, and `carrierHRF`).
+- Keep `Device.serialNumber` populated from `VMS::Production-Specification[spec-type=serial-number]::prod-spec` for traceability alongside UDI fields.
+- These DIM paths are the authoritative sources for UDI carriage used by this IG's profile mappings.
+
 #### Measurement Status
 Observed values in ISO/IEEE 11073 DIM include a bit field that indicates measurement status. FHIR Observations do not have a single element for this purpose. Instead there is security metadata, dataAbsentReason for missing values, and interpretation to report significance of a result.  
 Measurement status information is mapped to `Resource.meta.security`, `Observation.dataAbsentReason` or `Observation.component.dataAbsentReason`, and `Observation.interpretation` or `Observation.component.interpretation` elements. The interpretation value set binding is extended to add relevant codes from the [Measurement status codes](CodeSystem-measurement-status.html) defined in this implementation guide.
