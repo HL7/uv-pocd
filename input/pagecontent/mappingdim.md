@@ -26,7 +26,7 @@ For DIM-to-FHIR UDI mapping in this guide, use the DIM elements that are mapped 
 
 | IEEE 11073 DIM element (actual mapping source) | FHIR Device mapping |
 | --- | --- |
-| `VMS::System-Id` | `Device.identifier.value` (EUI-64 identifier value) |
+| `VMS::System-Id` | `Device.identifier.value` (EUI-64 value; `Device.identifier.system` fixed to `urn:oid:1.2.840.10004.1.1.1.0.0.1.0.0.1.2680` in the MDS Device profile) |
 | `VMS::Production-Specification[spec-type=device-identifier]::prod-spec` | `Device.udiCarrier.deviceIdentifier` |
 | `VMS::Udi::udi-issuer` | `Device.udiCarrier.issuer` |
 | `VMS::Udi::udi-authority` | `Device.udiCarrier.jurisdiction` |
