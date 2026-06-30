@@ -28,7 +28,7 @@ For SDC-to-FHIR UDI mapping in this guide, use the SDC elements that are mapped 
 
 | IEEE 11073 SDC element (actual mapping source) | FHIR Device mapping |
 | --- | --- |
-| `MdsDescriptor/ProductionSpecification/ComponentId/Root` | `Device.identifier.system` (EUI-64 system) |
+| `MdsDescriptor/ProductionSpecification/ComponentId/Root` | `Device.identifier.system` (fixed to `urn:oid:1.2.840.10004.1.1.1.0.0.1.0.0.1.2680`; Root should match) |
 | `MdsDescriptor/ProductionSpecification/ComponentId/Extension` | `Device.identifier.value` (EUI-64 value) |
 | `MdsDescriptor/MetaData/UDI/DeviceIdentifier` | `Device.udiCarrier.deviceIdentifier` |
 | `MdsDescriptor/MetaData/UDI/Issuer` | `Device.udiCarrier.issuer` |
