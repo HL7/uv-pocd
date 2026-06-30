@@ -19,6 +19,31 @@ Most object classes in ISO/IEEE 11073 DIM can be mapped to FHIR resources as out
 Please refer to the Mappings tab of each profile page for mapping ISO/IEEE 11073 DIM object attributes to FHIR resource elements.
 
 ### Mapping Details
+
+#### Device Identification and Unique Device Identification (UDI)
+
+In ISO/IEEE 11073 DIM, the Medical Device System (MDS) is uniquely identified by:
+- **SystemIdentifier/Identification** consisting of a Root (OID) and Extension that provide a globally unique identifier for the device instance
+- **SystemIdentifier/Model** identifying the device model
+- **SystemIdentifier/SerialNumber** providing the device's serial number
+
+These components map to FHIR Device resource elements for Unique Device Identification (UDI):
+
+| IEEE 11073 DIM Element | FHIR Device Mapping | Notes |
+| --- | --- | --- |
+| SystemIdentifier/Identification/Root (OID) | `Device.identifier.system` | The OID root identifies the namespace (e.g., manufacturer identifier) |
+| SystemIdentifier/Identification/Extension | `Device.identifier.value` | The extension uniquely identifies the specific device instance within the namespace |
+| SystemIdentifier/Model | `Device.modelNumber` | The device model designation |
+| SystemIdentifier/SerialNumber | `Device.serialNumber` | The device's serial number, a key component of UDI |
+| UDI structured data (where available) | `Device.udiCarrier` | FHIR provides structured storage of UDI barcodes and parsed UDI data |
+| UDI human-readable label | `Device.deviceName` with `type`=`udi-label-name` | The label name from the device's UDI label |
+{: .grid}
+
+**Implementation Guidance**: 
+- Device implementations should populate both `Device.identifier` (from IEEE 11073 identifiers) and, where regulatory UDI information is available from the device, `Device.udiCarrier` with the parsed UDI data.
+- The `Device.serialNumber` element is critical for device instance traceability and should always be populated from the DIM SystemIdentifier/SerialNumber.
+- When device identifiers are converted to FHIR, implementers should preserve the IEEE 11073 OID-based namespace in the `identifier.system` to maintain the relationships and traceability defined by the original device model.
+
 #### Measurement Status
 Observed values in ISO/IEEE 11073 DIM include a bit field that indicates measurement status. FHIR Observations do not have a single element for this purpose. Instead there is security metadata, dataAbsentReason for missing values, and interpretation to report significance of a result.  
 Measurement status information is mapped to `Resource.meta.security`, `Observation.dataAbsentReason` or `Observation.component.dataAbsentReason`, and `Observation.interpretation` or `Observation.component.interpretation` elements. The interpretation value set binding is extended to add relevant codes from the [Measurement status codes](CodeSystem-measurement-status.html) defined in this implementation guide.

@@ -191,6 +191,27 @@ The OBX-8 flags listed above do not all map directly to `Observation.interpretat
 
 In IHE PCD-01, the purpose of this field is to uniquely identify the source of the observation based on the EUI-64 of the Virtual Medical Device (VMD) if that has a unique identifier, or if not, the EUI-64 of the Medical Device System.
 
+**Device Identification and UDI Mapping**: 
+
+The Equipment Instance Identifier in HL7 V2 PCD-01 messages maps to device identification elements in FHIR that support Unique Device Identification (UDI):
+
+| HL7 V2 PCD-01 Element | FHIR Device Mapping | Notes |
+| --- | --- | --- |
+| OBX-18 (EI: Equipment Instance Identifier) | `Device.identifier` | The unique identifier of the equipment (VMD or MDS) source of the observation |
+| EUI-64 format | `Device.identifier.system` + `Device.identifier.value` | When in EUI-64 format, map the authority to `system` and the identifier to `value` |
+| Device serial number (from sending system) | `Device.serialNumber` | Implement should extract and preserve the device serial number for UDI compliance |
+| Device model information | `Device.modelNumber` | The model of the equipment providing the source data |
+| UDI barcode data (when available) | `Device.udiCarrier` | Structured storage of parsed UDI data from device communications |
+| UDI human-readable label | `Device.deviceName` with `type`=`udi-label-name` | The label name from regulatory UDI labels, if known to the device or gateway |
+{: .grid}
+
+**Implementation Guidance for UDI**:
+- The Equipment Instance Identifier in OBX-18 identifies the specific equipment instance. This should be preserved in `Device.identifier` to maintain traceability to the source device.
+- When PCD-01 messages are converted to FHIR, the device serial number should be extracted (from OBX-18 context or other message segments) and placed in `Device.serialNumber`.
+- If the sending system has access to regulatory UDI information (barcode or parsed components), this should be included in `Device.udiCarrier.deviceIdentifier` (the GTIN/GTIN+UDI code).
+- Device gateways should populate `Device.type` with appropriate coding (e.g., MDC codes from the device communication) to enable systems to recognize and validate UDI compliance based on device regulatory classification.
+
+
 #### OBX-20 Observation site
 This often does not need to be given, since in many cases the OBX-3 Observation Identifier clearly indicates the body site. Otherwise, in IHE PCD-01, body site values from MDC nomenclature may be used. Equivalent codes from other systems, e.g. SNOMED, should also be given in the CodeableConcept for user convenience.
 
