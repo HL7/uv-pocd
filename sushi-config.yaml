@@ -19,3 +19,6 @@ contact:
   - telecom:
       - system: url
         value: http://www.hl7.org/Special/committees/healthcaredevices
+
+# special-urls:
+#   - http://hl7.org/fhir/StructureDefinition/device-calibration

@@ -29,6 +29,27 @@
   <extension url="http://hl7.org/fhir/uv/pocd/StructureDefinition/operating-mode">
     <valueCode value="Dmo"/>
   </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/device-calibration">
+    <extension url="type">
+      <valueCode value="offset"/>
+    </extension>
+    <extension url="state">
+      <valueCode value="calibrated"/>
+    </extension>
+    <extension url="time">
+      <valueInstant value="2026-06-30T09:30:00Z"/>
+    </extension>
+    <extension url="device">
+      <valueReference>
+        <reference value="Device/PhysioMonitorMdsDevice"/>
+      </valueReference>
+    </extension>
+    <extension url="device">
+      <valueReference>
+        <reference value="Device/BloodPressureVmdDevice"/>
+      </valueReference>
+    </extension>
+  </extension>
   <identifier>
     <system value="urn:oid:1.2.840.10004.1.1.1.0.0.1.0.0.1.2680"/>
     <value value="01-23-45-67-89-AB-CD-EF"/>
