@@ -4,6 +4,7 @@
   <url value="http://hl7.org/fhir/StructureDefinition/reference-range"/>
   <name value="ReferenceRange"/>
   <title value="Reference range extension"/>
+  <status value="active" />
   <date value="2026-03-26"/>
   <description value="StructureDefinition that adds a typed reference range (low, high, and range type) to a DeviceMetric."/>
   <contact>
