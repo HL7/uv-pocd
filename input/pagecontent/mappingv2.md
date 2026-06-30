@@ -198,9 +198,9 @@ In PCD-01, UDI-related content is carried in OBX fields rather than in a dedicat
 | HL7 V2 PCD-01 Element | FHIR Device Mapping | Notes |
 | --- | --- | --- |
 | OBX-18 (EI: Equipment Instance Identifier) | `Device.identifier` | Carries the source equipment instance identifier (typically EUI-64 for VMD or MDS) |
-| OBX-3 (CWE: Observation Identifier) | `Device.udiCarrier.*` or `Device.serialNumber` | Identifies which device/production/UDI attribute is being conveyed |
+| OBX-3 (CWE: Observation Identifier) | Device element selector (e.g., `Device.udiCarrier.deviceIdentifier`, `Device.serialNumber`) | Identifies which UDI/production attribute is being conveyed (value carried in OBX-5) |
 | OBX-4 (ST: Observation Sub-ID) | `Device` target selection (MDS/VMD/Channel context) | Locates the device object in the PCD-01 containment hierarchy for the OBX attribute |
-| OBX-5 (Varies: Observation Value) | Value for the targeted `Device` element | Carries the actual attribute value (e.g., device identifier, issuer, jurisdiction, HRF label, serial number) |
+| OBX-5 (Varies: Observation Value) | Value for the selected `Device` element | Carries the actual attribute value (e.g., device identifier, issuer, jurisdiction, HRF label, serial number) |
 {: .grid}
 
 **Implementation Guidance for UDI**:
