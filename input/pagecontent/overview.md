@@ -143,7 +143,7 @@ The IEEE 11073 family of device specialization standards defines device-specific
 
 Future device specializations under development in the IEEE 11073 PoCD family, such as ventilators and dialysis equipment, are expected to follow the same mapping pattern and will be addressable using the profiles defined in this guide once their specialization standards are published.
 
-In each case the MDS/VMD/Channel containment hierarchy defined by the specialization standard maps to MdsDevice → VmdDevice → ChannelDevice parent-link chains in this guide, and MDC nomenclature codes are carried in the `coding` element of the Observation or DeviceMetric `type`. Extensions such as operating-mode, metric-availability, and technical-range carry device-state and measurement-qualification information that the specialization standards expose at the metric level.
+In each case the MDS/VMD/Channel containment hierarchy defined by the specialization standard maps to MdsDevice → VmdDevice → ChannelDevice parent-link chains in this guide, and MDC nomenclature codes are carried in `Observation.code.coding` and `DeviceMetric.type.coding`. Extensions such as operating-mode, metric-availability, and technical-range carry device-state and measurement-qualification information that the specialization standards expose at the metric level.
 
 #### Clinical and technical data archiving and retrospective data feed
 
