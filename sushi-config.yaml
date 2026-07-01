@@ -1,21 +1,5 @@
-id: hl7.fhir.uv.pocd
 canonical: http://hl7.org/fhir/uv/pocd
-name: PoCDImplementationGuide
-title: Point-of-Care Device Implementation Guide
 status: active
 version: 1.0.0
 fhirVersion: 4.0.1
 FSHOnly: true
-copyrightYear: 2026
-releaseLabel: ci-build
-
-description: ImplementationGuide for Point-of-Care Devices (PoCD), such as those typically found in a hospital care setting (e.g., physiological monitors, infusion pumps, ventilators, pulse-oximeters, etc.).
-
-publisher:
-  name: HL7 International / Devices
-  url: http://www.hl7.org/Special/committees/healthcaredevices
-
-contact:
-  - telecom:
-      - system: url
-        value: http://www.hl7.org/Special/committees/healthcaredevices
