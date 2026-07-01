@@ -6,11 +6,13 @@
 # Example observation in this IG are supposed to be device generated with often an unknown performer. There will be text in the IG to explain this.
 Best Practice Recommendation: In general, all observations should have a performer
 
-# Reference to external draft code system that is not really draft. This message can be ignored safely.
-Reference to draft CodeSystem urn:iso:std:iso:11073:10101|2024-12-05
+# Reference to external draft or experimental code systems that are not really draft or experimental. This message can be ignored safely.
+Reference to draft CodeSystem http://unitsofmeasure.org|2.1.1
+Reference to experimental CodeSystem urn:ietf:bcp:13|0.0.2
+Reference to draft CodeSystem urn:iso:std:iso:3166|1.0.0
 
-# This code system is referenced by a FHIR core value set and is really not a draft. This warning can safely be ignored. And instead of defining a local extension in the IG the FHIR jurisdiction extension could be used as well in
-Reference to draft CodeSystem urn:iso:std:iso:3166|20210120
+# mm/s is a valid code in the UCUM code system, but apparently it is not in the fragment of the code system that is included in FHIR core. This warning can be ignored safely.
+Unknown Code 'mm/s' in the CodeSystem 'http://unitsofmeasure.org' version '2.1.1' - note that the code system is labeled as a fragment, so the code may be valid in some other fragment
 
 # These warnings are caused by checking a slice with an MDC code against a the BP profile in FHIR core. These messages are expected and can be ignored safely.
 This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/bp|4.0.1 (this may not be a problem, but you should check that it's not intended to match a slice)
@@ -19,7 +21,6 @@ This element does not match any known slice defined in the profile http://hl7.or
 Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
 
 # extension used in FHIR core R4 that is now deprecated - this warning can be ignored safely
-The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.3.0 is deprecated
 The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.3.0 is deprecated with the note: 'Use additionalBinding extension or element instead'
 
 # Publisher process choice - can safely be ignored

@@ -647,6 +647,11 @@
       <code value="show-inherited-invariants"/>
       <value value="false"/>
     </parameter>
+    <!-- TODO: Replace auto-oid-root with the official assigned OID root when it becomes available. -->
+    <parameter>
+      <code value="auto-oid-root"/>
+      <value value="2.16.840.1.113883.4.642.40.999"/>
+    </parameter>
     <parameter>
       <code value="special-url"/>
       <value value="http://terminology.hl7.org/CodeSystem/safety-classification"/>
