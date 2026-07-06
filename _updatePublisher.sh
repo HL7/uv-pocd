@@ -33,7 +33,7 @@ while [ "$#" -gt 0 ]; do
 done
 
 echo "Checking internet connection"
-curl -sSf tx.fhir.org > /dev/null
+curl -sS https://tx.fhir.org > /dev/null
 
 if [ $? -ne 0 ] ; then
   echo "Offline (or the terminology server is down), unable to update.  Exiting"
