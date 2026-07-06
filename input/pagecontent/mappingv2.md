@@ -199,7 +199,7 @@ The Equipment Instance Identifier in HL7 V2 PCD-01 messages maps to device ident
 | --- | --- | --- |
 | OBX-18 (EI: Equipment Instance Identifier) | `Device.identifier` | The unique identifier of the equipment (VMD or MDS) source of the observation |
 | EUI-64 format | `Device.identifier.system` + `Device.identifier.value` | When in EUI-64 format, map the authority to `system` and the identifier to `value` |
-| Device serial number (from sending system) | `Device.serialNumber` | Implement should extract and preserve the device serial number for UDI compliance |
+| Device serial number (from sending system) | `Device.serialNumber` | Implementers should extract and preserve the device serial number for UDI compliance |
 | Device model information | `Device.modelNumber` | The model of the equipment providing the source data |
 | UDI barcode data (when available) | `Device.udiCarrier` | Structured storage of parsed UDI data from device communications |
 | UDI human-readable label | `Device.deviceName` with `type`=`udi-label-name` | The label name from regulatory UDI labels, if known to the device or gateway |
