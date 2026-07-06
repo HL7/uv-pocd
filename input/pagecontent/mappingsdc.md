@@ -22,7 +22,7 @@ Please refer to the Mappings tab of each profile page for mapping ISO/IEEE 11073
 
 ### Mapping Details
 
-### Device Identification and Unique Device Identification (UDI)
+#### Device Identification and Unique Device Identification (UDI)
 
 In ISO/IEEE 11073 SDC, the Medical Device System (MDS) provides detailed identification information through its descriptive state:
 - **ProductionSpecification** containing manufacturer and model information
