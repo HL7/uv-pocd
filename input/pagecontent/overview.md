@@ -132,18 +132,47 @@ Summary: Use cases should support full use of the profiled resources.
 
 #### Data flow from device to clinical flowsheet
 
-Devices are a key part of keeping current situational awareness in treating high-acuity patients. Information not normally provided in the Observation resource may be relevant to care, as, for example, is the device or one of its subsystems or measurements in standby mode or otherwise disabled because of user action. Technical metadata such as battery performance may be valuable for early warning of potential device problems.
+Devices are a key part of maintaining current situational awareness when treating high-acuity patients. Information not normally provided in the Observation resource may be relevant to care. For example, a device, subsystem, or individual measurement may be in standby mode or otherwise disabled because of user action. Technical metadata such as battery performance may also be valuable for early warning of potential device problems.
 
-The IEEE 11073 family of device specialization standards defines device-specific nomenclature, metrics, and data structures for a broad range of device types. Each specialization standard provides a set of MDC codes and object attributes that translate directly to FHIR resources in this guide:
+Moving from IEEE 11073 content to FHIR requires identifying the role of the source information and selecting the corresponding representation in this guide. MDC concepts from IEEE 11073 nomenclature standards are represented as codings in the appropriate coded FHIR elements. Containment objects defined by IEEE 11073 information models, such as the Domain Information Model (DIM) in IEEE 11073-10201, are represented using the [MdsDevice](StructureDefinition-MdsDevice.html), [VmdDevice](StructureDefinition-VmdDevice.html), and [ChannelDevice](StructureDefinition-ChannelDevice.html) profiles. Metric objects and capabilities are represented using DeviceMetric profiles, while individual IEEE attributes map to FHIR elements or extensions according to their semantics. Reported measurement values are represented using Observation profiles.
 
-- **IEEE 11073-10207** (SDC — Service-oriented Device Connectivity): SDC-based devices expose BICEPS descriptors and states that align with the MDS/VMD/Channel hierarchy of this guide; metric descriptors map to DeviceMetric profiles and metric states translate to Observation instances, enabling interoperability between SDC-capable devices and FHIR-based enterprise systems.
-- **IEEE 11073-10701** (Hemodynamic monitors): Multi-parameter systems map to a MdsDevice with VMDs per monitoring module and channels per measurement site; waveform outputs (e.g., arterial pressure trace) use SampleArrayDeviceMetric and SampleArrayObservation alongside NumericDeviceMetric for derived values such as systolic, diastolic, and mean pressures.
-- **IEEE 11073-10702** (Infusion pumps): Pump identity and line configuration map to MdsDevice and ChannelDevice profiles; infusion rate, volume delivered, and status metrics map to NumericDeviceMetric and EnumerationDeviceMetric with NumericObservation and EnumerationObservation.
-- **IEEE 11073-10703** (Implantable cardiac devices, e.g., pacemakers and ICDs): Device identity maps to MdsDevice and VmdDevice profiles; therapy-delivery metrics and sensing channels map to NumericDeviceMetric and ChannelDevice profiles; episode and therapy Observations use NumericObservation or EnumerationObservation.
+The following use cases illustrate this mapping approach.
 
-Future device specializations under development in the IEEE 11073 PoCD family, such as ventilators and dialysis equipment, are expected to follow the same mapping pattern and will be addressable using the profiles defined in this guide once their specialization standards are published.
+##### Hemodynamic monitoring
 
-In each case the MDS/VMD/Channel containment hierarchy defined by the specialization standard maps to MdsDevice → VmdDevice → ChannelDevice parent-link chains in this guide, and MDC nomenclature codes are carried in `Observation.code.coding` and `DeviceMetric.type.coding`. Extensions such as operating-mode, metric-availability, and technical-range carry device-state and measurement-qualification information that the specialization standards expose at the metric level.
+A multi-parameter physiological monitor may contain a logical subsystem for blood pressure monitoring and channels that group related measurements, for example by measurement source or site. IEEE 11073-10101 provides MDC nomenclature for hemodynamic measurements, while the IEEE 11073-10201 DIM provides the MDS/VMD/Channel/Metric information model.
+
+The MDS, VMD, and Channel objects are represented using [MdsDevice](StructureDefinition-MdsDevice.html), [VmdDevice](StructureDefinition-VmdDevice.html), and [ChannelDevice](StructureDefinition-ChannelDevice.html) resources linked through `Device.parent`. MDC device nomenclature codes are retained in `Device.type`.
+
+For a noninvasive blood pressure measurement, a Numeric metric describes the measurement capability. The corresponding [NumericDeviceMetric](StructureDefinition-NumericDeviceMetric.html) carries the metric code in `DeviceMetric.type`. Systolic, diastolic, and mean pressure values measured together can be represented using a [CompoundNumericObservation](StructureDefinition-CompoundNumericObservation.html), with the individual MDC metric codes in `Observation.component.code` and the measured pressures in `Observation.component.valueQuantity`.
+
+A pressure waveform represented in IEEE 11073 as a RealTimeSampleArray follows a different metric mapping. The waveform capability is represented by a [SampleArrayDeviceMetric](StructureDefinition-SampleArrayDeviceMetric.html) and the sampled values by a [SampleArrayObservation](StructureDefinition-SampleArrayObservation.html). Depending on whether the source represents a single or compound sample array, the waveform samples are carried in `Observation.valueSampledData` or `Observation.component.valueSampledData`.
+
+##### Infusion pump
+
+IEEE 11073-10101b extends the MDC nomenclature with infusion-pump terminology among other acute-care device concepts. For an infusion-pump source represented using the IEEE 11073-10201 containment model, the overall pump may be represented as an MDS, a pumping subsystem as a VMD, and an infusion line as a Channel.
+
+These objects map to [MdsDevice](StructureDefinition-MdsDevice.html), [VmdDevice](StructureDefinition-VmdDevice.html), and [ChannelDevice](StructureDefinition-ChannelDevice.html) resources. Numeric capabilities such as an infusion rate or delivered volume are represented using [NumericDeviceMetric](StructureDefinition-NumericDeviceMetric.html) resources and their reported values using [NumericObservation](StructureDefinition-NumericObservation.html) resources. Coded or textual metric values or settings can be represented using an [EnumerationDeviceMetric](StructureDefinition-EnumerationDeviceMetric.html) and associated [EnumerationObservation](StructureDefinition-EnumerationObservation.html) when the source content represents a reported value. Device or metric operational state is instead mapped to the corresponding status element or PoCD extension according to the semantics of the source attribute.
+
+This distinction preserves the difference between the definition of a metric, the operating state of the device or metric, and an observed or reported value.
+
+##### Implantable cardiac device interrogation
+
+IEEE 11073-10103 defines nomenclature for clinically relevant information obtained during interrogation of implantable cardiac devices, including pacemakers, implantable defibrillators, cardiac resynchronization therapy devices, and implantable cardiac monitors. The standard provides terminology intended to support transfer of device interrogation information from vendor systems to EHR and device clinic management systems.
+
+This example differs from the preceding DIM-based use cases because IEEE 11073-10103 is a nomenclature standard and does not itself define an MDS/VMD/Channel containment hierarchy. The mapping decision therefore starts with the semantic role of each IEEE 11073-10103 concept rather than assuming a particular device hierarchy.
+
+Information identifying or classifying the implanted device can be represented on a Device resource, with the MDC coding retained in `Device.type` where appropriate. Concepts describing a metric capability may be represented using a DeviceMetric profile only when the source information also supports the PoCD device hierarchy required to contextualize the metric. Interrogation results and reported clinical or technical values may be represented using an appropriate Observation profile when the source content is consistent with the semantics and constraints of that profile, with the IEEE 11073-10103 MDC concept retained in `Observation.code`.
+
+An MDS/VMD/Channel hierarchy should therefore only be represented when it is supported by the source device information model and is relevant to preserving the provenance and context of the reported data.
+
+##### SDC-based device data
+
+For devices communicating through Service-oriented Device Connectivity, IEEE 11073-10207 defines a Participant Model containing device descriptors and dynamic state information. MDS, VMD, and Channel descriptors map to the corresponding Device profiles in this guide. Metric descriptor information and capability attributes map to DeviceMetric profiles, while metric values are represented using Observation resources.
+
+Individual BICEPS state attributes are mapped according to their semantics. For example, a metric's `ActivationState` maps to `DeviceMetric.operationalStatus`, while descriptor attributes such as `MetricAvailability` are represented using the corresponding [metric-availability](StructureDefinition-metric-availability.html) extension.
+
+The same source-to-target pattern applies to additional IEEE 11073 content: identify whether the source information represents device structure, terminology, metric capability, device or metric state, or a reported value, and then select the PoCD profile and element that preserves that meaning.
 
 #### Clinical and technical data archiving and retrospective data feed
 
