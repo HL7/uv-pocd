@@ -1,7 +1,7 @@
 Extension: Calibration
 Id: calibration
 Title: "Calibration extension"
-Description: "StructureDefinition that adds calibration information to a Device using the same elements as DeviceMetric.calibration (type, state, time)."
+Description: "StructureDefinition that adds calibration information to a Device using the same elements as DeviceMetric.calibration (type, state, time), plus references to other devices involved in the calibration."
 Context: Device
 * . ^short = "Calibration details"
 * . ^definition = "Describes the calibrations that have been performed or that are required for the Device."
