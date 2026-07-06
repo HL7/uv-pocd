@@ -264,10 +264,10 @@ For this implementation guide, when `CalibrationInfo` is carried at MDS or VMD l
 Guidance:
 
 - Add one `device-calibration` extension instance to the calibrated `Device` (MDS or VMD) for each reported calibration context.
-- Map `ComponentCalibrationType` to `Device.extension[device-calibration].extension[type].valueCode` using the value set mapping above.
-- Map `ComponentCalibrationState` to `Device.extension[device-calibration].extension[state].valueCode` using the value set mapping above.
-- Map calibration timestamp information, when present, to `Device.extension[device-calibration].extension[time].valueInstant`.
-- Use `Device.extension[device-calibration].extension[device].valueReference` to point to additional involved devices (for example, a calibrated VMD and its parent MDS, or an external calibrator device).
+- Map `ComponentCalibrationType` to `Device.extension[calibration].extension[type].valueCode` using the value set mapping above.
+- Map `ComponentCalibrationState` to `Device.extension[calibration].extension[state].valueCode` using the value set mapping above.
+- Map calibration timestamp information, when present, to `Device.extension[calibration].extension[time].valueInstant`.
+- Use `Device.extension[calibration].extension[device].valueReference` to point to additional involved devices (for example, a calibrated VMD and its parent MDS, or an external calibrator device).
 - Represent detailed calibration/self-test outcomes (for example pass/fail status, error codes, and user interaction steps) as `Observation` resources linked to the calibrated device context.
 
 This approach supports common use cases such as anesthesia device daily self-tests while keeping calibration information on the device context where SDC reports it.
