@@ -8,7 +8,7 @@
 * `Device.patient` and `Device.location` references must not be present.&#10;
 * `Device.parent` shall be pesent and refer to the MDS Device resource.&#10;
 * If multiple instances of the same VMD type exist, the Instance extension allows a squence to be defined.&#10;
-* Extensions allow approved jurisdictions, operating hours, and operating cycles to be added."/>
+* Extensions allow approved jurisdictions, operating hours, operating cycles, and calibration to be added."/>
   </extension>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
     <valueCode value="dev"/>
@@ -170,6 +170,21 @@
       <mapping>
         <identity value="dim"/>
         <map value="VMD::Operation-Cycles"/>
+      </mapping>
+    </element>
+    <element id="Device.extension:calibration">
+      <path value="Device.extension"/>
+      <sliceName value="calibration"/>
+      <short value="Calibration information"/>
+      <definition value="Calibration details for a VMD-level calibration context."/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://hl7.org/fhir/StructureDefinition/device-calibration"/>
+      </type>
+      <mustSupport value="true"/>
+      <mapping>
+        <identity value="sdc"/>
+        <map value="VmdState/CalibrationInfo"/>
       </mapping>
     </element>
     <element id="Device.identifier">
