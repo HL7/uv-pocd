@@ -22,3 +22,6 @@ The value set expansion is too large, and only a subset has been displayed
 Observation is labeled as an abstract type, but no concrete descendants were found (check definitions - this is usually an error unless concrete definitions are in some other package)
 Patient is labeled as an abstract type, but no concrete descendants were found (check definitions - this is usually an error unless concrete definitions are in some other package)
 Practitioner is labeled as an abstract type, but no concrete descendants were found (check definitions - this is usually an error unless concrete definitions are in some other package)
+
+# extension labeled as draft on purpose, so that OO can make changes if needed when it moves to the extension pack.
+The resource status 'draft' and the standards status 'trial-use' may not be consistent and should be reviewed
