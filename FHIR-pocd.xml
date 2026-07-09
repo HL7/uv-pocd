@@ -14,6 +14,7 @@
 <artifact id="Device/BloodPressureVmdDevice" key="Device-BloodPressureVmdDevice" name="Blood Pressure VMD example"/>
 <artifact id="DeviceMetric/CVPSampleArrayDeviceMetric" key="DeviceMetric-CVPSampleArrayDeviceMetric" name="CVP Sample Array metric example"/>
 <artifact id="Observation/CVPSampleArrayObservation" key="Observation-CVPSampleArrayObservation" name="CVP Sample Array observation example"/>
+<artifact id="StructureDefinition/calibration" key="StructureDefinition-calibration" name="Calibration extension"/>
 <artifact id="StructureDefinition/ChannelDevice" key="StructureDefinition-ChannelDevice" name="Channel Device profile"/>
 <artifact id="StructureDefinition/CompoundNumericObservation" key="StructureDefinition-CompoundNumericObservation" name="Compound Numeric Observation profile"/>
 <artifact deprecated="true" key="Device" name="Device"/>

@@ -242,18 +242,29 @@ Note that `dataAbsentReason` and `interpretation` are mutually exclusive: `dataA
 
 In ISO/IEEE 11073-10207 SDC, `CalibrationInfo` is part of `AbstractDeviceComponentState` and can therefore appear at the MDS, VMD, or Channel state level. For example, an anesthesia device may be required to perform a daily self-test, where `ComponentCalibrationState` transitions from `Req` (required) after system boot to `Cal` (calibrated) following a successful self-test. VMDs may also have specific calibration requirements.
 
-For this implementation guide, calibration and self-test information should be represented using `DeviceMetric` directly, when `CalibrationInfo` is carried at MDS or VMD level in SDC. not using one of the DeviceMetric profiles from this guide, because the existing DeviceMetric profiles in this guide require a Channel device to be referenced and are focused on representing measurement data.
+Remark: In ISO/IEEE 11073-10201 DIM, calibration is supported at the metric level (`Metric::Metric-Calibration`) and not as a general MDS/VMD-level calibration structure.
+
+For this implementation guide, when `CalibrationInfo` is carried at MDS or VMD level in SDC, calibration and self-test information should be represented on the corresponding `Device` resource using the calibration extension:
+
+- Extension URL: `http://hl7.org/fhir/StructureDefinition/device-calibration`
+- Remark: This extension is proposed to be part of the [FHIR Extensions Pack](https://build.fhir.org/ig/HL7/fhir-extensions/index.html).
+- Extension elements:
+    - `type` (same value set as `DeviceMetric.calibration.type`)
+    - `state` (same value set as `DeviceMetric.calibration.state`)
+    - `time` (instant)
+    - `device` (0..*, `Reference(Device)`) for related devices involved in the calibration
 
 Guidance:
 
-- Create a `DeviceMetric` instance for each calibration or self-test context that needs to be exchanged at MDS or VMD level.
-- Map `ComponentCalibrationState` to `DeviceMetric.calibration.state` using the value set mapping above.
-- Map `ComponentCalibrationType` to `DeviceMetric.calibration.type` using the value set mapping above.
-- Set `DeviceMetric.device` to the Device resource that is being calibrated (MDS Device or VMD Device). This identifies the calibrated target explicitly.
-- Represent calibration/self-test outcomes (for example pass/fail status, error codes, and user interaction steps) as Observation resources associated with that metric according to the observation-to-metric linkage pattern used elsewhere in this guide.
+- Add one `device-calibration` extension instance to the calibrated `Device` (MDS or VMD) for each reported calibration context.
+- Map `ComponentCalibrationType` to `Device.extension[calibration].extension[type].valueCode` using the value set mapping above.
+- Map `ComponentCalibrationState` to `Device.extension[calibration].extension[state].valueCode` using the value set mapping above.
+- Map calibration timestamp information, when present, to `Device.extension[calibration].extension[time].valueInstant`.
+- Use `Device.extension[calibration].extension[device].valueReference` to point to additional involved devices (for example, a calibrated VMD and its parent MDS, or an external calibrator device).
+- Represent detailed calibration/self-test outcomes (for example pass/fail status, error codes, and user interaction steps) as `Observation` resources linked to the calibrated device context.
 
-This approach supports common use cases such as anesthesia device daily self-tests, where required interactions and result details may be captured in one or more related Observations.
+This approach supports common use cases such as anesthesia device daily self-tests while keeping calibration information on the device context where SDC reports it.
 
-TBD: if calibration and self-test concepts have stable MDC nomenclature codes, we will define a dedicated `CalibrationMetric` profile in this guide and add an explicit end-to-end use case in this implementation guide.
+TBD: if calibration and self-test concepts have stable MDC nomenclature codes, we will add a dedicated calibration profile and an explicit end-to-end use case in this implementation guide.
 
 Related tracking item: [FHIR-51356](https://jira.hl7.org/browse/FHIR-51356).

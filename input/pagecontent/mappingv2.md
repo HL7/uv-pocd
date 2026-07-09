@@ -197,10 +197,12 @@ In PCD-01, UDI-related content is carried in OBX fields rather than in a dedicat
 
 | HL7 V2 PCD-01 Element | FHIR Device Mapping | Notes |
 | --- | --- | --- |
-| OBX-18 (EI: Equipment Instance Identifier) | `Device.identifier` | Carries the source equipment instance identifier (typically EUI-64 for VMD or MDS) |
-| OBX-3 (CWE: Observation Identifier) | Device element selector (e.g., `Device.udiCarrier.deviceIdentifier`, `Device.serialNumber`) | Identifies which UDI/production attribute is being conveyed (value carried in OBX-5) |
-| OBX-4 (ST: Observation Sub-ID) | `Device` target selection (MDS/VMD/Channel context) | Locates the device object in the PCD-01 containment hierarchy for the OBX attribute |
-| OBX-5 (Varies: Observation Value) | Value for the selected `Device` element | Carries the actual attribute value (e.g., device identifier, issuer, jurisdiction, HRF label, serial number) |
+| OBX-18 (EI: Equipment Instance Identifier) | `Device.identifier` | The unique identifier of the equipment (VMD or MDS) source of the observation |
+| EUI-64 format | `Device.identifier.system` + `Device.identifier.value` | When in EUI-64 format, map the authority to `system` and the identifier to `value` |
+| Device serial number (from sending system) | `Device.serialNumber` | Implementers should extract and preserve the device serial number for UDI compliance |
+| Device model information | `Device.modelNumber` | The model of the equipment providing the source data |
+| UDI barcode data (when available) | `Device.udiCarrier` | Structured storage of parsed UDI data from device communications |
+| UDI human-readable label | `Device.deviceName` with `type`=`udi-label-name` | The label name from regulatory UDI labels, if known to the device or gateway |
 {: .grid}
 
 **Implementation Guidance for UDI**:

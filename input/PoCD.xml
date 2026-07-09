@@ -704,5 +704,9 @@
       <code value="special-url"/>
       <value value="http://hl7.org/fhir/StructureDefinition/reference-range"/>
     </parameter>
+    <parameter>
+      <code value="special-url"/>
+      <value value="http://hl7.org/fhir/StructureDefinition/device-calibration"/>
+    </parameter>
 </definition>
 </ImplementationGuide>
