@@ -22,34 +22,27 @@ Please refer to the Mappings tab of each profile page for mapping ISO/IEEE 11073
 
 ### Mapping Details
 
-### Device Identification and Unique Device Identification (UDI)
+#### Device Identification and Unique Device Identification (UDI)
 
-In ISO/IEEE 11073 SDC, the Medical Device System (MDS) provides detailed identification information through its descriptive state:
-- **ProductionSpecification** containing manufacturer and model information
-- **Identification** with Root (OID) and Extension providing globally unique device instance identification
-- **SerialNumber** of the device
-- **HardwareRevision** and **SoftwareRevision** providing version tracking
+For SDC-to-FHIR UDI mapping in this guide, use the SDC elements that are mapped in the MDS Device profile:
 
-These components map to FHIR Device resource elements for Unique Device Identification (UDI):
-
-| IEEE 11073 SDC Element | FHIR Device Mapping | Notes |
-| --- | --- | --- |
-| SystemContextDescriptor/ProductionSpecification/Manufacturer | `Device.manufacturer` | The device manufacturer name |
-| SystemContextDescriptor/ProductionSpecification/Model | `Device.modelNumber` | The device model designation |
-| Identification/Root (OID) | `Device.identifier.system` | The OID root identifies the namespace (e.g., manufacturer identifier) |
-| Identification/Extension | `Device.identifier.value` | The extension uniquely identifies the specific device instance |
-| SerialNumber | `Device.serialNumber` | The device's serial number, a critical component of UDI |
-| HardwareRevision | `Device.version` with `type`=`hardware-version` | Hardware revision level for device tracking |
-| SoftwareRevision | `Device.version` with `type`=`software-version` | Software/firmware revision level |
-| UDI structured data (where available) | `Device.udiCarrier` | FHIR provides structured storage of UDI barcodes and parsed UDI data |
-| UDI human-readable label | `Device.deviceName` with `type`=`udi-label-name` | The label name from the device's UDI label |
+| IEEE 11073 SDC element (actual mapping source) | FHIR Device mapping |
+| --- | --- |
+| `MdsDescriptor/ProductionSpecification/ComponentId/Root` | `Device.identifier.system` (fixed to `urn:oid:1.2.840.10004.1.1.1.0.0.1.0.0.1.2680`; Root should match) |
+| `MdsDescriptor/ProductionSpecification/ComponentId/Extension` | `Device.identifier.value` (EUI-64 value) |
+| `MdsDescriptor/MetaData/UDI/DeviceIdentifier` | `Device.udiCarrier.deviceIdentifier` |
+| `MdsDescriptor/MetaData/UDI/Issuer` | `Device.udiCarrier.issuer` |
+| `MdsDescriptor/MetaData/UDI/Jurisdictions` | `Device.udiCarrier.jurisdiction` (root + extension concatenation) |
+| `MdsDescriptor/MetaData/UDI/HumanReadableForm` | `Device.udiCarrier.carrierHRF` |
+| `MdsDescriptor/MetaData/SerialNumber` | `Device.serialNumber` |
+| `MdsDescriptor/MetaData/Manufacturer` | `Device.manufacturer` |
+| `MdsDescriptor/MetaData/ModelNumber` | `Device.modelNumber` |
 {: .grid}
 
 **Implementation Guidance**:
-- SDC devices should provide comprehensive device identification through the ProductionSpecification and Identification attributes. This information should be translated to corresponding FHIR Device elements to support UDI requirements.
-- The combination of `Device.manufacturer`, `Device.modelNumber`, and `Device.serialNumber` forms the basis of device tracking and UDI compliance.
-- The `Device.identifier` with OID-based `system` preserves the IEEE 11073 device identification namespace, supporting interoperability with other IEEE 11073-based systems while mapping to FHIR.
-- When regulatory UDI information is available from the SDC source, it should be included in `Device.udiCarrier` for compliance tracking and supply chain management.
+- For UDI carriage, prioritize `MdsDescriptor/MetaData/UDI/*` into `Device.udiCarrier.*`.
+- Keep `ComponentId/Root` + `ComponentId/Extension` mapped to `Device.identifier` for persistent device instance identity in parallel with UDI.
+- Preserve serial number mapping from `MdsDescriptor/MetaData/SerialNumber` to `Device.serialNumber` for traceability and device lifecycle workflows.
 
 #### Patient
 For each of the measurements Height and Weight, an Observation resource is required with mandatory data elements. `Observation.subject` shall be present and refer to a Patient resource or to an MDS Device resource.

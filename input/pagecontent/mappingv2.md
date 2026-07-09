@@ -193,23 +193,21 @@ In IHE PCD-01, the purpose of this field is to uniquely identify the source of t
 
 **Device Identification and UDI Mapping**: 
 
-The Equipment Instance Identifier in HL7 V2 PCD-01 messages maps to device identification elements in FHIR that support Unique Device Identification (UDI):
+In PCD-01, UDI-related content is carried in OBX fields rather than in a dedicated UDI segment. The actual message elements used are:
 
 | HL7 V2 PCD-01 Element | FHIR Device Mapping | Notes |
 | --- | --- | --- |
-| OBX-18 (EI: Equipment Instance Identifier) | `Device.identifier` | The unique identifier of the equipment (VMD or MDS) source of the observation |
-| EUI-64 format | `Device.identifier.system` + `Device.identifier.value` | When in EUI-64 format, map the authority to `system` and the identifier to `value` |
-| Device serial number (from sending system) | `Device.serialNumber` | Implement should extract and preserve the device serial number for UDI compliance |
-| Device model information | `Device.modelNumber` | The model of the equipment providing the source data |
-| UDI barcode data (when available) | `Device.udiCarrier` | Structured storage of parsed UDI data from device communications |
-| UDI human-readable label | `Device.deviceName` with `type`=`udi-label-name` | The label name from regulatory UDI labels, if known to the device or gateway |
+| OBX-18 (EI: Equipment Instance Identifier) | `Device.identifier` | Carries the source equipment instance identifier (typically EUI-64 for VMD or MDS) |
+| OBX-3 (CWE: Observation Identifier) | Device element selector (e.g., `Device.udiCarrier.deviceIdentifier`, `Device.serialNumber`) | Identifies which UDI/production attribute is being conveyed (value carried in OBX-5) |
+| OBX-4 (ST: Observation Sub-ID) | `Device` target selection (MDS/VMD/Channel context) | Locates the device object in the PCD-01 containment hierarchy for the OBX attribute |
+| OBX-5 (Varies: Observation Value) | Value for the selected `Device` element | Carries the actual attribute value (e.g., device identifier, issuer, jurisdiction, HRF label, serial number) |
 {: .grid}
 
 **Implementation Guidance for UDI**:
-- The Equipment Instance Identifier in OBX-18 identifies the specific equipment instance. This should be preserved in `Device.identifier` to maintain traceability to the source device.
-- When PCD-01 messages are converted to FHIR, the device serial number should be extracted (from OBX-18 context or other message segments) and placed in `Device.serialNumber`.
-- If the sending system has access to regulatory UDI information (barcode or parsed components), this should be included in `Device.udiCarrier.deviceIdentifier` (the GTIN/GTIN+UDI code).
-- Device gateways should populate `Device.type` with appropriate coding (e.g., MDC codes from the device communication) to enable systems to recognize and validate UDI compliance based on device regulatory classification.
+- Use OBX-18 to keep persistent equipment identity and create/update the corresponding `Device.identifier`.
+- For UDI-specific components, use device-related OBX observations where OBX-3 identifies the UDI/production attribute and OBX-5 carries the value.
+- Use OBX-4 Sub-ID to bind each device-related OBX to the correct device level (MDS or VMD) before mapping into the appropriate FHIR `Device` resource.
+- When OBX device-related attributes represent UDI device identifier, issuer, authority/jurisdiction, or human-readable label, map them to `Device.udiCarrier.deviceIdentifier`, `Device.udiCarrier.issuer`, `Device.udiCarrier.jurisdiction`, and `Device.udiCarrier.carrierHRF` respectively.
 
 
 #### OBX-20 Observation site
