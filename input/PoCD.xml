@@ -641,11 +641,28 @@
     </parameter>
     <parameter>
       <code value="find-other-resources"/>
-      <value value="true"/>
+      <value value="false"/>
     </parameter>
     <parameter>
       <code value="show-inherited-invariants"/>
       <value value="false"/>
+    </parameter>
+    <parameter>
+      <code value="version-comparison"/>
+      <value value="n/a"/>
+    </parameter>
+    <parameter>
+      <code value="ipa-comparison"/>
+      <value value="n/a"/>
+    </parameter>
+    <parameter>
+      <code value="ips-comparison"/>
+      <value value="n/a"/>
+    </parameter>
+    <!-- the official assigned OID root from Grahame -->
+    <parameter>
+      <code value="auto-oid-root"/>
+      <value value="2.16.840.1.113883.4.642.40.72"/>
     </parameter>
     <parameter>
       <code value="special-url"/>

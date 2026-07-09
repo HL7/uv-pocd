@@ -26,8 +26,8 @@
   </jurisdiction>
   <kind value='requirements'/>
   <fhirVersion value='4.0.1'/>
-  <format value='xml'/>
-  <format value='json'/>
+  <format value='application/fhir+xml'/>
+  <format value='application/fhir+json'/>
   <implementationGuide value='http://hl7.org/fhir/uv/pocd/ImplementationGuide/hl7.fhir.uv.pocd'/>
   <rest>
     <mode value='server'/>

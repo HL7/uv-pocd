@@ -193,7 +193,7 @@ In IHE PCD-01, the purpose of this field is to uniquely identify the source of t
 
 **Device Identification and UDI Mapping**: 
 
-The Equipment Instance Identifier in HL7 V2 PCD-01 messages maps to device identification elements in FHIR that support Unique Device Identification (UDI):
+In PCD-01, UDI-related content is carried in OBX fields rather than in a dedicated UDI segment. The actual message elements used are:
 
 | HL7 V2 PCD-01 Element | FHIR Device Mapping | Notes |
 | --- | --- | --- |
@@ -206,10 +206,10 @@ The Equipment Instance Identifier in HL7 V2 PCD-01 messages maps to device ident
 {: .grid}
 
 **Implementation Guidance for UDI**:
-- The Equipment Instance Identifier in OBX-18 identifies the specific equipment instance. This should be preserved in `Device.identifier` to maintain traceability to the source device.
-- When PCD-01 messages are converted to FHIR, the device serial number should be extracted (from OBX-18 context or other message segments) and placed in `Device.serialNumber`.
-- If the sending system has access to regulatory UDI information (barcode or parsed components), this should be included in `Device.udiCarrier.deviceIdentifier` (the GTIN/GTIN+UDI code).
-- Device gateways should populate `Device.type` with appropriate coding (e.g., MDC codes from the device communication) to enable systems to recognize and validate UDI compliance based on device regulatory classification.
+- Use OBX-18 to keep persistent equipment identity and create/update the corresponding `Device.identifier`.
+- For UDI-specific components, use device-related OBX observations where OBX-3 identifies the UDI/production attribute and OBX-5 carries the value.
+- Use OBX-4 Sub-ID to bind each device-related OBX to the correct device level (MDS or VMD) before mapping into the appropriate FHIR `Device` resource.
+- When OBX device-related attributes represent UDI device identifier, issuer, authority/jurisdiction, or human-readable label, map them to `Device.udiCarrier.deviceIdentifier`, `Device.udiCarrier.issuer`, `Device.udiCarrier.jurisdiction`, and `Device.udiCarrier.carrierHRF` respectively.
 
 
 #### OBX-20 Observation site
