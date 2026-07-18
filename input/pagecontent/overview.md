@@ -166,11 +166,11 @@ Information identifying or classifying the implanted device can be represented o
 
 An MDS/VMD/Channel hierarchy should therefore only be represented when it is supported by the source device information model and is relevant to preserving the provenance and context of the reported data.
 
-##### SDC-based device data
+##### Service-oriented Device Connectivity-based device data
 
 For devices communicating through Service-oriented Device Connectivity, IEEE 11073-10207 defines a Participant Model containing device descriptors and dynamic state information. MDS, VMD, and Channel descriptors map to the corresponding Device profiles in this guide. Metric descriptor information and capability attributes map to DeviceMetric profiles, while metric values are represented using Observation resources.
 
-Individual BICEPS state attributes are mapped according to their semantics. For example, a metric's `ActivationState` maps to `DeviceMetric.operationalStatus`, while descriptor attributes such as `MetricAvailability` are represented using the corresponding [metric-availability](StructureDefinition-metric-availability.html) extension.
+Individual IEEE 11073-10207 state attributes are mapped according to their semantics. For example, a metric's `ActivationState` maps to `DeviceMetric.operationalStatus`, while descriptor attributes such as `MetricAvailability` are represented using the corresponding [metric-availability](StructureDefinition-metric-availability.html) extension.
 
 The same source-to-target pattern applies to additional IEEE 11073 content: identify whether the source information represents device structure, terminology, metric capability, device or metric state, or a reported value, and then select the PoCD profile and element that preserves that meaning.
 
