@@ -20,6 +20,19 @@ Regenstrief, developers of LOINC, and IEEE, developers of the 11073 standards, a
 
 ### Code Systems
 
+<style>
+table {
+	border-collapse: collapse;
+	border: 1px solid #777;
+}
+
+th,
+td {
+	border: 1px solid #777;
+	padding: 0.35rem 0.5rem;
+}
+</style>
+
 | Code System | Description |
 |-------------|-------------|
 | [Operating mode code system](CodeSystem-operating-mode.html) | Operating mode definitions from the ISO/IEEE 11073-10207. |

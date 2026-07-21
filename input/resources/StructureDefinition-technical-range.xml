@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas-r5/fhir-single.xsd">
   <id value="technical-range"/>
-  <url value="http://hl7.org/fhir/uv/pocd/StructureDefinition/technical-range"/>
+  <url value="http://hl7.org/fhir/StructureDefinition/technical-range"/>
   <name value="TechnicalRange" />
   <title value="Technical range extension"/>
   <status value="active" />
   <date value="2022-01-16"/>
-  <description value="StructureDefinition that adds technical range and accuracy to a DeviceMetric."/>
+  <description value="StructureDefinition that adds technical range and accuracy to a DeviceMetric. This extension is included in the PoCD IG but is intended to move to the FHIR Extensions Pack."/>
   <contact>
     <telecom>
       <system value="url"/>
@@ -175,7 +175,7 @@
     </element>
     <element id="Extension.url">
       <path value="Extension.url"/>
-      <fixedUri value="http://hl7.org/fhir/uv/pocd/StructureDefinition/technical-range"/>
+      <fixedUri value="http://hl7.org/fhir/StructureDefinition/technical-range"/>
     </element>
     <element id="Extension.value[x]">
       <path value="Extension.value[x]" />

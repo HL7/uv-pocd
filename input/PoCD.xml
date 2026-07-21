@@ -266,7 +266,7 @@
         <reference value="CodeSystem/safety"/>
       </reference>
       <name value="Safety classification code system"/>
-      <description value="Safety classification definitions from the ISO/IEEE 11073-10207."/>
+      <description value="Safety classification definitions from the ISO/IEEE 11073-10207. This CodeSystem is included in the PoCD IG but is intended to move to the HL7 Terminology package."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -282,7 +282,7 @@
         <reference value="CodeSystem/metric-availability"/>
       </reference>
       <name value="Metric availability code system"/>
-      <description value="Metric availability definitions from the ISO/IEEE 11073-10207."/>
+      <description value="Metric availability definitions from the ISO/IEEE 11073-10207. This CodeSystem is included in the PoCD IG but is intended to move to the HL7 Terminology package."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -290,7 +290,7 @@
         <reference value="CodeSystem/measurement-status"/>
       </reference>
       <name value="Measurement status codes"/>
-      <description value="Measurement status definitions from the ISO/IEEE 11073-10201 DIM."/>
+      <description value="Measurement status definitions from the ISO/IEEE 11073-10201 DIM. This CodeSystem is included in the PoCD IG but is intended to move to the HL7 Terminology package."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -314,7 +314,7 @@
         <reference value="ValueSet/11073MDC-object"/>
       </reference>
       <name value="MDC Object infrastructure and Device nomenclature"/>
-      <description value="ValueSet for the ISO/IEEE 11073-10101 Nomenclature filtered by Object partition."/>
+      <description value="ValueSet for the ISO/IEEE 11073-10101 Nomenclature filtered by Object partition. This ValueSet is included in the PoCD IG but is intended to move to the HL7 Terminology package."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -322,7 +322,7 @@
         <reference value="ValueSet/11073MDC-metric"/>
       </reference>
       <name value="MDC Metric nomenclature"/>
-      <description value="ValueSet for the ISO/IEEE 11073-10101 Nomenclature filtered by Metric (SCADA or Settings) partition."/>
+      <description value="ValueSet for the ISO/IEEE 11073-10101 Nomenclature filtered by Metric (SCADA or Settings) partition. This ValueSet is included in the PoCD IG but is intended to move to the HL7 Terminology package."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -330,7 +330,7 @@
         <reference value="ValueSet/11073MDC-dimension"/>
       </reference>
       <name value="MDC Unit of Measurement"/>
-      <description value="ValueSet for the ISO/IEEE 11073-10101 Nomenclature filtered by Dimension partition."/>
+      <description value="ValueSet for the ISO/IEEE 11073-10101 Nomenclature filtered by Dimension partition. This ValueSet is included in the PoCD IG but is intended to move to the HL7 Terminology package."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -346,7 +346,7 @@
         <reference value="ValueSet/safety-classification"/>
       </reference>
       <name value="Safety classification value set"/>
-      <description value="ValueSet for IEEE 11073-10207 SafetyClassification."/>
+      <description value="ValueSet for IEEE 11073-10207 SafetyClassification. This ValueSet is included in the PoCD IG but is intended to move to the HL7 Terminology package."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -362,7 +362,7 @@
         <reference value="ValueSet/metric-availability"/>
       </reference>
       <name value="Metric availability value set"/>
-      <description value="ValueSet for IEEE 11073-10207 MetricAvailability."/>
+      <description value="ValueSet for IEEE 11073-10207 MetricAvailability. This ValueSet is included in the PoCD IG but is intended to move to the HL7 Terminology package."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -703,6 +703,10 @@
     <parameter>
       <code value="special-url"/>
       <value value="http://hl7.org/fhir/StructureDefinition/reference-range"/>
+    </parameter>
+    <parameter>
+      <code value="special-url"/>
+      <value value="http://hl7.org/fhir/StructureDefinition/technical-range"/>
     </parameter>
     <parameter>
       <code value="special-url"/>

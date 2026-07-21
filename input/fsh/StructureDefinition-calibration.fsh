@@ -1,7 +1,7 @@
 Extension: Calibration
 Id: calibration
 Title: "Calibration extension"
-Description: "StructureDefinition that adds calibration information to a Device using the same elements as DeviceMetric.calibration (type, state, time), plus references to other devices involved in the calibration."
+Description: "StructureDefinition that adds calibration information to a Device using the same elements as DeviceMetric.calibration (type, state, time), plus references to other devices involved in the calibration. This extension is included in the PoCD IG but is intended to move to the FHIR Extensions Pack."
 Context: Device
 * ^status = #draft
 * ^extension[http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm].valueInteger = 1

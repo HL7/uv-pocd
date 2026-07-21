@@ -14,7 +14,7 @@
   		</valueReference>
   	</extension>
   </extension>
-  <extension url="http://hl7.org/fhir/uv/pocd/StructureDefinition/technical-range">
+  <extension url="http://hl7.org/fhir/StructureDefinition/technical-range">
   	<extension url="lowerLimit">
   		<valueDecimal value="0"/>
   	</extension>

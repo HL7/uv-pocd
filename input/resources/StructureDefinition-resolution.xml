@@ -6,7 +6,7 @@
   <title value="Resolution extension"/>
   <status value="active" />
   <date value="2022-01-16"/>
-  <description value="StructureDefinition that adds resolution to a DeviceMetric." />
+  <description value="StructureDefinition that adds resolution to a DeviceMetric. This extension is included in the PoCD IG but is intended to move to the FHIR Extensions Pack." />
   <contact>
     <telecom>
       <system value="url"/>
