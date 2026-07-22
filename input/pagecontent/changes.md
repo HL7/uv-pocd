@@ -1,4 +1,4 @@
-### Version 1.0.0
+### Version 1.0.0 (ballot 3)
 
 * Add typed reference range support for DeviceMetric, including the new reference range extension and related terminology artifacts.
 * Add calibration guidance for SDC use cases where calibration information is reported at MDS or VMD level, using a Device-level calibration extension.

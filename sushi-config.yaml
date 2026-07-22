@@ -1,5 +1,5 @@
 canonical: http://hl7.org/fhir/uv/pocd
 status: active
-version: 1.0.0
+version: 1.0.0-ballot3
 fhirVersion: 4.0.1
 FSHOnly: true

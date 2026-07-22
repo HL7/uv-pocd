@@ -25,3 +25,6 @@ Practitioner is labeled as an abstract type, but no concrete descendants were fo
 
 # extension labeled as draft on purpose, so that OO can make changes if needed when it moves to the extension pack.
 The resource status 'draft' and the standards status 'trial-use' may not be consistent and should be reviewed
+
+# pick 1.0.0 to avoid a warning about the version of the metric-availability code system. 
+Pinned the version of http://terminology.hl7.org/CodeSystem/metric-availability to 1.0.0 from choices of 1.0.0 (hl7.terminology.r4#7.2.0), 1.0.0-ballot3 (hl7.fhir.uv.pocd#1.0.0-ballot3)

@@ -9,6 +9,6 @@ Context: DeviceMetric
 * url = "http://hl7.org/fhir/uv/pocd/StructureDefinition/metric-availability" (exactly)
 * value[x] 1..
 * value[x] only CodeableConcept
-* value[x] from DeviceMetricAvailability (extensible)
+* value[x] from http://terminology.hl7.org/ValueSet/metric-availability|1.0.0 (extensible)
 * value[x] ^short = "Metric availability"
 * value[x] ^binding.description = "Metric Availability"
