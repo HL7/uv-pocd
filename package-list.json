@@ -2,7 +2,7 @@
     "package-id": "hl7.fhir.uv.pocd",
     "title": "Point-of-Care Device Implementation Guide",
     "canonical": "http://hl7.org/fhir/uv/pocd",
-    "introduction": "Defines the use of FHIR resources to convey measurements and supporting data from acute care point-of-care medical devices (PoCD) to receiving systems for electronic medical records, clinical decision support, and medical data archiving for aggregate quality measurement and research purposes",
+    "introduction": "This Implementation Guide defines the use of FHIR resources to convey measurements and supporting data from acute care point-of-care medical devices (PoCD) to receiving systems for electronic medical records, clinical decision support, and medical data archiving for aggregate quality measurement and research purposes.\r\n\r\nThe Point-of-Care Device (PoCD) Implementation Guide was developed by the Devices on FHIR (DoF) initiative. This is a collaborative effort between the HL7 Devices Working Group Integrating the Healthcare Enterprise (IHE), and the now defunct Personal Connected Health Alliance (PCHAlliance) / Continua. The objective of the DoF initiative is to ensure a consistent use of FHIR for exchanging health device information, including:\r\n\r\n* Maximum alignment between PoCD and Personal Health Devices (PHD)\r\n* Alignment with the HL7 V2-based specifications from the IHE Patient Care Device (PCD) technical framework\r\n* Consistent mapping of the ISO/IEEE 11073 terminology and information models\r\n* Note that this implementation guide is based on the STU3 version of FHIR.",
     "list": [
         {
             "version": "current",
@@ -10,6 +10,15 @@
             "path": "http://build.fhir.org/ig/HL7/uv-pocd",
             "status": "ci-build",
             "current": true
+        },
+        {
+            "version": "1.0.0-ballot3",
+            "date": "2026-07-22",
+            "desc": "STU 1 Ballot 3 (Aug 2026 Ballot)",
+            "path": "http://hl7.org/fhir/uv/pocd/STU2",
+            "status": "ballot",
+            "fhirversion": "4.0.1",
+            "sequence": "STU 1"
         },
         {
             "version": "0.3.0",

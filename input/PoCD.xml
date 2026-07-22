@@ -628,7 +628,7 @@
       <page>
         <nameUrl value="changes.html"/>
         <title value="Change Log"/>
-        <generation value="html"/>
+        <generation value="markdown"/>
       </page>
     </page>
     <parameter>
@@ -637,7 +637,7 @@
     </parameter>
     <parameter>
       <code value="releaselabel"/>
-      <value value="STU 1"/>
+      <value value="STU 1 Ballot3"/>
     </parameter>
     <parameter>
       <code value="find-other-resources"/>

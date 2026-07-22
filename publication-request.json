@@ -1,11 +1,11 @@
 {
     "package-id": "hl7.fhir.uv.pocd",
-    "version": "1.0.0",
-    "path": "http://hl7.org/fhir/uv/pocd/STU1",
+    "version": "1.0.0-ballot3",
+    "path": "http://hl7.org/fhir/uv/pocd/STU2",
     "mode": "working",
-    "status": "draft",
+    "status": "ballot",
     "sequence": "STU 1",
-    "desc": "STU 1. This version has been balloted and is being published for use in testing and implementation. It is not yet ready for production use.",
-    "changes": "input/pagecontent/changes.xml",
+    "desc": "This version is being balloted and is targeting publication for trial use. It is not yet ready for production use.",
+    "changes": "input/pagecontent/changes.md",
     "first": false
 }

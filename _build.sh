@@ -98,6 +98,8 @@ function run_publisher() {
   local extra_flags=("$@")
   if [ "$jar_location" != "not_found" ]; then
     echo "jar_location is: $jar_location"
+    # Ensure output exists so publisher can write package artifacts like output/package.tgz.
+    mkdir -p output
     if [[ "$JAVA_TOOL_OPTIONS" != *"-Dfile.encoding=UTF-8"* ]]; then
       export JAVA_TOOL_OPTIONS+=" -Dfile.encoding=UTF-8"
     fi
@@ -151,6 +153,13 @@ check_jar_location
 extraArgs=()
 if [ $# -gt 0 ]; then
   case "$1" in
+    1)       shift; extraArgs=("$@"); update_publisher; exit 0 ;;
+    2)       shift; extraArgs=("$@"); check_internet_connection; build_ig "${extraArgs[@]}"; exit 0 ;;
+    3)       shift; extraArgs=("$@"); check_internet_connection; build_nosushi "${extraArgs[@]}"; exit 0 ;;
+    4)       shift; extraArgs=("$@"); build_notx "${extraArgs[@]}"; exit 0 ;;
+    5)       jekyll_build; exit 0 ;;
+    6)       cleanup; exit 0 ;;
+    0)       exit 0 ;;
     update)  shift; extraArgs=("$@"); update_publisher; exit 0 ;;
     build)   shift; extraArgs=("$@"); check_internet_connection; build_ig "${extraArgs[@]}"; exit 0 ;;
     nosushi) shift; extraArgs=("$@"); check_internet_connection; build_nosushi "${extraArgs[@]}"; exit 0 ;;
