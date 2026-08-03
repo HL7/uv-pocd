@@ -279,14 +279,6 @@
     </resource>
     <resource>
       <reference>
-        <reference value="CodeSystem/metric-availability"/>
-      </reference>
-      <name value="Metric availability code system"/>
-      <description value="Metric availability definitions from the ISO/IEEE 11073-10207. This CodeSystem is included in the PoCD IG but is intended to move to the HL7 Terminology package."/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <reference>
         <reference value="CodeSystem/measurement-status"/>
       </reference>
       <name value="Measurement status codes"/>
@@ -628,6 +620,11 @@
       <page>
         <nameUrl value="changes.html"/>
         <title value="Change Log"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <nameUrl value="Jira-issues-done.html"/>
+        <title value="Resolved Jira Issues"/>
         <generation value="markdown"/>
       </page>
     </page>

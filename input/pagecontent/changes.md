@@ -1,5 +1,6 @@
 ### Version 1.0.0 (ballot 3)
 
+* [Resolved Jira issues for this ballot](Jira-issues-done.html)
 * Add typed reference range support for DeviceMetric, including the new reference range extension and related terminology artifacts.
 * Add calibration guidance for SDC use cases where calibration information is reported at MDS or VMD level, using a Device-level calibration extension.
 * Expand UDI mapping guidance and element coverage across DIM, HL7 V2, and SDC mappings.

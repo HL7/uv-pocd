@@ -38,7 +38,6 @@ td {
 | [Operating mode code system](CodeSystem-operating-mode.html) | Operating mode definitions from the ISO/IEEE 11073-10207. |
 | [Safety classification code system](CodeSystem-safety.html) | Safety classification definitions from the ISO/IEEE 11073-10207. |
 | [Kind of relation code system](CodeSystem-kind-of-relation.html) | Relation definitions from the ISO/IEEE 11073-10207. |
-| [Metric availability code system](CodeSystem-metric-availability.html) | Metric availability definitions from the ISO/IEEE 11073-10207. |
 | [Measurement status codes](CodeSystem-measurement-status.html) | Measurement status definitions from the ISO/IEEE 11073-10201 DIM. |
 
 ### Value Sets
