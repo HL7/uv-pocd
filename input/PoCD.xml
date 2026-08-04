@@ -351,14 +351,6 @@
     </resource>
     <resource>
       <reference>
-        <reference value="ValueSet/metric-availability"/>
-      </reference>
-      <name value="Metric availability value set"/>
-      <description value="ValueSet for IEEE 11073-10207 MetricAvailability. This ValueSet is included in the PoCD IG but is intended to move to the HL7 Terminology package."/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <reference>
         <reference value="ValueSet/observation-interpretation"/>
       </reference>
       <name value="Observation interpretation codes"/>
@@ -680,14 +672,6 @@
     <parameter>
       <code value="special-url"/>
       <value value="http://terminology.hl7.org/ValueSet/11073MDC-object"/>
-    </parameter>
-    <parameter>
-      <code value="special-url"/>
-      <value value="http://terminology.hl7.org/CodeSystem/metric-availability"/>
-    </parameter>
-    <parameter>
-      <code value="special-url"/>
-      <value value="http://terminology.hl7.org/ValueSet/metric-availability"/>
     </parameter>
     <parameter>
       <code value="special-url"/>

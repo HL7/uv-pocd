@@ -50,7 +50,6 @@ td {
 | [Operating mode value set](ValueSet-operating-mode.html) | ValueSet for IEEE 11073-10207 MdsState/OperatingMode. |
 | [Safety classification value set](ValueSet-safety-classification.html) | ValueSet for IEEE 11073-10207 SafetyClassification. |
 | [Kind of relation value set](ValueSet-kind-of-relation.html) | ValueSet for IEEE 11073-10207 Relation/Kind. |
-| [Metric availability value set](ValueSet-metric-availability.html) | ValueSet for IEEE 11073-10207 MetricAvailability. |
 | [Observation interpretation codes](ValueSet-observation-interpretation.html) | Observation interpretation codes including measurement status. |
 
 ### Downloading Codes from RTMMS
