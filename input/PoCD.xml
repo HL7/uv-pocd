@@ -4,7 +4,7 @@
   <id value="hl7.fhir.uv.pocd"/>
   <language value="en-US"/>
   <url value="http://hl7.org/fhir/uv/pocd/ImplementationGuide/hl7.fhir.uv.pocd"/>
-  <version value="1.0.0-ballot"/>
+  <version value="1.0.0-ballot3"/>
   <name value="PoCDImplementationGuide"/>
   <title value="Point-of-Care Device Implementation Guide"/>
   <status value="active"/>
@@ -626,7 +626,7 @@
     </parameter>
     <parameter>
       <code value="releaselabel"/>
-      <value value="STU 1 Ballot"/>
+      <value value="STU 1 Ballot3"/>
     </parameter>
     <parameter>
       <code value="find-other-resources"/>
