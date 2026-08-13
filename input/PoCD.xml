@@ -218,7 +218,7 @@
         <reference value="StructureDefinition/technical-range"/>
       </reference>
       <name value="Technical range extension"/>
-      <description value="StructureDefinition that adds technical range and accuracy to a DeviceMetric."/>
+      <description value="StructureDefinition that adds technical range and accuracy to a DeviceMetric. This extension is included in the PoCD IG but is intended to move to the FHIR Extensions Pack."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -226,7 +226,7 @@
         <reference value="StructureDefinition/resolution"/>
       </reference>
       <name value="Resolution extension"/>
-      <description value="StructureDefinition that adds resolution to a DeviceMetric."/>
+      <description value="StructureDefinition that adds resolution to a DeviceMetric. This extension is included in the PoCD IG but is intended to move to the FHIR Extensions Pack."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -250,7 +250,15 @@
         <reference value="StructureDefinition/reference-range"/>
       </reference>
       <name value="Reference range extension"/>
-      <description value="StructureDefinition that adds a typed reference range (low, high, and range type) to a DeviceMetric."/>
+      <description value="StructureDefinition that adds a typed reference range (low, high, and range type) to a DeviceMetric. This extension is included in the PoCD IG but is intended to move to the FHIR Extensions Pack."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/calibration"/>
+      </reference>
+      <name value="Calibration extension"/>
+      <description value="StructureDefinition that adds calibration information to a Device using the same elements as DeviceMetric.calibration (type, state, time), plus references to other devices involved in the calibration. This extension is included in the PoCD IG but is intended to move to the FHIR Extensions Pack."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>

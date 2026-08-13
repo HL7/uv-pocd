@@ -6,7 +6,7 @@
   <title value="Technical range extension"/>
   <status value="active" />
   <date value="2022-01-16"/>
-  <description value="StructureDefinition that adds technical range and accuracy to a DeviceMetric. This extension is included in the PoCD IG but is intended to move to the FHIR Extensions Pack."/>
+  <description value="StructureDefinition that adds technical range and accuracy to a DeviceMetric."/>
   <contact>
     <telecom>
       <system value="url"/>

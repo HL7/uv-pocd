@@ -6,7 +6,7 @@
   <title value="Resolution extension"/>
   <status value="active" />
   <date value="2022-01-16"/>
-  <description value="StructureDefinition that adds resolution to a DeviceMetric. This extension is included in the PoCD IG but is intended to move to the FHIR Extensions Pack." />
+  <description value="StructureDefinition that adds resolution to a DeviceMetric. Note: Resolution differs from accuracy — resolution describes the finest distinction a device can display, whereas accuracy describes how close a measured value is to the true value." />
   <contact>
     <telecom>
       <system value="url"/>
@@ -30,7 +30,7 @@
     <element id="Extension">
       <path value="Extension"/>
       <short value="Minimum determinable difference" />
-      <definition value="Resolution is the minimum determinable difference between two determined values."/>
+      <definition value="Resolution is the minimum determinable difference between two determined values. It is the smallest increment or change that a measuring tool can detect and display."/>
     </element>
     <element id="Extension.extension">
       <path value="Extension.extension"/>
