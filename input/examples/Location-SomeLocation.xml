@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Location xmlns="http://hl7.org/fhir">
   <id value="SomeLocation"/>
+  <!-- Bed identifier from the hospital's location master (ADT / bed management).
+       The identifier system is scoped to the facility, and the value combines
+       point of care, room and bed (cf. HL7 v2 PV1-3 "C3^315^42"), so it is unique
+       even though many units have a room 315 or a bed labelled "42". -->
+  <identifier>
+    <use value="official"/>
+    <system value="http://hospital.example.org/fhir/sid/beds"/>
+    <value value="C3-315-42"/>
+  </identifier>
+  <status value="active"/>
   <name value="Bed 42"/>
+  <alias value="SICU C3, Room 315, Bed 42"/>
+  <description value="Bed 42 in Room 315 of the Surgical Intensive Care Unit C3"/>
   <mode value="instance"/>
   <type>
     <coding>
@@ -17,4 +29,13 @@
       <display value="Bed"/>
     </coding>
   </physicalType>
+  <!-- Logical reference to the containing room, which is managed by the hospital
+       information system and not part of this example. -->
+  <partOf>
+    <identifier>
+      <system value="http://hospital.example.org/fhir/sid/rooms"/>
+      <value value="C3-315"/>
+    </identifier>
+    <display value="SICU C3, Room 315"/>
+  </partOf>
 </Location>

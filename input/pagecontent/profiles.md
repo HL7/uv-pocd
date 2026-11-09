@@ -45,7 +45,7 @@ There are three patterns for including Patient and Location references in device
 
 1. **Reference existing resources**: When the destination FHIR server is the system of record for Patient and Location resources (the most common scenario in enterprise deployments), the device or gateway resolves references by searching with known identifiers before submitting observations. This requires the device or gateway to have access to patient and location identifiers, typically received through an ADT feed or device association workflow.
 
-2. **Conditional create in the bundle**: When the device or gateway has sufficient identity information but does not know whether the resource already exists on the server, it can include a Patient or Location resource in the transaction bundle with a conditional create request (`ifNoneExist`). The server will use the existing resource if found, or create a new one. This approach requires strong identifiers (such as MRN for Patient or a unique name for Location) to avoid creating duplicates. See the [RESTful Transfer](transfer.html#conditional-create) page for examples.
+2. **Conditional create in the bundle**: When the device or gateway has sufficient identity information but does not know whether the resource already exists on the server, it can include a Patient or Location resource in the transaction bundle with a conditional create request (`ifNoneExist`). The server will use the existing resource if found, or create a new one. This approach requires strong, appropriately scoped identifiers (such as an MRN for Patient or a location identifier scoped to the facility or enterprise for Location) to avoid creating duplicates. Location names are usually not unique within an enterprise and should not be used as the only search criterion. See the [RESTful Transfer](transfer.html#conditional-create) page for examples.
 
 3. **Include in the bundle**: When the device is the source of truth for the resource (rare for Patient, but possible for Location in mobile or temporary setups), the resource is included directly in the transaction bundle. This pattern should be used with caution, as it may conflict with resources managed by other systems.
 
@@ -53,7 +53,7 @@ There are three patterns for including Patient and Location references in device
 
 For **Patient** references, the device or gateway should supply at least a medical record number (MRN) or other facility-specific identifier received from an ADT system or device association workflow. When patient demographics are unknown, see the guidance under [Observation Subject Guidance](#observation-subject-guidance) above for handling temporary Patient resources.
 
-For **Location** references, the device or gateway should supply at least a bed label or location identifier that can be matched against existing Location resources on the server. The MDS Device profile supports a `Device.location` reference for establishing the device's physical location.
+For **Location** references, the device or gateway should supply at least a location identifier that can be matched against existing Location resources on the server. The identifier value shall be unique within the namespace defined by its `system`. Labels such as a bed or room name are usually not unique on their own and are not sufficient as an identifier unless the namespace guarantees uniqueness. The MDS Device profile supports a `Device.location` reference for establishing the device's physical location.
 
 #### Conformance to Destination Profiles
 
