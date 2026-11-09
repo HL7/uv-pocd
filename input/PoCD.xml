@@ -442,7 +442,7 @@
         <reference value="Observation/HeartRateNumericObservation"/>
       </reference>
       <name value="Heart Rate Numeric observation example"/>
-      <description value="Example of an Observation resource that represents heart rate measurement."/>
+      <description value="Example of an Observation resource that represents heart rate measurement. The original MDC code reported by the device is retained, with mapped LOINC and SNOMED CT codings added alongside it."/>
       <exampleCanonical value="http://hl7.org/fhir/uv/pocd/StructureDefinition/NumericObservation"/>
     </resource>
     <resource>

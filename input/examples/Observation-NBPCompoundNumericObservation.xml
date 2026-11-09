@@ -23,6 +23,11 @@
       <code value="150020"/>
       <display value="MDC_PRESS_BLD_NONINV"/>
     </coding>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="75367002"/>
+      <display value="Blood pressure"/>
+    </coding>
   </code>
   <subject>
     <reference value="Patient/SomePatient"/>
@@ -42,6 +47,11 @@
         <system value="urn:iso:std:iso:11073:10101"/>
         <code value="150021"/>
         <display value="MDC_PRESS_BLD_NONINV_SYS"/>
+      </coding>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="271649006"/>
+        <display value="Systolic blood pressure"/>
       </coding>
     </code>
     <valueQuantity>
@@ -63,6 +73,11 @@
         <code value="150022"/>
         <display value="MDC_PRESS_BLD_NONINV_DIA"/>
       </coding>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="271650006"/>
+        <display value="Diastolic blood pressure"/>
+      </coding>
     </code>
     <valueQuantity>
       <value value="80"/>
@@ -82,6 +97,11 @@
         <system value="urn:iso:std:iso:11073:10101"/>
         <code value="150023"/>
         <display value="MDC_PRESS_BLD_NONINV_MEAN"/>
+      </coding>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="6797001"/>
+        <display value="Mean blood pressure"/>
       </coding>
     </code>
     <valueQuantity>
