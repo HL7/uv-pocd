@@ -116,6 +116,41 @@ See the "Profiles" pages for examples of the use of the MDC Object Partition cod
 
 The ongoing nomenclature development process is a collaboration of the IEEE Point-of-Care Device Committee, which ballots and issues updated versions of the standard, and the IHE Patient Care Device Program's Rosetta Terminology Mapping Committee, with representatives of many manufacturers as well as independent experts. The database of record for proposed and provisional, as well as published, concept definitions and codes is currently maintained by the US National Institute of Standards and Technology and is available on the web as the [Rosetta Terminology Mapping Management System](https://rtmms.nist.gov). IEEE permits royalty-free use of the codes and most of the supporting information under conditions described on the RTMMS website and in the FHIR specification ["Using MDC Codes with FHIR"](https://www.hl7.org/fhir/mdc.html)
 
+#### Combining MDC codes with LOINC and SNOMED CT codes
+
+When a device observation is reported with an MDC code and equivalent LOINC and/or SNOMED CT codes are known, the additional codes are added as further `coding` entries in the same `Observation.code` (or `Observation.component.code`). Retain the original MDC coding when adding mapped codes. The mapped codes are added alongside it and do not replace it. This preserves the device's own identification of the measurement for traceability, device-level semantics and later re-mapping, while clients that prefer LOINC or SNOMED CT can use those codes directly.
+
+Note that the order of `coding` entries in a CodeableConcept carries no meaning in FHIR, so the MDC coding is identified by its `system` (`urn:iso:std:iso:11073:10101`), not by its position. `Coding.userSelected` is not used to flag the device code, because it indicates a code that was directly chosen by a user.
+
+The following excerpt from the [Heart Rate Numeric Observation example](Observation-HeartRateNumericObservation.html) shows the MDC code reported by the device, together with the mapped LOINC and SNOMED CT codes:
+
+```json
+{
+  "code": {
+    "coding": [
+      {
+        "system": "urn:iso:std:iso:11073:10101",
+        "code": "147842",
+        "display": "MDC_ECG_HEART_RATE"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "8867-4",
+        "display": "Heart rate"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "364075005",
+        "display": "Heart rate"
+      }
+    ],
+    "text": "Heart rate"
+  }
+}
+```
+
+The [Non-invasive Blood Pressure Compound Numeric Observation example](Observation-NBPCompoundNumericObservation.html) applies the same pattern to a compound observation, with MDC, LOINC and SNOMED CT codes on the observation and on each component.
+
 ### Mapping HL7 V2 Device Data to FHIR
 
 The most commonly used form of HL7 Version 2 used in acute-care device data reporting is that of the IHE Device Enterprise Communications profile PCD-01 transaction. That is the basis for the mappings outlined here. Like this Guide, it is based on the IEEE 11073-10201 Medical Device Communications Domain Information Model.
