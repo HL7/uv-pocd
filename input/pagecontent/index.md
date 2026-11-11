@@ -100,6 +100,14 @@ This Point-of-Care Device Implementation Guide is focused on acute-care devices 
 
 The Personal Health Device and Point-of-Care Device guides both use information models and nomenclature from the IEEE 11073 Medical Device Communications series of standards and the guides for these two kinds of devices are being developed cooperatively in the Devices On FHIR project with a goal of consistency and ease of use by receiving systems.
 
+##### Choosing Between the PHD and PoCD IGs
+
+Choose a guide based on product and deployment architecture, the device model exposed to the receiving system, and the intended workflow—not care setting, prescription status, or form factor alone. The PHD IG often fits off-the-shelf consumer devices using a sensor-to-gateway-to-cloud model and GHS/ACOM; the PoCD IG often fits professional systems exposing the MDS-VMD-Channel-Metric hierarchy and associated measurement context.
+
+Also consider intended users, gateway capabilities, receiving-system support, and the need for device hierarchy and provenance. A hybrid device family may use either guide depending on the specific deployment and data exchange path.
+
+The PHD and PoCD Implementation Guides are intended to be complementary and non-conflicting. They address different, potentially overlapping device architectures and workflows; implementers should select the guidance that best fits their deployment while maintaining consistent meaning and interoperability when data is exchanged across systems.
+
 #### IHE Devices (DEV) / Patient Care Device (PCD) Domain
 The [IHE Devices domain](https://www.ihe.net/ihe_domains/devices/) domain has developed profiles for conveying acute care device data with context using HL7 V2. The IHE Devices (DEV) domain is the successor to the IHE Patient Care Devices (PCD) domain.
 The base information system and nomenclature are based on the IEEE 11073 Medical Device Communications standards, also used in this FHIR Implementation Guide. 
