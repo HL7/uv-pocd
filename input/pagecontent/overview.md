@@ -173,6 +173,12 @@ Moving from IEEE 11073 content to FHIR requires identifying the role of the sour
 
 The following use cases illustrate this mapping approach.
 
+##### AI-assisted interpretation
+
+An AI component may be represented as a Device conforming to the AI Transparency IG 1.0.0-ballot AI Device profile and linked beneath the MDS. Preserve the source measurement's DeviceMetric reference. When AI adds an interpretation to an existing Observation, record it in `Observation.interpretation`; when AI creates a distinct finding, use a separate Observation linked to its source with `derivedFrom`.
+
+Mark each AI-influenced Observation with the `AIAST` security label and use the AI Transparency Provenance profile to identify the AI Device, source Observations, and affected Observations. Model cards and prompts may be described as additional transparency context; they are not included in this example.
+
 ##### Hemodynamic monitoring
 
 A multi-parameter physiological monitor may contain a logical subsystem for blood pressure monitoring and channels that group related measurements, for example by measurement source or site. IEEE 11073-10101 provides MDC nomenclature for hemodynamic measurements, while the IEEE 11073-10201 DIM provides the MDS/VMD/Channel/Metric information model.
@@ -266,6 +272,8 @@ Devices report a rich variety of clinical and technical alerts that may require 
 #### Alerting another system
 
 Events from one device system to another, or to other clinical information systems,play a role in important use cases, such as are seen in the IHE PCD infusion verification profile.
+
+Future versions may evaluate the [FHIR R6 DeviceAlert resource](https://build.fhir.org/devicealert.html) for representing and exchanging alerts. This R4 guide does not profile DeviceAlert or define AI-generated alerts; this note does not imply current support.
 
 ### Information for implementers of applications consuming PoCD FHIR data
 Some of the details in this Guide are mainly of concern to implementers of device and device gateway software and is not of primary importance to users of the data.

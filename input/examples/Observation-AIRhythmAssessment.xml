@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Observation xmlns="http://hl7.org/fhir">
   <id value="AIRhythmAssessment"/>
+  <meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationValue"/>
+      <code value="AIAST"/>
+      <display value="Artificial Intelligence asserted"/>
+    </security>
+  </meta>
   <status value="final"/>
   <code>
     <text value="AI-generated ECG rhythm assessment"/>

@@ -452,6 +452,14 @@
     </resource>
     <resource>
       <reference>
+        <reference value="Provenance/AIRhythmInterpretation"/>
+      </reference>
+      <name value="AI rhythm interpretation provenance example"/>
+      <description value="Example of AI Provenance linking the AI Device, source observations, and AI-influenced observations."/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/aitransparency/StructureDefinition/AI-Provenance"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="Device/HeartRateChannelDevice"/>
       </reference>
       <name value="Heart Rate Channel example"/>

@@ -3,6 +3,11 @@
   <id value="AIInterpretedRhythmObservation"/>
   <meta>
     <profile value="http://hl7.org/fhir/uv/pocd/StructureDefinition/EnumerationObservation"/>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationValue"/>
+      <code value="AIAST"/>
+      <display value="Artificial Intelligence asserted"/>
+    </security>
   </meta>
   <status value="final"/>
   <code>

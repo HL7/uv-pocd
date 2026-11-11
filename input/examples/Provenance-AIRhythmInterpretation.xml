@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Provenance xmlns="http://hl7.org/fhir">
+  <id value="AIRhythmInterpretation"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/uv/aitransparency/StructureDefinition/AI-Provenance"/>
+  </meta>
+  <target>
+    <reference value="Observation/AIInterpretedRhythmObservation"/>
+  </target>
+  <target>
+    <reference value="Observation/AIRhythmAssessment"/>
+  </target>
+  <recorded value="2021-07-09T11:33:24+02:00"/>
+  <reason>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationValue"/>
+      <code value="AIAST"/>
+      <display value="Artificial Intelligence asserted"/>
+    </coding>
+  </reason>
+  <activity>
+    <text value="AI-assisted ECG rhythm interpretation"/>
+  </activity>
+  <agent>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/provenance-participant-type"/>
+        <code value="author"/>
+        <display value="Author"/>
+      </coding>
+    </type>
+    <who>
+      <reference value="Device/AIRhythmInterpretationDevice"/>
+    </who>
+  </agent>
+</Provenance>

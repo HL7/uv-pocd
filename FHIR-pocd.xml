@@ -11,6 +11,7 @@
 <artifactPageExtension value="-examples"/>
 <artifactPageExtension value="-mappings"/>
 <artifact id="Device/AIRhythmInterpretationDevice" key="Device-AIRhythmInterpretationDevice" name="AI rhythm interpretation device example"/>
+<artifact id="Provenance/AIRhythmInterpretation" key="Provenance-AIRhythmInterpretation" name="AI rhythm interpretation provenance example"/>
 <artifact id="Observation/AIRhythmAssessment" key="Observation-AIRhythmAssessment" name="AI-derived rhythm assessment example"/>
 <artifact id="Observation/AIInterpretedRhythmObservation" key="Observation-AIInterpretedRhythmObservation" name="AI-interpreted rhythm observation example"/>
 <artifact id="StructureDefinition/approved-jurisdictions" key="StructureDefinition-approved-jurisdictions" name="Approved Jurisdictions extension"/>
