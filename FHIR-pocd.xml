@@ -5,6 +5,7 @@
 <version code="0.3.0" deprecated="true" url="http://hl7.org/fhir/uv/pocd/2021Sep"/>
 <version code="0.2.0" deprecated="true" url="http://hl7.org/fhir/uv/pocd/2018Sep"/>
 <version code="0.1.0" deprecated="true" url="http://hl7.org/fhir/uv/pocd/2018Jan"/>
+<version code="1.0.0-ballot" deprecated="true" url="http://hl7.org/fhir/uv/pocd/1.0.0-202609-ballot"/>
 <version code="0.1" deprecated="true"/>
 <artifactPageExtension value="-definitions"/>
 <artifactPageExtension value="-examples"/>
