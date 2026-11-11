@@ -10,6 +10,9 @@
 <artifactPageExtension value="-definitions"/>
 <artifactPageExtension value="-examples"/>
 <artifactPageExtension value="-mappings"/>
+<artifact id="Device/AIRhythmInterpretationDevice" key="Device-AIRhythmInterpretationDevice" name="AI rhythm interpretation device example"/>
+<artifact id="Observation/AIRhythmAssessment" key="Observation-AIRhythmAssessment" name="AI-derived rhythm assessment example"/>
+<artifact id="Observation/AIInterpretedRhythmObservation" key="Observation-AIInterpretedRhythmObservation" name="AI-interpreted rhythm observation example"/>
 <artifact id="StructureDefinition/approved-jurisdictions" key="StructureDefinition-approved-jurisdictions" name="Approved Jurisdictions extension"/>
 <artifact id="Device/BloodPressureChannelDevice" key="Device-BloodPressureChannelDevice" name="Blood Pressure Channel example"/>
 <artifact id="Device/BloodPressureVmdDevice" key="Device-BloodPressureVmdDevice" name="Blood Pressure VMD example"/>

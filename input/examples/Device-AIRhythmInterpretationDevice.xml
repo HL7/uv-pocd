@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Device xmlns="http://hl7.org/fhir">
+  <id value="AIRhythmInterpretationDevice"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/uv/aitransparency/StructureDefinition/AI-Device"/>
+  </meta>
+  <identifier>
+    <system value="http://example.org/pocd/ai-device"/>
+    <value value="rhythm-interpreter-1"/>
+  </identifier>
+  <status value="active"/>
+  <manufacturer value="Example Medical Systems"/>
+  <deviceName>
+    <name value="PoCD rhythm interpreter"/>
+    <type value="model-name"/>
+  </deviceName>
+  <type>
+    <coding>
+      <system value="http://hl7.org/fhir/uv/aitransparency/CodeSystem/AIdeviceTypeCS"/>
+      <code value="Artificial-Intelligence"/>
+    </coding>
+  </type>
+  <version>
+    <value value="1.0"/>
+  </version>
+  <parent>
+    <reference value="Device/PhysioMonitorMdsDevice"/>
+  </parent>
+</Device>

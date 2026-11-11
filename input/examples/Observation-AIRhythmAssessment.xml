@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="AIRhythmAssessment"/>
+  <status value="final"/>
+  <code>
+    <text value="AI-generated ECG rhythm assessment"/>
+  </code>
+  <subject>
+    <reference value="Patient/SomePatient"/>
+  </subject>
+  <effectivePeriod>
+    <start value="2021-07-09T11:33:23+02:00"/>
+    <end value="2021-07-09T11:33:24+02:00"/>
+  </effectivePeriod>
+  <valueCodeableConcept>
+    <text value="Sinus rhythm"/>
+  </valueCodeableConcept>
+  <derivedFrom>
+    <reference value="Observation/ECGSampleArrayObservation"/>
+  </derivedFrom>
+</Observation>
