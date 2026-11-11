@@ -192,6 +192,8 @@ A receiver that also operates a FHIR RESTful server may choose to decompose inco
 
 The `$process-message` operation provides a standard endpoint for receiving messages on a FHIR server. See the [FHIR specification]({{site.data.fhir.path}}messageheader-operation-process-message.html) for details.
 
+FHIR defines how message responses and reliable delivery are handled, including acknowledgments and duplicate-message handling. Implementers should follow the [FHIR messaging guidance]({{site.data.fhir.path}}messaging.html), especially its [reliable messaging section]({{site.data.fhir.path}}messaging.html#reliable), and the [`$process-message` operation]({{site.data.fhir.path}}messageheader-operation-process-message.html). This guide does not define a separate PoCD-specific acknowledgment or retry protocol; transport- and workflow-specific expectations should be agreed between trading partners.
+
 ### Relationship to HL7 V2 Messaging
 
 Organizations migrating from HL7 V2-based device communication (e.g., IHE PCD-01 DEC using HL7 V2 ORU^R01 messages) may find FHIR messaging a natural stepping stone. The message-oriented architecture is familiar, while the content uses FHIR resources and profiles defined in this Implementation Guide. See [Mapping from HL7 V2 to FHIR](mappingv2.html) for guidance on mapping V2 device data to FHIR resources.
