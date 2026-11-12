@@ -40,6 +40,9 @@
       <li>
         <a href="messaging.html">FHIR Messaging</a>
       </li>
+      <li>
+        <a href="ai-transparency.html">AI Transparency Support</a>
+      </li>
       <!-- <li>
         <a href="menu.html">Safety Considerations</a>
       </li>

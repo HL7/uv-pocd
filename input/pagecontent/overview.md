@@ -173,12 +173,6 @@ Moving from IEEE 11073 content to FHIR requires identifying the role of the sour
 
 The following use cases illustrate this mapping approach.
 
-##### AI-assisted interpretation
-
-An AI component may be represented as a Device conforming to the AI Transparency IG 1.0.0-ballot AI Device profile and linked beneath the MDS. Preserve the source measurement's DeviceMetric reference. When AI adds an interpretation to an existing Observation, record it in `Observation.interpretation`; when AI creates a distinct finding, use a separate Observation linked to its source with `derivedFrom`.
-
-Mark each AI-influenced Observation with the `AIAST` security label and use the AI Transparency Provenance profile to identify the AI Device, source Observations, and affected Observations. Model cards and prompts may be described as additional transparency context; they are not included in this example.
-
 ##### Hemodynamic monitoring
 
 A multi-parameter physiological monitor may contain a logical subsystem for blood pressure monitoring and channels that group related measurements, for example by measurement source or site. IEEE 11073-10101 provides MDC nomenclature for hemodynamic measurements, while the IEEE 11073-10201 DIM provides the MDS/VMD/Channel/Metric information model.
@@ -215,13 +209,23 @@ Individual IEEE 11073-10207 state attributes are mapped according to their seman
 
 The same source-to-target pattern applies to additional IEEE 11073 content: identify whether the source information represents device structure, terminology, metric capability, device or metric state, or a reported value, and then select the PoCD profile and element that preserves that meaning.
 
+##### AI-assisted interpretation of observations
+
+An AI function that is part of the MDS may be represented as a Device conforming to the [AI Transparency IG](http://hl7.org/fhir/uv/aitransparency) AI Device profile and linked beneath the MDS. When it is used to interpret Observation resources, keep the source measurement's `Observation.device` reference to its DeviceMetric: it identifies the metric that produced the measurement and lets consumers follow the device hierarchy for context. Replacing it with the AI Device would lose that context and confuse the measurement source with the AI contributor, which should instead be identified as the Provenance agent. 
+
+When AI adds an interpretation to an existing Observation, record it in `Observation.interpretation`; when AI creates a distinct finding, use a separate Observation linked to its source with `derivedFrom`.
+
+The AI Transparency IG defines the `AIAST` security label and its AI Provenance profile; use them to mark each AI-influenced Observation and identify the AI Device, source Observations, and affected Observations. For a worked example with linked Device, Observation, and Provenance resources, see [AI Transparency Support](ai-transparency.html). Model cards and prompts may be described as additional transparency context; they are not included in this example.
+
 #### Clinical and technical data archiving and retrospective data feed
 
 It is expected that some institutions will choose to set up an archival system saving all available detail from devices as well as other data created in near real time, such as  provider notes during a procedure, including device data and context details that may not be displayed in real time. Assuming that there is such an archive system, the ability to retrieve and "look back on" all such data on request of a person or of another hospital information system can serve many use cases, including those listed. Since FHIR seems to be becoming a common interoperability medium or "lingua franca" for passing around models to retrieve data retrospectively. The strong support for search and filtering designed into FHIR are highly valuable in such uses.
 
+For AI-assisted workflows, archive AI-influenced Observations with their source Observations and associated Provenance, and retain the referenced AI Device and version. This keeps both the measurement context and AI contribution available for retrospective review.
+
 #### Clinical decision support
 
-This Implementation Guide does not define clinical decision support (CDS) rules or algorithm logic. Its direct contribution to CDS is the standardized representation of device context needed by CDS engines to interpret observations safely and correctly.
+This Implementation Guide does not define clinical decision support (CDS) rules, AI models, or decision algorithms. Its contribution is to represent device and measurement context that CDS applications can use. The AI examples in [AI Transparency Support](ai-transparency.html) demonstrate how AI-influenced Observations can retain source links and identify the AI Device through Provenance; they do not define or validate clinical recommendations or CDS behavior.
 
 Specifically, this guide enables applications to link an Observation to its DeviceMetric and traverse parent relationships to Channel, VMD, and MDS FHIR Device resources. That context can provide measurement method, module identity (for plug-in devices), device configuration/state, and related technical qualifiers that may affect rule behavior. In other words, the CDS implementation is external to this guide, but the data elements defined here provide the traceable inputs that CDS workflows rely on.
 
@@ -231,6 +235,8 @@ Comprehensive recording of device configuration and state information in additio
 
 For this use case, implementations can combine Observation profiles such as NumericObservation, CompoundNumericObservation, EnumerationObservation, and SampleArrayObservation with the corresponding DeviceMetric profiles (NumericDeviceMetric, EnumerationDeviceMetric, and SampleArrayDeviceMetric) and Device hierarchy profiles (MdsDevice, VmdDevice, and ChannelDevice). This profile set allows analytics pipelines to evaluate not only measured values, but also device-context relationships through parent links.
 
+Analytics can also include the AI-influenced and AI-derived Observations shown in [AI Transparency Support](ai-transparency.html). Their `derivedFrom` references support tracing findings to source Observations, while the `AIAST` security label and Provenance identify AI assertions and the AI Device responsible for them.
+
 Analytics can be further enriched using PoCD extensions that carry technical and operational qualifiers, for example metric-availability, technical-range, reference-range, resolution, operating-mode, operating-hours, operating-cycles, sweep-speed, and visual-grid. These elements help distinguish clinically meaningful variation from device configuration or operating-state effects, improving retrospective analysis quality.
 
 #### Clinical engineering and technology management analytics
@@ -239,10 +245,14 @@ In this scenario, comprehensive device configuration and state information suppo
 
 This use case uses Device hierarchy profiles (MdsDevice, VmdDevice, and ChannelDevice) with DeviceMetric profiles (NumericDeviceMetric, EnumerationDeviceMetric, and SampleArrayDeviceMetric) to track subsystem relationships, metric capabilities, and operational changes over time. Relevant PoCD extensions include operating-mode, operating-hours, operating-cycles, metric-availability, technical-range, resolution, sweep-speed, and visual-grid.
 
+For AI-enabled device systems, clinical engineering may also track software or AI functions represented as Devices in the hierarchy, including their identity and version, together with Provenance that records their role in producing observations.
+
 #### Adverse event analysis
 When it is necessary to investigate an adverse event, the context information provided by thorough archiving of all background information about the state and performance of the device allows, for example, identification of specific subsystems and components of the device may have malfunctioned.
 
 For adverse event investigations, linking Observation to DeviceMetric and then through parent relationships to ChannelDevice, VmdDevice, and MdsDevice helps localize where in the device hierarchy an issue occurred. Extensions such as metric-availability, reference-range, technical-range, resolution, and operating-mode provide evidence about metric validity, expected limits, and device operating context at the time of the event.
+
+When an AI-influenced Observation is involved, review it alongside its `derivedFrom` source and Provenance identifying the AI Device. These links can help distinguish source-device behavior from an AI-generated interpretation during investigation.
 
 #### Research data feed
 
@@ -252,17 +262,23 @@ A longitudinal FHIR-based archive supports this by preserving both measurements 
 
 Research datasets can be further enriched with PoCD extensions such as metric-availability, technical-range, reference-range, resolution, operating-mode, operating-hours, operating-cycles, sweep-speed, and visual-grid. These qualifiers help distinguish physiologic variation from differences in device configuration, operating state, or acquisition conditions.
 
+When research datasets include AI-derived Observations, preserve their source links, `AIAST` labels, Provenance, and AI Device version so analyses can distinguish device measurements from AI assertions and trace the AI component involved.
+
 #### Inter-facility transfer continuity for critically ill but stable patients
 
 When a patient in critical but stable condition must be transferred to a more equipped or specialized health facility, baseline monitoring before transfer, monitoring during transport, and monitoring after arrival can all be part of one continuous care journey. FHIR-based access to contextual device information together with produced measurement data enables continuity across these phases and supports safer handoffs between teams and facilities.
 
 In this exchange pattern, Observation resources carry the measured values and trends, DeviceMetric resources describe the specific metrics and their constraints, and Device resources provide the hierarchical context (MDS, VMD, and Channel parent relationships). Where applicable, Patient and Practitioner resources identify care context, and CapabilityStatement resources can support onboarding between sending and receiving systems by documenting supported interactions and profiles.
 
+When AI-influenced results are included in a transfer, include their source Observations, associated Provenance, and referenced AI Device so the receiving system can distinguish measurements from AI assertions and retain their lineage.
+
 #### Ambulatory clinic integration with reduced infrastructure cost
 
 Ambulatory clinics that already have EMR integration in place can reduce implementation cost by using FHIR-based transport for device data exchange, avoiding the need to deploy additional proprietary integration systems and network infrastructure.
 
 Clinics can exchange Observation, DeviceMetric, and Device resources directly with existing EMR/FHIR endpoints so that measurements and device context are integrated without a separate middleware stack. Vocabulary alignment can be supported using ValueSet and CodeSystem artifacts defined by this guide, while endpoint behavior and conformance expectations can be coordinated through CapabilityStatement exchange.
+
+Where AI-derived results are exchanged, include the related source Observations, AI Device, and Provenance so the receiving EMR can identify the AI assertions and their origin.
 
 ** The following use cases are not in this release of the Implementation Guide but are intended to be covered in the next release**
 

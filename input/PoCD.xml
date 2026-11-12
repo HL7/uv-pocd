@@ -4,7 +4,7 @@
   <id value="hl7.fhir.uv.pocd"/>
   <language value="en-US"/>
   <url value="http://hl7.org/fhir/uv/pocd/ImplementationGuide/hl7.fhir.uv.pocd"/>
-  <version value="1.0.0-ballot3"/>
+  <version value="1.0.1-draft"/>
   <name value="PoCDImplementationGuide"/>
   <title value="Point-of-Care Device Implementation Guide"/>
   <status value="active"/>
@@ -626,6 +626,11 @@
         <page>
           <nameUrl value="messaging.html"/>
           <title value="FHIR Messaging"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <nameUrl value="ai-transparency.html"/>
+          <title value="AI Transparency Support"/>
           <generation value="markdown"/>
         </page>
       </page>

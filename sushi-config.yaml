@@ -1,6 +1,6 @@
 canonical: http://hl7.org/fhir/uv/pocd
 status: active
-version: 1.0.0-ballot3
+version: 1.0.1-draft
 fhirVersion: 4.0.1
 FSHOnly: true
 dependencies: { hl7.fhir.uv.aitransparency: 1.0.0-ballot }
