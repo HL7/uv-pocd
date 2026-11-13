@@ -20,6 +20,9 @@ Most object classes in ISO/IEEE 11073 SDC can be mapped to FHIR resources as out
 ### SDC Object Attributes
 Please refer to the Mappings tab of each profile page for mapping ISO/IEEE 11073 SDC object attributes to FHIR resource elements.
 
+#### Future Work: AI Representation
+This guide does not define an SDC-to-FHIR mapping for AI systems or AI-influenced data. This mapping is future work, to be addressed when ISO/IEEE 11073 SDC defines how AI is represented.
+
 ### Mapping Details
 
 #### Device Identification and Unique Device Identification (UDI)

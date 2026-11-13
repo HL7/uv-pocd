@@ -1,11 +1,11 @@
 {
     "package-id": "hl7.fhir.uv.pocd",
-    "version": "1.0.0-ballot3",
-    "path": "http://hl7.org/fhir/uv/pocd/1.0.0-202609-ballot3",
+    "version": "1.0.1-draft",
+    "path": "http://hl7.org/fhir/uv/pocd/1.0.1-draft",
     "mode": "working",
-    "status": "ballot",
+    "status": "draft",
     "sequence": "STU 1",
-    "desc": "This version is being balloted and is targeting publication for trial use. It is not yet ready for production use.",
+    "desc": "This draft version includes AI Transparency guidance and examples and is not yet ready for production use.",
     "changes": "changes.html",
     "first": false
 }

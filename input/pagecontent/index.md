@@ -64,7 +64,7 @@ This guide is organized into four main areas: introductory and conceptual materi
 #### Getting Started
 
 **[Overview](overview.html)**
-Introduces the IEEE 11073-10201 hierarchical device model (MDS → VMD → Channel → Metric), explains how it maps onto FHIR resources, and describes the value of the MDC nomenclature. Also covers common use cases — clinical flowsheet charting, archiving, clinical decision support, analytics, and research data feeds — and provides orientation for both data-consumer and data-provider implementers.
+Introduces the IEEE 11073-10201 hierarchical device model (MDS → VMD → Channel → Metric), explains how it maps onto FHIR resources, and describes the value of the MDC nomenclature. Also covers common use cases — clinical flowsheet charting, AI-assisted interpretation, archiving, clinical decision support, analytics, and research data feeds — and provides orientation for both data-consumer and data-provider implementers.
 
 **[Abbreviations and Definitions](definitions.html)**
 Reference glossary of terms, acronyms, and standard identifiers used throughout the guide.
@@ -76,6 +76,7 @@ Technical Implementation Guidance is given on following sub-pages:
 - **[Mapping from IEEE 11073-10207 SDC to FHIR](mappingsdc.html)** — Equivalent mapping for the service-oriented SDC variant of the IEEE 11073 model.
 - **[RESTful Transfer](transfer.html)** — Describes the FHIR RESTful API patterns for reporting and retrieving device data, including the server CapabilityStatement.
 - **[FHIR Messaging](messaging.html)** — Describes the message-bundle alternative to RESTful transfer for event-driven or message-oriented architectures.
+- **[AI Transparency Support](ai-transparency.html)** — Shows how the PoCD IG can be used with the AI Transparency IG through an example AI device, observations, and Provenance.
 
 **[Profiles](profiles.html)**
 Defines the FHIR profiles and extensions specified by this guide, organized by resource type: Device (MDS, VMD, Channel), DeviceMetric (Numeric, Enumeration, Sample Array), and Observation (Numeric, Compound Numeric, Enumeration, Sample Array). Includes guidance on subject attribution and Must Support semantics.

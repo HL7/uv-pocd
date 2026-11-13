@@ -1,3 +1,12 @@
+### Version 1.0.1-draft
+
+#### AI Transparency
+
+* Add an AI Device child of the MDS and examples of AI-interpreted and AI-derived Observations.
+* Add `AIAST` labels and Provenance following AI Transparency IG 1.0.0-ballot; mention model cards and prompts in narrative guidance only.
+* Add an AI Transparency Support guidance page and describe AI attribution and provenance in related use cases.
+* Defer SDC AI mapping until IEEE 11073 SDC defines AI representation; identify FHIR R6 DeviceAlert support as future work.
+
 ### Version 1.0.0 (ballot 3)
 
 * [Resolved Jira issues for this ballot](Jira-issues-done.html)

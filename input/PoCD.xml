@@ -4,7 +4,7 @@
   <id value="hl7.fhir.uv.pocd"/>
   <language value="en-US"/>
   <url value="http://hl7.org/fhir/uv/pocd/ImplementationGuide/hl7.fhir.uv.pocd"/>
-  <version value="1.0.0-ballot3"/>
+  <version value="1.0.1-draft"/>
   <name value="PoCDImplementationGuide"/>
   <title value="Point-of-Care Device Implementation Guide"/>
   <status value="active"/>
@@ -36,6 +36,11 @@
   <packageId value="hl7.fhir.uv.pocd"/>
   <license value="CC0-1.0"/>
   <fhirVersion value="4.0.1"/>
+  <dependsOn>
+    <uri value="http://hl7.org/fhir/uv/aitransparency/ImplementationGuide/hl7.fhir.uv.aitransparency"/>
+    <packageId value="hl7.fhir.uv.aitransparency"/>
+    <version value="1.0.0-ballot"/>
+  </dependsOn>
   <definition>
     <resource>
       <reference>
@@ -375,6 +380,14 @@
     </resource>
     <resource>
       <reference>
+        <reference value="Device/AIRhythmInterpretationDevice"/>
+      </reference>
+      <name value="AI rhythm interpretation device example"/>
+      <description value="Example of an AI Device that is a child of the patient monitor MDS."/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/aitransparency/StructureDefinition/AI-Device"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="Device/ECGVmdDevice"/>
       </reference>
       <name value="ECG VMD example"/>
@@ -420,6 +433,30 @@
       <name value="Rhythm Status Enumeration observation example"/>
       <description value="Example of an Observation resource that represents coded rhythm status."/>
       <exampleCanonical value="http://hl7.org/fhir/uv/pocd/StructureDefinition/EnumerationObservation"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Observation/AIInterpretedRhythmObservation"/>
+      </reference>
+      <name value="AI-interpreted rhythm observation example"/>
+      <description value="Example of a rhythm Observation with an AI-added interpretation, derived from a source Observation."/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/pocd/StructureDefinition/EnumerationObservation"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Observation/AIRhythmAssessment"/>
+      </reference>
+      <name value="AI-derived rhythm assessment example"/>
+      <description value="Example of a separate AI-derived Observation based on an ECG sample array Observation."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Provenance/AIRhythmInterpretation"/>
+      </reference>
+      <name value="AI rhythm interpretation provenance example"/>
+      <description value="Example of AI Provenance linking the AI Device, source observations, and AI-influenced observations."/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/aitransparency/StructureDefinition/AI-Provenance"/>
     </resource>
     <resource>
       <reference>
@@ -589,6 +626,11 @@
         <page>
           <nameUrl value="messaging.html"/>
           <title value="FHIR Messaging"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <nameUrl value="ai-transparency.html"/>
+          <title value="AI Transparency Support"/>
           <generation value="markdown"/>
         </page>
       </page>

@@ -12,6 +12,9 @@ This element does not match any known slice defined in the profile http://hl7.or
 # Moving code systems and URLs to THO will be discussed in the near future. For now, these warnings can be ignored safely.
 Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
 
+# The 11073 MDC ValueSets intentionally filter concepts by partition; the terminology ecosystem does not recognize this code-system property.
+The property 'partition' is not known for the system 'urn:iso:std:iso:11073:10101', so may not be understood by the terminology ecosystem. Known properties for this system: concept,code,status,inactive,effectiveDate,deprecationDate,retirementDate,notSelectable,synonym,comment,itemWeight
+
 # extension used in FHIR core R4 that is now deprecated - this warning can be ignored safely
 The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.4.0 is deprecated with the note: 'Use additionalBinding extension or element instead'
 
