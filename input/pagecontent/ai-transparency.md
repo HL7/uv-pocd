@@ -2,7 +2,7 @@ The PoCD Implementation Guide can be used in conjunction with the [AI Transparen
 
 ### AI device and workflow
 
-The [AI rhythm interpretation device](Device-AIRhythmInterpretationDevice.html) conforms to the AI Transparency IG's [AI Device profile](http://hl7.org/fhir/uv/aitransparency/StructureDefinition/AI-Device). Its `Device.parent` references the patient monitor MDS, representing the AI function as part of that device system. The AI Device identifies the interpreting component; it does not replace the DeviceMetric that identifies the source of a measurement.
+The [AI rhythm interpretation device](Device-AIRhythmInterpretationDevice.html) conforms to the AI Transparency IG's [AI Device profile](https://hl7.org/fhir/uv/aitransparency/2026Jan/StructureDefinition-AI-Device.html). Its `Device.parent` references the patient monitor MDS, representing the AI function as part of that device system. The AI Device identifies the interpreting component; it does not replace the DeviceMetric that identifies the source of a measurement.
 
 The source ECG waveform and rhythm observations each reference their corresponding DeviceMetric. AI outputs link back to the source Observation using `Observation.derivedFrom`. The Provenance resource identifies the AI Device as the agent and targets both AI-influenced Observations.
 
@@ -29,6 +29,6 @@ When recording an AI interpretation as a separate Observation, link it to its so
 
 ### AI attribution and provenance
 
-The AI Transparency IG defines the [AI Provenance profile](http://hl7.org/fhir/uv/aitransparency/StructureDefinition/AI-Provenance). The [Provenance example](Provenance-AIRhythmInterpretation.html) conforms to that profile and records the AI Device as the author agent, the activity as AI-assisted ECG rhythm interpretation, and both AI-influenced Observations as targets. In these examples, source Observations are linked from the AI outputs by `derivedFrom`; the Provenance targets identify the resulting AI-influenced resources.
+The AI Transparency IG defines the [AI Provenance profile](https://hl7.org/fhir/uv/aitransparency/2026Jan/StructureDefinition-AI-Provenance.html). The [Provenance example](Provenance-AIRhythmInterpretation.html) conforms to that profile and records the AI Device as the author agent, the activity as AI-assisted ECG rhythm interpretation, and both AI-influenced Observations as targets. In these examples, source Observations are linked from the AI outputs by `derivedFrom`; the Provenance targets identify the resulting AI-influenced resources.
 
 Both AI-influenced Observations use the `AIAST` security label, the artificial-intelligence-asserted code from the [HL7 v3 ObservationValue code system](http://terminology.hl7.org/CodeSystem/v3-ObservationValue). Use the AI Transparency IG's AI Provenance profile to associate the AI agent and activity with the outputs. The examples do not include model cards or prompts; these may be provided as additional transparency context where appropriate.
