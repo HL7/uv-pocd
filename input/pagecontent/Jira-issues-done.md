@@ -1,5 +1,18 @@
 # Jira Issues (Done)
 
+## Version 1.0.0 (draft)
+
+Recently applied issues for this version:
+
+| Issue Type | Key | Status | Resolution | Summary | Change Applied |
+|---|---|---|---|---|---|
+| Change Request | [FHIR-58989](https://jira.hl7.org/browse/FHIR-58989) | Applied | Persuasive with Modification | Provide a minimum interoperable event model for FHIR Messaging (for Processing Messages) | Direct implementers to FHIR core messaging and reliable-messaging guidance; do not define a separate interoperable processing model in this IG. |
+| Change Request | [FHIR-58987](https://jira.hl7.org/browse/FHIR-58987) | Applied | Persuasive | Add a worked example of MDC plus LOINC/SNOMED coding | Add LOINC and SNOMED CT codings alongside the original MDC coding and clarify that the device code is retained. |
+| Change Request | [FHIR-58986](https://jira.hl7.org/browse/FHIR-58986) | Applied | Persuasive | Clarify lifecycle and reconciliation of temporary Patient resources | Clarify that the hospital's authoritative identity system reconciles temporary Patients, with guidance on linking and avoiding duplicates. |
+| Change Request | [FHIR-58985](https://jira.hl7.org/browse/FHIR-58985) | Applied | Persuasive | Use a stable identifier in the Location conditional-create example | Use a stable, appropriately scoped `Location.identifier` instead of relying on a potentially non-unique Location name. |
+
+## Version 1.0.0 (2026-09 Ballot 3)
+
 Source query: [Jira](https://jira.hl7.org/issues/?jql=Specification+%3D+FHIR-pocd+AND+project+in+%28CDA%2C+FHIR%2C+OTHER%2C+V2%29+AND+status+not+in+%28Published%2C+%22Resolved+-+No+Change%22%2C+Duplicate%29+ORDER+BY+key+DESC)
 
 Displaying **94** issues at **2026-08-03 04:38**.

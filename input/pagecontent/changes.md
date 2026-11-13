@@ -1,3 +1,8 @@
+### Version 1.0.0
+
+* [Recently applied Jira issues](Jira-issues-done.html)
+* Apply 2026 ballot feedback: add an MDC/LOINC/SNOMED coding example, clarify temporary Patient reconciliation and stable Location identifiers, and point messaging implementations to FHIR core processing guidance.
+
 ### Version 1.0.0 (ballot 3)
 
 * [Resolved Jira issues for this ballot](Jira-issues-done.html)

@@ -102,7 +102,7 @@ The Personal Health Device and Point-of-Care Device guides both use information 
 
 ##### Choosing Between the PHD and PoCD IGs
 
-Choose a guide based on product and deployment architecture, the device model exposed to the receiving system, and the intended workflow—not care setting, prescription status, or form factor alone. The PHD IG often fits off-the-shelf consumer devices using a sensor-to-gateway-to-cloud model and GHS/ACOM; the PoCD IG often fits professional systems exposing the MDS-VMD-Channel-Metric hierarchy and associated measurement context.
+This guide recommends to choose a guide based on product and deployment architecture, the device model exposed to the receiving system, and the intended workflow—not care setting, prescription status, or form factor alone. The PHD IG often fits off-the-shelf consumer devices using a sensor-to-gateway-to-cloud model and GHS/ACOM; the PoCD IG often fits professional systems exposing the MDS-VMD-Channel-Metric hierarchy and associated measurement context.
 
 Also consider intended users, gateway capabilities, receiving-system support, and the need for device hierarchy and provenance. A hybrid device family may use either guide depending on the specific deployment and data exchange path.
 
