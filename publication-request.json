@@ -5,7 +5,7 @@
     "mode": "working",
     "status": "draft",
     "sequence": "STU 1",
-    "desc": "This version is being balloted and is targeting publication for trial use. It is not yet ready for production use.",
+    "desc": "This version has been balloted and is targeting publication for trial use. It is not yet ready for production use.",
     "changes": "changes.html",
     "first": false
 }
