@@ -2,7 +2,7 @@
     "package-id": "hl7.fhir.uv.pocd",
     "version": "1.0.0",
     "path": "http://hl7.org/fhir/uv/pocd/1.0.0",
-    "mode": "working",
+    "mode": "milestone",
     "status": "trial-use",
     "sequence": "STU 1",
     "desc": "Release 1.0.0 (STU 1) - first official release.",
