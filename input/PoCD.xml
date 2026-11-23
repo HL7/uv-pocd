@@ -634,7 +634,7 @@
     </parameter>
     <parameter>
       <code value="releaselabel"/>
-      <value value="STU 1 Ballot3"/>
+      <value value="STU 1"/>
     </parameter>
     <parameter>
       <code value="find-other-resources"/>
