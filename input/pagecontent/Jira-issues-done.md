@@ -1,7 +1,6 @@
 # Jira Issues (Done)
 
-## Version 1.0.0 (draft)
-
+## Version 1.0.0
 Recently applied issues for this version:
 
 | Issue Type | Key | Status | Resolution | Summary | Change Applied |

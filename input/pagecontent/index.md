@@ -1,12 +1,12 @@
 ### Purpose
 This Implementation Guide defines the use of FHIR resources to convey measurements and supporting data 
-from acute care point-of-care medical devices (PoCD) intended for use by qualified professional in receiving systems for electronic medical records, clinical decision support, and medical data archiving for aggregate quality measurement and research purposes. 
+from acute care point-of-care medical devices (PoCD) intended for use by qualified professionals in receiving systems for electronic medical records, clinical decision support, and medical data archiving for aggregate quality measurement and research purposes. 
 It adds "deep metadata for device observations".  
 Key goals include supplementing the measurement values in an Observation resource with full provenance for traceability, and with 
 more details of device architecture and dynamically changing attributes such as 
 calibration history and battery state than is provided for in a FHIR Observation resource. This guide is intended to supplement — not replace — existing approaches such as HL7v2/IHE PCD-01 for communicating device data to device observation consumers.
 
-The next release of this Guide intends to cover physiological and technical alerts from medical devices.
+Alert-related features are out of scope for this FHIR R4 version of the Guide. Alerting use cases will be covered in a separate IG based on FHIR R6.
 Another related implementation guide focuses on home-based personal health devices. 
 
 ### Scope and Boundaries
@@ -36,12 +36,14 @@ table tbody tr:nth-child(even) {
 |-------------------------------|-----------------|
 | DIM classes & attributes      | ✅ In scope     |
 | Metric semantics              | ✅ In scope     |
-| Alert meaning                 | ✅ In scope     |
+| Alert-related features        | ❌ Out of scope     |
 | Service model (GET/SET/EVENT) | ❌ Out of scope |
 | Scanners                      | ❌ Out of scope |
 | Communication / FSM           | ❌ Out of scope |
 | Remote control                | ❌ Out of scope |
 | Transport timing guarantees   | ❌ Out of scope |
+
+> **Note:** Alerting use cases are out of scope for this PoCD IG and will be covered in a separate IG based on FHIR R6.
 
 The “mental model” that usually clicks:
 
@@ -102,7 +104,7 @@ The Personal Health Device and Point-of-Care Device guides both use information 
 
 ##### Choosing Between the PHD and PoCD IGs
 
-This guide recommends to choose a guide based on product and deployment architecture, the device model exposed to the receiving system, and the intended workflow—not care setting, prescription status, or form factor alone. The PHD IG often fits off-the-shelf consumer devices using a sensor-to-gateway-to-cloud model and GHS/ACOM; the PoCD IG often fits professional systems exposing the MDS-VMD-Channel-Metric hierarchy and associated measurement context.
+This implementation guide recommends choosing a guide based on product and deployment architecture, the device model exposed to the receiving system, and the intended workflow—not care setting, prescription status, or form factor alone. The PHD IG often fits off-the-shelf consumer devices using a sensor-to-gateway-to-cloud model and GHS/ACOM; the PoCD IG often fits professional systems exposing the MDS-VMD-Channel-Metric hierarchy and associated measurement context.
 
 Also consider intended users, gateway capabilities, receiving-system support, and the need for device hierarchy and provenance. A hybrid device family may use either guide depending on the specific deployment and data exchange path.
 
@@ -114,7 +116,7 @@ The base information system and nomenclature are based on the IEEE 11073 Medical
 
 These profiles cover Device Enterprise Communications (DEC), reporting device observations to enterprise systems including near-real-time charting to electronic medical records, clinical decision support systems, and patient data archive systems. That is similar to the scope of this FHIR Implementation Guide.
 
-A planned future FHIR use case for the Devices on FHIR group is the near-real-time communication of physiological and technical alerts to clinicians, and internal device status and state transition information for systems designed to process such information. This is similar to IHE DEV Alert Communication Management (ACM) and Infusion Pump Event Communication (IPEC) profiles.
+A separate IG based on FHIR R6 will address near-real-time communication of physiological and technical alerts to clinicians, as well as internal device status and state-transition information for systems designed to process it. This is similar to IHE DEV Alert Communication Management (ACM) and Infusion Pump Event Communication (IPEC) profiles; these features are not part of this FHIR R4 version.
 
 Other DEV profiles include Implantable Device Cardiac Observations (IDCO), Point-of-Care Infusion Verification (PIV), and Point-of-Care Identity Management (PCIM). Future versions of this Implementation Guide will extend scope to cover related functionality based on FHIR rather than HL7 V2.
 
@@ -176,9 +178,9 @@ Clinical decision-making depends on understanding both the immediate values of d
 This Implementation Guide focuses on the data models and FHIR representation necessary for exchanging PoCD observations. As experience accumulates from prototype implementations and real-world deployments, further guidance on optimal connectivity patterns, throughput profiling, and operational practices for different clinical settings will be developed. The interaction between multiple implementations, including considerations of performance under different network conditions and clinical workflow integration, will inform future versions of this guide.
 
 ### Future Guide Revisions
-Future capabilities are planned for this General PoCD IG including:
-1. Waveform Support optimized for high data volumes
-2. Device Events & Alerts including:
+Future capabilities are planned for this IG and related guides:
+1. In a future version of this General PoCD IG: waveform support optimized for high data volumes.
+2. In a separate IG based on FHIR R6: Device Events & Alerts, including:
   * Basic IHE DEV ACM / IEC 60601-1-8 reporting
   * Status notifications back to the source Device
 

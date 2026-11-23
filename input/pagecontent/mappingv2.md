@@ -22,12 +22,10 @@ Primary responsibility for patient identity and location information is with oth
 systems. In many cases such data is available only by linking to resources provided by these other systems.
 Some device systems and gateways will have limited information about patient identity and location.
 
-The implementer of a system creating and organizing links among the FHIR resources
-must use their understanding of the capabilities of the devices being interfaced,
-the context or contexts for their implementation,
-including the sources for authoritative patient identity, location, and reliable information 
-on the associations between particular patients and particular device instances
-to making an adequate, patient-safe, set of FHIR resources within that context.
+Implementers creating and organizing links among FHIR resources must use their understanding of
+the interfaced devices' capabilities, the implementation context, the sources of authoritative
+patient identity and location information, and reliable information about associations between
+patients and device instances to create an adequate, patient-safe set of FHIR resources.
 
 **Explanations of columns in the summary tables**
 

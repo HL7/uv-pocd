@@ -1,11 +1,11 @@
 {
     "package-id": "hl7.fhir.uv.pocd",
-    "version": "1.0.0-draft",
-    "path": "http://hl7.org/fhir/uv/pocd/1.0.0-draft",
+    "version": "1.0.0",
+    "path": "http://hl7.org/fhir/uv/pocd/1.0.0",
     "mode": "working",
-    "status": "draft",
+    "status": "trial-use",
     "sequence": "STU 1",
-    "desc": "This version has been balloted and is targeting publication for trial use. It is not yet ready for production use.",
+    "desc": "Release 1.0.0 (STU 1) - first official release.",
     "changes": "changes.html",
     "first": false
 }

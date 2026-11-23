@@ -11,7 +11,7 @@
 {% lang-fragment ip-statements.xhtml %}
 
 ### GitHub 
-The source for this Implementation Guide is available on [HL7 GitHub](https://github.com/HL7/phd).
+The source for this Implementation Guide is available on [HL7 GitHub](https://github.com/HL7/uv-pocd).
 
 ### Downloads
 
