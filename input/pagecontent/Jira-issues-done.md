@@ -5,6 +5,7 @@ Recently applied issues for this version:
 
 | Issue Type | Key | Status | Resolution | Summary | Change Applied |
 |---|---|---|---|---|---|
+| Change Request | [FHIR-59087](https://jira.hl7.org/browse/FHIR-59087) | Applied | Persuasive | Clarify scope boundary between PoCD and Personal Health Device (PHD) IG for hybrid acute/ambulatory cardiac monitoring devices | Clarify that guide selection depends on device architecture and workflow rather than care setting, prescription status, or form factor alone; hybrid device families may use either guide depending on deployment and data exchange path. |
 | Change Request | [FHIR-58989](https://jira.hl7.org/browse/FHIR-58989) | Applied | Persuasive with Modification | Provide a minimum interoperable event model for FHIR Messaging (for Processing Messages) | Direct implementers to FHIR core messaging and reliable-messaging guidance; do not define a separate interoperable processing model in this IG. |
 | Change Request | [FHIR-58987](https://jira.hl7.org/browse/FHIR-58987) | Applied | Persuasive | Add a worked example of MDC plus LOINC/SNOMED coding | Add LOINC and SNOMED CT codings alongside the original MDC coding and clarify that the device code is retained. |
 | Change Request | [FHIR-58986](https://jira.hl7.org/browse/FHIR-58986) | Applied | Persuasive | Clarify lifecycle and reconciliation of temporary Patient resources | Clarify that the hospital's authoritative identity system reconciles temporary Patients, with guidance on linking and avoiding duplicates. |
