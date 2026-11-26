@@ -11,7 +11,7 @@
   <status value="active"/>
   <manufacturer value="Example Medical Systems"/>
   <deviceName>
-    <name value="PoCD rhythm interpreter"/>
+    <name value="Example PoCD ECG rhythm model"/>
     <type value="model-name"/>
   </deviceName>
   <type>

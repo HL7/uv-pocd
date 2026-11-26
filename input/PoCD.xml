@@ -439,7 +439,7 @@
         <reference value="Observation/AIInterpretedRhythmObservation"/>
       </reference>
       <name value="AI-interpreted rhythm observation example"/>
-      <description value="Example of a rhythm Observation with an AI-added interpretation, derived from a source Observation."/>
+      <description value="Example of a coded AI rhythm finding with a confidence score, derived from a 10-second ECG sample array."/>
       <exampleCanonical value="http://hl7.org/fhir/uv/pocd/StructureDefinition/EnumerationObservation"/>
     </resource>
     <resource>
@@ -447,7 +447,7 @@
         <reference value="Observation/AIRhythmAssessment"/>
       </reference>
       <name value="AI-derived rhythm assessment example"/>
-      <description value="Example of a separate AI-derived Observation based on an ECG sample array Observation."/>
+      <description value="Example of an AI-derived coded rhythm assessment and confidence score based on a 10-second ECG sample array."/>
       <exampleBoolean value="true"/>
     </resource>
     <resource>
