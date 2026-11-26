@@ -10,14 +10,14 @@
   </meta>
   <status value="final"/>
   <code>
-    <text value="AI-generated ECG rhythm assessment"/>
+    <text value="Ambulatory ECG rhythm assessment"/>
   </code>
   <subject>
     <reference value="Patient/SomePatient"/>
   </subject>
   <effectivePeriod>
-    <start value="2021-07-09T11:33:23+02:00"/>
-    <end value="2021-07-09T11:33:33+02:00"/>
+    <start value="2021-07-08T11:33:24+02:00"/>
+    <end value="2021-07-09T11:33:24+02:00"/>
   </effectivePeriod>
   <valueCodeableConcept>
     <coding>
@@ -25,20 +25,37 @@
       <code value="49436004"/>
       <display value="Atrial fibrillation"/>
     </coding>
-    <text value="Possible atrial fibrillation; irregularly spaced ventricular complexes in the synthetic 10-second tracing"/>
+    <text value="Intermittent atrial fibrillation detected"/>
   </valueCodeableConcept>
-  <device>
-    <reference value="Device/AIRhythmInterpretationDevice"/>
-  </device>
+  <derivedFrom>
+    <reference value="DocumentReference/AmbulatoryECGRecording"/>
+  </derivedFrom>
   <derivedFrom>
     <reference value="Observation/ECGSampleArrayObservation"/>
   </derivedFrom>
   <component>
     <code>
-      <text value="AI model confidence (uncalibrated score)"/>
+      <text value="Number of atrial fibrillation episodes"/>
+    </code>
+    <valueInteger value="3"/>
+  </component>
+  <component>
+    <code>
+      <text value="Longest episode duration"/>
     </code>
     <valueQuantity>
-      <value value="0.87"/>
+      <value value="2"/>
+      <unit value="min"/>
+      <system value="http://unitsofmeasure.org"/>
+      <code value="min"/>
+    </valueQuantity>
+  </component>
+  <component>
+    <code>
+      <text value="Model confidence"/>
+    </code>
+    <valueQuantity>
+      <value value="0.94"/>
       <unit value="1"/>
       <system value="http://unitsofmeasure.org"/>
       <code value="1"/>

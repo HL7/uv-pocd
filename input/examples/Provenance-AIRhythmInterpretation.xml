@@ -5,12 +5,9 @@
     <profile value="http://hl7.org/fhir/uv/aitransparency/StructureDefinition/AI-Provenance"/>
   </meta>
   <target>
-    <reference value="Observation/AIInterpretedRhythmObservation"/>
-  </target>
-  <target>
     <reference value="Observation/AIRhythmAssessment"/>
   </target>
-  <recorded value="2021-07-09T11:33:33+02:00"/>
+  <recorded value="2021-07-09T11:33:24+02:00"/>
   <reason>
     <coding>
       <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationValue"/>
@@ -19,7 +16,7 @@
     </coding>
   </reason>
   <activity>
-    <text value="AI-assisted ECG rhythm interpretation"/>
+    <text value="Longitudinal ambulatory ECG analysis for intermittent atrial fibrillation"/>
   </activity>
   <agent>
     <type>

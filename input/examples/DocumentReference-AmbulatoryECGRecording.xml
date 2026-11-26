@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DocumentReference xmlns="http://hl7.org/fhir">
+  <id value="AmbulatoryECGRecording"/>
+  <status value="current"/>
+  <type>
+    <text value="24-hour ambulatory ECG recording"/>
+  </type>
+  <subject>
+    <reference value="Patient/SomePatient"/>
+  </subject>
+  <date value="2021-07-09T11:33:24+02:00"/>
+  <description value="Illustrative reference to the full 24-hour recording; the attachment URL is a placeholder."/>
+  <content>
+    <attachment>
+      <contentType value="application/octet-stream"/>
+      <url value="https://example.org/pocd/ambulatory-ecg-recording-24h.dat"/>
+      <title value="24-hour ambulatory ECG waveform"/>
+    </attachment>
+  </content>
+  <context>
+    <period>
+      <start value="2021-07-08T11:33:24+02:00"/>
+      <end value="2021-07-09T11:33:24+02:00"/>
+    </period>
+  </context>
+</DocumentReference>

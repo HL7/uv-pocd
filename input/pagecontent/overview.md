@@ -215,6 +215,8 @@ An AI function that is part of the MDS may be represented as a Device conforming
 
 When AI adds an interpretation to an existing Observation, record it in `Observation.interpretation`; when AI creates a distinct finding, use a separate Observation linked to its source with `derivedFrom`.
 
+The [AI Transparency example](ai-transparency.html) illustrates a 24-hour ambulatory ECG analysis detecting intermittent atrial fibrillation beyond a point-in-time sinus-rhythm status, with a coded finding, episode details, model-confidence score, and identified model version.
+
 The AI Transparency IG defines the `AIAST` security label and its AI Provenance profile; use them to mark each AI-influenced Observation and identify the AI Device, source Observations, and affected Observations. For a worked example with linked Device, Observation, and Provenance resources, see [AI Transparency Support](ai-transparency.html). Model cards and prompts may be described as additional transparency context; they are not included in this example.
 
 #### Clinical and technical data archiving and retrospective data feed

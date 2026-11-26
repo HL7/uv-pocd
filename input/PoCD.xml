@@ -412,10 +412,18 @@
     </resource>
     <resource>
       <reference>
+        <reference value="DocumentReference/AmbulatoryECGRecording"/>
+      </reference>
+      <name value="24-hour ambulatory ECG recording example"/>
+      <description value="Illustrative reference to the full 24-hour recording analyzed by the AI example."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="Observation/ECGSampleArrayObservation"/>
       </reference>
       <name value="ECG Sample Array observation example"/>
-      <description value="Example of an Observation resource that represents ECG waveforms."/>
+      <description value="One-second waveform excerpt from the longer ambulatory ECG recording."/>
       <exampleCanonical value="http://hl7.org/fhir/uv/pocd/StructureDefinition/SampleArrayObservation"/>
     </resource>
     <resource>
@@ -436,18 +444,10 @@
     </resource>
     <resource>
       <reference>
-        <reference value="Observation/AIInterpretedRhythmObservation"/>
-      </reference>
-      <name value="AI-interpreted rhythm observation example"/>
-      <description value="Example of a coded AI rhythm finding with a confidence score, derived from a 10-second ECG sample array."/>
-      <exampleCanonical value="http://hl7.org/fhir/uv/pocd/StructureDefinition/EnumerationObservation"/>
-    </resource>
-    <resource>
-      <reference>
         <reference value="Observation/AIRhythmAssessment"/>
       </reference>
       <name value="AI-derived rhythm assessment example"/>
-      <description value="Example of an AI-derived coded rhythm assessment and confidence score based on a 10-second ECG sample array."/>
+      <description value="Example of a coded AI-derived finding from a 24-hour ambulatory ECG recording."/>
       <exampleBoolean value="true"/>
     </resource>
     <resource>
@@ -455,7 +455,7 @@
         <reference value="Provenance/AIRhythmInterpretation"/>
       </reference>
       <name value="AI rhythm interpretation provenance example"/>
-      <description value="Example of AI Provenance linking the AI Device, source observations, and AI-influenced observations."/>
+      <description value="Example of AI Provenance linking the AI Device and the AI-derived assessment."/>
       <exampleCanonical value="http://hl7.org/fhir/uv/aitransparency/StructureDefinition/AI-Provenance"/>
     </resource>
     <resource>

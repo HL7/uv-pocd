@@ -6,12 +6,12 @@
   </meta>
   <identifier>
     <system value="http://example.org/pocd/ai-device"/>
-    <value value="rhythm-interpreter-1"/>
+    <value value="ambulatory-af-episode-detector-4.2.1"/>
   </identifier>
   <status value="active"/>
   <manufacturer value="Example Medical Systems"/>
   <deviceName>
-    <name value="Example PoCD ECG rhythm model"/>
+    <name value="Ambulatory ECG AF episode detector"/>
     <type value="model-name"/>
   </deviceName>
   <type>
@@ -21,7 +21,7 @@
     </coding>
   </type>
   <version>
-    <value value="1.0"/>
+    <value value="4.2.1"/>
   </version>
   <parent>
     <reference value="Device/PhysioMonitorMdsDevice"/>
